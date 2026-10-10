@@ -1,0 +1,193 @@
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const deg=r=>r*180/Math.PI, rad=d=>d*Math.PI/180;
+const jointLabels={handle_right_hinge:'右提手',handle_left_hinge:'左提手',refrigerator_left_hinge:'左门',refrigerator_right_hinge:'右门',refrigerator_mullion_hinge:'中间竖梁'};
+const label=j=>jointLabels[j]||j;
+let catalog=null,selected=null,category='object',loadId=0,activeModel=null,modelRoot=null;
+let bodyGroups=new Map(),jointMap=new Map(),angles=new Map(),pickables=[],colliders=[],cutaways=[],jointMode=false;
+let showCollision=false,cutaway=true,ground=null,grid=null,drag=null,toastTimer;
+const scene=new THREE.Scene();scene.background=new THREE.Color('#eeeee7');
+const camera=new THREE.PerspectiveCamera(40,1,.01,1000);camera.up.set(0,0,1);
+let renderer;
+try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});}
+catch(e){$('loading').hidden=true;$('viewer-error').hidden=false;$('viewer-error').textContent='当前浏览器无法启动 WebGL。请开启硬件加速后重试。';throw e;}
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.3;
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+$('canvas-host').append(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.075;
+controls.minPolarAngle=.07;controls.maxPolarAngle=Math.PI*.9;controls.screenSpacePanning=true;
+scene.add(new THREE.HemisphereLight(0xfaf9f3,0xa9b4a1,2.3));
+const keyLight=new THREE.DirectionalLight(0xfff9e9,3.2);keyLight.castShadow=true;keyLight.shadow.mapSize.set(2048,2048);keyLight.shadow.bias=-.00015;scene.add(keyLight);scene.add(keyLight.target);
+const fill=new THREE.DirectionalLight(0xffffff,1.6);scene.add(fill);scene.add(fill.target);
+new ResizeObserver(()=>{const w=$('canvas-host').clientWidth,h=$('canvas-host').clientHeight;if(w&&h){camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h);}}).observe($('canvas-host'));
+renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});
+
+function toast(text){$('toast').textContent=text;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2800);}
+function fmt(n,d=3){return n==null?'—':Number(n).toLocaleString('zh-CN',{maximumFractionDigits:d});}
+function row(key,value,cls=''){return `<div class="prop-row"><span>${esc(key)}</span><strong class="${cls}">${value}</strong></div>`;}
+function section(title,body){return `<section class="prop-section"><h3>${esc(title)}</h3>${body}</section>`;}
+function provenance(a){if(a.origin==='simple')return 'SIMPLE 原生';return (a.upstream_origin||'').includes('SimFoundry')?'FQ 派生 · SimFoundry':'FQ 自建';}
+function showProperties(a){
+  let html=section('基础信息',row('资产类型',esc(a.kind_label))+row('来源',esc(provenance(a)))+row('坐标约定','米制 · Z 向上')+row('基座',a.fixed_base?'固定':'自由运动')+`<div class="asset-id">${esc(a.id)}</div>`);
+  html+=section('尺寸与质量',`<div class="value-large">${a.mass_kg==null?'—':fmt(a.mass_kg)}<small>${a.mass_kg==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${a.mass_kg==null?'固定场景几何不以 0 kg 表示':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
+    (a.fixed_base&&a.kind!=='scene'&&a.mass_kg!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
+    row('外观包围尺寸',a.dimension_m.map(v=>fmt(v)).join(' × ')+' m','value-small')+
+    (a.bodies.length>1?`<details class="property-details"><summary>查看 ${a.bodies.length} 个部件质量</summary>${a.bodies.map(b=>row(esc(b.name),`${fmt(b.mass)} kg`,'value-small')).join('')}</details>`:''));
+  if(a.friction_range){
+    const fr=i=>{let lo=a.friction_range.min[i],hi=a.friction_range.max[i];return Math.abs(lo-hi)<1e-8?fmt(lo,5):`${fmt(lo,5)} – ${fmt(hi,5)}`;};
+    html+=section('接触参数 / MUJOCO',row('滑动摩擦',fr(0))+row('扭转摩擦',`${fr(1)} m`)+row('滚动摩擦',`${fr(2)} m`)+`<p class="property-note">模型设定值；有多个碰撞面时显示范围。滑动摩擦为无量纲，扭转与滚动参数使用长度单位。</p>`);
+  }
+  if(a.joints.length){
+    html+=section('关节与阻力',row('可动关节',`${a.joints.length} 个`)+
+      (a.slug==='haier_bcd402'?row('开门力度','未标定','status-label')+'<p class="property-note">尚无实测开门力曲线。拖动仅改变姿态，不代表真实开门阻力；竖梁为独立关节。</p>':'<p class="property-note">两个被动提手转轴，角度受模型限位约束。浏览器不模拟抓取或接触力。</p>')+
+      a.joints.map(j=>`<details class="property-details"><summary>${esc(label(j.name))} · ${fmt(deg(j.range[0]),1)}° ～ ${fmt(deg(j.range[1]),1)}°</summary>${row('阻尼',`${fmt(j.damping,5)} N·m·s/rad`)}${row('关节摩擦力矩',`${fmt(j.friction_loss,5)} N·m`)}${row('刚度',`${fmt(j.stiffness,5)} N·m/rad`)}<p class="property-note">以上为模型参数，非实测开门/提手作用力。</p></details>`).join(''));
+  }
+  html+=section('版本与来源',row(a.kind==='scene'?'场景版本':'物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)),'mono')+
+    row('最新库发布',esc(catalog.latest_release.tag))+
+    `<p class="property-note">本页展示 main 上的当前资产。整体发布版本与单个物体版本分别记录。</p>`+
+    `<details class="property-details"><summary>来源与模型依据</summary><p class="property-note">${esc(a.upstream_origin)}</p><p class="property-note">属性取自 ${esc(a.property_source)}。${a.calibration?'冰箱保留 v2 用户尺寸校准记录；部分尺寸仍为估算。':''}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看资产清单 ↗</a></details>`);
+  $('properties-content').innerHTML=html;
+}
+function renderList(){
+  if(!catalog)return;
+  const q=$('search').value.trim().toLowerCase(),origin=$('origin-filter').value,type=$('type-filter').value;
+  const items=catalog.assets.filter(a=>(category==='scene'?a.kind==='scene':a.kind!=='scene')&&(!q||`${a.name} ${a.id} ${a.subtitle}`.toLowerCase().includes(q))&&(origin==='all'||a.origin===origin)&&(category==='scene'||type==='all'||a.kind===type));
+  $('asset-list').innerHTML=items.length?items.map(a=>`<button class="asset-card ${selected?.id===a.id?'active':''}" data-slug="${esc(a.slug)}" aria-pressed="${selected?.id===a.id}" aria-label="查看${esc(a.name)}"><span class="asset-thumb"><img src="${a.thumbnail}" alt="" loading="lazy"></span><span class="asset-card-info"><div class="asset-card-name">${esc(a.name)}</div><div class="asset-card-meta"><span>v${esc(a.version)}</span><span class="source-badge">${esc(a.origin.toUpperCase())}</span></div></span></button>`).join(''):'<div class="empty-note">没有匹配的资产。<br>尝试其他关键词或筛选条件。</div>';
+  document.querySelectorAll('.asset-card').forEach(b=>b.onclick=()=>selectAsset(b.dataset.slug));
+}
+function setCategory(kind){category=kind;document.querySelectorAll('.tabs button').forEach(b=>{b.classList.toggle('active',b.dataset.kind===kind);b.setAttribute('aria-selected',b.dataset.kind===kind);});$('type-filter').disabled=kind==='scene';renderList();}
+async function refresh(){
+  try{
+    const res=await fetch('/api/catalog',{cache:'no-store'});if(!res.ok)throw Error('连接失败');const next=await res.json();
+    const changed=!!catalog&&catalog.main_commit!==next.main_commit;catalog=next;
+    $('release').textContent=next.latest_release.tag==='unknown'?'读取中':next.latest_release.tag;
+    if(next.latest_release.url?.startsWith('https://github.com/'))$('release').href=next.latest_release.url;
+    $('sync-dot').className='dot'+(next.sync.error?' error':next.sync.syncing?' pending':'');
+    $('sync-text').textContent=next.sync.error?'同步暂不可用':next.sync.syncing?'main 同步中':'main 已同步';
+    $('sync-text').title=next.sync.error||`每 ${next.sync_interval_seconds} 秒同步 main`;
+    $('checked-at').textContent=next.sync.last_success?`已同步 ${new Date(next.sync.last_success).toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})} · 每分钟更新`:'正在准备首次快照';
+    $('object-count').textContent=next.assets.filter(a=>a.kind!=='scene').length;$('scene-count').textContent=next.assets.filter(a=>a.kind==='scene').length;$('total').textContent=next.assets.length;
+    renderList();
+    if(next.assets.length&&(!selected||changed)){
+      const requested=new URL(location.href).searchParams.get('asset');
+      const a=next.assets.find(a=>a.slug===(selected?.slug||requested))||next.assets[0];
+      await selectAsset(a.slug);if(changed)toast('main 已更新，正在展示最新资产内容');
+    }
+    if(!next.assets.length){$('sync-text').textContent=next.sync.error?'首次同步失败':'首次资产转换中';setTimeout(refresh,3000);}
+  }catch(e){$('sync-text').textContent='连接暂时中断';$('sync-dot').className='dot error';if(!selected){$('loading').querySelector('strong').textContent='正在等待服务连接';setTimeout(refresh,5000);}}
+}
+function clearModel(){
+  if(modelRoot){const gs=new Set(),ms=new Set(),ts=new Set();modelRoot.traverse(o=>{if(o.geometry)gs.add(o.geometry);if(o.material){ms.add(o.material);if(o.material.map)ts.add(o.material.map);}});gs.forEach(g=>g.dispose());ms.forEach(m=>m.dispose());ts.forEach(t=>t.dispose());scene.remove(modelRoot);}
+  if(ground){scene.remove(ground);ground.geometry.dispose();ground.material.dispose();}
+  if(grid){scene.remove(grid);grid.geometry.dispose();grid.material.dispose();}
+  ground=null;grid=null;bodyGroups.clear();jointMap.clear();angles.clear();pickables=[];colliders=[];cutaways=[];drag=null;controls.enabled=true;
+}
+function primitive(g){
+  const s=g.size;switch(g.type){
+    case 0:return new THREE.PlaneGeometry(Math.max(s[0]*2,30),Math.max(s[1]*2,30));
+    case 2:return new THREE.SphereGeometry(s[0],28,18);
+    case 3:{const v=new THREE.CapsuleGeometry(s[0],s[1]*2,8,24);v.rotateX(Math.PI/2);return v;}
+    case 4:{const v=new THREE.SphereGeometry(1,28,18);v.scale(...s);return v;}
+    case 5:{const v=new THREE.CylinderGeometry(s[0],s[0],s[1]*2,40);v.rotateX(Math.PI/2);return v;}
+    case 6:return new THREE.BoxGeometry(s[0]*2,s[1]*2,s[2]*2);
+    default:return new THREE.BoxGeometry(.02,.02,.02);
+  }
+}
+function nearestJoint(body){let b=body;while(b>0){const item=activeModel.bodies[b];if(item.joints.length)return item.joints[0];b=item.parent;}return null;}
+async function buildModel(data,url,token){
+  const bufferURL=new URL(data.buffer,url),buffer=await fetch(bufferURL).then(r=>{if(!r.ok)throw Error('几何文件加载失败');return r.arrayBuffer();});
+  const loader=new THREE.TextureLoader(),textures=new Map();
+  await Promise.all(data.materials.filter(m=>m.texture).map(async m=>{const u=new URL(m.texture,url).href;if(textures.has(u))return;const tex=await loader.loadAsync(u);tex.flipY=false;tex.colorSpace=THREE.SRGBColorSpace;tex.wrapS=tex.wrapT=THREE.RepeatWrapping;tex.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());textures.set(u,tex);}));
+  if(token!==loadId){textures.forEach(t=>t.dispose());return;}
+  clearModel();activeModel=data;modelRoot=new THREE.Group();scene.add(modelRoot);
+  const geometries={};
+  for(const [id,entry] of Object.entries(data.meshes)){
+    const array=new Float32Array(buffer,entry.offset,entry.count*8),interleaved=new THREE.InterleavedBuffer(array,8),geo=new THREE.BufferGeometry();
+    geo.setAttribute('position',new THREE.InterleavedBufferAttribute(interleaved,3,0));geo.setAttribute('normal',new THREE.InterleavedBufferAttribute(interleaved,3,3));geo.setAttribute('uv',new THREE.InterleavedBufferAttribute(interleaved,2,6));geo.computeBoundingSphere();geometries[id]=geo;
+  }
+  for(const b of data.bodies){const group=new THREE.Group();group.name=b.name;bodyGroups.set(b.id,group);if(b.id===0)modelRoot.add(group);else bodyGroups.get(b.parent).add(group);group.matrixAutoUpdate=false;}
+  data.joints.forEach(j=>{jointMap.set(j.name,j);angles.set(j.name,j.initial);});
+  for(const g of data.geoms){
+    const geometry=g.type===7?geometries[g.mesh]:primitive(g);if(!geometry)continue;
+    const materialDef=data.materials[g.material],color=new THREE.Color().setRGB(g.rgba[0],g.rgba[1],g.rgba[2],THREE.SRGBColorSpace);
+    if(g.rgba[3]>.01&&g.group!==3){
+      const texture=materialDef?.texture?textures.get(new URL(materialDef.texture,url).href):null;
+      if(texture&&g.type!==7)texture.repeat.set(...materialDef.repeat);
+      const mat=new THREE.MeshStandardMaterial({color,map:texture,roughness:Math.max(.3,1-(materialDef?.shininess||0)*.65),metalness:(g.name.includes('metal')||g.name.includes('aluminium')) ? .65 : .05,transparent:g.rgba[3]<.99,opacity:g.rgba[3],side:THREE.DoubleSide,depthWrite:g.rgba[3]>.5});
+      const mesh=new THREE.Mesh(geometry,mat);mesh.position.fromArray(g.pos);mesh.quaternion.set(g.quat[1],g.quat[2],g.quat[3],g.quat[0]);mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.joint=nearestJoint(g.body);mesh.name=g.name;
+      bodyGroups.get(g.body).add(mesh);pickables.push(mesh);if(g.cutaway)cutaways.push(mesh);
+    }
+    if(g.collision){const cm=new THREE.Mesh(geometry,new THREE.MeshBasicMaterial({color:0x69957e,wireframe:true,transparent:true,opacity:.35,depthWrite:false}));cm.position.fromArray(g.pos);cm.quaternion.set(g.quat[1],g.quat[2],g.quat[3],g.quat[0]);cm.visible=showCollision;bodyGroups.get(g.body).add(cm);colliders.push(cm);}
+  }
+  updateBodies();applyCutaway();frameModel();renderJoints();
+  $('loading').hidden=true;$('viewport').dataset.ready='true';
+}
+function updateBodies(){
+  if(!activeModel)return;
+  for(const b of activeModel.bodies){
+    const group=bodyGroups.get(b.id),base=new THREE.Matrix4().compose(new THREE.Vector3(...b.pos),new THREE.Quaternion(b.quat[1],b.quat[2],b.quat[3],b.quat[0]),new THREE.Vector3(1,1,1));
+    for(const jname of b.joints){const j=jointMap.get(jname),p=j.pivot,q=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(...j.axis),angles.get(jname)-j.reference);base.multiply(new THREE.Matrix4().makeTranslation(...p)).multiply(new THREE.Matrix4().makeRotationFromQuaternion(q)).multiply(new THREE.Matrix4().makeTranslation(-p[0],-p[1],-p[2]));}
+    group.matrix.copy(base);group.matrixWorldNeedsUpdate=true;
+  }
+  modelRoot.updateMatrixWorld(true);
+}
+function frameModel(){
+  if(!activeModel)return;
+  const [lo,hi]=activeModel.bounds,center=new THREE.Vector3(...lo).add(new THREE.Vector3(...hi)).multiplyScalar(.5),size=new THREE.Vector3(...hi).sub(new THREE.Vector3(...lo)),extent=Math.max(...size.toArray(),.05);
+  const dir=new THREE.Vector3(.9,-1.8,selected.kind==='scene'?2.1:.85).normalize();camera.position.copy(center).addScaledVector(dir,extent*1.85);controls.target.copy(center);camera.near=extent/1000;camera.far=extent*100;camera.updateProjectionMatrix();controls.minDistance=extent*.18;controls.maxDistance=extent*8;controls.update();
+  keyLight.position.copy(center).add(new THREE.Vector3(extent,-extent,extent*2));keyLight.target.position.copy(center);fill.position.copy(center).add(new THREE.Vector3(-extent,extent,extent));fill.target.position.copy(center);
+  Object.assign(keyLight.shadow.camera,{left:-extent,right:extent,top:extent,bottom:-extent,near:.001,far:extent*8});keyLight.shadow.camera.updateProjectionMatrix();keyLight.shadow.normalBias=extent*.001;
+  if(!ground&&selected.kind!=='scene'){
+    ground=new THREE.Mesh(new THREE.PlaneGeometry(extent*30,extent*30),new THREE.MeshStandardMaterial({color:0xeeeee7,roughness:1,metalness:0}));ground.position.set(center.x,center.y,lo[2]-.002*extent);ground.receiveShadow=true;scene.add(ground);
+    grid=new THREE.GridHelper(extent*8,32,0xd5dacd,0xe1e4d9);grid.rotation.x=Math.PI/2;grid.position.set(center.x,center.y,lo[2]-.001*extent);grid.material.transparent=true;grid.material.opacity=.55;scene.add(grid);
+  }
+}
+function applyCutaway(){cutaways.forEach(m=>m.visible=!(selected?.kind==='scene'&&cutaway));$('cutaway-toggle').setAttribute('aria-pressed',cutaway);}
+function setJoint(jname,value){const j=jointMap.get(jname);if(!j)return;angles.set(jname,THREE.MathUtils.clamp(value,...j.range));updateBodies();updateJointUI();}
+function updateJointUI(){for(const [name,value] of angles){const row=document.querySelector(`[data-joint="${CSS.escape(name)}"]`);if(row){row.querySelector('input').value=deg(value);row.querySelector('output').textContent=`${fmt(deg(value),1)}°`;row.classList.toggle('active',drag?.name===name);}}}
+function renderJoints(){
+  $('joint-panel').hidden=!selected.joints.length;$('joint-count').textContent=`${selected.joints.length} 个`;
+  $('joint-controls').innerHTML=selected.joints.map(j=>`<div class="joint-row" data-joint="${esc(j.name)}"><label for="joint-${esc(j.name)}">${esc(label(j.name))}</label><input id="joint-${esc(j.name)}" type="range" aria-label="${esc(label(j.name))}角度" min="${deg(j.range[0])}" max="${deg(j.range[1])}" step="0.1" value="${deg(angles.get(j.name))}"><output>${fmt(deg(angles.get(j.name)),1)}°</output></div>`).join('');
+  document.querySelectorAll('.joint-row input').forEach(input=>input.oninput=()=>setJoint(input.closest('.joint-row').dataset.joint,rad(Number(input.value))));
+}
+function setMode(enabled){jointMode=enabled&&!!selected?.joints.length;$('joint-mode').classList.toggle('active',jointMode);$('orbit-mode').classList.toggle('active',!jointMode);$('joint-mode').setAttribute('aria-pressed',jointMode);$('orbit-mode').setAttribute('aria-pressed',!jointMode);$('interaction-hint').textContent=jointMode?'拖动门 / 提手调整 · 拖动空白旋转':'拖动旋转 · 滚轮缩放 · 右键平移';}
+async function selectAsset(slug){
+  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;const token=++loadId;setCategory(a.kind==='scene'?'scene':'object');
+  const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
+  $('asset-name').textContent=a.name;$('asset-subtitle').textContent=a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':'物体'} / ${a.kind_label}`;
+  $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
+  $('mode-toggle').hidden=!a.joints.length;$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
+  if(a.kind==='scene'){$('scene-info').innerHTML='<strong>固定基准 · 办公场地</strong><p>测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。</p><p>保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。</p><div class="scene-chips">'+(a.dependencies||[]).map(id=>{const dep=catalog.assets.find(x=>x.id===id);return dep?`<button data-asset="${esc(dep.slug)}">${esc(dep.name)} · v${esc(dep.version)} ↗</button>`:'';}).join('')+'</div>';document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
+  showProperties(a);renderList();setMode(!!a.joints.length);$('viewport').dataset.ready='false';$('loading').hidden=false;$('loading').querySelector('strong').textContent=`正在加载${a.name}`;$('viewer-error').hidden=true;
+  try{const url=new URL(a.model_url,location.origin);const res=await fetch(url);if(!res.ok)throw Error('模型文件暂不可用');const data=await res.json();if(token!==loadId)return;await buildModel(data,url,token);}
+  catch(e){if(token!==loadId)return;$('loading').hidden=true;$('viewer-error').hidden=false;$('viewer-error').textContent=`模型加载失败：${e.message}。请刷新后重试。`;console.error(e);}
+}
+
+const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
+function ray(e){const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);raycaster.setFromCamera(pointer,camera);}
+renderer.domElement.addEventListener('pointerdown',e=>{
+  if(!jointMode||e.button!==0||!modelRoot||$('viewport').dataset.ready!=='true')return;ray(e);const hit=raycaster.intersectObjects(pickables,false).find(h=>h.object.visible);if(!hit?.object.userData.joint)return;
+  const name=hit.object.userData.joint,j=jointMap.get(name),group=bodyGroups.get(j.body),pivot=group.localToWorld(new THREE.Vector3(...j.pivot)),axis=new THREE.Vector3(...j.axis).transformDirection(group.matrixWorld),plane=new THREE.Plane().setFromNormalAndCoplanarPoint(axis,pivot),pt=raycaster.ray.intersectPlane(plane,new THREE.Vector3());
+  drag={name,start:angles.get(name),x:e.clientX,y:e.clientY,plane,pivot,axis,vector:pt&&Math.abs(raycaster.ray.direction.dot(axis))>.08?pt.clone().sub(pivot).normalize():null};
+  controls.enabled=false;renderer.domElement.setPointerCapture(e.pointerId);e.preventDefault();e.stopImmediatePropagation();updateJointUI();
+},true);
+renderer.domElement.addEventListener('pointermove',e=>{
+  if(!drag)return;ray(e);let delta=(e.clientX-drag.x)*.01-(e.clientY-drag.y)*.004;
+  if(drag.vector){const pt=raycaster.ray.intersectPlane(drag.plane,new THREE.Vector3());if(pt){const v=pt.sub(drag.pivot).normalize();delta=Math.atan2(drag.axis.dot(new THREE.Vector3().crossVectors(drag.vector,v)),drag.vector.dot(v));}}
+  setJoint(drag.name,drag.start+delta);e.preventDefault();e.stopImmediatePropagation();
+},true);
+function endDrag(e){if(!drag)return;drag=null;controls.enabled=true;updateJointUI();if(renderer.domElement.hasPointerCapture(e.pointerId))renderer.domElement.releasePointerCapture(e.pointerId);e.stopImmediatePropagation();}
+renderer.domElement.addEventListener('pointerup',endDrag,true);renderer.domElement.addEventListener('pointercancel',endDrag,true);
+$('orbit-mode').onclick=()=>setMode(false);$('joint-mode').onclick=()=>setMode(true);
+$('reset-view').onclick=frameModel;$('reset-joints').onclick=()=>{selected.joints.forEach(j=>angles.set(j.name,j.initial));updateBodies();updateJointUI();};
+$('collision-toggle').onclick=()=>{showCollision=!showCollision;colliders.forEach(m=>m.visible=showCollision);$('collision-toggle').setAttribute('aria-pressed',showCollision);};
+$('cutaway-toggle').onclick=()=>{cutaway=!cutaway;applyCutaway();};
+$('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('资产链接已复制');}catch{const input=document.createElement('input');input.value=location.href;document.body.append(input);input.select();const ok=document.execCommand('copy');input.remove();toast(ok?'资产链接已复制':'请复制浏览器地址栏中的链接');}};
+$('refresh').onclick=()=>{refresh();toast('正在获取最新同步结果');};
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{setCategory(b.dataset.kind);const first=catalog?.assets.find(a=>category==='scene'?a.kind==='scene':a.kind!=='scene');if(first&&(selected?.kind==='scene')!==(category==='scene'))selectAsset(first.slug);});
+$('search').oninput=renderList;$('origin-filter').onchange=renderList;$('type-filter').onchange=renderList;
+await refresh();setInterval(refresh,20000);

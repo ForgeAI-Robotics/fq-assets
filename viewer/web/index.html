@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FQ Assets · 仿真资产目录</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/addons/"}}</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="FQ Assets 首页"><span class="brand-mark">fq<span>·</span></span><span class="brand-text">ASSETS<small>仿真资产目录</small></span></a>
+    <div class="header-note">真实资产，同一份定义。</div>
+    <div class="release-wrap"><span class="eyebrow">最新发布</span><a id="release" href="https://github.com/cola1917/fq-sim-assets/releases" target="_blank" rel="noopener">—</a></div>
+    <div class="main-status"><span id="sync-dot" class="dot"></span><span id="sync-text">正在连接资产库</span></div>
+    <button id="refresh" class="icon-button" aria-label="刷新资产目录" title="获取最新同步结果">↻</button>
+  </header>
+  <main class="workspace">
+    <aside class="library">
+      <div class="library-heading"><span class="eyebrow">LIBRARY / 资产库</span><span id="total" class="count">—</span></div>
+      <div class="tabs" role="tablist" aria-label="资产类别"><button class="active" role="tab" aria-selected="true" data-kind="object">物体 <span id="object-count">0</span></button><button role="tab" aria-selected="false" data-kind="scene">场景 <span id="scene-count">0</span></button></div>
+      <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="search" placeholder="搜索名称或资产 ID" autocomplete="off" aria-label="搜索资产"></label>
+      <div class="filters"><select id="origin-filter" aria-label="筛选来源"><option value="all">全部来源</option><option value="fq">FQ</option><option value="simple">SIMPLE 原生</option></select><select id="type-filter" aria-label="筛选物体类型"><option value="all">全部类型</option><option value="rigid">刚体物体</option><option value="articulated">关节物体</option><option value="fixture">固定家具</option></select></div>
+      <div id="asset-list" class="asset-list" aria-label="资产列表"><div class="list-placeholder">正在读取 main…</div></div>
+      <div class="library-footer"><span class="branch-symbol">⑂</span><div><b>main 实时目录</b><small>物体版本来自 main，不锁定到 Release</small></div></div>
+    </aside>
+    <section class="viewer-column">
+      <div class="asset-heading"><div><div class="breadcrumb" id="breadcrumb">资产库 / 物体</div><h1 id="asset-name">选择一个资产</h1><p id="asset-subtitle">查看模型、基础属性与关节</p></div><div class="asset-heading-actions"><span id="asset-version" class="version-pill">main</span><button id="copy-link" class="icon-button" aria-label="复制当前资产链接" title="复制当前资产链接">↗</button></div></div>
+      <div id="viewport" class="viewport" aria-label="三维资产预览">
+        <div class="viewer-top"><div class="viewer-label"><span class="dot"></span>交互预览 <span class="viewer-label-divider">/</span><span id="pose-label">静态姿态</span></div><div id="mode-toggle" class="mode-toggle" hidden><button id="orbit-mode" class="active" aria-pressed="true">旋转查看</button><button id="joint-mode" aria-pressed="false">拖动关节</button></div></div>
+        <div id="canvas-host"></div>
+        <div id="loading" class="loading"><span class="spinner"></span><strong>正在准备资产</strong><small>加载真实网格与贴图</small></div>
+        <div id="viewer-error" class="viewer-error" hidden></div>
+        <div class="viewer-bottom"><span id="interaction-hint">拖动旋转 · 滚轮缩放 · 右键平移</span><span class="scale-label">米制 / Z ↑</span></div>
+        <div class="view-tools"><button id="reset-view" title="还原视角" aria-label="还原视角">⌖</button><button id="collision-toggle" aria-pressed="false" title="显示碰撞体">碰撞</button><button id="cutaway-toggle" aria-pressed="true" hidden title="去顶棚查看室内">剖视</button></div>
+      </div>
+      <div class="viewer-caption"><span id="model-note">浏览器姿态预览，不运行接触物理仿真。</span><span id="commit-label" class="mono">main · —</span></div>
+      <section id="joint-panel" class="joint-panel" hidden><div class="section-heading"><h2>关节控制 <span id="joint-count"></span></h2><button id="reset-joints" class="text-button">还原初始姿态 ↺</button></div><div id="joint-controls"></div><p class="joint-note">在模型上拖动门 / 提手，或使用滑块。角度受模型限位约束，操作不会写回资产库。</p></section>
+      <div id="scene-info" class="scene-info" hidden></div>
+    </section>
+    <aside class="properties"><div class="properties-title"><h2>资产属性</h2><span class="property-icon">≡</span></div><div id="properties-content" class="properties-content"><div class="empty-note">选中资产后查看属性</div></div><div class="properties-footer"><span class="dot"></span><span id="checked-at">等待同步</span></div></aside>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body></html>

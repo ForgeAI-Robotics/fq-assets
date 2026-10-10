@@ -1,0 +1,11 @@
+[Unit]
+Description=FQ Sim Assets viewer
+After=network-online.target
+[Service]
+WorkingDirectory=/home/fangqi/code/fq-sim-assets/viewer
+ExecStart=/usr/bin/python3 /home/fangqi/code/fq-sim-assets/viewer/server.py --repo /home/fangqi/code/fq-sim-assets --state /home/fangqi/.local/share/fq-assets-viewer --host 0.0.0.0 --port 18780
+Restart=on-failure
+RestartSec=5
+Environment=PATH=/home/fangqi/.local/bin:/usr/local/bin:/usr/bin:/bin
+[Install]
+WantedBy=default.target
