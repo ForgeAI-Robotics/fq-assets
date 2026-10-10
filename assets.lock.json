@@ -1,12 +1,23 @@
 {
   "schema_version": 1,
-  "release": "0.1.0",
+  "release": "0.2.0",
   "assets": {
     "fq:objects/coke_cn": "0.1.0",
     "fq:objects/round_table": "0.1.0",
     "fq:articulated/photo_basket": "0.1.0",
     "fq:articulated/haier_bcd402": "0.1.0",
     "fq:objects/conference_table": "0.1.0",
-    "fq:scenes/office_baseline": "0.1.0"
+    "fq:scenes/office_baseline": "0.1.0",
+    "fq:materials/wall": "0.1.0",
+    "fq:materials/floor": "0.1.0",
+    "fq:materials/carpet": "0.1.0",
+    "fq:materials/wood": "0.1.0",
+    "fq:materials/stone": "0.1.0",
+    "fq:end_effectors/o6_left": "0.1.0",
+    "fq:end_effectors/o6_right": "0.1.0",
+    "fq:robots/g1_o6": "0.1.0",
+    "fq:end_effectors/o7_left": "0.1.0",
+    "fq:end_effectors/o7_right": "0.1.0",
+    "fq:robots/g1_o7": "0.1.0"
   }
 }

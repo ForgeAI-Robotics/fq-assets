@@ -5,7 +5,8 @@ const $=id=>document.getElementById(id);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const deg=r=>r*180/Math.PI, rad=d=>d*Math.PI/180;
 const jointLabels={handle_right_hinge:'右提手',handle_left_hinge:'左提手',refrigerator_left_hinge:'左门',refrigerator_right_hinge:'右门',refrigerator_mullion_hinge:'中间竖梁'};
-const label=j=>jointLabels[j]||j;
+const label=j=>jointLabels[j]||j.replace(/^left_/, '左 ').replace(/^right_/, '右 ').replace(/o[67]_/, '').replace(/thumb/g,'拇指').replace(/index/g,'食指').replace(/middle/g,'中指').replace(/ring/g,'无名指').replace(/pinky/g,'小指').replace(/hip/g,'髋').replace(/knee/g,'膝').replace(/ankle/g,'踝').replace(/waist/g,'腰').replace(/shoulder/g,'肩').replace(/elbow/g,'肘').replace(/wrist/g,'腕').replace(/_joint$/,'').replace(/_/g,' ');
+const isRobot=a=>['robot','end_effector'].includes(a?.kind);
 let catalog=null,selected=null,category='object',loadId=0,activeModel=null,modelRoot=null;
 let bodyGroups=new Map(),jointMap=new Map(),angles=new Map(),pickables=[],colliders=[],cutaways=[],jointMode=false;
 let showCollision=false,cutaway=true,ground=null,grid=null,drag=null,toastTimer;
@@ -30,22 +31,27 @@ function toast(text){$('toast').textContent=text;$('toast').classList.add('show'
 function fmt(n,d=3){return n==null?'—':Number(n).toLocaleString('zh-CN',{maximumFractionDigits:d});}
 function row(key,value,cls=''){return `<div class="prop-row"><span>${esc(key)}</span><strong class="${cls}">${value}</strong></div>`;}
 function section(title,body){return `<section class="prop-section"><h3>${esc(title)}</h3>${body}</section>`;}
-function provenance(a){if(a.origin==='simple')return 'SIMPLE 原生';return (a.upstream_origin||'').includes('SimFoundry')?'FQ 派生 · SimFoundry':'FQ 自建';}
+function provenance(a){if(isRobot(a))return 'FQ 适配 · '+(a.kind==='robot'?'Unitree / LinkerHand':'LinkerHand');if(a.origin==='simple')return 'SIMPLE 原生';return (a.upstream_origin||'').includes('SimFoundry')?'FQ 派生 · SimFoundry':'FQ 自建';}
 function showProperties(a){
   if(a.kind==='material'){
     $('properties-content').innerHTML=section('材质/纹理',row('名称',esc(a.name))+row('来源',esc(provenance(a)))+row('分辨率',a.resolution.join(' × '))+row('色彩空间',esc(a.color_space))+row('贴图通道','基础颜色 · 法线/粗糙度贴图暂缺')+row('实际重复尺寸',a.tile_size_m?`${a.tile_size_m} m（估计）`:'未记录')+row('用途',a.usage_status==='in_use'?'基准场景使用中':'备用，未绑定基准场景')+'<p class="property-note">视觉外观不包含质量或接触摩擦。预览光照为近似效果。</p>')+section('版本与来源',row('物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)))+row('最新库发布',esc(catalog.latest_release.tag))+`<p class="property-note">${esc(a.upstream_origin)}</p><div class="asset-id">${esc(a.id)}</div><p class="property-note">引用：${esc(a.used_by.join(', ')||'暂无')}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看材质清单 ↗</a>`);
     return;
   }
   let html=section('基础信息',row('资产类型',esc(a.kind_label))+row('来源',esc(provenance(a)))+row('坐标约定','米制 · Z 向上')+row('基座',a.fixed_base?'固定':'自由运动')+`<div class="asset-id">${esc(a.id)}</div>`);
-  html+=section('尺寸与质量',`<div class="value-large">${a.mass_kg==null?'—':fmt(a.mass_kg)}<small>${a.mass_kg==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${a.mass_kg==null?'固定场景几何不以 0 kg 表示':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
-    (a.fixed_base&&a.kind!=='scene'&&a.mass_kg!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
+  html+=section('尺寸与质量',`<div class="value-large">${a.mass_kg==null?'—':fmt(a.mass_kg)}<small>${a.mass_kg==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${a.mass_kg==null?'固定场景几何不以 0 kg 表示':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.kind==='end_effector'?'手模型质量 · 未完成实测标定':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
+    (a.fixed_base&&!['scene','end_effector'].includes(a.kind)&&a.mass_kg!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
     row('外观包围尺寸',a.dimension_m.map(v=>fmt(v)).join(' × ')+' m','value-small')+
     (a.bodies.length>1?`<details class="property-details"><summary>查看 ${a.bodies.length} 个部件质量</summary>${a.bodies.map(b=>row(esc(b.name),`${fmt(b.mass)} kg`,'value-small')).join('')}</details>`:''));
   if(a.friction_range){
     const fr=i=>{let lo=a.friction_range.min[i],hi=a.friction_range.max[i];return Math.abs(lo-hi)<1e-8?fmt(lo,5):`${fmt(lo,5)} – ${fmt(hi,5)}`;};
     html+=section('接触参数 / MUJOCO',row('滑动摩擦',fr(0))+row('扭转摩擦',`${fr(1)} m`)+row('滚动摩擦',`${fr(2)} m`)+`<p class="property-note">模型设定值；有多个碰撞面时显示范围。滑动摩擦为无量纲，扭转与滚动参数使用长度单位。</p>`);
   }
-  if(a.joints.length){
+  if(isRobot(a)){
+    html+=section('关节与驱动',row('转轴数',a.joints.length)+row('驱动数',a.actuators.length)+row('联动约束',a.couplings.length)+'<p class="property-note">滑块控制独立关节，手指从动关节按模型耦合关系联动。驱动范围为模型控制输入，不等于实测力矩。</p>'+a.actuators.map(v=>`<details class="property-details"><summary>${esc(label(v.joint))}</summary>${row('关节范围',a.joints.find(j=>j.name===v.joint)?.range.map(x=>fmt(deg(x),1)+'°').join(' ～ ')||'—')}${row('驱动输入范围',v.control_range? v.control_range.map(x=>fmt(x)).join(' ～ '):'未限定')}${row('传动系数',v.gear.map(x=>fmt(x)).join(', '))}</details>`).join(''));
+    html+=section('模型状态',`<p class="property-note">${(a.limitations||[]).map(esc).join('<br>')}</p>`+row('上游手模型版本',esc(a.vendor_revision.slice(0,8)))+row('模型类型','现有仿真模型快照'));
+    if(a.dependencies?.length)html+=section('组合依赖',a.dependencies.map(id=>row(id,`v${esc(a.dependency_versions[id])}`)).join(''));
+  }
+  if(a.joints.length&&!isRobot(a)){
     html+=section('关节与阻力',row('可动关节',`${a.joints.length} 个`)+
       (a.slug==='haier_bcd402'?row('开门力度','未标定','status-label')+'<p class="property-note">尚无实测开门力曲线。拖动仅改变姿态，不代表真实开门阻力；竖梁为独立关节。</p>':'<p class="property-note">两个被动提手转轴，角度受模型限位约束。浏览器不模拟抓取或接触力。</p>')+
       a.joints.map(j=>`<details class="property-details"><summary>${esc(label(j.name))} · ${fmt(deg(j.range[0]),1)}° ～ ${fmt(deg(j.range[1]),1)}°</summary>${row('阻尼',`${fmt(j.damping,5)} N·m·s/rad`)}${row('关节摩擦力矩',`${fmt(j.friction_loss,5)} N·m`)}${row('刚度',`${fmt(j.stiffness,5)} N·m/rad`)}<p class="property-note">以上为模型参数，非实测开门/提手作用力。</p></details>`).join(''));
@@ -118,7 +124,7 @@ async function buildModel(data,url,token){
   for(const g of data.geoms){
     const geometry=g.type===7?geometries[g.mesh]:primitive(g);if(!geometry)continue;
     const materialDef=data.materials[g.material],color=new THREE.Color().setRGB(g.rgba[0],g.rgba[1],g.rgba[2],THREE.SRGBColorSpace);
-    if(g.rgba[3]>.01&&g.group!==3){
+    if(g.rgba[3]>.01&&g.group!==3&&!(isRobot(selected)&&g.collision&&g.group!==1&&data.geoms.some(v=>v.body===g.body&&v.group===1))){
       const texture=materialDef?.texture?textures.get(new URL(materialDef.texture,url).href):null;
       if(texture&&g.type!==7)texture.repeat.set(...materialDef.repeat);
       const mat=new THREE.MeshStandardMaterial({color,map:texture,roughness:Math.max(.3,1-(materialDef?.shininess||0)*.65),metalness:(g.name.includes('metal')||g.name.includes('aluminium')) ? .65 : .05,transparent:g.rgba[3]<.99,opacity:g.rgba[3],side:THREE.DoubleSide,depthWrite:g.rgba[3]>.5});
@@ -127,7 +133,7 @@ async function buildModel(data,url,token){
     }
     if(g.collision){const cm=new THREE.Mesh(geometry,new THREE.MeshBasicMaterial({color:0x69957e,wireframe:true,transparent:true,opacity:.35,depthWrite:false}));cm.position.fromArray(g.pos);cm.quaternion.set(g.quat[1],g.quat[2],g.quat[3],g.quat[0]);cm.visible=showCollision;bodyGroups.get(g.body).add(cm);colliders.push(cm);}
   }
-  updateBodies();applyCutaway();frameModel();renderJoints();
+  applyCouplings();updateBodies();applyCutaway();frameModel();renderJoints();
   $('loading').hidden=true;$('viewport').dataset.ready='true';
 }
 function updateBodies(){
@@ -151,11 +157,16 @@ function frameModel(){
   }
 }
 function applyCutaway(){cutaways.forEach(m=>m.visible=!(selected?.kind==='scene'&&cutaway));$('cutaway-toggle').setAttribute('aria-pressed',cutaway);}
-function setJoint(jname,value){const j=jointMap.get(jname);if(!j)return;angles.set(jname,THREE.MathUtils.clamp(value,...j.range));updateBodies();updateJointUI();}
+function applyCouplings(){
+  for(const c of activeModel?.couplings||[]){const driver=jointMap.get(c.driver),dependent=jointMap.get(c.joint);if(!driver||!dependent)continue;const x=angles.get(c.driver)-driver.reference;angles.set(c.joint,dependent.reference+c.polycoef.reduce((sum,k,i)=>sum+k*x**i,0));}
+}
+function setJoint(jname,value){const j=jointMap.get(jname);if(!j)return;angles.set(jname,THREE.MathUtils.clamp(value,...(j.control_range||j.range)));applyCouplings();updateBodies();updateJointUI();}
 function updateJointUI(){for(const [name,value] of angles){const row=document.querySelector(`[data-joint="${CSS.escape(name)}"]`);if(row){row.querySelector('input').value=deg(value);row.querySelector('output').textContent=`${fmt(deg(value),1)}°`;row.classList.toggle('active',drag?.name===name);}}}
 function renderJoints(){
   $('joint-panel').hidden=!selected.joints.length;$('joint-count').textContent=`${selected.joints.length} 个`;
-  $('joint-controls').innerHTML=selected.joints.map(j=>`<div class="joint-row" data-joint="${esc(j.name)}"><label for="joint-${esc(j.name)}">${esc(label(j.name))}</label><input id="joint-${esc(j.name)}" type="range" aria-label="${esc(label(j.name))}角度" min="${deg(j.range[0])}" max="${deg(j.range[1])}" step="0.1" value="${deg(angles.get(j.name))}"><output>${fmt(deg(angles.get(j.name)),1)}°</output></div>`).join('');
+  const group=$('joint-group').value;
+  const controls=selected.joints.filter(j=>!j.coupling&&(!isRobot(selected)||group==='all'||(group==='left'?j.name.startsWith('left_'):group==='right'?j.name.startsWith('right_'):!j.name.startsWith('left_')&&!j.name.startsWith('right_'))));
+  $('joint-controls').innerHTML=controls.map(j=>`<div class="joint-row" data-joint="${esc(j.name)}"><label for="joint-${esc(j.name)}">${esc(label(j.name))}</label><input id="joint-${esc(j.name)}" type="range" aria-label="${esc(label(j.name))}角度" min="${deg((j.control_range||j.range)[0])}" max="${deg((j.control_range||j.range)[1])}" step="0.1" value="${deg(angles.get(j.name))}"><output>${fmt(deg(angles.get(j.name)),1)}°</output></div>`).join('');
   document.querySelectorAll('.joint-row input').forEach(input=>input.oninput=()=>setJoint(input.closest('.joint-row').dataset.joint,rad(Number(input.value))));
 }
 function setMode(enabled){jointMode=enabled&&!!selected?.joints.length;$('joint-mode').classList.toggle('active',jointMode);$('orbit-mode').classList.toggle('active',!jointMode);$('joint-mode').setAttribute('aria-pressed',jointMode);$('orbit-mode').setAttribute('aria-pressed',!jointMode);$('interaction-hint').textContent=jointMode?'拖动门 / 提手调整 · 拖动空白旋转':'拖动旋转 · 滚轮缩放 · 右键平移';}
@@ -164,10 +175,10 @@ async function selectAsset(slug){
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':'物体'} / ${a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
-  $('mode-toggle').hidden=!a.joints.length;$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
+  $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isRobot(a)?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'在模型上拖动门 / 提手，或使用滑块。角度受模型限位约束，操作不会写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
   if(a.kind==='scene'){$('scene-info').innerHTML='<strong>固定基准 · 办公场地</strong><p>测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。</p><p>保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。</p><div class="scene-chips">'+(a.dependencies||[]).map(id=>{const dep=catalog.assets.find(x=>x.id===id);return dep?`<button data-asset="${esc(dep.slug)}">${esc(dep.name)} · v${esc(dep.version)} ↗</button>`:'';}).join('')+'</div>';document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
   $('material-controls').hidden=a.kind!=='material';$('collision-toggle').hidden=a.kind==='material';$('material-repeat').value=1;$('material-repeat-value').textContent='1 ×';
-  showProperties(a);renderList();setMode(!!a.joints.length);$('viewport').dataset.ready='false';$('loading').hidden=false;$('loading').querySelector('strong').textContent=`正在加载${a.name}`;$('viewer-error').hidden=true;
+  showProperties(a);renderList();setMode(!!a.joints.length&&!isRobot(a));$('viewport').dataset.ready='false';$('loading').hidden=false;$('loading').querySelector('strong').textContent=`正在加载${a.name}`;$('viewer-error').hidden=true;
   try{const url=new URL(a.model_url,location.origin);const res=await fetch(url);if(!res.ok)throw Error('模型文件暂不可用');const data=await res.json();if(token!==loadId)return;await buildModel(data,url,token);}
   catch(e){if(token!==loadId)return;$('loading').hidden=true;$('viewer-error').hidden=false;$('viewer-error').textContent=`模型加载失败：${e.message}。请刷新后重试。`;console.error(e);}
 }
@@ -188,12 +199,13 @@ renderer.domElement.addEventListener('pointermove',e=>{
 function endDrag(e){if(!drag)return;drag=null;controls.enabled=true;updateJointUI();if(renderer.domElement.hasPointerCapture(e.pointerId))renderer.domElement.releasePointerCapture(e.pointerId);e.stopImmediatePropagation();}
 renderer.domElement.addEventListener('pointerup',endDrag,true);renderer.domElement.addEventListener('pointercancel',endDrag,true);
 $('orbit-mode').onclick=()=>setMode(false);$('joint-mode').onclick=()=>setMode(true);
-$('reset-view').onclick=frameModel;$('reset-joints').onclick=()=>{selected.joints.forEach(j=>angles.set(j.name,j.initial));updateBodies();updateJointUI();};
+$('reset-view').onclick=frameModel;$('reset-joints').onclick=()=>{selected.joints.forEach(j=>angles.set(j.name,j.initial));applyCouplings();updateBodies();updateJointUI();};
 $('collision-toggle').onclick=()=>{showCollision=!showCollision;colliders.forEach(m=>m.visible=showCollision);$('collision-toggle').setAttribute('aria-pressed',showCollision);};
 $('cutaway-toggle').onclick=()=>{cutaway=!cutaway;applyCutaway();};
 $('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('资产链接已复制');}catch{const input=document.createElement('input');input.value=location.href;document.body.append(input);input.select();const ok=document.execCommand('copy');input.remove();toast(ok?'资产链接已复制':'请复制浏览器地址栏中的链接');}};
 $('refresh').onclick=()=>{refresh();toast('正在获取最新同步结果');};
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{setCategory(b.dataset.kind);const first=catalog?.assets.find(a=>category==='scene'?a.kind==='scene':a.kind!=='scene');if(first&&(selected?.kind==='scene')!==(category==='scene'))selectAsset(first.slug);});
+$('joint-group').onchange=renderJoints;
 $('search').oninput=renderList;$('origin-filter').onchange=renderList;$('type-filter').onchange=renderList;
 $('material-repeat').oninput=()=>{const n=Number($('material-repeat').value);$('material-repeat-value').textContent=`${n} ×`;modelRoot?.traverse(o=>{if(o.material?.map)o.material.map.repeat.set(n,n);});};
 await refresh();setInterval(refresh,20000);

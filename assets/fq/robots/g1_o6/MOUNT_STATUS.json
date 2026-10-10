@@ -1,0 +1,14 @@
+{
+  "status": "provisional",
+  "source": "2026-09 two-piece bracket and hand-side transfer flange STEP; approved visual assembly, pending measured wrist datum and fastener confirmation",
+  "allowed_uses": [
+    "model assembly",
+    "kinematic smoke tests",
+    "visual inspection"
+  ],
+  "forbidden_uses": [
+    "final collision validation",
+    "grasp validation",
+    "hardware deployment"
+  ]
+}

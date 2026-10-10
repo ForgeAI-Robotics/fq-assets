@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "body_pose_comparisons": 681,
+  "poses_per_asset": 3,
+  "tolerance": 1e-07,
+  "coupled_joint_limits_checked": true
+}

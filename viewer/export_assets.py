@@ -105,12 +105,35 @@ def main():
         bbox=[np.min(bounds,axis=0).tolist(),np.max(bounds,axis=0).tolist()] if bounds else [[-.5]*3,[.5]*3]
         friction=np.array([g['friction'] for g in geoms if g['collision']])
         total_mass=float(m.body_mass.sum());fixed=not any(t==mujoco.mjtJoint.mjJNT_FREE for t in m.jnt_type)
-        title,kind_label,subtitle=NAMES.get(slug,(slug,meta['kind'],meta.get('description','')))
+        couplings=[]
+        for i in range(m.neq):
+            if m.eq_type[i]!=mujoco.mjtEq.mjEQ_JOINT or m.eq_obj2id[i]<0:continue
+            couplings.append({'joint':name(m,mujoco.mjtObj.mjOBJ_JOINT,int(m.eq_obj1id[i])),
+                              'driver':name(m,mujoco.mjtObj.mjOBJ_JOINT,int(m.eq_obj2id[i])),
+                              'polycoef':m.eq_data[i,:5].tolist()})
+        actuators=[{'name':name(m,mujoco.mjtObj.mjOBJ_ACTUATOR,i),'joint':name(m,mujoco.mjtObj.mjOBJ_JOINT,int(m.actuator_trnid[i,0])),
+                    'control_range':m.actuator_ctrlrange[i].tolist() if m.actuator_ctrllimited[i] else None,
+                    'gear':m.actuator_gear[i].tolist()} for i in range(m.nu) if m.actuator_trntype[i]==mujoco.mjtTrn.mjTRN_JOINT]
+        for j in joints:
+            match=next((c for c in couplings if c['joint']==j['name']),None)
+            if match:j['coupling']=match
+        joint_by_name={j['name']:j for j in joints}
+        for c in couplings:
+            dependent=joint_by_name[c['joint']];driver=joint_by_name[c['driver']];co=c['polycoef']
+            if any(abs(x)>1e-12 for x in co[2:]) or abs(co[1])<1e-12:
+                raise ValueError('Unsupported nonlinear joint coupling')
+            allowed=sorted((x-dependent['reference']-co[0])/co[1]+driver['reference'] for x in dependent['range'])
+            limits=driver.get('control_range',driver['range'])
+            driver['control_range']=[max(limits[0],allowed[0]),min(limits[1],allowed[1])]
+            if driver['control_range'][0]>driver['control_range'][1]:raise ValueError('Incompatible coupled joint limits')
+        title,kind_label,subtitle=NAMES.get(slug,(meta.get('name',slug),{'robot':'机器人','end_effector':'灵巧手 / 末端执行器'}.get(meta['kind'],meta['kind']),meta.get('description','')))
+        if meta['kind'] in ('robot','end_effector'):subtitle='FQ 适配 / '+str(len(joints))+' 个转轴 · '+str(m.nu)+' 个驱动'
+
         info={**meta,'slug':slug,'name':title,'kind_label':kind_label,'subtitle':subtitle,'manifest_path':item['manifest'],
               'main_commit':args.commit,'dimension_m':(np.array(bbox[1])-bbox[0]).tolist(),
               'mass_kg':total_mass if total_mass>0 else None,'fixed_base':fixed,'bodies':[{k:b[k] for k in ('name','mass')} for b in bodies if b['mass']>0],
               'friction_range':{'min':friction.min(axis=0).tolist(),'max':friction.max(axis=0).tolist()} if len(friction) else None,
-              'joints':joints,'opening_force':{'status':'uncalibrated','value':None},
+              'joints':joints,'couplings':couplings,'actuators':actuators,'opening_force':{'status':'uncalibrated','value':None},
               'property_source':'MuJoCo 3.3.6 编译后的模型参数','physics_status':'模型设定 · 未完成实测标定',
               'model_url':f'/data/{args.commit}/{slug}/model.json','thumbnail':f'/data/{args.commit}/{slug}/preview.png'}
         if meta['kind']=='material':
@@ -122,7 +145,20 @@ def main():
             info['calibration']=json.loads((root/meta['calibration_record']).read_text())
         preview=root/'validation/previews'/f"{meta['id'].replace(':','_').replace('/','_')}.png"
         if preview.is_file():shutil.copyfile(preview,dest/'preview.png')
-        model={'bodies':bodies,'joints':joints,'geoms':geoms,'meshes':meshes,'materials':materials,'bounds':bbox,
+        elif meta['kind'] in ('robot','end_effector'):
+            from PIL import ImageDraw
+            im=Image.new('RGB',(256,256),(239,239,231));draw=ImageDraw.Draw(im)
+            dots=[]
+            for i in range(m.ngeom):
+                if m.geom_type[i]!=mujoco.mjtGeom.mjGEOM_MESH or m.geom_rgba[i,3]<.01:continue
+                mid=int(m.geom_dataid[i]);vertices=m.mesh_vert[m.mesh_vertadr[mid]:m.mesh_vertadr[mid]+m.mesh_vertnum[mid]]
+                vertices=vertices[::max(1,len(vertices)//1500)]@d.geom_xmat[i].reshape(3,3).T+d.geom_xpos[i]
+                dots.extend(np.column_stack((vertices[:,1]+.3*vertices[:,0],-vertices[:,2]+.15*vertices[:,0])))
+            xy=np.asarray(dots);lo=xy.min(axis=0);hi=xy.max(axis=0);factor=220/max(hi-lo)
+            xy=(xy-(lo+hi)/2)*factor+128
+            for x,y in xy:draw.ellipse((x-1,y-1,x+1,y+1),fill=(95,105,98))
+            im.save(dest/'preview.png')
+        model={'couplings':couplings,'bodies':bodies,'joints':joints,'geoms':geoms,'meshes':meshes,'materials':materials,'bounds':bbox,
                'buffer':'geometry.bin','mesh_vertices':sum(x['count'] for x in meshes.values()),'up_axis':'Z'}
         dump(dest/'model.json',model);dump(dest/'properties.json',info)
         catalog.append(info)

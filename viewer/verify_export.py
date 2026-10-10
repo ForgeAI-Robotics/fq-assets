@@ -16,15 +16,23 @@ def main():
     for asset in cat['assets']:
         meta=json.loads((a.root/asset['manifest_path']).read_text())
         assert asset['version']==meta['version']
+        if meta['kind']=='material':continue
         model=mujoco.MjModel.from_xml_path(str(a.root/meta['representations']['mujoco']))
         exported=json.loads((a.snapshot/asset['slug']/'model.json').read_text())
         assert abs((asset['mass_kg'] or 0)-model.body_mass.sum())<1e-8
         for fraction in (0,.37,1):
             data=mujoco.MjData(model); angles={}
             for j in exported['joints']:
-                value=j['range'][0]+fraction*(j['range'][1]-j['range'][0]);angles[j['name']]=value
+                limits=j.get('control_range',j['range']);value=limits[0]+fraction*(limits[1]-limits[0]);angles[j['name']]=value
                 jid=mujoco.mj_name2id(model,mujoco.mjtObj.mjOBJ_JOINT,j['name'])
                 data.qpos[model.jnt_qposadr[jid]]=value
+            byname={j['name']:j for j in exported['joints']}
+            for c in exported.get('couplings',[]):
+                dependent=byname[c['joint']];driver=byname[c['driver']]
+                x=angles[c['driver']]-driver['reference']
+                value=dependent['reference']+sum(k*x**i for i,k in enumerate(c['polycoef']))
+                assert dependent['range'][0]-1e-8<=value<=dependent['range'][1]+1e-8
+                angles[c['joint']]=value;data.qpos[model.joint(c['joint']).qposadr[0]]=value
             mujoco.mj_forward(model,data);world=[]
             for b in exported['bodies']:
                 matrix=transform(b['pos'],b['quat'])

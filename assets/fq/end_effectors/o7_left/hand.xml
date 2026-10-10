@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="o7_left">
+  <compiler angle="radian" meshdir="meshes/" />
+  <asset>
+    <mesh name="o7_left_hand_base_link" content_type="model/stl" file="o7_left_hand_base_link.STL" />
+    <mesh name="o7_left_thumb_metacarpals_base1" content_type="model/stl" file="o7_left_thumb_metacarpals_base1.STL" />
+    <mesh name="o7_left_thumb_metacarpals_base2" content_type="model/stl" file="o7_left_thumb_metacarpals_base2.STL" />
+    <mesh name="o7_left_thumb_metacarpals" content_type="model/stl" file="o7_left_thumb_metacarpals.STL" />
+    <mesh name="o7_left_thumb_proximal" content_type="model/stl" file="o7_left_thumb_proximal.STL" />
+    <mesh name="o7_left_thumb_distal" content_type="model/stl" file="o7_left_thumb_distal.STL" />
+    <mesh name="o7_left_index_proximal" content_type="model/stl" file="o7_left_index_proximal.STL" />
+    <mesh name="o7_left_index_middle" content_type="model/stl" file="o7_left_index_middle.STL" />
+    <mesh name="o7_left_index_distal" content_type="model/stl" file="o7_left_index_distal.STL" />
+    <mesh name="o7_left_middle_proximal" content_type="model/stl" file="o7_left_middle_proximal.STL" />
+    <mesh name="o7_left_middle_middle" content_type="model/stl" file="o7_left_middle_middle.STL" />
+    <mesh name="o7_left_middle_distal" content_type="model/stl" file="o7_left_middle_distal.STL" />
+    <mesh name="o7_left_ring_proximal" content_type="model/stl" file="o7_left_ring_proximal.STL" />
+    <mesh name="o7_left_ring_middle" content_type="model/stl" file="o7_left_ring_middle.STL" />
+    <mesh name="o7_left_ring_distal" content_type="model/stl" file="o7_left_ring_distal.STL" />
+    <mesh name="o7_left_pinky_proximal" content_type="model/stl" file="o7_left_pinky_proximal.STL" />
+    <mesh name="o7_left_pinky_middle" content_type="model/stl" file="o7_left_pinky_middle.STL" />
+    <mesh name="o7_left_pinky_distal" content_type="model/stl" file="o7_left_pinky_distal.STL" />
+  </asset>
+  <worldbody>
+    <body name="left_o7_hand_base_link" pos="0 0 0" quat="1 0 0 0">
+      <inertial pos="-0.00425009 0.00085681 0.07484" quat="0.999389 0.0260746 0.0186457 -0.013945" mass="0.225124" diaginertia="0.000307527 0.000205086 0.000138128" />
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_hand_base_link" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_hand_base_link" />
+      <body name="left_o7_thumb_metacarpals_base1" pos="-0.016939 -0.018427 0.057465">
+        <inertial pos="0.0221869 -9.48626e-06 -0.00324883" quat="0.702183 -0.0892113 -0.0895304 0.700688" mass="0.0115245" diaginertia="4.3707e-06 3.16784e-06 1.87527e-06" />
+        <joint name="left_o7_thumb_cmc_roll" pos="0 0 0" axis="-1 0 0" range="-0.785 0.785" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_metacarpals_base1" />
+        <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_metacarpals_base1" />
+        <body name="left_o7_thumb_metacarpals_base2" pos="0.029224 0.00012028 0.0020117">
+          <inertial pos="0.000732159 -0.00116892 -0.00114043" quat="0.707059 0.650834 0.187177 0.203585" mass="0.0194012" diaginertia="3.5497e-06 2.78235e-06 1.98872e-06" />
+          <joint name="left_o7_thumb_cmc_yaw" pos="0 0 0" axis="0 0 1" range="0 1.57" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_metacarpals_base2" />
+          <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_metacarpals_base2" />
+          <body name="left_o7_thumb_metacarpals" pos="0.015425 -0.024408 -0.0034929" quat="0.411615 0.4602 -0.254492 0.744327">
+            <inertial pos="0.00175928 5.98422e-05 0.0251803" quat="0.706665 -0.023061 -0.0229092 0.706802" mass="0.0177523" diaginertia="4.0212e-06 2.98199e-06 1.61214e-06" />
+            <joint name="left_o7_thumb_cmc_pitch" pos="0 0 0" axis="0 1 0" range="0 0.5285" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_metacarpals" />
+            <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_metacarpals" />
+            <body name="left_o7_thumb_proximal" pos="0.0049422 0 0.050268">
+              <inertial pos="-0.000134515 -6.22454e-06 0.0155657" quat="0.994796 -4.80762e-05 -0.101889 -4.92407e-06" mass="0.00522318" diaginertia="9.48378e-07 8.23289e-07 3.86135e-07" />
+              <joint name="left_o7_thumb_mcp" pos="0 0 0" axis="0 1 0" range="0 1.186" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_proximal" />
+              <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_proximal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+              <body name="left_o7_thumb_distal" pos="-0.0040391 0 0.036444">
+                <inertial pos="-0.00128288 8.66399e-06 0.0121296" quat="0.953712 -0.000806175 -0.300715 0.00168642" mass="0.00599273" diaginertia="4.26894e-07 3.68385e-07 2.08301e-07" />
+                <joint name="left_o7_thumb_ip" pos="0 0 0" axis="0 1 0" range="0 1.25783" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_distal" />
+                <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_thumb_distal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="left_o7_index_proximal" pos="-0.0010899 -0.027484 0.1273" quat="0.999962 0.00872639 0 0">
+        <inertial pos="-0.00325184 -5.73777e-05 0.0195195" quat="0.990065 0.00175681 -0.139391 0.018386" mass="0.00304919" diaginertia="2.82032e-07 2.61396e-07 1.31759e-07" />
+        <joint name="left_o7_index_mcp_pitch" pos="0 0 0" axis="0 1 0" range="0 1.325" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_index_proximal" />
+        <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_index_proximal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+        <body name="left_o7_index_middle" pos="-0.0033727 0 0.03351">
+          <inertial pos="-0.00220167 0.000343544 0.0115244" quat="0.990987 0.0190849 -0.132468 -0.00574543" mass="0.00325826" diaginertia="2.97069e-07 2.60461e-07 1.20901e-07" />
+          <joint name="left_o7_index_pip" pos="0 0 0" axis="0 1 0" range="0 1.57" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_index_middle" />
+          <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_index_middle" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+          <body name="left_o7_index_distal" pos="-0.0050438 0 0.025752">
+            <inertial pos="0.000205193 5.00808e-05 0.011664" quat="0.982237 0.0112053 -0.186503 0.0173862" mass="0.00386915" diaginertia="2.30129e-07 2.07142e-07 1.03196e-07" />
+            <joint name="left_o7_index_dip" pos="0 0 0" axis="0 1 0" range="0 1" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_index_distal" />
+            <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_index_distal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+          </body>
+        </body>
+      </body>
+      <body name="left_o7_middle_proximal" pos="-0.0030759 -0.0081771 0.1323">
+        <inertial pos="-0.00325186 -5.73455e-05 0.0195196" quat="0.990064 0.00176346 -0.139395 0.0183935" mass="0.00304917" diaginertia="2.82025e-07 2.61389e-07 1.31759e-07" />
+        <joint name="left_o7_middle_mcp_pitch" pos="0 0 0" axis="0 1 0" range="0 1.325" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_middle_proximal" />
+        <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_middle_proximal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+        <body name="left_o7_middle_middle" pos="-0.0033727 0 0.03351">
+          <inertial pos="-0.00220167 0.000343539 0.0115244" quat="0.990987 0.0190854 -0.132468 -0.0057458" mass="0.00325826" diaginertia="2.97068e-07 2.60461e-07 1.20901e-07" />
+          <joint name="left_o7_middle_pip" pos="0 0 0" axis="0 1 0" range="0 1.57" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_middle_middle" />
+          <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_middle_middle" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+          <body name="left_o7_middle_distal" pos="-0.0050438 0 0.025752">
+            <inertial pos="0.000205178 5.00683e-05 0.0116641" quat="0.982237 0.0112075 -0.186503 0.0173867" mass="0.00386916" diaginertia="2.30131e-07 2.07143e-07 1.03196e-07" />
+            <joint name="left_o7_middle_dip" pos="0 0 0" axis="0 1 0" range="0 1" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_middle_distal" />
+            <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_middle_distal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+          </body>
+        </body>
+      </body>
+      <body name="left_o7_ring_proximal" pos="-0.0010899 0.01113 0.1273" quat="0.999962 -0.00872639 0 0">
+        <inertial pos="-0.00325189 -5.73092e-05 0.0195197" quat="0.990064 0.00177092 -0.139399 0.0184019" mass="0.00304914" diaginertia="2.82017e-07 2.61382e-07 1.31758e-07" />
+        <joint name="left_o7_ring_mcp_pitch" pos="0 0 0" axis="0 1 0" range="0 1.325" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_ring_proximal" />
+        <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_ring_proximal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+        <body name="left_o7_ring_middle" pos="-0.0033727 0 0.03351">
+          <inertial pos="-0.00220167 0.000343544 0.0115244" quat="0.990987 0.0190849 -0.132468 -0.00574544" mass="0.00325826" diaginertia="2.97069e-07 2.60461e-07 1.20901e-07" />
+          <joint name="left_o7_ring_pip" pos="0 0 0" axis="0 1 0" range="0 1.57" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_ring_middle" />
+          <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_ring_middle" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+          <body name="left_o7_ring_distal" pos="-0.0050438 0 0.025752">
+            <inertial pos="0.000205172 5.00625e-05 0.0116641" quat="0.982237 0.0112086 -0.186503 0.0173864" mass="0.00386916" diaginertia="2.30131e-07 2.07144e-07 1.03196e-07" />
+            <joint name="left_o7_ring_dip" pos="0 0 0" axis="0 1 0" range="0 1" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_ring_distal" />
+            <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_ring_distal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+          </body>
+        </body>
+      </body>
+      <body name="left_o7_pinky_proximal" pos="0.00091015 0.030436 0.12229" quat="0.999848 -0.0174526 0 0">
+        <inertial pos="-0.00325189 -5.72983e-05 0.0195198" quat="0.990063 0.00177265 -0.1394 0.018404" mass="0.00304914" diaginertia="2.82015e-07 2.6138e-07 1.31758e-07" />
+        <joint name="left_o7_pinky_mcp_pitch" pos="0 0 0" axis="0 1 0" range="0 1.325" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_pinky_proximal" />
+        <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_pinky_proximal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+        <body name="left_o7_pinky_middle" pos="-0.0033727 0 0.03351">
+          <inertial pos="-0.00220167 0.000343544 0.0115244" quat="0.990987 0.0190849 -0.132468 -0.00574545" mass="0.00325826" diaginertia="2.97069e-07 2.60461e-07 1.20901e-07" />
+          <joint name="left_o7_pinky_pip" pos="0 0 0" axis="0 1 0" range="0 1.57" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_pinky_middle" />
+          <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_pinky_middle" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+          <body name="left_o7_pinky_distal" pos="-0.0050438 0 0.025752">
+            <inertial pos="0.000205169 5.00603e-05 0.0116641" quat="0.982237 0.0112093 -0.186503 0.0173871" mass="0.00386916" diaginertia="2.30131e-07 2.07144e-07 1.03196e-07" />
+            <joint name="left_o7_pinky_dip" pos="0 0 0" axis="0 1 0" range="0 1" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o7_left_pinky_distal" />
+            <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o7_left_pinky_distal" friction="0.8 0.003 0.0001" condim="4" priority="1" solref="0.008 1" />
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <equality>
+    <joint name="couple_left_o7_thumb_mcp" joint1="left_o7_thumb_mcp" joint2="left_o7_thumb_cmc_pitch" polycoef="0.0 2.24 0 0 0" />
+    <joint name="couple_left_o7_thumb_ip" joint1="left_o7_thumb_ip" joint2="left_o7_thumb_cmc_pitch" polycoef="0.0 2.38 0 0 0" />
+    <joint name="couple_left_o7_index_pip" joint1="left_o7_index_pip" joint2="left_o7_index_mcp_pitch" polycoef="0.0 1.18 0 0 0" />
+    <joint name="couple_left_o7_index_dip" joint1="left_o7_index_dip" joint2="left_o7_index_mcp_pitch" polycoef="0.0 0.7493 0 0 0" />
+    <joint name="couple_left_o7_middle_pip" joint1="left_o7_middle_pip" joint2="left_o7_middle_mcp_pitch" polycoef="0.0 1.18 0 0 0" />
+    <joint name="couple_left_o7_middle_dip" joint1="left_o7_middle_dip" joint2="left_o7_middle_mcp_pitch" polycoef="0.0 0.7493 0 0 0" />
+    <joint name="couple_left_o7_ring_pip" joint1="left_o7_ring_pip" joint2="left_o7_ring_mcp_pitch" polycoef="0.0 1.18 0 0 0" />
+    <joint name="couple_left_o7_ring_dip" joint1="left_o7_ring_dip" joint2="left_o7_ring_mcp_pitch" polycoef="0.0 0.7493 0 0 0" />
+    <joint name="couple_left_o7_pinky_pip" joint1="left_o7_pinky_pip" joint2="left_o7_pinky_mcp_pitch" polycoef="0.0 1.18 0 0 0" />
+    <joint name="couple_left_o7_pinky_dip" joint1="left_o7_pinky_dip" joint2="left_o7_pinky_mcp_pitch" polycoef="0.0 0.7493 0 0 0" />
+  </equality>
+  <actuator>
+    <motor name="left_o7_thumb_cmc_roll" joint="left_o7_thumb_cmc_roll" ctrllimited="true" ctrlrange="-100.0 100.0" />
+    <motor name="left_o7_thumb_cmc_yaw" joint="left_o7_thumb_cmc_yaw" ctrllimited="true" ctrlrange="-100.0 100.0" />
+    <motor name="left_o7_thumb_cmc_pitch" joint="left_o7_thumb_cmc_pitch" ctrllimited="true" ctrlrange="-100.0 100.0" />
+    <motor name="left_o7_index_mcp_pitch" joint="left_o7_index_mcp_pitch" ctrllimited="true" ctrlrange="-100.0 100.0" />
+    <motor name="left_o7_middle_mcp_pitch" joint="left_o7_middle_mcp_pitch" ctrllimited="true" ctrlrange="-100.0 100.0" />
+    <motor name="left_o7_ring_mcp_pitch" joint="left_o7_ring_mcp_pitch" ctrllimited="true" ctrlrange="-100.0 100.0" />
+    <motor name="left_o7_pinky_mcp_pitch" joint="left_o7_pinky_mcp_pitch" ctrllimited="true" ctrlrange="-100.0 100.0" />
+  </actuator>
+</mujoco>

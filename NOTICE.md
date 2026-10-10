@@ -9,3 +9,9 @@
 - SIMPLE 运行时和第三方控制代码未打包。原有资产构建脚本的版权/许可头原样保留。
 
 进一步公开分发或改变访问范围前，应逐项补齐上游授权信息。此记录不影响已授权的当前私有发布。
+
+## 机器人与灵巧手（v0.2.0）
+
+G1+O6、G1+O7 是现有 FQ 组合适配的快照，不标为 FQ 原创硬件或 SIMPLE 原生资产。G1 本体来自 Unitree 模型；精确本体上游提交及模型许可未在本次整理确认，不由 SIMPLE 代码许可推导。LinkerHand O6/O7 的本地记录固定上游 linker-bot/linkerhand-urdf，提交 075cc7d42cc1e756bdcbece0fc069a0779fc5237；Apache-2.0 文本保留在 provenance/robots/LinkerHand-LICENSE。组合模型中 FQ 的安装、碰撞和关节参数适配保留原值。逐文件来源及哈希见 provenance/robots/source_files.json。原始 MJCF/URDF 存在 provenance/robots，下游使用 assets 中便携路径版本。
+
+O6 安装件为 provisional，模型质量/惯量并非实测总成标定。四只手从当前组合模型提取，保留仿真耦合和驱动参数，不冒充未修改的厂商原版。当前私有发布包含模型与网页预览；未进行本次 GPU、抓取控制或硬件验收。

@@ -23,6 +23,10 @@ for item in catalog['assets']:
     assert lock['assets'][meta['id']]==meta['version']==item['version']
     assert meta['origin'] in ('fq','simple') and meta['upstream_origin']
     entry={'id':meta['id']}
+    if meta['kind']=='material':
+        texture=root/meta['representations']['base_color']
+        assert texture.is_file() and hashlib.sha256(texture.read_bytes()).hexdigest()==meta['texture_sha256']
+        entry['texture_verified']=True;report['assets'].append(entry);continue
     xml=root/meta['representations']['mujoco']
     model=mujoco.MjModel.from_xml_path(str(xml))
     data=mujoco.MjData(model)
@@ -56,6 +60,8 @@ for item in catalog['assets']:
         assert np.isfinite(d.qpos).all() and d.qpos[2]>-.02,(meta['id'],d.qpos)
         assert np.linalg.norm(d.qvel[:3])<.1,(meta['id'],d.qvel)
         entry['drop_test']={'seconds':2,'final_base_z':float(d.qpos[2]),'linear_speed':float(np.linalg.norm(d.qvel[:3]))}
+    if 'usd' not in meta['representations']:
+        entry['usd_supported']=False;report['assets'].append(entry);continue
     usd=root/meta['representations']['usd']
     layers,assets,unresolved=UsdUtils.ComputeAllDependencies(str(usd))
     assert not unresolved,(usd,list(unresolved))

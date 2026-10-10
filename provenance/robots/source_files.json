@@ -1,0 +1,2247 @@
+{
+  "source_checkout": "/home/fangqi/code/SIMPLE-o7-verify",
+  "source_commit": "3ba093b547106102773e2d7ac0265d93f134ede1",
+  "note": "工作目录可能含 FQ 未提交内容；以逐文件 SHA256 为准。派生 MJCF 仅便携路径改写；独立手提取原子树并把安装位姿归零，保留关节、质量、惯量、驱动及耦合。",
+  "files": [
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/g1_29dof_wholebody_o6.xml",
+      "destination": "provenance/robots/o6/source.xml",
+      "sha256": "b90f077fc68b3df78923c8f00a9b1c48388efb71c4e36288845d10dd0c9719c6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/pelvis.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/pelvis.STL",
+      "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/pelvis_contour_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/pelvis_contour_link.STL",
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_pitch_link.STL",
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_roll_link.STL",
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_yaw_link.STL",
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_knee_link.STL",
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_ankle_pitch_link.STL",
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_ankle_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_ankle_roll_link.STL",
+      "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_pitch_link.STL",
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_roll_link.STL",
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_yaw_link.STL",
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_knee_link.STL",
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_ankle_pitch_link.STL",
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_ankle_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_ankle_roll_link.STL",
+      "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/waist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/waist_yaw_link.STL",
+      "sha256": "2883f20e03f09b669b5b4ce10677ee6b5191c0934b584d7cbaef2d0662856ffb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/waist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/waist_roll_link.STL",
+      "sha256": "34f0aa73f41131230be4d25876c944fdf6c24d62553f199ff8b980c15e8913df"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/torso_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/torso_link.STL",
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/logo_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/logo_link.STL",
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/head_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/head_link.STL",
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/waist_support_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/waist_support_link.STL",
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_shoulder_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_shoulder_pitch_link.STL",
+      "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_shoulder_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_shoulder_roll_link.STL",
+      "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_shoulder_yaw_link.STL",
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_elbow_link.STL",
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_roll_link.STL",
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_pitch_link.STL",
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_yaw_link.STL",
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_shoulder_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_shoulder_pitch_link.STL",
+      "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_shoulder_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_shoulder_roll_link.STL",
+      "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_shoulder_yaw_link.STL",
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_elbow_link.STL",
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_roll_link.STL",
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_pitch_link.STL",
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_yaw_link.STL",
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_hand_base_link.STL",
+      "sha256": "2dc0d80eb470c0ccd6e338650f383efea75a5b77eee7e51d2b6a1da553afcdfe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_metacarpals_base2.STL",
+      "sha256": "9e8bd4b4adce43f74df492c1cd3890457b2ac0151c12582c5a8faaf6cdc9f1d9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_metacarpals.STL",
+      "sha256": "c91dc63ccd81ca270d166e9e276665ea3fbe6bb42fbee31d1c7bb545b4238045"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_distal.STL",
+      "sha256": "baf3c1b16f94925bcd06768af7ec811de1a97d78f253d26adcd502d35067cf75"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_index_proximal.STL",
+      "sha256": "dd77da3a5c18d236c46c3adb51e7be8262e64926a0ee9e996741609d5ed0b08d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_index_distal.STL",
+      "sha256": "4f2699ea27c60f6c28a3ca0cae64ddab40b24b4929bbc23e112cbe08f7ae311c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_middle_proximal.STL",
+      "sha256": "ed2daec64e98506a9fdd3e63708f5644c5d0660ef54c7711c83f15351fc8eb85"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_middle_distal.STL",
+      "sha256": "b92ed1e3af1d6ef3389287a45c27433a1584a1233fcb0825ee48411b59299697"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_ring_proximal.STL",
+      "sha256": "d17d67b52a5f02d9ff5dbb0b7315fea055f0ee43a0f2443faf7df28942cf3663"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_ring_distal.STL",
+      "sha256": "a21ba5ccb885f939788ef701d99a94781d0001ffe2b43a3d79a32c376dab988b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_pinky_proximal.STL",
+      "sha256": "8d0a3df9d46abe366d27132a49a45552031b57d1684fdf3adf7969a19faf6bf0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_pinky_distal.STL",
+      "sha256": "01a8db3f672c232cd3430c2314e1422cc14950c6f2e03606f9f4d20e66c30311"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_camera_bracket_two_piece.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_camera_bracket_two_piece.stl",
+      "sha256": "52ea0f7b2123123db1d7fb753a642ca93ece2c5a4c53ffc1003b046c171c24a5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_hand_base_link.STL",
+      "sha256": "f7fc8dae5d375e5a33251593c46f8b882c3a1aaafe89fa9544f0ef57d657f5de"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_metacarpals_base2.STL",
+      "sha256": "d92665c1cf3304617674cb4bc64cb20bc42ee49238043a427c222e32b4bdfe56"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_metacarpals.STL",
+      "sha256": "6bb54d668aea4f71251d48dc010897e08717b0cd13f63b304357fdc36894b897"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_distal.STL",
+      "sha256": "c3642be300b1ae3f7f5af071f5b1cfd4dec99e610e57e7bfe44a3b804886a360"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_index_proximal.STL",
+      "sha256": "38c58f62b9911203069925c3d374703772927ffd3fa98049400fd75e66e7194a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_index_distal.STL",
+      "sha256": "f07c23647d61bbc3e1c195fd94a726fa1a7828d128100ad49176af4c2364645f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_middle_proximal.STL",
+      "sha256": "392519c735b9658d3417d793a00f6a0f655b8e8b0a64fdd096eb2bcb31a4de65"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_middle_distal.STL",
+      "sha256": "15d9e1daab1e75a1ce6808a64d37effd1f7cd179b9d1ecb44f3a4be70d0e186e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_ring_proximal.STL",
+      "sha256": "e7485a837556d6c8a6101617bb113a625d65a878a00ac297b096d59b89629d5b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_ring_distal.STL",
+      "sha256": "e6488d4c8d8a8aa2d857c51178472f50e398dac1a2552cf90d2cf08561ae69cf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_pinky_proximal.STL",
+      "sha256": "50a1131fbead7bcf79ed1f435d4d799bd29f637ce81aa5220f31dc8b75a43777"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_pinky_distal.STL",
+      "sha256": "1b4b1c44dadd484bc3564ad622e0b7609c60eb8d76937b2a10c7d262cddc96e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_camera_bracket_two_piece.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_camera_bracket_two_piece.stl",
+      "sha256": "1bd1cda269f06a0a8e46a820f2a749ca3db131bd7006ff375177e018037a3975"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_hand_transfer_flange_two_piece.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_hand_transfer_flange_two_piece.stl",
+      "sha256": "251d2040e5883ee6d5b3a518cbfeea22569a8de4731a62082bade6289255f278"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_hand_transfer_flange_two_piece.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_hand_transfer_flange_two_piece.stl",
+      "sha256": "e493b2a92e050f3a2dddcaf50e669ca4934e8706e60fdc2e66f1fa0a08362412"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_camera_adapter.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_camera_adapter.stl",
+      "sha256": "1cd9ecb3df0632b41e7524ee0f7e61af0854db24252f7267b986ee66234f766a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_camera_adapter.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_camera_adapter.stl",
+      "sha256": "c7f11386af36d44b4b28c42673a3ea55475c9c8efe56f9afef8525786c6c4a86"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/pelvis.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/pelvis.STL",
+      "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/pelvis_contour_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/pelvis_contour_link.STL",
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/pelvis_contour_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/pelvis_contour_link.STL",
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_pitch_link.STL",
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_pitch_link.STL",
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_roll_link.STL",
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_roll_link.STL",
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_yaw_link.STL",
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_hip_yaw_link.STL",
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_knee_link.STL",
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_knee_link.STL",
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_ankle_pitch_link.STL",
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_ankle_pitch_link.STL",
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_ankle_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_ankle_roll_link.STL",
+      "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_pitch_link.STL",
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_pitch_link.STL",
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_roll_link.STL",
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_roll_link.STL",
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_yaw_link.STL",
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_hip_yaw_link.STL",
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_knee_link.STL",
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_knee_link.STL",
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_ankle_pitch_link.STL",
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_ankle_pitch_link.STL",
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_ankle_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_ankle_roll_link.STL",
+      "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/waist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/waist_yaw_link.STL",
+      "sha256": "2883f20e03f09b669b5b4ce10677ee6b5191c0934b584d7cbaef2d0662856ffb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/waist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/waist_roll_link.STL",
+      "sha256": "34f0aa73f41131230be4d25876c944fdf6c24d62553f199ff8b980c15e8913df"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/torso_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/torso_link.STL",
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/torso_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/torso_link.STL",
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/logo_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/logo_link.STL",
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/logo_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/logo_link.STL",
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/head_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/head_link.STL",
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/head_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/head_link.STL",
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/waist_support_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/waist_support_link.STL",
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/waist_support_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/waist_support_link.STL",
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_shoulder_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_shoulder_pitch_link.STL",
+      "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_shoulder_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_shoulder_roll_link.STL",
+      "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_shoulder_yaw_link.STL",
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_shoulder_yaw_link.STL",
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_elbow_link.STL",
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_elbow_link.STL",
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_roll_link.STL",
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_roll_link.STL",
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_pitch_link.STL",
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_pitch_link.STL",
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_yaw_link.STL",
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/left_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/left_wrist_yaw_link.STL",
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_shoulder_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_shoulder_pitch_link.STL",
+      "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_shoulder_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_shoulder_roll_link.STL",
+      "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_shoulder_yaw_link.STL",
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_shoulder_yaw_link.STL",
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_elbow_link.STL",
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_elbow_link.STL",
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_roll_link.STL",
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_roll_link.STL",
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_pitch_link.STL",
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_pitch_link.STL",
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_yaw_link.STL",
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/right_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/right_wrist_yaw_link.STL",
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_hand_base_link.STL",
+      "sha256": "2dc0d80eb470c0ccd6e338650f383efea75a5b77eee7e51d2b6a1da553afcdfe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_hand_base_link.STL",
+      "sha256": "2dc0d80eb470c0ccd6e338650f383efea75a5b77eee7e51d2b6a1da553afcdfe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_metacarpals_base2.STL",
+      "sha256": "9e8bd4b4adce43f74df492c1cd3890457b2ac0151c12582c5a8faaf6cdc9f1d9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_metacarpals_base2.STL",
+      "sha256": "9e8bd4b4adce43f74df492c1cd3890457b2ac0151c12582c5a8faaf6cdc9f1d9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_metacarpals.STL",
+      "sha256": "c91dc63ccd81ca270d166e9e276665ea3fbe6bb42fbee31d1c7bb545b4238045"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_metacarpals.STL",
+      "sha256": "c91dc63ccd81ca270d166e9e276665ea3fbe6bb42fbee31d1c7bb545b4238045"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_distal.STL",
+      "sha256": "baf3c1b16f94925bcd06768af7ec811de1a97d78f253d26adcd502d35067cf75"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_thumb_distal.STL",
+      "sha256": "baf3c1b16f94925bcd06768af7ec811de1a97d78f253d26adcd502d35067cf75"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_index_proximal.STL",
+      "sha256": "dd77da3a5c18d236c46c3adb51e7be8262e64926a0ee9e996741609d5ed0b08d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_index_proximal.STL",
+      "sha256": "dd77da3a5c18d236c46c3adb51e7be8262e64926a0ee9e996741609d5ed0b08d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_index_distal.STL",
+      "sha256": "4f2699ea27c60f6c28a3ca0cae64ddab40b24b4929bbc23e112cbe08f7ae311c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_index_distal.STL",
+      "sha256": "4f2699ea27c60f6c28a3ca0cae64ddab40b24b4929bbc23e112cbe08f7ae311c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_middle_proximal.STL",
+      "sha256": "ed2daec64e98506a9fdd3e63708f5644c5d0660ef54c7711c83f15351fc8eb85"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_middle_proximal.STL",
+      "sha256": "ed2daec64e98506a9fdd3e63708f5644c5d0660ef54c7711c83f15351fc8eb85"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_middle_distal.STL",
+      "sha256": "b92ed1e3af1d6ef3389287a45c27433a1584a1233fcb0825ee48411b59299697"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_middle_distal.STL",
+      "sha256": "b92ed1e3af1d6ef3389287a45c27433a1584a1233fcb0825ee48411b59299697"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_ring_proximal.STL",
+      "sha256": "d17d67b52a5f02d9ff5dbb0b7315fea055f0ee43a0f2443faf7df28942cf3663"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_ring_proximal.STL",
+      "sha256": "d17d67b52a5f02d9ff5dbb0b7315fea055f0ee43a0f2443faf7df28942cf3663"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_ring_distal.STL",
+      "sha256": "a21ba5ccb885f939788ef701d99a94781d0001ffe2b43a3d79a32c376dab988b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_ring_distal.STL",
+      "sha256": "a21ba5ccb885f939788ef701d99a94781d0001ffe2b43a3d79a32c376dab988b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_pinky_proximal.STL",
+      "sha256": "8d0a3df9d46abe366d27132a49a45552031b57d1684fdf3adf7969a19faf6bf0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_pinky_proximal.STL",
+      "sha256": "8d0a3df9d46abe366d27132a49a45552031b57d1684fdf3adf7969a19faf6bf0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_pinky_distal.STL",
+      "sha256": "01a8db3f672c232cd3430c2314e1422cc14950c6f2e03606f9f4d20e66c30311"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_pinky_distal.STL",
+      "sha256": "01a8db3f672c232cd3430c2314e1422cc14950c6f2e03606f9f4d20e66c30311"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_camera_bracket_two_piece.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_camera_bracket_two_piece.stl",
+      "sha256": "52ea0f7b2123123db1d7fb753a642ca93ece2c5a4c53ffc1003b046c171c24a5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_hand_base_link.STL",
+      "sha256": "f7fc8dae5d375e5a33251593c46f8b882c3a1aaafe89fa9544f0ef57d657f5de"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_hand_base_link.STL",
+      "sha256": "f7fc8dae5d375e5a33251593c46f8b882c3a1aaafe89fa9544f0ef57d657f5de"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_metacarpals_base2.STL",
+      "sha256": "d92665c1cf3304617674cb4bc64cb20bc42ee49238043a427c222e32b4bdfe56"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_metacarpals_base2.STL",
+      "sha256": "d92665c1cf3304617674cb4bc64cb20bc42ee49238043a427c222e32b4bdfe56"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_metacarpals.STL",
+      "sha256": "6bb54d668aea4f71251d48dc010897e08717b0cd13f63b304357fdc36894b897"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_metacarpals.STL",
+      "sha256": "6bb54d668aea4f71251d48dc010897e08717b0cd13f63b304357fdc36894b897"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_distal.STL",
+      "sha256": "c3642be300b1ae3f7f5af071f5b1cfd4dec99e610e57e7bfe44a3b804886a360"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_thumb_distal.STL",
+      "sha256": "c3642be300b1ae3f7f5af071f5b1cfd4dec99e610e57e7bfe44a3b804886a360"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_index_proximal.STL",
+      "sha256": "38c58f62b9911203069925c3d374703772927ffd3fa98049400fd75e66e7194a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_index_proximal.STL",
+      "sha256": "38c58f62b9911203069925c3d374703772927ffd3fa98049400fd75e66e7194a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_index_distal.STL",
+      "sha256": "f07c23647d61bbc3e1c195fd94a726fa1a7828d128100ad49176af4c2364645f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_index_distal.STL",
+      "sha256": "f07c23647d61bbc3e1c195fd94a726fa1a7828d128100ad49176af4c2364645f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_middle_proximal.STL",
+      "sha256": "392519c735b9658d3417d793a00f6a0f655b8e8b0a64fdd096eb2bcb31a4de65"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_middle_proximal.STL",
+      "sha256": "392519c735b9658d3417d793a00f6a0f655b8e8b0a64fdd096eb2bcb31a4de65"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_middle_distal.STL",
+      "sha256": "15d9e1daab1e75a1ce6808a64d37effd1f7cd179b9d1ecb44f3a4be70d0e186e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_middle_distal.STL",
+      "sha256": "15d9e1daab1e75a1ce6808a64d37effd1f7cd179b9d1ecb44f3a4be70d0e186e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_ring_proximal.STL",
+      "sha256": "e7485a837556d6c8a6101617bb113a625d65a878a00ac297b096d59b89629d5b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_ring_proximal.STL",
+      "sha256": "e7485a837556d6c8a6101617bb113a625d65a878a00ac297b096d59b89629d5b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_ring_distal.STL",
+      "sha256": "e6488d4c8d8a8aa2d857c51178472f50e398dac1a2552cf90d2cf08561ae69cf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_ring_distal.STL",
+      "sha256": "e6488d4c8d8a8aa2d857c51178472f50e398dac1a2552cf90d2cf08561ae69cf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_pinky_proximal.STL",
+      "sha256": "50a1131fbead7bcf79ed1f435d4d799bd29f637ce81aa5220f31dc8b75a43777"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_pinky_proximal.STL",
+      "sha256": "50a1131fbead7bcf79ed1f435d4d799bd29f637ce81aa5220f31dc8b75a43777"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_pinky_distal.STL",
+      "sha256": "1b4b1c44dadd484bc3564ad622e0b7609c60eb8d76937b2a10c7d262cddc96e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_pinky_distal.STL",
+      "sha256": "1b4b1c44dadd484bc3564ad622e0b7609c60eb8d76937b2a10c7d262cddc96e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_camera_bracket_two_piece.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_camera_bracket_two_piece.stl",
+      "sha256": "1bd1cda269f06a0a8e46a820f2a749ca3db131bd7006ff375177e018037a3975"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_hand_transfer_flange_two_piece.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_hand_transfer_flange_two_piece.stl",
+      "sha256": "251d2040e5883ee6d5b3a518cbfeea22569a8de4731a62082bade6289255f278"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_hand_transfer_flange_two_piece.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_hand_transfer_flange_two_piece.stl",
+      "sha256": "e493b2a92e050f3a2dddcaf50e669ca4934e8706e60fdc2e66f1fa0a08362412"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_camera_adapter.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_left_camera_adapter.stl",
+      "sha256": "1cd9ecb3df0632b41e7524ee0f7e61af0854db24252f7267b986ee66234f766a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_camera_adapter.stl",
+      "destination": "assets/fq/robots/g1_o6/meshes/o6_right_camera_adapter.stl",
+      "sha256": "c7f11386af36d44b4b28c42673a3ea55475c9c8efe56f9afef8525786c6c4a86"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/g1_29dof_wholebody_o6.urdf",
+      "destination": "provenance/robots/o6/source.urdf",
+      "sha256": "cd234d4582e339e8e8c731d4bbcf000191355f84d3d8d38871f5f5d66f2f7d30"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/O6_VENDOR_REVISION",
+      "destination": "assets/fq/robots/g1_o6/O6_VENDOR_REVISION",
+      "sha256": "64c814beea0696fdb395eb08ebbdfdb14c462d1bb07a452e9ed65464656623f5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/MOUNT_STATUS.json",
+      "destination": "assets/fq/robots/g1_o6/MOUNT_STATUS.json",
+      "sha256": "b66dbecfa359514b827cb493d02dc8de62c90ab4dcffb5a931e07715a93daad5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/CAMERA_MOUNT_STATUS.json",
+      "destination": "assets/fq/robots/g1_o6/CAMERA_MOUNT_STATUS.json",
+      "sha256": "a4a0f24fa5e0a770a3d7b6406e03c43653f59a155f9e30a91ea89dd441172640"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/CAMERA_MESH_PROVENANCE.json",
+      "destination": "assets/fq/robots/g1_o6/CAMERA_MESH_PROVENANCE.json",
+      "sha256": "339fbcdc6db2fde6e3189e5259c07ac506c5e738de00b212abda959ef3d4075b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_hand_base_link.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_hand_base_link.STL",
+      "sha256": "2dc0d80eb470c0ccd6e338650f383efea75a5b77eee7e51d2b6a1da553afcdfe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_thumb_metacarpals_base2.STL",
+      "sha256": "9e8bd4b4adce43f74df492c1cd3890457b2ac0151c12582c5a8faaf6cdc9f1d9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_metacarpals.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_thumb_metacarpals.STL",
+      "sha256": "c91dc63ccd81ca270d166e9e276665ea3fbe6bb42fbee31d1c7bb545b4238045"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_thumb_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_thumb_distal.STL",
+      "sha256": "baf3c1b16f94925bcd06768af7ec811de1a97d78f253d26adcd502d35067cf75"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_index_proximal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_index_proximal.STL",
+      "sha256": "dd77da3a5c18d236c46c3adb51e7be8262e64926a0ee9e996741609d5ed0b08d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_index_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_index_distal.STL",
+      "sha256": "4f2699ea27c60f6c28a3ca0cae64ddab40b24b4929bbc23e112cbe08f7ae311c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_middle_proximal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_middle_proximal.STL",
+      "sha256": "ed2daec64e98506a9fdd3e63708f5644c5d0660ef54c7711c83f15351fc8eb85"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_middle_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_middle_distal.STL",
+      "sha256": "b92ed1e3af1d6ef3389287a45c27433a1584a1233fcb0825ee48411b59299697"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_ring_proximal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_ring_proximal.STL",
+      "sha256": "d17d67b52a5f02d9ff5dbb0b7315fea055f0ee43a0f2443faf7df28942cf3663"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_ring_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_ring_distal.STL",
+      "sha256": "a21ba5ccb885f939788ef701d99a94781d0001ffe2b43a3d79a32c376dab988b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_pinky_proximal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_pinky_proximal.STL",
+      "sha256": "8d0a3df9d46abe366d27132a49a45552031b57d1684fdf3adf7969a19faf6bf0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_left_pinky_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_left/meshes/o6_left_pinky_distal.STL",
+      "sha256": "01a8db3f672c232cd3430c2314e1422cc14950c6f2e03606f9f4d20e66c30311"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_hand_base_link.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_hand_base_link.STL",
+      "sha256": "f7fc8dae5d375e5a33251593c46f8b882c3a1aaafe89fa9544f0ef57d657f5de"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_thumb_metacarpals_base2.STL",
+      "sha256": "d92665c1cf3304617674cb4bc64cb20bc42ee49238043a427c222e32b4bdfe56"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_metacarpals.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_thumb_metacarpals.STL",
+      "sha256": "6bb54d668aea4f71251d48dc010897e08717b0cd13f63b304357fdc36894b897"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_thumb_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_thumb_distal.STL",
+      "sha256": "c3642be300b1ae3f7f5af071f5b1cfd4dec99e610e57e7bfe44a3b804886a360"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_index_proximal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_index_proximal.STL",
+      "sha256": "38c58f62b9911203069925c3d374703772927ffd3fa98049400fd75e66e7194a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_index_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_index_distal.STL",
+      "sha256": "f07c23647d61bbc3e1c195fd94a726fa1a7828d128100ad49176af4c2364645f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_middle_proximal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_middle_proximal.STL",
+      "sha256": "392519c735b9658d3417d793a00f6a0f655b8e8b0a64fdd096eb2bcb31a4de65"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_middle_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_middle_distal.STL",
+      "sha256": "15d9e1daab1e75a1ce6808a64d37effd1f7cd179b9d1ecb44f3a4be70d0e186e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_ring_proximal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_ring_proximal.STL",
+      "sha256": "e7485a837556d6c8a6101617bb113a625d65a878a00ac297b096d59b89629d5b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_ring_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_ring_distal.STL",
+      "sha256": "e6488d4c8d8a8aa2d857c51178472f50e398dac1a2552cf90d2cf08561ae69cf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_pinky_proximal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_pinky_proximal.STL",
+      "sha256": "50a1131fbead7bcf79ed1f435d4d799bd29f637ce81aa5220f31dc8b75a43777"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/meshes/o6_right_pinky_distal.STL",
+      "destination": "assets/fq/end_effectors/o6_right/meshes/o6_right_pinky_distal.STL",
+      "sha256": "1b4b1c44dadd484bc3564ad622e0b7609c60eb8d76937b2a10c7d262cddc96e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/g1_29dof_wholebody_o7_left.xml",
+      "destination": "provenance/robots/o7/source.xml",
+      "sha256": "caef420ca3a6514244ddb4a0bb9d0ec7c20f59ca2127f2bdc4b8c4d8495fe9ca"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/pelvis.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/pelvis.STL",
+      "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/pelvis_contour_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/pelvis_contour_link.STL",
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_pitch_link.STL",
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_roll_link.STL",
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_yaw_link.STL",
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_knee_link.STL",
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_ankle_pitch_link.STL",
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_ankle_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_ankle_roll_link.STL",
+      "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_pitch_link.STL",
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_roll_link.STL",
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_yaw_link.STL",
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_knee_link.STL",
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_ankle_pitch_link.STL",
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_ankle_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_ankle_roll_link.STL",
+      "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/waist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/waist_yaw_link.STL",
+      "sha256": "2883f20e03f09b669b5b4ce10677ee6b5191c0934b584d7cbaef2d0662856ffb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/waist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/waist_roll_link.STL",
+      "sha256": "34f0aa73f41131230be4d25876c944fdf6c24d62553f199ff8b980c15e8913df"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/torso_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/torso_link.STL",
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/logo_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/logo_link.STL",
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/head_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/head_link.STL",
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/waist_support_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/waist_support_link.STL",
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_shoulder_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_shoulder_pitch_link.STL",
+      "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_shoulder_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_shoulder_roll_link.STL",
+      "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_shoulder_yaw_link.STL",
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_elbow_link.STL",
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_roll_link.STL",
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_pitch_link.STL",
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_yaw_link.STL",
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_shoulder_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_shoulder_pitch_link.STL",
+      "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_shoulder_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_shoulder_roll_link.STL",
+      "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_shoulder_yaw_link.STL",
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_elbow_link.STL",
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_roll_link.STL",
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_pitch_link.STL",
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_yaw_link.STL",
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_hand_base_link.STL",
+      "sha256": "5de2d561b37421ddb147184f79bb76d119cb7659cfc996790364f69679408f77"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals_base1.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals_base1.STL",
+      "sha256": "6f36bd7a2203734f87cb9ece03a62a3f38db54cc68b0af4325dc674536d53f9d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals_base2.STL",
+      "sha256": "ebc6d7e9122c7612a1c2a98a1587b8eadabcf717c18fe33af5176eff6c6b2b3f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals.STL",
+      "sha256": "9a0edfb9612a9dbb47fdc27b0e671d972f398700ef3acaa9ed51b6b736724a17"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_proximal.STL",
+      "sha256": "2f4c17b94e199c45c6395ef27448e3d7a200978eac3a5498ae659697194a8321"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_distal.STL",
+      "sha256": "91c8b973f0c4bbb28d235a0484c2997a50f2abedfe93c9ec5e5351b3ada13e4e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_proximal.STL",
+      "sha256": "38b6a0baeec492d0e1e6e4dd503e3afd67a90d132b23cf30b720c3578685daa7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_middle.STL",
+      "sha256": "e4117995119a175a9a76ce4b18e779fab8354161aa12a9a96a701fe7b958012c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_distal.STL",
+      "sha256": "6609d37c275758e922320397a5d8c86f9afcef1d9da2de26ebbaf20373df933a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_proximal.STL",
+      "sha256": "c68a20e35ed628ae71285f9548af705a294d2f80d46ede52da5d3d7b481e46e8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_middle.STL",
+      "sha256": "e1aa5d91fedda31d3d7aa7cbe87a2332dd29cdc307ca0028db9f064989bd57dc"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_distal.STL",
+      "sha256": "cf8b43b304a0b1d71d7f7447cf49c7202a9ceec9c1fb8a255429505d2f2a1430"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_proximal.STL",
+      "sha256": "05d367e06c19c62a73925b3ef87fa1593f608afdb6da0401fdbb0c2f986930fe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_middle.STL",
+      "sha256": "06b5aad661b2d9226a8f3037d409096ecbf5a09406ce89fa90b5c063dfaffcd3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_distal.STL",
+      "sha256": "3579d8b21224124b8aef39b277d23666d1087fa9bd771fb4c968df7d00ad8c77"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_proximal.STL",
+      "sha256": "d5b80277509350cafbe52a8129ca1f5d14b4f530bc9df531c86abe2dca0aba4b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_middle.STL",
+      "sha256": "c924751fba0dc32956db902e7b5de4363b3e1da86a59b438881b9563bf6d3fe7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_distal.STL",
+      "sha256": "8515dcb8601ebd317c5211c99793b14cd62b37bb0a6a1d29be06d0482aefade9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_hand_base_link.STL",
+      "sha256": "625a4cd9d7739c34205adb962f70e4a4f066af213214e39cbe26dd364a36c5bd"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals_base1.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals_base1.STL",
+      "sha256": "c3f60c0d411b671f83cfc870e81bf3992acf0923415ef9948ca81cdcf3737a20"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals_base2.STL",
+      "sha256": "56a1ca989fe26e95fd796776cfbf9bb1baef2861353c22c66eab31b489068bd6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals.STL",
+      "sha256": "a23356cbd8061d70c35543dba51dd096759a47cbe6ded8aff06d0806da5e2211"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_proximal.STL",
+      "sha256": "6053aa17c6f2885dfb251149393b9f3ccff9485ae540d36b6c35484e5f0b6566"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_distal.STL",
+      "sha256": "fd284d798fdba02948d17e33e826376f7140bf619c1199cbbb6a28f1750cbd3c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_proximal.STL",
+      "sha256": "a0e8100a742115dc5473ee828e01f80cd6f144062a56d8728b0d5b072d405d60"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_middle.STL",
+      "sha256": "2c7fc43c889e29ede17a6f575a777077a731412ed92ea8f01d1b3c86eed55bb5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_distal.STL",
+      "sha256": "ea22d393399153229608de361ff16280ffbc2be2d49ad8d0ff34a6a40fbb1532"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_proximal.STL",
+      "sha256": "d3f3e5c94f6e102e7169e11a72639c20d455589688cbefc4a28b5145c582b6c3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_middle.STL",
+      "sha256": "2c70eecdc55820403fe44b6ef953d5397b495bc5e405298f4d42f9c98154fdc4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_distal.STL",
+      "sha256": "12c3f994ee69fc0ef73d19422618af16ff2046be85371819cae5c00c4b33399f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_proximal.STL",
+      "sha256": "b6772ddddac241d335afc3069bca6fc85da7b359fa86ccc7af31d4ce472bd6a1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_mcp_pitch.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_mcp_pitch.STL",
+      "sha256": "ab8cfa6ea70237052d7a08871e408e2dc5965c07da09945993864ad713ceb811"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_distal.STL",
+      "sha256": "7e18c138576d4dee8cf9fece453c6488efc1001b82cb536aacebebbe6891f424"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_proximal.STL",
+      "sha256": "008e342f43880ade0d8501e21de64468c03ba26848d0b77fffefa774e17c3f7e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_middle.STL",
+      "sha256": "354a14e69b155a4002ceea6868621e8d08d7c44478451e4a302537ac2cf36245"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_distal.STL",
+      "sha256": "afc5ccf293d8c53488bcbc43c2ec8838fde8b202c2b9ab21eccac7b87c8462f2"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/pelvis.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/pelvis.STL",
+      "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/pelvis_contour_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/pelvis_contour_link.STL",
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/pelvis_contour_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/pelvis_contour_link.STL",
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_pitch_link.STL",
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_pitch_link.STL",
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_roll_link.STL",
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_roll_link.STL",
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_yaw_link.STL",
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_hip_yaw_link.STL",
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_knee_link.STL",
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_knee_link.STL",
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_ankle_pitch_link.STL",
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_ankle_pitch_link.STL",
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_ankle_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_ankle_roll_link.STL",
+      "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_pitch_link.STL",
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_pitch_link.STL",
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_roll_link.STL",
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_roll_link.STL",
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_yaw_link.STL",
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_hip_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_hip_yaw_link.STL",
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_knee_link.STL",
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_knee_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_knee_link.STL",
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_ankle_pitch_link.STL",
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_ankle_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_ankle_pitch_link.STL",
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_ankle_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_ankle_roll_link.STL",
+      "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/waist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/waist_yaw_link.STL",
+      "sha256": "2883f20e03f09b669b5b4ce10677ee6b5191c0934b584d7cbaef2d0662856ffb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/waist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/waist_roll_link.STL",
+      "sha256": "34f0aa73f41131230be4d25876c944fdf6c24d62553f199ff8b980c15e8913df"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/torso_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/torso_link.STL",
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/torso_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/torso_link.STL",
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/logo_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/logo_link.STL",
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/logo_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/logo_link.STL",
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/head_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/head_link.STL",
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/head_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/head_link.STL",
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/waist_support_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/waist_support_link.STL",
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/waist_support_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/waist_support_link.STL",
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_shoulder_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_shoulder_pitch_link.STL",
+      "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_shoulder_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_shoulder_roll_link.STL",
+      "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_shoulder_yaw_link.STL",
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_shoulder_yaw_link.STL",
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_elbow_link.STL",
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_elbow_link.STL",
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_roll_link.STL",
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_roll_link.STL",
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_pitch_link.STL",
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_pitch_link.STL",
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_yaw_link.STL",
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/left_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/left_wrist_yaw_link.STL",
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_shoulder_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_shoulder_pitch_link.STL",
+      "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_shoulder_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_shoulder_roll_link.STL",
+      "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_shoulder_yaw_link.STL",
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_shoulder_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_shoulder_yaw_link.STL",
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_elbow_link.STL",
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_elbow_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_elbow_link.STL",
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_roll_link.STL",
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_roll_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_roll_link.STL",
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_pitch_link.STL",
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_pitch_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_pitch_link.STL",
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_yaw_link.STL",
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/right_wrist_yaw_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/right_wrist_yaw_link.STL",
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_hand_base_link.STL",
+      "sha256": "5de2d561b37421ddb147184f79bb76d119cb7659cfc996790364f69679408f77"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_hand_base_link.STL",
+      "sha256": "5de2d561b37421ddb147184f79bb76d119cb7659cfc996790364f69679408f77"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals_base1.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals_base1.STL",
+      "sha256": "6f36bd7a2203734f87cb9ece03a62a3f38db54cc68b0af4325dc674536d53f9d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals_base1.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals_base1.STL",
+      "sha256": "6f36bd7a2203734f87cb9ece03a62a3f38db54cc68b0af4325dc674536d53f9d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals_base2.STL",
+      "sha256": "ebc6d7e9122c7612a1c2a98a1587b8eadabcf717c18fe33af5176eff6c6b2b3f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals_base2.STL",
+      "sha256": "ebc6d7e9122c7612a1c2a98a1587b8eadabcf717c18fe33af5176eff6c6b2b3f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals.STL",
+      "sha256": "9a0edfb9612a9dbb47fdc27b0e671d972f398700ef3acaa9ed51b6b736724a17"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_metacarpals.STL",
+      "sha256": "9a0edfb9612a9dbb47fdc27b0e671d972f398700ef3acaa9ed51b6b736724a17"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_proximal.STL",
+      "sha256": "2f4c17b94e199c45c6395ef27448e3d7a200978eac3a5498ae659697194a8321"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_proximal.STL",
+      "sha256": "2f4c17b94e199c45c6395ef27448e3d7a200978eac3a5498ae659697194a8321"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_distal.STL",
+      "sha256": "91c8b973f0c4bbb28d235a0484c2997a50f2abedfe93c9ec5e5351b3ada13e4e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_thumb_distal.STL",
+      "sha256": "91c8b973f0c4bbb28d235a0484c2997a50f2abedfe93c9ec5e5351b3ada13e4e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_proximal.STL",
+      "sha256": "38b6a0baeec492d0e1e6e4dd503e3afd67a90d132b23cf30b720c3578685daa7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_proximal.STL",
+      "sha256": "38b6a0baeec492d0e1e6e4dd503e3afd67a90d132b23cf30b720c3578685daa7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_middle.STL",
+      "sha256": "e4117995119a175a9a76ce4b18e779fab8354161aa12a9a96a701fe7b958012c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_middle.STL",
+      "sha256": "e4117995119a175a9a76ce4b18e779fab8354161aa12a9a96a701fe7b958012c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_distal.STL",
+      "sha256": "6609d37c275758e922320397a5d8c86f9afcef1d9da2de26ebbaf20373df933a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_index_distal.STL",
+      "sha256": "6609d37c275758e922320397a5d8c86f9afcef1d9da2de26ebbaf20373df933a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_proximal.STL",
+      "sha256": "c68a20e35ed628ae71285f9548af705a294d2f80d46ede52da5d3d7b481e46e8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_proximal.STL",
+      "sha256": "c68a20e35ed628ae71285f9548af705a294d2f80d46ede52da5d3d7b481e46e8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_middle.STL",
+      "sha256": "e1aa5d91fedda31d3d7aa7cbe87a2332dd29cdc307ca0028db9f064989bd57dc"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_middle.STL",
+      "sha256": "e1aa5d91fedda31d3d7aa7cbe87a2332dd29cdc307ca0028db9f064989bd57dc"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_distal.STL",
+      "sha256": "cf8b43b304a0b1d71d7f7447cf49c7202a9ceec9c1fb8a255429505d2f2a1430"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_middle_distal.STL",
+      "sha256": "cf8b43b304a0b1d71d7f7447cf49c7202a9ceec9c1fb8a255429505d2f2a1430"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_proximal.STL",
+      "sha256": "05d367e06c19c62a73925b3ef87fa1593f608afdb6da0401fdbb0c2f986930fe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_proximal.STL",
+      "sha256": "05d367e06c19c62a73925b3ef87fa1593f608afdb6da0401fdbb0c2f986930fe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_middle.STL",
+      "sha256": "06b5aad661b2d9226a8f3037d409096ecbf5a09406ce89fa90b5c063dfaffcd3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_middle.STL",
+      "sha256": "06b5aad661b2d9226a8f3037d409096ecbf5a09406ce89fa90b5c063dfaffcd3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_distal.STL",
+      "sha256": "3579d8b21224124b8aef39b277d23666d1087fa9bd771fb4c968df7d00ad8c77"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_ring_distal.STL",
+      "sha256": "3579d8b21224124b8aef39b277d23666d1087fa9bd771fb4c968df7d00ad8c77"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_proximal.STL",
+      "sha256": "d5b80277509350cafbe52a8129ca1f5d14b4f530bc9df531c86abe2dca0aba4b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_proximal.STL",
+      "sha256": "d5b80277509350cafbe52a8129ca1f5d14b4f530bc9df531c86abe2dca0aba4b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_middle.STL",
+      "sha256": "c924751fba0dc32956db902e7b5de4363b3e1da86a59b438881b9563bf6d3fe7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_middle.STL",
+      "sha256": "c924751fba0dc32956db902e7b5de4363b3e1da86a59b438881b9563bf6d3fe7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_distal.STL",
+      "sha256": "8515dcb8601ebd317c5211c99793b14cd62b37bb0a6a1d29be06d0482aefade9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_left_pinky_distal.STL",
+      "sha256": "8515dcb8601ebd317c5211c99793b14cd62b37bb0a6a1d29be06d0482aefade9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_hand_base_link.STL",
+      "sha256": "625a4cd9d7739c34205adb962f70e4a4f066af213214e39cbe26dd364a36c5bd"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_hand_base_link.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_hand_base_link.STL",
+      "sha256": "625a4cd9d7739c34205adb962f70e4a4f066af213214e39cbe26dd364a36c5bd"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals_base1.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals_base1.STL",
+      "sha256": "c3f60c0d411b671f83cfc870e81bf3992acf0923415ef9948ca81cdcf3737a20"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals_base1.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals_base1.STL",
+      "sha256": "c3f60c0d411b671f83cfc870e81bf3992acf0923415ef9948ca81cdcf3737a20"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals_base2.STL",
+      "sha256": "56a1ca989fe26e95fd796776cfbf9bb1baef2861353c22c66eab31b489068bd6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals_base2.STL",
+      "sha256": "56a1ca989fe26e95fd796776cfbf9bb1baef2861353c22c66eab31b489068bd6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals.STL",
+      "sha256": "a23356cbd8061d70c35543dba51dd096759a47cbe6ded8aff06d0806da5e2211"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_metacarpals.STL",
+      "sha256": "a23356cbd8061d70c35543dba51dd096759a47cbe6ded8aff06d0806da5e2211"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_proximal.STL",
+      "sha256": "6053aa17c6f2885dfb251149393b9f3ccff9485ae540d36b6c35484e5f0b6566"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_proximal.STL",
+      "sha256": "6053aa17c6f2885dfb251149393b9f3ccff9485ae540d36b6c35484e5f0b6566"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_distal.STL",
+      "sha256": "fd284d798fdba02948d17e33e826376f7140bf619c1199cbbb6a28f1750cbd3c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_thumb_distal.STL",
+      "sha256": "fd284d798fdba02948d17e33e826376f7140bf619c1199cbbb6a28f1750cbd3c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_proximal.STL",
+      "sha256": "a0e8100a742115dc5473ee828e01f80cd6f144062a56d8728b0d5b072d405d60"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_proximal.STL",
+      "sha256": "a0e8100a742115dc5473ee828e01f80cd6f144062a56d8728b0d5b072d405d60"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_middle.STL",
+      "sha256": "2c7fc43c889e29ede17a6f575a777077a731412ed92ea8f01d1b3c86eed55bb5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_middle.STL",
+      "sha256": "2c7fc43c889e29ede17a6f575a777077a731412ed92ea8f01d1b3c86eed55bb5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_distal.STL",
+      "sha256": "ea22d393399153229608de361ff16280ffbc2be2d49ad8d0ff34a6a40fbb1532"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_index_distal.STL",
+      "sha256": "ea22d393399153229608de361ff16280ffbc2be2d49ad8d0ff34a6a40fbb1532"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_proximal.STL",
+      "sha256": "d3f3e5c94f6e102e7169e11a72639c20d455589688cbefc4a28b5145c582b6c3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_proximal.STL",
+      "sha256": "d3f3e5c94f6e102e7169e11a72639c20d455589688cbefc4a28b5145c582b6c3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_middle.STL",
+      "sha256": "2c70eecdc55820403fe44b6ef953d5397b495bc5e405298f4d42f9c98154fdc4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_middle.STL",
+      "sha256": "2c70eecdc55820403fe44b6ef953d5397b495bc5e405298f4d42f9c98154fdc4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_distal.STL",
+      "sha256": "12c3f994ee69fc0ef73d19422618af16ff2046be85371819cae5c00c4b33399f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_middle_distal.STL",
+      "sha256": "12c3f994ee69fc0ef73d19422618af16ff2046be85371819cae5c00c4b33399f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_proximal.STL",
+      "sha256": "b6772ddddac241d335afc3069bca6fc85da7b359fa86ccc7af31d4ce472bd6a1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_proximal.STL",
+      "sha256": "b6772ddddac241d335afc3069bca6fc85da7b359fa86ccc7af31d4ce472bd6a1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_mcp_pitch.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_mcp_pitch.STL",
+      "sha256": "ab8cfa6ea70237052d7a08871e408e2dc5965c07da09945993864ad713ceb811"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_mcp_pitch.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_mcp_pitch.STL",
+      "sha256": "ab8cfa6ea70237052d7a08871e408e2dc5965c07da09945993864ad713ceb811"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_distal.STL",
+      "sha256": "7e18c138576d4dee8cf9fece453c6488efc1001b82cb536aacebebbe6891f424"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_ring_distal.STL",
+      "sha256": "7e18c138576d4dee8cf9fece453c6488efc1001b82cb536aacebebbe6891f424"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_proximal.STL",
+      "sha256": "008e342f43880ade0d8501e21de64468c03ba26848d0b77fffefa774e17c3f7e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_proximal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_proximal.STL",
+      "sha256": "008e342f43880ade0d8501e21de64468c03ba26848d0b77fffefa774e17c3f7e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_middle.STL",
+      "sha256": "354a14e69b155a4002ceea6868621e8d08d7c44478451e4a302537ac2cf36245"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_middle.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_middle.STL",
+      "sha256": "354a14e69b155a4002ceea6868621e8d08d7c44478451e4a302537ac2cf36245"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_distal.STL",
+      "sha256": "afc5ccf293d8c53488bcbc43c2ec8838fde8b202c2b9ab21eccac7b87c8462f2"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_distal.STL",
+      "destination": "assets/fq/robots/g1_o7/meshes/o7_right_pinky_distal.STL",
+      "sha256": "afc5ccf293d8c53488bcbc43c2ec8838fde8b202c2b9ab21eccac7b87c8462f2"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/g1_29dof_wholebody_o7_left.urdf",
+      "destination": "provenance/robots/o7/source.urdf",
+      "sha256": "75e46e09c7bb0a4d40e6e35bd86e4c3c33876672d4fe1b5fc10659009cd5134a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/O7_VENDOR_REVISION",
+      "destination": "assets/fq/robots/g1_o7/O7_VENDOR_REVISION",
+      "sha256": "7efe45bab9e59f148cd238e63a5a20b47da20f93af042989d488d5a21e6ab793"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/o7_model_contract.json",
+      "destination": "assets/fq/robots/g1_o7/o7_model_contract.json",
+      "sha256": "8a1a1ea1004c58761c97a514d75ee3cfd768784fce5cf9f5848d858da63ce394"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_hand_base_link.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_hand_base_link.STL",
+      "sha256": "5de2d561b37421ddb147184f79bb76d119cb7659cfc996790364f69679408f77"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals_base1.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_thumb_metacarpals_base1.STL",
+      "sha256": "6f36bd7a2203734f87cb9ece03a62a3f38db54cc68b0af4325dc674536d53f9d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_thumb_metacarpals_base2.STL",
+      "sha256": "ebc6d7e9122c7612a1c2a98a1587b8eadabcf717c18fe33af5176eff6c6b2b3f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_metacarpals.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_thumb_metacarpals.STL",
+      "sha256": "9a0edfb9612a9dbb47fdc27b0e671d972f398700ef3acaa9ed51b6b736724a17"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_thumb_proximal.STL",
+      "sha256": "2f4c17b94e199c45c6395ef27448e3d7a200978eac3a5498ae659697194a8321"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_thumb_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_thumb_distal.STL",
+      "sha256": "91c8b973f0c4bbb28d235a0484c2997a50f2abedfe93c9ec5e5351b3ada13e4e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_index_proximal.STL",
+      "sha256": "38b6a0baeec492d0e1e6e4dd503e3afd67a90d132b23cf30b720c3578685daa7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_middle.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_index_middle.STL",
+      "sha256": "e4117995119a175a9a76ce4b18e779fab8354161aa12a9a96a701fe7b958012c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_index_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_index_distal.STL",
+      "sha256": "6609d37c275758e922320397a5d8c86f9afcef1d9da2de26ebbaf20373df933a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_middle_proximal.STL",
+      "sha256": "c68a20e35ed628ae71285f9548af705a294d2f80d46ede52da5d3d7b481e46e8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_middle.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_middle_middle.STL",
+      "sha256": "e1aa5d91fedda31d3d7aa7cbe87a2332dd29cdc307ca0028db9f064989bd57dc"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_middle_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_middle_distal.STL",
+      "sha256": "cf8b43b304a0b1d71d7f7447cf49c7202a9ceec9c1fb8a255429505d2f2a1430"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_ring_proximal.STL",
+      "sha256": "05d367e06c19c62a73925b3ef87fa1593f608afdb6da0401fdbb0c2f986930fe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_middle.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_ring_middle.STL",
+      "sha256": "06b5aad661b2d9226a8f3037d409096ecbf5a09406ce89fa90b5c063dfaffcd3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_ring_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_ring_distal.STL",
+      "sha256": "3579d8b21224124b8aef39b277d23666d1087fa9bd771fb4c968df7d00ad8c77"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_pinky_proximal.STL",
+      "sha256": "d5b80277509350cafbe52a8129ca1f5d14b4f530bc9df531c86abe2dca0aba4b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_middle.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_pinky_middle.STL",
+      "sha256": "c924751fba0dc32956db902e7b5de4363b3e1da86a59b438881b9563bf6d3fe7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_left_pinky_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_left/meshes/o7_left_pinky_distal.STL",
+      "sha256": "8515dcb8601ebd317c5211c99793b14cd62b37bb0a6a1d29be06d0482aefade9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_hand_base_link.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_hand_base_link.STL",
+      "sha256": "625a4cd9d7739c34205adb962f70e4a4f066af213214e39cbe26dd364a36c5bd"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals_base1.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_thumb_metacarpals_base1.STL",
+      "sha256": "c3f60c0d411b671f83cfc870e81bf3992acf0923415ef9948ca81cdcf3737a20"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals_base2.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_thumb_metacarpals_base2.STL",
+      "sha256": "56a1ca989fe26e95fd796776cfbf9bb1baef2861353c22c66eab31b489068bd6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_metacarpals.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_thumb_metacarpals.STL",
+      "sha256": "a23356cbd8061d70c35543dba51dd096759a47cbe6ded8aff06d0806da5e2211"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_thumb_proximal.STL",
+      "sha256": "6053aa17c6f2885dfb251149393b9f3ccff9485ae540d36b6c35484e5f0b6566"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_thumb_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_thumb_distal.STL",
+      "sha256": "fd284d798fdba02948d17e33e826376f7140bf619c1199cbbb6a28f1750cbd3c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_index_proximal.STL",
+      "sha256": "a0e8100a742115dc5473ee828e01f80cd6f144062a56d8728b0d5b072d405d60"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_middle.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_index_middle.STL",
+      "sha256": "2c7fc43c889e29ede17a6f575a777077a731412ed92ea8f01d1b3c86eed55bb5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_index_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_index_distal.STL",
+      "sha256": "ea22d393399153229608de361ff16280ffbc2be2d49ad8d0ff34a6a40fbb1532"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_middle_proximal.STL",
+      "sha256": "d3f3e5c94f6e102e7169e11a72639c20d455589688cbefc4a28b5145c582b6c3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_middle.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_middle_middle.STL",
+      "sha256": "2c70eecdc55820403fe44b6ef953d5397b495bc5e405298f4d42f9c98154fdc4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_middle_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_middle_distal.STL",
+      "sha256": "12c3f994ee69fc0ef73d19422618af16ff2046be85371819cae5c00c4b33399f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_ring_proximal.STL",
+      "sha256": "b6772ddddac241d335afc3069bca6fc85da7b359fa86ccc7af31d4ce472bd6a1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_mcp_pitch.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_ring_mcp_pitch.STL",
+      "sha256": "ab8cfa6ea70237052d7a08871e408e2dc5965c07da09945993864ad713ceb811"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_ring_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_ring_distal.STL",
+      "sha256": "7e18c138576d4dee8cf9fece453c6488efc1001b82cb536aacebebbe6891f424"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_proximal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_pinky_proximal.STL",
+      "sha256": "008e342f43880ade0d8501e21de64468c03ba26848d0b77fffefa774e17c3f7e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_middle.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_pinky_middle.STL",
+      "sha256": "354a14e69b155a4002ceea6868621e8d08d7c44478451e4a302537ac2cf36245"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o7_left/meshes/o7_right_pinky_distal.STL",
+      "destination": "assets/fq/end_effectors/o7_right/meshes/o7_right_pinky_distal.STL",
+      "sha256": "afc5ccf293d8c53488bcbc43c2ec8838fde8b202c2b9ab21eccac7b87c8462f2"
+    }
+  ]
+}

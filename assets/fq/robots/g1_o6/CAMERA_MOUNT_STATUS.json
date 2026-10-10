@@ -1,0 +1,14 @@
+{
+  "status": "provisional",
+  "source": "2026-09 STEP camera bracket and hand-side transfer flange; existing camera frames and generic camera housings placed provisionally on the blue bracket tabs; hidden legacy adapter links retained for naming compatibility; optical extrinsics remain uncalibrated",
+  "collision_enabled": false,
+  "allowed_uses": [
+    "visual assembly",
+    "camera pipeline smoke tests"
+  ],
+  "forbidden_uses": [
+    "final collision validation",
+    "metric vision calibration",
+    "hardware deployment"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "status": "provisional_camera_extrinsics",
+  "units": "metres",
+  "collision_enabled": false,
+  "sources": {
+    "left_bracket": {
+      "path": "C:\\Users\\admin\\code\\simple\\generated-data\\o6-flange-inspection\\left-assembly-mm.stl",
+      "sha256": "5c7ec4d2fdb2c7111dd265b6207970785f76728e7a9817922a7e2ceff58a0b85",
+      "note": "valid closed solid tessellated from the supplied left STEP"
+    },
+    "right_bracket": {
+      "derived_from": "left_bracket",
+      "note": "mirrored from the valid left solid because the supplied right STEP is an invalid open-shell model"
+    },
+    "camera_adapter": {
+      "path": "C:\\Users\\admin\\code\\simple\\generated-data\\step-inspection\\adapter-mm.stl",
+      "sha256": "2d11df9676e83ca73e099bb91db0a497133e941130fd4ec4f410e0a1984eed48"
+    }
+  },
+  "outputs": {
+    "left_bracket": {
+      "path": "o6_left_camera_bracket.stl",
+      "sha256": "242cf6b1aa0e70387cb4746a4ad403c569a322aa61cc7f6c0ecc5de6154c8d13",
+      "vertices": 75276,
+      "faces": 25092,
+      "bounds_m": [
+        [
+          -0.01096289,
+          -0.004969461,
+          -0.04183478
+        ],
+        [
+          0.04180901,
+          0.02053054,
+          0.027192430000000004
+        ]
+      ],
+      "mirrored_y": false
+    },
+    "left_adapter": {
+      "path": "o6_left_camera_adapter.stl",
+      "sha256": "1cd9ecb3df0632b41e7524ee0f7e61af0854db24252f7267b986ee66234f766a",
+      "vertices": 348498,
+      "faces": 116166,
+      "bounds_m": [
+        [
+          -0.03381727248196,
+          -0.0547872348773,
+          -0.009000000000000001
+        ],
+        [
+          0.03339987290276,
+          0.0252,
+          0.026000000000000002
+        ]
+      ],
+      "mirrored_y": false
+    },
+    "right_bracket": {
+      "path": "o6_right_camera_bracket.stl",
+      "sha256": "1d2d6fb5c9549139f97850b61202554b7c29b1883fb020aaeace44eb8ebafa47",
+      "vertices": 75276,
+      "faces": 25092,
+      "bounds_m": [
+        [
+          -0.01096289,
+          -0.02053054,
+          -0.04183478
+        ],
+        [
+          0.04180901,
+          0.004969461,
+          0.027192430000000004
+        ]
+      ],
+      "mirrored_y": true
+    },
+    "right_adapter": {
+      "path": "o6_right_camera_adapter.stl",
+      "sha256": "c7f11386af36d44b4b28c42673a3ea55475c9c8efe56f9afef8525786c6c4a86",
+      "vertices": 348498,
+      "faces": 116166,
+      "bounds_m": [
+        [
+          -0.03381727248196,
+          -0.0252,
+          -0.009000000000000001
+        ],
+        [
+          0.03339987290276,
+          0.0547872348773,
+          0.026000000000000002
+        ]
+      ],
+      "mirrored_y": true
+    }
+  },
+  "two_piece_mount": {
+    "status": "approved_visual_assembly_provisional_physical_calibration",
+    "arm_side_bracket_source": "unitree-g1-docking-cameras-1-left-fix_mirrored_closed.STEP",
+    "right_side": "mirrored from valid left STEP; supplied right STEP was an open shell",
+    "hand_side_transfer_source": "source_step/o6_hand_side_transfer_flange_2x9_slots.stp",
+    "hand_side_transfer_sha256": "6b4cd6a91b4697cad4f33589a0b41e2a036848e58e6b6ca62129479f9bddebee",
+    "bracket_to_transfer_common_volume_mm3": 0.00013191,
+    "meshes_sha256": {
+      "o6_left_camera_bracket_two_piece.stl": "52ea0f7b2123123db1d7fb753a642ca93ece2c5a4c53ffc1003b046c171c24a5",
+      "o6_left_hand_transfer_flange_two_piece.stl": "251d2040e5883ee6d5b3a518cbfeea22569a8de4731a62082bade6289255f278",
+      "o6_right_camera_bracket_two_piece.stl": "1bd1cda269f06a0a8e46a820f2a749ca3db131bd7006ff375177e018037a3975",
+      "o6_right_hand_transfer_flange_two_piece.stl": "e493b2a92e050f3a2dddcaf50e669ca4934e8706e60fdc2e66f1fa0a08362412"
+    },
+    "camera_adapter_and_housing_visuals": "legacy adapter hidden; generic camera housing visible on bracket tab; optical extrinsics uncalibrated",
+    "collision_enabled": false
+  }
+}

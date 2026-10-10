@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "mujoco_version": "3.3.6",
+  "assets": [
+    {
+      "id": "fq:robots/g1_o6",
+      "source_equivalence": true,
+      "mass_kg": 35.00295539000001,
+      "hinge_joints": 51,
+      "actuators": 41
+    },
+    {
+      "id": "fq:end_effectors/o6_left",
+      "extracted_subtree_equivalence": true,
+      "poses_checked": 5,
+      "mass_kg": 0.11385613000000001,
+      "hinge_joints": 11,
+      "actuators": 6
+    },
+    {
+      "id": "fq:end_effectors/o6_right",
+      "extracted_subtree_equivalence": true,
+      "poses_checked": 5,
+      "mass_kg": 0.11395625999999999,
+      "hinge_joints": 11,
+      "actuators": 6
+    },
+    {
+      "id": "fq:robots/g1_o7",
+      "source_equivalence": true,
+      "mass_kg": 35.42646296,
+      "hinge_joints": 63,
+      "actuators": 43
+    },
+    {
+      "id": "fq:end_effectors/o7_left",
+      "extracted_subtree_equivalence": true,
+      "poses_checked": 5,
+      "mass_kg": 0.32572422,
+      "hinge_joints": 17,
+      "actuators": 7
+    },
+    {
+      "id": "fq:end_effectors/o7_right",
+      "extracted_subtree_equivalence": true,
+      "poses_checked": 5,
+      "mass_kg": 0.3255957400000001,
+      "hinge_joints": 17,
+      "actuators": 7
+    }
+  ],
+  "gpu_or_hardware_control_tested": false
+}

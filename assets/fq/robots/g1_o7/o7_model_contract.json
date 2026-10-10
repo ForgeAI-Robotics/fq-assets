@@ -1,0 +1,97 @@
+{
+  "model_version": "v1",
+  "vendor_revision": "075cc7d42cc1e756bdcbece0fc069a0779fc5237",
+  "phalanx_child_joint_endpoints": {
+    "left_o7_thumb_proximal": [
+      -0.0040391,
+      0.0,
+      0.036444
+    ],
+    "left_o7_index_proximal": [
+      -0.0033727,
+      0.0,
+      0.03351
+    ],
+    "left_o7_index_middle": [
+      -0.0050438,
+      0.0,
+      0.025752
+    ],
+    "left_o7_middle_proximal": [
+      -0.0033727,
+      0.0,
+      0.03351
+    ],
+    "left_o7_middle_middle": [
+      -0.0050438,
+      0.0,
+      0.025752
+    ],
+    "left_o7_ring_proximal": [
+      -0.0033727,
+      0.0,
+      0.03351
+    ],
+    "left_o7_ring_middle": [
+      -0.0050438,
+      0.0,
+      0.025752
+    ],
+    "left_o7_pinky_proximal": [
+      -0.0033727,
+      0.0,
+      0.03351
+    ],
+    "left_o7_pinky_middle": [
+      -0.0050438,
+      0.0,
+      0.025752
+    ],
+    "right_o7_thumb_proximal": [
+      -0.0040391,
+      0.0,
+      0.036444
+    ],
+    "right_o7_index_proximal": [
+      -0.0033727,
+      0.0,
+      0.03351
+    ],
+    "right_o7_index_middle": [
+      -0.0050438,
+      0.0,
+      0.025752
+    ],
+    "right_o7_middle_proximal": [
+      -0.0033727,
+      0.0,
+      0.03351
+    ],
+    "right_o7_middle_middle": [
+      -0.0050438,
+      0.0,
+      0.025752
+    ],
+    "right_o7_ring_proximal": [
+      -0.0033727,
+      0.0,
+      0.03351
+    ],
+    "right_o7_ring_middle": [
+      -0.0050438,
+      0.0,
+      0.025752
+    ],
+    "right_o7_pinky_proximal": [
+      -0.0033727,
+      0.0,
+      0.03351
+    ],
+    "right_o7_pinky_middle": [
+      -0.0050438,
+      0.0,
+      0.025752
+    ]
+  },
+  "collision_note": "Capsule approximations: proximal/middle endpoints follow selected URDF; tip lengths/radius and palm proxy are uncalibrated."
+}

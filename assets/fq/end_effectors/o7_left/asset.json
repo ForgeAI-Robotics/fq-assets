@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "fq:end_effectors/o7_left",
+  "version": "0.1.0",
+  "kind": "end_effector",
+  "name": "LinkerHand O7 左手",
+  "origin": "fq",
+  "upstream_origin": "FQ 组合/适配；Unitree G1 + LinkerHand O7；非 FQ 原创硬件模型",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "mujoco": "assets/fq/end_effectors/o7_left/hand.xml"
+  },
+  "provenance": "provenance/robots/source_files.json",
+  "vendor_revision": "075cc7d42cc1e756bdcbece0fc069a0779fc5237",
+  "license_status": "保留上游许可；Unitree 部分授权未在本次整理确认；仅当前私有发布",
+  "physics_calibrated": false,
+  "capabilities": {
+    "mujoco_compile": true,
+    "web_joint_preview": true,
+    "isaac_validated": false,
+    "hardware_control_validated": false
+  },
+  "limitations": [
+    "质量、惯量、碰撞与驱动参数来自现有仿真模型，非实测标定",
+    "浏览器仅作关节姿态预览，不代表抓取、平衡或真实驱动力已验证"
+  ],
+  "family": "o7",
+  "release_status": "model_snapshot",
+  "handedness": "left",
+  "root_body": "left_o7_hand_base_link",
+  "mount_frame": "手掌基座局部坐标；安装位姿保存在机器人组合清单",
+  "source_assembly": "fq:robots/g1_o7"
+}

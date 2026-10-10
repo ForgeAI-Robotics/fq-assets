@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "fq:robots/g1_o6",
+  "version": "0.1.0",
+  "kind": "robot",
+  "name": "G1 + O6 双手",
+  "origin": "fq",
+  "upstream_origin": "FQ 组合/适配；Unitree G1 + LinkerHand O6；非 FQ 原创硬件模型",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "mujoco": "assets/fq/robots/g1_o6/robot.xml",
+    "urdf": "assets/fq/robots/g1_o6/robot.urdf"
+  },
+  "provenance": "provenance/robots/source_files.json",
+  "vendor_revision": "075cc7d42cc1e756bdcbece0fc069a0779fc5237",
+  "license_status": "保留上游许可；Unitree 部分授权未在本次整理确认；仅当前私有发布",
+  "physics_calibrated": false,
+  "capabilities": {
+    "mujoco_compile": true,
+    "web_joint_preview": true,
+    "isaac_validated": false,
+    "hardware_control_validated": false
+  },
+  "limitations": [
+    "质量、惯量、碰撞与驱动参数来自现有仿真模型，非实测标定",
+    "浏览器仅作关节姿态预览，不代表抓取、平衡或真实驱动力已验证",
+    "O6 安装件 provisional：仅模型组合、运动学检查和视觉检查；未完成最终碰撞、抓取或硬件部署验证"
+  ],
+  "family": "o6",
+  "release_status": "model_snapshot",
+  "dependencies": [
+    "fq:end_effectors/o6_left",
+    "fq:end_effectors/o6_right"
+  ],
+  "dependency_versions": {
+    "fq:end_effectors/o6_left": "0.1.0",
+    "fq:end_effectors/o6_right": "0.1.0"
+  },
+  "mounts": {
+    "left": {
+      "root_body": "left_o6_hand_base_link",
+      "source_parent": "left_o6_hand_transfer_flange_link",
+      "position": "0.08042 0 0",
+      "quaternion_wxyz": "0.5 -0.5 0.5 -0.5"
+    },
+    "right": {
+      "root_body": "right_o6_hand_base_link",
+      "source_parent": "right_o6_hand_transfer_flange_link",
+      "position": "0.08042 0 0",
+      "quaternion_wxyz": "0.5 0.5 0.5 0.5"
+    }
+  }
+}
