@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "fq:cameras/realsense_d435i",
+  "version": "0.1.0",
+  "kind": "camera",
+  "name": "RealSense D435i",
+  "origin": "fq",
+  "upstream_origin": "RealSense 官方 d435.dae（D435i 官方 xacro 复用 D435 外壳）＋ FQ 格式转换与相机配置",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "mujoco": "assets/fq/cameras/realsense_d435i/camera.xml"
+  },
+  "provenance": "provenance/cameras/source_files.json",
+  "device_spec": {
+    "nominal_size_mm": [
+      90,
+      25,
+      25
+    ],
+    "channels": [
+      "RGB",
+      "深度",
+      "双目红外",
+      "六轴 IMU"
+    ],
+    "spec_url": "https://www.realsenseai.com/products/depth-camera-d435i/"
+  },
+  "simulation": {
+    "mass_kg": 0.072,
+    "mass_status": "近似仿真值，非实测",
+    "rgb_profile": {
+      "width": 640,
+      "height": 480,
+      "fx": 604.737670898438,
+      "fy": 604.221618652344,
+      "cx": 324.630462646484,
+      "cy": 253.83283996582
+    },
+    "depth_profile": {
+      "width": 640,
+      "height": 480,
+      "fx": 385.593688964844,
+      "fy": 385.593688964844,
+      "cx": 319.212036132812,
+      "cy": 233.034225463867
+    },
+    "calibration_status": "参考内参；非每台腕部设备的独立标定",
+    "imu_simulated": false
+  },
+  "physics_calibrated": false,
+  "used_by": [
+    "fq:robots/g1_o6"
+  ],
+  "limitations": [
+    "基于项目现有 D435i 资产与配置确认型号，未在线读取实体设备",
+    "网页只预览外形和参数，不展示实时相机流",
+    "机器人装配仅替换视觉并保留参考相机位姿；不启用新增质量或碰撞"
+  ],
+  "license_status": "上游 Apache-2.0；保留源 xacro 版权头；本地源文件 SHA256 固定，上游精确提交未记录"
+}

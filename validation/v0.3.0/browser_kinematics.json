@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "body_pose_comparisons": 696,
+  "tolerance": 1e-07
+}

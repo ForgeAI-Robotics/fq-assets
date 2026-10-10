@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.2.0",
+  "release": "0.3.0",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -69,7 +69,7 @@
     },
     {
       "id": "fq:robots/g1_o6",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "assets/fq/robots/g1_o6/asset.json"
     },
     {
@@ -86,6 +86,11 @@
       "id": "fq:robots/g1_o7",
       "version": "0.1.0",
       "manifest": "assets/fq/robots/g1_o7/asset.json"
+    },
+    {
+      "id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "manifest": "assets/fq/cameras/realsense_d435i/asset.json"
     }
   ]
 }

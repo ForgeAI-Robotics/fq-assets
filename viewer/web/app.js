@@ -32,17 +32,24 @@ function toast(text){$('toast').textContent=text;$('toast').classList.add('show'
 function fmt(n,d=3){return n==null?'—':Number(n).toLocaleString('zh-CN',{maximumFractionDigits:d});}
 function row(key,value,cls=''){return `<div class="prop-row"><span>${esc(key)}</span><strong class="${cls}">${value}</strong></div>`;}
 function section(title,body){return `<section class="prop-section"><h3>${esc(title)}</h3>${body}</section>`;}
-function provenance(a){if(isRobot(a))return 'FQ 适配 · '+(a.kind==='robot'?'Unitree / LinkerHand':'LinkerHand');if(a.origin==='simple')return 'SIMPLE 原生';return (a.upstream_origin||'').includes('SimFoundry')?'FQ 派生 · SimFoundry':'FQ 自建';}
+function provenance(a){if(a.kind==='camera')return 'RealSense 上游 · FQ 适配';if(isRobot(a))return 'FQ 适配 · '+(a.kind==='robot'?'Unitree / LinkerHand':'LinkerHand');if(a.origin==='simple')return 'SIMPLE 原生';return (a.upstream_origin||'').includes('SimFoundry')?'FQ 派生 · SimFoundry':'FQ 自建';}
 function showProperties(a){
   if(a.kind==='material'){
     $('properties-content').innerHTML=section('材质/纹理',row('名称',esc(a.name))+row('来源',esc(provenance(a)))+row('分辨率',a.resolution.join(' × '))+row('色彩空间',esc(a.color_space))+row('贴图通道','基础颜色 · 法线/粗糙度贴图暂缺')+row('实际重复尺寸',a.tile_size_m?`${a.tile_size_m} m（估计）`:'未记录')+row('用途',a.usage_status==='in_use'?'基准场景使用中':'备用，未绑定基准场景')+'<p class="property-note">视觉外观不包含质量或接触摩擦。预览光照为近似效果。</p>')+section('版本与来源',row('物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)))+row('最新库发布',esc(catalog.latest_release.tag))+`<p class="property-note">${esc(a.upstream_origin)}</p><div class="asset-id">${esc(a.id)}</div><p class="property-note">引用：${esc(a.used_by.join(', ')||'暂无')}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看材质清单 ↗</a>`);
     return;
   }
   let html=section('基础信息',row('资产类型',esc(a.kind_label))+row('来源',esc(provenance(a)))+row('坐标约定','米制 · Z 向上')+row('基座',a.fixed_base?'固定':'自由运动')+`<div class="asset-id">${esc(a.id)}</div>`);
-  html+=section('尺寸与质量',`<div class="value-large">${a.mass_kg==null?'—':fmt(a.mass_kg)}<small>${a.mass_kg==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${a.mass_kg==null?'固定场景几何不以 0 kg 表示':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.kind==='end_effector'?'手模型质量 · 未完成实测标定':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
-    (a.fixed_base&&!['scene','end_effector'].includes(a.kind)&&a.mass_kg!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
+  html+=section('尺寸与质量',`<div class="value-large">${a.mass_kg==null?'—':fmt(a.mass_kg)}<small>${a.mass_kg==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${a.mass_kg==null?'固定场景几何不以 0 kg 表示':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.kind==='camera'?'近似仿真质量 · 非实测':a.kind==='end_effector'?'手模型质量 · 未完成实测标定':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
+    (a.fixed_base&&!['scene','end_effector','camera'].includes(a.kind)&&a.mass_kg!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
     row('外观包围尺寸',a.dimension_m.map(v=>fmt(v)).join(' × ')+' m','value-small')+
     (a.bodies.length>1?`<details class="property-details"><summary>查看 ${a.bodies.length} 个部件质量</summary>${a.bodies.map(b=>row(esc(b.name),`${fmt(b.mass)} kg`,'value-small')).join('')}</details>`:''));
+  if(a.kind==='camera'){
+    const rgb=a.simulation.rgb_profile,depth=a.simulation.depth_profile;
+    html+=section('设备规格',row('型号','RealSense D435i')+row('标称外壳尺寸',a.device_spec.nominal_size_mm.join(' × ')+' mm')+row('硬件能力',a.device_spec.channels.map(esc).join(' / '))+`<a class="text-button" target="_blank" rel="noopener" href="${esc(a.device_spec.spec_url)}">厂商规格 ↗</a>`);
+    html+=section('仿真参考配置',row('RGB',`${rgb.width} × ${rgb.height}`)+row('深度',`${depth.width} × ${depth.height}`)+row('IMU 仿真','未接入')+`<details class="property-details"><summary>查看参考内参</summary>${row('RGB fx / fy',`${fmt(rgb.fx)} / ${fmt(rgb.fy)}`)}${row('RGB cx / cy',`${fmt(rgb.cx)} / ${fmt(rgb.cy)}`)}${row('Depth fx / fy',`${fmt(depth.fx)} / ${fmt(depth.fy)}`)}${row('Depth cx / cy',`${fmt(depth.cx)} / ${fmt(depth.cy)}`)}</details><p class="property-note">${esc(a.simulation.calibration_status)}</p>`);
+    html+=section('使用状态',`<p class="property-note">${a.limitations.map(esc).join('<br>')}</p><a class="text-button" href="/?asset=g1_o6">查看 G1 + O6 装配 ↗</a>`);
+  }
+  if(a.camera_mounts)html+=section('相机装配',row('型号','D435i × 3')+row('位置','头部 / 左腕 / 右腕')+row('装配状态','现有参考位姿 · 未重新标定')+'<p class="property-note">仅视觉替换，未新增相机质量或碰撞。</p><a class="text-button" href="/?asset=realsense_d435i">查看相机资产 ↗</a>');
   if(a.friction_range){
     const fr=i=>{let lo=a.friction_range.min[i],hi=a.friction_range.max[i];return Math.abs(lo-hi)<1e-8?fmt(lo,5):`${fmt(lo,5)} – ${fmt(hi,5)}`;};
     html+=section('接触参数 / MUJOCO',row('滑动摩擦',fr(0))+row('扭转摩擦',`${fr(1)} m`)+row('滚动摩擦',`${fr(2)} m`)+`<p class="property-note">模型设定值；有多个碰撞面时显示范围。滑动摩擦为无量纲，扭转与滚动参数使用长度单位。</p>`);

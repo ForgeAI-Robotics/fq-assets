@@ -1,0 +1,266 @@
+{
+  "model": "RealSense D435i",
+  "cameras": {
+    "d435i_left_rgb": {
+      "parent_link": "left_wrist_yaw_link",
+      "optical_pose": {
+        "position": [
+          0.0742547,
+          -0.0337719065,
+          -0.0477109459
+        ],
+        "quaternion": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865475
+        ]
+      },
+      "gl_pose": {
+        "position": [
+          0.0742547,
+          -0.0337719065,
+          -0.0477109459
+        ],
+        "quaternion": [
+          -0.7071067811865475,
+          0.0,
+          0.7071067811865475,
+          0.0
+        ]
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 604.737670898438,
+        "fy": 604.221618652344,
+        "cx": 324.630462646484,
+        "cy": 253.83283996582
+      },
+      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
+      "intrinsic_status": "D435i_reference_profile_NOT_per_wrist_device_calibration"
+    },
+    "d435i_left_depth": {
+      "parent_link": "left_wrist_yaw_link",
+      "optical_pose": {
+        "position": [
+          0.0742547,
+          -0.0337719065,
+          -0.0327109459
+        ],
+        "quaternion": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865475
+        ]
+      },
+      "gl_pose": {
+        "position": [
+          0.0742547,
+          -0.0337719065,
+          -0.0327109459
+        ],
+        "quaternion": [
+          -0.7071067811865475,
+          0.0,
+          0.7071067811865475,
+          0.0
+        ]
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 385.593688964844,
+        "fy": 385.593688964844,
+        "cx": 319.212036132812,
+        "cy": 233.034225463867
+      },
+      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
+      "intrinsic_status": "D435i_reference_profile_NOT_per_wrist_device_calibration"
+    },
+    "d435i_right_rgb": {
+      "parent_link": "right_wrist_yaw_link",
+      "optical_pose": {
+        "position": [
+          0.0742547,
+          0.0337719065,
+          0.0172890541
+        ],
+        "quaternion": [
+          0.7071067811865475,
+          0.0,
+          0.7071067811865475,
+          0.0
+        ]
+      },
+      "gl_pose": {
+        "position": [
+          0.0742547,
+          0.0337719065,
+          0.0172890541
+        ],
+        "quaternion": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          -0.7071067811865475
+        ]
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 604.737670898438,
+        "fy": 604.221618652344,
+        "cx": 324.630462646484,
+        "cy": 253.83283996582
+      },
+      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
+      "intrinsic_status": "D435i_reference_profile_NOT_per_wrist_device_calibration"
+    },
+    "d435i_right_depth": {
+      "parent_link": "right_wrist_yaw_link",
+      "optical_pose": {
+        "position": [
+          0.0742547,
+          0.0337719065,
+          0.0022890541000000018
+        ],
+        "quaternion": [
+          0.7071067811865475,
+          0.0,
+          0.7071067811865475,
+          0.0
+        ]
+      },
+      "gl_pose": {
+        "position": [
+          0.0742547,
+          0.0337719065,
+          0.0022890541000000018
+        ],
+        "quaternion": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          -0.7071067811865475
+        ]
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 385.593688964844,
+        "fy": 385.593688964844,
+        "cx": 319.212036132812,
+        "cy": 233.034225463867
+      },
+      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
+      "intrinsic_status": "D435i_reference_profile_NOT_per_wrist_device_calibration"
+    },
+    "d435i_head_rgb": {
+      "parent_link": "torso_link",
+      "optical_pose": {
+        "position": [
+          0.19603160026521557,
+          -0.06537026910210339,
+          0.40836042418792173
+        ],
+        "quaternion": [
+          -0.2587878870086561,
+          0.6935594281456036,
+          -0.6349081864114612,
+          0.22112382050708085
+        ]
+      },
+      "gl_pose": {
+        "position": [
+          0.19603160026521557,
+          -0.06537026910210339,
+          0.40836042418792173
+        ],
+        "quaternion": [
+          0.6935594281456036,
+          0.2587878870086561,
+          -0.22112382050708085,
+          -0.6349081864114612
+        ]
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 604.737670898438,
+        "fy": 604.221618652344,
+        "cx": 324.630462646484,
+        "cy": 253.83283996582
+      },
+      "extrinsic_status": "dream_full_root_contract_and_o6_neutral_torso_fk",
+      "intrinsic_status": "factory_profile_source_401622070679_not_live_device_verified"
+    },
+    "d435i_head_depth": {
+      "parent_link": "torso_link",
+      "optical_pose": {
+        "position": [
+          0.1974434292826012,
+          -0.0802068334228145,
+          0.4076196181927471
+        ],
+        "quaternion": [
+          -0.2578329021428497,
+          0.6953793108883798,
+          -0.6324770158317381,
+          0.22347848443547594
+        ]
+      },
+      "gl_pose": {
+        "position": [
+          0.1974434292826012,
+          -0.0802068334228145,
+          0.4076196181927471
+        ],
+        "quaternion": [
+          0.6953793108883797,
+          0.25783290214284965,
+          -0.22347848443547588,
+          -0.632477015831738
+        ]
+      },
+      "intrinsics": {
+        "width": 640,
+        "height": 480,
+        "fx": 385.593688964844,
+        "fy": 385.593688964844,
+        "cx": 319.212036132812,
+        "cy": 233.034225463867
+      },
+      "extrinsic_status": "dream_full_root_contract_and_o6_neutral_torso_fk",
+      "intrinsic_status": "factory_profile_source_401622070679_not_live_device_verified"
+    }
+  },
+  "body_mass_kg": 0.072,
+  "body_mass_status": "simulation_approximation",
+  "optical_convention": "OpenCV x right, y down, z forward",
+  "world_convention": "MuJoCo world; metres",
+  "wrist_mount_hole_spacing_m": 0.045,
+  "head_source": "dream_full_root_contract_and_o6_neutral_torso_fk",
+  "production_ready": false,
+  "source_sha256": {
+    "/mnt/simple/data/robots/g1_o6/curobo/o6_mp/g1_o6_mp.xml": "baccc03231d0833ec8da58db13c6ff85eb408c2c7c9792af2340943072e44e9b",
+    "/mnt/simple/generated-data/o6-d435i-production-20261008/vendor/d435.dae": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78",
+    "/mnt/simple/assets/calibration/g1_d435i/o7_head_rgb_640x480.json": "ff27624511ca797bb0f6e610e51329cd9dc9603c6f51671124908186c3fa5d7c",
+    "/tmp/o6_head_rgb_640x480.json": "52aaf7861dae898779ed5a33a01bc50780b6d7cd316e43cc6f40b61f0f8f0519",
+    "/tmp/o6_head_root_corrected.json": "b61679dda40eb044ba8b97d61be984fbc9df5f0b651537299df30f546aa460a5"
+  },
+  "head_housing_pose": {
+    "position": [
+      0.20188328447245135,
+      -0.09737617971143737,
+      0.4043455172143936
+    ],
+    "quaternion": [
+      0.22112382050708085,
+      0.6349081864114612,
+      0.6935594281456036,
+      0.2587878870086561
+    ]
+  }
+}

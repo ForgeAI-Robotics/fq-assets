@@ -1,0 +1,146 @@
+{
+  "upstream_repository": "https://github.com/realsenseai/realsense-ros",
+  "upstream_commit": "not recorded in local source bundle",
+  "files": [
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_00_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_00_0.stl",
+      "sha256": "419be431cd7b3e08d59165647580c0cc48727b291794a1224731b9fefbc38aec"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_01_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_01_0.stl",
+      "sha256": "9b2f4306ed0cbcf66160b3c0a464d5a9f3a7c3437039af212069082f3726fed1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_02_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_02_0.stl",
+      "sha256": "2633b040c1059bec80eb903970b93dc1726491c07c8b6672a6053ac16fc0434f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_03_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_03_0.stl",
+      "sha256": "4f9accb2c81cf02577694c954a60ee1642c917c6b564ec951bc32d396431e6a1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_04_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_04_0.stl",
+      "sha256": "7102d23fe92e31d065f657255e11c258b43d555df578a88c433b9f14315bdc01"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_05_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_05_0.stl",
+      "sha256": "b9e5a282daba13738edcb0c423eafb5d0c6fbc60938f9920caf27447122de63b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_06_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_06_0.stl",
+      "sha256": "861231f3bedb7512ba082e14c822fd5c4e6c6b44a824aa360498db324fbffeef"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_07_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_07_0.stl",
+      "sha256": "ebdba37644fed692ec1dd375781c4ef6dedeedc8fd634fc0f3375cafa9fa9ba8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_08_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_08_0.stl",
+      "sha256": "57d8d7b8c2eed86e2f204992f092edad8563965091651f66ceef717541d17f09"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_09_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_09_0.stl",
+      "sha256": "33cfc55fd3a6d93aa9975ad7c74e522e89a08a09288623c7e6ceaec0cc45511b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_10_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_10_0.stl",
+      "sha256": "8d5826a91467980f3c9e3802f7df4a20b2b291779206cec3db3d821ab8094a1e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_11_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_11_0.stl",
+      "sha256": "b03eeb48f1f69f5be68026c5c58136562ea703e522b8500cff84aa012a37f5d5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_12_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_12_0.stl",
+      "sha256": "89c6e74903d7844229e936b9532244fe2b724c31550b6272d232d778eb43aa93"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_12_1.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_12_1.stl",
+      "sha256": "57de69cee68721c136bc924af5faaac39a768227a096697eeeac46e3e49c5387"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_12_2.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_12_2.stl",
+      "sha256": "e3bd45b6be1ceff14ac3834bfef02cabee61445ed76ad07ce89068b205b20cc3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_13_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_13_0.stl",
+      "sha256": "6d16ff7224852198ea07598b03cea6a888cc6c390c64044870993ab9b33e908c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_14_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_14_0.stl",
+      "sha256": "a8ce5f573bcf42a72d884b949803d49148e0f63e61b5dbc57113f3abbe5cadf3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_15_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_15_0.stl",
+      "sha256": "eb27cf8f5e63fd8cf639ba461a8ea9d412dcd7ed709ae5724fba2b219a7ca24d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_16_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_16_0.stl",
+      "sha256": "ddbb0cec5067a7c64d9a6faf620b13f42c8908f761e827d92a36a804849b744b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/d435i_17_0.stl",
+      "destination": "assets/fq/cameras/realsense_d435i/meshes/d435i_17_0.stl",
+      "sha256": "0fd45811012a3c4db9f28248145e9f5cf6aee4e32b92412c94390b40ef119ae3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/cameras.json",
+      "destination": "assets/fq/cameras/realsense_d435i/reference_rig_profile.json",
+      "sha256": "113dd72ac3d7836bad27bd39e3dfad831df21842a8ad96f65f242db507c43c73"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/generated-data/o6-d435i-production-20261008/vendor/d435.dae",
+      "destination": "provenance/cameras/realsense/d435.dae",
+      "sha256": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/generated-data/o6-d435i-production-20261008/vendor/_d435.urdf.xacro",
+      "destination": "provenance/cameras/realsense/_d435.urdf.xacro",
+      "sha256": "ae3f57e8d38b3a6d5cc9de059e4afe545e4b895717d638b75d2ad0642cfb7f1b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/generated-data/o6-d435i-production-20261008/vendor/_d435i.urdf.xacro",
+      "destination": "provenance/cameras/realsense/_d435i.urdf.xacro",
+      "sha256": "eda8f0dcf1ca6fb88179cfc8415942dc98b71de9ba50bbeb5cb60d9f09b86602"
+    },
+    {
+      "source": "/home/fangqi/code/fq-sim-assets/provenance/robots/LinkerHand-LICENSE",
+      "destination": "provenance/cameras/realsense/Apache-2.0.txt",
+      "sha256": "4249df1514f79659a7728b0afc7e514f12524e036a42b15723b5c72f999e7481"
+    },
+    {
+      "source": "/home/fangqi/code/fq-sim-assets/assets/fq/robots/g1_o6/robot.xml",
+      "destination": "provenance/cameras/g1_o6_before.xml",
+      "sha256": "736412a3118c0ff1cf96300de32732a09e8375bf9dd03aec5e884e80f8d98a13"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/robots/g1_o6/d435i/g1_o6_mp_capture.xml",
+      "destination": "provenance/cameras/source_capture.xml",
+      "sha256": "784d5451d7e359a9b759d93c875c9f4d4c90055cd6a93869ced068ae0fa88c0d"
+    }
+  ],
+  "transformations": [
+    "复用现有分块 STL 和 RGBA",
+    "独立相机归零至外壳局部坐标",
+    "组合仅移入相机视觉、site 和 camera，保留参考安装位姿；不移入相机碰撞或质量"
+  ]
+}

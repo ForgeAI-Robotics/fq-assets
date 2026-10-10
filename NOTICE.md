@@ -15,3 +15,7 @@
 G1+O6、G1+O7 是现有 FQ 组合适配的快照，不标为 FQ 原创硬件或 SIMPLE 原生资产。G1 本体来自 Unitree 模型；精确本体上游提交及模型许可未在本次整理确认，不由 SIMPLE 代码许可推导。LinkerHand O6/O7 的本地记录固定上游 linker-bot/linkerhand-urdf，提交 075cc7d42cc1e756bdcbece0fc069a0779fc5237；Apache-2.0 文本保留在 provenance/robots/LinkerHand-LICENSE。组合模型中 FQ 的安装、碰撞和关节参数适配保留原值。逐文件来源及哈希见 provenance/robots/source_files.json。原始 MJCF/URDF 存在 provenance/robots，下游使用 assets 中便携路径版本。
 
 O6 安装件为 provisional，模型质量/惯量并非实测总成标定。四只手从当前组合模型提取，保留仿真耦合和驱动参数，不冒充未修改的厂商原版。当前私有发布包含模型与网页预览；未进行本次 GPU、抓取控制或硬件验收。
+
+## D435i 相机（v0.3.0）
+
+来自现有 FQ D435i 管线及 RealSense 官方模型；官方 D435i xacro 复用 d435 外壳网格。原 xacro 版权头和 Apache-2.0 文本保留在 provenance/cameras/realsense。确切上游提交未记录，按本地源文件 SHA256 固定，不能将本地提取时间当上游版本。仿真质量和参考内参不作为实测参数。详情见 RELEASE_NOTES_v0.3.0.md。

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "camera_mass_kg": 0.072,
+  "mesh_dimensions_m": [
+    0.0899143012117449,
+    0.025000001160709762,
+    0.02505470130967583
+  ],
+  "robot_mass_unchanged": true,
+  "robot_independent_dof": 41,
+  "robot_camera_streams": 6,
+  "camera_reference_pose_checks": 6,
+  "urdf_dependency_closure": true,
+  "live_device_or_new_calibration_verified": false
+}

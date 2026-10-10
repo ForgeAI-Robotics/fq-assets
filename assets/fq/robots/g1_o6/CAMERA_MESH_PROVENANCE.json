@@ -108,7 +108,8 @@
       "o6_right_camera_bracket_two_piece.stl": "1bd1cda269f06a0a8e46a820f2a749ca3db131bd7006ff375177e018037a3975",
       "o6_right_hand_transfer_flange_two_piece.stl": "e493b2a92e050f3a2dddcaf50e669ca4934e8706e60fdc2e66f1fa0a08362412"
     },
-    "camera_adapter_and_housing_visuals": "legacy adapter hidden; generic camera housing visible on bracket tab; optical extrinsics uncalibrated",
+    "camera_adapter_and_housing_visuals": "v0.1.1: legacy adapter hidden; generic wrist camera visuals removed; D435i head/left/right visuals from existing reference rig; optical extrinsics not newly calibrated",
     "collision_enabled": false
-  }
+  },
+  "camera_asset": "fq:cameras/realsense_d435i@0.1.0"
 }

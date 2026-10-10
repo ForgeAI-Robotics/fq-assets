@@ -7,9 +7,14 @@ def compile(path):return mujoco.MjModel.from_xml_path(str(path))
 for family,folder,filename in [('o6','g1_o6','g1_29dof_wholebody_o6'),('o7','g1_o7_left','g1_29dof_wholebody_o7_left')]:
     m=compile(R/f'assets/fq/robots/g1_{family}/robot.xml')
     original=compile(Path('/mnt/simple/data/robots')/folder/(filename+'.xml'))
-    for field in ('body_mass','body_inertia','body_pos','body_quat','jnt_range','dof_damping','dof_frictionloss','actuator_ctrlrange','eq_data','geom_friction','mesh_vert','mesh_face'):
+    for i in range(original.nbody):
+        before=original.body(i);after=m.body(before.name)
+        for field in ('mass','inertia','pos','quat'):
+            np.testing.assert_allclose(getattr(before,field),getattr(after,field),atol=1e-12)
+    for field in ('jnt_range','dof_damping','dof_frictionloss','actuator_ctrlrange','eq_data'):
         np.testing.assert_array_equal(getattr(m,field),getattr(original,field),err_msg=family+':'+field)
-    report.append({'id':'fq:robots/g1_'+family,'source_equivalence':True,'mass_kg':float(m.body_mass.sum()),'hinge_joints':int(sum(m.jnt_type==3)),'actuators':m.nu})
+    assert abs(m.body_mass.sum()-original.body_mass.sum())<1e-12
+    report.append({'id':'fq:robots/g1_'+family,'source_robot_physics_equivalence':True,'mass_kg':float(m.body_mass.sum()),'hinge_joints':int(sum(m.jnt_type==3)),'actuators':m.nu})
     for side in ('left','right'):
         hm=compile(R/f'assets/fq/end_effectors/{family}_{side}/hand.xml');root=f'{side}_{family}_hand_base_link'
         hdata=mujoco.MjData(hm);data=mujoco.MjData(m)

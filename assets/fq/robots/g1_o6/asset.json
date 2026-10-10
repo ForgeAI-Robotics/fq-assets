@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:robots/g1_o6",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "robot",
   "name": "G1 + O6 双手",
   "origin": "fq",
@@ -26,17 +26,20 @@
   "limitations": [
     "质量、惯量、碰撞与驱动参数来自现有仿真模型，非实测标定",
     "浏览器仅作关节姿态预览，不代表抓取、平衡或真实驱动力已验证",
-    "O6 安装件 provisional：仅模型组合、运动学检查和视觉检查；未完成最终碰撞、抓取或硬件部署验证"
+    "O6 安装件 provisional：仅模型组合、运动学检查和视觉检查；未完成最终碰撞、抓取或硬件部署验证",
+    "D435i 头部及双腕外观/参考位姿来自已有相机管线；质量碰撞不新增，未重新实测标定"
   ],
   "family": "o6",
   "release_status": "model_snapshot",
   "dependencies": [
     "fq:end_effectors/o6_left",
-    "fq:end_effectors/o6_right"
+    "fq:end_effectors/o6_right",
+    "fq:cameras/realsense_d435i"
   ],
   "dependency_versions": {
     "fq:end_effectors/o6_left": "0.1.0",
-    "fq:end_effectors/o6_right": "0.1.0"
+    "fq:end_effectors/o6_right": "0.1.0",
+    "fq:cameras/realsense_d435i": "0.1.0"
   },
   "mounts": {
     "left": {
@@ -50,6 +53,62 @@
       "source_parent": "right_o6_hand_transfer_flange_link",
       "position": "0.08042 0 0",
       "quaternion_wxyz": "0.5 0.5 0.5 0.5"
+    }
+  },
+  "camera_mounts": {
+    "left": {
+      "asset_id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "parent_link": "left_wrist_yaw_link",
+      "position": [
+        0.0785547,
+        -0.0337719065,
+        -0.0152109459
+      ],
+      "quaternion_wxyz": [
+        0.707106781187,
+        0.0,
+        0.707106781187,
+        0.0
+      ],
+      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
+      "physics": "visual_only"
+    },
+    "right": {
+      "asset_id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "parent_link": "right_wrist_yaw_link",
+      "position": [
+        0.0785547,
+        0.0337719065,
+        -0.0152109459
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.707106781187,
+        0.0,
+        0.707106781187
+      ],
+      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
+      "physics": "visual_only"
+    },
+    "head": {
+      "asset_id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "parent_link": "torso_link",
+      "position": [
+        0.201883284472,
+        -0.0973761797114,
+        0.404345517214
+      ],
+      "quaternion_wxyz": [
+        0.221123820507,
+        0.634908186411,
+        0.693559428146,
+        0.258787887009
+      ],
+      "extrinsic_status": "dream_full_root_contract_and_o6_neutral_torso_fk",
+      "physics": "visual_only"
     }
   }
 }

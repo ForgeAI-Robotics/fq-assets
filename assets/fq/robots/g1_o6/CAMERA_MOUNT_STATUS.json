@@ -1,14 +1,62 @@
 {
-  "status": "provisional",
-  "source": "2026-09 STEP camera bracket and hand-side transfer flange; existing camera frames and generic camera housings placed provisionally on the blue bracket tabs; hidden legacy adapter links retained for naming compatibility; optical extrinsics remain uncalibrated",
-  "collision_enabled": false,
-  "allowed_uses": [
-    "visual assembly",
-    "camera pipeline smoke tests"
-  ],
-  "forbidden_uses": [
-    "final collision validation",
-    "metric vision calibration",
-    "hardware deployment"
-  ]
+  "status": "reference_rig_visual_assembly",
+  "source": "existing g1_o6/d435i/g1_o6_mp_capture.xml",
+  "camera_asset": "fq:cameras/realsense_d435i",
+  "mounts": {
+    "left": {
+      "asset_id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "parent_link": "left_wrist_yaw_link",
+      "position": [
+        0.0785547,
+        -0.0337719065,
+        -0.0152109459
+      ],
+      "quaternion_wxyz": [
+        0.707106781187,
+        0.0,
+        0.707106781187,
+        0.0
+      ],
+      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
+      "physics": "visual_only"
+    },
+    "right": {
+      "asset_id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "parent_link": "right_wrist_yaw_link",
+      "position": [
+        0.0785547,
+        0.0337719065,
+        -0.0152109459
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.707106781187,
+        0.0,
+        0.707106781187
+      ],
+      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
+      "physics": "visual_only"
+    },
+    "head": {
+      "asset_id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "parent_link": "torso_link",
+      "position": [
+        0.201883284472,
+        -0.0973761797114,
+        0.404345517214
+      ],
+      "quaternion_wxyz": [
+        0.221123820507,
+        0.634908186411,
+        0.693559428146,
+        0.258787887009
+      ],
+      "extrinsic_status": "dream_full_root_contract_and_o6_neutral_torso_fk",
+      "physics": "visual_only"
+    }
+  },
+  "production_ready": false
 }

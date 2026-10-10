@@ -126,7 +126,8 @@ def main():
             limits=driver.get('control_range',driver['range'])
             driver['control_range']=[max(limits[0],allowed[0]),min(limits[1],allowed[1])]
             if driver['control_range'][0]>driver['control_range'][1]:raise ValueError('Incompatible coupled joint limits')
-        title,kind_label,subtitle=NAMES.get(slug,(meta.get('name',slug),{'robot':'机器人','end_effector':'灵巧手 / 末端执行器'}.get(meta['kind'],meta['kind']),meta.get('description','')))
+        title,kind_label,subtitle=NAMES.get(slug,(meta.get('name',slug),{'camera':'相机','robot':'机器人','end_effector':'灵巧手 / 末端执行器'}.get(meta['kind'],meta['kind']),meta.get('description','')))
+        if meta['kind']=='camera':subtitle='RGB-D / 双目红外 / 六轴 IMU · 设备规格'
         if meta['kind'] in ('robot','end_effector'):subtitle='FQ 适配 / '+str(len(joints))+' 个转轴 · '+str(m.nu)+' 个驱动'
 
         info={**meta,'slug':slug,'name':title,'kind_label':kind_label,'subtitle':subtitle,'manifest_path':item['manifest'],
@@ -145,7 +146,7 @@ def main():
             info['calibration']=json.loads((root/meta['calibration_record']).read_text())
         preview=root/'validation/previews'/f"{meta['id'].replace(':','_').replace('/','_')}.png"
         if preview.is_file():shutil.copyfile(preview,dest/'preview.png')
-        elif meta['kind'] in ('robot','end_effector'):
+        elif meta['kind'] in ('robot','end_effector','camera'):
             from PIL import ImageDraw
             im=Image.new('RGB',(256,256),(239,239,231));draw=ImageDraw.Draw(im)
             dots=[]
