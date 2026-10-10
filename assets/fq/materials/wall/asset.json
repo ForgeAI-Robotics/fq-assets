@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "fq:materials/wall",
+  "version": "0.1.0",
+  "kind": "material",
+  "name": "墙面",
+  "origin": "fq",
+  "upstream_origin": "FQ navigate 办公场景已有资源；原始生成方法未记录",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "base_color": "scenes/fq/office_baseline/textures/wall.png"
+  },
+  "color_space": "sRGB",
+  "tile_size_m": null,
+  "tile_size_status": "unknown",
+  "usage_status": "in_use",
+  "used_by": [
+    "fq:scenes/office_baseline"
+  ],
+  "physics_profile": null,
+  "source_record": "scenes/fq/office_baseline/photo_materials.json",
+  "texture_sha256": "fa1c45c408dba6963614750744a822dfdef186f024f069f88c543375ee2a1679",
+  "capabilities": {
+    "web_preview": true,
+    "mujoco_scene_override": true,
+    "isaac_override": false
+  }
+}

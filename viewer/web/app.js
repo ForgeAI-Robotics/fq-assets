@@ -32,6 +32,10 @@ function row(key,value,cls=''){return `<div class="prop-row"><span>${esc(key)}</
 function section(title,body){return `<section class="prop-section"><h3>${esc(title)}</h3>${body}</section>`;}
 function provenance(a){if(a.origin==='simple')return 'SIMPLE 原生';return (a.upstream_origin||'').includes('SimFoundry')?'FQ 派生 · SimFoundry':'FQ 自建';}
 function showProperties(a){
+  if(a.kind==='material'){
+    $('properties-content').innerHTML=section('材质/纹理',row('名称',esc(a.name))+row('来源',esc(provenance(a)))+row('分辨率',a.resolution.join(' × '))+row('色彩空间',esc(a.color_space))+row('贴图通道','基础颜色 · 法线/粗糙度贴图暂缺')+row('实际重复尺寸',a.tile_size_m?`${a.tile_size_m} m（估计）`:'未记录')+row('用途',a.usage_status==='in_use'?'基准场景使用中':'备用，未绑定基准场景')+'<p class="property-note">视觉外观不包含质量或接触摩擦。预览光照为近似效果。</p>')+section('版本与来源',row('物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)))+row('最新库发布',esc(catalog.latest_release.tag))+`<p class="property-note">${esc(a.upstream_origin)}</p><div class="asset-id">${esc(a.id)}</div><p class="property-note">引用：${esc(a.used_by.join(', ')||'暂无')}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看材质清单 ↗</a>`);
+    return;
+  }
   let html=section('基础信息',row('资产类型',esc(a.kind_label))+row('来源',esc(provenance(a)))+row('坐标约定','米制 · Z 向上')+row('基座',a.fixed_base?'固定':'自由运动')+`<div class="asset-id">${esc(a.id)}</div>`);
   html+=section('尺寸与质量',`<div class="value-large">${a.mass_kg==null?'—':fmt(a.mass_kg)}<small>${a.mass_kg==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${a.mass_kg==null?'固定场景几何不以 0 kg 表示':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
     (a.fixed_base&&a.kind!=='scene'&&a.mass_kg!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
@@ -162,6 +166,7 @@ async function selectAsset(slug){
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
   $('mode-toggle').hidden=!a.joints.length;$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
   if(a.kind==='scene'){$('scene-info').innerHTML='<strong>固定基准 · 办公场地</strong><p>测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。</p><p>保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。</p><div class="scene-chips">'+(a.dependencies||[]).map(id=>{const dep=catalog.assets.find(x=>x.id===id);return dep?`<button data-asset="${esc(dep.slug)}">${esc(dep.name)} · v${esc(dep.version)} ↗</button>`:'';}).join('')+'</div>';document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
+  $('material-controls').hidden=a.kind!=='material';$('collision-toggle').hidden=a.kind==='material';$('material-repeat').value=1;$('material-repeat-value').textContent='1 ×';
   showProperties(a);renderList();setMode(!!a.joints.length);$('viewport').dataset.ready='false';$('loading').hidden=false;$('loading').querySelector('strong').textContent=`正在加载${a.name}`;$('viewer-error').hidden=true;
   try{const url=new URL(a.model_url,location.origin);const res=await fetch(url);if(!res.ok)throw Error('模型文件暂不可用');const data=await res.json();if(token!==loadId)return;await buildModel(data,url,token);}
   catch(e){if(token!==loadId)return;$('loading').hidden=true;$('viewer-error').hidden=false;$('viewer-error').textContent=`模型加载失败：${e.message}。请刷新后重试。`;console.error(e);}
@@ -190,4 +195,5 @@ $('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(locatio
 $('refresh').onclick=()=>{refresh();toast('正在获取最新同步结果');};
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{setCategory(b.dataset.kind);const first=catalog?.assets.find(a=>category==='scene'?a.kind==='scene':a.kind!=='scene');if(first&&(selected?.kind==='scene')!==(category==='scene'))selectAsset(first.slug);});
 $('search').oninput=renderList;$('origin-filter').onchange=renderList;$('type-filter').onchange=renderList;
+$('material-repeat').oninput=()=>{const n=Number($('material-repeat').value);$('material-repeat-value').textContent=`${n} ×`;modelRoot?.traverse(o=>{if(o.material?.map)o.material.map.repeat.set(n,n);});};
 await refresh();setInterval(refresh,20000);

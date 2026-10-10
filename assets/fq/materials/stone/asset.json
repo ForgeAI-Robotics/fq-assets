@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "fq:materials/stone",
+  "version": "0.1.0",
+  "kind": "material",
+  "name": "灰色石材",
+  "origin": "fq",
+  "upstream_origin": "FQ navigate 办公场景已有资源；参考照片生成的 albedo，非实测材质",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "base_color": "scenes/fq/office_baseline/textures/stone_photo_v1.png"
+  },
+  "color_space": "sRGB",
+  "tile_size_m": 0.6,
+  "tile_size_status": "assumed",
+  "usage_status": "in_use",
+  "used_by": [
+    "fq:scenes/office_baseline"
+  ],
+  "physics_profile": null,
+  "source_record": "scenes/fq/office_baseline/photo_materials.json",
+  "texture_sha256": "c3762606a12d6baa4e1206e4a2418211567d12f21ce2c6616d1b51821063e38a",
+  "capabilities": {
+    "web_preview": true,
+    "mujoco_scene_override": true,
+    "isaac_override": false
+  }
+}

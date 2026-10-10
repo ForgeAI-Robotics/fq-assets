@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "fq:materials/floor",
+  "version": "0.1.0",
+  "kind": "material",
+  "name": "普通地面（备用）",
+  "origin": "fq",
+  "upstream_origin": "FQ navigate 办公场景已有资源；原始生成方法未记录",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "base_color": "scenes/fq/office_baseline/textures/floor.png"
+  },
+  "color_space": "sRGB",
+  "tile_size_m": null,
+  "tile_size_status": "unknown",
+  "usage_status": "available_unused",
+  "used_by": [],
+  "physics_profile": null,
+  "source_record": "scenes/fq/office_baseline/photo_materials.json",
+  "texture_sha256": "e58aab8889c8bc5d463d80dc26f360c70392ae805f6efba283d06bca548fbf71",
+  "capabilities": {
+    "web_preview": true,
+    "mujoco_scene_override": true,
+    "isaac_override": false
+  }
+}

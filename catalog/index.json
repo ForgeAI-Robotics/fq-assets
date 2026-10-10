@@ -31,6 +31,31 @@
       "id": "fq:scenes/office_baseline",
       "version": "0.1.0",
       "manifest": "scenes/fq/office_baseline/asset.json"
+    },
+    {
+      "id": "fq:materials/wall",
+      "version": "0.1.0",
+      "manifest": "assets/fq/materials/wall/asset.json"
+    },
+    {
+      "id": "fq:materials/floor",
+      "version": "0.1.0",
+      "manifest": "assets/fq/materials/floor/asset.json"
+    },
+    {
+      "id": "fq:materials/carpet",
+      "version": "0.1.0",
+      "manifest": "assets/fq/materials/carpet/asset.json"
+    },
+    {
+      "id": "fq:materials/wood",
+      "version": "0.1.0",
+      "manifest": "assets/fq/materials/wood/asset.json"
+    },
+    {
+      "id": "fq:materials/stone",
+      "version": "0.1.0",
+      "manifest": "assets/fq/materials/stone/asset.json"
     }
   ]
 }

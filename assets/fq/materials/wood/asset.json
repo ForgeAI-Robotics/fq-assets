@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "fq:materials/wood",
+  "version": "0.1.0",
+  "kind": "material",
+  "name": "浅色木纹",
+  "origin": "fq",
+  "upstream_origin": "FQ navigate 办公场景已有资源；参考照片生成的 albedo，非实测材质",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "base_color": "scenes/fq/office_baseline/textures/wood_photo_v1.png"
+  },
+  "color_space": "sRGB",
+  "tile_size_m": null,
+  "tile_size_status": "unknown",
+  "usage_status": "in_use",
+  "used_by": [
+    "fq:scenes/office_baseline"
+  ],
+  "physics_profile": null,
+  "source_record": "scenes/fq/office_baseline/photo_materials.json",
+  "texture_sha256": "99ce0257a235280f7bab748d85406ede94c67a9a6dac088bcc933a453781a8cf",
+  "capabilities": {
+    "web_preview": true,
+    "mujoco_scene_override": true,
+    "isaac_override": false
+  }
+}

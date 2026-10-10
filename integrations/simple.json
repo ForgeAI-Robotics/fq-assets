@@ -1,11 +1,49 @@
 {
   "schema_version": 1,
   "assets": {
-    "fq:objects/coke_cn": {"root_body": "coke", "fixed": false, "spawnable": true, "usd_bodies": {"coke": "Meshes"}},
-    "fq:objects/round_table": {"root_body": "round_table", "fixed": true, "spawnable": true, "usd_bodies": {"round_table": "Meshes"}},
-    "fq:articulated/photo_basket": {"root_body": "basket", "fixed": false, "spawnable": true, "usd_bodies": {"basket": "basket_body", "handle_right": "handle_right", "handle_left": "handle_left"}},
-    "fq:articulated/haier_bcd402": {"root_body": "refrigerator_base", "fixed": true, "spawnable": true, "usd_bodies": {"refrigerator_base": "cabinet", "refrigerator_door_left": "door_left", "refrigerator_door_right": "door_right", "refrigerator_mullion": "mullion"}},
-    "fq:objects/conference_table": {"root_body": null, "fixed": true, "spawnable": false, "reason": "World-space fixture; use the baseline scene instance"}
+    "fq:objects/coke_cn": {
+      "root_body": "coke",
+      "fixed": false,
+      "spawnable": true,
+      "usd_bodies": {
+        "coke": "Meshes"
+      }
+    },
+    "fq:objects/round_table": {
+      "root_body": "round_table",
+      "fixed": true,
+      "spawnable": true,
+      "usd_bodies": {
+        "round_table": "Meshes"
+      }
+    },
+    "fq:articulated/photo_basket": {
+      "root_body": "basket",
+      "fixed": false,
+      "spawnable": true,
+      "usd_bodies": {
+        "basket": "basket_body",
+        "handle_right": "handle_right",
+        "handle_left": "handle_left"
+      }
+    },
+    "fq:articulated/haier_bcd402": {
+      "root_body": "refrigerator_base",
+      "fixed": true,
+      "spawnable": true,
+      "usd_bodies": {
+        "refrigerator_base": "cabinet",
+        "refrigerator_door_left": "door_left",
+        "refrigerator_door_right": "door_right",
+        "refrigerator_mullion": "mullion"
+      }
+    },
+    "fq:objects/conference_table": {
+      "root_body": null,
+      "fixed": true,
+      "spawnable": false,
+      "reason": "World-space fixture; use the baseline scene instance"
+    }
   },
   "scenes": {
     "fq:scenes/office_baseline": {
@@ -16,8 +54,38 @@
           "asset_id": "fq:objects/coke_cn",
           "mujoco_body": "coke",
           "usd_prim": "coke",
-          "pose": [10.8, 11.55, 0.8594278971623001, 1, 0, 0, 0],
+          "pose": [
+            10.8,
+            11.55,
+            0.8594278971623001,
+            1,
+            0,
+            0,
+            0
+          ],
           "replaceable": true
+        }
+      },
+      "material_slots": {
+        "wall": {
+          "material": "wall_material",
+          "texture": "wall_texture",
+          "default_asset": "fq:materials/wall"
+        },
+        "wood": {
+          "material": "door_material",
+          "texture": "door_texture",
+          "default_asset": "fq:materials/wood"
+        },
+        "stone": {
+          "material": "stone_material",
+          "texture": "stone_texture",
+          "default_asset": "fq:materials/stone"
+        },
+        "floor": {
+          "material": "floor_material",
+          "texture": "floor_texture",
+          "default_asset": "fq:materials/carpet"
         }
       }
     }
