@@ -1,0 +1,152 @@
+{
+  "g1_o6": {
+    "body_dof": 29,
+    "body_groups": {
+      "legs": [
+        "left_hip_pitch_joint",
+        "left_hip_roll_joint",
+        "left_hip_yaw_joint",
+        "left_knee_joint",
+        "left_ankle_pitch_joint",
+        "left_ankle_roll_joint",
+        "right_hip_pitch_joint",
+        "right_hip_roll_joint",
+        "right_hip_yaw_joint",
+        "right_knee_joint",
+        "right_ankle_pitch_joint",
+        "right_ankle_roll_joint"
+      ],
+      "waist": [
+        "waist_yaw_joint",
+        "waist_roll_joint",
+        "waist_pitch_joint"
+      ],
+      "arms": [
+        "left_shoulder_pitch_joint",
+        "left_shoulder_roll_joint",
+        "left_shoulder_yaw_joint",
+        "left_elbow_joint",
+        "left_wrist_roll_joint",
+        "left_wrist_pitch_joint",
+        "left_wrist_yaw_joint",
+        "right_shoulder_pitch_joint",
+        "right_shoulder_roll_joint",
+        "right_shoulder_yaw_joint",
+        "right_elbow_joint",
+        "right_wrist_roll_joint",
+        "right_wrist_pitch_joint",
+        "right_wrist_yaw_joint"
+      ]
+    },
+    "hands": {
+      "left": {
+        "model_joints": 11,
+        "independent_dof": 6,
+        "coupled": 5,
+        "independent_names": [
+          "thumb_cmc_yaw",
+          "thumb_cmc_pitch",
+          "index_mcp_pitch",
+          "middle_mcp_pitch",
+          "ring_mcp_pitch",
+          "pinky_mcp_pitch"
+        ],
+        "matches_pinned_vendor": true,
+        "vendor_file": "O6/left/linkerhand_o6_left.urdf"
+      },
+      "right": {
+        "model_joints": 11,
+        "independent_dof": 6,
+        "coupled": 5,
+        "independent_names": [
+          "thumb_cmc_yaw",
+          "thumb_cmc_pitch",
+          "index_mcp_pitch",
+          "middle_mcp_pitch",
+          "ring_mcp_pitch",
+          "pinky_mcp_pitch"
+        ],
+        "matches_pinned_vendor": true,
+        "vendor_file": "O6/right/linkerhand_o6_right.urdf"
+      }
+    },
+    "total_independent_dof": 41,
+    "free_base_dof_excluded": 6
+  },
+  "g1_o7": {
+    "body_dof": 29,
+    "body_groups": {
+      "legs": [
+        "left_hip_pitch_joint",
+        "left_hip_roll_joint",
+        "left_hip_yaw_joint",
+        "left_knee_joint",
+        "left_ankle_pitch_joint",
+        "left_ankle_roll_joint",
+        "right_hip_pitch_joint",
+        "right_hip_roll_joint",
+        "right_hip_yaw_joint",
+        "right_knee_joint",
+        "right_ankle_pitch_joint",
+        "right_ankle_roll_joint"
+      ],
+      "waist": [
+        "waist_yaw_joint",
+        "waist_roll_joint",
+        "waist_pitch_joint"
+      ],
+      "arms": [
+        "left_shoulder_pitch_joint",
+        "left_shoulder_roll_joint",
+        "left_shoulder_yaw_joint",
+        "left_elbow_joint",
+        "left_wrist_roll_joint",
+        "left_wrist_pitch_joint",
+        "left_wrist_yaw_joint",
+        "right_shoulder_pitch_joint",
+        "right_shoulder_roll_joint",
+        "right_shoulder_yaw_joint",
+        "right_elbow_joint",
+        "right_wrist_roll_joint",
+        "right_wrist_pitch_joint",
+        "right_wrist_yaw_joint"
+      ]
+    },
+    "hands": {
+      "left": {
+        "model_joints": 17,
+        "independent_dof": 7,
+        "coupled": 10,
+        "independent_names": [
+          "thumb_cmc_roll",
+          "thumb_cmc_yaw",
+          "thumb_cmc_pitch",
+          "index_mcp_pitch",
+          "middle_mcp_pitch",
+          "ring_mcp_pitch",
+          "pinky_mcp_pitch"
+        ],
+        "matches_pinned_vendor": true,
+        "vendor_file": "archive/o7v1/left/linkerhand_o7v1_left.urdf"
+      },
+      "right": {
+        "model_joints": 17,
+        "independent_dof": 7,
+        "coupled": 10,
+        "independent_names": [
+          "thumb_cmc_roll",
+          "thumb_cmc_yaw",
+          "thumb_cmc_pitch",
+          "index_mcp_pitch",
+          "middle_mcp_pitch",
+          "ring_mcp_pitch",
+          "pinky_mcp_pitch"
+        ],
+        "matches_pinned_vendor": true,
+        "vendor_file": "archive/o7v1/right/linkerhand_o7v1_right.urdf"
+      }
+    },
+    "total_independent_dof": 43,
+    "free_base_dof_excluded": 6
+  }
+}

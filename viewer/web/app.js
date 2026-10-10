@@ -7,6 +7,7 @@ const deg=r=>r*180/Math.PI, rad=d=>d*Math.PI/180;
 const jointLabels={handle_right_hinge:'右提手',handle_left_hinge:'左提手',refrigerator_left_hinge:'左门',refrigerator_right_hinge:'右门',refrigerator_mullion_hinge:'中间竖梁'};
 const label=j=>jointLabels[j]||j.replace(/^left_/, '左 ').replace(/^right_/, '右 ').replace(/o[67]_/, '').replace(/thumb/g,'拇指').replace(/index/g,'食指').replace(/middle/g,'中指').replace(/ring/g,'无名指').replace(/pinky/g,'小指').replace(/hip/g,'髋').replace(/knee/g,'膝').replace(/ankle/g,'踝').replace(/waist/g,'腰').replace(/shoulder/g,'肩').replace(/elbow/g,'肘').replace(/wrist/g,'腕').replace(/_joint$/,'').replace(/_/g,' ');
 const isRobot=a=>['robot','end_effector'].includes(a?.kind);
+const independentDof=a=>a.joints.filter(j=>!j.coupling).length;
 let catalog=null,selected=null,category='object',loadId=0,activeModel=null,modelRoot=null;
 let bodyGroups=new Map(),jointMap=new Map(),angles=new Map(),pickables=[],colliders=[],cutaways=[],jointMode=false;
 let showCollision=false,cutaway=true,ground=null,grid=null,drag=null,toastTimer;
@@ -47,8 +48,8 @@ function showProperties(a){
     html+=section('接触参数 / MUJOCO',row('滑动摩擦',fr(0))+row('扭转摩擦',`${fr(1)} m`)+row('滚动摩擦',`${fr(2)} m`)+`<p class="property-note">模型设定值；有多个碰撞面时显示范围。滑动摩擦为无量纲，扭转与滚动参数使用长度单位。</p>`);
   }
   if(isRobot(a)){
-    html+=section('关节与驱动',row('转轴数',a.joints.length)+row('驱动数',a.actuators.length)+row('联动约束',a.couplings.length)+'<p class="property-note">滑块控制独立关节，手指从动关节按模型耦合关系联动。驱动范围为模型控制输入，不等于实测力矩。</p>'+a.actuators.map(v=>`<details class="property-details"><summary>${esc(label(v.joint))}</summary>${row('关节范围',a.joints.find(j=>j.name===v.joint)?.range.map(x=>fmt(deg(x),1)+'°').join(' ～ ')||'—')}${row('驱动输入范围',v.control_range? v.control_range.map(x=>fmt(x)).join(' ～ '):'未限定')}${row('传动系数',v.gear.map(x=>fmt(x)).join(', '))}</details>`).join(''));
-    html+=section('模型状态',`<p class="property-note">${(a.limitations||[]).map(esc).join('<br>')}</p>`+row('上游手模型版本',esc(a.vendor_revision.slice(0,8)))+row('模型类型','现有仿真模型快照'));
+    html+=section('关节与驱动',row('独立关节自由度',independentDof(a))+row('模型转动关节数',a.joints.length)+row('驱动数',a.actuators.length)+row('从动关节数',a.couplings.length)+(a.kind==='robot'?row('本体＋双手',`29 + ${a.family==='o6'?'6 + 6 = 41':'7 + 7 = 43'}`)+row('浮动基座','另有 6 自由度，不计入关节自由度'):'')+'<p class="property-note">滑块控制独立关节，手指从动关节按模型耦合关系联动。驱动范围为模型控制输入，不等于实测力矩。</p>'+a.actuators.map(v=>`<details class="property-details"><summary>${esc(label(v.joint))}</summary>${row('关节范围',a.joints.find(j=>j.name===v.joint)?.range.map(x=>fmt(deg(x),1)+'°').join(' ～ ')||'—')}${row('驱动输入范围',v.control_range? v.control_range.map(x=>fmt(x)).join(' ～ '):'未限定')}${row('传动系数',v.gear.map(x=>fmt(x)).join(', '))}</details>`).join(''));
+    html+=section('模型状态',`<p class="property-note">${(a.limitations||[]).map(esc).join('<br>')}</p>`+row('上游手模型版本',esc(a.vendor_revision.slice(0,8)))+row('模型类型','现有仿真模型快照')+(a.family==='o7'?row('手模型代次','O7 v1（非 v3）'):''));
     if(a.dependencies?.length)html+=section('组合依赖',a.dependencies.map(id=>row(id,`v${esc(a.dependency_versions[id])}`)).join(''));
   }
   if(a.joints.length&&!isRobot(a)){
@@ -163,7 +164,7 @@ function applyCouplings(){
 function setJoint(jname,value){const j=jointMap.get(jname);if(!j)return;angles.set(jname,THREE.MathUtils.clamp(value,...(j.control_range||j.range)));applyCouplings();updateBodies();updateJointUI();}
 function updateJointUI(){for(const [name,value] of angles){const row=document.querySelector(`[data-joint="${CSS.escape(name)}"]`);if(row){row.querySelector('input').value=deg(value);row.querySelector('output').textContent=`${fmt(deg(value),1)}°`;row.classList.toggle('active',drag?.name===name);}}}
 function renderJoints(){
-  $('joint-panel').hidden=!selected.joints.length;$('joint-count').textContent=`${selected.joints.length} 个`;
+  $('joint-panel').hidden=!selected.joints.length;$('joint-count').textContent=isRobot(selected)?`${independentDof(selected)} 个独立 / ${selected.joints.length} 个转动关节`:`${selected.joints.length} 个`;
   const group=$('joint-group').value;
   const controls=selected.joints.filter(j=>!j.coupling&&(!isRobot(selected)||group==='all'||(group==='left'?j.name.startsWith('left_'):group==='right'?j.name.startsWith('right_'):!j.name.startsWith('left_')&&!j.name.startsWith('right_'))));
   $('joint-controls').innerHTML=controls.map(j=>`<div class="joint-row" data-joint="${esc(j.name)}"><label for="joint-${esc(j.name)}">${esc(label(j.name))}</label><input id="joint-${esc(j.name)}" type="range" aria-label="${esc(label(j.name))}角度" min="${deg((j.control_range||j.range)[0])}" max="${deg((j.control_range||j.range)[1])}" step="0.1" value="${deg(angles.get(j.name))}"><output>${fmt(deg(angles.get(j.name)),1)}°</output></div>`).join('');
@@ -173,7 +174,7 @@ function setMode(enabled){jointMode=enabled&&!!selected?.joints.length;$('joint-
 async function selectAsset(slug){
   const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;const token=++loadId;setCategory(a.kind==='scene'?'scene':'object');
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
-  $('asset-name').textContent=a.name;$('asset-subtitle').textContent=a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':'物体'} / ${a.kind_label}`;
+  $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':'物体'} / ${a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
   $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isRobot(a)?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'在模型上拖动门 / 提手，或使用滑块。角度受模型限位约束，操作不会写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
   if(a.kind==='scene'){$('scene-info').innerHTML='<strong>固定基准 · 办公场地</strong><p>测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。</p><p>保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。</p><div class="scene-chips">'+(a.dependencies||[]).map(id=>{const dep=catalog.assets.find(x=>x.id===id);return dep?`<button data-asset="${esc(dep.slug)}">${esc(dep.name)} · v${esc(dep.version)} ↗</button>`:'';}).join('')+'</div>';document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
