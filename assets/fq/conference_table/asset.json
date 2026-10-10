@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "fq:objects/conference_table",
+  "version": "0.1.0",
+  "kind": "fixture",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "upstream_origin": "FQ floor-plan reconstruction",
+  "provenance": "provenance/source_files.json",
+  "license_status": "See NOTICE.md; no blanket relicensing of upstream assets",
+  "representations": {
+    "mujoco": "assets/fq/conference_table/table.xml",
+    "usd": "assets/fq/conference_table/table.usda"
+  },
+  "coordinates": "Retains baseline world coordinates; not origin-normalized",
+  "measured_width_m": 1.2,
+  "physics_calibrated": false
+}

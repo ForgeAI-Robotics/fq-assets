@@ -1,0 +1,3 @@
+newmtl round_table_textured
+Kd 1 1 1
+map_Kd ../textures/surfaces_20260921/table_basecolor.png

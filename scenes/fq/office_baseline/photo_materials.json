@@ -1,0 +1,25 @@
+{
+  "revision": "photo-v1-20261009",
+  "method": "Built-in image_gen; reference-generated albedo textures, not photogrammetry or measured reflectance",
+  "reference_observations": {
+    "image1": "Gray carpet tiles with alternating directional woven streaks",
+    "image2": "Pale wall panels, dark thin joints, light wood desks, ceiling strip lighting",
+    "image3": "User identifies meeting room; black framed glass and light wood doors",
+    "image4": "User identifies entrance/walkway and meeting door; gray polished stone floor, pale glossy logo wall, glass exit doors",
+    "image5": "White ceiling with round downlights; no exact fixture spacing or height established"
+  },
+  "assumptions": [
+    "Carpet repeat represents four nominal 0.5 m tiles; actual tile dimensions need measurement",
+    "Lobby stone footprint approximated from plan and photographs",
+    "Glass locations and black frame spacing approximated within previous partition lines",
+    "Glass alpha transparency approximates appearance only, not physical optical or LiDAR response",
+    "Seven downlights and strip locations are illustrative, not an exact count recovered from photographs",
+    "Meeting table still follows original plan; visible clutter and people not modeled",
+    "Wall height 2.7 m, meeting door height 2.1 m and nominal door width 0.90 m remain assumptions"
+  ],
+  "prompts": {
+    "textures/carpet_photo_v1.png": "Use case: photorealistic-natural. Asset type: seamless square albedo texture for a robot-simulation office floor. Reference image: actual carpet photograph; match its material, not the surrounding objects. Generate a flat orthographic top-down, uniformly lit seamless texture showing a 2 by 2 square-tile repeat of gray commercial loop-pile carpet, alternating horizontal and vertical subtly irregular fine silver-gray and charcoal striations as in the photograph. Four equal tiles with fine woven detail, no dark grout gaps. Match neutral medium gray tonality under diffuse light, remove baked-in lighting gradients, perspective, all chair legs, paper, objects and shadows. Edge-to-edge material only, no text, no labels, no borders. 1024 square. This is a surface texture, NOT an interior rendering.",
+    "textures/stone_photo_v1.png": "Generate a square seamless albedo material texture for 3D rendering, matching ONLY the gray polished stone floor visible in reference photograph. Uniform orthographic overhead diffuse lighting without reflections or shadows. Light-to-medium neutral gray stone with fine subtle cloudy pale marble veins, low contrast, not dramatic white marble. Edge-to-edge continuous stone surface, no grout, no tiles grid, no border, no lettering, no people, no room, no objects. Surface texture only, intended 0.6m repeat. Preserve gray color and fine mottled stone appearance of photograph; gloss will be supplied by rendering material, do not bake highlights.",
+    "textures/wood_photo_v1.png": "Generate a square seamless albedo surface texture matching ONLY the light oak veneer on the office doors in the reference photograph. Flat orthographic front view, fine straight vertical wood grain, pale gray-beige oak, very subtle growth lines, no knots. Uniform diffuse illumination, no baked shadows, black frames, handles, objects, people or room. Edge-to-edge wood surface only, no text, labels or border. Preserve light cool natural wood tone from the doors; suitable for tiling on a 3D door."
+  }
+}

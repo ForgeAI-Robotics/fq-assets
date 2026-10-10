@@ -1,0 +1,4 @@
+mujoco==3.3.6
+usd-core==25.5.1
+numpy==1.26.4
+Pillow==11.3.0

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "fq:articulated/haier_bcd402",
+  "version": "0.1.0",
+  "kind": "articulated",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "upstream_origin": "FQ authored from user-supplied photos and dimensions",
+  "provenance": "provenance/source_files.json",
+  "license_status": "See NOTICE.md; no blanket relicensing of upstream assets",
+  "representations": {
+    "mujoco": "assets/fq/haier_bcd402/refrigerator.xml",
+    "usd": "assets/fq/haier_bcd402/refrigerator.usda"
+  },
+  "imported_from": "FQ additions to SIMPLE; not SIMPLE-native stock assets",
+  "original_manifest": "assets/fq/haier_bcd402/manifest.json",
+  "initial_joint_positions": {
+    "refrigerator_left_hinge": 0.0,
+    "refrigerator_right_hinge": 0.0,
+    "refrigerator_mullion_hinge": 0.0
+  },
+  "joint_limits_rad": {
+    "refrigerator_left_hinge": [
+      0,
+      1.5707963267948966
+    ],
+    "refrigerator_right_hinge": [
+      0,
+      1.5707963267948966
+    ],
+    "refrigerator_mullion_hinge": [
+      0,
+      1.5707963267948966
+    ]
+  },
+  "physics_calibrated": false,
+  "limitations": [
+    "Component dimensions are estimated from photos",
+    "Mass, inertia, friction and damping are provisional engineering placeholders",
+    "No seal adhesion or pressure differential model",
+    "Mullion is independent and has no automatic folding constraint",
+    "Freezer is static",
+    "MuJoCo parent-child contact filtering applies; full self-collision not calibrated",
+    "USD structural export does not imply Isaac runtime validation",
+    "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation"
+  ],
+  "calibration_record": "assets/fq/haier_bcd402/calibration_v2.json"
+}

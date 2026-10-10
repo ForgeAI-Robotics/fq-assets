@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="photo_reference_basket">
+  <compiler angle="radian" meshdir="meshes" autolimits="true" />
+  <option timestep=".001" gravity="0 0 -9.81" integrator="implicitfast" iterations="80">
+    <flag multiccd="enable" />
+  </option>
+  <default>
+    <geom friction="0.6 .005 .0001" solref=".003 1" solimp=".98 .999 .0005" condim="4" />
+  </default>
+  <size njmax="4000" nconmax="2000" />
+  <visual>
+    <global offwidth="960" offheight="720" />
+  </visual>
+  <asset>
+    <material name="white" rgba=".83 .85 .79 1" shininess=".25" specular=".3" />
+    <material name="gray" rgba=".15 .17 .16 1" shininess=".25" />
+    <mesh name="basket_body" file="basket_body.obj" />
+    <mesh name="handle_right" file="handle_right.obj" />
+    <mesh name="handle_left" file="handle_left.obj" />
+    <mesh name="floor" file="collision_floor.obj" />
+    <mesh name="wall_00" file="collision_wall_00.obj" />
+    <mesh name="wall_01" file="collision_wall_01.obj" />
+    <mesh name="wall_02" file="collision_wall_02.obj" />
+    <mesh name="wall_03" file="collision_wall_03.obj" />
+    <mesh name="wall_04" file="collision_wall_04.obj" />
+    <mesh name="wall_05" file="collision_wall_05.obj" />
+    <mesh name="wall_06" file="collision_wall_06.obj" />
+    <mesh name="wall_07" file="collision_wall_07.obj" />
+    <mesh name="wall_08" file="collision_wall_08.obj" />
+    <mesh name="wall_09" file="collision_wall_09.obj" />
+    <mesh name="wall_10" file="collision_wall_10.obj" />
+    <mesh name="wall_11" file="collision_wall_11.obj" />
+    <mesh name="wall_12" file="collision_wall_12.obj" />
+    <mesh name="wall_13" file="collision_wall_13.obj" />
+    <mesh name="wall_14" file="collision_wall_14.obj" />
+    <mesh name="wall_15" file="collision_wall_15.obj" />
+    <mesh name="wall_16" file="collision_wall_16.obj" />
+    <mesh name="wall_17" file="collision_wall_17.obj" />
+    <mesh name="wall_18" file="collision_wall_18.obj" />
+    <mesh name="wall_19" file="collision_wall_19.obj" />
+    <mesh name="wall_20" file="collision_wall_20.obj" />
+    <mesh name="wall_21" file="collision_wall_21.obj" />
+    <mesh name="wall_22" file="collision_wall_22.obj" />
+    <mesh name="wall_23" file="collision_wall_23.obj" />
+    <mesh name="wall_24" file="collision_wall_24.obj" />
+    <mesh name="wall_25" file="collision_wall_25.obj" />
+    <mesh name="wall_26" file="collision_wall_26.obj" />
+    <mesh name="wall_27" file="collision_wall_27.obj" />
+    <mesh name="wall_28" file="collision_wall_28.obj" />
+    <mesh name="wall_29" file="collision_wall_29.obj" />
+    <mesh name="wall_30" file="collision_wall_30.obj" />
+    <mesh name="wall_31" file="collision_wall_31.obj" />
+    <mesh name="wall_32" file="collision_wall_32.obj" />
+    <mesh name="wall_33" file="collision_wall_33.obj" />
+    <mesh name="wall_34" file="collision_wall_34.obj" />
+    <mesh name="wall_35" file="collision_wall_35.obj" />
+    <mesh name="wall_36" file="collision_wall_36.obj" />
+    <mesh name="wall_37" file="collision_wall_37.obj" />
+    <mesh name="wall_38" file="collision_wall_38.obj" />
+    <mesh name="wall_39" file="collision_wall_39.obj" />
+    <mesh name="wall_40" file="collision_wall_40.obj" />
+    <mesh name="wall_41" file="collision_wall_41.obj" />
+    <mesh name="wall_42" file="collision_wall_42.obj" />
+    <mesh name="wall_43" file="collision_wall_43.obj" />
+    <mesh name="wall_44" file="collision_wall_44.obj" />
+    <mesh name="wall_45" file="collision_wall_45.obj" />
+    <mesh name="wall_46" file="collision_wall_46.obj" />
+    <mesh name="wall_47" file="collision_wall_47.obj" />
+  </asset>
+  <worldbody>
+    <body name="basket" pos="0 0 0">
+      <freejoint name="basket_free" />
+      <inertial pos="0 0 .108" mass="0.32" diaginertia=".0032 .0047 .0054" />
+      <geom name="basket_visual" type="mesh" mesh="basket_body" material="white" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="basket_floor" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="floor" />
+      <geom name="basket_wall_00" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_00" />
+      <geom name="basket_wall_01" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_01" />
+      <geom name="basket_wall_02" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_02" />
+      <geom name="basket_wall_03" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_03" />
+      <geom name="basket_wall_04" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_04" />
+      <geom name="basket_wall_05" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_05" />
+      <geom name="basket_wall_06" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_06" />
+      <geom name="basket_wall_07" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_07" />
+      <geom name="basket_wall_08" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_08" />
+      <geom name="basket_wall_09" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_09" />
+      <geom name="basket_wall_10" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_10" />
+      <geom name="basket_wall_11" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_11" />
+      <geom name="basket_wall_12" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_12" />
+      <geom name="basket_wall_13" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_13" />
+      <geom name="basket_wall_14" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_14" />
+      <geom name="basket_wall_15" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_15" />
+      <geom name="basket_wall_16" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_16" />
+      <geom name="basket_wall_17" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_17" />
+      <geom name="basket_wall_18" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_18" />
+      <geom name="basket_wall_19" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_19" />
+      <geom name="basket_wall_20" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_20" />
+      <geom name="basket_wall_21" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_21" />
+      <geom name="basket_wall_22" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_22" />
+      <geom name="basket_wall_23" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_23" />
+      <geom name="basket_wall_24" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_24" />
+      <geom name="basket_wall_25" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_25" />
+      <geom name="basket_wall_26" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_26" />
+      <geom name="basket_wall_27" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_27" />
+      <geom name="basket_wall_28" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_28" />
+      <geom name="basket_wall_29" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_29" />
+      <geom name="basket_wall_30" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_30" />
+      <geom name="basket_wall_31" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_31" />
+      <geom name="basket_wall_32" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_32" />
+      <geom name="basket_wall_33" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_33" />
+      <geom name="basket_wall_34" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_34" />
+      <geom name="basket_wall_35" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_35" />
+      <geom name="basket_wall_36" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_36" />
+      <geom name="basket_wall_37" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_37" />
+      <geom name="basket_wall_38" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_38" />
+      <geom name="basket_wall_39" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_39" />
+      <geom name="basket_wall_40" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_40" />
+      <geom name="basket_wall_41" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_41" />
+      <geom name="basket_wall_42" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_42" />
+      <geom name="basket_wall_43" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_43" />
+      <geom name="basket_wall_44" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_44" />
+      <geom name="basket_wall_45" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_45" />
+      <geom name="basket_wall_46" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_46" />
+      <geom name="basket_wall_47" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_47" />
+      <body name="handle_right" pos="0.052 0 0.215">
+        <joint name="handle_right_hinge" type="hinge" axis="0 -1 0" range="-0.65 2.82" damping="0.003" armature=".00001" frictionloss=".0001" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+        <inertial pos="0.108 0 0" mass="0.045" diaginertia=".0007 .0002 .00085" />
+        <geom name="handle_right_visual" type="mesh" mesh="handle_right" material="gray" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="handle_right_collision_0" type="box" pos="0.0318461538 -0.123 0" size="0.0323461538 0.00225 0.0075" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_1" type="box" pos="0.100846154 -0.123 0" size="0.0376538462 0.00225 0.0075" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_2" type="box" pos="0.143357568 -0.121934313 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.196349541" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_3" type="box" pos="0.153257063 -0.117833808 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.589048623" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_4" type="box" pos="0.160833808 -0.110257063 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.981747704" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_5" type="box" pos="0.164934313 -0.100357568 0" size="0.00596252902 0.00225 0.0075" euler="0 0 1.37444679" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_6" type="box" pos="0.166 -0.0633333333 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_7" type="box" pos="0.166 6.9388939e-18 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_8" type="box" pos="0.166 0.0633333333 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_9" type="box" pos="0.164934313 0.100357568 0" size="0.00596252902 0.00225 0.0075" euler="0 0 1.76714587" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_10" type="box" pos="0.160833808 0.110257063 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.15984495" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_11" type="box" pos="0.153257063 0.117833808 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.55254403" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_12" type="box" pos="0.143357568 0.121934313 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.94524311" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_13" type="box" pos="0.069 0.123 0" size="0.0695 0.00225 0.0075" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
+      </body>
+      <body name="handle_left" pos="-0.052 0 0.215">
+        <joint name="handle_left_hinge" type="hinge" axis="0 1 0" range="-0.65 2.82" damping="0.003" armature=".00001" frictionloss=".0001" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+        <inertial pos="-0.108 0 0" mass="0.045" diaginertia=".0007 .0002 .00085" />
+        <geom name="handle_left_visual" type="mesh" mesh="handle_left" material="gray" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="handle_left_collision_0" type="box" pos="-0.0318461538 -0.123 0" size="0.0323461538 0.00225 0.0075" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_1" type="box" pos="-0.100846154 -0.123 0" size="0.0376538462 0.00225 0.0075" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_2" type="box" pos="-0.143357568 -0.121934313 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.94524311" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_3" type="box" pos="-0.153257063 -0.117833808 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.55254403" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_4" type="box" pos="-0.160833808 -0.110257063 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.15984495" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_5" type="box" pos="-0.164934313 -0.100357568 0" size="0.00596252902 0.00225 0.0075" euler="0 0 1.76714587" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_6" type="box" pos="-0.166 -0.0633333333 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_7" type="box" pos="-0.166 6.9388939e-18 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_8" type="box" pos="-0.166 0.0633333333 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_9" type="box" pos="-0.164934313 0.100357568 0" size="0.00596252902 0.00225 0.0075" euler="0 0 1.37444679" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_10" type="box" pos="-0.160833808 0.110257063 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.981747704" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_11" type="box" pos="-0.153257063 0.117833808 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.589048623" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_12" type="box" pos="-0.143357568 0.121934313 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.196349541" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_13" type="box" pos="-0.069 0.123 0" size="0.0695 0.00225 0.0075" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
+      </body>
+    </body>
+  </worldbody>
+  <keyframe>
+    <key name="photo_pose" qpos="0 0 0 1 0 0 0 -0.65 -0.65" />
+  </keyframe>
+</mujoco>

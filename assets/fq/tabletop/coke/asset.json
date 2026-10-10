@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "fq:objects/coke_cn",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "upstream_origin": "SimFoundry (via FQ SIMPLE integration)",
+  "provenance": "provenance/source_files.json",
+  "license_status": "See NOTICE.md; no blanket relicensing of upstream assets",
+  "representations": {
+    "mujoco": "assets/fq/tabletop/mujoco/coke.xml",
+    "usd": "assets/fq/tabletop/isaac/coke.usd"
+  },
+  "derived_from": "provenance/tabletop_source_manifest.json",
+  "modifications": [
+    "FQ collision/scale/material adaptation",
+    "Chinese can label and UV repair"
+  ],
+  "physics_calibrated": false
+}

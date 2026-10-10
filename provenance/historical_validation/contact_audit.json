@@ -1,0 +1,11 @@
+{
+  "contact_samples_by_environment_geom": {
+    "floor": 903
+  },
+  "max_penetration_m": {
+    "floor": 0.0037368129323136516
+  },
+  "floor_contact_is_expected": true,
+  "obstacle_samples_excluding_floor": 0,
+  "minimum_base_height_m": 0.7539950892152659
+}

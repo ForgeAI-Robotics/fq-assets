@@ -1,0 +1,1156 @@
+{
+  "source_host": "fangqi-4080s",
+  "captured_date": "2026-10-10",
+  "files": [
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/coke_cn_side.obj",
+      "path": "assets/fq/tabletop/common/meshes/coke_cn_side.obj",
+      "source_sha256": "5191797e809189e36895cea69756c6388572196b97520ee365af875a92bafab6"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/round_table_collision.obj",
+      "path": "assets/fq/tabletop/common/meshes/round_table_collision.obj",
+      "source_sha256": "a64ea94245a71c9e070203128e493ce8b66b0b0601e11b9173f2b7896bf4e5c0"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/coke_visual.obj",
+      "path": "assets/fq/tabletop/common/meshes/coke_visual.obj",
+      "source_sha256": "f483ff0cb719bb01831d8bf1cc71b0dc7d393f579b1f071d16cb5096af5d33bd"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/coke_cn_ends.obj",
+      "path": "assets/fq/tabletop/common/meshes/coke_cn_ends.obj",
+      "source_sha256": "8cb4665f93fc9fdd16f9931019377bc9e890f7fabbbc803bc9f11e24f2c94c9e"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/round_table_collision_pillar.obj",
+      "path": "assets/fq/tabletop/common/meshes/round_table_collision_pillar.obj",
+      "source_sha256": "172c7acbfe3aa910771ec29292d3737baaba90fdd0d2240a92c54ca185b51ae0"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/round_table_collision_base.obj",
+      "path": "assets/fq/tabletop/common/meshes/round_table_collision_base.obj",
+      "source_sha256": "a506662f476b5140a20c8550d1c6a577c7c33d5d263562d1375d1f4e08b4518a"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/coke_collision.obj",
+      "path": "assets/fq/tabletop/common/meshes/coke_collision.obj",
+      "source_sha256": "2937837fba1e1e664f8c4143d8f4da8bcf52dbd3eebf8b70c9b31f94584f83e5"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/round_table_collision_compound.obj",
+      "path": "assets/fq/tabletop/common/meshes/round_table_collision_compound.obj",
+      "source_sha256": "8ec0545c5e780cb3d94911be7d3810836b09bf3d1c33a8ca0b97a297b7b216ae"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/round_table_textured.obj",
+      "path": "assets/fq/tabletop/common/meshes/round_table_textured.obj",
+      "source_sha256": "b1315888419b30b3e29e5140ba2213e147523ca68a7ee7340031e3334461531e"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/round_table_collision_top.obj",
+      "path": "assets/fq/tabletop/common/meshes/round_table_collision_top.obj",
+      "source_sha256": "d9176d58607d8d00c5e6cc8cd1d893067be41dd15e82f75e643082f6669e2d45"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/meshes/round_table_visual.obj",
+      "path": "assets/fq/tabletop/common/meshes/round_table_visual.obj",
+      "source_sha256": "747acfb941496f04682e1c9c3130f24dccba3b2aae690da46dafc89dca649d86"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/materials/round_table_visual.mtl",
+      "path": "assets/fq/tabletop/common/materials/round_table_visual.mtl",
+      "source_sha256": "749a9a94f89db2607233fba2c5e41635d9af6a007ba8ce160ae73366d7d87ad4"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/materials/coke.mtl",
+      "path": "assets/fq/tabletop/common/materials/coke.mtl",
+      "source_sha256": "965a89f19e16990ae76d1daff387e5697afa385dc216cc66c5ed596a8209236c"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/materials/round_table_textured.mtl",
+      "path": "assets/fq/tabletop/common/materials/round_table_textured.mtl",
+      "source_sha256": "ff63bfae1048cf3b97981eca61fe9166d515e33d392884c5be0cf03b96d88c7d"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/materials/coke_cn.mtl",
+      "path": "assets/fq/tabletop/common/materials/coke_cn.mtl",
+      "source_sha256": "2ac55985ca3da4f2c931ea0295c7890e8c4b3f70aeeba0a9462a28ff128d4285"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/textures/coke.png",
+      "path": "assets/fq/tabletop/common/textures/coke.png",
+      "source_sha256": "16c774dd9a5986ee8c485a9376b7c65af47a620373e3b3f49bc8b9811261e424"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/textures/coke_cn.png",
+      "path": "assets/fq/tabletop/common/textures/coke_cn.png",
+      "source_sha256": "c098d09ba3b204bbd6038854520f78e56d858b68e47150430120b5bb60e8c768"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/textures/round_table_vertex_color.png",
+      "path": "assets/fq/tabletop/common/textures/round_table_vertex_color.png",
+      "source_sha256": "8c6037ea795acd8bef978cb0bd4c5a6bac216e8169fe2df5fbe79c8142ca7182"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/common/textures/surfaces_20260921/table_basecolor.png",
+      "path": "assets/fq/tabletop/common/textures/surfaces_20260921/table_basecolor.png",
+      "source_sha256": "1f8eb923f2c88b14f9bbbf1122d6a07fa02ee92941edaef48c1989a4b15b76fa"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/isaac/coke.usd",
+      "path": "assets/fq/tabletop/isaac/coke.usd",
+      "source_sha256": "ddaa1d3d5207fbf7b361d6e58aa7119e39f3c19cc3b49c25a7919fc3670f7889"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/production_scenes/grasp_coke/mujoco/coke.xml",
+      "path": "assets/fq/tabletop/mujoco/coke.xml",
+      "source_sha256": "42791315443eccd2af13d0a6b3121860ce6ce56184db7c4c4e5c1a7a886ecff2"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/props/isaac/round_table.usd",
+      "path": "assets/fq/tabletop/isaac/round_table.usd",
+      "source_sha256": "5bae0853461435222ae4f03754ed8a5c1df172dee1692662ab75fc423056243d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/production_scenes/grasp_coke/mujoco/round_table.xml",
+      "path": "assets/fq/tabletop/mujoco/round_table.xml",
+      "source_sha256": "6f055717c82ea51dfebcab465d9f797122ca1aa74cfea656c80d8f8edf7da531"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/scenes/simfoundry/tabletop_v1/source/source_manifest.json",
+      "path": "provenance/simfoundry_source_manifest.json",
+      "source_sha256": "2527ae931faadd79078b66e237e5ff85f379865861f919901cf8ab72b5f25a3f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/production_scenes/grasp_coke/manifest.json",
+      "path": "provenance/tabletop_source_manifest.json",
+      "source_sha256": "fcd788ba11b752949267a711b71a14276edab334067b2d9e53f5a938144649f9"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/scene.usda",
+      "path": "scenes/fq/office_baseline/architecture.usda",
+      "source_sha256": "d0170963e9b419c1ac1f3659a3fa6c7ce7cff9716d1a9fd3b54b4afb14adee19"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/geometry.json",
+      "path": "scenes/fq/office_baseline/geometry.json",
+      "source_sha256": "6c47568937d0103ee43ed2b8016cdf3dace45069d96320187982bec9a3d6391c"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/photo_materials.json",
+      "path": "scenes/fq/office_baseline/photo_materials.json",
+      "source_sha256": "0ad39182e839602e57b917eb896897d2ce146fa9994dae285a70c3912c9be0ca"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/textures/carpet_photo_v1.png",
+      "path": "scenes/fq/office_baseline/textures/carpet_photo_v1.png",
+      "source_sha256": "fc66b6e801eb8a8dd24e39866079c049281659b342faf018622e5c3f6e58ad14"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/textures/floor.png",
+      "path": "scenes/fq/office_baseline/textures/floor.png",
+      "source_sha256": "e58aab8889c8bc5d463d80dc26f360c70392ae805f6efba283d06bca548fbf71"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/textures/stone_photo_v1.png",
+      "path": "scenes/fq/office_baseline/textures/stone_photo_v1.png",
+      "source_sha256": "c3762606a12d6baa4e1206e4a2418211567d12f21ce2c6616d1b51821063e38a"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/textures/wall.png",
+      "path": "scenes/fq/office_baseline/textures/wall.png",
+      "source_sha256": "fa1c45c408dba6963614750744a822dfdef186f024f069f88c543375ee2a1679"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/textures/wood_photo_v1.png",
+      "path": "scenes/fq/office_baseline/textures/wood_photo_v1.png",
+      "source_sha256": "99ce0257a235280f7bab748d85406ede94c67a9a6dac088bcc933a453781a8cf"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/mission.xml",
+      "path": "provenance/office_mission.original.xml",
+      "source_sha256": "3e6002c53950749f864c5013d58f712712910fde7e6aa0341d5100f4086f68f1"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/mission_config.json",
+      "path": "scenes/fq/office_baseline/reference_layout.json",
+      "source_sha256": "ff491499b2b50393fd978d27498e0d6451d68de25b1c1b1020a9f8d0f3638dd6"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/scene/README.md",
+      "path": "provenance/office_source_README.md",
+      "source_sha256": "a929cf9cb7cde7055554a5eb503469644ef0eb9badfa3396a857b86c10d9a6f3"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/prepare_remote.py",
+      "path": "provenance/source_scripts/prepare_remote.py",
+      "source_sha256": "3be307a409778da0ab4af7ef13e7354dd5b69f8e88d4d23945796b6effbf7994"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/validate_dimensions.py",
+      "path": "provenance/source_scripts/validate_dimensions.py",
+      "source_sha256": "33c361ad2c6959746769afd4ca1c62b7251daf90dda799c5a5e967d9cc1ebfcd"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/workspace/simulation/tools/build_test_meeting_scene.py",
+      "path": "provenance/source_scripts/build_test_meeting_scene.py",
+      "source_sha256": "6457123bd96e5f010ad1c6564210c7963645a339e2f357e0ba65f055bf6068ab"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/workspace/simulation/tools/test_meeting_appearance.py",
+      "path": "provenance/source_scripts/test_meeting_appearance.py",
+      "source_sha256": "6703710ccf73f1840c1072b89a8e6202e1cfdc0992beb80e34bdcf8aa30a5d39"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/reports/dimension_validation.json",
+      "path": "provenance/historical_validation/dimension_validation.json",
+      "source_sha256": "62fc1540cb199bddc76b592ada34af156205bf5b5e76a0488db127d017b4bff5"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/reports/contact_audit.json",
+      "path": "provenance/historical_validation/contact_audit.json",
+      "source_sha256": "995459500489c1b5162dbbcc0bf4b719fc61aeea35b3c8884e009e6395a51b33"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/reports/navigation_mission.json",
+      "path": "provenance/historical_validation/navigation_mission.json",
+      "source_sha256": "6a690d11be9a955e6c44254defdea6ff9954d62f1757484f879d4098a7ece454"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/reports_hq/frame_00000.jpg",
+      "path": "previews/office_navigation_historical.jpg",
+      "source_sha256": "d35242c8af0b78c61c401657a0c7bc555cf1df0d4fc7595a0913f1304594b0ef"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/basket.urdf",
+      "path": "assets/fq/photo_basket/basket.urdf",
+      "source_sha256": "1d8333e035cd5d733b769a445821c52d42745afe38ba7c1b5e8401a247044fe2"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/build_basket.py",
+      "path": "assets/fq/photo_basket/build_basket.py",
+      "source_sha256": "34c99a9bd3f7ec52bbfe29f7cd6df589f3c172ecf2df59a24231ec4cfd5aa714"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/SOURCE_README.md",
+      "path": "assets/fq/photo_basket/SOURCE_README.md",
+      "source_sha256": "528fbe1d0bba6ef78c13cf95a519fde145e98756edd50303e2c75ae43a1542cd"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/basket_asset.xml",
+      "path": "assets/fq/photo_basket/basket_asset.xml",
+      "source_sha256": "08a7a51f66551c456b1321ff16f9f117c42d8017d7f5718bfbc1b98443943c71"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/basket.xml",
+      "path": "assets/fq/photo_basket/basket.xml",
+      "source_sha256": "29d2150818bc7612fdb1bc5bca84d2bd649403e795b4eebfef1288155d38e1a4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/geometry.json",
+      "path": "assets/fq/photo_basket/geometry.json",
+      "source_sha256": "724ec7d4973427afbb8da4c7a1cb498490219c27d41318a8cfd3900254a27cbb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/manifest.json",
+      "path": "assets/fq/photo_basket/manifest.json",
+      "source_sha256": "53264081c0ef6586b489f25affcdec58e839518ec37095400c86e76ce28f1d23"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/export_assets.py",
+      "path": "assets/fq/photo_basket/export_assets.py",
+      "source_sha256": "2a9f78e4c9c13f5e67775aa2337aa359125c36ef687e433b648b169534610748"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/basket.usd",
+      "path": "assets/fq/photo_basket/basket.usd",
+      "source_sha256": "2a910e740f616f8aab2d84c52bbaea74b4a622fc7db5b97d54270fbbcb912870"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/validate_mujoco.py",
+      "path": "assets/fq/photo_basket/validate_mujoco.py",
+      "source_sha256": "fbf6d23eab250a1a429ddf096cbfbd770157daf96bd16ab23ebc69e4a0b676cb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/basket.blend",
+      "path": "assets/fq/photo_basket/basket.blend",
+      "source_sha256": "c5242f1ee16f75787046bc53626639476eef1c9fcd19e55ecf70802ff265fa82"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/README.md",
+      "path": "assets/fq/photo_basket/README.md",
+      "source_sha256": "887eff8f088bf449eba581b8ccd1fe46a286c60b89dad0e8881a2693a7d46581"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/build_usd.py",
+      "path": "assets/fq/photo_basket/build_usd.py",
+      "source_sha256": "198a00f9e60877ea4895b43f9943a3145c9816e76c7942f4b6ca8f90ea9c037f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/basket_body.obj",
+      "path": "assets/fq/photo_basket/meshes/basket_body.obj",
+      "source_sha256": "3024166e40dbe29c9b836dabbaecb784655a3619d18e03972f58723ba4cfd482"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_floor.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_floor.obj",
+      "source_sha256": "261a50af3975762437d97fc35c9e133533a25d6c5f2d39253c4fac00a244cb60"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_00.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_00.obj",
+      "source_sha256": "86af24a5126edfe4e7a2b159f5b599ac39e037bfcb9672f73c9433ab6d5a33fd"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_01.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_01.obj",
+      "source_sha256": "24ba3bc9b7d13214b7af72aef80f9705de63cdf92d11a9acafff2d167a9e0161"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_02.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_02.obj",
+      "source_sha256": "9ed8faa083ee9ad3cf300e032c2171f844923415d6a818e367ea7f1eacb7c958"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_03.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_03.obj",
+      "source_sha256": "a65838d1acb8d5be3062888573daee940a671fc3657c9055f5b198bacaf3b73d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_04.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_04.obj",
+      "source_sha256": "6f51eb927aea5568247961be531c5c514b599c1eba814f9c7531366be0cac150"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_05.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_05.obj",
+      "source_sha256": "78fb4f9275d406c3ee3b696f75f28866f80ebc5d97723e607c512b5138ae1144"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_06.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_06.obj",
+      "source_sha256": "98b23a646e3bea7504691d91c404c6f1de39bb766527f42b8e39d471b8863d7e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_07.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_07.obj",
+      "source_sha256": "4d88074bd84dbf3a3ef6d1fbdaaed1c7fec9f5da173292c2c8f8f4bf8d39341a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_08.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_08.obj",
+      "source_sha256": "8fee91a97ee49aa8e29c0aede1dc6eb7af30f1a5e651b0dcee8bb66f2e5e9950"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_09.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_09.obj",
+      "source_sha256": "a09d6fcdb20e2e346ded54d70f895c5d2ab9c64431a6c9d9bed31b6c0c6383b3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_10.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_10.obj",
+      "source_sha256": "0b1b2917d68ee66e3dcd06e5401bffec3582104b2e17d0523d5e8511daa99cf1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_11.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_11.obj",
+      "source_sha256": "1698addbd10c03de197dec95b165842c31037d93131ac6805260da7e3ef90436"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_12.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_12.obj",
+      "source_sha256": "62abff4697740905bd11aab080ecf90ef40ff7708d24add4992ff6d200883bee"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_13.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_13.obj",
+      "source_sha256": "2fe9c069237ea61e76f17e5a0f55b3f2d17fb691b7ea5ed5e2840ca565572f37"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_14.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_14.obj",
+      "source_sha256": "36413039b5e1d1f9a5db768770e8b6569e0919e413b83a98119262e29e21a8fc"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_15.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_15.obj",
+      "source_sha256": "aad4286ca079c4a647ae9f8129e3262831f08f2489182eb9af04703989cb1fa9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_16.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_16.obj",
+      "source_sha256": "acccc3e04d04c36409b1cc368ba6875c11e8d834ccafc5073d1027e53c22f073"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_17.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_17.obj",
+      "source_sha256": "caa0ff4d6ef39ad9afa9ad2754031ca65b2cda5f0a31c40d990d56d1a0aea940"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_18.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_18.obj",
+      "source_sha256": "bef2c37c195b5aa81b5db9b1568f89bb5230439a3faf4e24fc344dd4e99eb652"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_19.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_19.obj",
+      "source_sha256": "cb995dd220448b20492045a24fd47e7dbc8d4895d3d96e0eceb7548e2f256b44"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_20.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_20.obj",
+      "source_sha256": "b8435c052bf2c915c3320bbefcbd1331d596e920ad6b3dec7c609bb2c0e70a22"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_21.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_21.obj",
+      "source_sha256": "7988dbc8795fa2a64cb7de851777c86834d689da7c356c81df5f9a0bdd1a81b5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_22.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_22.obj",
+      "source_sha256": "34ff63dd4b02324d0f57091b23c5a7a7f1e7162f68ad1a53b2a96a4e9657985b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_23.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_23.obj",
+      "source_sha256": "357a12a6b6285a528a5b193acb81aadc8ed6ce9350a6ce3c0aaed6b7878640a5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_24.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_24.obj",
+      "source_sha256": "6ff8abeabbe6eab22a6e7ca87586bd77b6a59b735b1d0f51b5505eac712918f9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_25.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_25.obj",
+      "source_sha256": "275ff3ad71b8011f14987824b9ce9d9c11045efb997dd10a627efc82c861304e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_26.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_26.obj",
+      "source_sha256": "74ab01f9da2bd631966b9efcea490d8064d6dfc4b7ddd7ae1df2f5d3b4c36ebf"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_27.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_27.obj",
+      "source_sha256": "4fbf6a4b020cdc16be5b61f76623e5d709989b2aab5699ceb8f02bad9357476c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_28.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_28.obj",
+      "source_sha256": "99445503b188d3d6b41af99dc4f6dd6bbd9f9020cf344e995cba20f0421c7c1d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_29.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_29.obj",
+      "source_sha256": "cada7d28ca6bb23759066f049c1d8f74994caa5afba16884659ca7cb1358ee0b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_30.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_30.obj",
+      "source_sha256": "6963518b9990fde76e792ec3288ef89d5f2d41d2bfffa7bff5cce56a7dd16a33"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_31.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_31.obj",
+      "source_sha256": "456d23af68caf0fdddc7a9882ebb160fbb722e413be6246a47de3eb38560d3e4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_32.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_32.obj",
+      "source_sha256": "b58dd6f3de63ec9c9a47752172e39f6ee5da33abf0f10dd4561193faee6a6bbb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_33.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_33.obj",
+      "source_sha256": "8ad47f21a42d9345b460f36653946bd1f93d6889c4c1fec8298d507866120138"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_34.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_34.obj",
+      "source_sha256": "48232e846c057424c9935124e0a4671a8087dee66dfb274aba76a75aa71df8a1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_35.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_35.obj",
+      "source_sha256": "7c01d8c5e2b5a6f63bb3039f51a56b652e6a2e0ae83085e8e3e7b9619b3c2e79"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_36.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_36.obj",
+      "source_sha256": "1b21d129a9d86586cd6e17969eef152c8812e7b0454add50be4ae5494cd30577"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_37.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_37.obj",
+      "source_sha256": "216697bacb4e54d9ef9250996008545eda0b1a51c4db30126e3052a8caafe035"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_38.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_38.obj",
+      "source_sha256": "a5ab649b75663758334429cddaf7cafd7656189a6a321572d82e8a7271746388"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_39.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_39.obj",
+      "source_sha256": "cdb648beac6298469acbc4c3b3b31563c52f9a6438a86fa64a40ffd60e6001d6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_40.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_40.obj",
+      "source_sha256": "199ac0f0bb8f9d27d6c4b8da3a99f74f20f001e3eafe44271df9c4374ca4b10b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_41.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_41.obj",
+      "source_sha256": "7f176bbe75613239f854a8ea98cba72bb8c2b24fc0e13d8a366f9cc4725d4b78"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_42.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_42.obj",
+      "source_sha256": "0c6a9e4a2b74809543b31064624840b6431c66a481ad26fb11a4f972c081c090"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_43.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_43.obj",
+      "source_sha256": "95cdb1bdd9537de12ba3233e566b5af70e2504f21c9bd125c51f9628f2d7499a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_44.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_44.obj",
+      "source_sha256": "b06d64acdde75d84f3225533bdf41270b3592a499df32685b50eb25b12f8e767"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_45.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_45.obj",
+      "source_sha256": "73b382e58104ee38345b60864e04a50a3afc42c23d72a08cd4e956e8e029260f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_46.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_46.obj",
+      "source_sha256": "1caf53ab774e56300fe3f3100c60f9ad7e33a221fb967ea0d458a2328e77d5b1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/collision_wall_47.obj",
+      "path": "assets/fq/photo_basket/meshes/collision_wall_47.obj",
+      "source_sha256": "a41f2f2cba725dec94fb12d2b1082b4f030f898a5aad0e45776e36405c552365"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/handle_left.obj",
+      "path": "assets/fq/photo_basket/meshes/handle_left.obj",
+      "source_sha256": "258facf82c036839113e583a9b90ad20ddeaed78198d938d62cbabcedf6adafe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/meshes/handle_right.obj",
+      "path": "assets/fq/photo_basket/meshes/handle_right.obj",
+      "source_sha256": "098fae0708c27a91805e1f934f11d4841e63ba4c8b54653a5c48c1c5c653d3b4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/basket.usdc",
+      "path": "assets/fq/photo_basket/basket.usdc",
+      "source_sha256": "1d05daaff19d15e9017caf891fcbffb8d20747a223289a5edf6eba9743e0b070"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/parameters.json",
+      "path": "assets/fq/photo_basket/parameters.json",
+      "source_sha256": "df8d6f268c47e55ef9252095063c35dc97653306f60ddf0c62707576e442127d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/basket/photo_basket_v1/test_mujoco.xml",
+      "path": "assets/fq/photo_basket/test_mujoco.xml",
+      "source_sha256": "a3a222e844e994bbdc0411b7f598a177f2f15fb08195a268e229a94fd84810b1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/refrigerator.xml",
+      "path": "assets/fq/haier_bcd402/refrigerator.xml",
+      "source_sha256": "8bfde86b8983838ff8157cf245cacfb5362da6ff211020a8b669bd68fb9bd7b7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/source/build_asset.py",
+      "path": "assets/fq/haier_bcd402/source/build_asset.py",
+      "source_sha256": "290dd4688771d27e29854066f53412b703ea2cbf75d3250389101676ba45e325"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/source/build_refrigerator_v2.py",
+      "path": "assets/fq/haier_bcd402/source/build_refrigerator_v2.py",
+      "source_sha256": "2df4f5d06d705711c92beb7d32777361a116943109a28fba174ba2d235420ade"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/source/geometry.json",
+      "path": "assets/fq/haier_bcd402/source/geometry.json",
+      "source_sha256": "7aad041a00405eace1dfe6110ba877eede916155940d33678949f9c74ad33d03"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/source/haier_bcd402_body_v1.blend",
+      "path": "assets/fq/haier_bcd402/source/haier_bcd402_body_v1.blend",
+      "source_sha256": "95dc7bd8da142da7ce9762ef9b3587c1514f4dc6928d09d60a4bc89f98980098"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/calibration_v2.json",
+      "path": "assets/fq/haier_bcd402/calibration_v2.json",
+      "source_sha256": "c5d52eece0ec24f026d1f13cb99554382e63cbe004a778ba19f91e4fb2c08ece"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/refrigerator.usda",
+      "path": "assets/fq/haier_bcd402/refrigerator.usda",
+      "source_sha256": "740374eb4efaef7966a86d848840a17bcd5ae7e998bd66c03f0137d7d49f4dbb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/manifest.json",
+      "path": "assets/fq/haier_bcd402/manifest.json",
+      "source_sha256": "30dba0b91d555bbfb4b510d15d11c5171eef34d1b52d328c8a589eec2f49c0ca"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_001.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_001.obj",
+      "source_sha256": "02de3f5a6ea32a2a646de54da8f601b236b16b09ddca19e07ab1f7dfc5cbbcf7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_002.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_002.obj",
+      "source_sha256": "0f672aa11121a592a924788a5a364056bb0211beffc3bdd345078c012cd02e60"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_003.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_003.obj",
+      "source_sha256": "8b0a7031761d9ccf5c8a69c4ff1f1f8edcdb3cce93dcd9f725a7af7147417b75"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_004.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_004.obj",
+      "source_sha256": "d64137e95a9bbc2134ffd5e26e3d4d90275ea7d2c57fb43e544aa9aeca80ba3d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_005.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_005.obj",
+      "source_sha256": "decfd262dab4fa0be436e7d8c16db1e744dd67c3d0df6a77dded07f4c019a486"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_006.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_006.obj",
+      "source_sha256": "6b1b5fd6fcb3437f9f246ac6c9d7bbaddd1626a414aeed02e24f29d4ea2e5bde"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_007.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_007.obj",
+      "source_sha256": "e178de7ada836e0abd0ebdf6e6e983494259ac967099c8e4a7bffac110b2b242"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_008.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_008.obj",
+      "source_sha256": "05541882797d2057ec81fd38ba948a59f5702fba8d42f2e3aabd3a2234b8de25"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_009.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_009.obj",
+      "source_sha256": "4cc43d7d185958aeef7c37773cdf2f17823b6fe08796398a89edfa3b5698c4a0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_010.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_010.obj",
+      "source_sha256": "146070bd3771577f8d7d57d5ded5a76c78d5d3dcc176516480c6854a3a017c01"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_011.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_011.obj",
+      "source_sha256": "a4b4125ee8708659ca8a2e9536ce331e09ebf73f7b6db362707eb0efc1f4550c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_012.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_012.obj",
+      "source_sha256": "f378735ca00d90666bc7494b3367998c8b4d4929f4e152a32d79a0deca021a98"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_013.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_013.obj",
+      "source_sha256": "2715f265575ade186e2615e4e808c497d95a5cb0fd9e1ad0c39e09e762018eb2"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_014.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_014.obj",
+      "source_sha256": "896261e8742c58ae57f55ea814978abdd899d84415ecee986cc4ae5015995b42"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_015.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_015.obj",
+      "source_sha256": "a9ac7aa43100dabaaa05727b7af51d31e63e5da1a162f07b53f007a334c31802"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_016.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_016.obj",
+      "source_sha256": "a8a744a131adbf3ebd643ba1de942314695275493f429083080742d4215d1cfd"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_017.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_017.obj",
+      "source_sha256": "88a17c332e3b365ee0d0f8f33f8bdc02fb060bba01c1ddb504da14066434d126"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_018.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_018.obj",
+      "source_sha256": "6d07d3991d1ba61ec948302790c34955d7afcf0427c9dc41c1f1821c1bc657aa"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_019.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_019.obj",
+      "source_sha256": "3e146738c20cd59724697259576e32ed2fdae02b96e1b27940eb059ce9278904"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_020.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_020.obj",
+      "source_sha256": "9dbd54974bf6c5e7b7d993f2587adc728fad9d4017de01065f5672d5b9f26c4c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_021.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_021.obj",
+      "source_sha256": "0e139c62ad7806ab93151bb54291dac34f90a6279abc3019b15fe9a73b4e9205"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_022.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_022.obj",
+      "source_sha256": "291e85c4afcef6c87c3058d50dd82df975bf11052e96e23d1471fee178708ef4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_023.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_023.obj",
+      "source_sha256": "beca90788168948c69f886fc989c50a51961c946420d407da0191c95ab1ae6d8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_024.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_024.obj",
+      "source_sha256": "7e5a3b461644fcb2d24894895e01c558aef24b4245f6a309db44d3ff0ae58324"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_025.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_025.obj",
+      "source_sha256": "5b1782706b2424c77c7ae14f22ff666bab35673c999e78822632361724d18bb6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_026.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_026.obj",
+      "source_sha256": "05cd3018dc39315bb1b534ace9e9e2a2df29fa701559363e8d72aed4369a5a82"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_027.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_027.obj",
+      "source_sha256": "21d81da3ac841a55ce9a0790a292bb713c75a2e13529ee02a82d50b98cf7ced6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_028.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_028.obj",
+      "source_sha256": "4e22171f5ae013543cb33eda4cb0aa8cdd69d921cea29a5146c37e6a1487003e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_029.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_029.obj",
+      "source_sha256": "676f7e6eb35335954896b01ab533a817e50c64d23a8e7d523f1ad4772f6fbc18"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_030.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_030.obj",
+      "source_sha256": "0426ba66e1796771b17d52c3d3a805d9f03fdb88d97257bd57eaa963ce1ee905"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_031.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_031.obj",
+      "source_sha256": "bd0ae8062e33ce8c22a8337a74a5ee18f69904e181598f079df458907ccade3d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_032.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_032.obj",
+      "source_sha256": "bcc275513fe96fb31274ebdbcd8625959f9375f5492d828cb7a6eb48807b931b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_033.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_033.obj",
+      "source_sha256": "2f0310c203f663a97d08c1a9e4c79a16968ad4b8b85556bbeef9b982c194b270"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_034.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_034.obj",
+      "source_sha256": "ded9c50749d8cc5efa92f20cdbe9755beb5e11a6f30ca66e4d586433ac61011e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_035.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_035.obj",
+      "source_sha256": "4f6bdc825b4e73db3cb3b3c575481b303b94d76b834e6766f7f9b1e074570170"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_036.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_036.obj",
+      "source_sha256": "618152a6bcb407b91c29276114da1e0a748c34fe98a35e879baaa271c6c0e6eb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_037.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_037.obj",
+      "source_sha256": "42e00d8655ddb56a19b018e0da19bb9b5db0f015926b1bb4df82a9bbf79138d5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_038.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_038.obj",
+      "source_sha256": "08a6ddf4be87ce658b78a527e550902bf40532602dfc6b947340a3197f31fd13"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_039.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_039.obj",
+      "source_sha256": "db974bcc6fa657e961131b937bd1d917ec8e0614ce612769fe429e2960ab24f1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_040.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_040.obj",
+      "source_sha256": "c0a4d74b612bfe6cb8a86b05301655d6762129a4b4ebf9d6251802982504ddb5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_041.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_041.obj",
+      "source_sha256": "3378920551670e5c7d3ffde10958ca3e22b6112fa4b567b19538406b3695dfa4"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_042.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_042.obj",
+      "source_sha256": "1ee0f1ea00d9f7584854a4b42b3ca73dac45b74a132d3ac749e501f174481a90"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_043.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_043.obj",
+      "source_sha256": "015e0fb4422e4aa92a1a4f5093f0643a3e915540432e92b672cc09f93cda34be"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_044.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_044.obj",
+      "source_sha256": "6799d7fb509bd80bc19948cc267fdf59c07414f7397388bf42380dd4de149928"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_045.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_045.obj",
+      "source_sha256": "b891471674860c41c464654b743b73f2315081043ed878e060ee1a23e2d602e5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_046.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_046.obj",
+      "source_sha256": "5c483a15c204cc26569567e31847855af476529cadc277878b1e6a658fe5c1f3"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_047.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_047.obj",
+      "source_sha256": "2faaa5044257bf6da90a37d82f3c95ecae3c25fed2e6093f8d7203a6246073a0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_049.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_049.obj",
+      "source_sha256": "080f2dab34d2ada7f722c52341db8801c7c07160bde197ff00ba75c164d5f33b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_050.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_050.obj",
+      "source_sha256": "9430abf6cd8569febe0d2b5f29f9190a96c2107be29b8e7d0657e547f012430d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_051.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_051.obj",
+      "source_sha256": "d0314369f8e29e82aca73d193c2e49a5b1680fd87a3866b24291d497db548e8d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_052.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_052.obj",
+      "source_sha256": "cd0df30c58c7aa92a31786d81c096d1ee5b322fbeac36c5b29a2e446c06b3341"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_053.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_053.obj",
+      "source_sha256": "a2d56291ab1be35fe0e98513e7e6854cb14e0dc3646fc14f14c2e478c5688f2a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_054.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_054.obj",
+      "source_sha256": "564727326eb3a18f4ec6a2b9d4c7dd29dd19d19779c625eb8df151d57170e3ff"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_055.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_055.obj",
+      "source_sha256": "1f3c45387d1e1ed4e9692ab78972a1a68994e35516078a9dcd089f0e30e368c2"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_056.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_056.obj",
+      "source_sha256": "60b01e7006dcbdfabcc3a688bbdc70705f4c3b9875658d5a695c5a5a9b96dba0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_057.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_057.obj",
+      "source_sha256": "1b9879680f28b1d17664b7b4d1292a22399d697ceae1bd3418c8ecbf2fda71a9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_058.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_058.obj",
+      "source_sha256": "8fde78536ee4b39740e8761ddba3dbd3b10824c359e4e1c008af94db5ec59007"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_059.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_059.obj",
+      "source_sha256": "54ad3baaa9f96177c5a30e7236669199883d56e215b60e3e2bd8132e4a0326b1"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_060.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_060.obj",
+      "source_sha256": "6b7f710137876d87ec91cef2c319e91d9861e781fe6ed6f0f58481d810b7bc3a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_061.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_061.obj",
+      "source_sha256": "0c6dd0bb8ae48274cac862203d6221a63f529e3ad2e25fb942b03e7ffc39558f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_062.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_062.obj",
+      "source_sha256": "dde7f58e03eccf58d1ffde52cd52eca7fc7d48d837fb1684ad16e9e08f5c0619"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_063.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_063.obj",
+      "source_sha256": "29594f5141166d50886df886ce7b01e20dea7295ef8dc9533a5d62102517ceb7"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_064.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_064.obj",
+      "source_sha256": "8a7d10c28ae7e84284c0e2d9d9effceee6efcfea56e50fc797c224a54a8ecbae"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_065.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_065.obj",
+      "source_sha256": "174d25132c870c15cb9040e98c485938526aad917a54f359f029f35b5e910289"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_066.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_066.obj",
+      "source_sha256": "fc69487889d16955fdb132dbcfe62a71160ce21fdc1762dc6535394ba19a015c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_067.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_067.obj",
+      "source_sha256": "19e90520d4325ee9491fcb54e32125f973c94af9169aab70795dd8f562ee89cb"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_068.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_068.obj",
+      "source_sha256": "dfa750d873b2444b11a9c946e6d0ba617f447439a5ee1d872c61e6660487a4e5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_069.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_069.obj",
+      "source_sha256": "80fefefba0970c3934cb21ffe2063a8d3049d4497d60e71ffda57ed69b477fa9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_070.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_070.obj",
+      "source_sha256": "373b730b5936065f529e6943743d6314e3a01182e8b3cc9e1ce5fc5d37628a27"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_071.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_071.obj",
+      "source_sha256": "c58a1319f8e9436ddc89996dd29b0a8d30b827c288678a839e2382fd14083c53"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_072.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_072.obj",
+      "source_sha256": "c0c1c4814a72e5ab0c7deec5a6c27f22ea56ef0d8453e1786bdd27fb1f2184f8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_073.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_073.obj",
+      "source_sha256": "8b51fb2fc0bd89f389e1b9ee804b679cf3b85dd8c4da0df667b76f487d3e39c0"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_074.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_074.obj",
+      "source_sha256": "a98bb2abacc4f06c54784986be567e3ce6e61be01cfccf59c8a753477fa42a15"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_076.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_076.obj",
+      "source_sha256": "b85b2dce30b59ef0f35b344ccd953c47b8cabfe4072686f80209171590186077"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_077.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_077.obj",
+      "source_sha256": "374206e4046f5c2e5b2787402a91f0c8b5658a16a081b87c7ef68fa36a4c5c3f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_078.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_078.obj",
+      "source_sha256": "200eb74c3cf330f6058ee23e485052f803d22f98fb0165bceb3344feaee863a8"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_079.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_079.obj",
+      "source_sha256": "639cf083c5ba96cd95384e34c009c1a37b26080914fe15bfc54529146e6a3325"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_080.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_080.obj",
+      "source_sha256": "2cda5759d5a896273e352bc660e8b2ea8c4db41364620647ce9495bad468cc2f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_081.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_081.obj",
+      "source_sha256": "cc9a0783f980a54111391e3803753af4a43c6ee20f679c0ec4a8b7889900c228"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_082.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_082.obj",
+      "source_sha256": "4ad0c6f830943f4c02d4bfbad710ee8ee62d40122d0124da0ca9eebcbfc52a25"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_083.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_083.obj",
+      "source_sha256": "92a353f2d052504c132832b15892927410857b479e63d723d9500b402b67cc48"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_084.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_084.obj",
+      "source_sha256": "fd550c5c13037f3b040f469f404138e1e0829b3a0f3060df6c019c96734d9f0b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_085.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_085.obj",
+      "source_sha256": "38375d29264d3f37e17e5234c638f8a1fe3e849f60a18714b798690b5f74a9ef"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_086.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_086.obj",
+      "source_sha256": "9b4c91a4e4dbc255a9a330ef2720280edd80961e32da1d6307c2ec437ba2509d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_087.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_087.obj",
+      "source_sha256": "f4cb08b7bc7ef5dcda677966909e1b7e635f32d1c51c62f5219b11bb67d18350"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_088.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_088.obj",
+      "source_sha256": "ed3099532121554b2b0faa39d4f9942faea15ab5b2160f52ad5976b58546190f"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_089.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_089.obj",
+      "source_sha256": "f56a849f52996c2cf6126e41f73121982c5141f2ebf867ef33f0c5e01df936f5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_090.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_090.obj",
+      "source_sha256": "8afe37770c914b64a53e253aa7214aa47938c9f7ebb5f7007716f9e24f73310d"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_091.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_091.obj",
+      "source_sha256": "8d9fb189a2d8406876b2f712618d6df962e5a9ec4836dc7e9d427637bfe0d090"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_092.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_092.obj",
+      "source_sha256": "117271b27cceb6c1fec1c962efe9863a52e323e4a00c1a5bd15f6d516a4a4147"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_093.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_093.obj",
+      "source_sha256": "5c22e549c6e5a110123cf94dee2a89e819117b4c9e401c18de1d516a55e02176"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_094.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_094.obj",
+      "source_sha256": "e760f6cd5bd5d4b09708ef3f9ed932432e1e10f31beb0c09a44c9b0a483e689e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_095.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_095.obj",
+      "source_sha256": "ee089a7c3fbbc155b8683a6ae680dbb7a875463b068fad0e6a86de81a01eb819"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_096.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_096.obj",
+      "source_sha256": "e4068dd6bbe98f336a2986d49fd91e45d65671193bf484e2f40829bd0aa3c0b9"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_097.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_097.obj",
+      "source_sha256": "4f1317ef71b2e2820f41f505789182922c64c86f3c2a413aa9d4ae18ff86f089"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_098.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_098.obj",
+      "source_sha256": "7a7f2444b637cd238fc20484d78546cf687e94ae8c5fc45371cb3e41af05d528"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_099.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_099.obj",
+      "source_sha256": "9d0b2ec20a13b7bcd6ad79bc4d37fc0a628bbcf0b398f03ff831c4a4e5be13ab"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_100.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_100.obj",
+      "source_sha256": "50405f3ecaddb99b86cca70911627dac7c0692e4b18e1a732b39922a4edf347a"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_101.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_101.obj",
+      "source_sha256": "9dc839eaf52953fd6a44ea8c2aeb0062636eb941d1b06d730247bf77e8ac4ffe"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_103.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_103.obj",
+      "source_sha256": "1cb842376f461df5274ec376c218e33c75679710fa6fc8b80e1056040ca3d5b5"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_104.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_104.obj",
+      "source_sha256": "bd594425d6193983eb240d82e6bd49952b2539e9b75af2fa49750405f70da76b"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_105.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_105.obj",
+      "source_sha256": "5ea16de2ba7c20cac22c1ca557442bfa96847b859dc8a5727c86325f56a885e2"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_106.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_106.obj",
+      "source_sha256": "fe9697406ec1be205d9456242baf6117c25fb2fe1e8d84d86a6ca85dad2f33b6"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_107.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_107.obj",
+      "source_sha256": "a7eadedadf84e8b2c685adb6de0293aa0e4a404227a021dec9994ea3db4fb24e"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_108.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_108.obj",
+      "source_sha256": "8d65ed1b1edc1bd7f47387e78ae060d30831e4a46938311083a6db5ea9029b45"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_109.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_109.obj",
+      "source_sha256": "bb22e134a786b87af7e5a6c3f93679eb3bbd828677c1afdb49119da37238dd65"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_110.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_110.obj",
+      "source_sha256": "c2efb63145e1060dc14c0f169288631a8ebb1a0ebfceedad813192799456e993"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_111.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_111.obj",
+      "source_sha256": "11e66cfe82e4042780cb80eab28373971fdf1469ccf6cfbedbfa20ab6a21788c"
+    },
+    {
+      "source": "/home/fangqi/code/SIMPLE-o7-verify/data/assets/refrigerator/haier_bcd402_v1/meshes/part_112.obj",
+      "path": "assets/fq/haier_bcd402/meshes/part_112.obj",
+      "source_sha256": "d9357caefb5e930fce359d190a0f65253e1ccde1071f38e3e45548e18fe10aa7"
+    },
+    {
+      "source": "/home/fangqi/g1-navigation-sim/office_video_v2/render_hq.py",
+      "path": "provenance/source_scripts/render_hq.py",
+      "source_sha256": "27221d341ba87a2ca76dd7ae28fe327deaa9874e0b0f12b81d17a7f6c8720cfb"
+    }
+  ]
+}

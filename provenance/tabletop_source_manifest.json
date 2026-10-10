@@ -1,0 +1,664 @@
+{
+  "asset_version": "3.1.2",
+  "metersPerUnit": 1,
+  "upAxis": "Z",
+  "assets": {
+    "round_table": {
+      "visual": "common/meshes/round_table_textured.obj",
+      "collision": "common/meshes/round_table_collision_compound.obj",
+      "scale": 1.303615037197772,
+      "canonical_from_asset": [
+        [
+          1.303615037197772,
+          0.0,
+          0.0,
+          0.005938572675428159
+        ],
+        [
+          0.0,
+          1.303615037197772,
+          0.0,
+          0.006205435709692875
+        ],
+        [
+          0.0,
+          0.0,
+          1.303615037197772,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "visual_bounds": [
+        [
+          -0.4529220314490483,
+          -0.45172531284490075,
+          0.0
+        ],
+        [
+          0.4529220314490483,
+          0.45172531284490075,
+          0.775
+        ]
+      ],
+      "collision_bounds": [
+        [
+          -0.452922031449,
+          -0.451725312845,
+          0.0
+        ],
+        [
+          0.452922031449,
+          0.451725312845,
+          0.7750000000000001
+        ]
+      ],
+      "size_m": [
+        0.9058440628980966,
+        0.9034506256898015,
+        0.775
+      ],
+      "mass_kg": 25,
+      "fixed": true,
+      "pose": [
+        1.4500000000000002,
+        1.1678,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_parts": [
+        "common/meshes/round_table_collision_base.obj",
+        "common/meshes/round_table_collision_pillar.obj",
+        "common/meshes/round_table_collision_top.obj"
+      ],
+      "collision_method": "Three fitted convex cylinders: base, pillar, tabletop. Isaac fixed triangle-mesh compound; MuJoCo three separate convex meshes.",
+      "material_override": "surface_table_textured",
+      "enabled": true,
+      "visual_appearance": {
+        "revision": "surface-textures-20260921-v1",
+        "basecolor": "common/textures/surfaces_20260921/table_basecolor.png",
+        "uv_period_m": 0.905,
+        "roughness": 0.58,
+        "physics_preserved": true
+      }
+    },
+    "coke": {
+      "visual": "common/meshes/coke_visual.obj",
+      "collision": "common/meshes/coke_collision.obj",
+      "visual_bounds": [
+        [
+          -0.0354789493828004,
+          -0.03263404884384545,
+          -0.08242789716225354
+        ],
+        [
+          0.035478949456099106,
+          0.0326340483493891,
+          0.08242789473122372
+        ]
+      ],
+      "collision_bounds": [
+        [
+          -0.03547894954681397,
+          -0.032634049654006965,
+          -0.08242789655923845
+        ],
+        [
+          0.03547894954681397,
+          0.032634049654006965,
+          0.08242789655923845
+        ]
+      ],
+      "size_m": [
+        0.0709578988388995,
+        0.06526809719323455,
+        0.16485579189347727
+      ],
+      "mass_kg": 0.35,
+      "fixed": false,
+      "pose": [
+        1.1191330654611298,
+        1.2910874432849395,
+        0.8604278965592385
+      ],
+      "quaternion_wxyz": [
+        0.8591560636855161,
+        -2.0572973926756726e-12,
+        -2.665828077542656e-12,
+        0.5117136486673081
+      ],
+      "collision_method": "Recorded 64-section convex collision mesh; historical non-circular dimensions retained",
+      "collision_parts": [
+        "common/meshes/coke_collision.obj"
+      ],
+      "dimensions_status": "User-selected historical model; not physically measured",
+      "mass_status": "Estimated full can",
+      "asset_revision": "recorded_geometry_20260915",
+      "material": {
+        "status": "material_based_estimate_not_measured",
+        "assumptions": [
+          "dry coated can surface",
+          "photo suggests textured elastomer pads; polymer type and hardness unknown",
+          "palm tape is a different uncalibrated contact surface",
+          "rigid can; no deformation or liquid slosh"
+        ],
+        "mujoco": {
+          "friction": [
+            0.6,
+            0.003,
+            0.0001
+          ],
+          "priority": 1,
+          "condim": 4,
+          "solref": [
+            0.008,
+            1
+          ],
+          "scope": "all can contacts against priority-0 geoms, including table"
+        },
+        "isaac": {
+          "static_friction": 0.7,
+          "dynamic_friction": 0.6,
+          "restitution": 0,
+          "colliders": [
+            "/World/Meshes/collision_0"
+          ],
+          "scope": "authored can material; combination depends on other collider material"
+        }
+      },
+      "source_geometry": "source/recorded_geometry.json",
+      "enabled": true,
+      "visual_appearance": {
+        "revision": "cn-label-20260917-v1",
+        "locale": "zh-CN",
+        "label": "common/textures/coke_cn.png",
+        "visual_parts": [
+          "common/meshes/coke_cn_side.obj",
+          "common/meshes/coke_cn_ends.obj"
+        ],
+        "source": "imagegen reconstructed Chinese label, not a literal packaging reproduction",
+        "physics_preserved": true,
+        "installed_at_utc": "2026-09-17T07:51:34.191895+00:00"
+      }
+    },
+    "cup": {
+      "visual": "common/meshes/cup_visual.obj",
+      "collision": "common/meshes/cup_collision.obj",
+      "collision_parts": [
+        "common/meshes/cup_collision_0.obj",
+        "common/meshes/cup_collision_1.obj",
+        "common/meshes/cup_collision_2.obj",
+        "common/meshes/cup_collision_3.obj",
+        "common/meshes/cup_collision_4.obj",
+        "common/meshes/cup_collision_5.obj",
+        "common/meshes/cup_collision_6.obj",
+        "common/meshes/cup_collision_7.obj",
+        "common/meshes/cup_collision_8.obj",
+        "common/meshes/cup_collision_9.obj",
+        "common/meshes/cup_collision_10.obj",
+        "common/meshes/cup_collision_11.obj",
+        "common/meshes/cup_collision_12.obj",
+        "common/meshes/cup_collision_13.obj",
+        "common/meshes/cup_collision_14.obj",
+        "common/meshes/cup_collision_15.obj",
+        "common/meshes/cup_collision_16.obj",
+        "common/meshes/cup_collision_17.obj",
+        "common/meshes/cup_collision_18.obj",
+        "common/meshes/cup_collision_19.obj",
+        "common/meshes/cup_collision_20.obj",
+        "common/meshes/cup_collision_21.obj",
+        "common/meshes/cup_collision_22.obj",
+        "common/meshes/cup_collision_23.obj",
+        "common/meshes/cup_collision_24.obj",
+        "common/meshes/cup_collision_25.obj",
+        "common/meshes/cup_collision_26.obj",
+        "common/meshes/cup_collision_27.obj",
+        "common/meshes/cup_collision_28.obj",
+        "common/meshes/cup_collision_29.obj",
+        "common/meshes/cup_collision_30.obj",
+        "common/meshes/cup_collision_31.obj"
+      ],
+      "size_m": [
+        0.11299462038812431,
+        0.11231694109953819,
+        0.12141434044889382
+      ],
+      "visual_bounds": [
+        [
+          -0.05649731019406216,
+          -0.05615847054976909,
+          -0.06070717022444691
+        ],
+        [
+          0.05649731019406216,
+          0.05615847054976909,
+          0.06070717022444691
+        ]
+      ],
+      "collision_bounds": [
+        [
+          -0.05709539535598586,
+          -0.056613396874859966,
+          -0.06106906207128138
+        ],
+        [
+          0.05702624712040292,
+          0.05658147456826824,
+          0.06117356484063899
+        ]
+      ],
+      "canonical_from_asset": [
+        [
+          0.004657026981834627,
+          -0.06808332454812333,
+          0.997668769190539,
+          -0.002082484987503623
+        ],
+        [
+          -0.997668769190539,
+          -0.06824241336467113,
+          -8.588995534165006e-18,
+          -0.0033494982405111932
+        ],
+        [
+          0.06808332454812345,
+          -0.9953429730181653,
+          -0.068242413364671,
+          6.920325947829368e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "fixed": false,
+      "mass_kg": 0.012,
+      "pose": [
+        1.723478044215977,
+        1.1236325181097317,
+        0.8334219729372258
+      ],
+      "quaternion_wxyz": [
+        0.342391504403997,
+        0.04080296555441114,
+        0.013707183635213746,
+        0.9385708757631062
+      ],
+      "enabled": false
+    },
+    "tissue_box": {
+      "visual": "common/meshes/tissue_box_visual.obj",
+      "collision": "common/meshes/tissue_box_collision.obj",
+      "collision_parts": [
+        "common/meshes/tissue_box_collision.obj"
+      ],
+      "size_m": [
+        0.14288463,
+        0.10090171,
+        0.08188227000000001
+      ],
+      "visual_bounds": [
+        [
+          -0.071442315,
+          -0.050450855,
+          -0.040941135000000003
+        ],
+        [
+          0.071442315,
+          0.050450855,
+          0.040941135000000003
+        ]
+      ],
+      "collision_bounds": [
+        [
+          -0.071442315,
+          -0.050450855,
+          -0.040941135000000003
+        ],
+        [
+          0.071442315,
+          0.050450855,
+          0.040941135000000003
+        ]
+      ],
+      "canonical_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.001064804999999995
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.001081505
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0008938249999999974
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "fixed": false,
+      "mass_kg": 0.12,
+      "pose": [
+        1.3297222155800938,
+        1.4797112961607786,
+        0.8159349993624876
+      ],
+      "quaternion_wxyz": [
+        0.042712154100315015,
+        1.065532133435819e-12,
+        2.3623769981168707e-11,
+        0.9990874195445116
+      ],
+      "enabled": false
+    }
+  },
+  "room": [
+    {
+      "name": "floor",
+      "size": [
+        4,
+        3,
+        0.1
+      ],
+      "pose": [
+        1.4,
+        1.2,
+        -0.05
+      ],
+      "color": [
+        0.2,
+        0.21,
+        0.22
+      ]
+    },
+    {
+      "name": "back_wall",
+      "size": [
+        0.1,
+        3,
+        2.4
+      ],
+      "pose": [
+        2.23,
+        1.2,
+        1.2
+      ],
+      "color": [
+        0.69,
+        0.68,
+        0.63
+      ]
+    },
+    {
+      "name": "skirting",
+      "size": [
+        0.022,
+        3,
+        0.09
+      ],
+      "pose": [
+        2.169,
+        1.2,
+        0.045
+      ],
+      "color": [
+        0.37,
+        0.37,
+        0.34
+      ]
+    }
+  ],
+  "tabletop_z_m": 0.775,
+  "default_robot_pose": [
+    0.6744590550957923,
+    1.184225993250042,
+    0.7825836282774702
+  ],
+  "layout_policy": "Frozen from the reviewed centered preview: same table and can XY, centered robot base; can Z recomputed for a 3mm settling clearance. Default scene contains table and can; cup/tissue remain in the full-scene variant and standalone assets.",
+  "room_policy": "4x3m floor and one 2.4m high wall are explicit test-layout assumptions, not measured reconstruction. No Gaussian background is needed.",
+  "appearance_policy": "Reference-guided image_gen albedo for table, wall and floor; assumed roughness. Mesh rendering, no Gaussian layer. Physics and camera configuration preserved.",
+  "scene_id": "g1_coke_tabletop",
+  "status": "validated_native_trial_below_rate_target",
+  "entries": {
+    "mujoco": "mujoco/scene.xml",
+    "isaac": "isaac/scene.usd",
+    "coke_mujoco": "mujoco/coke.xml",
+    "coke_isaac": "isaac/coke.usd",
+    "mujoco_full": "mujoco/full_scene.xml",
+    "isaac_full": "isaac/full_scene.usd",
+    "production": "run.sh",
+    "data_generation_strategy": "strategies/native_pick_hold/run_direct_live.py",
+    "recording": "strategies/native_pick_hold/native_batch.py"
+  },
+  "sources": {
+    "previous_release": "2.0.0",
+    "can_geometry": "source/recorded_geometry.json",
+    "robot": "robot/g1_o7"
+  },
+  "release_date": "2026-09-16",
+  "release_scope": "Frozen scene with native live planning and recording; fixed20 rate is below unattended-production target",
+  "compatibility": "Use run.sh; physical execution compiles frozen inputs fresh. No experimental project imports.",
+  "lighting": {
+    "isaac": {
+      "dome_intensity": 200,
+      "distant_intensity": 650,
+      "distant_rotation_xyz_deg": [
+        -15,
+        -25,
+        0
+      ],
+      "angular_size_deg": 12,
+      "shadows": true
+    },
+    "status": "visual scene lighting; not a measured photometric calibration"
+  },
+  "layout_validation": {
+    "revision": "original-layout-back10cm-20260922",
+    "original_ready_base_xy": [
+      0.7744366329209394,
+      1.182108463506059
+    ],
+    "robot_base_xy": [
+      0.6744590550957923,
+      1.184225993250042
+    ],
+    "retreat_m": 0.1,
+    "direction_xy": [
+      -0.999775778251471,
+      0.02117529743983121
+    ],
+    "table_center_xy": [
+      1.4500000000000002,
+      1.1678
+    ],
+    "coke_xy": [
+      1.1191330654611298,
+      1.2910874432849395
+    ],
+    "base_to_near_table_edge_x_m": 0.3226189134551596,
+    "source_release": "3.0.1",
+    "grasp_success_revalidated": false,
+    "ready_base_pose_verified": [
+      0.6744589077113556,
+      1.1842263449093804,
+      0.7853135641314049,
+      0.9993025198049449,
+      0.00979547605290165,
+      -0.02548239555148294,
+      0.02547881624687848
+    ]
+  },
+  "validation": {
+    "geometry_parity": true,
+    "relative_asset_paths": true,
+    "reviewed_layout_applied": true,
+    "physical_camera_calibration": false,
+    "native_simple_datagen": true,
+    "fixed20_complete": true,
+    "fixed20_accepted": 17,
+    "fixed20_reset_and_camera_passed": true,
+    "unattended_production_rate_gate": false
+  },
+  "package_directory": "production_scenes/grasp_coke",
+  "package_scope": "frozen scene, robot, decoder, data-generation strategy, initialization, recording and validated export",
+  "default_experiment_entry_changed": false,
+  "data_generation_strategy": {
+    "id": "native_planned_pick_hold",
+    "version": "20260916",
+    "implementation": "strategies/native_pick_hold/run_direct_live.py",
+    "control": "strategies/native_pick_hold/direct_reference_policy.py",
+    "parameters": "configs/native_generation.json",
+    "motion_source": "fresh plan at actual initialized state; execution-token recording"
+  },
+  "release_acceptance": "validation/native_generation_20260916/summary.json",
+  "runtime_dependency_lock": "dependency_lock.json",
+  "native_generation": {
+    "required_entry": "run.sh -> initialize actual state -> MotionPlannerAgent/CuRobo -> live WBC -> synchronized token recorder",
+    "connected": true,
+    "verified": true,
+    "planning_stage_verified": true,
+    "token_production_verified": true,
+    "trial_report": "validation/native_planning_trial/status.json",
+    "live_recording_chain_verified": true,
+    "successful_grasp_token_episode_verified": true,
+    "live_trial_report": "validation/native_live_trial/validation.json",
+    "live_trial_dataset": "generated-data/grasp_coke_live_chain_validation/dataset",
+    "successful_live_episode": "generated-data/grasp_coke_success_episode",
+    "successful_live_episode_report": "validation/successful_live_episode/success_validation.json",
+    "current_report": "validation/native_generation_20260916/summary.json",
+    "current_dataset": "generated-data/grasp_coke_fixed20_20260916/dataset"
+  },
+  "current_runner_classification": "fresh native planning and live execution-token recording",
+  "head_camera_config_fix": {
+    "report": "validation/head_camera_config_fix/verification.json",
+    "passed": true,
+    "preserves_explicit_scene_config": true,
+    "new_episode_recorded": true,
+    "previous_episode_visual_quality_accepted": false,
+    "hand_smoothness_review_pending": false
+  },
+  "native_generation_control": {
+    "control_version": "native_pick_hold_20260916",
+    "planning": "fresh SIMPLE MotionPlannerAgent/CuRobo after actual startup state",
+    "motion_token_source": "live WBC execution snapshot; no reuse of historical motion sequences",
+    "proportional_feedback": 0.35,
+    "integral_feedback": 0.2,
+    "solution_filter_alpha": 0.2,
+    "command_velocity_limit_rad_s": 0.5,
+    "command_acceleration_limit_rad_s2": 2.0,
+    "camera_source": "configs/head_camera.json and configs/left_wrist_camera.json",
+    "camera_checked_before_recording": true,
+    "fps": 50,
+    "action_dimensions": 78,
+    "fixed20_completed": 20,
+    "fixed20_accepted": 17,
+    "native_dr_levels": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "native_dr_execution_validation": "validation/native_generation_20260916/summary.json",
+    "unsupported_dr_axes": [
+      "room_asset_switch",
+      "MDL_texture_swap"
+    ],
+    "source_hashes": "strategies/native_pick_hold/source_hashes.json",
+    "model_hashes": {
+      "policies/native_wbc/encoder_model_encoder.trt": "b4be1bd52a8fb3260ea293a286aa9edcaac9cae6e8dac67ce2201213dd24eddc",
+      "policies/native_wbc/model_decoder.onnx": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
+      "policies/native_wbc/model_encoder.onnx": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae",
+      "policies/native_wbc/observation_config.yaml": "4a67713b310932e50aca81f19188c8d76013148e98b15c8b5bbea995f12e59f0",
+      "policies/native_wbc/policy_model_decoder.trt": "12b874f0108b3d3af16887fd06741eb10ff96d20bc2330f20029871d25649ee6",
+      "policies/native_planner/planner_planner_sonic.trt": "b937f208c82ed768b3a455128e4fdaa43333c0627075ab712ce27e3a6588c56d",
+      "policies/native_planner/planner_sonic.onnx": "39b553e197f62f077975ba38512bc04781a3fc37c2af7c6756e04629f760edea"
+    },
+    "production_status": "validated_native_trial_below_rate_target",
+    "fixed_scene_acceptance_rate": 0.85
+  },
+  "historical_reference_strategy": {
+    "id": "reference_token_pick_hold",
+    "version": "1.0.0",
+    "implementation": "strategies/reference_pick_hold.py",
+    "parameters": "configs/recording.json",
+    "reference_commands": "fixtures/episode_000000_commands.npz"
+  },
+  "historical_reference_validation": {
+    "geometry_parity": true,
+    "relative_asset_paths": true,
+    "mujoco_settle_seconds": 3,
+    "isaac_settle_seconds": 3,
+    "reviewed_layout_applied": true,
+    "entrypoint_prepare_smoke": true,
+    "grasp_policy_acceptance": true,
+    "physical_camera_calibration": false,
+    "production_recording": true,
+    "reset_recording": true,
+    "physical_state_replay": true,
+    "two_camera_data_alignment": true,
+    "isaac_frozen_dependencies": true,
+    "native_simple_datagen": false
+  },
+  "appearance_revision": "surface-textures-20260921-v1",
+  "visual_room_completion": {
+    "physics_room_unchanged": true,
+    "visual_only": true,
+    "surfaces": {
+      "BackWall": {
+        "size": [
+          0.1,
+          8.0,
+          4.0
+        ],
+        "pos": [
+          2.23,
+          1.2,
+          2.0
+        ],
+        "texture": "wall",
+        "roughness": 0.88
+      },
+      "Floor": {
+        "size": [
+          12.0,
+          12.0,
+          0.1
+        ],
+        "pos": [
+          1.4,
+          1.2,
+          -0.05
+        ],
+        "texture": "floor",
+        "roughness": 0.97
+      }
+    },
+    "gaussians_visible": false
+  },
+  "appearance_validation": {
+    "report": "validation/surface_textures_20260921.json",
+    "status": "passed_mujoco_and_isaac_on_5.21"
+  }
+}

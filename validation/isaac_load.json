@@ -1,0 +1,39 @@
+{
+  "isaac_sim": "4.5.0",
+  "assets": [
+    {
+      "id": "fq:objects/coke_cn",
+      "stage_loaded": true,
+      "geometry_prims": 2
+    },
+    {
+      "id": "fq:objects/round_table",
+      "stage_loaded": true,
+      "geometry_prims": 4
+    },
+    {
+      "id": "fq:articulated/photo_basket",
+      "stage_loaded": true,
+      "geometry_prims": 80
+    },
+    {
+      "id": "fq:articulated/haier_bcd402",
+      "stage_loaded": true,
+      "geometry_prims": 197
+    },
+    {
+      "id": "fq:objects/conference_table",
+      "stage_loaded": true,
+      "geometry_prims": 8
+    },
+    {
+      "id": "fq:scenes/office_baseline",
+      "stage_loaded": true,
+      "geometry_prims": 222
+    }
+  ],
+  "physics_calibrated": false,
+  "baseline_timeline_time": 0.03389066666666668,
+  "baseline_startup_passed": true,
+  "scope": "All USD stages opened in Isaac; fixed baseline advanced 60 app updates. No articulated contact-policy validation."
+}

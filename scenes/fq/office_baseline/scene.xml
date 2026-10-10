@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="fq_office_baseline_v0_1_0">
+  <option gravity="0 0 -9.81" integrator="implicitfast" />
+  <statistic center="8.5 6.2 0" extent="19" />
+  <visual>
+    <global offwidth="1400" offheight="1000" />
+    <headlight ambient=".5 .5 .5" diffuse=".5 .5 .5" />
+  </visual>
+  <worldbody>
+    <light name="ceiling_light_0" pos="2 10.4 2.65" dir="0 0 -1" directional="false" diffuse="1 1 .95" specular=".12 .12 .12" ambient=".08 .08 .08" castshadow="true" />
+    <geom name="downlight_fixture_0" type="cylinder" pos="2 10.4 2.65" size=".09 .012" material="light_material" contype="0" conaffinity="0" />
+    <light name="ceiling_light_1" pos="4.4 10.4 2.65" dir="0 0 -1" directional="false" diffuse="1 1 .95" specular=".12 .12 .12" ambient=".08 .08 .08" castshadow="true" />
+    <geom name="downlight_fixture_1" type="cylinder" pos="4.4 10.4 2.65" size=".09 .012" material="light_material" contype="0" conaffinity="0" />
+    <light name="ceiling_light_2" pos="12 10.3 2.65" dir="0 0 -1" directional="false" diffuse=".8 .78 .72" specular=".12 .12 .12" ambient=".08 .08 .08" castshadow="true" />
+    <geom name="downlight_fixture_2" type="cylinder" pos="12 10.3 2.65" size=".09 .012" material="light_material" contype="0" conaffinity="0" />
+    <light name="ceiling_light_3" pos="15 10.3 2.65" dir="0 0 -1" directional="false" diffuse=".8 .78 .72" specular=".12 .12 .12" ambient=".08 .08 .08" castshadow="true" />
+    <geom name="downlight_fixture_3" type="cylinder" pos="15 10.3 2.65" size=".09 .012" material="light_material" contype="0" conaffinity="0" />
+    <light name="ceiling_light_4" pos="11.3 3.5 2.65" dir="0 0 -1" directional="false" diffuse=".8 .78 .72" specular=".12 .12 .12" ambient=".08 .08 .08" castshadow="true" />
+    <geom name="downlight_fixture_4" type="cylinder" pos="11.3 3.5 2.65" size=".09 .012" material="light_material" contype="0" conaffinity="0" />
+    <light name="ceiling_light_5" pos="11.3 6.2 2.65" dir="0 0 -1" directional="false" diffuse=".8 .78 .72" specular=".12 .12 .12" ambient=".08 .08 .08" castshadow="true" />
+    <geom name="downlight_fixture_5" type="cylinder" pos="11.3 6.2 2.65" size=".09 .012" material="light_material" contype="0" conaffinity="0" />
+    <light name="ceiling_light_6" pos="7.3 11.3 2.65" dir="0 0 -1" directional="false" diffuse=".8 .78 .72" specular=".12 .12 .12" ambient=".08 .08 .08" castshadow="true" />
+    <geom name="downlight_fixture_6" type="cylinder" pos="7.3 11.3 2.65" size=".09 .012" material="light_material" contype="0" conaffinity="0" />
+    <light name="lobby_panel_light" pos="7.5 11.3 2.55" dir="0 0 -1" diffuse=".9 .9 .88" ambient=".15 .15 .15" castshadow="true" />
+    <geom name="floor" type="box" pos="8.55 6.2 -.05" size="8.65 6.3 .05" material="floor_material" friction=".7 .005 .0001" />
+    <geom name="north_west" type="box" pos="3.22727 12.39773 1.35000" size="3.28409 0.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="north_east" type="box" pos="12.53409 12.39773 1.35000" size="4.62500 0.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="exit_glass_left" type="box" pos="6.86080 12.39773 1.05000" size="0.34943 0.02273 1.05000" material="glass_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="exit_glass_right" type="box" pos="7.55966 12.39773 1.05000" size="0.34943 0.02273 1.05000" material="glass_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="exit_header" type="box" pos="7.21023 12.39773 2.40000" size="0.69886 0.05682 0.30000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="exit_frame_0" type="box" pos="6.51136 12.39773 1.05000" size="0.02273 0.05682 1.05000" material="frame_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="exit_frame_1" type="box" pos="7.21023 12.39773 1.05000" size="0.02273 0.05682 1.05000" material="frame_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="exit_frame_2" type="box" pos="7.90909 12.39773 1.05000" size="0.02273 0.05682 1.05000" material="frame_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="exit_handle_0" type="box" pos="7.07955 12.30682 1.15000" size="0.01136 0.02273 0.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="exit_handle_1" type="box" pos="7.31818 12.30682 1.15000" size="0.01136 0.02273 0.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="south" type="box" pos="8.55114 0.00000 1.35000" size="8.60795 0.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="west" type="box" pos="0.00000 6.19886 1.35000" size="0.05682 6.14205 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="east" type="box" pos="17.10227 6.19886 1.35000" size="0.05682 6.14205 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_door_upper_jamb" type="box" pos="5.56818 12.28409 1.35000" size="0.05682 0.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_east_wood" type="box" pos="5.56818 10.96932 1.35000" size="0.05682 0.45795 1.35000" material="door_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_east_wall" type="box" pos="5.56818 9.45455 1.35000" size="0.05682 1.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_east_stub" type="box" pos="5.56818 8.11932 1.35000" size="0.05682 0.27841 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_door_lower_frame" type="box" pos="5.56818 11.40455 1.35000" size="0.05682 0.02273 1.35000" material="frame_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_door_lintel" type="box" pos="5.56818 11.82727 2.40000" size="0.05682 0.40000 0.30000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_south_wall" type="box" pos="2.78409 8.34091 1.35000" size="2.72727 0.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_cabinet" type="box" pos="2.96023 8.03977 0.50000" size="2.55114 0.24432 0.50000" material="furniture_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="logo_wall" type="box" pos="7.62500 10.25568 1.35000" size="2.00000 0.08523 1.35000" material="logo_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="storage_machine_partition" type="box" pos="7.65909 9.00568 1.35000" size="0.05682 1.16477 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="storage_south" type="box" pos="7.31818 7.84091 1.35000" size="0.70455 0.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="machine_south" type="box" pos="9.22159 7.63636 1.35000" size="0.40341 0.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="machine_east" type="box" pos="9.56818 8.43182 1.35000" size="0.05682 0.73864 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="column_machine" type="box" pos="8.42045 7.98864 1.35000" size="0.39773 0.39773 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="column_inner" type="box" pos="8.25568 9.23295 1.35000" size="0.30114 0.30114 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="office_north" type="box" pos="15.07955 7.63636 1.35000" size="1.96591 0.05682 1.35000" material="wall_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <geom name="meeting_table" type="box" pos="2.25568 10.34091 0.37500" size="2.00568 0.60000 0.37500" material="furniture_material" friction=".7 .005 .0001" contype="1" conaffinity="1" rgba="0 0 0 0" group="3" />
+    <geom name="entrance_stone_finish" type="box" pos="7.62500 11.34091 0.00100" size="2.00000 1.00000 0.00100" material="stone_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_x_0" type="box" pos="6.23943 11.34091 0.00225" size="0.00080 1.00000 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_x_1" type="box" pos="6.84170 11.34091 0.00225" size="0.00080 1.00000 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_x_2" type="box" pos="7.44398 11.34091 0.00225" size="0.00080 1.00000 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_x_3" type="box" pos="8.04625 11.34091 0.00225" size="0.00080 1.00000 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_x_4" type="box" pos="8.64852 11.34091 0.00225" size="0.00080 1.00000 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_x_5" type="box" pos="9.25080 11.34091 0.00225" size="0.00080 1.00000 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_y_0" type="box" pos="7.62500 11.73784 0.00225" size="2.00000 0.00080 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_y_1" type="box" pos="7.62500 11.13557 0.00225" size="2.00000 0.00080 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_grout_y_2" type="box" pos="7.62500 10.53330 0.00225" size="2.00000 0.00080 0.00025" material="wall_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="wall_panel_joint_0" type="box" pos="10.09193 12.33807 1.32500" size="0.00102 0.00284 1.32500" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="wall_panel_joint_1" type="box" pos="11.22830 12.33807 1.32500" size="0.00102 0.00284 1.32500" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="wall_panel_joint_2" type="box" pos="12.36466 12.33807 1.32500" size="0.00102 0.00284 1.32500" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="wall_panel_joint_3" type="box" pos="13.50102 12.33807 1.32500" size="0.00102 0.00284 1.32500" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="wall_panel_joint_4" type="box" pos="14.63739 12.33807 1.32500" size="0.00102 0.00284 1.32500" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="wall_panel_joint_5" type="box" pos="15.77375 12.33807 1.32500" size="0.00102 0.00284 1.32500" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="meeting_light_strip" type="box" pos="2.74432 12.26705 2.65250" size="2.63068 0.01705 0.01250" material="light_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_light_strip" type="box" pos="7.59091 10.44886 2.65250" size="1.90909 0.01705 0.01250" material="light_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="ceiling_upper" type="box" pos="8.55114 9.96023 2.74000" size="8.49432 2.38068 0.04000" material="ceiling_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="ceiling_corridor" type="box" pos="11.36932 3.81818 2.74000" size="1.74432 3.76136 0.04000" material="ceiling_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="lobby_luminous_panel" type="box" pos="7.59091 11.34659 2.62250" size="1.81818 0.81250 0.01250" material="light_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="temporary_unreachable_southwest" type="box" pos="4.81250 3.78977 1.35000" size="4.81250 3.78977 1.35000" material="blocked_material" friction=".7 .005 .0001" contype="1" conaffinity="1" rgba="0 0 0 0" />
+    <geom name="temporary_unreachable_southeast" type="box" pos="15.10795 3.78977 1.35000" size="1.99432 3.78977 1.35000" material="blocked_material" friction=".7 .005 .0001" contype="1" conaffinity="1" rgba="0 0 0 0" />
+    <geom name="blocked_sw_north_glass_0" type="box" pos="0.60156 7.57955 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_glass_1" type="box" pos="1.80469 7.57955 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_glass_2" type="box" pos="3.00781 7.57955 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_glass_3" type="box" pos="4.21094 7.57955 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_glass_4" type="box" pos="5.41406 7.57955 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_glass_5" type="box" pos="6.61719 7.57955 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_glass_6" type="box" pos="7.82031 7.57955 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_glass_7" type="box" pos="9.02344 7.57955 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_0" type="box" pos="0.00000 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_1" type="box" pos="1.20312 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_2" type="box" pos="2.40625 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_3" type="box" pos="3.60938 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_4" type="box" pos="4.81250 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_5" type="box" pos="6.01562 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_6" type="box" pos="7.21875 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_7" type="box" pos="8.42188 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_post_8" type="box" pos="9.62500 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_base" type="box" pos="4.81250 7.57955 0.02250" size="4.81250 0.01705 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_north_top" type="box" pos="4.81250 7.57955 2.67750" size="4.81250 0.01705 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_glass_0" type="box" pos="0.60156 0.00000 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_glass_1" type="box" pos="1.80469 0.00000 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_glass_2" type="box" pos="3.00781 0.00000 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_glass_3" type="box" pos="4.21094 0.00000 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_glass_4" type="box" pos="5.41406 0.00000 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_glass_5" type="box" pos="6.61719 0.00000 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_glass_6" type="box" pos="7.82031 0.00000 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_glass_7" type="box" pos="9.02344 0.00000 1.35000" size="0.60156 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_0" type="box" pos="0.00000 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_1" type="box" pos="1.20312 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_2" type="box" pos="2.40625 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_3" type="box" pos="3.60938 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_4" type="box" pos="4.81250 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_5" type="box" pos="6.01562 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_6" type="box" pos="7.21875 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_7" type="box" pos="8.42188 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_post_8" type="box" pos="9.62500 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_base" type="box" pos="4.81250 0.00000 0.02250" size="4.81250 0.01705 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_south_top" type="box" pos="4.81250 0.00000 2.67750" size="4.81250 0.01705 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_glass_0" type="box" pos="0.00000 6.94792 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_glass_1" type="box" pos="0.00000 5.68466 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_glass_2" type="box" pos="0.00000 4.42140 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_glass_3" type="box" pos="0.00000 3.15814 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_glass_4" type="box" pos="0.00000 1.89489 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_glass_5" type="box" pos="0.00000 0.63163 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_post_0" type="box" pos="0.00000 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_post_1" type="box" pos="0.00000 6.31629 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_post_2" type="box" pos="0.00000 5.05303 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_post_3" type="box" pos="0.00000 3.78977 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_post_4" type="box" pos="0.00000 2.52652 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_post_5" type="box" pos="0.00000 1.26326 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_post_6" type="box" pos="0.00000 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_base" type="box" pos="0.00000 3.78977 0.02250" size="0.01705 3.78977 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_west_top" type="box" pos="0.00000 3.78977 2.67750" size="0.01705 3.78977 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_glass_0" type="box" pos="9.62500 6.94792 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_glass_1" type="box" pos="9.62500 5.68466 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_glass_2" type="box" pos="9.62500 4.42140 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_glass_3" type="box" pos="9.62500 3.15814 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_glass_4" type="box" pos="9.62500 1.89489 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_glass_5" type="box" pos="9.62500 0.63163 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_post_0" type="box" pos="9.62500 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_post_1" type="box" pos="9.62500 6.31629 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_post_2" type="box" pos="9.62500 5.05303 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_post_3" type="box" pos="9.62500 3.78977 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_post_4" type="box" pos="9.62500 2.52652 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_post_5" type="box" pos="9.62500 1.26326 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_post_6" type="box" pos="9.62500 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_base" type="box" pos="9.62500 3.78977 0.02250" size="0.01705 3.78977 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_sw_east_top" type="box" pos="9.62500 3.78977 2.67750" size="0.01705 3.78977 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_glass_0" type="box" pos="13.77841 7.57955 1.35000" size="0.66477 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_glass_1" type="box" pos="15.10795 7.57955 1.35000" size="0.66477 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_glass_2" type="box" pos="16.43750 7.57955 1.35000" size="0.66477 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_post_0" type="box" pos="13.11364 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_post_1" type="box" pos="14.44318 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_post_2" type="box" pos="15.77273 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_post_3" type="box" pos="17.10227 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_base" type="box" pos="15.10795 7.57955 0.02250" size="1.99432 0.01705 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_north_top" type="box" pos="15.10795 7.57955 2.67750" size="1.99432 0.01705 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_glass_0" type="box" pos="13.77841 0.00000 1.35000" size="0.66477 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_glass_1" type="box" pos="15.10795 0.00000 1.35000" size="0.66477 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_glass_2" type="box" pos="16.43750 0.00000 1.35000" size="0.66477 0.01136 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_post_0" type="box" pos="13.11364 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_post_1" type="box" pos="14.44318 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_post_2" type="box" pos="15.77273 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_post_3" type="box" pos="17.10227 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_base" type="box" pos="15.10795 0.00000 0.02250" size="1.99432 0.01705 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_south_top" type="box" pos="15.10795 0.00000 2.67750" size="1.99432 0.01705 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_glass_0" type="box" pos="13.11364 6.94792 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_glass_1" type="box" pos="13.11364 5.68466 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_glass_2" type="box" pos="13.11364 4.42140 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_glass_3" type="box" pos="13.11364 3.15814 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_glass_4" type="box" pos="13.11364 1.89489 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_glass_5" type="box" pos="13.11364 0.63163 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_post_0" type="box" pos="13.11364 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_post_1" type="box" pos="13.11364 6.31629 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_post_2" type="box" pos="13.11364 5.05303 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_post_3" type="box" pos="13.11364 3.78977 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_post_4" type="box" pos="13.11364 2.52652 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_post_5" type="box" pos="13.11364 1.26326 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_post_6" type="box" pos="13.11364 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_base" type="box" pos="13.11364 3.78977 0.02250" size="0.01705 3.78977 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_west_top" type="box" pos="13.11364 3.78977 2.67750" size="0.01705 3.78977 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_glass_0" type="box" pos="17.10227 6.94792 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_glass_1" type="box" pos="17.10227 5.68466 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_glass_2" type="box" pos="17.10227 4.42140 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_glass_3" type="box" pos="17.10227 3.15814 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_glass_4" type="box" pos="17.10227 1.89489 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_glass_5" type="box" pos="17.10227 0.63163 1.35000" size="0.01136 0.63163 1.35000" material="glass_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_post_0" type="box" pos="17.10227 7.57955 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_post_1" type="box" pos="17.10227 6.31629 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_post_2" type="box" pos="17.10227 5.05303 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_post_3" type="box" pos="17.10227 3.78977 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_post_4" type="box" pos="17.10227 2.52652 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_post_5" type="box" pos="17.10227 1.26326 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_post_6" type="box" pos="17.10227 0.00000 1.35000" size="0.01705 0.01705 1.35000" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_base" type="box" pos="17.10227 3.78977 0.02250" size="0.01705 3.78977 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="blocked_se_east_top" type="box" pos="17.10227 3.78977 2.67750" size="0.01705 3.78977 0.02250" material="frame_material" friction=".7 .005 .0001" contype="0" conaffinity="0" />
+    <geom name="meeting_open_leaf" type="box" pos="5.11136 12.25000 1.05000" size="0.40000 0.02273 1.05000" material="door_material" friction=".7 .005 .0001" contype="1" conaffinity="1" />
+    <site name="start" pos="13.0 10.2 .025" size=".18" rgba=".1 .7 .3 .8" />
+    <site name="goal" pos="4.65 11.827272727272726 .025" size=".18" rgba=".9 .3 .1 .8" />
+    <body name="round_table" pos="10.8 11.55 -0.0" quat="1 0 0 0">
+      <geom name="round_table_visual" mesh="round_table_visual" material="round_table_mat" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="round_table_collision_0" type="mesh" mesh="round_table_collision_0" rgba="0 0 0 0" group="3" mass="0" condim="4" friction=".8 .01 .001" solref=".008 1" />
+      <geom name="round_table_collision_1" type="mesh" mesh="round_table_collision_1" rgba="0 0 0 0" group="3" mass="0" condim="4" friction=".8 .01 .001" solref=".008 1" />
+      <geom name="round_table_collision_2" type="mesh" mesh="round_table_collision_2" rgba="0 0 0 0" group="3" mass="0" condim="4" friction=".8 .01 .001" solref=".008 1" />
+    </body>
+    <body name="coke" pos="10.8 11.55 0.8594278971623001" quat="1 0 0 0">
+      <geom name="coke_visual" mesh="coke_visual" material="coke_cn_label" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="coke_visual_cn_ends" mesh="coke_cn_ends" material="coke_cn_aluminium" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="coke_collision_0" type="mesh" mesh="coke_collision_0" rgba="0 0 0 0" group="3" mass="0.35" condim="4" friction="0.6 0.003 0.0001" solref="0.008 1" priority="1" />
+    </body>
+    <geom name="meeting_panel" type="box" pos="2.7 10.4 2.62" size=".65 .25 .018" material="light_material" contype="0" conaffinity="0" />
+    <geom name="meeting_tabletop" type="box" pos="2.2556818181818183 10.34090909090909 0.72" size="2.0056818181818183 0.6 0.03" material="furniture_material" contype="0" conaffinity="0" mass="0" />
+    <geom name="meeting_table_leg_0_0" type="box" pos="0.55 9.88 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
+    <geom name="meeting_table_leg_0_1" type="box" pos="0.55 10.8 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
+    <geom name="meeting_table_leg_1_0" type="box" pos="3.96 9.88 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
+    <geom name="meeting_table_leg_1_1" type="box" pos="3.96 10.8 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
+  </worldbody>
+  <asset>
+    <texture name="floor_texture" type="2d" file="textures/carpet_photo_v1.png" />
+    <texture name="wall_texture" type="cube" file="textures/wall.png" />
+    <texture name="door_texture" type="cube" file="textures/wood_photo_v1.png" />
+    <texture name="stone_texture" type="2d" file="textures/stone_photo_v1.png" />
+    <material name="wall_material" rgba="1 1 1 1" specular=".12" shininess=".15" reflectance="0" texture="wall_texture" texuniform="true" texrepeat="1 1" />
+    <material name="furniture_material" rgba="0.78 0.75 0.66 1" specular=".12" shininess=".15" reflectance="0" />
+    <material name="door_material" rgba="1 1 1 1" specular=".12" shininess=".15" reflectance="0" texture="door_texture" texuniform="true" texrepeat="1 1" />
+    <material name="blocked_material" rgba="0.65 0.36 0.36 1" specular=".12" shininess=".15" reflectance="0" />
+    <material name="floor_material" rgba="1 1 1 1" specular="0" shininess="0" reflectance="0" texture="floor_texture" texuniform="true" texrepeat="1 1" />
+    <material name="stone_material" rgba="1 1 1 1" specular=".55" shininess=".65" reflectance="0" texture="stone_texture" texuniform="true" texrepeat="1.666667 1.666667" />
+    <material name="frame_material" rgba="0.035 0.04 0.045 1" specular=".12" shininess=".15" reflectance="0" />
+    <material name="glass_material" rgba=".83 .91 .92 .20" specular=".7" shininess=".8" reflectance="0" />
+    <material name="light_material" rgba="1 1 0.96 1" specular=".12" shininess=".15" reflectance="0" emission="1" />
+    <material name="logo_material" rgba="0.9 0.9 0.88 1" specular=".55" shininess=".65" reflectance="0" />
+    <material name="ceiling_material" rgba="0.94 0.94 0.92 1" specular=".12" shininess=".15" reflectance="0" emission=".15" />
+    <mesh name="round_table_visual" file="../../../assets/fq/tabletop/common/meshes/round_table_textured.obj" />
+    <material name="round_table_mat" rgba="1 1 1 1" specular=".15" shininess=".2" texture="surface_table_tex" />
+    <mesh name="round_table_collision_0" file="../../../assets/fq/tabletop/common/meshes/round_table_collision_base.obj" />
+    <mesh name="round_table_collision_1" file="../../../assets/fq/tabletop/common/meshes/round_table_collision_pillar.obj" />
+    <mesh name="round_table_collision_2" file="../../../assets/fq/tabletop/common/meshes/round_table_collision_top.obj" />
+    <texture name="surface_table_tex" type="2d" file="../../../assets/fq/tabletop/common/textures/surfaces_20260921/table_basecolor.png" />
+    <mesh name="coke_visual" file="../../../assets/fq/tabletop/common/meshes/coke_cn_side.obj" />
+    <texture name="coke_tex" type="2d" file="../../../assets/fq/tabletop/common/textures/coke.png" />
+    <material name="coke_mat" texture="coke_tex" specular=".15" shininess=".1" />
+    <mesh name="coke_collision_0" file="../../../assets/fq/tabletop/common/meshes/coke_collision.obj" />
+    <mesh name="coke_cn_ends" file="../../../assets/fq/tabletop/common/meshes/coke_cn_ends.obj" />
+    <texture name="coke_cn_texture" type="2d" file="../../../assets/fq/tabletop/common/textures/coke_cn.png" />
+    <material name="coke_cn_label" texture="coke_cn_texture" specular=".2" shininess=".25" />
+    <material name="coke_cn_aluminium" rgba=".55 .57 .60 1" specular=".8" shininess=".6" />
+  </asset>
+</mujoco>

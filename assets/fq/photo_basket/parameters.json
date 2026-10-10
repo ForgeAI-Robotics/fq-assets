@@ -1,0 +1,17 @@
+{
+  "units": "metres, kilograms, seconds, radians",
+  "dimensions_estimated_from_photos": true,
+  "length": 0.36, "width": 0.24, "height": 0.23,
+  "bottom_length": 0.29, "bottom_width": 0.18,
+  "corner_radius": 0.037, "wall_thickness": 0.0024,
+  "rim_height": 0.031, "hole_rows": 5, "hole_columns_perimeter": 52,
+  "hole_width": 0.0068, "hole_height": 0.0092,
+  "rib_count": 68, "rib_amplitude": 0.0011,
+  "handle_anchor_x": 0.052, "handle_pivot_z": 0.215,
+  "handle_extension": 0.166, "handle_width": 0.015,
+  "handle_thickness": 0.0045,
+  "body_mass": 0.32, "handle_mass": 0.045,
+  "joint_limits": [-0.65, 2.82], "joint_initial": -0.65, "joint_damping": 0.003,
+  "friction": 0.6,
+  "notes": "Dimensions and physical properties are initial estimates, not measurements. Visual perforations are not collision openings."
+}

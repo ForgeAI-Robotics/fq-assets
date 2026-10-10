@@ -1,0 +1,226 @@
+{
+  "goals": [
+    {
+      "goal": [
+        11.2,
+        10.45
+      ],
+      "reached": true,
+      "final_pose": [
+        11.268043563944499,
+        10.392179736934754
+      ],
+      "error_m": 0.08929226962735004,
+      "settle_displacement_m": 0.02017710612294518,
+      "elapsed": 24.763059142045677,
+      "states": [
+        "FORWARD_NORMAL",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "HOLD_ARRIVAL_DWELL",
+        "GOAL_REACHED",
+        "HOLD_NO_PATH"
+      ],
+      "paths": [
+        [
+          [
+            11.325000466778874,
+            5.5750003810971975
+          ],
+          [
+            11.2,
+            10.45
+          ]
+        ],
+        []
+      ]
+    },
+    {
+      "goal": [
+        9.4,
+        11.7
+      ],
+      "reached": true,
+      "final_pose": [
+        9.437922248502973,
+        11.679125619875938
+      ],
+      "error_m": 0.043287835209040296,
+      "settle_displacement_m": 0.01183567654665463,
+      "elapsed": 22.465597591828555,
+      "states": [
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "HOLD_ARRIVAL_DWELL",
+        "GOAL_REACHED",
+        "HOLD_NO_PATH"
+      ],
+      "paths": [
+        [
+          [
+            11.275000466033816,
+            10.375000452622771
+          ],
+          [
+            9.925000445917249,
+            10.975000461563468
+          ],
+          [
+            9.4,
+            11.7
+          ]
+        ],
+        []
+      ]
+    },
+    {
+      "goal": [
+        6.25,
+        11.827272727272726
+      ],
+      "reached": true,
+      "final_pose": [
+        6.320403619910345,
+        11.872834513045138
+      ],
+      "error_m": 0.08386027676588885,
+      "settle_displacement_m": 0.01785421818642371,
+      "elapsed": 24.79085140209645,
+      "states": [
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "HOLD_ARRIVAL_DWELL",
+        "GOAL_REACHED",
+        "HOLD_NO_PATH"
+      ],
+      "paths": [
+        [
+          [
+            9.425000438466668,
+            11.67500047199428
+          ],
+          [
+            6.25,
+            11.827272727272726
+          ]
+        ],
+        []
+      ]
+    },
+    {
+      "goal": [
+        4.65,
+        11.827272727272726
+      ],
+      "reached": true,
+      "final_pose": [
+        4.732297164942818,
+        11.877247335008432
+      ],
+      "error_m": 0.09628231808573653,
+      "settle_displacement_m": 0.013445185699928438,
+      "elapsed": 17.04539944510907,
+      "states": [
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "HOLD_ARRIVAL_DWELL",
+        "GOAL_REACHED",
+        "HOLD_NO_PATH"
+      ],
+      "paths": [
+        [
+          [
+            6.325000392273068,
+            11.875000474974513
+          ],
+          [
+            4.65,
+            11.827272727272726
+          ]
+        ],
+        []
+      ]
+    },
+    {
+      "goal": [
+        3.6,
+        11.7
+      ],
+      "reached": true,
+      "final_pose": [
+        3.7537870179643726,
+        11.8315160021377
+      ],
+      "error_m": 0.20235341784278824,
+      "settle_displacement_m": 0.00533431230003043,
+      "elapsed": 15.58863193821162,
+      "states": [
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "TURN_SETTLE",
+        "FORWARD_SLOW_CAUTION",
+        "TURN_IN_PLACE",
+        "HOLD_ARRIVAL_DWELL",
+        "GOAL_REACHED",
+        "HOLD_NO_PATH"
+      ],
+      "paths": [
+        [
+          [
+            4.7250003684312105,
+            11.875000474974513
+          ],
+          [
+            3.6,
+            11.7
+          ]
+        ],
+        []
+      ]
+    }
+  ],
+  "passed": true
+}

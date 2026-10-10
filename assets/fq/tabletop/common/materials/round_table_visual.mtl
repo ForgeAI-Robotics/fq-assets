@@ -1,0 +1,3 @@
+newmtl round_table_visual
+Kd 1 1 1
+map_Kd ../textures/round_table_vertex_color.png

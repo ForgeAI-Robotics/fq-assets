@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "release": "0.1.0",
+  "assets": [
+    {
+      "id": "fq:objects/coke_cn",
+      "version": "0.1.0",
+      "manifest": "assets/fq/tabletop/coke/asset.json"
+    },
+    {
+      "id": "fq:objects/round_table",
+      "version": "0.1.0",
+      "manifest": "assets/fq/tabletop/round_table/asset.json"
+    },
+    {
+      "id": "fq:articulated/photo_basket",
+      "version": "0.1.0",
+      "manifest": "assets/fq/photo_basket/asset.json"
+    },
+    {
+      "id": "fq:articulated/haier_bcd402",
+      "version": "0.1.0",
+      "manifest": "assets/fq/haier_bcd402/asset.json"
+    },
+    {
+      "id": "fq:objects/conference_table",
+      "version": "0.1.0",
+      "manifest": "assets/fq/conference_table/asset.json"
+    },
+    {
+      "id": "fq:scenes/office_baseline",
+      "version": "0.1.0",
+      "manifest": "scenes/fq/office_baseline/asset.json"
+    }
+  ]
+}

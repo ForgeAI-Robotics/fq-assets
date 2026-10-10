@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "fq:scenes/office_baseline",
+  "version": "0.1.0",
+  "kind": "scene",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "upstream_origin": "FQ navigate office_video_v2; user floor plan and reference photos",
+  "provenance": "provenance/source_files.json",
+  "license_status": "See NOTICE.md; no blanket relicensing of upstream assets",
+  "representations": {
+    "mujoco": "scenes/fq/office_baseline/scene.xml",
+    "usd": "scenes/fq/office_baseline/scene.usda"
+  },
+  "baseline": true,
+  "randomization_enabled": false,
+  "robot_included": false,
+  "dependencies": [
+    "fq:objects/coke_cn",
+    "fq:objects/round_table",
+    "fq:objects/conference_table"
+  ],
+  "standalone_assets_not_placed": [
+    "fq:articulated/photo_basket",
+    "fq:articulated/haier_bcd402"
+  ],
+  "door_clear_width_m": 0.8,
+  "conference_table_width_m": 1.2,
+  "limitations": [
+    "Partial office reconstruction, not a surveyed complete building",
+    "Door fixed open; no door-opening dynamics",
+    "Invisible restricted-zone colliders intentionally preserved",
+    "Coke and round table are fixed in the navigation baseline; standalone coke is dynamic"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "door_clear_width_m": 0.7999900000000011,
+  "conference_table_width_m": 1.2,
+  "meeting_walls_opaque_and_collidable": true,
+  "glass_zones_still_unreachable": true
+}

@@ -1,0 +1,8 @@
+newmtl coke_cn_label
+Kd 1 1 1
+map_Kd ../textures/coke_cn.png
+
+newmtl coke_cn_aluminium
+Kd .55 .57 .60
+Ks .8 .8 .8
+Ns 500

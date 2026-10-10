@@ -1,0 +1,431 @@
+{
+  "files": [
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/misc/metadata.json",
+      "path": "source/cup/misc/metadata.json",
+      "bytes": 219,
+      "sha256": "549bd1a80a03934b7d12dcd566204691f9eefa39123f0a01d04d347ba5fc7ad3"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/visual/white_paper_cup_bedalm_link_textured_mesh.obj",
+      "path": "source/cup/urdf/shape/visual/white_paper_cup_bedalm_link_textured_mesh.obj",
+      "bytes": 2724687,
+      "sha256": "5c2025ecaab70f422aecd5d931df573edd832aab32643c116b3d0e679be732af"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/visual/white_paper_cup_bedalm_link_textured_mesh.mtl",
+      "path": "source/cup/urdf/shape/visual/white_paper_cup_bedalm_link_textured_mesh.mtl",
+      "bytes": 390,
+      "sha256": "937a7331dd3ea0f57bfe273379f95d86f21532d126eaf50d5da898755d091cbe"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_20.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_20.obj",
+      "bytes": 3500,
+      "sha256": "97ef8bc11f04f0dbe2eb019628056dad707c0c077c4de620b66e513185b2898c"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_5.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_5.obj",
+      "bytes": 3374,
+      "sha256": "96bcc3f984c1521b8d7ce9ecd1fadefae4df2998e92f4e73124098f117dab71e"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_16.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_16.obj",
+      "bytes": 3328,
+      "sha256": "6a9e9a3a155b7ab2386632f6613119156c514ff6a8a5cf9db489e6b0a1f9aed7"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_31.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_31.obj",
+      "bytes": 3388,
+      "sha256": "d131df397330f2af3b79897e68f7678aff50969c46f227e78619be9b4573acdb"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_19.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_19.obj",
+      "bytes": 3503,
+      "sha256": "3547fb8787b2ce29d35554e27e8749319f947b8c08d2da1a4f53f8c83ba0a772"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_29.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_29.obj",
+      "bytes": 3383,
+      "sha256": "f4ca05fdbddb7c693fb169aa09803af52ce9cc5255cce2b10815e5817452ab15"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_30.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_30.obj",
+      "bytes": 3460,
+      "sha256": "17154b6b87dc1fc00ff2f959195b1617be06edf5bc88dab1bad9aa43a81d5df8"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_3.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_3.obj",
+      "bytes": 3446,
+      "sha256": "832e3dc57bc6d8d432e80ad36ad1d8243a3d7e1069b176377a3fa4c83bc6c589"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_8.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_8.obj",
+      "bytes": 3468,
+      "sha256": "d911c0a4071dd5b0f0484e0f26135fdfadcb190a5cffb928ad7e28bff54c8c6e"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_2.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_2.obj",
+      "bytes": 3454,
+      "sha256": "28c6fd0398f40b1a78398c055e851f591baf28edc16d7279555a6c869eb63a80"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_12.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_12.obj",
+      "bytes": 3397,
+      "sha256": "cd4e7cf19a0db9188d88f6a16aefe0f4532f24f06e4aeefa7423a601fab82459"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_18.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_18.obj",
+      "bytes": 3456,
+      "sha256": "07b43e3a95e601132576bd060b49fbfbad010b1cc6903c08713c37e3e886cc92"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_15.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_15.obj",
+      "bytes": 3329,
+      "sha256": "5c3c15660a556afe7b11d6ea5154fe0ff23206c818674543de8f1041a7be7e5d"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_24.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_24.obj",
+      "bytes": 3456,
+      "sha256": "6bf3b966122589b75ff24b315050a6e62f1a6d0cb1aaca8e2de6cdaf3a235451"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_14.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_14.obj",
+      "bytes": 3460,
+      "sha256": "0202411973d33e4308df8f54905396c52a33a2146a0830b98f0b609b4155b77e"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_13.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_13.obj",
+      "bytes": 3327,
+      "sha256": "c1a55a008421df77708f9dc3194f6be29414c85481d18c899b9bc39dd506cd1e"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_9.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_9.obj",
+      "bytes": 3271,
+      "sha256": "bc3d6398560e4ea206b0cda5889b19124195f10eb7e0377094745cfc77533a49"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_11.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_11.obj",
+      "bytes": 3374,
+      "sha256": "2ce53b0784201a271366c46b2d9e6e76158fdcdef99ea73e52f59006820e346c"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_21.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_21.obj",
+      "bytes": 3343,
+      "sha256": "2a32689d5ed0d6d03f25e3c9b69842e68aa63570665181b05e273adbbbbc7ac8"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_26.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_26.obj",
+      "bytes": 3528,
+      "sha256": "db9b21dec33150dd9c8689b9911d1c2f671d65c04da73fc057f37a38b128398e"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_25.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_25.obj",
+      "bytes": 3468,
+      "sha256": "a4c13a3d830a6c70902800ad3e004004e6b58bb31b65c4f611eee35ae26374c4"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_6.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_6.obj",
+      "bytes": 3387,
+      "sha256": "45776daa5489231de10c6ad0910e2cdc163b155c503b1dc7cab171aa291f9916"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_0.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_0.obj",
+      "bytes": 3433,
+      "sha256": "6917b9173fe953c2350fd6c7592cf057d5b7c8ce0b0ad5c044254f2beae15553"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_28.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_28.obj",
+      "bytes": 3351,
+      "sha256": "537fb3d39a56f9fb43370513289e3fadc73f68377fa65f8b32fba9f282fdf1f7"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_22.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_22.obj",
+      "bytes": 3501,
+      "sha256": "5ac2343794fd8bc249061c75c795a59fff9a4b5aff39684c009641f976a3a5bf"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_1.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_1.obj",
+      "bytes": 3322,
+      "sha256": "7aec2a26a65ea65d7695a0e575c66bf92229f2ac2bb427840bd6122c529a7976"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_27.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_27.obj",
+      "bytes": 3530,
+      "sha256": "9e980d539d541625fa6a840c7106a4f2405c86ea738991d34cb4b78315c6e4dd"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_4.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_4.obj",
+      "bytes": 3473,
+      "sha256": "13f4159881bc9cbaf4d1109ef3d97b62affc69c4da7c8ffcb18f863cec59c158"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_7.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_7.obj",
+      "bytes": 3297,
+      "sha256": "2e2e936bd240ae28741d6bb1a82fc826bc54bc00fca1680fc1bc2a4045172de8"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_10.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_10.obj",
+      "bytes": 3384,
+      "sha256": "1588b53d43d3126038f526e3fbf2c00a2828edbca70e396d2632358364f96c57"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_23.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_23.obj",
+      "bytes": 3449,
+      "sha256": "01ab32e86f544013fb0421d44d0a4e0a8beb0bbc7ad0004f151266c585fc63ba"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_17.obj",
+      "path": "source/cup/urdf/shape/collision/white_paper_cup_bedalm_link_textured_mesh_collision_17.obj",
+      "bytes": 3344,
+      "sha256": "d122fcc9700bf708b62ae772d6528410a350a8ecdb05e1d071f9dc416e06eed8"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/material/white_paper_cup_bedalm_link_textured_mesh_Kd.png",
+      "path": "source/cup/urdf/material/white_paper_cup_bedalm_link_textured_mesh_Kd.png",
+      "bytes": 243514,
+      "sha256": "2112843d193278a67f36f863c14a2bdcde4d5c54c3e102b7653714c9c03c9aa2"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/material/white_paper_cup_bedalm_link_textured_mesh_Pr.png",
+      "path": "source/cup/urdf/material/white_paper_cup_bedalm_link_textured_mesh_Pr.png",
+      "bytes": 432630,
+      "sha256": "af5daffb312f558f02eeea54abd79b24095ec2b9d44e7bbc144c95d9e2737ae3"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/material/white_paper_cup_bedalm_link_textured_mesh_Pm.png",
+      "path": "source/cup/urdf/material/white_paper_cup_bedalm_link_textured_mesh_Pm.png",
+      "bytes": 454502,
+      "sha256": "39b082479fe907ebc960418acb17917743c8e7419bc1a10ee27de0802cec7ab4"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/bedalm.urdf",
+      "path": "source/cup/urdf/bedalm.urdf",
+      "bytes": 10321,
+      "sha256": "90eb1835f5721a57c3bdd0e33b076ad2b4da6350eb82c3f9ff0b309379cab7fd"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/bedalm_with_meta_links.urdf",
+      "path": "source/cup/urdf/bedalm_with_meta_links.urdf",
+      "bytes": 11525,
+      "sha256": "577bc84fd2f0d3db2f190c9ef957a38499faf8ba9472af2c33e0527e87dca33b"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/bedalm_original_mirror.urdf",
+      "path": "source/cup/urdf/bedalm_original_mirror.urdf",
+      "bytes": 11673,
+      "sha256": "768ee942e7dd36a75f7f1a967eed1f5048fdb77cb514d6e90cb50c3f363d906b"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/white_paper_cup/bedalm/urdf/bedalm_original.urdf",
+      "path": "source/cup/urdf/bedalm_original.urdf",
+      "bytes": 11673,
+      "sha256": "768ee942e7dd36a75f7f1a967eed1f5048fdb77cb514d6e90cb50c3f363d906b"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/misc/metadata.json",
+      "path": "source/tissue_box/misc/metadata.json",
+      "bytes": 227,
+      "sha256": "0e02e73f556ecd7a4354e7f4db8556b74b7b121050b3cb297ad87c2cd4e7b9cd"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/shape/visual/facial_tissue_box_umqnkd_link_textured_mesh.obj",
+      "path": "source/tissue_box/urdf/shape/visual/facial_tissue_box_umqnkd_link_textured_mesh.obj",
+      "bytes": 2677982,
+      "sha256": "78511901df31a3e29edd56ae2f220b4f7d85eb5de1e98f6350bdece01feb11be"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/shape/visual/facial_tissue_box_umqnkd_link_textured_mesh.mtl",
+      "path": "source/tissue_box/urdf/shape/visual/facial_tissue_box_umqnkd_link_textured_mesh.mtl",
+      "bytes": 396,
+      "sha256": "1c407eef11500c99f02b32b9a5983ef096c64fa3c3873006e0fdf87bf6a3adee"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/shape/collision/facial_tissue_box_umqnkd_link_textured_mesh_collision_0.obj",
+      "path": "source/tissue_box/urdf/shape/collision/facial_tissue_box_umqnkd_link_textured_mesh_collision_0.obj",
+      "bytes": 3342,
+      "sha256": "7a687112a0c1472e0d926c6f11e24195c1785918ba13bb1dc9eb095d17450124"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/umqnkd_original.urdf",
+      "path": "source/tissue_box/urdf/umqnkd_original.urdf",
+      "bytes": 694,
+      "sha256": "1e4c44ddd04d3ca1f60afc639f97387e5c52014a260e5c9a7c999f6f1ceb62b9"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/material/facial_tissue_box_umqnkd_link_textured_mesh_Pm.png",
+      "path": "source/tissue_box/urdf/material/facial_tissue_box_umqnkd_link_textured_mesh_Pm.png",
+      "bytes": 889932,
+      "sha256": "db76d860e6eab7bf1615a7d78fafe50d5fd79f1f0558dcbf0b5ab6b395ca59a3"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/material/facial_tissue_box_umqnkd_link_textured_mesh_Kd.png",
+      "path": "source/tissue_box/urdf/material/facial_tissue_box_umqnkd_link_textured_mesh_Kd.png",
+      "bytes": 1624777,
+      "sha256": "52ef8eaa7b01c5635b4db00172b8473f391a718940c52b74f80bd19297ff1482"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/material/facial_tissue_box_umqnkd_link_textured_mesh_Pr.png",
+      "path": "source/tissue_box/urdf/material/facial_tissue_box_umqnkd_link_textured_mesh_Pr.png",
+      "bytes": 1101353,
+      "sha256": "e5e1274b70db8664ad5c87bc3c282b0dd9852fb981d07ec3ac8e8d1a440edda1"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/umqnkd_with_meta_links.urdf",
+      "path": "source/tissue_box/urdf/umqnkd_with_meta_links.urdf",
+      "bytes": 1070,
+      "sha256": "f14249e199626e99f88d12dc33720677c5f2a25bf2a92b1af8cf123752970218"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/umqnkd_original_mirror.urdf",
+      "path": "source/tissue_box/urdf/umqnkd_original_mirror.urdf",
+      "bytes": 694,
+      "sha256": "1e4c44ddd04d3ca1f60afc639f97387e5c52014a260e5c9a7c999f6f1ceb62b9"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/facial_tissue_box/umqnkd/urdf/umqnkd.urdf",
+      "path": "source/tissue_box/urdf/umqnkd.urdf",
+      "bytes": 982,
+      "sha256": "185ad60c186f44b0c1bbdf350f01ce8b8fd7c01a9f1371e81623f3b5984a0ccf"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/round_table/gsyqvu/misc/metadata.json",
+      "path": "source/round_table/misc/metadata.json",
+      "bytes": 214,
+      "sha256": "921277f0780238667612ad0fb584f2daf9f75d803a38a6d197501f929ead690f"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/round_table/gsyqvu/urdf/gsyqvu.urdf",
+      "path": "source/round_table/urdf/gsyqvu.urdf",
+      "bytes": 943,
+      "sha256": "30556c91be470bef872f62f31ed758dbb0b6f0a276d5b32a409dbd43863af7be"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/round_table/gsyqvu/urdf/gsyqvu_original.urdf",
+      "path": "source/round_table/urdf/gsyqvu_original.urdf",
+      "bytes": 668,
+      "sha256": "5dee2e7ef6327a30462a4803336900372cb5f14b84943ed3e1efd3eb3ebc8668"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/round_table/gsyqvu/urdf/gsyqvu_original_mirror.urdf",
+      "path": "source/round_table/urdf/gsyqvu_original_mirror.urdf",
+      "bytes": 668,
+      "sha256": "5dee2e7ef6327a30462a4803336900372cb5f14b84943ed3e1efd3eb3ebc8668"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/round_table/gsyqvu/urdf/gsyqvu_with_meta_links.urdf",
+      "path": "source/round_table/urdf/gsyqvu_with_meta_links.urdf",
+      "bytes": 1031,
+      "sha256": "766d865ff8d49719e617c2f0e60d2c9a41300de355553c56e2d37e464efd9e4f"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/round_table/gsyqvu/urdf/shape/collision/round_table_gsyqvu_link_geometry_0_collision_0.obj",
+      "path": "source/round_table/urdf/shape/collision/round_table_gsyqvu_link_geometry_0_collision_0.obj",
+      "bytes": 3449,
+      "sha256": "44357feba712272917d078d52e732c834595bd605a7298f59196d6bc3ca7d51d"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/round_table/gsyqvu/urdf/shape/visual/round_table_gsyqvu_link_geometry_0.obj",
+      "path": "source/round_table/urdf/shape/visual/round_table_gsyqvu_link_geometry_0.obj",
+      "bytes": 1661432,
+      "sha256": "2f0553bbd7acacd6142c8284dfb9b30199a517fe07b5e326ebdf013f36f3053d"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/misc/metadata.json",
+      "path": "source/coke/misc/metadata.json",
+      "bytes": 217,
+      "sha256": "aeb11ac36b608892d691d8132c274e633be8f9a69205758c0da8cba01470c5b7"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/bpphbt.urdf",
+      "path": "source/coke/urdf/bpphbt.urdf",
+      "bytes": 971,
+      "sha256": "de3025f6241e60249d9c2e48a15e8e0b5a06de2ac35986084e590098e5b51acf"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/bpphbt_original.urdf",
+      "path": "source/coke/urdf/bpphbt_original.urdf",
+      "bytes": 685,
+      "sha256": "e5dae57a52ea5583b0ec9cfb943decd62328d2badfbdda056c65da89a986ced1"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/bpphbt_original_mirror.urdf",
+      "path": "source/coke/urdf/bpphbt_original_mirror.urdf",
+      "bytes": 685,
+      "sha256": "e5dae57a52ea5583b0ec9cfb943decd62328d2badfbdda056c65da89a986ced1"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/bpphbt_with_meta_links.urdf",
+      "path": "source/coke/urdf/bpphbt_with_meta_links.urdf",
+      "bytes": 1059,
+      "sha256": "fd9ace342ccf1ff70a3126b5078c687dbe91ee2de7532aa68c773705f02b6888"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/material/red_soda_can_bpphbt_link_textured_mesh_Kd.png",
+      "path": "source/coke/urdf/material/red_soda_can_bpphbt_link_textured_mesh_Kd.png",
+      "bytes": 2791758,
+      "sha256": "16c774dd9a5986ee8c485a9376b7c65af47a620373e3b3f49bc8b9811261e424"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/material/red_soda_can_bpphbt_link_textured_mesh_Pm.png",
+      "path": "source/coke/urdf/material/red_soda_can_bpphbt_link_textured_mesh_Pm.png",
+      "bytes": 422355,
+      "sha256": "b930d44aaa003897fccf0e1d21a3faf35e737093b4f71cb3580d47428245e9d0"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/material/red_soda_can_bpphbt_link_textured_mesh_Pr.png",
+      "path": "source/coke/urdf/material/red_soda_can_bpphbt_link_textured_mesh_Pr.png",
+      "bytes": 1413180,
+      "sha256": "ac65bb0bf73268a3bfdd04fa984f94480e14240bf0c6175892e46bfc7ea9b651"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/shape/collision/red_soda_can_bpphbt_link_textured_mesh_collision_0.obj",
+      "path": "source/coke/urdf/shape/collision/red_soda_can_bpphbt_link_textured_mesh_collision_0.obj",
+      "bytes": 3455,
+      "sha256": "6ee2b6a218affeb6cb7376017130ada6f090650fb58225f04343d3e308ca5f49"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/shape/visual/red_soda_can_bpphbt_link_textured_mesh.mtl",
+      "path": "source/coke/urdf/shape/visual/red_soda_can_bpphbt_link_textured_mesh.mtl",
+      "bytes": 381,
+      "sha256": "20ba51fff4f7092dfd3cd8f81a2b24c3cb14b773aee10b14d02427f427bd3a09"
+    },
+    {
+      "source": "/home/fq/SimFoundry/Data/realscene/s11_sim/objects/red_soda_can/bpphbt/urdf/shape/visual/red_soda_can_bpphbt_link_textured_mesh.obj",
+      "path": "source/coke/urdf/shape/visual/red_soda_can_bpphbt_link_textured_mesh.obj",
+      "bytes": 2994313,
+      "sha256": "3d5a5d528f36de1863e1504cae9a43d6dacbebc47fe8ce86d6e9e3641687bee8"
+    }
+  ],
+  "originals_modified": false
+}

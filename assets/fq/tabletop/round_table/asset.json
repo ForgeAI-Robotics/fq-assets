@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "fq:objects/round_table",
+  "version": "0.1.0",
+  "kind": "fixture",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "upstream_origin": "SimFoundry (via FQ SIMPLE integration)",
+  "provenance": "provenance/source_files.json",
+  "license_status": "See NOTICE.md; no blanket relicensing of upstream assets",
+  "representations": {
+    "mujoco": "assets/fq/tabletop/mujoco/round_table.xml",
+    "usd": "assets/fq/tabletop/isaac/round_table.usd"
+  },
+  "derived_from": "provenance/tabletop_source_manifest.json",
+  "modifications": [
+    "FQ collision/scale/material adaptation",
+    "Photo-reference table material"
+  ],
+  "physics_calibrated": false
+}

@@ -1,0 +1,1320 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World" (
+    prepend references = @../../../scenes/fq/office_baseline/architecture.usda@
+)
+{
+    over "Physics" (
+        active = false
+    )
+    {
+    }
+
+    over "floor" (
+        active = false
+    )
+    {
+    }
+
+    over "floor_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "north_west" (
+        active = false
+    )
+    {
+    }
+
+    over "north_west_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "north_east" (
+        active = false
+    )
+    {
+    }
+
+    over "north_east_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_glass_left" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_glass_left_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_glass_right" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_glass_right_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_header" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_header_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_frame_0" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_frame_0_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_frame_1" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_frame_1_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_frame_2" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_frame_2_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_handle_0" (
+        active = false
+    )
+    {
+    }
+
+    over "exit_handle_1" (
+        active = false
+    )
+    {
+    }
+
+    over "south" (
+        active = false
+    )
+    {
+    }
+
+    over "south_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "west" (
+        active = false
+    )
+    {
+    }
+
+    over "west_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "east" (
+        active = false
+    )
+    {
+    }
+
+    over "east_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_door_upper_jamb" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_door_upper_jamb_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_east_wood" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_east_wood_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_east_wall" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_east_wall_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_east_stub" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_east_stub_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_door_lower_frame" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_door_lower_frame_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_door_lintel" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_door_lintel_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_south_wall" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_south_wall_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_cabinet" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_cabinet_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "logo_wall" (
+        active = false
+    )
+    {
+    }
+
+    over "logo_wall_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "storage_machine_partition" (
+        active = false
+    )
+    {
+    }
+
+    over "storage_machine_partition_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "storage_south" (
+        active = false
+    )
+    {
+    }
+
+    over "storage_south_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "machine_south" (
+        active = false
+    )
+    {
+    }
+
+    over "machine_south_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "machine_east" (
+        active = false
+    )
+    {
+    }
+
+    over "machine_east_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "column_machine" (
+        active = false
+    )
+    {
+    }
+
+    over "column_machine_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "column_inner" (
+        active = false
+    )
+    {
+    }
+
+    over "column_inner_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "office_north" (
+        active = false
+    )
+    {
+    }
+
+    over "office_north_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "entrance_stone_finish" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_x_0" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_x_1" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_x_2" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_x_3" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_x_4" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_x_5" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_y_0" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_y_1" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_grout_y_2" (
+        active = false
+    )
+    {
+    }
+
+    over "wall_panel_joint_0" (
+        active = false
+    )
+    {
+    }
+
+    over "wall_panel_joint_1" (
+        active = false
+    )
+    {
+    }
+
+    over "wall_panel_joint_2" (
+        active = false
+    )
+    {
+    }
+
+    over "wall_panel_joint_3" (
+        active = false
+    )
+    {
+    }
+
+    over "wall_panel_joint_4" (
+        active = false
+    )
+    {
+    }
+
+    over "wall_panel_joint_5" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_light_strip" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_light_strip" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_upper" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_corridor" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_luminous_panel" (
+        active = false
+    )
+    {
+    }
+
+    over "temporary_unreachable_southwest" (
+        active = false
+    )
+    {
+    }
+
+    over "temporary_unreachable_southwest_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "temporary_unreachable_southeast" (
+        active = false
+    )
+    {
+    }
+
+    over "temporary_unreachable_southeast_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_glass_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_glass_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_glass_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_glass_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_glass_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_glass_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_glass_6" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_glass_7" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_6" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_7" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_post_8" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_base" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_north_top" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_glass_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_glass_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_glass_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_glass_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_glass_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_glass_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_glass_6" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_glass_7" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_6" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_7" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_post_8" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_base" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_south_top" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_glass_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_glass_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_glass_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_glass_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_glass_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_glass_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_post_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_post_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_post_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_post_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_post_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_post_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_post_6" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_base" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_west_top" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_glass_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_glass_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_glass_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_glass_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_glass_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_glass_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_post_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_post_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_post_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_post_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_post_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_post_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_post_6" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_base" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_sw_east_top" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_glass_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_glass_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_glass_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_post_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_post_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_post_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_post_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_base" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_north_top" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_glass_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_glass_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_glass_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_post_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_post_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_post_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_post_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_base" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_south_top" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_glass_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_glass_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_glass_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_glass_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_glass_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_glass_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_post_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_post_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_post_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_post_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_post_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_post_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_post_6" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_base" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_west_top" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_glass_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_glass_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_glass_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_glass_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_glass_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_glass_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_post_0" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_post_1" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_post_2" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_post_3" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_post_4" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_post_5" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_post_6" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_base" (
+        active = false
+    )
+    {
+    }
+
+    over "blocked_se_east_top" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_open_leaf" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_open_leaf_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_light_0" (
+        active = false
+    )
+    {
+    }
+
+    over "downlight_fixture_0" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_light_1" (
+        active = false
+    )
+    {
+    }
+
+    over "downlight_fixture_1" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_light_2" (
+        active = false
+    )
+    {
+    }
+
+    over "downlight_fixture_2" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_light_3" (
+        active = false
+    )
+    {
+    }
+
+    over "downlight_fixture_3" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_light_4" (
+        active = false
+    )
+    {
+    }
+
+    over "downlight_fixture_4" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_light_5" (
+        active = false
+    )
+    {
+    }
+
+    over "downlight_fixture_5" (
+        active = false
+    )
+    {
+    }
+
+    over "ceiling_light_6" (
+        active = false
+    )
+    {
+    }
+
+    over "downlight_fixture_6" (
+        active = false
+    )
+    {
+    }
+
+    over "lobby_panel_light" (
+        active = false
+    )
+    {
+    }
+
+    over "ambient" (
+        active = false
+    )
+    {
+    }
+}
+

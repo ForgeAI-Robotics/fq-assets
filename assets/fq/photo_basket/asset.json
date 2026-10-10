@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "fq:articulated/photo_basket",
+  "version": "0.1.0",
+  "kind": "articulated",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "upstream_origin": "FQ authored from user-supplied photos and dimensions",
+  "provenance": "provenance/source_files.json",
+  "license_status": "See NOTICE.md; no blanket relicensing of upstream assets",
+  "representations": {
+    "mujoco": "assets/fq/photo_basket/basket_asset.xml",
+    "usd": "assets/fq/photo_basket/basket.usd"
+  },
+  "imported_from": "FQ additions to SIMPLE; not SIMPLE-native stock assets",
+  "original_manifest": "assets/fq/photo_basket/manifest.json",
+  "initial_joint_positions": {
+    "handle_right_hinge": -0.65,
+    "handle_left_hinge": -0.65
+  },
+  "joint_limits_rad": [
+    -0.65,
+    2.82
+  ],
+  "physics_calibrated": false,
+  "limitations": [
+    "Estimated dimensions and mass; passive handle hinges"
+  ],
+  "calibration_record": null
+}

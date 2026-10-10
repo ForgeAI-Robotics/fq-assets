@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="photo_reference_basket">
+  <material name="white">
+    <color rgba=".83 .85 .79 1" />
+  </material>
+  <material name="gray">
+    <color rgba=".15 .17 .16 1" />
+  </material>
+  <link name="basket_body">
+    <inertial>
+      <origin xyz="0 0 0.108" rpy="0 0 0" />
+      <mass value="0.32" />
+      <inertia ixx="0.0032" iyy="0.0047" izz="0.0054" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/basket_body.obj" />
+      </geometry>
+      <material name="white" />
+    </visual>
+    <collision name="floor">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_floor.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_00">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_00.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_01">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_01.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_02">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_02.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_03">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_03.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_04">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_04.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_05">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_05.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_06">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_06.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_07">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_07.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_08">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_08.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_09">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_09.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_10">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_10.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_11">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_11.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_12">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_12.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_13">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_13.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_14">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_14.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_15">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_15.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_16">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_16.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_17">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_17.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_18">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_18.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_19">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_19.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_20">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_20.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_21">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_21.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_22">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_22.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_23">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_23.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_24">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_24.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_25">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_25.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_26">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_26.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_27">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_27.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_28">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_28.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_29">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_29.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_30">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_30.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_31">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_31.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_32">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_32.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_33">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_33.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_34">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_34.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_35">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_35.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_36">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_36.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_37">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_37.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_38">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_38.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_39">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_39.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_40">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_40.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_41">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_41.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_42">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_42.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_43">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_43.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_44">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_44.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_45">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_45.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_46">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_46.obj" />
+      </geometry>
+    </collision>
+    <collision name="wall_47">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/collision_wall_47.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="handle_right">
+    <inertial>
+      <origin xyz="0.108 0 0" rpy="0 0 0" />
+      <mass value="0.045" />
+      <inertia ixx="0.0007" iyy="0.0002" izz="0.00085" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/handle_right.obj" />
+      </geometry>
+      <material name="gray" />
+    </visual>
+    <collision name="box">
+      <origin xyz="0.0318461538 -0.123 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0646923077 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.100846154 -0.123 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0753076923 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.143357568 -0.121934313 0" rpy="0 0 0.196349541" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.153257063 -0.117833808 0" rpy="0 0 0.589048623" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.160833808 -0.110257063 0" rpy="0 0 0.981747704" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.164934313 -0.100357568 0" rpy="0 0 1.37444679" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.166 -0.0633333333 0" rpy="0 0 1.57079633" />
+      <geometry>
+        <box size="0.0643333333 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.166 6.9388939e-18 0" rpy="0 0 1.57079633" />
+      <geometry>
+        <box size="0.0643333333 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.166 0.0633333333 0" rpy="0 0 1.57079633" />
+      <geometry>
+        <box size="0.0643333333 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.164934313 0.100357568 0" rpy="0 0 1.76714587" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.160833808 0.110257063 0" rpy="0 0 2.15984495" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.153257063 0.117833808 0" rpy="0 0 2.55254403" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.143357568 0.121934313 0" rpy="0 0 2.94524311" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="0.069 0.123 0" rpy="0 0 3.14159265" />
+      <geometry>
+        <box size="0.139 0.0045 0.015" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="handle_right_hinge" type="revolute">
+    <parent link="basket_body" />
+    <child link="handle_right" />
+    <origin xyz="0.052 0 0.215" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.65" upper="2.82" effort=".3" velocity="4" />
+    <dynamics damping="0.003" friction=".0001" />
+  </joint>
+  <link name="handle_left">
+    <inertial>
+      <origin xyz="-0.108 0 0" rpy="0 0 0" />
+      <mass value="0.045" />
+      <inertia ixx="0.0007" iyy="0.0002" izz="0.00085" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/handle_left.obj" />
+      </geometry>
+      <material name="gray" />
+    </visual>
+    <collision name="box">
+      <origin xyz="-0.0318461538 -0.123 0" rpy="0 0 3.14159265" />
+      <geometry>
+        <box size="0.0646923077 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.100846154 -0.123 0" rpy="0 0 3.14159265" />
+      <geometry>
+        <box size="0.0753076923 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.143357568 -0.121934313 0" rpy="0 0 2.94524311" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.153257063 -0.117833808 0" rpy="0 0 2.55254403" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.160833808 -0.110257063 0" rpy="0 0 2.15984495" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.164934313 -0.100357568 0" rpy="0 0 1.76714587" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.166 -0.0633333333 0" rpy="0 0 1.57079633" />
+      <geometry>
+        <box size="0.0643333333 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.166 6.9388939e-18 0" rpy="0 0 1.57079633" />
+      <geometry>
+        <box size="0.0643333333 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.166 0.0633333333 0" rpy="0 0 1.57079633" />
+      <geometry>
+        <box size="0.0643333333 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.164934313 0.100357568 0" rpy="0 0 1.37444679" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.160833808 0.110257063 0" rpy="0 0 0.981747704" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.153257063 0.117833808 0" rpy="0 0 0.589048623" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.143357568 0.121934313 0" rpy="0 0 0.196349541" />
+      <geometry>
+        <box size="0.011925058 0.0045 0.015" />
+      </geometry>
+    </collision>
+    <collision name="box">
+      <origin xyz="-0.069 0.123 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.139 0.0045 0.015" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="handle_left_hinge" type="revolute">
+    <parent link="basket_body" />
+    <child link="handle_left" />
+    <origin xyz="-0.052 0 0.215" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.65" upper="2.82" effort=".3" velocity="4" />
+    <dynamics damping="0.003" friction=".0001" />
+  </joint>
+</robot>

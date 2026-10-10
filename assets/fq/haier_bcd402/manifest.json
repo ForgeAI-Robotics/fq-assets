@@ -1,0 +1,52 @@
+{
+  "asset_id": "refrigerator:haier_bcd402_v1",
+  "entries": {
+    "mujoco": "refrigerator.xml",
+    "isaac": "refrigerator.usda",
+    "blender": "source/haier_bcd402_body_v1.blend"
+  },
+  "initial_joint_positions": {
+    "refrigerator_left_hinge": 0.0,
+    "refrigerator_right_hinge": 0.0,
+    "refrigerator_mullion_hinge": 0.0
+  },
+  "joint_limits_rad": {
+    "refrigerator_left_hinge": [
+      0,
+      1.5707963267948966
+    ],
+    "refrigerator_right_hinge": [
+      0,
+      1.5707963267948966
+    ],
+    "refrigerator_mullion_hinge": [
+      0,
+      1.5707963267948966
+    ]
+  },
+  "units": "meter",
+  "up_axis": "Z",
+  "front_axis": "-Y",
+  "fixed_base": true,
+  "contents_included": false,
+  "physics_calibrated": false,
+  "estimated_mass_kg": {
+    "cabinet": 70.0,
+    "door_left": 7.0,
+    "door_right": 7.0,
+    "mullion": 0.3
+  },
+  "limitations": [
+    "Component dimensions are estimated from photos",
+    "Mass, inertia, friction and damping are provisional engineering placeholders",
+    "No seal adhesion or pressure differential model",
+    "Mullion is independent and has no automatic folding constraint",
+    "Freezer is static",
+    "MuJoCo parent-child contact filtering applies; full self-collision not calibrated",
+    "USD structural export does not imply Isaac runtime validation",
+    "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation"
+  ],
+  "preferred_robot": "g1_o7_left_wholebody",
+  "visual_meshes": 109,
+  "collision_boxes": 88
+}

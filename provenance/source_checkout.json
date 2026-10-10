@@ -1,0 +1,4 @@
+{
+  "simple_checkout_head": "3ba093b547106102773e2d7ac0265d93f134ede1",
+  "note": "Source checkout HEAD only. Asset file identity is determined by source_files.json, including local additions."
+}

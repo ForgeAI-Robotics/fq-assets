@@ -1,0 +1,17 @@
+{
+  "release": "0.1.0",
+  "operations": [
+    "Copy explicitly selected assets; source projects untouched",
+    "Remove robot include from navigation mission XML; retain fixed layout and collision geometry",
+    "Replace machine-specific runtime paths with package-relative dependencies",
+    "Compose portable USD baseline from architecture and fixed table/coke references",
+    "Persist conference table visuals and light panel from render_hq.py; retain conservative box collision",
+    "Extract conference table as standalone fixture in its baseline world frame",
+    "Preserve articulated joint limits, initialization and fridge v2 calibration records",
+    "Create release catalog, version lock, current checks and previews"
+  ],
+  "historical_records": "provenance/historical_validation is imported evidence, not a new navigation run",
+  "runtime_entries": "catalog/index.json and each asset.json are authoritative",
+  "original_digests": "source_files.json",
+  "released_digests": "../checksums.json"
+}

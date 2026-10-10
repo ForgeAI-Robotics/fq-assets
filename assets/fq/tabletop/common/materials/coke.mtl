@@ -1,0 +1,3 @@
+newmtl coke
+Kd 1 1 1
+map_Kd ../textures/coke.png
