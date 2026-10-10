@@ -66,6 +66,10 @@ for item in catalog['assets']:
     assert stage and stage.GetDefaultPrim()
     assert UsdGeom.GetStageUpAxis(stage)=='Z'
     assert abs(UsdGeom.GetStageMetersPerUnit(stage)-1)<1e-9
+    if meta['id']=='fq:objects/conference_table':
+        for prim in stage.Traverse():
+            if prim.IsA(UsdGeom.Gprim):
+                assert prim.GetName().startswith('meeting_table'),prim.GetPath()
     entry['usd_dependency_files']=len(layers)+len(assets)
     entry['usd_revolute_joints']=[]
     for prim in stage.Traverse():

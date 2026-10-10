@@ -24,6 +24,11 @@ light=UsdLux.RectLight.Define(stage,'/World/MeetingDeskLight')
 light.CreateIntensityAttr(6000);light.CreateWidthAttr(1.3);light.CreateHeightAttr(.5)
 xf=UsdGeom.Xformable(light);xf.ClearXformOpOrder();xf.AddTranslateOp().Set(Gf.Vec3d(2.7,10.4,2.55))
 stage.GetRootLayer().Save()
+fixture=Usd.Stage.Open(str(root/'assets/fq/conference_table/table.usda'))
+for prim in fixture.GetPrimAtPath('/World').GetChildren():
+    if not (prim.GetName().startswith('meeting_table') or prim.GetName()=='Looks'):
+        prim.SetActive(False)
+fixture.GetRootLayer().Save()
 for path in [scene/'scene.xml',root/'assets/fq/conference_table/table.xml']:
     tree=ET.parse(path);world=tree.getroot().find('worldbody')
     g=world.find("geom[@name='meeting_table']")

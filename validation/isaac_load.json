@@ -24,7 +24,7 @@
     {
       "id": "fq:objects/conference_table",
       "stage_loaded": true,
-      "geometry_prims": 8
+      "geometry_prims": 7
     },
     {
       "id": "fq:scenes/office_baseline",
@@ -33,7 +33,7 @@
     }
   ],
   "physics_calibrated": false,
-  "baseline_timeline_time": 0.03389066666666668,
+  "baseline_timeline_time": 0.039374,
   "baseline_startup_passed": true,
   "scope": "All USD stages opened in Isaac; fixed baseline advanced 60 app updates. No articulated contact-policy validation."
 }

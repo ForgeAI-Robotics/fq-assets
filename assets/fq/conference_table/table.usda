@@ -1316,5 +1316,17 @@ def Xform "World" (
     )
     {
     }
+
+    over "meeting_panel" (
+        active = false
+    )
+    {
+    }
+
+    over "MeetingDeskLight" (
+        active = false
+    )
+    {
+    }
 }
 
