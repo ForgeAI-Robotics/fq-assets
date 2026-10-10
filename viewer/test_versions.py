@@ -11,7 +11,7 @@ class VersionTest(unittest.TestCase):
             catalog=Catalog(root,root,60)
             def fake_run(args,*rest,**kwargs):
                 if args[:2]==['git','rev-parse']:return sha
-                if args[1]=='api':return json.dumps({'tag_name':'v0.1.0','html_url':'https://github.com/cola1917/fq-sim-assets/releases/tag/v0.1.0'})
+                if args[1]=='api':return json.dumps({'tag_name':'v0.1.0','html_url':'https://github.com/ForgeAI-Robotics/fq-sim-assets/releases/tag/v0.1.0'})
                 return ''
             catalog.run=fake_run;catalog.sync();response=catalog.response()
             self.assertEqual(response['latest_release']['tag'],'v0.1.0')
