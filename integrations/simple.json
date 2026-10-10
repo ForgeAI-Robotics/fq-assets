@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "assets": {
+    "fq:objects/coke_cn": {"root_body": "coke", "fixed": false, "spawnable": true},
+    "fq:objects/round_table": {"root_body": "round_table", "fixed": true, "spawnable": true},
+    "fq:articulated/photo_basket": {"root_body": "basket", "fixed": false, "spawnable": true},
+    "fq:articulated/haier_bcd402": {"root_body": "refrigerator_base", "fixed": true, "spawnable": true},
+    "fq:objects/conference_table": {"root_body": null, "fixed": true, "spawnable": false, "reason": "World-space fixture; use the baseline scene instance"}
+  },
+  "scenes": {
+    "fq:scenes/office_baseline": {
+      "fixed": true,
+      "ground_z": 0,
+      "instances": {
+        "baseline_coke": {
+          "asset_id": "fq:objects/coke_cn",
+          "mujoco_body": "coke",
+          "usd_prim": "coke",
+          "pose": [10.8, 11.55, 0.8594278971623001, 1, 0, 0, 0],
+          "replaceable": true
+        }
+      }
+    }
+  }
+}
