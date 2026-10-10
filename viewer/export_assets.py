@@ -27,11 +27,11 @@ def main():
         meta=json.loads((root/item['manifest']).read_text())
         slug=meta['id'].split('/')[-1];dest=out/slug;dest.mkdir(exist_ok=True)
         if meta['kind']=='material':
-            texture=(root/meta['representations']['base_color']).resolve()
-            if not texture.is_relative_to(root):raise ValueError('External texture')
+            material_source=(root/meta['representations']['base_color']).resolve()
+            if not material_source.is_relative_to(root):raise ValueError('External texture')
             preview_xml=dest/'swatch.xml'
             import xml.sax.saxutils
-            filename=xml.sax.saxutils.quoteattr(str(texture))
+            filename=xml.sax.saxutils.quoteattr(str(material_source))
             preview_xml.write_text(f'<mujoco><asset><texture name="t" type="2d" file={filename}/><material name="m" texture="t" texrepeat="1 1"/></asset><worldbody><geom type="box" size=".75 .75 .015" pos="0 0 .015" material="m"/><geom type="sphere" size=".38" pos="0 0 .41" material="m"/></worldbody></mujoco>')
             entry_path=preview_xml.resolve()
         else:
@@ -114,7 +114,7 @@ def main():
               'property_source':'MuJoCo 3.3.6 编译后的模型参数','physics_status':'模型设定 · 未完成实测标定',
               'model_url':f'/data/{args.commit}/{slug}/model.json','thumbnail':f'/data/{args.commit}/{slug}/preview.png'}
         if meta['kind']=='material':
-            with Image.open(texture) as im:
+            with Image.open(material_source) as im:
                 info['resolution']=list(im.size)
                 im.thumbnail((256,256));im.save(dest/'preview.png')
             info.update(name=meta['name'],kind_label='材质/纹理',subtitle='表面外观 / '+('当前场景使用' if meta['usage_status']=='in_use' else '备用纹理'),mass_kg=None)
