@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mujoco model="fq_office_baseline_v0_1_0">
+<mujoco model="fq_office_baseline_v0_1_1">
   <option gravity="0 0 -9.81" integrator="implicitfast" />
   <statistic center="8.5 6.2 0" extent="19" />
   <visual>
@@ -212,6 +212,217 @@
     <geom name="meeting_table_leg_0_1" type="box" pos="0.55 10.8 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
     <geom name="meeting_table_leg_1_0" type="box" pos="3.96 9.88 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
     <geom name="meeting_table_leg_1_1" type="box" pos="3.96 10.8 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
+    <body name="refrigerator_base" pos="16.5 11.9 0.0">
+      <body name="refrigerator_door_left" pos="-0.342000008 -0.275000006 0.849583328">
+        <joint name="refrigerator_left_hinge" type="hinge" axis="0 0 -1" range="0.0 89.99999999971945" damping=".15" frictionloss="0" armature=".002" limited="true" />
+        <inertial pos="0.165 -0.022 0.598" mass="7.0" diaginertia="0.85 0.92 0.08" />
+        <body name="refrigerator_mullion" pos="0.328000009 0.0320000052 0.0395833254">
+          <joint name="refrigerator_mullion_hinge" type="hinge" axis="0 0 1" range="0.0 89.99999999971945" damping=".01" frictionloss="0" armature=".002" limited="true" />
+          <inertial pos="0.018 0.007 0.554" mass="0.3" diaginertia="0.031 0.031 0.0001" />
+          <geom name="part_103" type="mesh" mesh="baseline_fridge_part_103" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="col_103_0" type="box" pos="0.0179999992 0.00699999928 0.438583314" size="0.0199999996 0.0119999945 0.436604142" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="0" conaffinity="0" />
+        </body>
+        <geom name="part_049" type="mesh" mesh="baseline_fridge_part_049" rgba="0.529999971 0.560000002 0.579999983 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_050" type="mesh" mesh="baseline_fridge_part_050" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_051" type="mesh" mesh="baseline_fridge_part_051" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_052" type="mesh" mesh="baseline_fridge_part_052" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_053" type="mesh" mesh="baseline_fridge_part_053" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_054" type="mesh" mesh="baseline_fridge_part_054" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_055" type="mesh" mesh="baseline_fridge_part_055" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_056" type="mesh" mesh="baseline_fridge_part_056" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_057" type="mesh" mesh="baseline_fridge_part_057" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_058" type="mesh" mesh="baseline_fridge_part_058" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_059" type="mesh" mesh="baseline_fridge_part_059" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_060" type="mesh" mesh="baseline_fridge_part_060" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_061" type="mesh" mesh="baseline_fridge_part_061" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_062" type="mesh" mesh="baseline_fridge_part_062" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_063" type="mesh" mesh="baseline_fridge_part_063" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_064" type="mesh" mesh="baseline_fridge_part_064" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_065" type="mesh" mesh="baseline_fridge_part_065" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_066" type="mesh" mesh="baseline_fridge_part_066" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_067" type="mesh" mesh="baseline_fridge_part_067" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_068" type="mesh" mesh="baseline_fridge_part_068" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_069" type="mesh" mesh="baseline_fridge_part_069" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_070" type="mesh" mesh="baseline_fridge_part_070" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_071" type="mesh" mesh="baseline_fridge_part_071" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_074" type="mesh" mesh="baseline_fridge_part_074" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_104" type="mesh" mesh="baseline_fridge_part_104" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_105" type="mesh" mesh="baseline_fridge_part_105" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_106" type="mesh" mesh="baseline_fridge_part_106" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="col_049_0" type="box" pos="-0.00049998939 -0.0419999957 0.473416626" size="0.00749999702 0.0370000005 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_1" type="box" pos="0.315250004 -0.0419999957 0.473416626" size="0.0227499959 0.0370000005 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_2" type="box" pos="0.259750008 -0.0687499951 0.473416626" size="0.03275 0.0102500011 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_3" type="box" pos="0.259750008 -0.0122499946 0.473416626" size="0.03275 0.0072499994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_4" type="box" pos="0.259750008 -0.038999994 0.469604137" size="0.03275 0.0195 0.471187535" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_5" type="box" pos="0.117000008 -0.0764999951 0.473416626" size="0.11 0.00250000107 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_6" type="box" pos="0.0222500076 -0.0214999946 0.473416626" size="0.01525 0.0164999994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_7" type="box" pos="0.132250008 -0.0122499946 0.473416626" size="0.09475 0.0072499994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_8" type="box" pos="0.132250008 -0.028749994 0.469604137" size="0.09475 0.00925 0.471187535" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_9" type="box" pos="0.0222500076 -0.055999994 0.480916661" size="0.01525 0.018 0.467499989" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_10" type="box" pos="0.132250008 -0.066249994 0.480916661" size="0.09475 0.00775 0.467499989" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_11" type="box" pos="0.132250008 -0.048249994 0.477104172" size="0.09475 0.01025 0.4636875" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_057_0" type="box" pos="0.171999998 0.0840000063 0.0649166703" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_058_0" type="box" pos="0.048999995 0.0840000063 0.103312492" size="0.00200000405 0.0594999939 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_059_0" type="box" pos="0.171999998 0.026500009 0.103312492" size="0.125000007 0.0019999966 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_060_0" type="box" pos="0.295000017 0.0840000063 0.103312492" size="0.00200000033 0.0594999939 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_061_0" type="box" pos="0.171999998 0.141500011 0.103312492" size="0.125000007 0.00200000405 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_062_0" type="box" pos="0.171999998 0.0840000063 0.377625048" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_063_0" type="box" pos="0.048999995 0.0840000063 0.423145831" size="0.00200000405 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_064_0" type="box" pos="0.171999998 0.026500009 0.423145831" size="0.125000007 0.0019999966 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_065_0" type="box" pos="0.295000017 0.0840000063 0.423145831" size="0.00200000033 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_066_0" type="box" pos="0.171999998 0.141500011 0.423145831" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_067_0" type="box" pos="0.171999998 0.0840000063 0.754458368" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_068_0" type="box" pos="0.048999995 0.0840000063 0.79997915" size="0.00200000405 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_069_0" type="box" pos="0.171999998 0.026500009 0.79997915" size="0.125000007 0.0019999966 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_070_0" type="box" pos="0.295000017 0.0840000063 0.79997915" size="0.00200000033 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_071_0" type="box" pos="0.171999998 0.141500011 0.79997915" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      </body>
+      <body name="refrigerator_door_right" pos="0.342000008 -0.275000006 0.849583328">
+        <joint name="refrigerator_right_hinge" type="hinge" axis="0 0 1" range="0.0 89.99999999971945" damping=".15" frictionloss="0" armature=".002" limited="true" />
+        <inertial pos="-0.165 -0.022 0.598" mass="7.0" diaginertia="0.85 0.92 0.08" />
+        <geom name="part_076" type="mesh" mesh="baseline_fridge_part_076" rgba="0.529999971 0.560000002 0.579999983 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_077" type="mesh" mesh="baseline_fridge_part_077" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_078" type="mesh" mesh="baseline_fridge_part_078" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_079" type="mesh" mesh="baseline_fridge_part_079" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_080" type="mesh" mesh="baseline_fridge_part_080" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_081" type="mesh" mesh="baseline_fridge_part_081" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_082" type="mesh" mesh="baseline_fridge_part_082" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_083" type="mesh" mesh="baseline_fridge_part_083" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_084" type="mesh" mesh="baseline_fridge_part_084" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_085" type="mesh" mesh="baseline_fridge_part_085" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_086" type="mesh" mesh="baseline_fridge_part_086" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_087" type="mesh" mesh="baseline_fridge_part_087" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_088" type="mesh" mesh="baseline_fridge_part_088" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_089" type="mesh" mesh="baseline_fridge_part_089" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_090" type="mesh" mesh="baseline_fridge_part_090" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_091" type="mesh" mesh="baseline_fridge_part_091" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_092" type="mesh" mesh="baseline_fridge_part_092" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_093" type="mesh" mesh="baseline_fridge_part_093" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_094" type="mesh" mesh="baseline_fridge_part_094" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_095" type="mesh" mesh="baseline_fridge_part_095" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_096" type="mesh" mesh="baseline_fridge_part_096" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_097" type="mesh" mesh="baseline_fridge_part_097" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_098" type="mesh" mesh="baseline_fridge_part_098" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_101" type="mesh" mesh="baseline_fridge_part_101" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_108" type="mesh" mesh="baseline_fridge_part_108" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_109" type="mesh" mesh="baseline_fridge_part_109" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_110" type="mesh" mesh="baseline_fridge_part_110" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_111" type="mesh" mesh="baseline_fridge_part_111" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="part_112" type="mesh" mesh="baseline_fridge_part_112" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="col_076_0" type="box" pos="-0.315250004 -0.0419999957 0.473416626" size="0.0227499959 0.0370000005 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_1" type="box" pos="-0.259750008 -0.0687499951 0.473416626" size="0.03275 0.0102500011 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_2" type="box" pos="-0.259750008 -0.0122499946 0.473416626" size="0.03275 0.0072499994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_3" type="box" pos="-0.259750008 -0.038999994 0.469604137" size="0.03275 0.0195 0.471187535" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_4" type="box" pos="0.00049998939 -0.0419999957 0.473416626" size="0.00749999702 0.0370000005 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_5" type="box" pos="-0.117000008 -0.0764999951 0.473416626" size="0.11 0.00250000107 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_6" type="box" pos="-0.0222500076 -0.0214999946 0.473416626" size="0.01525 0.0164999994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_7" type="box" pos="-0.132250008 -0.0122499946 0.473416626" size="0.09475 0.0072499994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_8" type="box" pos="-0.132250008 -0.028749994 0.469604137" size="0.09475 0.00925 0.471187535" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_9" type="box" pos="-0.0222500076 -0.055999994 0.480916661" size="0.01525 0.018 0.467499989" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_10" type="box" pos="-0.132250008 -0.066249994 0.480916661" size="0.09475 0.00775 0.467499989" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_11" type="box" pos="-0.132250008 -0.048249994 0.477104172" size="0.09475 0.01025 0.4636875" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_084_0" type="box" pos="-0.171999998 0.0840000063 0.0649166703" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_085_0" type="box" pos="-0.295000017 0.0840000063 0.103312492" size="0.00200000033 0.0594999939 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_086_0" type="box" pos="-0.171999998 0.026500009 0.103312492" size="0.125000007 0.0019999966 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_087_0" type="box" pos="-0.048999995 0.0840000063 0.103312492" size="0.00200000405 0.0594999939 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_088_0" type="box" pos="-0.171999998 0.141500011 0.103312492" size="0.125000007 0.00200000405 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_089_0" type="box" pos="-0.171999998 0.0840000063 0.377625048" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_090_0" type="box" pos="-0.295000017 0.0840000063 0.423145831" size="0.00200000033 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_091_0" type="box" pos="-0.171999998 0.026500009 0.423145831" size="0.125000007 0.0019999966 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_092_0" type="box" pos="-0.048999995 0.0840000063 0.423145831" size="0.00200000405 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_093_0" type="box" pos="-0.171999998 0.141500011 0.423145831" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_094_0" type="box" pos="-0.171999998 0.0840000063 0.754458368" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_095_0" type="box" pos="-0.295000017 0.0840000063 0.79997915" size="0.00200000033 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_096_0" type="box" pos="-0.171999998 0.026500009 0.79997915" size="0.125000007 0.0019999966 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_097_0" type="box" pos="-0.048999995 0.0840000063 0.79997915" size="0.00200000405 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_098_0" type="box" pos="-0.171999998 0.141500011 0.79997915" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      </body>
+      <geom name="part_001" type="mesh" mesh="baseline_fridge_part_001" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_002" type="mesh" mesh="baseline_fridge_part_002" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_003" type="mesh" mesh="baseline_fridge_part_003" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_004" type="mesh" mesh="baseline_fridge_part_004" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_005" type="mesh" mesh="baseline_fridge_part_005" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_006" type="mesh" mesh="baseline_fridge_part_006" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_007" type="mesh" mesh="baseline_fridge_part_007" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_008" type="mesh" mesh="baseline_fridge_part_008" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_009" type="mesh" mesh="baseline_fridge_part_009" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_010" type="mesh" mesh="baseline_fridge_part_010" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_011" type="mesh" mesh="baseline_fridge_part_011" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_012" type="mesh" mesh="baseline_fridge_part_012" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_013" type="mesh" mesh="baseline_fridge_part_013" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_014" type="mesh" mesh="baseline_fridge_part_014" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_015" type="mesh" mesh="baseline_fridge_part_015" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_016" type="mesh" mesh="baseline_fridge_part_016" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_017" type="mesh" mesh="baseline_fridge_part_017" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_018" type="mesh" mesh="baseline_fridge_part_018" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_019" type="mesh" mesh="baseline_fridge_part_019" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_020" type="mesh" mesh="baseline_fridge_part_020" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_021" type="mesh" mesh="baseline_fridge_part_021" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_022" type="mesh" mesh="baseline_fridge_part_022" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_023" type="mesh" mesh="baseline_fridge_part_023" rgba="0.159999996 0.180000007 0.180000007 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_024" type="mesh" mesh="baseline_fridge_part_024" rgba="0.939999998 1 1 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_025" type="mesh" mesh="baseline_fridge_part_025" rgba="0.779999971 0.889999986 0.870000005 0.32" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_026" type="mesh" mesh="baseline_fridge_part_026" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_027" type="mesh" mesh="baseline_fridge_part_027" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_028" type="mesh" mesh="baseline_fridge_part_028" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_029" type="mesh" mesh="baseline_fridge_part_029" rgba="0.779999971 0.889999986 0.870000005 0.32" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_030" type="mesh" mesh="baseline_fridge_part_030" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_031" type="mesh" mesh="baseline_fridge_part_031" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_032" type="mesh" mesh="baseline_fridge_part_032" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_033" type="mesh" mesh="baseline_fridge_part_033" rgba="0.779999971 0.889999986 0.870000005 0.32" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_034" type="mesh" mesh="baseline_fridge_part_034" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_035" type="mesh" mesh="baseline_fridge_part_035" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_036" type="mesh" mesh="baseline_fridge_part_036" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_037" type="mesh" mesh="baseline_fridge_part_037" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_038" type="mesh" mesh="baseline_fridge_part_038" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_039" type="mesh" mesh="baseline_fridge_part_039" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_040" type="mesh" mesh="baseline_fridge_part_040" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_041" type="mesh" mesh="baseline_fridge_part_041" rgba="0.839999974 0.899999976 0.930000007 0.32" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_042" type="mesh" mesh="baseline_fridge_part_042" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_043" type="mesh" mesh="baseline_fridge_part_043" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_044" type="mesh" mesh="baseline_fridge_part_044" rgba="0.529999971 0.560000002 0.579999983 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_045" type="mesh" mesh="baseline_fridge_part_045" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_046" type="mesh" mesh="baseline_fridge_part_046" rgba="0.529999971 0.560000002 0.579999983 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_047" type="mesh" mesh="baseline_fridge_part_047" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_072" type="mesh" mesh="baseline_fridge_part_072" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_073" type="mesh" mesh="baseline_fridge_part_073" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_099" type="mesh" mesh="baseline_fridge_part_099" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_100" type="mesh" mesh="baseline_fridge_part_100" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="part_107" type="mesh" mesh="baseline_fridge_part_107" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="col_001_0" type="box" pos="-0.331999987 0.0390000045 0.907000005" size="0.021999985 0.314999998 0.887000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_002_0" type="box" pos="0.331999987 0.0390000045 0.907000005" size="0.021999985 0.314999998 0.887000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_003_0" type="box" pos="0 0.0390000045 1.78600001" size="0.331999987 0.314999998 0.0180000067" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_004_0" type="box" pos="0 0.331 0.907000005" size="0.331999987 0.0230000019 0.887000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_005_0" type="box" pos="0 0.0349999964 0.0350000001" size="0.324999988 0.300000012 0.0199999996" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_006_0" type="box" pos="-0.289999992 -0.239999995 0.00999999978" size="0.0200000107 0.0199999958 0.00999999978" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_007_0" type="box" pos="-0.289999992 0.270000011 0.00999999978" size="0.0200000107 0.0200000107 0.00999999978" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_008_0" type="box" pos="0.289999992 -0.239999995 0.00999999978" size="0.0200000107 0.0199999958 0.00999999978" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_009_0" type="box" pos="0.289999992 0.270000011 0.00999999978" size="0.0200000107 0.0200000107 0.00999999978" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_010_0" type="box" pos="-0.305000007 0.0300000012 1.31033337" size="0.00749999285 0.284999996 0.459166646" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_011_0" type="box" pos="0.305000007 0.0300000012 1.31033337" size="0.00749999285 0.284999996 0.459166646" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_012_0" type="box" pos="0 0.305000007 1.30875003" size="0.300000012 0.00999999046 0.46312499" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_013_0" type="box" pos="0 0.0300000012 1.76633334" size="0.300000012 0.284999996 0.00989580154" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_014_0" type="box" pos="0 0.0349999964 0.878083348" size="0.305000007 0.284999996 0.0217708349" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_015_0" type="box" pos="0 0.282999992 1.35229173" size="0.0775000006 0.0105000138 0.360208362" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_025_0" type="box" pos="0 0.0850000046 1.05383337" size="0.291999996 0.197000001 0.00277078152" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_027_0" type="box" pos="-0.291999996 0.0799999908 1.04670835" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_028_0" type="box" pos="0.291999996 0.0799999908 1.04670835" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_029_0" type="box" pos="0 0.0850000046 1.27470839" size="0.291999996 0.197000001 0.00277078152" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_031_0" type="box" pos="-0.291999996 0.0799999908 1.26758337" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_032_0" type="box" pos="0.291999996 0.0799999908 1.26758337" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_033_0" type="box" pos="0 0.0850000046 1.50270832" size="0.291999996 0.197000001 0.00277078152" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_035_0" type="box" pos="-0.291999996 0.0799999908 1.4955833" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_036_0" type="box" pos="0.291999996 0.0799999908 1.4955833" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_037_0" type="box" pos="0 0.0870000049 0.908166647" size="0.282499999 0.190000005 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_038_0" type="box" pos="-0.280499995 0.0870000049 0.975854158" size="0.00200000405 0.190000005 0.0676875114" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_039_0" type="box" pos="0 -0.101000004 0.975854158" size="0.282499999 0.0019999966 0.0676875114" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_040_0" type="box" pos="0.280499995 0.0870000049 0.975854158" size="0.00200000405 0.190000005 0.0676875114" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_041_0" type="box" pos="0 0.275000006 0.975854158" size="0.282499999 0.00200000405 0.0676875114" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_043_0" type="box" pos="0 0.0300000012 0.439000025" size="0.32249999 0.284999996 0.392500028" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_044_0" type="box" pos="0 -0.316000015 0.254999995" size="0.349000007 0.0379999876 0.224999994" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_046_0" type="box" pos="0 -0.316000015 0.649999961" size="0.349000007 0.0379999876 0.159999982" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_107_0" type="box" pos="0 -0.216999993 1.75366664" size="0.0215000007 0.0304999948 0.0114791393" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+    </body>
   </worldbody>
   <asset>
     <texture name="floor_texture" type="2d" file="textures/carpet_photo_v1.png" />
@@ -243,5 +454,117 @@
     <texture name="coke_cn_texture" type="2d" file="../../../assets/fq/tabletop/common/textures/coke_cn.png" />
     <material name="coke_cn_label" texture="coke_cn_texture" specular=".2" shininess=".25" />
     <material name="coke_cn_aluminium" rgba=".55 .57 .60 1" specular=".8" shininess=".6" />
+    <mesh name="baseline_fridge_part_001" file="../../../assets/fq/haier_bcd402/meshes/part_001.obj" />
+    <mesh name="baseline_fridge_part_002" file="../../../assets/fq/haier_bcd402/meshes/part_002.obj" />
+    <mesh name="baseline_fridge_part_003" file="../../../assets/fq/haier_bcd402/meshes/part_003.obj" />
+    <mesh name="baseline_fridge_part_004" file="../../../assets/fq/haier_bcd402/meshes/part_004.obj" />
+    <mesh name="baseline_fridge_part_005" file="../../../assets/fq/haier_bcd402/meshes/part_005.obj" />
+    <mesh name="baseline_fridge_part_006" file="../../../assets/fq/haier_bcd402/meshes/part_006.obj" />
+    <mesh name="baseline_fridge_part_007" file="../../../assets/fq/haier_bcd402/meshes/part_007.obj" />
+    <mesh name="baseline_fridge_part_008" file="../../../assets/fq/haier_bcd402/meshes/part_008.obj" />
+    <mesh name="baseline_fridge_part_009" file="../../../assets/fq/haier_bcd402/meshes/part_009.obj" />
+    <mesh name="baseline_fridge_part_010" file="../../../assets/fq/haier_bcd402/meshes/part_010.obj" />
+    <mesh name="baseline_fridge_part_011" file="../../../assets/fq/haier_bcd402/meshes/part_011.obj" />
+    <mesh name="baseline_fridge_part_012" file="../../../assets/fq/haier_bcd402/meshes/part_012.obj" />
+    <mesh name="baseline_fridge_part_013" file="../../../assets/fq/haier_bcd402/meshes/part_013.obj" />
+    <mesh name="baseline_fridge_part_014" file="../../../assets/fq/haier_bcd402/meshes/part_014.obj" />
+    <mesh name="baseline_fridge_part_015" file="../../../assets/fq/haier_bcd402/meshes/part_015.obj" />
+    <mesh name="baseline_fridge_part_016" file="../../../assets/fq/haier_bcd402/meshes/part_016.obj" />
+    <mesh name="baseline_fridge_part_017" file="../../../assets/fq/haier_bcd402/meshes/part_017.obj" />
+    <mesh name="baseline_fridge_part_018" file="../../../assets/fq/haier_bcd402/meshes/part_018.obj" />
+    <mesh name="baseline_fridge_part_019" file="../../../assets/fq/haier_bcd402/meshes/part_019.obj" />
+    <mesh name="baseline_fridge_part_020" file="../../../assets/fq/haier_bcd402/meshes/part_020.obj" />
+    <mesh name="baseline_fridge_part_021" file="../../../assets/fq/haier_bcd402/meshes/part_021.obj" />
+    <mesh name="baseline_fridge_part_022" file="../../../assets/fq/haier_bcd402/meshes/part_022.obj" />
+    <mesh name="baseline_fridge_part_023" file="../../../assets/fq/haier_bcd402/meshes/part_023.obj" />
+    <mesh name="baseline_fridge_part_024" file="../../../assets/fq/haier_bcd402/meshes/part_024.obj" />
+    <mesh name="baseline_fridge_part_025" file="../../../assets/fq/haier_bcd402/meshes/part_025.obj" />
+    <mesh name="baseline_fridge_part_026" file="../../../assets/fq/haier_bcd402/meshes/part_026.obj" />
+    <mesh name="baseline_fridge_part_027" file="../../../assets/fq/haier_bcd402/meshes/part_027.obj" />
+    <mesh name="baseline_fridge_part_028" file="../../../assets/fq/haier_bcd402/meshes/part_028.obj" />
+    <mesh name="baseline_fridge_part_029" file="../../../assets/fq/haier_bcd402/meshes/part_029.obj" />
+    <mesh name="baseline_fridge_part_030" file="../../../assets/fq/haier_bcd402/meshes/part_030.obj" />
+    <mesh name="baseline_fridge_part_031" file="../../../assets/fq/haier_bcd402/meshes/part_031.obj" />
+    <mesh name="baseline_fridge_part_032" file="../../../assets/fq/haier_bcd402/meshes/part_032.obj" />
+    <mesh name="baseline_fridge_part_033" file="../../../assets/fq/haier_bcd402/meshes/part_033.obj" />
+    <mesh name="baseline_fridge_part_034" file="../../../assets/fq/haier_bcd402/meshes/part_034.obj" />
+    <mesh name="baseline_fridge_part_035" file="../../../assets/fq/haier_bcd402/meshes/part_035.obj" />
+    <mesh name="baseline_fridge_part_036" file="../../../assets/fq/haier_bcd402/meshes/part_036.obj" />
+    <mesh name="baseline_fridge_part_037" file="../../../assets/fq/haier_bcd402/meshes/part_037.obj" />
+    <mesh name="baseline_fridge_part_038" file="../../../assets/fq/haier_bcd402/meshes/part_038.obj" />
+    <mesh name="baseline_fridge_part_039" file="../../../assets/fq/haier_bcd402/meshes/part_039.obj" />
+    <mesh name="baseline_fridge_part_040" file="../../../assets/fq/haier_bcd402/meshes/part_040.obj" />
+    <mesh name="baseline_fridge_part_041" file="../../../assets/fq/haier_bcd402/meshes/part_041.obj" />
+    <mesh name="baseline_fridge_part_042" file="../../../assets/fq/haier_bcd402/meshes/part_042.obj" />
+    <mesh name="baseline_fridge_part_043" file="../../../assets/fq/haier_bcd402/meshes/part_043.obj" />
+    <mesh name="baseline_fridge_part_044" file="../../../assets/fq/haier_bcd402/meshes/part_044.obj" />
+    <mesh name="baseline_fridge_part_045" file="../../../assets/fq/haier_bcd402/meshes/part_045.obj" />
+    <mesh name="baseline_fridge_part_046" file="../../../assets/fq/haier_bcd402/meshes/part_046.obj" />
+    <mesh name="baseline_fridge_part_047" file="../../../assets/fq/haier_bcd402/meshes/part_047.obj" />
+    <mesh name="baseline_fridge_part_049" file="../../../assets/fq/haier_bcd402/meshes/part_049.obj" />
+    <mesh name="baseline_fridge_part_050" file="../../../assets/fq/haier_bcd402/meshes/part_050.obj" />
+    <mesh name="baseline_fridge_part_051" file="../../../assets/fq/haier_bcd402/meshes/part_051.obj" />
+    <mesh name="baseline_fridge_part_052" file="../../../assets/fq/haier_bcd402/meshes/part_052.obj" />
+    <mesh name="baseline_fridge_part_053" file="../../../assets/fq/haier_bcd402/meshes/part_053.obj" />
+    <mesh name="baseline_fridge_part_054" file="../../../assets/fq/haier_bcd402/meshes/part_054.obj" />
+    <mesh name="baseline_fridge_part_055" file="../../../assets/fq/haier_bcd402/meshes/part_055.obj" />
+    <mesh name="baseline_fridge_part_056" file="../../../assets/fq/haier_bcd402/meshes/part_056.obj" />
+    <mesh name="baseline_fridge_part_057" file="../../../assets/fq/haier_bcd402/meshes/part_057.obj" />
+    <mesh name="baseline_fridge_part_058" file="../../../assets/fq/haier_bcd402/meshes/part_058.obj" />
+    <mesh name="baseline_fridge_part_059" file="../../../assets/fq/haier_bcd402/meshes/part_059.obj" />
+    <mesh name="baseline_fridge_part_060" file="../../../assets/fq/haier_bcd402/meshes/part_060.obj" />
+    <mesh name="baseline_fridge_part_061" file="../../../assets/fq/haier_bcd402/meshes/part_061.obj" />
+    <mesh name="baseline_fridge_part_062" file="../../../assets/fq/haier_bcd402/meshes/part_062.obj" />
+    <mesh name="baseline_fridge_part_063" file="../../../assets/fq/haier_bcd402/meshes/part_063.obj" />
+    <mesh name="baseline_fridge_part_064" file="../../../assets/fq/haier_bcd402/meshes/part_064.obj" />
+    <mesh name="baseline_fridge_part_065" file="../../../assets/fq/haier_bcd402/meshes/part_065.obj" />
+    <mesh name="baseline_fridge_part_066" file="../../../assets/fq/haier_bcd402/meshes/part_066.obj" />
+    <mesh name="baseline_fridge_part_067" file="../../../assets/fq/haier_bcd402/meshes/part_067.obj" />
+    <mesh name="baseline_fridge_part_068" file="../../../assets/fq/haier_bcd402/meshes/part_068.obj" />
+    <mesh name="baseline_fridge_part_069" file="../../../assets/fq/haier_bcd402/meshes/part_069.obj" />
+    <mesh name="baseline_fridge_part_070" file="../../../assets/fq/haier_bcd402/meshes/part_070.obj" />
+    <mesh name="baseline_fridge_part_071" file="../../../assets/fq/haier_bcd402/meshes/part_071.obj" />
+    <mesh name="baseline_fridge_part_072" file="../../../assets/fq/haier_bcd402/meshes/part_072.obj" />
+    <mesh name="baseline_fridge_part_073" file="../../../assets/fq/haier_bcd402/meshes/part_073.obj" />
+    <mesh name="baseline_fridge_part_074" file="../../../assets/fq/haier_bcd402/meshes/part_074.obj" />
+    <mesh name="baseline_fridge_part_076" file="../../../assets/fq/haier_bcd402/meshes/part_076.obj" />
+    <mesh name="baseline_fridge_part_077" file="../../../assets/fq/haier_bcd402/meshes/part_077.obj" />
+    <mesh name="baseline_fridge_part_078" file="../../../assets/fq/haier_bcd402/meshes/part_078.obj" />
+    <mesh name="baseline_fridge_part_079" file="../../../assets/fq/haier_bcd402/meshes/part_079.obj" />
+    <mesh name="baseline_fridge_part_080" file="../../../assets/fq/haier_bcd402/meshes/part_080.obj" />
+    <mesh name="baseline_fridge_part_081" file="../../../assets/fq/haier_bcd402/meshes/part_081.obj" />
+    <mesh name="baseline_fridge_part_082" file="../../../assets/fq/haier_bcd402/meshes/part_082.obj" />
+    <mesh name="baseline_fridge_part_083" file="../../../assets/fq/haier_bcd402/meshes/part_083.obj" />
+    <mesh name="baseline_fridge_part_084" file="../../../assets/fq/haier_bcd402/meshes/part_084.obj" />
+    <mesh name="baseline_fridge_part_085" file="../../../assets/fq/haier_bcd402/meshes/part_085.obj" />
+    <mesh name="baseline_fridge_part_086" file="../../../assets/fq/haier_bcd402/meshes/part_086.obj" />
+    <mesh name="baseline_fridge_part_087" file="../../../assets/fq/haier_bcd402/meshes/part_087.obj" />
+    <mesh name="baseline_fridge_part_088" file="../../../assets/fq/haier_bcd402/meshes/part_088.obj" />
+    <mesh name="baseline_fridge_part_089" file="../../../assets/fq/haier_bcd402/meshes/part_089.obj" />
+    <mesh name="baseline_fridge_part_090" file="../../../assets/fq/haier_bcd402/meshes/part_090.obj" />
+    <mesh name="baseline_fridge_part_091" file="../../../assets/fq/haier_bcd402/meshes/part_091.obj" />
+    <mesh name="baseline_fridge_part_092" file="../../../assets/fq/haier_bcd402/meshes/part_092.obj" />
+    <mesh name="baseline_fridge_part_093" file="../../../assets/fq/haier_bcd402/meshes/part_093.obj" />
+    <mesh name="baseline_fridge_part_094" file="../../../assets/fq/haier_bcd402/meshes/part_094.obj" />
+    <mesh name="baseline_fridge_part_095" file="../../../assets/fq/haier_bcd402/meshes/part_095.obj" />
+    <mesh name="baseline_fridge_part_096" file="../../../assets/fq/haier_bcd402/meshes/part_096.obj" />
+    <mesh name="baseline_fridge_part_097" file="../../../assets/fq/haier_bcd402/meshes/part_097.obj" />
+    <mesh name="baseline_fridge_part_098" file="../../../assets/fq/haier_bcd402/meshes/part_098.obj" />
+    <mesh name="baseline_fridge_part_099" file="../../../assets/fq/haier_bcd402/meshes/part_099.obj" />
+    <mesh name="baseline_fridge_part_100" file="../../../assets/fq/haier_bcd402/meshes/part_100.obj" />
+    <mesh name="baseline_fridge_part_101" file="../../../assets/fq/haier_bcd402/meshes/part_101.obj" />
+    <mesh name="baseline_fridge_part_103" file="../../../assets/fq/haier_bcd402/meshes/part_103.obj" />
+    <mesh name="baseline_fridge_part_104" file="../../../assets/fq/haier_bcd402/meshes/part_104.obj" />
+    <mesh name="baseline_fridge_part_105" file="../../../assets/fq/haier_bcd402/meshes/part_105.obj" />
+    <mesh name="baseline_fridge_part_106" file="../../../assets/fq/haier_bcd402/meshes/part_106.obj" />
+    <mesh name="baseline_fridge_part_107" file="../../../assets/fq/haier_bcd402/meshes/part_107.obj" />
+    <mesh name="baseline_fridge_part_108" file="../../../assets/fq/haier_bcd402/meshes/part_108.obj" />
+    <mesh name="baseline_fridge_part_109" file="../../../assets/fq/haier_bcd402/meshes/part_109.obj" />
+    <mesh name="baseline_fridge_part_110" file="../../../assets/fq/haier_bcd402/meshes/part_110.obj" />
+    <mesh name="baseline_fridge_part_111" file="../../../assets/fq/haier_bcd402/meshes/part_111.obj" />
+    <mesh name="baseline_fridge_part_112" file="../../../assets/fq/haier_bcd402/meshes/part_112.obj" />
   </asset>
+  <contact>
+    <exclude body1="refrigerator_base" body2="refrigerator_mullion" />
+  </contact>
 </mujoco>

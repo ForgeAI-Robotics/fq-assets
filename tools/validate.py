@@ -96,7 +96,24 @@ for item in catalog['assets']:
         for name in ('temporary_unreachable_southwest','temporary_unreachable_southeast'):
             g=model.geom(name)
             assert g.contype[0] and g.rgba[3]==0
-        assert model.njnt==0,'Baseline must remain fixed and robot-free'
+        # Fixed layout permits articulated furniture, but no floating bases or robots.
+        expected_joints=set()
+        for placement in meta.get('placements',{}).values():
+            expected_joints.update(placement.get('initial_joint_positions',{}))
+        actual_joints={model.joint(i).name for i in range(model.njnt)}
+        assert actual_joints==expected_joints,(actual_joints,expected_joints)
+        assert all(t==mujoco.mjtJoint.mjJNT_HINGE for t in model.jnt_type)
+        for body_name in ('round_table','coke','refrigerator_base'):
+            body_id=mujoco.mj_name2id(model,mujoco.mjtObj.mjOBJ_BODY,body_name)
+            if body_id>=0:assert model.body_dofnum[body_id]==0,body_name
+        if 'refrigerator' in meta.get('placements',{}):
+            placement=meta['placements']['refrigerator']
+            assert np.allclose(model.body('refrigerator_base').pos,placement['position_m'])
+            prim=stage.GetPrimAtPath('/World/refrigerator')
+            assert prim
+            assert np.allclose(UsdGeom.Xformable(prim).ComputeLocalToWorldTransform(Usd.TimeCode.Default()).ExtractTranslation(),placement['position_m'])
+            fixed=[UsdPhysics.FixedJoint(p) for p in Usd.PrimRange(prim) if p.IsA(UsdPhysics.FixedJoint)]
+            assert len(fixed)==1 and np.allclose(fixed[0].GetLocalPos0Attr().Get(),placement['position_m'])
         for name in ('round_table','coke'):
             assert stage.GetPrimAtPath('/World/'+name)
             pos=UsdGeom.Xformable(stage.GetPrimAtPath('/World/'+name)).ComputeLocalToWorldTransform(Usd.TimeCode.Default()).ExtractTranslation()

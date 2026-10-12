@@ -30,5 +30,21 @@ over "World"
             bool physics:rigidBodyEnabled = 0
         }
     }
+
+    def Xform "refrigerator" (
+        prepend references = @../../../assets/fq/haier_bcd402/refrigerator.usda@
+    )
+    {
+        double3 xformOp:translate = (16.5, 11.9, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        over "Joints"
+        {
+            over "fixed_base"
+            {
+                point3f physics:localPos0 = (16.5, 11.9, 0)
+            }
+        }
+    }
 }
 

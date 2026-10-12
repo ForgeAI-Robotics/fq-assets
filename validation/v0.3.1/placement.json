@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "original_geometry_unchanged": 191,
+  "door_sweep_configurations": 361,
+  "external_penetrations": 0,
+  "fridge_visual_bounds_m": [
+    [
+      16.146000027656555,
+      11.53949999209265,
+      -7.033481089213645e-11
+    ],
+    [
+      16.853999972343445,
+      12.25400000214577,
+      1.804000020027159
+    ]
+  ],
+  "north_wall_clearance_m": 0.08690999785422981,
+  "east_wall_clearance_m": 0.19145002765655406,
+  "usd_world_anchor_correct": true,
+  "isaac_runtime_tested": false
+}

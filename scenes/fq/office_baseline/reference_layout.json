@@ -69,5 +69,32 @@
     "door approach",
     "door passed",
     "3"
-  ]
+  ],
+  "refrigerator": {
+    "asset_id": "fq:articulated/haier_bcd402",
+    "version": "0.1.0",
+    "position_m": [
+      16.5,
+      11.9,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "location": "Northeast corner, east/right of round table in floor plan",
+    "front_direction_world": [
+      0,
+      -1,
+      0
+    ],
+    "fixed_base": true,
+    "initial_joint_positions": {
+      "refrigerator_left_hinge": 0,
+      "refrigerator_right_hinge": 0,
+      "refrigerator_mullion_hinge": 0
+    }
+  }
 }

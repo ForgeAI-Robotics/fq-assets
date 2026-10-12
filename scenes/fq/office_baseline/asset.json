@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/office_baseline",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -20,11 +20,11 @@
   "dependencies": [
     "fq:objects/coke_cn",
     "fq:objects/round_table",
-    "fq:objects/conference_table"
+    "fq:objects/conference_table",
+    "fq:articulated/haier_bcd402"
   ],
   "standalone_assets_not_placed": [
-    "fq:articulated/photo_basket",
-    "fq:articulated/haier_bcd402"
+    "fq:articulated/photo_basket"
   ],
   "door_clear_width_m": 0.8,
   "conference_table_width_m": 1.2,
@@ -32,6 +32,42 @@
     "Partial office reconstruction, not a surveyed complete building",
     "Door fixed open; no door-opening dynamics",
     "Invisible restricted-zone colliders intentionally preserved",
-    "Coke and round table are fixed in the navigation baseline; standalone coke is dynamic"
-  ]
+    "Coke and round table are fixed in the navigation baseline; standalone coke is dynamic",
+    "Refrigerator inherits provisional physics and independent mullion; placement validated offline, not Isaac runtime"
+  ],
+  "dependency_versions": {
+    "fq:objects/coke_cn": "0.1.0",
+    "fq:objects/round_table": "0.1.0",
+    "fq:objects/conference_table": "0.1.0",
+    "fq:articulated/haier_bcd402": "0.1.0"
+  },
+  "placements": {
+    "refrigerator": {
+      "asset_id": "fq:articulated/haier_bcd402",
+      "version": "0.1.0",
+      "position_m": [
+        16.5,
+        11.9,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "location": "Northeast corner, east/right of round table in floor plan",
+      "front_direction_world": [
+        0,
+        -1,
+        0
+      ],
+      "fixed_base": true,
+      "initial_joint_positions": {
+        "refrigerator_left_hinge": 0,
+        "refrigerator_right_hinge": 0,
+        "refrigerator_mullion_hinge": 0
+      }
+    }
+  }
 }
