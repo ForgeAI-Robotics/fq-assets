@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/haier_bcd402",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "articulated",
   "units": "meter",
   "up_axis": "Z",
@@ -44,7 +44,8 @@
     "Freezer is static",
     "MuJoCo parent-child contact filtering applies; full self-collision not calibrated",
     "USD structural export does not imply Isaac runtime validation",
-    "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation"
+    "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation",
+    "Right hinge axis geometrically corrected to cabinet outer side; not hardware calibrated. Left hinge unchanged."
   ],
   "calibration_record": "assets/fq/haier_bcd402/calibration_v2.json"
 }

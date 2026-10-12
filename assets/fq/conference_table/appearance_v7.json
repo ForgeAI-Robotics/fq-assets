@@ -1,0 +1,48 @@
+{
+  "mode": "uniform appearance material reconstruction; not per-location texture recovery",
+  "selection": {
+    "sequence": 6,
+    "x": 96,
+    "y": 744,
+    "median": 153.0,
+    "coarse_variation": 0.5228627920150757,
+    "grain": 1.6821200847625732,
+    "score": 1.421908092441581
+  },
+  "candidate_count": 243,
+  "brightness_percentile_gate": 70,
+  "source_frame": 270,
+  "source_time_s": 9.0,
+  "patch_size": [
+    144,
+    192
+  ],
+  "tile_size": [
+    288,
+    384
+  ],
+  "method": "exact reflected repetition; zero blur or RGB averaging",
+  "wood_texture_is_repeated": true,
+  "metal": "existing center-strip meshes get independent metal material; no wood covering",
+  "limitations": [
+    "repeated/mirrored grain is visible at close range",
+    "material roughness and metalness are artistic settings, not measured",
+    "remaining scene highlights/shadows come from renderer"
+  ],
+  "validation": {
+    "tile_boundaries_equal": true,
+    "source_patch_pixels_unchanged": true
+  },
+  "texture_sha256": "7f311d816d670b05f903cb5cb5bbd01fee52ae98cdc587cd0a435464b1b9990f",
+  "source_video_sha256": "8b80b72ffcea16ce8729469f968bc3fe718cb7ac18d0a09c61aa9f0ed437c936",
+  "dimensions_m": [
+    4.01136363636,
+    1.2,
+    0.75
+  ],
+  "measured_dimensions": [
+    "width only"
+  ],
+  "mesh_count": 33,
+  "mujoco_metal_note": "specular approximation, not equivalent to USD metallic PBR"
+}

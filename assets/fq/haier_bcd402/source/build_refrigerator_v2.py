@@ -112,7 +112,9 @@ for name,z,h in [('Freezer_bottom',.255,.450),('Freezer_upper',.650,.320)]:
 
 doors={}
 for label,sign in [('LEFT',-1),('RIGHT',1)]:
-    hinge=pivot('HINGE_'+label,(sign*.342,-.275,.600)); doors[label]=hinge
+    # Preserve all closed geometry while correcting only the estimated right rotation axis.
+    hinge_x=.354 if label=='RIGHT' else sign*.342
+    hinge=pivot('HINGE_'+label,(hinge_x,-.275,.600)); doors[label]=hinge
     hinge['axis']='local Z'; hinge['estimated_axis']=True
     hinge['opening_sign']=sign; hinge['resistance_Nm']='UNMEASURED; independently calibrate'
     cx=sign*.177

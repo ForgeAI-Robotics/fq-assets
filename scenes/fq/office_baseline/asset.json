@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/office_baseline",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -33,18 +33,19 @@
     "Door fixed open; no door-opening dynamics",
     "Invisible restricted-zone colliders intentionally preserved",
     "Coke and round table are fixed in the navigation baseline; standalone coke is dynamic",
-    "Refrigerator inherits provisional physics and independent mullion; placement validated offline, not Isaac runtime"
+    "Refrigerator inherits provisional physics and independent mullion; placement validated offline, not Isaac runtime",
+    "Meeting room contains table only; conference table V7 visuals retain conservative full-box collision"
   ],
   "dependency_versions": {
     "fq:objects/coke_cn": "0.1.0",
     "fq:objects/round_table": "0.1.0",
-    "fq:objects/conference_table": "0.1.0",
-    "fq:articulated/haier_bcd402": "0.1.0"
+    "fq:objects/conference_table": "0.2.0",
+    "fq:articulated/haier_bcd402": "0.1.1"
   },
   "placements": {
     "refrigerator": {
       "asset_id": "fq:articulated/haier_bcd402",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "position_m": [
         16.5,
         11.9,

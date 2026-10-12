@@ -1,0 +1,1634 @@
+{
+  "mujoco_version": "3.3.6",
+  "usd_version": [
+    0,
+    25,
+    5
+  ],
+  "root": "/assets",
+  "assets": [
+    {
+      "id": "fq:objects/coke_cn",
+      "ngeom": 3,
+      "njoint": 1,
+      "joints": [],
+      "drop_test": {
+        "seconds": 2,
+        "final_base_z": 0.08242117616320015,
+        "linear_speed": 0.00045819429002308496
+      },
+      "usd_dependency_files": 3,
+      "usd_revolute_joints": []
+    },
+    {
+      "id": "fq:objects/round_table",
+      "ngeom": 4,
+      "njoint": 0,
+      "joints": [],
+      "usd_dependency_files": 2,
+      "usd_revolute_joints": []
+    },
+    {
+      "id": "fq:articulated/photo_basket",
+      "ngeom": 80,
+      "njoint": 3,
+      "joints": [
+        {
+          "name": "handle_right_hinge",
+          "limits_rad": [
+            -0.65,
+            2.82
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "handle_left_hinge",
+          "limits_rad": [
+            -0.65,
+            2.82
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "drop_test": {
+        "seconds": 2,
+        "final_base_z": -5.184496964266071e-07,
+        "linear_speed": 7.603823078013126e-05
+      },
+      "usd_dependency_files": 2,
+      "usd_revolute_joints": [
+        {
+          "path": "/Basket/Joints/handle_right_hinge",
+          "limits_deg": [
+            -37.24225616455078,
+            161.5740966796875
+          ]
+        },
+        {
+          "path": "/Basket/Joints/handle_left_hinge",
+          "limits_deg": [
+            -37.24225616455078,
+            161.5740966796875
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fq:articulated/haier_bcd402",
+      "ngeom": 197,
+      "njoint": 3,
+      "joints": [
+        {
+          "name": "refrigerator_left_hinge",
+          "limits_rad": [
+            0.0,
+            1.57079632679
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "refrigerator_mullion_hinge",
+          "limits_rad": [
+            0.0,
+            1.57079632679
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "refrigerator_right_hinge",
+          "limits_rad": [
+            0.0,
+            1.57079632679
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "usd_dependency_files": 1,
+      "usd_revolute_joints": [
+        {
+          "path": "/Refrigerator/Joints/refrigerator_left_hinge",
+          "limits_deg": [
+            0.0,
+            90.0
+          ]
+        },
+        {
+          "path": "/Refrigerator/Joints/refrigerator_right_hinge",
+          "limits_deg": [
+            0.0,
+            90.0
+          ]
+        },
+        {
+          "path": "/Refrigerator/Joints/refrigerator_mullion_hinge",
+          "limits_deg": [
+            0.0,
+            90.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fq:objects/conference_table",
+      "ngeom": 34,
+      "njoint": 0,
+      "joints": [],
+      "usd_dependency_files": 2,
+      "usd_revolute_joints": []
+    },
+    {
+      "id": "fq:scenes/office_baseline",
+      "ngeom": 415,
+      "njoint": 3,
+      "joints": [
+        {
+          "name": "refrigerator_left_hinge",
+          "limits_rad": [
+            0.0,
+            1.57079632679
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "refrigerator_mullion_hinge",
+          "limits_rad": [
+            0.0,
+            1.57079632679
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "refrigerator_right_hinge",
+          "limits_rad": [
+            0.0,
+            1.57079632679
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "usd_dependency_files": 14,
+      "usd_revolute_joints": [
+        {
+          "path": "/World/refrigerator/Joints/refrigerator_left_hinge",
+          "limits_deg": [
+            0.0,
+            90.0
+          ]
+        },
+        {
+          "path": "/World/refrigerator/Joints/refrigerator_right_hinge",
+          "limits_deg": [
+            0.0,
+            90.0
+          ]
+        },
+        {
+          "path": "/World/refrigerator/Joints/refrigerator_mullion_hinge",
+          "limits_deg": [
+            0.0,
+            90.0
+          ]
+        }
+      ],
+      "door_clear_width_m": 0.7999900000000011,
+      "fixed_layout_verified": true
+    },
+    {
+      "id": "fq:materials/wall",
+      "texture_verified": true
+    },
+    {
+      "id": "fq:materials/floor",
+      "texture_verified": true
+    },
+    {
+      "id": "fq:materials/carpet",
+      "texture_verified": true
+    },
+    {
+      "id": "fq:materials/wood",
+      "texture_verified": true
+    },
+    {
+      "id": "fq:materials/stone",
+      "texture_verified": true
+    },
+    {
+      "id": "fq:end_effectors/o6_left",
+      "ngeom": 24,
+      "njoint": 11,
+      "joints": [
+        {
+          "name": "left_o6_thumb_cmc_yaw",
+          "limits_rad": [
+            0.0,
+            1.3
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_thumb_cmc_pitch",
+          "limits_rad": [
+            0.0,
+            0.471616
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_thumb_ip",
+          "limits_rad": [
+            0.0,
+            1.08
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_index_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_index_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_middle_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_middle_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_ring_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_ring_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_pinky_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_pinky_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "usd_supported": false
+    },
+    {
+      "id": "fq:end_effectors/o6_right",
+      "ngeom": 24,
+      "njoint": 11,
+      "joints": [
+        {
+          "name": "right_o6_thumb_cmc_yaw",
+          "limits_rad": [
+            0.0,
+            1.36
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_thumb_cmc_pitch",
+          "limits_rad": [
+            0.0,
+            0.58
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_thumb_ip",
+          "limits_rad": [
+            0.0,
+            1.08
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_index_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_index_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_middle_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_middle_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_ring_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_ring_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_pinky_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_pinky_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "usd_supported": false
+    },
+    {
+      "id": "fq:robots/g1_o6",
+      "ngeom": 185,
+      "njoint": 52,
+      "joints": [
+        {
+          "name": "left_hip_pitch_joint",
+          "limits_rad": [
+            -2.5307,
+            2.8798
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_hip_roll_joint",
+          "limits_rad": [
+            -0.5236,
+            2.9671
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_hip_yaw_joint",
+          "limits_rad": [
+            -2.7576,
+            2.7576
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_knee_joint",
+          "limits_rad": [
+            -0.087267,
+            2.8798
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_ankle_pitch_joint",
+          "limits_rad": [
+            -0.87267,
+            0.5236
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_ankle_roll_joint",
+          "limits_rad": [
+            -0.2618,
+            0.2618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_hip_pitch_joint",
+          "limits_rad": [
+            -2.5307,
+            2.8798
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_hip_roll_joint",
+          "limits_rad": [
+            -2.9671,
+            0.5236
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_hip_yaw_joint",
+          "limits_rad": [
+            -2.7576,
+            2.7576
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_knee_joint",
+          "limits_rad": [
+            -0.087267,
+            2.8798
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_ankle_pitch_joint",
+          "limits_rad": [
+            -0.87267,
+            0.5236
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_ankle_roll_joint",
+          "limits_rad": [
+            -0.2618,
+            0.2618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "waist_yaw_joint",
+          "limits_rad": [
+            -2.618,
+            2.618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "waist_roll_joint",
+          "limits_rad": [
+            -0.52,
+            0.52
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "waist_pitch_joint",
+          "limits_rad": [
+            -0.52,
+            0.52
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_shoulder_pitch_joint",
+          "limits_rad": [
+            -3.0892,
+            2.6704
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_shoulder_roll_joint",
+          "limits_rad": [
+            -1.5882,
+            2.2515
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_shoulder_yaw_joint",
+          "limits_rad": [
+            -2.618,
+            2.618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_elbow_joint",
+          "limits_rad": [
+            -1.0472,
+            2.0944
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_wrist_roll_joint",
+          "limits_rad": [
+            -1.97222,
+            1.97222
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_wrist_pitch_joint",
+          "limits_rad": [
+            -1.61443,
+            1.61443
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_wrist_yaw_joint",
+          "limits_rad": [
+            -1.61443,
+            1.61443
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_thumb_cmc_yaw",
+          "limits_rad": [
+            0.0,
+            1.3
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_thumb_cmc_pitch",
+          "limits_rad": [
+            0.0,
+            0.471616
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_thumb_ip",
+          "limits_rad": [
+            0.0,
+            1.08
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_index_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_index_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_middle_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_middle_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_ring_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_ring_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_pinky_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o6_pinky_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_shoulder_pitch_joint",
+          "limits_rad": [
+            -3.0892,
+            2.6704
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_shoulder_roll_joint",
+          "limits_rad": [
+            -2.2515,
+            1.5882
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_shoulder_yaw_joint",
+          "limits_rad": [
+            -2.618,
+            2.618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_elbow_joint",
+          "limits_rad": [
+            -1.0472,
+            2.0944
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_wrist_roll_joint",
+          "limits_rad": [
+            -1.97222,
+            1.97222
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_wrist_pitch_joint",
+          "limits_rad": [
+            -1.61443,
+            1.61443
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_wrist_yaw_joint",
+          "limits_rad": [
+            -1.61443,
+            1.61443
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_thumb_cmc_yaw",
+          "limits_rad": [
+            0.0,
+            1.36
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_thumb_cmc_pitch",
+          "limits_rad": [
+            0.0,
+            0.58
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_thumb_ip",
+          "limits_rad": [
+            0.0,
+            1.08
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_index_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_index_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_middle_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_middle_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_ring_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_ring_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_pinky_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.6
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o6_pinky_dip",
+          "limits_rad": [
+            0.0,
+            1.43
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "usd_supported": false
+    },
+    {
+      "id": "fq:end_effectors/o7_left",
+      "ngeom": 36,
+      "njoint": 17,
+      "joints": [
+        {
+          "name": "left_o7_thumb_cmc_roll",
+          "limits_rad": [
+            -0.785,
+            0.785
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_cmc_yaw",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_cmc_pitch",
+          "limits_rad": [
+            0.0,
+            0.5285
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_mcp",
+          "limits_rad": [
+            0.0,
+            1.186
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_ip",
+          "limits_rad": [
+            0.0,
+            1.25783
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_index_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_index_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_index_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_middle_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_middle_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_middle_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_ring_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_ring_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_ring_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_pinky_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_pinky_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_pinky_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "usd_supported": false
+    },
+    {
+      "id": "fq:end_effectors/o7_right",
+      "ngeom": 36,
+      "njoint": 17,
+      "joints": [
+        {
+          "name": "right_o7_thumb_cmc_roll",
+          "limits_rad": [
+            -0.785,
+            0.785
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_cmc_yaw",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_cmc_pitch",
+          "limits_rad": [
+            0.0,
+            0.5285
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_mcp",
+          "limits_rad": [
+            0.0,
+            1.186
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_ip",
+          "limits_rad": [
+            0.0,
+            1.25783
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_index_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_index_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_index_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_middle_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_middle_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_middle_dip",
+          "limits_rad": [
+            0.0,
+            1.5635
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_ring_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_ring_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_ring_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_pinky_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_pinky_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_pinky_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "usd_supported": false
+    },
+    {
+      "id": "fq:robots/g1_o7",
+      "ngeom": 143,
+      "njoint": 64,
+      "joints": [
+        {
+          "name": "left_hip_pitch_joint",
+          "limits_rad": [
+            -2.5307,
+            2.8798
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_hip_roll_joint",
+          "limits_rad": [
+            -0.5236,
+            2.9671
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_hip_yaw_joint",
+          "limits_rad": [
+            -2.7576,
+            2.7576
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_knee_joint",
+          "limits_rad": [
+            -0.087267,
+            2.8798
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_ankle_pitch_joint",
+          "limits_rad": [
+            -0.87267,
+            0.5236
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_ankle_roll_joint",
+          "limits_rad": [
+            -0.2618,
+            0.2618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_hip_pitch_joint",
+          "limits_rad": [
+            -2.5307,
+            2.8798
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_hip_roll_joint",
+          "limits_rad": [
+            -2.9671,
+            0.5236
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_hip_yaw_joint",
+          "limits_rad": [
+            -2.7576,
+            2.7576
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_knee_joint",
+          "limits_rad": [
+            -0.087267,
+            2.8798
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_ankle_pitch_joint",
+          "limits_rad": [
+            -0.87267,
+            0.5236
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_ankle_roll_joint",
+          "limits_rad": [
+            -0.2618,
+            0.2618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "waist_yaw_joint",
+          "limits_rad": [
+            -2.618,
+            2.618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "waist_roll_joint",
+          "limits_rad": [
+            -0.52,
+            0.52
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "waist_pitch_joint",
+          "limits_rad": [
+            -0.52,
+            0.52
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_shoulder_pitch_joint",
+          "limits_rad": [
+            -3.0892,
+            2.6704
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_shoulder_roll_joint",
+          "limits_rad": [
+            -1.5882,
+            2.2515
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_shoulder_yaw_joint",
+          "limits_rad": [
+            -2.618,
+            2.618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_elbow_joint",
+          "limits_rad": [
+            -1.0472,
+            2.0944
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_wrist_roll_joint",
+          "limits_rad": [
+            -1.97222,
+            1.97222
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_wrist_pitch_joint",
+          "limits_rad": [
+            -1.61443,
+            1.61443
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_wrist_yaw_joint",
+          "limits_rad": [
+            -1.61443,
+            1.61443
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_cmc_roll",
+          "limits_rad": [
+            -0.785,
+            0.785
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_cmc_yaw",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_cmc_pitch",
+          "limits_rad": [
+            0.0,
+            0.5285
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_mcp",
+          "limits_rad": [
+            0.0,
+            1.186
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_thumb_ip",
+          "limits_rad": [
+            0.0,
+            1.25783
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_index_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_index_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_index_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_middle_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_middle_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_middle_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_ring_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_ring_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_ring_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_pinky_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_pinky_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "left_o7_pinky_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_shoulder_pitch_joint",
+          "limits_rad": [
+            -3.0892,
+            2.6704
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_shoulder_roll_joint",
+          "limits_rad": [
+            -2.2515,
+            1.5882
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_shoulder_yaw_joint",
+          "limits_rad": [
+            -2.618,
+            2.618
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_elbow_joint",
+          "limits_rad": [
+            -1.0472,
+            2.0944
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_wrist_roll_joint",
+          "limits_rad": [
+            -1.97222,
+            1.97222
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_wrist_pitch_joint",
+          "limits_rad": [
+            -1.61443,
+            1.61443
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_wrist_yaw_joint",
+          "limits_rad": [
+            -1.61443,
+            1.61443
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_cmc_roll",
+          "limits_rad": [
+            -0.785,
+            0.785
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_cmc_yaw",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_cmc_pitch",
+          "limits_rad": [
+            0.0,
+            0.5285
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_mcp",
+          "limits_rad": [
+            0.0,
+            1.186
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_thumb_ip",
+          "limits_rad": [
+            0.0,
+            1.25783
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_index_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_index_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_index_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_middle_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_middle_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_middle_dip",
+          "limits_rad": [
+            0.0,
+            1.5635
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_ring_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_ring_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_ring_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_pinky_mcp_pitch",
+          "limits_rad": [
+            0.0,
+            1.325
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_pinky_pip",
+          "limits_rad": [
+            0.0,
+            1.57
+          ],
+          "kinematic_sweep_samples": 5
+        },
+        {
+          "name": "right_o7_pinky_dip",
+          "limits_rad": [
+            0.0,
+            1.0
+          ],
+          "kinematic_sweep_samples": 5
+        }
+      ],
+      "usd_supported": false
+    },
+    {
+      "id": "fq:cameras/realsense_d435i",
+      "ngeom": 21,
+      "njoint": 0,
+      "joints": [],
+      "usd_supported": false
+    }
+  ],
+  "isaac_physx_runtime_tested": false,
+  "passed": true
+}

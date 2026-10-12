@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "id": "fq:objects/conference_table",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "kind": "fixture",
   "units": "meter",
   "up_axis": "Z",
   "quaternion_order": "wxyz",
   "origin": "fq",
-  "upstream_origin": "FQ floor-plan reconstruction",
+  "upstream_origin": "FQ baseline geometry dimensions + SimFoundry fitted table + real-video uniform wood V7",
   "provenance": "provenance/source_files.json",
   "license_status": "See NOTICE.md; no blanket relicensing of upstream assets",
   "representations": {
@@ -16,5 +16,8 @@
   },
   "coordinates": "Retains baseline world coordinates; not origin-normalized",
   "measured_width_m": 1.2,
-  "physics_calibrated": false
+  "physics_calibrated": false,
+  "visual_style": "uniform repeated real-video wood with independent three-part metal cable cover",
+  "visual_provenance": "assets/fq/conference_table/appearance_v7.json",
+  "collision_model": "unchanged conservative full box; no under-table traversal"
 }

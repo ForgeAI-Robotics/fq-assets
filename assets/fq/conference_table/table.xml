@@ -3,13 +3,51 @@
   <asset>
     <material name="furniture_material" rgba="0.78 0.75 0.66 1" specular=".12" shininess=".15" reflectance="0" />
     <material name="frame_material" rgba="0.035 0.04 0.045 1" specular=".12" shininess=".15" reflectance="0" />
+    <texture name="conference_wood_v7" type="2d" file="textures/wood_v7.png" />
+    <material name="conference_wood_v7" texture="conference_wood_v7" texuniform="false" rgba="1 1 1 1" specular=".12" shininess=".15" />
+    <material name="conference_metal_v7" rgba=".65 .65 .65 1" specular=".85" shininess=".6" reflectance=".25" />
+    <material name="conference_legs_v7" rgba=".055 .06 .065 1" specular=".12" shininess=".15" />
+    <mesh name="meeting_table_board_0_0" file="meshes/meeting_table_board_0_0.obj" />
+    <mesh name="meeting_table_board_0_1" file="meshes/meeting_table_board_0_1.obj" />
+    <mesh name="meeting_table_board_0_2" file="meshes/meeting_table_board_0_2.obj" />
+    <mesh name="meeting_table_board_1_0" file="meshes/meeting_table_board_1_0.obj" />
+    <mesh name="meeting_table_board_1_1" file="meshes/meeting_table_board_1_1.obj" />
+    <mesh name="meeting_table_board_1_2" file="meshes/meeting_table_board_1_2.obj" />
   </asset>
   <worldbody>
     <geom name="meeting_table" type="box" pos="2.25568 10.34091 0.37500" size="2.00568 0.60000 0.37500" material="furniture_material" friction=".7 .005 .0001" contype="1" conaffinity="1" rgba="0 0 0 0" group="3" />
-    <geom name="meeting_tabletop" type="box" pos="2.2556818181818183 10.34090909090909 0.72" size="2.0056818181818183 0.6 0.03" material="furniture_material" contype="0" conaffinity="0" mass="0" />
-    <geom name="meeting_table_leg_0_0" type="box" pos="0.55 9.88 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
-    <geom name="meeting_table_leg_0_1" type="box" pos="0.55 10.8 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
-    <geom name="meeting_table_leg_1_0" type="box" pos="3.96 9.88 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
-    <geom name="meeting_table_leg_1_1" type="box" pos="3.96 10.8 0.345" size="0.0375 0.0375 0.345" material="frame_material" contype="0" conaffinity="0" mass="0" />
+    <geom name="meeting_table_board_0_0" pos="3.594036817550659 10.040240287780762 0.7229692935943604" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_0" />
+    <geom name="meeting_table_leg_0_0_m1_m1" pos="4.183014869689941 9.797544479370117 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_0_m1_1" pos="3.005058765411377 9.797544479370117 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592259407043457 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_0_1_m1" pos="4.183014869689941 10.282936096191406 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_0_1_1" pos="3.005058765411377 10.282936096191406 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592259407043457 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_board_0_1" pos="2.2556819915771484 10.040240287780762 0.7229692935943604" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_1" />
+    <geom name="meeting_table_leg_0_1_m1_m1" pos="2.8446598052978516 9.797544479370117 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_1_m1_1" pos="1.6667038202285767 9.797544479370117 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_1_1_m1" pos="2.8446598052978516 10.282936096191406 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_1_1_1" pos="1.6667038202285767 10.282936096191406 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_board_0_2" pos="0.9173266887664795 10.040240287780762 0.7229692935943604" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_2" />
+    <geom name="meeting_table_leg_0_2_m1_m1" pos="1.5063047409057617 9.797544479370117 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.02159219980239868 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_2_m1_1" pos="0.32834869623184204 9.797544479370117 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.0215921550989151 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_2_1_m1" pos="1.5063047409057617 10.282936096191406 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.02159219980239868 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_0_2_1_1" pos="0.32834869623184204 10.282936096191406 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.0215921550989151 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_board_1_0" pos="3.594036817550659 10.641578674316406 0.7229692935943604" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_0" />
+    <geom name="meeting_table_leg_1_0_m1_m1" pos="4.183014869689941 10.398881912231445 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_0_m1_1" pos="3.005058765411377 10.398881912231445 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592259407043457 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_0_1_m1" pos="4.183014869689941 10.884273529052734 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.015607833862304688 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_0_1_1" pos="3.005058765411377 10.884273529052734 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592259407043457 0.015607833862304688 0.35108819603919983" />
+    <geom name="meeting_table_board_1_1" pos="2.2556819915771484 10.641578674316406 0.7229692935943604" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_1" />
+    <geom name="meeting_table_leg_1_1_m1_m1" pos="2.8446598052978516 10.398881912231445 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_1_m1_1" pos="1.6667038202285767 10.398881912231445 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_1_1_m1" pos="2.8446598052978516 10.884273529052734 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.015607833862304688 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_1_1_1" pos="1.6667038202285767 10.884273529052734 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.021592140197753906 0.015607833862304688 0.35108819603919983" />
+    <geom name="meeting_table_board_1_2" pos="0.9173266887664795 10.641578674316406 0.7229692935943604" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_2" />
+    <geom name="meeting_table_leg_1_2_m1_m1" pos="1.5063047409057617 10.398881912231445 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.02159219980239868 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_2_m1_1" pos="0.32834869623184204 10.398881912231445 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.0215921550989151 0.01560831069946289 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_2_1_m1" pos="1.5063047409057617 10.884273529052734 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.02159219980239868 0.015607833862304688 0.35108819603919983" />
+    <geom name="meeting_table_leg_1_2_1_1" pos="0.32834869623184204 10.884273529052734 0.35108819603919983" material="conference_legs_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.0215921550989151 0.015607833862304688 0.35108819603919983" />
+    <geom name="meeting_table_cable_cover_0" pos="3.594036817550659 10.340909004211426 0.7468810677528381" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.6617743968963623 0.05412006378173828 0.0031189322471618652" />
+    <geom name="meeting_table_cable_cover_1" pos="2.2556819915771484 10.340909004211426 0.7468810677528381" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.6617745161056519 0.05412006378173828 0.0031189322471618652" />
+    <geom name="meeting_table_cable_cover_2" pos="0.9173267483711243 10.340909004211426 0.7468810677528381" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.6617744565010071 0.05412006378173828 0.0031189322471618652" />
   </worldbody>
 </mujoco>

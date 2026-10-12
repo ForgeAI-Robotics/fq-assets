@@ -1,16 +1,24 @@
 """Build portable MJCF and USD from evaluated Blender geometry. Physics is provisional."""
 from pathlib import Path
-import json,math,xml.etree.ElementTree as E
+import argparse,json,math,xml.etree.ElementTree as E
 from pxr import Usd,UsdGeom,UsdPhysics,UsdShade,Sdf,Gf
-ROOT=Path('/mnt/simple');R=ROOT/'data/assets/refrigerator/haier_bcd402_v1'
-G=json.loads((ROOT/'.runtime/refrigerator-integration/geometry.json').read_text())
+SOURCE=Path(__file__).resolve().parent
+p=argparse.ArgumentParser()
+p.add_argument('--geometry',type=Path,default=SOURCE/'geometry.json')
+p.add_argument('--output',type=Path,default=SOURCE.parent)
+args=p.parse_args();R=args.output
+G=json.loads(args.geometry.read_text())
 R.mkdir(parents=True,exist_ok=True);(R/'meshes').mkdir(exist_ok=True)
 # Recess shadow meshes are visual fills, not solid material.
 G['collisions']=[c for c in G['collisions'] if 'handle_shadow' not in c['source']]
 anchors=G['anchors'];parents={'door_left':'cabinet','door_right':'cabinet','mullion':'door_left'}
 joints={'door_left':'refrigerator_left_hinge','door_right':'refrigerator_right_hinge','mullion':'refrigerator_mullion_hinge'}
+offsets={link:[0.,0.,0.] for link in anchors}
+offsets['door_right'][0]=G['right_hinge_axis_cabinet_x_m']-anchors['door_right'][0]
 masses={'cabinet':70.,'door_left':7.,'door_right':7.,'mullion':.3}
 coms={'cabinet':[0,0,.9],'door_left':[.165,-.022,.598],'door_right':[-.165,-.022,.598],'mullion':[.018,.007,.554]}
+# Keep the same world-space center of mass if Blender exports a shifted body frame.
+coms['door_right'][0]+=.342000008-anchors['door_right'][0]
 inertias={'cabinet':[20,20,5],'door_left':[.85,.92,.08],'door_right':[.85,.92,.08],'mullion':[.031,.031,.0001]}
 def text(v):return ' '.join(f'{float(x):.9g}' for x in v)
 def rel(a,b):return [a[i]-b[i] for i in range(3)]
@@ -21,7 +29,7 @@ for link in anchors:
     if link=='cabinet':b=E.SubElement(world,'body',name='refrigerator_base')
     else:
         parent=parents[link];b=E.SubElement(bs[parent],'body',name='refrigerator_'+link,pos=text(rel(anchors[link],anchors[parent])))
-        E.SubElement(b,'joint',name=joints[link],type='hinge',axis='0 0 -1' if link=='door_left' else '0 0 1',range='0 1.57079632679',damping='.15' if link!='mullion' else '.01',frictionloss='0',armature='.002')
+        E.SubElement(b,'joint',name=joints[link],type='hinge',pos=text(offsets[link]),axis='0 0 -1' if link=='door_left' else '0 0 1',range='0 1.57079632679',damping='.15' if link!='mullion' else '.01',frictionloss='0',armature='.002')
         E.SubElement(b,'inertial',pos=text(coms[link]),mass=str(masses[link]),diaginertia=text(inertias[link]))
     bs[link]=b
 for v in G['visuals']:
@@ -50,7 +58,7 @@ fixed=UsdPhysics.FixedJoint.Define(stage,'/Refrigerator/Joints/fixed_base');fixe
 UsdPhysics.FilteredPairsAPI.Apply(stage.GetPrimAtPath(bodypaths['mullion'])).CreateFilteredPairsRel().SetTargets([bodypaths['cabinet']])
 for link,parent in parents.items():
     j=UsdPhysics.RevoluteJoint.Define(stage,'/Refrigerator/Joints/'+joints[link]);j.CreateBody0Rel().SetTargets([bodypaths[parent]]);j.CreateBody1Rel().SetTargets([bodypaths[link]])
-    j.CreateAxisAttr('Z');j.CreateLocalPos0Attr(Gf.Vec3f(*rel(anchors[link],anchors[parent])));j.CreateLocalPos1Attr(Gf.Vec3f(0));j.CreateLowerLimitAttr(0);j.CreateUpperLimitAttr(90);j.CreateCollisionEnabledAttr(False)
+    j.CreateAxisAttr('Z');j.CreateLocalPos0Attr(Gf.Vec3f(*[rel(anchors[link],anchors[parent])[i]+offsets[link][i] for i in range(3)]));j.CreateLocalPos1Attr(Gf.Vec3f(*offsets[link]));j.CreateLowerLimitAttr(0);j.CreateUpperLimitAttr(90);j.CreateCollisionEnabledAttr(False)
     if link=='door_left':
         flip=Gf.Quatf(0,Gf.Vec3f(1,0,0));j.CreateLocalRot0Attr(flip);j.CreateLocalRot1Attr(flip)
 for v in G['visuals']:
@@ -63,6 +71,8 @@ for c in G['collisions']:
 stage.GetRootLayer().Save()
 meta={'asset_id':'refrigerator:haier_bcd402_v1','entries':{'mujoco':'refrigerator.xml','isaac':'refrigerator.usda','blender':'source/haier_bcd402_body_v1.blend'},'initial_joint_positions':{j:0. for j in joints.values()},'joint_limits_rad':{j:[0,math.pi/2] for j in joints.values()},'units':'meter','up_axis':'Z','front_axis':'-Y','fixed_base':True,'contents_included':False,'physics_calibrated':False,'estimated_mass_kg':masses,'limitations':['Component dimensions are estimated from photos','Mass, inertia, friction and damping are provisional engineering placeholders','No seal adhesion or pressure differential model','Mullion is independent and has no automatic folding constraint','Freezer is static','MuJoCo parent-child contact filtering applies; full self-collision not calibrated','USD structural export does not imply Isaac runtime validation'],'preferred_robot':'g1_o7_left_wholebody','visual_meshes':len(G['visuals']),'collision_boxes':len(G['collisions'])}
 meta['limitations'].append('Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation')
+meta['version']='0.1.1'
+meta['limitations'].append('Right hinge axis geometrically corrected to cabinet outer side; not hardware calibrated. Left hinge unchanged.')
 (R/'manifest.json').write_text(json.dumps(meta,indent=2))
 print('BUILT',R)
 

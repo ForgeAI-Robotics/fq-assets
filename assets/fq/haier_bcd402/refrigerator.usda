@@ -2586,8 +2586,8 @@ def Xform "Refrigerator" (
             rel physics:body0 = </Refrigerator/cabinet>
             rel physics:body1 = </Refrigerator/door_right>
             bool physics:collisionEnabled = 0
-            point3f physics:localPos0 = (0.342, -0.275, 0.8495833)
-            point3f physics:localPos1 = (0, 0, 0)
+            point3f physics:localPos0 = (0.354, -0.275, 0.8495833)
+            point3f physics:localPos1 = (0.012, 0, 0)
             float physics:lowerLimit = 0
             float physics:upperLimit = 90
         }

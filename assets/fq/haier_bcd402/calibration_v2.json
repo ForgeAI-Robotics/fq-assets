@@ -13,6 +13,23 @@
   "upper_door_bottom_z_m": 0.848,
   "lower_drawer_panel_height_estimate_m": 0.45,
   "physics_validated": false,
-  "notes": ["Door interior attachment heights adjusted with upper compartment", "Hinge placement and inertia remain provisional", "MP4 labelled kinematic preview prescribes door angle; not evidence of physical grasp", "Final fixture-supported contact trial opened door 25.94 degrees; peak penetration 3.04mm; not full physics validation"]
+  "notes": [
+    "Door interior attachment heights adjusted with upper compartment",
+    "Hinge placement and inertia remain provisional",
+    "MP4 labelled kinematic preview prescribes door angle; not evidence of physical grasp",
+    "Final fixture-supported contact trial opened door 25.94 degrees; peak penetration 3.04mm; not full physics validation"
+  ],
+  "right_hinge_correction": {
+    "revision": "2026-10-12",
+    "axis_cabinet_x_m": 0.354,
+    "original_axis_cabinet_x_m": 0.342,
+    "joint_offset_in_original_door_frame_m": [
+      0.012,
+      0,
+      0
+    ],
+    "basis": "Geometric correction of estimated axis to cabinet outer side; not measured hardware calibration",
+    "validated_scope": "Right door 0-90 degree static collision sweep; fixture-supported G1+O6 palm push to about55 degrees",
+    "physics_calibrated": false
+  }
 }
-

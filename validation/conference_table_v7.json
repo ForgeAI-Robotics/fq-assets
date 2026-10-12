@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "entry": "assets/fq/conference_table/table",
+      "visual_meshes": 33,
+      "dimensions_m": [
+        4.0113635659217834,
+        1.1999998092651367,
+        0.75
+      ],
+      "conservative_collision_preserved": true,
+      "metal_parts": 3
+    },
+    {
+      "entry": "scenes/fq/office_baseline/scene",
+      "visual_meshes": 33,
+      "dimensions_m": [
+        4.0113635659217834,
+        1.1999998092651367,
+        0.75
+      ],
+      "conservative_collision_preserved": true,
+      "metal_parts": 3
+    }
+  ],
+  "physics_limit": "No navigation/under-table traversal regression; conservative collision unchanged",
+  "isaac": {
+    "source": "fq-sim-assets/scenes/fq/office_baseline/scene.usda packaged with all dependencies",
+    "mesh_count": 33,
+    "cabinet_removed": true,
+    "missing_dependencies": [],
+    "renderer": "Isaac Sim 4.5 PathTracing",
+    "physics_regression_tested": false
+  },
+  "full_offline_catalog_validation_passed": true
+}

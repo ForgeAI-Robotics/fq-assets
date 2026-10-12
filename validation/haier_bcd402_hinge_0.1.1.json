@@ -1,0 +1,18 @@
+{
+  "asset_version": "0.1.1",
+  "right_axis_x_m": 0.35400000800000003,
+  "sweep_degrees": [
+    0,
+    90
+  ],
+  "step_degrees": 0.5,
+  "physics_calibrated": false,
+  "isaac_physx_runtime_tested": false,
+  "baseline_geometry_and_masks_unchanged": true,
+  "baseline_maximum_internal_penetration_m": 0.0035207299836963225,
+  "maximum_internal_penetration_m": 0.0,
+  "parent_child_collision_filter_disabled_for_sweep": true,
+  "usd_joint_anchor_error_m": 5.587935447692871e-09,
+  "regenerated_geometry_max_error": 7.600000073715307e-09,
+  "passed": true
+}

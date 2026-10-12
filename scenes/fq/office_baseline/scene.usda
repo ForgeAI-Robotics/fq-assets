@@ -46,5 +46,53 @@ over "World"
             }
         }
     }
+
+    over "meeting_cabinet" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_cabinet_collision" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_tabletop" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_table_leg_0_0" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_table_leg_0_1" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_table_leg_1_0" (
+        active = false
+    )
+    {
+    }
+
+    over "meeting_table_leg_1_1" (
+        active = false
+    )
+    {
+    }
+
+    def Xform "meeting_table_v7" (
+        prepend references = @../../../assets/fq/conference_table/table.usda@</World/meeting_table_v7>
+    )
+    {
+    }
 }
 

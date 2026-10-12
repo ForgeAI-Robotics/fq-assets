@@ -72,7 +72,7 @@
   ],
   "refrigerator": {
     "asset_id": "fq:articulated/haier_bcd402",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "position_m": [
       16.5,
       11.9,
