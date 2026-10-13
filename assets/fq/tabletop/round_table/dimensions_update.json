@@ -1,0 +1,20 @@
+{
+  "target_size_m": [
+    0.7,
+    0.7,
+    0.75
+  ],
+  "source": "User-confirmed 2026-10-13",
+  "previous_size_m": [
+    0.9058440628980966,
+    0.9034506256898015,
+    0.775
+  ],
+  "scale_xyz": [
+    0.7727599359214952,
+    0.774807145067321,
+    0.9677419354838709
+  ],
+  "source_manifest_preserved_as_historical": true,
+  "baseline_coke_lowered_m": 0.025
+}

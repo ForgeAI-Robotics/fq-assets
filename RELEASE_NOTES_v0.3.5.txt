@@ -1,0 +1,2 @@
+v0.3.5
+Correct round table visual and collision dimensions to user-confirmed 0.70 x 0.70 x 0.75 m in MuJoCo and USD. Round table v0.1.1, baseline v0.1.3. Lower baseline coke by 25 mm, preserving 2 mm clearance. Existing task locks are unchanged.
