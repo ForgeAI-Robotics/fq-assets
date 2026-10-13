@@ -1,0 +1,34 @@
+[
+  {
+    "version": "before",
+    "camera": "d435i_head_rgb",
+    "near_m": 0.0001,
+    "depth_center_m": 0.0005608449573628604,
+    "near_pixels_under_1cm": 307200,
+    "total_pixels": 307200
+  },
+  {
+    "version": "before",
+    "camera": "d435i_head_depth",
+    "near_m": 0.0001,
+    "depth_center_m": 1.1374638080596924,
+    "near_pixels_under_1cm": 0,
+    "total_pixels": 307200
+  },
+  {
+    "version": "after",
+    "camera": "d435i_head_rgb",
+    "near_m": 0.0001,
+    "depth_center_m": 1.184403419494629,
+    "near_pixels_under_1cm": 0,
+    "total_pixels": 307200
+  },
+  {
+    "version": "after",
+    "camera": "d435i_head_depth",
+    "near_m": 0.0001,
+    "depth_center_m": 1.1374638080596924,
+    "near_pixels_under_1cm": 0,
+    "total_pixels": 307200
+  }
+]

@@ -1,0 +1,174 @@
+{
+  "status": "provisional_geometry_not_measured_on_hardware",
+  "original_mesh": "meshes/head_link.STL",
+  "original_sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411",
+  "visual_mesh": "meshes/head_camera_slot.STL",
+  "collision_meshes": [
+    "meshes/head_camera_slot_collision_1.STL",
+    "meshes/head_camera_slot_collision_2.STL",
+    "meshes/head_camera_slot_collision_3.STL",
+    "meshes/head_camera_slot_collision_4.STL"
+  ],
+  "source": "Operator confirms physical head has camera slot; dimensions inferred from current D435i CAD envelope, not official slot CAD.",
+  "slot_frame": "d435i_head_housing",
+  "head_T_slot": [
+    [
+      -0.041062263414941416,
+      0.7064995452806606,
+      0.7065212544867012,
+      0.04298137726299925
+    ],
+    [
+      0.9990406777704866,
+      0.018260959131492546,
+      0.039802782961562644,
+      -0.03641040632699355
+    ],
+    [
+      0.015218892309536325,
+      0.7074778653002636,
+      -0.7065716208757984,
+      0.4549957193853557
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "cut_box_min_m": [
+    -0.047,
+    -0.0145,
+    -0.0271
+  ],
+  "cut_box_max_m": [
+    0.047,
+    0.0145,
+    0.2
+  ],
+  "nominal_camera_clearance_m": 0.002,
+  "removed_mesh_volume_fraction": 0.039985108716966034,
+  "original_triangles": 18654,
+  "opened_triangles": 18234,
+  "visual_watertight": true,
+  "collision_strategy": "Four non-empty convex regions of original collision hull outside camera pocket. Collision proxies are invisible to RGB and remain conservative outside the pocket.",
+  "physical_parameters": "Explicit mass, inertia, joints, camera extrinsics and intrinsics unchanged; head contact geometry intentionally changed.",
+  "limitations": [
+    "Slot dimensions and housing CAD offset are approximate.",
+    "Hand-eye candidate still awaits independent physical validation.",
+    "Opening geometry does not validate camera optics, depth accuracy or infrared emitter occlusion.",
+    "Native depth retains 5/825 sampled head-edge occlusions; collision-ray intersections are not optical occlusion."
+  ],
+  "idealized_optical_channels": {
+    "status": "simulation_pinhole_window_not_physical_lens_model",
+    "margin_m": 0.001,
+    "near_m": -0.0001,
+    "far_m": 0.04,
+    "cameras": [
+      "rgb",
+      "native_depth"
+    ],
+    "parts": [
+      {
+        "mesh": "head_d435i_optics_00",
+        "original_triangles": 126,
+        "result_triangles": 126
+      },
+      {
+        "mesh": "head_d435i_optics_01",
+        "original_triangles": 1416,
+        "result_triangles": 1416
+      },
+      {
+        "mesh": "head_d435i_optics_02",
+        "original_triangles": 1416,
+        "result_triangles": 1416
+      },
+      {
+        "mesh": "head_d435i_optics_03",
+        "original_triangles": 18498,
+        "result_triangles": 18498
+      },
+      {
+        "mesh": "head_d435i_optics_04",
+        "original_triangles": 172,
+        "result_triangles": 172
+      },
+      {
+        "mesh": "head_d435i_optics_05",
+        "original_triangles": 112,
+        "result_triangles": 112
+      },
+      {
+        "mesh": "head_d435i_optics_06",
+        "original_triangles": 60,
+        "result_triangles": 60
+      },
+      {
+        "mesh": "head_d435i_optics_07",
+        "original_triangles": 20,
+        "result_triangles": 20
+      },
+      {
+        "mesh": "head_d435i_optics_08",
+        "original_triangles": 20,
+        "result_triangles": 20
+      },
+      {
+        "mesh": "head_d435i_optics_09",
+        "original_triangles": 45,
+        "result_triangles": 45
+      },
+      {
+        "mesh": "head_d435i_optics_10",
+        "original_triangles": 52,
+        "result_triangles": 52
+      },
+      {
+        "mesh": "head_d435i_optics_11",
+        "original_triangles": 172,
+        "result_triangles": 172
+      },
+      {
+        "mesh": "head_d435i_optics_12",
+        "original_triangles": 100000,
+        "result_triangles": 104236
+      },
+      {
+        "mesh": "head_d435i_optics_13",
+        "original_triangles": 100000,
+        "result_triangles": 109984
+      },
+      {
+        "mesh": "head_d435i_optics_14",
+        "original_triangles": 489,
+        "result_triangles": 541
+      },
+      {
+        "mesh": "head_d435i_optics_15",
+        "original_triangles": 32,
+        "result_triangles": 32
+      },
+      {
+        "mesh": "head_d435i_optics_16",
+        "original_triangles": 7250,
+        "result_triangles": 8056
+      },
+      {
+        "mesh": "head_d435i_optics_19",
+        "original_triangles": 12,
+        "result_triangles": 40
+      }
+    ],
+    "scope": "Only head instance; standalone D435i and wrist cameras unchanged."
+  },
+  "validation": {
+    "report": "validation/head_slot_20261013.json",
+    "rgb_head_hits": 0,
+    "native_depth_head_hits": 5,
+    "samples_per_camera_per_pose": 825,
+    "waist_poses_per_robot": 3,
+    "self_housing_hits_after_idealized_optics": 0
+  }
+}

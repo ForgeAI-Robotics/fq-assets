@@ -1,0 +1,302 @@
+[
+  {
+    "robot": "o6",
+    "dynamics_and_camera_configuration_unchanged": true,
+    "rays": [
+      {
+        "waist_pose_rad": 0,
+        "camera": "rgb",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "rgb",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 175,
+        "nearest_m": 0.030658183028578947
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "rgb",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "depth",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 5,
+        "nearest_m": 0.03401339351993296
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "depth",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 243,
+        "nearest_m": 0.026517745819859367
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "depth",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "rgb",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "rgb",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 175,
+        "nearest_m": 0.030658183028578916
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "rgb",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "depth",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 5,
+        "nearest_m": 0.03401339351993296
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "depth",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 243,
+        "nearest_m": 0.02651774581985935
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "depth",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "rgb",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "rgb",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 175,
+        "nearest_m": 0.030658183028578898
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "rgb",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "depth",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 5,
+        "nearest_m": 0.034013393519932995
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "depth",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 243,
+        "nearest_m": 0.026517745819859467
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "depth",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      }
+    ]
+  },
+  {
+    "robot": "o7",
+    "dynamics_and_camera_configuration_unchanged": true,
+    "rays": [
+      {
+        "waist_pose_rad": 0,
+        "camera": "rgb",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "rgb",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 175,
+        "nearest_m": 0.030658183028578947
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "rgb",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "depth",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 5,
+        "nearest_m": 0.03401339351993296
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "depth",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 243,
+        "nearest_m": 0.026517745819859367
+      },
+      {
+        "waist_pose_rad": 0,
+        "camera": "depth",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "rgb",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "rgb",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 175,
+        "nearest_m": 0.030658183028578916
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "rgb",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "depth",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 5,
+        "nearest_m": 0.03401339351993296
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "depth",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 243,
+        "nearest_m": 0.02651774581985935
+      },
+      {
+        "waist_pose_rad": 0.25,
+        "camera": "depth",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "rgb",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "rgb",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 175,
+        "nearest_m": 0.030658183028578898
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "rgb",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "depth",
+        "scope": "head_visual",
+        "samples": 825,
+        "hits_within_30cm": 5,
+        "nearest_m": 0.034013393519932995
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "depth",
+        "scope": "head_collision",
+        "samples": 825,
+        "hits_within_30cm": 243,
+        "nearest_m": 0.026517745819859467
+      },
+      {
+        "waist_pose_rad": -0.25,
+        "camera": "depth",
+        "scope": "camera_housing_visual",
+        "samples": 825,
+        "hits_within_30cm": 0,
+        "nearest_m": null
+      }
+    ]
+  }
+]

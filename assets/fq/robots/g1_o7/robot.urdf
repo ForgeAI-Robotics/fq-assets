@@ -515,14 +515,32 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/head_link.STL" />
+        <mesh filename="meshes/head_camera_slot.STL" />
       </geometry>
       <material name="dark" />
     </visual>
-    <collision>
+    <collision name="head_camera_slot_collision_1">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/head_link.STL" />
+        <mesh filename="meshes/head_camera_slot_collision_1.STL" />
+      </geometry>
+    </collision>
+    <collision name="head_camera_slot_collision_2">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/head_camera_slot_collision_2.STL" />
+      </geometry>
+    </collision>
+    <collision name="head_camera_slot_collision_3">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/head_camera_slot_collision_3.STL" />
+      </geometry>
+    </collision>
+    <collision name="head_camera_slot_collision_4">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/head_camera_slot_collision_4.STL" />
       </geometry>
     </collision>
   </link>
@@ -2020,163 +2038,165 @@
   </joint>
   <link name="d435i_head_housing">
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_00_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_00.STL" />
       </geometry>
-      <material name="head_d435i_visual_00_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_00">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_01_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_01.STL" />
       </geometry>
-      <material name="head_d435i_visual_01_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_01">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_02_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_02.STL" />
       </geometry>
-      <material name="head_d435i_visual_02_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_02">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_03_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_03.STL" />
       </geometry>
-      <material name="head_d435i_visual_03_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_03">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_04_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_04.STL" />
       </geometry>
-      <material name="head_d435i_visual_04_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_04">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_05_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_05.STL" />
       </geometry>
-      <material name="head_d435i_visual_05_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_05">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_06_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_06.STL" />
       </geometry>
-      <material name="head_d435i_visual_06_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_06">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_07_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_07.STL" />
       </geometry>
-      <material name="head_d435i_visual_07_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_07">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_08_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_08.STL" />
       </geometry>
-      <material name="head_d435i_visual_08_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_08">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_09_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_09.STL" />
       </geometry>
-      <material name="head_d435i_visual_09_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_09">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_10_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_10.STL" />
       </geometry>
-      <material name="head_d435i_visual_10_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_10">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_11_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_11.STL" />
       </geometry>
-      <material name="head_d435i_visual_11_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_11">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_12_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_12.STL" />
       </geometry>
-      <material name="head_d435i_visual_12_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_12">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_12_1.stl" />
+        <mesh filename="meshes/head_d435i_optics_13.STL" />
       </geometry>
-      <material name="head_d435i_visual_12_1">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_13">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_12_2.stl" />
+        <mesh filename="meshes/head_d435i_optics_14.STL" />
       </geometry>
-      <material name="head_d435i_visual_12_2">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_14">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_13_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_15.STL" />
       </geometry>
-      <material name="head_d435i_visual_13_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_15">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_14_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_16.STL" />
       </geometry>
-      <material name="head_d435i_visual_14_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_16">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_15_0.stl" />
+        <mesh filename="meshes/head_d435i_optics_19.STL" />
       </geometry>
-      <material name="head_d435i_visual_15_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-      </material>
-    </visual>
-    <visual>
-      <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_16_0.stl" />
-      </geometry>
-      <material name="head_d435i_visual_16_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-      </material>
-    </visual>
-    <visual>
-      <geometry>
-        <mesh filename="../../cameras/realsense_d435i/meshes/d435i_17_0.stl" />
-      </geometry>
-      <material name="head_d435i_visual_17_0">
-        <color rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+      <material name="head_d435i_optics_19">
+        <color rgba="0.7490196 0.7490196 0.7490196 1.0" />
       </material>
     </visual>
   </link>

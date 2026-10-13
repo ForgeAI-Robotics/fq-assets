@@ -1,0 +1,38 @@
+[
+  {
+    "model": "data/robots/g1_o6/g1_29dof_wholebody_o6.xml",
+    "compiled": true,
+    "mass_inertia_joints_camera_unchanged": true
+  },
+  {
+    "model": "data/robots/g1_o6/d435i/g1_o6_mp.xml",
+    "compiled": true,
+    "mass_inertia_joints_camera_unchanged": true,
+    "camera_box_separating_axis_clearance_m": 0.00199997864348056,
+    "mujoco_unfiltered_distances_m": [
+      0.0019999969400604227,
+      0.00199998548666851,
+      0.0019999844850493356,
+      0.0
+    ],
+    "distance_note": "Analytic separating planes show >=1.9 mm clearance; mj_geomDistance reports zero for the rear hull. Same-weld self-contact is filtered. No claim of hardware clearance."
+  },
+  {
+    "model": "data/robots/g1_o6/d435i/g1_o6_mp_capture.xml",
+    "compiled": true,
+    "mass_inertia_joints_camera_unchanged": true,
+    "camera_box_separating_axis_clearance_m": 0.00199997864348056,
+    "mujoco_unfiltered_distances_m": [
+      0.0019999969400604227,
+      0.00199998548666851,
+      0.0019999844850493356,
+      0.0
+    ],
+    "distance_note": "Analytic separating planes show >=1.9 mm clearance; mj_geomDistance reports zero for the rear hull. Same-weld self-contact is filtered. No claim of hardware clearance."
+  },
+  {
+    "model": "data/robots/g1_o7_left/g1_29dof_wholebody_o7_left.xml",
+    "compiled": true,
+    "mass_inertia_joints_camera_unchanged": true
+  }
+]

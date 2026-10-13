@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/mnt/simple/data/robots/g1_o6/g1_29dof_wholebody_o6.usd",
+    "head_visual_and_four_convex_collision_parts_updated": true,
+    "head_optical_channels_updated": true,
+    "physics_runtime_tested": false
+  },
+  {
+    "path": "/mnt/simple/data/robots/g1_o7_left/g1_29dof_wholebody_o7_left.usd",
+    "head_visual_and_four_convex_collision_parts_updated": true,
+    "head_optical_channels_updated": true,
+    "physics_runtime_tested": false
+  }
+]

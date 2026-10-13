@@ -86,6 +86,29 @@
     <mesh name="d435i_visual_15_0" file="../../../cameras/realsense_d435i/meshes/d435i_15_0.stl" />
     <mesh name="d435i_visual_16_0" file="../../../cameras/realsense_d435i/meshes/d435i_16_0.stl" />
     <mesh name="d435i_visual_17_0" file="../../../cameras/realsense_d435i/meshes/d435i_17_0.stl" />
+    <mesh name="head_camera_slot" file="head_camera_slot.STL" />
+    <mesh name="head_camera_slot_collision_1" file="head_camera_slot_collision_1.STL" />
+    <mesh name="head_camera_slot_collision_2" file="head_camera_slot_collision_2.STL" />
+    <mesh name="head_camera_slot_collision_3" file="head_camera_slot_collision_3.STL" />
+    <mesh name="head_camera_slot_collision_4" file="head_camera_slot_collision_4.STL" />
+    <mesh name="head_d435i_optics_00" file="head_d435i_optics_00.STL" />
+    <mesh name="head_d435i_optics_01" file="head_d435i_optics_01.STL" />
+    <mesh name="head_d435i_optics_02" file="head_d435i_optics_02.STL" />
+    <mesh name="head_d435i_optics_03" file="head_d435i_optics_03.STL" />
+    <mesh name="head_d435i_optics_04" file="head_d435i_optics_04.STL" />
+    <mesh name="head_d435i_optics_05" file="head_d435i_optics_05.STL" />
+    <mesh name="head_d435i_optics_06" file="head_d435i_optics_06.STL" />
+    <mesh name="head_d435i_optics_07" file="head_d435i_optics_07.STL" />
+    <mesh name="head_d435i_optics_08" file="head_d435i_optics_08.STL" />
+    <mesh name="head_d435i_optics_09" file="head_d435i_optics_09.STL" />
+    <mesh name="head_d435i_optics_10" file="head_d435i_optics_10.STL" />
+    <mesh name="head_d435i_optics_11" file="head_d435i_optics_11.STL" />
+    <mesh name="head_d435i_optics_12" file="head_d435i_optics_12.STL" />
+    <mesh name="head_d435i_optics_13" file="head_d435i_optics_13.STL" />
+    <mesh name="head_d435i_optics_14" file="head_d435i_optics_14.STL" />
+    <mesh name="head_d435i_optics_15" file="head_d435i_optics_15.STL" />
+    <mesh name="head_d435i_optics_16" file="head_d435i_optics_16.STL" />
+    <mesh name="head_d435i_optics_19" file="head_d435i_optics_19.STL" />
   </asset>
   <worldbody>
     <body name="pelvis">
@@ -195,8 +218,11 @@
             </body>
             <body name="head_link" pos="0.0039635 0 -0.054">
               <inertial pos="0.005267 0.000299 0.449869" quat="0.698214 0.0103452 0.0112083 0.715727" mass="1.036" diaginertia="0.00418528 0.00408711 0.00180579" />
-              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.2 0.2 0.2 1" mesh="head_link" />
-              <geom type="mesh" rgba="0.2 0.2 0.2 1" mesh="head_link" />
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.2 0.2 0.2 1" mesh="head_camera_slot" />
+              <geom type="mesh" rgba="0.2 0.2 0.2 0" mesh="head_camera_slot_collision_1" name="head_camera_slot_collision_1" group="3" />
+              <geom type="mesh" rgba="0.2 0.2 0.2 0" mesh="head_camera_slot_collision_2" name="head_camera_slot_collision_2" group="3" />
+              <geom type="mesh" rgba="0.2 0.2 0.2 0" mesh="head_camera_slot_collision_3" name="head_camera_slot_collision_3" group="3" />
+              <geom type="mesh" rgba="0.2 0.2 0.2 0" mesh="head_camera_slot_collision_4" name="head_camera_slot_collision_4" group="3" />
             </body>
             <body name="waist_support_link" pos="0.0039635 0 -0.054">
               <inertial pos="0 0 0" mass="0.001" diaginertia="1e-07 1e-07 1e-07" />
@@ -507,26 +533,26 @@
               </body>
             </body>
             <body name="d435i_head_housing" pos="0.04694487726299925 -0.03641040632699355 0.4009957193853557" quat="0.2601091476864822 0.6417258757307057 0.6644348808239662 0.2811715150080332">
-              <geom name="head_d435i_visual_00_0" type="mesh" mesh="d435i_visual_00_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_01_0" type="mesh" mesh="d435i_visual_01_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_02_0" type="mesh" mesh="d435i_visual_02_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_03_0" type="mesh" mesh="d435i_visual_03_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_04_0" type="mesh" mesh="d435i_visual_04_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_05_0" type="mesh" mesh="d435i_visual_05_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_06_0" type="mesh" mesh="d435i_visual_06_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_07_0" type="mesh" mesh="d435i_visual_07_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_08_0" type="mesh" mesh="d435i_visual_08_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_09_0" type="mesh" mesh="d435i_visual_09_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_10_0" type="mesh" mesh="d435i_visual_10_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_11_0" type="mesh" mesh="d435i_visual_11_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_12_0" type="mesh" mesh="d435i_visual_12_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_12_1" type="mesh" mesh="d435i_visual_12_1" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_12_2" type="mesh" mesh="d435i_visual_12_2" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_13_0" type="mesh" mesh="d435i_visual_13_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_14_0" type="mesh" mesh="d435i_visual_14_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_15_0" type="mesh" mesh="d435i_visual_15_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_16_0" type="mesh" mesh="d435i_visual_16_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
-              <geom name="head_d435i_visual_17_0" type="mesh" mesh="d435i_visual_17_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
+              <geom name="head_d435i_visual_00_0" type="mesh" mesh="head_d435i_optics_00" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_01_0" type="mesh" mesh="head_d435i_optics_01" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_02_0" type="mesh" mesh="head_d435i_optics_02" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_03_0" type="mesh" mesh="head_d435i_optics_03" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_04_0" type="mesh" mesh="head_d435i_optics_04" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_05_0" type="mesh" mesh="head_d435i_optics_05" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_06_0" type="mesh" mesh="head_d435i_optics_06" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_07_0" type="mesh" mesh="head_d435i_optics_07" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_08_0" type="mesh" mesh="head_d435i_optics_08" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_09_0" type="mesh" mesh="head_d435i_optics_09" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_10_0" type="mesh" mesh="head_d435i_optics_10" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_11_0" type="mesh" mesh="head_d435i_optics_11" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_12_0" type="mesh" mesh="head_d435i_optics_12" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_12_1" type="mesh" mesh="head_d435i_optics_13" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_12_2" type="mesh" mesh="head_d435i_optics_14" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_13_0" type="mesh" mesh="head_d435i_optics_15" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_14_0" type="mesh" mesh="head_d435i_optics_16" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="head_d435i_visual_15_0" type="mesh" mesh="d435i_visual_15_0" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 0 0" />
+              <geom name="head_d435i_visual_16_0" type="mesh" mesh="d435i_visual_16_0" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 0 0" />
+              <geom name="head_d435i_visual_17_0" type="mesh" mesh="head_d435i_optics_19" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" pos="0 0 0" quat="1 0 0 0" />
             </body>
             <camera name="d435i_head_rgb" resolution="640 480" sensorsize="640 480" focalpixel="604.737670898438 604.221618652344" principalpixel="4.630462646483977 13.83283996582" pos="0.04257231230795391 -0.004112736266231373 0.404528591355674" quat="0.6644348808239662 0.2811715150080332 -0.2601091476864822 -0.6417258757307057" />
             <site name="d435i_head_rgb_optical" size=".001" rgba="0 0 0 0" pos="0.04257231230795391 -0.004112736266231373 0.404528591355674" quat="-0.2811715150080332 0.6644348808239662 -0.6417258757307057 0.2601091476864822" />
