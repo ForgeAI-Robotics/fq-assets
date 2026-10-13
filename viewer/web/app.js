@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { SensingPreview } from './sensing.js';
 
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -26,10 +25,8 @@ controls.minPolarAngle=.07;controls.maxPolarAngle=Math.PI*.9;controls.screenSpac
 scene.add(new THREE.HemisphereLight(0xfaf9f3,0xa9b4a1,2.3));
 const keyLight=new THREE.DirectionalLight(0xfff9e9,3.2);keyLight.castShadow=true;keyLight.shadow.mapSize.set(2048,2048);keyLight.shadow.bias=-.00015;scene.add(keyLight);scene.add(keyLight.target);
 const fill=new THREE.DirectionalLight(0xffffff,1.6);scene.add(fill);scene.add(fill.target);
-const resetRobotJoints=()=>{selected?.joints.forEach(j=>angles.set(j.name,j.initial));applyCouplings();updateBodies();updateJointUI();};
-const sensing=new SensingPreview(()=>({scene,camera,controls,keyLight,fill,selected,catalog,activeModel,modelRoot,bodyGroups,pickables,colliders,ground,grid,primitive,frameModel,setMode,toast,resetJoints:resetRobotJoints,canvas:renderer.domElement}));
 new ResizeObserver(()=>{const w=$('canvas-host').clientWidth,h=$('canvas-host').clientHeight;if(w&&h){camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h);}}).observe($('canvas-host'));
-renderer.setAnimationLoop(now=>{controls.update();sensing.render(now);renderer.render(scene,camera);});
+renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});
 
 function toast(text){$('toast').textContent=text;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2800);}
 function fmt(n,d=3){return n==null?'—':Number(n).toLocaleString('zh-CN',{maximumFractionDigits:d});}
@@ -52,7 +49,7 @@ function showProperties(a){
     html+=section('仿真参考配置',row('RGB',`${rgb.width} × ${rgb.height}`)+row('深度',`${depth.width} × ${depth.height}`)+row('IMU 仿真','未接入')+`<details class="property-details"><summary>查看参考内参</summary>${row('RGB fx / fy',`${fmt(rgb.fx)} / ${fmt(rgb.fy)}`)}${row('RGB cx / cy',`${fmt(rgb.cx)} / ${fmt(rgb.cy)}`)}${row('Depth fx / fy',`${fmt(depth.fx)} / ${fmt(depth.fy)}`)}${row('Depth cx / cy',`${fmt(depth.cx)} / ${fmt(depth.cy)}`)}</details><p class="property-note">${esc(a.simulation.calibration_status)}</p>`);
     html+=section('使用状态',`<p class="property-note">${a.limitations.map(esc).join('<br>')}</p><a class="text-button" href="/?asset=g1_o6">查看 G1 + O6 装配 ↗</a>`);
   }
-  if(a.camera_mounts)html+=section('相机装配',row('参考型号','D435i')+row('头部外参','新标定候选 · 待实机验证')+row('头部槽位','近似建模')+'<p class="property-note">感测预览按模型实际定义列出相机；腕部内参为参考值，尚未按设备核实。</p><a class="text-button" href="/?asset=realsense_d435i">查看相机资产 ↗</a>');
+  if(a.camera_mounts)html+=section('相机装配',row('型号','D435i × 3')+row('位置','头部 / 左腕 / 右腕')+row('装配状态','现有参考位姿 · 未重新标定')+'<p class="property-note">仅视觉替换，未新增相机质量或碰撞。</p><a class="text-button" href="/?asset=realsense_d435i">查看相机资产 ↗</a>');
   if(a.friction_range){
     const fr=i=>{let lo=a.friction_range.min[i],hi=a.friction_range.max[i];return Math.abs(lo-hi)<1e-8?fmt(lo,5):`${fmt(lo,5)} – ${fmt(hi,5)}`;};
     html+=section('接触参数 / MUJOCO',row('滑动摩擦',fr(0))+row('扭转摩擦',`${fr(1)} m`)+row('滚动摩擦',`${fr(2)} m`)+`<p class="property-note">模型设定值；有多个碰撞面时显示范围。滑动摩擦为无量纲，扭转与滚动参数使用长度单位。</p>`);
@@ -70,7 +67,7 @@ function showProperties(a){
   html+=section('版本与来源',row(a.kind==='scene'?'场景版本':'物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)),'mono')+
     row('最新库发布',esc(catalog.latest_release.tag))+
     `<p class="property-note">本页展示 main 上的当前资产。整体发布版本与单个物体版本分别记录。</p>`+
-    `<details class="property-details"><summary>来源与模型依据</summary><p class="property-note">${esc(a.upstream_origin)}</p><p class="property-note">属性取自 ${esc(a.property_source)}。${a.slug==='haier_bcd402'&&a.calibration?'冰箱保留 v2 用户尺寸校准记录；部分尺寸仍为估算。':''}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看资产清单 ↗</a></details>`);
+    `<details class="property-details"><summary>来源与模型依据</summary><p class="property-note">${esc(a.upstream_origin)}</p><p class="property-note">属性取自 ${esc(a.property_source)}。${a.calibration?'冰箱保留 v2 用户尺寸校准记录；部分尺寸仍为估算。':''}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看资产清单 ↗</a></details>`);
   $('properties-content').innerHTML=html;
 }
 function renderList(){
@@ -146,7 +143,6 @@ async function buildModel(data,url,token){
   }
   applyCouplings();updateBodies();applyCutaway();frameModel();renderJoints();
   $('loading').hidden=true;$('viewport').dataset.ready='true';
-  sensing.configure();
 }
 function updateBodies(){
   if(!activeModel)return;
@@ -183,7 +179,7 @@ function renderJoints(){
 }
 function setMode(enabled){jointMode=enabled&&!!selected?.joints.length;$('joint-mode').classList.toggle('active',jointMode);$('orbit-mode').classList.toggle('active',!jointMode);$('joint-mode').setAttribute('aria-pressed',jointMode);$('orbit-mode').setAttribute('aria-pressed',!jointMode);$('interaction-hint').textContent=jointMode?'拖动门 / 提手调整 · 拖动空白旋转':'拖动旋转 · 滚轮缩放 · 右键平移';}
 async function selectAsset(slug){
-  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;sensing.stop(false);$('sensing-tabs').hidden=true;selected=a;const token=++loadId;setCategory(a.kind==='scene'?'scene':'object');
+  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;const token=++loadId;setCategory(a.kind==='scene'?'scene':'object');
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':'物体'} / ${a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
@@ -198,22 +194,20 @@ async function selectAsset(slug){
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
 function ray(e){const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);raycaster.setFromCamera(pointer,camera);}
 renderer.domElement.addEventListener('pointerdown',e=>{
-  if(sensing.pointerDown(e))return;
   if(!jointMode||e.button!==0||!modelRoot||$('viewport').dataset.ready!=='true')return;ray(e);const hit=raycaster.intersectObjects(pickables,false).find(h=>h.object.visible);if(!hit?.object.userData.joint)return;
   const name=hit.object.userData.joint,j=jointMap.get(name),group=bodyGroups.get(j.body),pivot=group.localToWorld(new THREE.Vector3(...j.pivot)),axis=new THREE.Vector3(...j.axis).transformDirection(group.matrixWorld),plane=new THREE.Plane().setFromNormalAndCoplanarPoint(axis,pivot),pt=raycaster.ray.intersectPlane(plane,new THREE.Vector3());
   drag={name,start:angles.get(name),x:e.clientX,y:e.clientY,plane,pivot,axis,vector:pt&&Math.abs(raycaster.ray.direction.dot(axis))>.08?pt.clone().sub(pivot).normalize():null};
   controls.enabled=false;renderer.domElement.setPointerCapture(e.pointerId);e.preventDefault();e.stopImmediatePropagation();updateJointUI();
 },true);
 renderer.domElement.addEventListener('pointermove',e=>{
-  if(sensing.pointerMove(e))return;
   if(!drag)return;ray(e);let delta=(e.clientX-drag.x)*.01-(e.clientY-drag.y)*.004;
   if(drag.vector){const pt=raycaster.ray.intersectPlane(drag.plane,new THREE.Vector3());if(pt){const v=pt.sub(drag.pivot).normalize();delta=Math.atan2(drag.axis.dot(new THREE.Vector3().crossVectors(drag.vector,v)),drag.vector.dot(v));}}
   setJoint(drag.name,drag.start+delta);e.preventDefault();e.stopImmediatePropagation();
 },true);
-function endDrag(e){if(sensing.pointerUp(e))return;if(!drag)return;drag=null;controls.enabled=true;updateJointUI();if(renderer.domElement.hasPointerCapture(e.pointerId))renderer.domElement.releasePointerCapture(e.pointerId);e.stopImmediatePropagation();}
+function endDrag(e){if(!drag)return;drag=null;controls.enabled=true;updateJointUI();if(renderer.domElement.hasPointerCapture(e.pointerId))renderer.domElement.releasePointerCapture(e.pointerId);e.stopImmediatePropagation();}
 renderer.domElement.addEventListener('pointerup',endDrag,true);renderer.domElement.addEventListener('pointercancel',endDrag,true);
 $('orbit-mode').onclick=()=>setMode(false);$('joint-mode').onclick=()=>setMode(true);
-$('reset-view').onclick=()=>sensing.active?sensing.preset():frameModel();$('reset-joints').onclick=resetRobotJoints;
+$('reset-view').onclick=frameModel;$('reset-joints').onclick=()=>{selected.joints.forEach(j=>angles.set(j.name,j.initial));applyCouplings();updateBodies();updateJointUI();};
 $('collision-toggle').onclick=()=>{showCollision=!showCollision;colliders.forEach(m=>m.visible=showCollision);$('collision-toggle').setAttribute('aria-pressed',showCollision);};
 $('cutaway-toggle').onclick=()=>{cutaway=!cutaway;applyCutaway();};
 $('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('资产链接已复制');}catch{const input=document.createElement('input');input.value=location.href;document.body.append(input);input.select();const ok=document.execCommand('copy');input.remove();toast(ok?'资产链接已复制':'请复制浏览器地址栏中的链接');}};

@@ -5,7 +5,6 @@
   <title>FQ Assets · 仿真资产目录</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/sensing.css">
   <script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/addons/"}}</script>
 </head>
 <body>
@@ -27,23 +26,15 @@
     </aside>
     <section class="viewer-column">
       <div class="asset-heading"><div><div class="breadcrumb" id="breadcrumb">资产库 / 物体</div><h1 id="asset-name">选择一个资产</h1><p id="asset-subtitle">查看模型、基础属性与关节</p></div><div class="asset-heading-actions"><span id="asset-version" class="version-pill">main</span><button id="copy-link" class="icon-button" aria-label="复制当前资产链接" title="复制当前资产链接">↗</button></div></div>
-      <div id="sensing-tabs" class="sensing-tabs" hidden><button id="model-view" class="active" aria-pressed="true">模型查看</button><button id="sensor-view" aria-pressed="false">感测预览</button><span>相机位置 · 观测范围</span></div>
-      <section id="sensing-controls" class="sensing-controls" hidden>
-        <div class="sensing-toolbar"><label>站位 <select id="sensor-preset"><option value="table">baseline · 圆桌前</option><option value="fridge">baseline · 冰箱前</option></select></label><label>相机 <select id="sensor-camera"></select></label><button id="sensor-reset" class="text-button">恢复预设 ↺</button></div>
-        <div class="sensing-toolbar"><label><input type="checkbox" id="sensor-frustum" checked> 显示视锥</label><label>显示距离 <input id="sensor-range" type="range" min="0.3" max="3" step="0.1" value="1.2"><output id="sensor-range-label">1.2 m</output></label><label><input type="checkbox" id="sensor-cutaway" checked> 第三视角去顶棚</label></div>
-        <div id="sensor-door-controls" hidden></div><p id="sensor-status" role="status"></p>
-      </section>
       <div id="viewport" class="viewport" aria-label="三维资产预览">
         <div class="viewer-top"><div class="viewer-label"><span class="dot"></span>交互预览 <span class="viewer-label-divider">/</span><span id="pose-label">静态姿态</span></div><div id="mode-toggle" class="mode-toggle" hidden><button id="orbit-mode" class="active" aria-pressed="true">旋转查看</button><button id="joint-mode" aria-pressed="false">拖动关节</button></div></div>
         <div id="canvas-host"></div>
-        <div id="sensor-window" class="sensor-window" hidden><div class="sensor-window-heading"><strong id="sensor-title">相机视角</strong><button id="sensor-enlarge" aria-pressed="false" aria-label="放大相机视角">放大 ↗</button></div><div id="sensor-canvas"></div><div class="sensor-window-footer">几何视角预览 · 正常遮挡 · 非实机图像</div></div>
         <div id="loading" class="loading"><span class="spinner"></span><strong>正在准备资产</strong><small>加载真实网格与贴图</small></div>
         <div id="viewer-error" class="viewer-error" hidden></div>
         <div class="viewer-bottom"><span id="interaction-hint">拖动旋转 · 滚轮缩放 · 右键平移</span><span class="scale-label">米制 / Z ↑</span></div>
         <div class="view-tools"><button id="reset-view" title="还原视角" aria-label="还原视角">⌖</button><button id="collision-toggle" aria-pressed="false" title="显示碰撞体">碰撞</button><button id="cutaway-toggle" aria-pressed="true" hidden title="去顶棚查看室内">剖视</button></div>
       </div>
       <div class="viewer-caption"><span id="model-note">浏览器姿态预览，不运行接触物理仿真。</span><span id="commit-label" class="mono">main · —</span></div>
-      <details id="sensor-details" class="sensor-details" hidden><summary>相机参数与校验状态</summary><div id="sensor-parameters"></div></details>
       <section id="joint-panel" class="joint-panel" hidden><div class="section-heading"><h2>关节控制 <span id="joint-count"></span></h2><button id="reset-joints" class="text-button">还原初始姿态 ↺</button></div><select id="joint-group" aria-label="关节分组" hidden><option value="left">左侧关节</option><option value="right">右侧关节</option><option value="center">躯干关节</option><option value="all">全部独立关节</option></select><div id="joint-controls"></div><p class="joint-note">在模型上拖动门 / 提手，或使用滑块。角度受模型限位约束，操作不会写回资产库。</p></section>
       <section id="material-controls" class="joint-panel" hidden><label>铺贴重复 <input id="material-repeat" type="range" min="0.5" max="8" step="0.5" value="1"><output id="material-repeat-value">1 ×</output></label><p>平面与球面预览；铺贴调整仅用于查看。</p></section><div id="scene-info" class="scene-info" hidden></div>
     </section>
