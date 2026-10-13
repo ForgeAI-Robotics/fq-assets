@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:objects/coke_cn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "rigid",
   "units": "meter",
   "up_axis": "Z",
@@ -17,7 +17,22 @@
   "derived_from": "provenance/tabletop_source_manifest.json",
   "modifications": [
     "FQ collision/scale/material adaptation",
-    "Chinese can label and UV repair"
+    "Chinese can label and UV repair",
+    "Resize visual and collision geometry to 330ml sleek nominal dimensions; recompute USD inertia from resized MuJoCo collision at retained mass."
   ],
-  "physics_calibrated": false
+  "physics_calibrated": false,
+  "capacity_ml": 330,
+  "can_format": "sleek",
+  "dimensions_m": [
+    0.058,
+    0.058,
+    0.1454
+  ],
+  "dimensions_source": {
+    "url": "https://www.crowncork.com/beverage-packaging/products/beverage-cans/113oz-330ml-crownsleek",
+    "manufacturer": "Crown",
+    "reference": "330ml CrownSleek, 58mm diameter, 145.4mm height",
+    "status": "Nominal format reference, not a measurement of a specific Coca-Cola SKU"
+  },
+  "mass_status": "Existing 0.35 kg full-can estimate retained; not measured"
 }

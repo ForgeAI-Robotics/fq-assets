@@ -22,7 +22,7 @@ over "World"
         prepend references = @../../../assets/fq/tabletop/isaac/coke.usd@
     )
     {
-        double3 xformOp:translate = (10.8, 11.55, 0.8344278971623)
+        double3 xformOp:translate = (10.8, 11.55, 0.8247)
         uniform token[] xformOpOrder = ["xformOp:translate"]
 
         over "Meshes"

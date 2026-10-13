@@ -1,0 +1,24 @@
+{
+  "target_size_m": [
+    0.058,
+    0.058,
+    0.1454
+  ],
+  "previous_size_m": [
+    0.0709578988388995,
+    0.06526809719323455,
+    0.16485579189347727
+  ],
+  "scale_xyz": [
+    0.8173860972360711,
+    0.8886424224730128,
+    0.8819829642015322
+  ],
+  "center_correction_m": [
+    3.664935369074307e-11,
+    -2.4722817543176845e-10,
+    -1.2155149109460694e-09
+  ],
+  "reference": "https://www.crowncork.com/beverage-packaging/products/beverage-cans/113oz-330ml-crownsleek",
+  "source_manifest_preserved_as_historical": true
+}

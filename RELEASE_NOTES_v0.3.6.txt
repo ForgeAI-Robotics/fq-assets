@@ -1,0 +1,2 @@
+v0.3.6
+Resize Chinese coke can to 330ml sleek nominal format: 58 x 58 x 145.4 mm (Crown reference, not surveyed Coca-Cola SKU). Coke v0.1.1, baseline v0.1.4. MuJoCo/USD visuals and collision agree; USD inertia recomputed at retained estimated 0.35 kg. Baseline preserves 2mm clearance above 0.75m table. No running task locks changed.
