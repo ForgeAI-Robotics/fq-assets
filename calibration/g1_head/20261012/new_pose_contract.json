@@ -1,0 +1,18 @@
+{
+  "schema": "dream/charuco-faster-lio-pose-basis/v1",
+  "convention": "published_T_base=C@raw_odom@inverse(C)",
+  "source_topic": "/localization/odom",
+  "source_reported_frame": "map",
+  "source_reported_child": "torso_link",
+  "target_tf": "odom->dummy, with map->odom identity in this deployment",
+  "basis_matrix": [[1,0,0,-0.0039635],[0,1,0,0],[0,0,1,0.844],[0,0,0,1]],
+  "verification": {
+    "date": "2026-10-12",
+    "host": "192.168.31.5",
+    "matched_header_timestamp_pairs": 61,
+    "maximum_matrix_element_error": 1.1750045381120344e-12,
+    "publisher": "faster_lio",
+    "static_transform_source": "/home/dev/g1_lidar_mapping_docker.sh dummy->torso_link",
+    "scope": "This deployed Faster-LIO build/config only; re-audit after changing its TF or odometry implementation."
+  }
+}

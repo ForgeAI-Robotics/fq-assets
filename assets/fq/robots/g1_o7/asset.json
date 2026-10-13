@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:robots/g1_o7",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "robot",
   "name": "G1 + O7 双手",
   "origin": "fq",
@@ -25,17 +25,20 @@
   },
   "limitations": [
     "质量、惯量、碰撞与驱动参数来自现有仿真模型，非实测标定",
-    "浏览器仅作关节姿态预览，不代表抓取、平衡或真实驱动力已验证"
+    "浏览器仅作关节姿态预览，不代表抓取、平衡或真实驱动力已验证",
+    "头部 D435i 使用 2026-10-12 新外参作为仿真默认；实机独立验证未完成，坐标桥接高度有 10mm 待确认；腕部配置不变。"
   ],
   "family": "o7",
   "release_status": "model_snapshot",
   "dependencies": [
     "fq:end_effectors/o7_left",
-    "fq:end_effectors/o7_right"
+    "fq:end_effectors/o7_right",
+    "fq:cameras/realsense_d435i"
   ],
   "dependency_versions": {
     "fq:end_effectors/o7_left": "0.1.0",
-    "fq:end_effectors/o7_right": "0.1.0"
+    "fq:end_effectors/o7_right": "0.1.0",
+    "fq:cameras/realsense_d435i": "0.1.0"
   },
   "mounts": {
     "left": {
@@ -50,5 +53,32 @@
       "position": "0.0415 -0.009 0",
       "quaternion_wxyz": "0.5 0.5 0.5 0.5"
     }
-  }
+  },
+  "camera_mounts": {
+    "head": {
+      "asset_id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "parent_link": "torso_link",
+      "position": [
+        0.04694487726299925,
+        -0.03641040632699355,
+        0.4009957193853557
+      ],
+      "quaternion_wxyz": [
+        0.26010914768648224,
+        0.6417258757307057,
+        0.6644348808239662,
+        0.2811715150080332
+      ],
+      "optical_position": [
+        0.042572312307953906,
+        -0.0041127362662313725,
+        0.404528591355674
+      ],
+      "extrinsic_status": "default_simulation_handeye_20261012_pending_independent_validation",
+      "physics": "visual_only",
+      "profile": "assets/fq/robots/g1_o7/head_camera.json"
+    }
+  },
+  "calibration_record": "assets/fq/robots/g1_o7/head_camera.json"
 }

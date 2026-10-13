@@ -1,0 +1,49 @@
+{
+  "status": "coordinate_convention_mismatch_supported_by_source_pending_independent_physical_validation",
+  "corrects_previous_interpretation": "Negative X in published dummy/torso cannot be interpreted as physical backwards without the localization-to-model bridge. Direct identification of published torso and simulation torso was unverified.",
+  "model_forward_axis": "+X; +Y left; +Z up",
+  "optical_forward_in_published_dummy": [
+    -0.7065212544867663,
+    -0.03980278296161455,
+    -0.7065716208758062
+  ],
+  "optical_forward_after_existing_yaw180_model_bridge": [
+    0.7065212544867663,
+    0.03980278296161455,
+    -0.7065716208758062
+  ],
+  "heading_from_model_forward_deg": 3.2244230632838766,
+  "downward_pitch_deg": 44.95665317241417,
+  "render_review": "head-yaw-bridge-comparison.png: existing isolated render; left previous extrinsic, right new extrinsic using legacy dummy-to-pelvis bridge. Front table and both hands visible.",
+  "sources": {
+    "old_g1_navigation.urdf": {
+      "sha256": "f26768a06da3dc4b09421bb99bc55632873a1c66fd07a5ffd61adeb6726d7117",
+      "finding": "Foot contacts extend to +0.12m at toe, -0.05m at heel; d435 mount x=+0.0576235m. Same foot geometry signs as FQ O6."
+    },
+    "old_g1_navigation_fastlio.py": {
+      "sha256": "5f73d1efe16c4145becfa4fd1353a39fd8ac6b755f1fba22b0487b983245e1c5",
+      "finding": "body_yaw_offset=math.pi (line 55); legacy source topic /baselink2map, not proof of current runtime /localization/odom configuration."
+    },
+    "old_g1_sensor_bridge.py": {
+      "sha256": "a4a0c54176e3d17e7a995fae7d09659c915266964a5ed64edd9e0d99f0ce9dc2",
+      "finding": "Adds body_yaw_offset to source heading (line 130), rotates body velocity consistently."
+    },
+    "old_g1_complete_teleop_twin.py": {
+      "sha256": "db982f5e6b2b6ebc776c142223bd3fa45a535a9b3a2256c351a3e45d180181a7",
+      "finding": "Lines 297-304 explicitly document base/camera forward opposite official USD and supply yaw180 model bridge, conditional on session settings."
+    },
+    "old_g1_lidar_mapping_source.sh": {
+      "sha256": "b1ba950535a46a818902917bb8a5f1f18b69f19dd33de877bd734625f07bb47d",
+      "finding": "Published dummy-to-torso translation has zero rotation. This proves the published chain, not correspondence to physical model torso axes."
+    }
+  },
+  "remaining_limits": [
+    "Existing yaw bridge is source-supported, not a fresh independent physical heading measurement.",
+    "Legacy bridge z=0.8 and O6 pelvis-to-torso z=0.054 imply dummy-to-model-torso z=0.854, versus published torso z=0.844. The 10mm origin discrepancy remains unresolved.",
+    "Do not silently use yaw rotation as a complete surveyed SE(3) frame transform; bridge translation and current deployment correspondence still need validation.",
+    "Synthetic image plausibility does not independently validate 6DoF hand-eye or physical camera placement.",
+    "Preserve input hand-eye matrix; explicitly distinguish published_torso_link from sim_torso_link."
+  ],
+  "eligible_for_promotion": false,
+  "production_changes": false
+}

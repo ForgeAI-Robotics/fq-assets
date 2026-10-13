@@ -2263,6 +2263,24 @@
   <joint name="d435i_head_housing_fixed" type="fixed">
     <parent link="torso_link" />
     <child link="d435i_head_housing" />
-    <origin xyz="0.201883284472 -0.0973761797114 0.404345517214" rpy="2.447212149772276 -0.021889823106730537 1.666959170098397" />
+    <origin xyz="0.04694487726299925 -0.03641040632699355 0.4009957193853557" rpy="2.355553604346951 -0.01521947985728446 1.61187489837236" />
+  </joint>
+  <link name="d435i_head_rgb_optical" />
+  <joint name="d435i_head_rgb_optical_fixed" type="fixed">
+    <parent link="torso_link" />
+    <child link="d435i_head_rgb_optical" />
+    <origin xyz="0.04257231230795391 -0.004112736266231373 0.404528591355674" rpy="-2.355553604346951 0.01521947985728445 -1.529717755217433" />
+  </joint>
+  <link name="d435i_head_depth_optical" />
+  <joint name="d435i_head_depth_optical_fixed" type="fixed">
+    <parent link="torso_link" />
+    <child link="d435i_head_depth_optical" />
+    <origin xyz="0.04320332152698918 -0.01900757199524908 0.40388719326518" rpy="-2.353713873937662 0.008326489910897761 -1.526257284689461" />
+  </joint>
+  <link name="d435i_head_depth_aligned_to_color_optical" />
+  <joint name="d435i_head_depth_aligned_to_color_optical_fixed" type="fixed">
+    <parent link="torso_link" />
+    <child link="d435i_head_depth_aligned_to_color_optical" />
+    <origin xyz="0.04257231230795391 -0.004112736266231373 0.404528591355674" rpy="-2.355553604346951 0.01521947985728445 -1.529717755217433" />
   </joint>
 </robot>

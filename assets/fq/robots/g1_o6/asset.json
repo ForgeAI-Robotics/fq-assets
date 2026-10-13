@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:robots/g1_o6",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "kind": "robot",
   "name": "G1 + O6 双手",
   "origin": "fq",
@@ -27,7 +27,7 @@
     "质量、惯量、碰撞与驱动参数来自现有仿真模型，非实测标定",
     "浏览器仅作关节姿态预览，不代表抓取、平衡或真实驱动力已验证",
     "O6 安装件 provisional：仅模型组合、运动学检查和视觉检查；未完成最终碰撞、抓取或硬件部署验证",
-    "D435i 头部及双腕外观/参考位姿来自已有相机管线；质量碰撞不新增，未重新实测标定"
+    "头部 D435i 使用 2026-10-12 新外参作为仿真默认；实机独立验证未完成，坐标桥接高度有 10mm 待确认；腕部配置不变。"
   ],
   "family": "o6",
   "release_status": "model_snapshot",
@@ -97,18 +97,25 @@
       "version": "0.1.0",
       "parent_link": "torso_link",
       "position": [
-        0.201883284472,
-        -0.0973761797114,
-        0.404345517214
+        0.04694487726299925,
+        -0.03641040632699355,
+        0.4009957193853557
       ],
       "quaternion_wxyz": [
-        0.221123820507,
-        0.634908186411,
-        0.693559428146,
-        0.258787887009
+        0.26010914768648224,
+        0.6417258757307057,
+        0.6644348808239662,
+        0.2811715150080332
       ],
-      "extrinsic_status": "dream_full_root_contract_and_o6_neutral_torso_fk",
-      "physics": "visual_only"
+      "optical_position": [
+        0.042572312307953906,
+        -0.0041127362662313725,
+        0.404528591355674
+      ],
+      "extrinsic_status": "default_simulation_handeye_20261012_pending_independent_validation",
+      "physics": "visual_only",
+      "profile": "assets/fq/robots/g1_o6/head_camera.json"
     }
-  }
+  },
+  "calibration_record": "assets/fq/robots/g1_o6/head_camera.json"
 }

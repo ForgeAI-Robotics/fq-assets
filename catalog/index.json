@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.3.2",
+  "release": "0.3.3",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -69,7 +69,7 @@
     },
     {
       "id": "fq:robots/g1_o6",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "manifest": "assets/fq/robots/g1_o6/asset.json"
     },
     {
@@ -84,7 +84,7 @@
     },
     {
       "id": "fq:robots/g1_o7",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "assets/fq/robots/g1_o7/asset.json"
     },
     {

@@ -1,0 +1,46 @@
+{
+  "o6": [
+    {
+      "model": "data/robots/g1_o6/g1_29dof_wholebody_o6.xml",
+      "compile": true,
+      "head_pose": true,
+      "nq": 58,
+      "nu": 41
+    },
+    {
+      "model": "data/robots/g1_o6/d435i/g1_o6_mp.xml",
+      "compile": true,
+      "head_pose": true,
+      "nq": 58,
+      "nu": 41
+    },
+    {
+      "model": "data/robots/g1_o6/d435i/g1_o6_mp_capture.xml",
+      "compile": true,
+      "head_pose": true,
+      "nq": 58,
+      "nu": 41
+    },
+    {
+      "default_sensor_applied": true,
+      "mujoco_basis_conversion": true,
+      "explicit_replay_pose_preserved": true,
+      "input_configuration_unmodified": true
+    }
+  ],
+  "o7": [
+    {
+      "model": "data/robots/g1_o7_left/g1_29dof_wholebody_o7_left.xml",
+      "compile": true,
+      "head_pose": true,
+      "nq": 70,
+      "nu": 43
+    },
+    {
+      "default_sensor_applied": true,
+      "mujoco_basis_conversion": true,
+      "explicit_replay_pose_preserved": true,
+      "input_configuration_unmodified": true
+    }
+  ]
+}

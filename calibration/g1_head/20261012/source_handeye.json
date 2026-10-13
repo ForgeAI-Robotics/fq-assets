@@ -1,0 +1,54 @@
+{
+  "status": "handeye_candidate_not_independently_validated_complete_6dof",
+  "parent_frame": "dummy",
+  "child_frame": "camera_color_optical_frame",
+  "transform_name": "T_dummy_camera_color_optical",
+  "point_transform": "p_dummy = R @ p_camera_color_optical + t",
+  "translation_unit": "m",
+  "matrix": [
+    [
+      -0.04106226341502328,
+      0.7064995452807743,
+      -0.7065212544867663,
+      -0.038608812307953905
+    ],
+    [
+      0.9990406777704803,
+      0.018260959131514376,
+      -0.03980278296161455,
+      0.0041127362662313725
+    ],
+    [
+      -0.015218892309557641,
+      -0.7074778653002589,
+      -0.7065716208758062,
+      1.258528591355674
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "method": "OpenCV PARK hand-eye; 18 fixed-board observations; audited odometry basis conversion",
+  "fixed_board_pairwise_consistency": {
+    "translation_median_m": 0.007334157984196422,
+    "translation_max_m": 0.01850169162482537,
+    "rotation_max_deg": 1.6386050319629732,
+    "note": "Internal consistency, not independently measured absolute accuracy."
+  },
+  "camera_floor_height_cross_check_m": 1.2725915432379722,
+  "operator_approximate_camera_floor_height_m": 1.27,
+  "operator_height_used_to_fit_handeye": false,
+  "leave_one_out_translation_z_std_m": 0.02520395706076197,
+  "limitations": [
+    "Ground-based orientation refinement failed validation and is NOT included in this matrix.",
+    "This is the color optical frame, also used by depth aligned to color; not the native unaligned depth optical frame.",
+    "dummy is the verified published robot TF frame, not an assumed base_footprint or map frame.",
+    "The raw /localization/odom values must not be used directly as map_T_dummy; see the audited pose-basis contract.",
+    "No navigation configuration or active robot calibration was changed."
+  ],
+  "source_audit": "solution_pose_ground_fixed/handeye_audit.json",
+  "pose_contract": "dream/configs/calibration/g1_charuco_pose_contract_20261012.json"
+}

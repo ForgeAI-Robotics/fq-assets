@@ -1,0 +1,293 @@
+{
+  "version": 2,
+  "status": "default_simulation_handeye_20261012_pending_independent_validation",
+  "device": {
+    "name": "Intel RealSense D435I",
+    "serial_number": "401622070679",
+    "firmware_version": "5.15.1.55",
+    "product_id": "0B3A",
+    "physical_port": "1-3-3",
+    "usb_type_descriptor": "2.1",
+    "camera_locked": true,
+    "note": "A second Intel RealSense D435 with serial 013222073639 is also connected. Every acquisition must select serial 401622070679 explicitly."
+  },
+  "intrinsics": {
+    "width": 640,
+    "height": 480,
+    "fps": 15,
+    "distortion_model_librealsense": "inverse_brown_conrady",
+    "distortion_coefficients": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fx": 604.737670898438,
+    "fy": 604.221618652344,
+    "cx": 324.630462646484,
+    "cy": 253.83283996582,
+    "camera_matrix": [
+      [
+        604.737670898438,
+        0.0,
+        324.630462646484
+      ],
+      [
+        0.0,
+        604.221618652344,
+        253.83283996582
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "depth_intrinsics": {
+    "width": 640,
+    "height": 480,
+    "fps": 15,
+    "distortion_model_librealsense": "brown_conrady",
+    "distortion_coefficients": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fx": 385.593688964844,
+    "fy": 385.593688964844,
+    "cx": 319.212036132812,
+    "cy": 233.034225463867,
+    "camera_matrix": [
+      [
+        385.593688964844,
+        0.0,
+        319.212036132812
+      ],
+      [
+        0.0,
+        385.593688964844,
+        233.034225463867
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "depth_to_color": {
+    "rotation_row_major": [
+      [
+        0.99997,
+        0.00732671,
+        0.00240928
+      ],
+      [
+        -0.00732236,
+        0.999972,
+        -0.00180736
+      ],
+      [
+        -0.00242245,
+        0.00178966,
+        0.999995
+      ]
+    ],
+    "translation_m": [
+      0.014916218817234,
+      0.000279961212072521,
+      0.000306159199681133
+    ]
+  },
+  "output_fps": 30,
+  "torso_T_optical": [
+    [
+      0.04106226341502328,
+      -0.7064995452807743,
+      0.7065212544867663,
+      0.042572312307953906
+    ],
+    [
+      -0.9990406777704803,
+      -0.018260959131514376,
+      0.03980278296161455,
+      -0.0041127362662313725
+    ],
+    [
+      -0.015218892309557641,
+      -0.7074778653002589,
+      -0.7065716208758062,
+      0.404528591355674
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "torso_gl_pose": {
+    "position": [
+      0.042572312307953906,
+      -0.0041127362662313725,
+      0.404528591355674
+    ],
+    "quaternion": [
+      0.6644348808239662,
+      0.2811715150080332,
+      -0.26010914768648224,
+      -0.6417258757307057
+    ]
+  },
+  "frame_assumption": "Published localization torso and physical simulation torso are distinct. Preserve the source-supported legacy yaw180 and nominal pelvis height 0.8m bridge; not independently surveyed.",
+  "physically_validated_complete_6dof": false,
+  "rgb_stereo_baseline_m": 0.0,
+  "source_base_T_optical": [
+    [
+      -0.04106226341502328,
+      0.7064995452807743,
+      -0.7065212544867663,
+      -0.038608812307953905
+    ],
+    [
+      0.9990406777704803,
+      0.018260959131514376,
+      -0.03980278296161455,
+      0.0041127362662313725
+    ],
+    [
+      -0.015218892309557641,
+      -0.7074778653002589,
+      -0.7065716208758062,
+      1.258528591355674
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "conversion_formula": "sim_torso_T_optical = inverse(dummy_T_sim_pelvis @ neutral_pelvis_T_torso) @ source_dummy_T_optical",
+  "dummy_T_sim_pelvis": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.8
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "neutral_pelvis_T_torso": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      -0.0039635
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.054000000000000006
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "default_enabled": true,
+  "source_dummy_T_optical": [
+    [
+      -0.04106226341502328,
+      0.7064995452807743,
+      -0.7065212544867663,
+      -0.038608812307953905
+    ],
+    [
+      0.9990406777704803,
+      0.018260959131514376,
+      -0.03980278296161455,
+      0.0041127362662313725
+    ],
+    [
+      -0.015218892309557641,
+      -0.7074778653002589,
+      -0.7065716208758062,
+      1.258528591355674
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "housing_pose": {
+    "position": [
+      0.04694487726299925,
+      -0.03641040632699355,
+      0.4009957193853557
+    ],
+    "quaternion": [
+      0.26010914768648224,
+      0.6417258757307057,
+      0.6644348808239662,
+      0.2811715150080332
+    ]
+  },
+  "source_handeye": "calibration/g1_head/20261012/source_handeye.json",
+  "native_depth_status": "derived_from_new_color_and_existing_factory_depth_to_color_reference_not_newly_device_verified",
+  "aligned_depth_frame": "camera_color_optical_frame",
+  "limitations": [
+    "Ground-based orientation refinement failed validation and is NOT included in this matrix.",
+    "This is the color optical frame, also used by depth aligned to color; not the native unaligned depth optical frame.",
+    "dummy is the verified published robot TF frame, not an assumed base_footprint or map frame.",
+    "The raw /localization/odom values must not be used directly as map_T_dummy; see the audited pose-basis contract.",
+    "No navigation configuration or active robot calibration was changed.",
+    "Legacy bridge and O6/O7 FK give torso height .854m versus published .844m; unresolved 10mm origin difference.",
+    "O7 shares the O6 head mount by user request; O7 physical mount equivalence not measured.",
+    "Housing uses the previous CAD optical-to-housing offset; no physical mount survey."
+  ],
+  "previous_source_code_sha256": {
+    "tools/g1_complete_teleop_twin.py": "db982f5e6b2b6ebc776c142223bd3fa45a535a9b3a2256c351a3e45d180181a7",
+    "tools/g1_lidar_mapping_docker.sh": "b1ba950535a46a818902917bb8a5f1f18b69f19dd33de877bd734625f07bb47d",
+    "tools/derive_g1_navigation_camera_config.py": "a15a7da5bd2e9366a503eeee2b15d38b0d00297daf37066cfbb3cce39d58795c",
+    "tools/g1_manual_navigation_console.py": "5b12014768b93b01aa0b6ff3afcb6467d6bb5f8281d7e6d5da6c877918c3ca47"
+  },
+  "previous_source_hashes": {
+    "g1_d435i_remount_20260812_charuco_ground_candidate.yaml": "ac1f3f784369a9d15b36f8bf823fd57764b8b855b6f22170f5c7ef293bbdaa8c",
+    "g1_d435i_factory_calibration_20260825.yaml": "ff5a3a4f980f55e7d86584024c3f2acae3120dead1a4544b33e2de3dbec70c75"
+  },
+  "device_reference_status": "Device metadata and intrinsics retained from previous profile; new hand-eye input did not independently attest the device identity.",
+  "source_handeye_sha256": "48d95e0e0387f0d0def0f579cf707d08eda212cd62773558f4c740b3bf25dc82"
+}

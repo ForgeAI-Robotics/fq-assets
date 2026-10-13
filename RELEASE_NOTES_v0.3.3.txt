@@ -1,0 +1,11 @@
+G1 O6 and G1 O7 now use the 2026-10-12 head-camera hand-eye candidate as their default simulation extrinsic.
+
+G1 O6: 0.1.2; G1 O7: 0.1.1. O7 now includes the D435i head visual, RGB, native-depth-reference and color-aligned-depth camera definitions. MuJoCo and URDF agree on the new housing and optical frames. Wrist cameras and robot joint/dynamics parameters are unchanged.
+
+The raw dummy-to-color-optical measurement is preserved. Conversion uses the existing explicit yaw-180 dummy-to-simulation-pelvis bridge and each model's neutral torso FK. Published localization torso and simulation torso are not treated as interchangeable frames.
+
+This is enabled by default for simulation, but NOT independently validated on physical hardware. The nominal bridge still has a 10 mm torso-height discrepancy against published TF. O7 shares the mount at user request without a separate hardware survey. Native depth uses the prior factory depth-to-color reference; it was not independently remeasured. Housing offset remains a CAD assumption.
+
+Validation: both robots compile, head-camera chains pass at three waist poses, existing robot mass/inertia/joints/actuators and O6 wrist cameras are unchanged; all 18 catalog assets pass offline validation. SIMPLE's four MJCF variants and sensor basis/replay-pose preservation checks pass. No running task or old physical G1 configuration was changed.
+
+Third-person comparison: validation/previews/g1_head_mount_20261012.png. Gold arrow: optical forward; cyan outline: RGB frustum. Real-world validation remains pending.

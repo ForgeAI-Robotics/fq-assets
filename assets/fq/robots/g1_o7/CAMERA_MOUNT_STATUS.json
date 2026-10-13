@@ -1,0 +1,33 @@
+{
+  "status": "default_simulation_handeye_20261012_pending_independent_validation",
+  "camera_asset": "fq:cameras/realsense_d435i",
+  "mounts": {
+    "head": {
+      "asset_id": "fq:cameras/realsense_d435i",
+      "version": "0.1.0",
+      "parent_link": "torso_link",
+      "position": [
+        0.04694487726299925,
+        -0.03641040632699355,
+        0.4009957193853557
+      ],
+      "quaternion_wxyz": [
+        0.26010914768648224,
+        0.6417258757307057,
+        0.6644348808239662,
+        0.2811715150080332
+      ],
+      "optical_position": [
+        0.042572312307953906,
+        -0.0041127362662313725,
+        0.404528591355674
+      ],
+      "extrinsic_status": "default_simulation_handeye_20261012_pending_independent_validation",
+      "physics": "visual_only",
+      "profile": "assets/fq/robots/g1_o7/head_camera.json"
+    }
+  },
+  "production_ready": false,
+  "default_simulation_enabled": true,
+  "source": "head_camera.json"
+}
