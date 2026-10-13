@@ -50,7 +50,7 @@ export class SensingPreview{
   if(c.ground)c.ground.visible=true;if(c.grid)c.grid.visible=true;
   for(const id of ['sensing-controls','sensor-window','sensor-details'])$(id).hidden=true;
   $('viewport').classList.remove('sensing-active');$('sensor-window').classList.remove('enlarged');$('sensor-enlarge').textContent='放大 ↗';$('sensor-enlarge').setAttribute('aria-pressed',false);$('model-view').classList.add('active');$('sensor-view').classList.remove('active');$('model-view').setAttribute('aria-pressed',true);$('sensor-view').setAttribute('aria-pressed',false);
-  $('model-note').textContent='浏览器姿态预览，不运行接触物理仿真。';if(was&&reframe){c.frameModel();c.setMode(false);}
+  $('model-note').textContent='浏览器姿态预览，不运行接触物理仿真。';if(was&&reframe){$('pose-label').textContent=c.selected?.joints.length?'关节可动':'静态姿态';c.frameModel();c.setMode(false);}
  }
  preset(){
   if(!this.env)return;const c=this.context(),fridge=$('sensor-preset').value==='fridge',name=fridge?'refrigerator_base':'round_table',body=this.env.data.bodies.find(b=>b.name===name);if(!body)throw Error(`场景缺少 ${name}`);
