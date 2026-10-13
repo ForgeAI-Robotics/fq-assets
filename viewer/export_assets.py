@@ -159,7 +159,20 @@ def main():
             xy=(xy-(lo+hi)/2)*factor+128
             for x,y in xy:draw.ellipse((x-1,y-1,x+1,y+1),fill=(95,105,98))
             im.save(dest/'preview.png')
-        model={'couplings':couplings,'bodies':bodies,'joints':joints,'geoms':geoms,'meshes':meshes,'materials':materials,'bounds':bbox,
+        cameras=[]
+        for i in range(m.ncam):
+            cname=name(m,mujoco.mjtObj.mjOBJ_CAMERA,i)
+            if not cname.startswith('d435i_'):continue
+            width,height=map(int,m.cam_resolution[i]);sx,sy=m.cam_sensorsize[i]
+            if width<=0 or height<=0 or sx<=0 or sy<=0:continue
+            fx,fy,px,py=m.cam_intrinsic[i]
+            head='head_' in cname;aligned='aligned_to_color' in cname
+            cameras.append({'name':cname,'body':int(m.cam_bodyid[i]),'parent':bodies[int(m.cam_bodyid[i])]['name'],
+                'position':m.cam_pos[i].tolist(),'quaternion_wxyz':m.cam_quat[i].tolist(),'convention':'OpenGL: -Z forward, +Y up',
+                'intrinsics':{'width':width,'height':height,'fx':float(fx*width/sx),'fy':float(fy*height/sy),'cx':float(px*width/sx+width/2),'cy':float(py*height/sy+height/2)},
+                'status':'头部外参待独立实机验证；槽位近似建模' if head else '腕部参考内参，未按设备核实；安装位姿为 CAD 参考',
+                'note':'对齐彩色的投影范围，不模拟深度对齐算法' if aligned else '原生深度投影范围，显示彩色几何预览，不是真实深度输出' if 'depth' in cname else '彩色几何预览，不模拟曝光、镜头畸变或传感器噪声'})
+        model={'cameras':cameras,'couplings':couplings,'bodies':bodies,'joints':joints,'geoms':geoms,'meshes':meshes,'materials':materials,'bounds':bbox,
                'buffer':'geometry.bin','mesh_vertices':sum(x['count'] for x in meshes.values()),'up_axis':'Z'}
         dump(dest/'model.json',model);dump(dest/'properties.json',info)
         catalog.append(info)

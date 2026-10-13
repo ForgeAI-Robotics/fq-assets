@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "o6_camera_projections": 7,
+  "o7_camera_projections": 3,
+  "kinematic_poses_per_robot": 3,
+  "intrinsics_checked_against_source": true,
+  "off_axis_projection_checked": true,
+  "browser_checks": [
+    "O6/O7 model and sensing mode",
+    "table and fridge presets",
+    "door sliders",
+    "direct door drag to 52 degrees",
+    "waist pitch updates camera",
+    "camera selection retained between presets",
+    "inset enlarge",
+    "reset closes doors"
+  ],
+  "browser_errors": [],
+  "running_simulations_restarted": false,
+  "hardware_tested": false
+}
