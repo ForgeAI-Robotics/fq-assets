@@ -43,15 +43,14 @@
     "Mullion is independent and has no automatic folding constraint",
     "Freezer is static",
     "MuJoCo parent-child contact filtering applies; full self-collision not calibrated",
-    "USD structural export does not imply Isaac runtime validation",
     "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation",
     "Both hinge axes geometrically corrected to cabinet outer sides (+/-0.354 m); not hardware calibrated. Mullion remains independent with contact disabled.",
-    "Right-door frictionloss 1.6 Nm and uniform [1.0,2.3] Nm profile are simulation parameters, not measured calibration; USD torque friction is metadata only."
+    "CPU PhysX validated with SIMPLE adapter; not measured hardware resistance or GPU validation."
   ],
   "preferred_robot": "g1_o7_left_wholebody",
   "visual_meshes": 109,
   "collision_boxes": 88,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "mass_properties": {
     "total_mass_kg": 91.0,
     "movable_mass_kg": 14.3,
@@ -92,8 +91,23 @@
     "limitations": [
       "Seal breakaway and static/dynamic friction difference not identified",
       "Existing SONIC robot policy failed opening at 1.6 Nm; controller adaptation is separate",
-      "MuJoCo frictionloss is a torque. USD custom metadata records it; native PhysX behavior is not implemented or validated."
+      "PhysX uses a regularized capped velocity drive; solver/contact limits differ from MuJoCo. Replay is engine-specific.",
+      "Validated CPU PhysX only; GPU dynamics and robot policy not validated."
     ],
-    "usd_runtime_supported": false
+    "usd_runtime_supported": true,
+    "physx": {
+      "runtime": "SIMPLE simple.fq.physx.PhysXFridge",
+      "tested_engine": "Isaac Sim 4.5.0 / CPU PhysX",
+      "model": "zero_velocity_implicit_drive_with_per_step_torque_cap",
+      "regularization_slope_Nm_s_rad": 10000.0,
+      "torque_cap": "F + damping_Nm_s_rad * abs(previous_joint_velocity_rad_s)",
+      "physics_dt_s": 0.0005,
+      "raw_usd": "fixed dry term only; runtime adapter required for viscous term and uniform sampling",
+      "modes": [
+        "fixed",
+        "uniform"
+      ],
+      "replay": "assets SHA + runtime hash + image + sampled resistance + q/v/time; same-engine replay only"
+    }
   }
 }

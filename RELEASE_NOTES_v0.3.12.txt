@@ -1,0 +1,6 @@
+v0.3.12 — CPU PhysX refrigerator resistance
+Fridge 0.1.5; baseline 0.1.8. Geometry and placement unchanged.
+Right door fixed 1.6 Nm or episode-constant uniform [1.0, 2.3] Nm; viscous damping 0.15 Nm s/rad. Simulation parameters, not measured calibration.
+USD includes fixed dry resistance through an implicit capped angular drive. SIMPLE PhysXFridge is required for the viscous cap and randomization; legacy dimensionless jointFriction is zero.
+Isaac Sim 4.5 CPU tests: baseline two-door 0–90–0 degrees, fixed/uniform sampling, moving checkpoint replay in fresh processes. MuJoCo regressions retained. Solver regularization and limit response differ: replay is engine-specific, not portable torque replay. GPU dynamics and robot policy are not validated.
+See integrations/physx-fridge.txt for runtime and validation contract.

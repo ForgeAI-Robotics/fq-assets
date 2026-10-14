@@ -6,7 +6,7 @@
 )
 
 def Xform "Refrigerator" (
-    prepend apiSchemas = ["PhysicsArticulationRootAPI"]
+    delete apiSchemas = ["PhysicsArticulationRootAPI"]
     customData = {
         dictionary refrigerator = {
             bool physicsCalibrated = 0
@@ -20,7 +20,7 @@ def Xform "Refrigerator" (
     )
     {
         point3f physics:centerOfMass = (0, 0, 0.9)
-        float3 physics:diagonalInertia = (21.9142857, 21.9142857, 5.47857143)
+        float3 physics:diagonalInertia = (21.914286, 21.914286, 5.4785714)
         float physics:mass = 76.7
         double3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate"]
@@ -2559,49 +2559,80 @@ def Xform "Refrigerator" (
 
     def "Joints"
     {
-        def PhysicsFixedJoint "fixed_base"
+        def PhysicsFixedJoint "fixed_base" (
+            prepend apiSchemas = ["PhysicsArticulationRootAPI", "PhysxArticulationAPI"]
+        )
         {
             rel physics:body1 = </Refrigerator/cabinet>
             point3f physics:localPos0 = (0, 0, 0)
             point3f physics:localPos1 = (0, 0, 0)
+            custom bool physxArticulation:enabledSelfCollisions = 1
         }
 
-        def PhysicsRevoluteJoint "refrigerator_left_hinge"
+        def PhysicsRevoluteJoint "refrigerator_left_hinge" (
+            prepend apiSchemas = ["PhysxJointAPI", "PhysxLimitAPI:angular", "PhysicsDriveAPI:angular"]
+        )
         {
+            float drive:angular:physics:damping = 0.0026179939
+            float drive:angular:physics:maxForce = 1000000
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
             uniform token physics:axis = "Z"
             rel physics:body0 = </Refrigerator/cabinet>
             rel physics:body1 = </Refrigerator/door_left>
-            bool physics:collisionEnabled = 0
+            bool physics:collisionEnabled = 1
             point3f physics:localPos0 = (-0.354, -0.275, 0.8495833)
             point3f physics:localPos1 = (-0.012, 0, 0)
             quatf physics:localRot0 = (0, 1, 0, 0)
             quatf physics:localRot1 = (0, 1, 0, 0)
             float physics:lowerLimit = 0
             float physics:upperLimit = 90
+            custom float physxJoint:armature = 0.002
+            custom float physxJoint:jointFriction = 0
+            custom float physxLimit:angular:contactDistance = 0.01
         }
 
         def PhysicsRevoluteJoint "refrigerator_right_hinge" (
+            prepend apiSchemas = ["PhysxJointAPI", "PhysxLimitAPI:angular", "PhysicsDriveAPI:angular"]
             customData = {
                 dictionary fq = {
-                    double simulationFrictionlossNm = 1.6
+                    bool resistanceAdapterRequired = 1
+                    string resistanceRuntime = "SIMPLE PhysXFridge: CPU Isaac Sim 4.5; zero-velocity capped drive"
+                    bool resistanceRuntimeSupported = 1
                     double simulationDampingNmSRad = 0.15
-                    bool resistanceRuntimeSupported = false
+                    double simulationFrictionlossNm = 1.6
                 }
             }
         )
         {
+            float drive:angular:physics:damping = 174.53293
+            float drive:angular:physics:maxForce = 1.6
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
             uniform token physics:axis = "Z"
             rel physics:body0 = </Refrigerator/cabinet>
             rel physics:body1 = </Refrigerator/door_right>
-            bool physics:collisionEnabled = 0
+            bool physics:collisionEnabled = 1
             point3f physics:localPos0 = (0.354, -0.275, 0.8495833)
             point3f physics:localPos1 = (0.012, 0, 0)
             float physics:lowerLimit = 0
             float physics:upperLimit = 90
+            custom float physxJoint:armature = 0.002
+            custom float physxJoint:jointFriction = 0
+            custom float physxLimit:angular:contactDistance = 0.01
         }
 
-        def PhysicsRevoluteJoint "refrigerator_mullion_hinge"
+        def PhysicsRevoluteJoint "refrigerator_mullion_hinge" (
+            prepend apiSchemas = ["PhysxJointAPI", "PhysxLimitAPI:angular", "PhysicsDriveAPI:angular"]
+        )
         {
+            float drive:angular:physics:damping = 0.00017453292
+            float drive:angular:physics:maxForce = 1000000
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
             uniform token physics:axis = "Z"
             rel physics:body0 = </Refrigerator/door_left>
             rel physics:body1 = </Refrigerator/mullion>
@@ -2610,6 +2641,9 @@ def Xform "Refrigerator" (
             point3f physics:localPos1 = (0, 0, 0)
             float physics:lowerLimit = 0
             float physics:upperLimit = 90
+            custom float physxJoint:armature = 0.002
+            custom float physxJoint:jointFriction = 0
+            custom float physxLimit:angular:contactDistance = 0.01
         }
     }
 

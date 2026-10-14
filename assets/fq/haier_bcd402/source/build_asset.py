@@ -74,6 +74,8 @@ for c in G['collisions']:
 stage.GetPrimAtPath('/Refrigerator/Joints/refrigerator_right_hinge').SetCustomDataByKey('fq:simulationFrictionlossNm',1.6)
 stage.GetPrimAtPath('/Refrigerator/Joints/refrigerator_right_hinge').SetCustomDataByKey('fq:simulationDampingNmSRad',0.15)
 stage.GetPrimAtPath('/Refrigerator/Joints/refrigerator_right_hinge').SetCustomDataByKey('fq:resistanceRuntimeSupported',False)
+from physx_resistance import author as author_physx_resistance
+author_physx_resistance(stage)
 stage.GetRootLayer().Save()
 meta={'asset_id':'refrigerator:haier_bcd402_v1','entries':{'mujoco':'refrigerator.xml','isaac':'refrigerator.usda','blender':'source/haier_bcd402_body_v1.blend'},'initial_joint_positions':{j:0. for j in joints.values()},'joint_limits_rad':{j:[0,math.pi/2] for j in joints.values()},'units':'meter','up_axis':'Z','front_axis':'-Y','fixed_base':True,'contents_included':False,'physics_calibrated':False,'estimated_mass_kg':masses,'limitations':['Component dimensions are estimated from photos','Mass, inertia, friction and damping are provisional engineering placeholders','No seal adhesion or pressure differential model','Mullion is independent and has no automatic folding constraint','Freezer is static','MuJoCo parent-child contact filtering applies; full self-collision not calibrated','USD structural export does not imply Isaac runtime validation'],'preferred_robot':'g1_o7_left_wholebody','visual_meshes':len(G['visuals']),'collision_boxes':len(G['collisions'])}
 meta['limitations'].append('Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation')

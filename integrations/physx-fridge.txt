@@ -1,0 +1,7 @@
+Use SIMPLE simple.fq.physx.PhysXFridge(world, catalog, mode="fixed"|"uniform", seed=42, episode_index=0, baseline=True).
+World: CPU numpy, 0.0005 s step. Call adapter.step(efforts_Nm) every physics step, not world.step directly. Zero-velocity passive drive is reserved for resistance; drive the door through external joint efforts. Do not replace the passive drive with a position servo.
+right torque cap = F + 0.15 * abs(previous angular velocity), slope = 10000 Nm s/rad. This regularizes the zero-speed friction law; left/mullion damping remains 0.15/0.01 and armature 0.002. USD damping is per degree and converted explicitly from SI. Raw USD supplies only the dry term.
+A single SIMPLE-owned PhysicsScene is used; imported scene physics settings are deactivated only in the runtime stage. Baseline geometry/placement is unchanged.
+Record locks assets commit/checksums, image, adapter hash, dt, sample seed/index/value, q/v/time. Restore requires identical runtime and assets. Fresh-process replay tested at a moving, non-contact checkpoint; contact-rich arbitrary checkpoints are not guaranteed bit-exact. MuJoCo and PhysX records are separate.
+Cross-engine validation compares constant torques/free coasting and identical feedback controllers. Soft MuJoCo limits differ from PhysX hard limits. Open-loop long-duration torque sequences can diverge and are not a supported cross-engine replay format.
+CPU PhysX only. All resistance values are simulation priors, not real seal forces. No GPU dynamics or robot-policy validation.
