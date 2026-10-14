@@ -1,0 +1,6 @@
+v0.3.13 — measured upper-door lower edge at 82 cm
+Refrigerator 0.1.6; office baseline 0.1.9.
+Both upper door lower edges now 0.82 m above ground (user measurement), previously 0.848 m. Upper edge remains 1.798 m; model door height is now 0.978 m. This supersedes the earlier 0.95 m door-height value.
+Visuals, collision boxes, MuJoCo and USD exports, baseline instance, and approximate upper-assembly COM/inertia are updated together. Upper freezer transition retains an 8 mm gap. Main cabinet exterior, lower drawer, hinge lines, fixed placement, 91 kg component mass sum and fixed/uniform resistance parameters are retained.
+Geometry beyond the 82 cm measurement is an estimated fit, not a new full survey. Original Blender is retained as provenance; calibrated geometry.json and build_asset.py are the reproducible export source.
+Validation includes matching MJCF/USD dimensions, 723 collision sweep configurations, fixed/uniform MuJoCo and CPU PhysX open/close cycles with fresh-process replay. GPU dynamics and robot policy remain unvalidated.

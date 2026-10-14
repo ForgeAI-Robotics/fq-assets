@@ -45,12 +45,13 @@
     "MuJoCo parent-child contact filtering applies; full self-collision not calibrated",
     "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation",
     "Both hinge axes geometrically corrected to cabinet outer sides (+/-0.354 m); not hardware calibrated. Mullion remains independent with contact disabled.",
-    "CPU PhysX validated with SIMPLE adapter; not measured hardware resistance or GPU validation."
+    "CPU PhysX validated with SIMPLE adapter; not measured hardware resistance or GPU validation.",
+    "82 cm floor-to-upper-door-lower-edge measured by user; upper compartment and upper freezer transition adjusted geometrically, not independently measured. Original Blender file remains provenance, use calibrated geometry.json for regeneration."
   ],
   "preferred_robot": "g1_o7_left_wholebody",
   "visual_meshes": 109,
   "collision_boxes": 88,
-  "version": "0.1.5",
+  "version": "0.1.6",
   "mass_properties": {
     "total_mass_kg": 91.0,
     "movable_mass_kg": 14.3,
@@ -65,7 +66,7 @@
       "door_right": 7.0,
       "mullion": 0.3
     },
-    "inertia_status": "Cabinet placeholder inertia scaled by 76.7/70 at unchanged estimated COM; movable component inertia unchanged",
+    "inertia_status": "Upper movable assembly COM/inertia adjusted for 0.95 to 0.978 m fixed-mass vertical stretch; cabinet unchanged; provisional estimates",
     "cabinet_scope": "Fixed assembly including compressor, shelves and currently fixed freezer drawers; excludes separately counted upper doors and mullion"
   },
   "simulation_resistance": {
@@ -109,5 +110,12 @@
       ],
       "replay": "assets SHA + runtime hash + image + sampled resistance + q/v/time; same-engine replay only"
     }
+  },
+  "calibration_record": "assets/fq/haier_bcd402/calibration_v3.json",
+  "measured_dimensions": {
+    "floor_to_upper_door_lower_edge_m": 0.82,
+    "basis": "User measurement confirmed 2026-10-14",
+    "upper_door_top_m": 1.798,
+    "upper_door_top_status": "Retained model value, not newly measured"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "revision": "v3-user-floor-to-door-bottom",
+  "upper_door_bottom_z_m": 0.82,
+  "upper_door_top_z_m": 1.798,
+  "upper_door_height_m": 0.9780000000000001,
+  "previous_upper_door_height_m": 0.95,
+  "supersedes": "calibration_v2.json upper door height/bottom and upper drawer height; other measurements retained",
+  "upper_freezer_panel_height_m": 0.292,
+  "upper_freezer_recess_height_m": 0.03,
+  "upper_freezer_top_z_m": 0.812,
+  "door_gap_m": 0.008,
+  "geometry_transform": {
+    "target_m": 0.82,
+    "previous_m": 0.848,
+    "top_m": 1.798,
+    "upper_vertical_scale": 1.0294736842105263,
+    "source_geometry_sha256": "62e602420aae0f51096614ffabbeb8e5214907f7fb17e4170adb4900fb3e1857",
+    "basis": "User measured floor to lowest edge of both upper doors, confirmed 2026-10-14",
+    "unmeasured_adjustments": "Upper compartment affine vertical stretch, handle pocket depth retained; upper freezer panel shortened by 28 mm, 8 mm inter-compartment gap retained; cabinet exterior and lower freezer unchanged",
+    "physics": "Fixed component masses. Upper COM/inertia adjusted as approximate vertical stretch; not mass-property calibration."
+  },
+  "source_blend_status": "Original provenance snapshot, not regenerated; use geometry.json and build_asset.py for calibrated exports",
+  "physics_calibrated": false
+}

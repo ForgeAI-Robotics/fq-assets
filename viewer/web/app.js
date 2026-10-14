@@ -53,6 +53,7 @@ function showProperties(a){
     html+=section('使用状态',`<p class="property-note">${a.limitations.map(esc).join('<br>')}</p><a class="text-button" href="/?asset=g1_o6">查看 G1 + O6 装配 ↗</a>`);
   }
   if(a.camera_mounts)html+=section('相机装配',row('型号','D435i × 3')+row('位置','头部 / 左腕 / 右腕')+row('装配状态','现有参考位姿 · 未重新标定')+'<p class="property-note">仅视觉替换，未新增相机质量或碰撞。</p><a class="text-button" href="/?asset=realsense_d435i">查看相机资产 ↗</a>');
+  if(a.slug==='haier_bcd402'&&a.calibration?.revision==='v3-user-floor-to-door-bottom')html+=section('门体尺寸',row('地面到上部门下沿',`${fmt(a.calibration.upper_door_bottom_z_m*100,1)} cm`)+row('模型上门高度',`${fmt(a.calibration.upper_door_height_m*100,1)} cm`)+ '<p class="property-note">82 cm 为用户实测。门顶沿用现有模型位置，下方抽屉交界为对应调整。</p>');
   if(a.friction_range){
     const fr=i=>{let lo=a.friction_range.min[i],hi=a.friction_range.max[i];return Math.abs(lo-hi)<1e-8?fmt(lo,5):`${fmt(lo,5)} – ${fmt(hi,5)}`;};
     html+=section('接触参数 / MUJOCO',row('滑动摩擦',fr(0))+row('扭转摩擦',`${fr(1)} m`)+row('滚动摩擦',`${fr(2)} m`)+`<p class="property-note">模型设定值；有多个碰撞面时显示范围。滑动摩擦为无量纲，扭转与滚动参数使用长度单位。</p>`);

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <mujoco model="haier_bcd402_v1">
   <compiler angle="radian" meshdir="meshes" autolimits="true" />
   <option timestep=".002" gravity="0 0 -9.81" />
@@ -115,15 +114,15 @@
   </asset>
   <worldbody>
     <body name="refrigerator_base">
-      <inertial pos="0 0 0.9" mass="76.7" diaginertia="21.9142857143 21.9142857143 5.47857142857" />
+      <inertial pos="0 0 0.9" mass="76.7" diaginertia="21.9142857 21.9142857 5.47857143" />
       <body name="refrigerator_door_left" pos="-0.342000008 -0.275000006 0.849583328">
-        <joint name="refrigerator_left_hinge" type="hinge" pos="-0.012 0 0" axis="0 0 -1" range="0 1.57079632679" damping=".15" frictionloss="0" armature=".002" />
-        <inertial pos="0.165 -0.022 0.598" mass="7.0" diaginertia="0.85 0.92 0.08" />
+        <joint name="refrigerator_left_hinge" type="hinge" pos="-0.0119999924 0 0" axis="0 0 -1" range="0 1.57079632679" damping=".15" frictionloss="0" armature=".002" />
+        <inertial pos="0.165 -0.022 0.58767193" mass="7.0" diaginertia="0.900544576 0.970544576 0.08" />
         <body name="refrigerator_mullion" pos="0.328000009 0.0320000052 0.0395833254">
-          <joint name="refrigerator_mullion_hinge" type="hinge" axis="0 0 1" range="0 1.57079632679" damping=".01" frictionloss="0" armature=".002" />
-          <inertial pos="0.018 0.007 0.554" mass="0.3" diaginertia="0.031 0.031 0.0001" />
+          <joint name="refrigerator_mullion_hinge" type="hinge" pos="0 0 0" axis="0 0 1" range="0 1.57079632679" damping=".01" frictionloss="0" armature=".002" />
+          <inertial pos="0.018 0.007 0.543541754" mass="0.3" diaginertia="0.0328513073 0.0328513073 0.0001" />
           <geom name="part_103" type="mesh" mesh="part_103" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
-          <geom name="col_103_0" type="box" pos="0.0179999992 0.00699999928 0.438583314" size="0.0199999996 0.0119999945 0.436604142" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="0" conaffinity="0" />
+          <geom name="col_103_0" type="box" pos="0.0179999992 0.00699999928 0.424723313" size="0.0199999996 0.0119999945 0.449472475" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="0" conaffinity="0" />
         </body>
         <geom name="part_049" type="mesh" mesh="part_049" rgba="0.529999971 0.560000002 0.579999983 1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="part_050" type="mesh" mesh="part_050" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
@@ -152,37 +151,37 @@
         <geom name="part_104" type="mesh" mesh="part_104" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="part_105" type="mesh" mesh="part_105" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="part_106" type="mesh" mesh="part_106" rgba="0.839999974 0.860000014 0.839999974 1" contype="0" conaffinity="0" group="2" density="0" />
-        <geom name="col_049_0" type="box" pos="-0.00049998939 -0.0419999957 0.473416626" size="0.00749999702 0.0370000005 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_1" type="box" pos="0.315250004 -0.0419999957 0.473416626" size="0.0227499959 0.0370000005 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_2" type="box" pos="0.259750008 -0.0687499951 0.473416626" size="0.03275 0.0102500011 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_3" type="box" pos="0.259750008 -0.0122499946 0.473416626" size="0.03275 0.0072499994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_4" type="box" pos="0.259750008 -0.038999994 0.469604137" size="0.03275 0.0195 0.471187535" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_5" type="box" pos="0.117000008 -0.0764999951 0.473416626" size="0.11 0.00250000107 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_6" type="box" pos="0.0222500076 -0.0214999946 0.473416626" size="0.01525 0.0164999994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_7" type="box" pos="0.132250008 -0.0122499946 0.473416626" size="0.09475 0.0072499994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_8" type="box" pos="0.132250008 -0.028749994 0.469604137" size="0.09475 0.00925 0.471187535" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_9" type="box" pos="0.0222500076 -0.055999994 0.480916661" size="0.01525 0.018 0.467499989" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_10" type="box" pos="0.132250008 -0.066249994 0.480916661" size="0.09475 0.00775 0.467499989" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_049_11" type="box" pos="0.132250008 -0.048249994 0.477104172" size="0.09475 0.01025 0.4636875" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_057_0" type="box" pos="0.171999998 0.0840000063 0.0649166703" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_058_0" type="box" pos="0.048999995 0.0840000063 0.103312492" size="0.00200000405 0.0594999939 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_059_0" type="box" pos="0.171999998 0.026500009 0.103312492" size="0.125000007 0.0019999966 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_060_0" type="box" pos="0.295000017 0.0840000063 0.103312492" size="0.00200000033 0.0594999939 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_061_0" type="box" pos="0.171999998 0.141500011 0.103312492" size="0.125000007 0.00200000405 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_062_0" type="box" pos="0.171999998 0.0840000063 0.377625048" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_063_0" type="box" pos="0.048999995 0.0840000063 0.423145831" size="0.00200000405 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_064_0" type="box" pos="0.171999998 0.026500009 0.423145831" size="0.125000007 0.0019999966 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_065_0" type="box" pos="0.295000017 0.0840000063 0.423145831" size="0.00200000033 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_066_0" type="box" pos="0.171999998 0.141500011 0.423145831" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_067_0" type="box" pos="0.171999998 0.0840000063 0.754458368" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_068_0" type="box" pos="0.048999995 0.0840000063 0.79997915" size="0.00200000405 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_069_0" type="box" pos="0.171999998 0.026500009 0.79997915" size="0.125000007 0.0019999966 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_070_0" type="box" pos="0.295000017 0.0840000063 0.79997915" size="0.00200000033 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_071_0" type="box" pos="0.171999998 0.141500011 0.79997915" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_0" type="box" pos="-0.00049998939 -0.0419999957 0.459416625" size="0.00749999702 0.0370000005 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_1" type="box" pos="0.315250004 -0.0419999957 0.459416625" size="0.0227499959 0.0370000005 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_2" type="box" pos="0.259750008 -0.0687499951 0.459416625" size="0.03275 0.0102500011 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_3" type="box" pos="0.259750008 -0.0122499946 0.459416625" size="0.03275 0.0072499994 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_4" type="box" pos="0.259750008 -0.038999994 0.455491768" size="0.03275 0.0195 0.485075167" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_5" type="box" pos="0.117000008 -0.0764999951 0.459416625" size="0.11 0.00250000107 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_6" type="box" pos="0.0222500076 -0.0214999946 0.459416625" size="0.01525 0.0164999994 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_7" type="box" pos="0.132250008 -0.0122499946 0.459416625" size="0.09475 0.0072499994 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_8" type="box" pos="0.132250008 -0.028749994 0.455491768" size="0.09475 0.00925 0.485075167" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_9" type="box" pos="0.0222500076 -0.055999994 0.467137714" size="0.01525 0.018 0.481278936" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_10" type="box" pos="0.132250008 -0.066249994 0.467137714" size="0.09475 0.00775 0.481278936" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_049_11" type="box" pos="0.132250008 -0.048249994 0.463212856" size="0.09475 0.01025 0.477354079" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_057_0" type="box" pos="0.171999998 0.0840000063 0.0388766703" size="0.125000007 0.0594999939 0.00163000458" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_058_0" type="box" pos="0.048999995 0.0840000063 0.0784041586" size="0.00200000405 0.0594999939 0.0395274884" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_059_0" type="box" pos="0.171999998 0.026500009 0.0784041586" size="0.125000007 0.0019999966 0.0395274884" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_060_0" type="box" pos="0.295000017 0.0840000063 0.0784041586" size="0.00200000033 0.0594999939 0.0395274884" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_061_0" type="box" pos="0.171999998 0.141500011 0.0784041586" size="0.125000007 0.00200000405 0.0395274884" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_062_0" type="box" pos="0.171999998 0.0840000063 0.360801716" size="0.125000007 0.0594999939 0.00163000458" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_063_0" type="box" pos="0.048999995 0.0840000063 0.407664164" size="0.00200000405 0.0594999939 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_064_0" type="box" pos="0.171999998 0.026500009 0.407664164" size="0.125000007 0.0019999966 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_065_0" type="box" pos="0.295000017 0.0840000063 0.407664164" size="0.00200000033 0.0594999939 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_066_0" type="box" pos="0.171999998 0.141500011 0.407664164" size="0.125000007 0.00200000405 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_067_0" type="box" pos="0.171999998 0.0840000063 0.748741702" size="0.125000007 0.0594999939 0.00163000458" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_068_0" type="box" pos="0.048999995 0.0840000063 0.79560415" size="0.00200000405 0.0594999939 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_069_0" type="box" pos="0.171999998 0.026500009 0.79560415" size="0.125000007 0.0019999966 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_070_0" type="box" pos="0.295000017 0.0840000063 0.79560415" size="0.00200000033 0.0594999939 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_071_0" type="box" pos="0.171999998 0.141500011 0.79560415" size="0.125000007 0.00200000405 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
       </body>
       <body name="refrigerator_door_right" pos="0.342000008 -0.275000006 0.849583328">
-        <joint name="refrigerator_right_hinge" type="hinge" pos="0.012 0 0" axis="0 0 1" range="0 1.57079632679" damping=".15" frictionloss="1.6" armature=".002" />
-        <inertial pos="-0.165 -0.022 0.598" mass="7.0" diaginertia="0.85 0.92 0.08" />
+        <joint name="refrigerator_right_hinge" type="hinge" pos="0.0119999924 0 0" axis="0 0 1" range="0 1.57079632679" damping=".15" frictionloss="1.6" armature=".002" />
+        <inertial pos="-0.165 -0.022 0.58767193" mass="7.0" diaginertia="0.900544576 0.970544576 0.08" />
         <geom name="part_076" type="mesh" mesh="part_076" rgba="0.529999971 0.560000002 0.579999983 1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="part_077" type="mesh" mesh="part_077" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="part_078" type="mesh" mesh="part_078" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />
@@ -212,33 +211,33 @@
         <geom name="part_110" type="mesh" mesh="part_110" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="part_111" type="mesh" mesh="part_111" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="part_112" type="mesh" mesh="part_112" rgba="0.649999976 0.680000007 0.699999988 1" contype="0" conaffinity="0" group="2" density="0" />
-        <geom name="col_076_0" type="box" pos="-0.315250004 -0.0419999957 0.473416626" size="0.0227499959 0.0370000005 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_1" type="box" pos="-0.259750008 -0.0687499951 0.473416626" size="0.03275 0.0102500011 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_2" type="box" pos="-0.259750008 -0.0122499946 0.473416626" size="0.03275 0.0072499994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_3" type="box" pos="-0.259750008 -0.038999994 0.469604137" size="0.03275 0.0195 0.471187535" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_4" type="box" pos="0.00049998939 -0.0419999957 0.473416626" size="0.00749999702 0.0370000005 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_5" type="box" pos="-0.117000008 -0.0764999951 0.473416626" size="0.11 0.00250000107 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_6" type="box" pos="-0.0222500076 -0.0214999946 0.473416626" size="0.01525 0.0164999994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_7" type="box" pos="-0.132250008 -0.0122499946 0.473416626" size="0.09475 0.0072499994 0.475000024" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_8" type="box" pos="-0.132250008 -0.028749994 0.469604137" size="0.09475 0.00925 0.471187535" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_9" type="box" pos="-0.0222500076 -0.055999994 0.480916661" size="0.01525 0.018 0.467499989" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_10" type="box" pos="-0.132250008 -0.066249994 0.480916661" size="0.09475 0.00775 0.467499989" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_076_11" type="box" pos="-0.132250008 -0.048249994 0.477104172" size="0.09475 0.01025 0.4636875" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_084_0" type="box" pos="-0.171999998 0.0840000063 0.0649166703" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_085_0" type="box" pos="-0.295000017 0.0840000063 0.103312492" size="0.00200000033 0.0594999939 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_086_0" type="box" pos="-0.171999998 0.026500009 0.103312492" size="0.125000007 0.0019999966 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_087_0" type="box" pos="-0.048999995 0.0840000063 0.103312492" size="0.00200000405 0.0594999939 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_088_0" type="box" pos="-0.171999998 0.141500011 0.103312492" size="0.125000007 0.00200000405 0.038395822" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_089_0" type="box" pos="-0.171999998 0.0840000063 0.377625048" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_090_0" type="box" pos="-0.295000017 0.0840000063 0.423145831" size="0.00200000033 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_091_0" type="box" pos="-0.171999998 0.026500009 0.423145831" size="0.125000007 0.0019999966 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_092_0" type="box" pos="-0.048999995 0.0840000063 0.423145831" size="0.00200000405 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_093_0" type="box" pos="-0.171999998 0.141500011 0.423145831" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_094_0" type="box" pos="-0.171999998 0.0840000063 0.754458368" size="0.125000007 0.0594999939 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_095_0" type="box" pos="-0.295000017 0.0840000063 0.79997915" size="0.00200000033 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_096_0" type="box" pos="-0.171999998 0.026500009 0.79997915" size="0.125000007 0.0019999966 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_097_0" type="box" pos="-0.048999995 0.0840000063 0.79997915" size="0.00200000405 0.0594999939 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-        <geom name="col_098_0" type="box" pos="-0.171999998 0.141500011 0.79997915" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_0" type="box" pos="-0.315250004 -0.0419999957 0.459416625" size="0.0227499959 0.0370000005 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_1" type="box" pos="-0.259750008 -0.0687499951 0.459416625" size="0.03275 0.0102500011 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_2" type="box" pos="-0.259750008 -0.0122499946 0.459416625" size="0.03275 0.0072499994 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_3" type="box" pos="-0.259750008 -0.038999994 0.455491768" size="0.03275 0.0195 0.485075167" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_4" type="box" pos="0.00049998939 -0.0419999957 0.459416625" size="0.00749999702 0.0370000005 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_5" type="box" pos="-0.117000008 -0.0764999951 0.459416625" size="0.11 0.00250000107 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_6" type="box" pos="-0.0222500076 -0.0214999946 0.459416625" size="0.01525 0.0164999994 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_7" type="box" pos="-0.132250008 -0.0122499946 0.459416625" size="0.09475 0.0072499994 0.489000025" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_8" type="box" pos="-0.132250008 -0.028749994 0.455491768" size="0.09475 0.00925 0.485075167" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_9" type="box" pos="-0.0222500076 -0.055999994 0.467137714" size="0.01525 0.018 0.481278936" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_10" type="box" pos="-0.132250008 -0.066249994 0.467137714" size="0.09475 0.00775 0.481278936" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_076_11" type="box" pos="-0.132250008 -0.048249994 0.463212856" size="0.09475 0.01025 0.477354079" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_084_0" type="box" pos="-0.171999998 0.0840000063 0.0388766703" size="0.125000007 0.0594999939 0.00163000458" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_085_0" type="box" pos="-0.295000017 0.0840000063 0.0784041586" size="0.00200000033 0.0594999939 0.0395274884" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_086_0" type="box" pos="-0.171999998 0.026500009 0.0784041586" size="0.125000007 0.0019999966 0.0395274884" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_087_0" type="box" pos="-0.048999995 0.0840000063 0.0784041586" size="0.00200000405 0.0594999939 0.0395274884" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_088_0" type="box" pos="-0.171999998 0.141500011 0.0784041586" size="0.125000007 0.00200000405 0.0395274884" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_089_0" type="box" pos="-0.171999998 0.0840000063 0.360801716" size="0.125000007 0.0594999939 0.00163000458" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_090_0" type="box" pos="-0.295000017 0.0840000063 0.407664164" size="0.00200000033 0.0594999939 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_091_0" type="box" pos="-0.171999998 0.026500009 0.407664164" size="0.125000007 0.0019999966 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_092_0" type="box" pos="-0.048999995 0.0840000063 0.407664164" size="0.00200000405 0.0594999939 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_093_0" type="box" pos="-0.171999998 0.141500011 0.407664164" size="0.125000007 0.00200000405 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_094_0" type="box" pos="-0.171999998 0.0840000063 0.748741702" size="0.125000007 0.0594999939 0.00163000458" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_095_0" type="box" pos="-0.295000017 0.0840000063 0.79560415" size="0.00200000033 0.0594999939 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_096_0" type="box" pos="-0.171999998 0.026500009 0.79560415" size="0.125000007 0.0019999966 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_097_0" type="box" pos="-0.048999995 0.0840000063 0.79560415" size="0.00200000405 0.0594999939 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+        <geom name="col_098_0" type="box" pos="-0.171999998 0.141500011 0.79560415" size="0.125000007 0.00200000405 0.0468624476" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
       </body>
       <geom name="part_001" type="mesh" mesh="part_001" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
       <geom name="part_002" type="mesh" mesh="part_002" rgba="0.300000012 0.330000013 0.349999994 1" contype="0" conaffinity="0" group="2" density="0" />
@@ -301,30 +300,30 @@
       <geom name="col_007_0" type="box" pos="-0.289999992 0.270000011 0.00999999978" size="0.0200000107 0.0200000107 0.00999999978" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
       <geom name="col_008_0" type="box" pos="0.289999992 -0.239999995 0.00999999978" size="0.0200000107 0.0199999958 0.00999999978" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
       <geom name="col_009_0" type="box" pos="0.289999992 0.270000011 0.00999999978" size="0.0200000107 0.0200000107 0.00999999978" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_010_0" type="box" pos="-0.305000007 0.0300000012 1.31033337" size="0.00749999285 0.284999996 0.459166646" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_011_0" type="box" pos="0.305000007 0.0300000012 1.31033337" size="0.00749999285 0.284999996 0.459166646" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_012_0" type="box" pos="0 0.305000007 1.30875003" size="0.300000012 0.00999999046 0.46312499" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_013_0" type="box" pos="0 0.0300000012 1.76633334" size="0.300000012 0.284999996 0.00989580154" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_014_0" type="box" pos="0 0.0349999964 0.878083348" size="0.305000007 0.284999996 0.0217708349" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_015_0" type="box" pos="0 0.282999992 1.35229173" size="0.0775000006 0.0105000138 0.360208362" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_025_0" type="box" pos="0 0.0850000046 1.05383337" size="0.291999996 0.197000001 0.00277078152" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_027_0" type="box" pos="-0.291999996 0.0799999908 1.04670835" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_028_0" type="box" pos="0.291999996 0.0799999908 1.04670835" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_029_0" type="box" pos="0 0.0850000046 1.27470839" size="0.291999996 0.197000001 0.00277078152" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_031_0" type="box" pos="-0.291999996 0.0799999908 1.26758337" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_032_0" type="box" pos="0.291999996 0.0799999908 1.26758337" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_033_0" type="box" pos="0 0.0850000046 1.50270832" size="0.291999996 0.197000001 0.00277078152" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_035_0" type="box" pos="-0.291999996 0.0799999908 1.4955833" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_036_0" type="box" pos="0.291999996 0.0799999908 1.4955833" size="0.00699999928 0.18 0.00514578819" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_037_0" type="box" pos="0 0.0870000049 0.908166647" size="0.282499999 0.190000005 0.00158333778" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_038_0" type="box" pos="-0.280499995 0.0870000049 0.975854158" size="0.00200000405 0.190000005 0.0676875114" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_039_0" type="box" pos="0 -0.101000004 0.975854158" size="0.282499999 0.0019999966 0.0676875114" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_040_0" type="box" pos="0.280499995 0.0870000049 0.975854158" size="0.00200000405 0.190000005 0.0676875114" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_041_0" type="box" pos="0 0.275000006 0.975854158" size="0.282499999 0.00200000405 0.0676875114" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_043_0" type="box" pos="0 0.0300000012 0.439000025" size="0.32249999 0.284999996 0.392500028" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_010_0" type="box" pos="-0.305000007 0.0300000012 1.29596004" size="0.00749999285 0.284999996 0.472699979" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_011_0" type="box" pos="0.305000007 0.0300000012 1.29596004" size="0.00749999285 0.284999996 0.472699979" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_012_0" type="box" pos="0 0.305000007 1.29433003" size="0.300000012 0.00999999046 0.47677499" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_013_0" type="box" pos="0 0.0300000012 1.76540001" size="0.300000012 0.284999996 0.0101874673" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_014_0" type="box" pos="0 0.0349999964 0.850970015" size="0.305000007 0.284999996 0.0224125016" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_015_0" type="box" pos="0 0.282999992 1.33915507" size="0.0775000006 0.0105000138 0.37082503" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_025_0" type="box" pos="0 0.0850000046 1.03190003" size="0.291999996 0.197000001 0.00285244666" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_027_0" type="box" pos="-0.291999996 0.0799999908 1.02456501" size="0.00699999928 0.18 0.00529745353" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_028_0" type="box" pos="0.291999996 0.0799999908 1.02456501" size="0.00699999928 0.18 0.00529745353" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_029_0" type="box" pos="0 0.0850000046 1.25928506" size="0.291999996 0.197000001 0.00285244666" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_031_0" type="box" pos="-0.291999996 0.0799999908 1.25195004" size="0.00699999928 0.18 0.00529745353" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_032_0" type="box" pos="0.291999996 0.0799999908 1.25195004" size="0.00699999928 0.18 0.00529745353" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_033_0" type="box" pos="0 0.0850000046 1.49400498" size="0.291999996 0.197000001 0.00285244666" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_035_0" type="box" pos="-0.291999996 0.0799999908 1.48666996" size="0.00699999928 0.18 0.00529745353" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_036_0" type="box" pos="0.291999996 0.0799999908 1.48666996" size="0.00699999928 0.18 0.00529745353" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_037_0" type="box" pos="0 0.0870000049 0.88193998" size="0.282499999 0.190000005 0.00163000458" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_038_0" type="box" pos="-0.280499995 0.0870000049 0.951622491" size="0.00200000405 0.190000005 0.0696825118" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_039_0" type="box" pos="0 -0.101000004 0.951622491" size="0.282499999 0.0019999966 0.0696825118" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_040_0" type="box" pos="0.280499995 0.0870000049 0.951622491" size="0.00200000405 0.190000005 0.0696825118" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_041_0" type="box" pos="0 0.275000006 0.951622491" size="0.282499999 0.00200000405 0.0696825118" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_043_0" type="box" pos="0 0.0300000012 0.425000024" size="0.32249999 0.284999996 0.378500027" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
       <geom name="col_044_0" type="box" pos="0 -0.316000015 0.254999995" size="0.349000007 0.0379999876 0.224999994" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_046_0" type="box" pos="0 -0.316000015 0.649999961" size="0.349000007 0.0379999876 0.159999982" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
-      <geom name="col_107_0" type="box" pos="0 -0.216999993 1.75366664" size="0.0215000007 0.0304999948 0.0114791393" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_046_0" type="box" pos="0 -0.316000015 0.635999965" size="0.349000007 0.0379999876 0.145999983" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
+      <geom name="col_107_0" type="box" pos="0 -0.216999993 1.75235997" size="0.0215000007 0.0304999948 0.0118174719" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
     </body>
   </worldbody>
   <contact>

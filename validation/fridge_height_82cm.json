@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "asset_version": "0.1.6",
+  "doors": {
+    "left": {
+      "visual_bottom_cm": 81.99999183279252,
+      "collision_bottom_cm": 81.99999280000002,
+      "usd_bottom_cm": 81.99999199817056,
+      "top_cm": 179.7999991506954
+    },
+    "right": {
+      "visual_bottom_cm": 81.9999914156352,
+      "collision_bottom_cm": 81.99999280000002,
+      "usd_bottom_cm": 81.99999199817056,
+      "top_cm": 179.7999989246918
+    }
+  },
+  "inter_compartment_gap_cm": 0.8000026226043677,
+  "mass_kg": 91.0,
+  "static_sweep_configurations": 723,
+  "max_penetration_m": 0.0,
+  "baseline_placement_unchanged": true,
+  "resistance_unchanged": true,
+  "physics_calibrated": false
+}

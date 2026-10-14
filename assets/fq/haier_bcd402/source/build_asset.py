@@ -22,6 +22,8 @@ coms={'cabinet':[0,0,.9],'door_left':[.165,-.022,.598],'door_right':[-.165,-.022
 coms['door_left'][0]+=-.342000008-anchors['door_left'][0]
 coms['door_right'][0]+=.342000008-anchors['door_right'][0]
 inertias={'cabinet':[21.9142857143,21.9142857143,5.47857142857],'door_left':[.85,.92,.08],'door_right':[.85,.92,.08],'mullion':[.031,.031,.0001]}
+for link, props in G.get('physics', {}).items():
+    masses[link]=props['mass_kg'];coms[link]=props['com_m'];inertias[link]=props['diagonal_inertia_kg_m2']
 def text(v):return ' '.join(f'{float(x):.9g}' for x in v)
 def rel(a,b):return [a[i]-b[i] for i in range(3)]
 x=E.Element('mujoco',model='haier_bcd402_v1');E.SubElement(x,'compiler',angle='radian',meshdir='meshes',autolimits='true')
@@ -79,8 +81,12 @@ author_physx_resistance(stage)
 stage.GetRootLayer().Save()
 meta={'asset_id':'refrigerator:haier_bcd402_v1','entries':{'mujoco':'refrigerator.xml','isaac':'refrigerator.usda','blender':'source/haier_bcd402_body_v1.blend'},'initial_joint_positions':{j:0. for j in joints.values()},'joint_limits_rad':{j:[0,math.pi/2] for j in joints.values()},'units':'meter','up_axis':'Z','front_axis':'-Y','fixed_base':True,'contents_included':False,'physics_calibrated':False,'estimated_mass_kg':masses,'limitations':['Component dimensions are estimated from photos','Mass, inertia, friction and damping are provisional engineering placeholders','No seal adhesion or pressure differential model','Mullion is independent and has no automatic folding constraint','Freezer is static','MuJoCo parent-child contact filtering applies; full self-collision not calibrated','USD structural export does not imply Isaac runtime validation'],'preferred_robot':'g1_o7_left_wholebody','visual_meshes':len(G['visuals']),'collision_boxes':len(G['collisions'])}
 meta['limitations'].append('Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation')
-meta['version']='0.1.4'
+meta['version']='0.1.6'
 meta['limitations'].append('Both hinge axes geometrically corrected to cabinet outer sides; not hardware calibrated.')
-(R/'manifest.json').write_text(json.dumps(meta,indent=2))
+# Preserve versioned calibration/resistance metadata during regeneration.
+previous=SOURCE.parent/'manifest.json'
+if previous.exists():
+    preserved=json.loads(previous.read_text());preserved.update(estimated_mass_kg=masses,visual_meshes=len(G['visuals']),collision_boxes=len(G['collisions']));meta=preserved
+(R/'manifest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
 print('BUILT',R)
 
