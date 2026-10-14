@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "body_dimensions_m": [
+    0.2798735797405243,
+    0.1899999976158142,
+    0.16500000655651093
+  ],
+  "nominal_dimensions_m": [
+    0.28,
+    0.19,
+    0.165
+  ],
+  "height_excludes_handles": true,
+  "bottom_estimated_m": [
+    0.24,
+    0.15
+  ],
+  "corner_radius_estimated_m": 0.028,
+  "payload_local_position_m": [
+    0.0006033062010340966,
+    -0.0019640006371903873,
+    0.030999652913465982
+  ],
+  "payload_speed_m_s": 0.0008576214518490276,
+  "maximum_drop_penetration_m": 0.0030956856303908306,
+  "joint_sweeps": [
+    {
+      "handle": "handle_right",
+      "minimum_rad": -0.6533093284192089,
+      "maximum_rad": 2.5416487310808513,
+      "torque_driven": true
+    },
+    {
+      "handle": "handle_left",
+      "minimum_rad": -0.6558307706941912,
+      "maximum_rad": 2.541512828893118,
+      "torque_driven": true
+    }
+  ],
+  "warnings": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "usd_matches_mujoco_geometry": true,
+  "isaac_physx_runtime_tested": false,
+  "cpu_only": true,
+  "mass_friction_measured": false
+}

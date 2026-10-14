@@ -8,9 +8,9 @@
   </material>
   <link name="basket_body">
     <inertial>
-      <origin xyz="0 0 0.108" rpy="0 0 0" />
+      <origin xyz="0 0 0.0774782609" rpy="0 0 0" />
       <mass value="0.32" />
-      <inertia ixx="0.0032" iyy="0.0047" izz="0.0054" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.001865448271109011" iyy="0.0027303498914793825" izz="0.003309172453703705" ixy="0" ixz="0" iyz="0" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -316,9 +316,9 @@
   </link>
   <link name="handle_right">
     <inertial>
-      <origin xyz="0.108 0 0" rpy="0 0 0" />
+      <origin xyz="0.084 0 0" rpy="0 0 0" />
       <mass value="0.045" />
-      <inertia ixx="0.0007" iyy="0.0002" izz="0.00085" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.0004359131320888469" iyy="0.0001187304546197111" izz="0.0005289110725308642" ixy="0" ixz="0" iyz="0" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -328,103 +328,103 @@
       <material name="gray" />
     </visual>
     <collision name="box">
-      <origin xyz="0.0318461538 -0.123 0" rpy="0 0 0" />
+      <origin xyz="0.0233333333 -0.098 0" rpy="0 0 0" />
       <geometry>
-        <box size="0.0646923077 0.0045 0.015" />
+        <box size="0.0476666667 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.100846154 -0.123 0" rpy="0 0 0" />
+      <origin xyz="0.0738888889 -0.098 0" rpy="0 0 0" />
       <geometry>
-        <box size="0.0753076923 0.0045 0.015" />
+        <box size="0.0554444444 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.143357568 -0.121934313 0" rpy="0 0 0.196349541" />
+      <origin xyz="0.106468679 -0.0969343135 0" rpy="0 0 0.196349541" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.153257063 -0.117833808 0" rpy="0 0 0.589048623" />
+      <origin xyz="0.116368174 -0.0928338084 0" rpy="0 0 0.589048623" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.160833808 -0.110257063 0" rpy="0 0 0.981747704" />
+      <origin xyz="0.12394492 -0.085257063 0" rpy="0 0 0.981747704" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.164934313 -0.100357568 0" rpy="0 0 1.37444679" />
+      <origin xyz="0.128045425 -0.0753575681 0" rpy="0 0 1.37444679" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.166 -0.0633333333 0" rpy="0 0 1.57079633" />
+      <origin xyz="0.129111111 -0.0466666667 0" rpy="0 0 1.57079633" />
       <geometry>
-        <box size="0.0643333333 0.0045 0.015" />
+        <box size="0.0476666667 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.166 6.9388939e-18 0" rpy="0 0 1.57079633" />
+      <origin xyz="0.129111111 -3.46944695e-18 0" rpy="0 0 1.57079633" />
       <geometry>
-        <box size="0.0643333333 0.0045 0.015" />
+        <box size="0.0476666667 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.166 0.0633333333 0" rpy="0 0 1.57079633" />
+      <origin xyz="0.129111111 0.0466666667 0" rpy="0 0 1.57079633" />
       <geometry>
-        <box size="0.0643333333 0.0045 0.015" />
+        <box size="0.0476666667 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.164934313 0.100357568 0" rpy="0 0 1.76714587" />
+      <origin xyz="0.128045425 0.0753575681 0" rpy="0 0 1.76714587" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.160833808 0.110257063 0" rpy="0 0 2.15984495" />
+      <origin xyz="0.12394492 0.085257063 0" rpy="0 0 2.15984495" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.153257063 0.117833808 0" rpy="0 0 2.55254403" />
+      <origin xyz="0.116368174 0.0928338084 0" rpy="0 0 2.55254403" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.143357568 0.121934313 0" rpy="0 0 2.94524311" />
+      <origin xyz="0.106468679 0.0969343135 0" rpy="0 0 2.94524311" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="0.069 0.123 0" rpy="0 0 3.14159265" />
+      <origin xyz="0.0505555556 0.098 0" rpy="0 0 3.14159265" />
       <geometry>
-        <box size="0.139 0.0045 0.015" />
+        <box size="0.102111111 0.0035625 0.0107608696" />
       </geometry>
     </collision>
   </link>
   <joint name="handle_right_hinge" type="revolute">
     <parent link="basket_body" />
     <child link="handle_right" />
-    <origin xyz="0.052 0 0.215" rpy="0 0 0" />
+    <origin xyz="0.0404444444 0 0.15423913" rpy="0 0 0" />
     <axis xyz="0 -1 0" />
     <limit lower="-0.65" upper="2.82" effort=".3" velocity="4" />
     <dynamics damping="0.003" friction=".0001" />
   </joint>
   <link name="handle_left">
     <inertial>
-      <origin xyz="-0.108 0 0" rpy="0 0 0" />
+      <origin xyz="-0.084 0 0" rpy="0 0 0" />
       <mass value="0.045" />
-      <inertia ixx="0.0007" iyy="0.0002" izz="0.00085" ixy="0" ixz="0" iyz="0" />
+      <inertia ixx="0.0004359131320888469" iyy="0.0001187304546197111" izz="0.0005289110725308642" ixy="0" ixz="0" iyz="0" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -434,94 +434,94 @@
       <material name="gray" />
     </visual>
     <collision name="box">
-      <origin xyz="-0.0318461538 -0.123 0" rpy="0 0 3.14159265" />
+      <origin xyz="-0.0233333333 -0.098 0" rpy="0 0 3.14159265" />
       <geometry>
-        <box size="0.0646923077 0.0045 0.015" />
+        <box size="0.0476666667 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.100846154 -0.123 0" rpy="0 0 3.14159265" />
+      <origin xyz="-0.0738888889 -0.098 0" rpy="0 0 3.14159265" />
       <geometry>
-        <box size="0.0753076923 0.0045 0.015" />
+        <box size="0.0554444444 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.143357568 -0.121934313 0" rpy="0 0 2.94524311" />
+      <origin xyz="-0.106468679 -0.0969343135 0" rpy="0 0 2.94524311" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.153257063 -0.117833808 0" rpy="0 0 2.55254403" />
+      <origin xyz="-0.116368174 -0.0928338084 0" rpy="0 0 2.55254403" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.160833808 -0.110257063 0" rpy="0 0 2.15984495" />
+      <origin xyz="-0.12394492 -0.085257063 0" rpy="0 0 2.15984495" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.164934313 -0.100357568 0" rpy="0 0 1.76714587" />
+      <origin xyz="-0.128045425 -0.0753575681 0" rpy="0 0 1.76714587" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.166 -0.0633333333 0" rpy="0 0 1.57079633" />
+      <origin xyz="-0.129111111 -0.0466666667 0" rpy="0 0 1.57079633" />
       <geometry>
-        <box size="0.0643333333 0.0045 0.015" />
+        <box size="0.0476666667 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.166 6.9388939e-18 0" rpy="0 0 1.57079633" />
+      <origin xyz="-0.129111111 -3.46944695e-18 0" rpy="0 0 1.57079633" />
       <geometry>
-        <box size="0.0643333333 0.0045 0.015" />
+        <box size="0.0476666667 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.166 0.0633333333 0" rpy="0 0 1.57079633" />
+      <origin xyz="-0.129111111 0.0466666667 0" rpy="0 0 1.57079633" />
       <geometry>
-        <box size="0.0643333333 0.0045 0.015" />
+        <box size="0.0476666667 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.164934313 0.100357568 0" rpy="0 0 1.37444679" />
+      <origin xyz="-0.128045425 0.0753575681 0" rpy="0 0 1.37444679" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.160833808 0.110257063 0" rpy="0 0 0.981747704" />
+      <origin xyz="-0.12394492 0.085257063 0" rpy="0 0 0.981747704" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.153257063 0.117833808 0" rpy="0 0 0.589048623" />
+      <origin xyz="-0.116368174 0.0928338084 0" rpy="0 0 0.589048623" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.143357568 0.121934313 0" rpy="0 0 0.196349541" />
+      <origin xyz="-0.106468679 0.0969343135 0" rpy="0 0 0.196349541" />
       <geometry>
-        <box size="0.011925058 0.0045 0.015" />
+        <box size="0.011925058 0.0035625 0.0107608696" />
       </geometry>
     </collision>
     <collision name="box">
-      <origin xyz="-0.069 0.123 0" rpy="0 0 0" />
+      <origin xyz="-0.0505555556 0.098 0" rpy="0 0 0" />
       <geometry>
-        <box size="0.139 0.0045 0.015" />
+        <box size="0.102111111 0.0035625 0.0107608696" />
       </geometry>
     </collision>
   </link>
   <joint name="handle_left_hinge" type="revolute">
     <parent link="basket_body" />
     <child link="handle_left" />
-    <origin xyz="-0.052 0 0.215" rpy="0 0 0" />
+    <origin xyz="-0.0404444444 0 0.15423913" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit lower="-0.65" upper="2.82" effort=".3" velocity="4" />
     <dynamics damping="0.003" friction=".0001" />

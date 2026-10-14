@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/photo_basket",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "articulated",
   "units": "meter",
   "up_axis": "Z",
@@ -26,7 +26,13 @@
   ],
   "physics_calibrated": false,
   "limitations": [
-    "Estimated dimensions and mass; passive handle hinges"
+    "Body nominal dimensions from BDO-6550 label; height excludes handles. Bottom, corners, handles and wall thickness are estimates.",
+    "Mass, inertia and friction are estimates; passive handle hinges."
   ],
-  "calibration_record": null
+  "calibration_record": "assets/fq/photo_basket/dimensions_update.json",
+  "dimensions_body_m": [
+    0.28,
+    0.19,
+    0.165
+  ]
 }

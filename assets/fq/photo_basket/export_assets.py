@@ -23,7 +23,7 @@ world=sub(root,'worldbody');sub(world,'light',pos='0 -.5 1.3',dir='0 .2 -1',diff
 sub(world,'light',pos='.6 .3 .8',dir='-.3 -.2 -1',diffuse='.5 .5 .5')
 sub(world,'geom',name='ground',type='plane',size='2 2 .1',rgba='.17 .20 .23 1')
 body=sub(world,'body',name='basket',pos='0 0 .035');sub(body,'freejoint',name='basket_free')
-sub(body,'inertial',pos='0 0 .108',mass=P['body_mass'],diaginertia='.0032 .0047 .0054')
+sub(body,'inertial',pos=fmt([0,0,P['body_com_z']]),mass=P['body_mass'],diaginertia=fmt(P['body_inertia']))
 sub(body,'geom',name='basket_visual',type='mesh',mesh='basket_body',material='white',contype='0',conaffinity='0',group='2',mass='0')
 for c in G['body_collision']:
     args=dict(name='basket_'+c['name'],group='3',rgba='0 0 0 0',mass='0')
@@ -33,7 +33,7 @@ for c in G['body_collision']:
 for sign,name in [(1,'handle_right'),(-1,'handle_left')]:
     h=sub(body,'body',name=name,pos=fmt([sign*P['handle_anchor_x'],0,P['handle_pivot_z']]))
     sub(h,'joint',name=name+'_hinge',type='hinge',axis=fmt([0,-sign,0]),range=fmt(P['joint_limits']),damping=P['joint_damping'],armature='.00001',frictionloss='.0001',solreflimit='.003 1',solimplimit='.99 .999 .001')
-    sub(h,'inertial',pos=fmt([sign*.108,0,0]),mass=P['handle_mass'],diaginertia='.0007 .0002 .00085')
+    sub(h,'inertial',pos=fmt([sign*P['handle_com_x'],0,0]),mass=P['handle_mass'],diaginertia=fmt(P['handle_inertia']))
     sub(h,'geom',name=name+'_visual',type='mesh',mesh=name,material='gray',contype='0',conaffinity='0',group='2',mass='0')
     for i,c in enumerate(G['handle_collision'][name]):sub(h,'geom',name=f'{name}_collision_{i}',type='box',pos=fmt(c['center']),size=fmt([s/2 for s in c['size']]),euler=fmt(c['rpy']),group='3',rgba='0 0 0 0',mass='0')
 key=sub(root,'keyframe');sub(key,'key',name='photo_pose',qpos=fmt([0,0,.035,1,0,0,0,P['joint_initial'],P['joint_initial']]))
@@ -57,13 +57,21 @@ def collision(link,c):
     geo=sub(v,'geometry')
     if 'vertices' in c:sub(geo,'mesh',filename=f"meshes/collision_{c['name']}.obj")
     else:sub(geo,'box',size=fmt(c['size']))
-b=sub(robot,'link',name='basket_body');inertial(b,P['body_mass'],[0,0,.108],[.0032,.0047,.0054]);visual(b,'basket_body','white')
+b=sub(robot,'link',name='basket_body');inertial(b,P['body_mass'],[0,0,P['body_com_z']],P['body_inertia']);visual(b,'basket_body','white')
 for c in G['body_collision']:collision(b,c)
 for sign,name in [(1,'handle_right'),(-1,'handle_left')]:
-    h=sub(robot,'link',name=name);inertial(h,P['handle_mass'],[sign*.108,0,0],[.0007,.0002,.00085]);visual(h,name,'gray')
+    h=sub(robot,'link',name=name);inertial(h,P['handle_mass'],[sign*P['handle_com_x'],0,0],P['handle_inertia']);visual(h,name,'gray')
     for c in G['handle_collision'][name]:collision(h,c)
     j=sub(robot,'joint',name=name+'_hinge',type='revolute');sub(j,'parent',link='basket_body');sub(j,'child',link=name)
     sub(j,'origin',xyz=fmt([sign*P['handle_anchor_x'],0,P['handle_pivot_z']]),rpy='0 0 0');sub(j,'axis',xyz=fmt([0,-sign,0]))
     sub(j,'limit',lower=P['joint_limits'][0],upper=P['joint_limits'][1],effort='.3',velocity='4');sub(j,'dynamics',damping=P['joint_damping'],friction='.0001')
 save(robot,R/'basket.urdf')
 print('EXPORTED MJCF, test MJCF, URDF',flush=True)
+
+# Reusable asset has no test floor, lights or payload, and starts at the body origin.
+asset_root=E.fromstring(E.tostring(root));w=asset_root.find('worldbody')
+for child in list(w):
+    if child.tag!='body':w.remove(child)
+w.find('body').set('pos','0 0 0')
+asset_root.find('keyframe/key').set('qpos',fmt([0,0,0,1,0,0,0,P['joint_initial'],P['joint_initial']]))
+save(asset_root,R/'basket_asset.xml')

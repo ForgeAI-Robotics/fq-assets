@@ -1,6 +1,6 @@
 {
   "asset_id": "basket:photo_basket_v1",
-  "asset_version": "1.0.0",
+  "asset_version": "1.0.1",
   "type": "articulated",
   "canonical_path": "assets/basket/photo_basket_v1",
   "entries": {
@@ -17,9 +17,9 @@
     "up_axis": "Z"
   },
   "dimensions_m": [
-    0.36,
-    0.24,
-    0.23
+    0.28,
+    0.19,
+    0.165
   ],
   "mass_kg": 0.41,
   "body_mass_kg": 0.32,
@@ -36,7 +36,12 @@
   "collision_policy": "Open interior, convex wall segments and solid bottom; small visual holes are not collision openings.",
   "robot_task_integrated": false,
   "provenance": "Four user supplied photos; modeled locally with Blender 4.5.4. SOURCE_README and validation_history preserve earlier status, not current installation status.",
-  "validation": {
+  "dimensions_exclude_handles": true,
+  "bottom_dimensions_estimated_m": [
+    0.24,
+    0.15
+  ],
+  "validation_history": {
     "host": "192.168.5.21",
     "registered": true,
     "mujoco_version": "3.3.6",
@@ -46,5 +51,11 @@
     "urdf_reimport_tested_this_run": false,
     "robot_task_integrated": false,
     "reports": "validation/"
+  },
+  "validation": {
+    "mujoco_dynamics_passed": true,
+    "isaac_full_visual_usd_dynamics_passed": false,
+    "reports": "validation/basket_6550_20261014.json",
+    "usd_structure_passed": true
   }
 }

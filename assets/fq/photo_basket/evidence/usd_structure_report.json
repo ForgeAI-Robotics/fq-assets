@@ -1,0 +1,10 @@
+{
+  "status": "structural_validation_passed",
+  "isaac_runtime_validated": false,
+  "usd_version": "0.25.5",
+  "rigid_bodies": 3,
+  "revolute_joints": 2,
+  "collision_primitives": 77,
+  "meters_per_unit": 1.0,
+  "up_axis": "Z"
+}

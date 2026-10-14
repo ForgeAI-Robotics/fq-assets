@@ -9,6 +9,7 @@ from math import sin, cos, pi, sqrt
 ROOT=Path(sys.argv[sys.argv.index('--')+1] if '--' in sys.argv else __file__).resolve()
 if ROOT.is_file(): ROOT=ROOT.parent
 P=json.loads((ROOT/'parameters.json').read_text())
+ZS=P['height']/.23
 for folder in ['meshes','previews','evidence']: (ROOT/folder).mkdir(exist_ok=True,parents=True)
 bpy.ops.object.select_all(action='SELECT'); bpy.ops.object.delete(use_global=False)
 scene=bpy.context.scene
@@ -70,7 +71,7 @@ def wall(s,z,inside=False,ribs=True):
     L,W,r=dims(z); x,y,nx,ny=rr(s,L,W,r)
     offset=-P['wall_thickness'] if inside else 0
     if not inside and ribs:
-        fade=min(1,max(0,(z-.006)/.012),max(0,(.198-z)/.012))
+        fade=min(1,max(0,(z-.006*ZS)/(.012*ZS)),max(0,(.198*ZS-z)/(.012*ZS)))
         phase=2*pi*(s*P['rib_count']-z*P['rib_count']*.52/(2*(P['length']+P['width'])))
         offset+=P['rib_amplitude']*(.5+.5*cos(phase))*fade
     return (x+nx*offset,y+ny*offset,z)
@@ -84,7 +85,7 @@ def add_wall(s,z,inside=False):
     normal=ds.cross(dz).normalized()*(-1 if inside else 1)
     wall_normals[tuple(round(x,6) for x in p)]=(normal,inside)
     return add(p)
-cols=P['hole_columns_perimeter']; rows=P['hole_rows']; zlo=.019; zhi=.192
+cols=P['hole_columns_perimeter']; rows=P['hole_rows']; zlo=.019*ZS; zhi=.192*ZS
 # Each cell is a perforated patch, tessellated radially to resolve the raised ribs.
 outer=[]
 corners=[(-.5,-.5),(.5,-.5),(.5,.5),(-.5,.5)]
@@ -124,7 +125,7 @@ def wall_band(a,b,steps=2):
             for i in range(N): k=(i+1)%N;F.append([ra[i],ra[k],rb[k],rb[i]])
     for j in [0,-1]:
         for i in range(N): k=(i+1)%N;F.append([shells[0][j][i],shells[1][j][i],shells[1][j][k],shells[0][j][k]])
-wall_band(.003,zlo); wall_band(zhi,.202)
+wall_band(.003*ZS,zlo); wall_band(zhi,.202*ZS)
 shell=mesh('Perforated tapered shell',V,F,white)
 normal_entries=list(wall_normals.items());tree=kdtree.KDTree(len(normal_entries))
 for i,(co,entry) in enumerate(normal_entries):tree.insert(co,i)
@@ -149,10 +150,10 @@ def ring_solid(name,profiles,mat,N=312,cap=False):
         faces.append(list(reversed(range(N)))); faces.append([(len(profiles)-1)*N+i for i in range(N)])
     return mesh(name,verts,faces,mat)
 L=P['length'];W=P['width'];r=P['corner_radius'];H=P['height'];t=P['wall_thickness']
-shoulder_L,shoulder_W,shoulder_r=dims(.202)
-rim=ring_solid('Thick upper rim',[(L-.005,W-.005,r,.198),(L,W,r,H-.001),(L-.001,W-.001,r,H),(L-2*t,W-2*t,r-t,H),(shoulder_L-2*t,shoulder_W-2*t,shoulder_r-t,.202)],white)
+shoulder_L,shoulder_W,shoulder_r=dims(.202*ZS)
+rim=ring_solid('Thick upper rim',[(L-.005,W-.005,r,.198*ZS),(L,W,r,H-.001),(L-.001,W-.001,r,H),(L-2*t,W-2*t,r-t,H),(shoulder_L-2*t,shoulder_W-2*t,shoulder_r-t,.202*ZS)],white)
 bevel(rim,.00065,2);body_parts.append(rim)
-base=ring_solid('Solid basket floor',[(P['bottom_length']-.001,P['bottom_width']-.001,r*.79,.001),(P['bottom_length'],P['bottom_width'],r*.79,.0055)],white,cap=True)
+base=ring_solid('Solid basket floor',[(P['bottom_length']-.001,P['bottom_width']-.001,r*.79,0),(P['bottom_length'],P['bottom_width'],r*.79,.0055)],white,cap=True)
 bevel(base,.0011,3);body_parts.append(base)
 
 def cube(name,center,size,mat,bev=0):
@@ -165,7 +166,7 @@ def cube(name,center,size,mat,bev=0):
 # Handle path surrounds each short end, with pivots on the two long walls.
 # Zero angle is horizontal/outward; positive angles raise the grip.
 def handle_path():
-    R=.028; e=P['handle_extension']; y=W/2+.003
+    R=P['corner_radius']; e=P['handle_extension']; y=W/2+.003
     pts=[]
     for i in range(14): pts.append(((e-R)*i/13,-y))
     for i in range(1,13):
@@ -196,7 +197,7 @@ for sign,name in [(1,'handle_right'),(-1,'handle_left')]:
         pieces.append({'center':[sign*(a[0]+b[0])/2,(a[1]+b[1])/2,0],'size':[sqrt(dx*dx+dy*dy)+.001,P['handle_thickness'],P['handle_width']],'rpy':[0,0,math.atan2(dy,dx)]})
     handle_coll.append(pieces)
     for sy in [-1,1]:
-        bpy.ops.mesh.primitive_cylinder_add(vertices=24,radius=.005,depth=.004,location=(sign*P['handle_anchor_x'],sy*(W/2-.001),P['handle_pivot_z']),rotation=(pi/2,0,0))
+        bpy.ops.mesh.primitive_cylinder_add(vertices=24,radius=.005,depth=.004,location=(sign*P['handle_anchor_x'],sy*(W/2-.002),P['handle_pivot_z']),rotation=(pi/2,0,0))
         pin=bpy.context.object;pin.name='Pivot pin';pin.data.materials.append(gray);bevel(pin,.0006,2);body_parts.append(pin)
 
 body=join(body_parts,'basket_body')
@@ -209,7 +210,7 @@ logo=bpy.context.object;logo.name='Front printed bdo mark';logo.data.body='bdo';
 collision=[];N=48
 for i in range(N):
     sv=[i/N,(i+1)/N];verts=[]
-    for z in [.003,.229]:
+    for z in [.003*ZS,P['height']-.001]:
         for inside in [False,True]:
             for s in sv:
                 x,y,nx,ny=rr(s,*dims(z)); off=(-.0040 if inside else .0016)
@@ -225,14 +226,18 @@ collision.insert(0,{'name':'floor','vertices':floor_vertices,'faces':floor_faces
 
 def export_obj(ob,path):
     bpy.ops.object.select_all(action='DESELECT');ob.select_set(True);bpy.context.view_layer.objects.active=ob
-    bpy.ops.wm.obj_export(filepath=str(path),export_selected_objects=True,apply_modifiers=True,export_materials=False,forward_axis='Y',up_axis='Z',export_triangulated_mesh=True)
+    me=ob.data; me.calc_loop_triangles()
+    with path.open('w') as f:
+        for v in me.vertices: f.write('v '+' '.join(str(float(x)) for x in v.co)+'\n')
+        for tri in me.loop_triangles: f.write('f '+' '.join(str(i+1) for i in tri.vertices)+'\n')
 
 geometry={'parameters':P,'body_collision':collision,'handle_collision':dict(zip(['handle_right','handle_left'],handle_coll)),'visuals':{}}
 for ob in [body,*handles]:
     old=ob.location.copy();ob.location=(0,0,0)
     export_obj(ob,ROOT/'meshes'/f'{ob.name}.obj')
     me=ob.data;me.calc_loop_triangles()
-    geometry['visuals'][ob.name]={'vertices':[list(v.co) for v in me.vertices],'triangles':[list(f.vertices) for f in me.loop_triangles], 'triangle_normals':[list(me.corner_normals[i].vector) for f in me.loop_triangles for i in f.loops]}
+    if hasattr(me,'calc_normals_split'): me.calc_normals_split()
+    geometry['visuals'][ob.name]={'vertices':[list(v.co) for v in me.vertices],'triangles':[list(f.vertices) for f in me.loop_triangles], 'triangle_normals':[list(me.corner_normals[i].vector if hasattr(me,'corner_normals') else me.loops[i].normal) for f in me.loop_triangles for i in f.loops]}
     ob.location=old
 for col in collision:
     if 'vertices' in col:
@@ -241,7 +246,7 @@ for col in collision:
 for ob,sign in zip(handles,[1,-1]):
     ob.rotation_euler.y=-sign*P['joint_initial']
     ob['joint_axis_local']=[0,-sign,0];ob['joint_limits_radians']=P['joint_limits'];ob['estimated_mass_kg']=P['handle_mass']
-body['dimensions_are_estimated']=True;body['estimated_mass_kg']=P['body_mass']
+body['dimensions_are_estimated']=False;body['detail_dimensions_are_estimated']=True;body['estimated_mass_kg']=P['body_mass']
 
 # Studio scene and three inspection cameras.
 ground=cube('Studio floor',(0,0,-.009),(200,200,.016),material('Backdrop',(.16,.195,.22),.72))
@@ -250,16 +255,13 @@ for name,loc,power,size in [('Large softbox',(.1,-.5,.8),12,.65),('Rim softbox',
     da=bpy.data.lights.new(name,'AREA');da.energy=power;da.shape='DISK';da.size=size;ob=bpy.data.objects.new(name,da);scene.collection.objects.link(ob);ob.location=loc;point_at(ob,(0,0,.1))
 bpy.ops.object.camera_add(location=(.50,-.64,.49));cam=bpy.context.object;cam.name='Product camera';cam.data.type='ORTHO';cam.data.ortho_scale=.56;point_at(cam,(0,0,.12));scene.camera=cam
 scene.render.engine='CYCLES';scene.cycles.samples=48;scene.cycles.use_denoising=True
-try:
-    prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='OPTIX';prefs.get_devices()
-    for device in prefs.devices: device.use=device.type!='CPU'
-    scene.cycles.device='GPU' if any(d.type!='CPU' for d in prefs.devices) else 'CPU'
-except Exception: scene.cycles.device='CPU'
+scene.cycles.device='CPU'
 scene.world.color=(.08,.08,.08);scene.render.resolution_x=1400;scene.render.resolution_y=1200;scene.render.resolution_percentage=100
-scene.view_settings.view_transform='AgX'
+scene.view_settings.view_transform='AgX' if bpy.app.version >= (4,0,0) else 'Standard'
 bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'basket.blend'))
 for name,loc,scale in [('perspective',(.50,-.64,.49),.56),('front',(0,-.8,.31),.53),('top',(.22,-.28,.85),.54)]:
-    cam.location=loc;cam.data.ortho_scale=scale;point_at(cam,(0,0,.12));scene.render.filepath=str(ROOT/'previews'/f'{name}.png');bpy.ops.render.render(write_still=True)
+    cam.location=loc;cam.data.ortho_scale=scale;point_at(cam,(0,0,.12));scene.render.filepath=str(ROOT/'previews'/f'{name}.png');
+    if '--render' in sys.argv: bpy.ops.render.render(write_still=True)
 cam.location=(.50,-.64,.49);cam.data.ortho_scale=.56;point_at(cam,(0,0,.12))
 bpy.ops.object.select_all(action='DESELECT');body.select_set(True);bpy.context.view_layer.objects.active=body
 bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'basket.blend'))

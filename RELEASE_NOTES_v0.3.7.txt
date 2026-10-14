@@ -1,0 +1,1 @@
+Basket 0.1.1: correct BDO-6550 body to 280 x 190 x 165 mm (excluding handles); regenerate handles, pivots, tapered rounded body, collision meshes, MJCF, URDF, USD and Blender source. Bottom 240 x 150 mm and corner radius 28 mm are estimates. Mass/friction remain unmeasured. Isolated CPU validation; no running SIMPLE task or lock changed.

@@ -11,9 +11,9 @@ root.GetPrim().AddAppliedSchema('PhysxArticulationAPI')
 root.GetPrim().CreateAttribute('physxArticulation:enabledSelfCollisions',Sdf.ValueTypeNames.Bool).Set(True)
 root.GetPrim().CreateAttribute('physxArticulation:solverPositionIterationCount',Sdf.ValueTypeNames.Int).Set(32)
 root.GetPrim().CreateAttribute('physxArticulation:solverVelocityIterationCount',Sdf.ValueTypeNames.Int).Set(8)
-root.GetPrim().SetCustomDataByKey('basket:estimatedDimensions',True)
+root.GetPrim().SetCustomDataByKey('basket:estimatedDimensions',False)
 root.GetPrim().SetCustomDataByKey('basket:estimatedMassAndFriction',True)
-root.GetPrim().SetCustomDataByKey('basket:source','Four user reference photos; see parameters.json')
+root.GetPrim().SetCustomDataByKey('basket:source','BDO-6550 label body dimensions; details estimated; see parameters.json')
 def mat(name,color):
     m=UsdShade.Material.Define(stage,'/Basket/Materials/'+name);s=UsdShade.Shader.Define(stage,m.GetPath().AppendChild('Shader'));s.CreateIdAttr('UsdPreviewSurface')
     s.CreateInput('diffuseColor',Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(*color));s.CreateInput('roughness',Sdf.ValueTypeNames.Float).Set(.3)
@@ -38,12 +38,12 @@ def body(name,mass,com,inertia,pos,angle=0):
     if 'triangle_normals' in g:v.CreateNormalsAttr(g['triangle_normals']);v.SetNormalsInterpolation('faceVarying')
     v.CreateDoubleSidedAttr(False);UsdShade.MaterialBindingAPI.Apply(v.GetPrim()).Bind(white if name=='basket_body' else gray)
     return x
-b=body('basket_body',P['body_mass'],[0,0,.108],[.0032,.0047,.0054],[0,0,0])
+b=body('basket_body',P['body_mass'],[0,0,P['body_com_z']],P['body_inertia'],[0,0,0])
 for i,c in enumerate(G['body_collision']):
     m=solid_mesh('/Basket/basket_body/Collision/'+c['name'],c['vertices'],c['faces']);collider(m.GetPrim());UsdPhysics.MeshCollisionAPI.Apply(m.GetPrim()).CreateApproximationAttr('convexHull')
 for sign,name in [(1,'handle_right'),(-1,'handle_left')]:
     anchor=[sign*P['handle_anchor_x'],0,P['handle_pivot_z']]
-    h=body(name,P['handle_mass'],[sign*.108,0,0],[.0007,.0002,.00085],anchor,-sign*P['joint_initial'])
+    h=body(name,P['handle_mass'],[sign*P['handle_com_x'],0,0],P['handle_inertia'],anchor,-sign*P['joint_initial'])
     for i,c in enumerate(G['handle_collision'][name]):
         box=UsdGeom.Cube.Define(stage,'/Basket/'+name+f'/Collision/segment_{i:02d}');box.CreateSizeAttr(1)
         box.AddTranslateOp().Set(Gf.Vec3d(*c['center']));box.AddRotateZOp().Set(math.degrees(c['rpy'][2]));box.AddScaleOp().Set(Gf.Vec3f(*c['size']));collider(box.GetPrim())

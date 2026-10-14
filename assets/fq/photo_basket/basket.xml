@@ -73,7 +73,7 @@
     <geom name="ground" type="plane" size="2 2 .1" rgba=".17 .20 .23 1" />
     <body name="basket" pos="0 0 .035">
       <freejoint name="basket_free" />
-      <inertial pos="0 0 .108" mass="0.32" diaginertia=".0032 .0047 .0054" />
+      <inertial pos="0 0 0.0774782609" mass="0.32" diaginertia="0.00186544827 0.00273034989 0.00330917245" />
       <geom name="basket_visual" type="mesh" mesh="basket_body" material="white" contype="0" conaffinity="0" group="2" mass="0" />
       <geom name="basket_floor" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="floor" />
       <geom name="basket_wall_00" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_00" />
@@ -124,43 +124,43 @@
       <geom name="basket_wall_45" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_45" />
       <geom name="basket_wall_46" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_46" />
       <geom name="basket_wall_47" group="3" rgba="0 0 0 0" mass="0" type="mesh" mesh="wall_47" />
-      <body name="handle_right" pos="0.052 0 0.215">
+      <body name="handle_right" pos="0.0404444444 0 0.15423913">
         <joint name="handle_right_hinge" type="hinge" axis="0 -1 0" range="-0.65 2.82" damping="0.003" armature=".00001" frictionloss=".0001" solreflimit=".003 1" solimplimit=".99 .999 .001" />
-        <inertial pos="0.108 0 0" mass="0.045" diaginertia=".0007 .0002 .00085" />
+        <inertial pos="0.084 0 0" mass="0.045" diaginertia="0.000435913132 0.000118730455 0.000528911073" />
         <geom name="handle_right_visual" type="mesh" mesh="handle_right" material="gray" contype="0" conaffinity="0" group="2" mass="0" />
-        <geom name="handle_right_collision_0" type="box" pos="0.0318461538 -0.123 0" size="0.0323461538 0.00225 0.0075" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_1" type="box" pos="0.100846154 -0.123 0" size="0.0376538462 0.00225 0.0075" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_2" type="box" pos="0.143357568 -0.121934313 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.196349541" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_3" type="box" pos="0.153257063 -0.117833808 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.589048623" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_4" type="box" pos="0.160833808 -0.110257063 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.981747704" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_5" type="box" pos="0.164934313 -0.100357568 0" size="0.00596252902 0.00225 0.0075" euler="0 0 1.37444679" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_6" type="box" pos="0.166 -0.0633333333 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_7" type="box" pos="0.166 6.9388939e-18 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_8" type="box" pos="0.166 0.0633333333 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_9" type="box" pos="0.164934313 0.100357568 0" size="0.00596252902 0.00225 0.0075" euler="0 0 1.76714587" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_10" type="box" pos="0.160833808 0.110257063 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.15984495" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_11" type="box" pos="0.153257063 0.117833808 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.55254403" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_12" type="box" pos="0.143357568 0.121934313 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.94524311" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_right_collision_13" type="box" pos="0.069 0.123 0" size="0.0695 0.00225 0.0075" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_0" type="box" pos="0.0233333333 -0.098 0" size="0.0238333333 0.00178125 0.00538043478" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_1" type="box" pos="0.0738888889 -0.098 0" size="0.0277222222 0.00178125 0.00538043478" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_2" type="box" pos="0.106468679 -0.0969343135 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 0.196349541" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_3" type="box" pos="0.116368174 -0.0928338084 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 0.589048623" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_4" type="box" pos="0.12394492 -0.085257063 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 0.981747704" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_5" type="box" pos="0.128045425 -0.0753575681 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 1.37444679" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_6" type="box" pos="0.129111111 -0.0466666667 0" size="0.0238333333 0.00178125 0.00538043478" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_7" type="box" pos="0.129111111 -3.46944695e-18 0" size="0.0238333333 0.00178125 0.00538043478" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_8" type="box" pos="0.129111111 0.0466666667 0" size="0.0238333333 0.00178125 0.00538043478" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_9" type="box" pos="0.128045425 0.0753575681 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 1.76714587" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_10" type="box" pos="0.12394492 0.085257063 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 2.15984495" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_11" type="box" pos="0.116368174 0.0928338084 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 2.55254403" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_12" type="box" pos="0.106468679 0.0969343135 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 2.94524311" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_right_collision_13" type="box" pos="0.0505555556 0.098 0" size="0.0510555556 0.00178125 0.00538043478" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
       </body>
-      <body name="handle_left" pos="-0.052 0 0.215">
+      <body name="handle_left" pos="-0.0404444444 0 0.15423913">
         <joint name="handle_left_hinge" type="hinge" axis="0 1 0" range="-0.65 2.82" damping="0.003" armature=".00001" frictionloss=".0001" solreflimit=".003 1" solimplimit=".99 .999 .001" />
-        <inertial pos="-0.108 0 0" mass="0.045" diaginertia=".0007 .0002 .00085" />
+        <inertial pos="-0.084 0 0" mass="0.045" diaginertia="0.000435913132 0.000118730455 0.000528911073" />
         <geom name="handle_left_visual" type="mesh" mesh="handle_left" material="gray" contype="0" conaffinity="0" group="2" mass="0" />
-        <geom name="handle_left_collision_0" type="box" pos="-0.0318461538 -0.123 0" size="0.0323461538 0.00225 0.0075" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_1" type="box" pos="-0.100846154 -0.123 0" size="0.0376538462 0.00225 0.0075" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_2" type="box" pos="-0.143357568 -0.121934313 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.94524311" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_3" type="box" pos="-0.153257063 -0.117833808 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.55254403" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_4" type="box" pos="-0.160833808 -0.110257063 0" size="0.00596252902 0.00225 0.0075" euler="0 0 2.15984495" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_5" type="box" pos="-0.164934313 -0.100357568 0" size="0.00596252902 0.00225 0.0075" euler="0 0 1.76714587" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_6" type="box" pos="-0.166 -0.0633333333 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_7" type="box" pos="-0.166 6.9388939e-18 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_8" type="box" pos="-0.166 0.0633333333 0" size="0.0321666667 0.00225 0.0075" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_9" type="box" pos="-0.164934313 0.100357568 0" size="0.00596252902 0.00225 0.0075" euler="0 0 1.37444679" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_10" type="box" pos="-0.160833808 0.110257063 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.981747704" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_11" type="box" pos="-0.153257063 0.117833808 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.589048623" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_12" type="box" pos="-0.143357568 0.121934313 0" size="0.00596252902 0.00225 0.0075" euler="0 0 0.196349541" group="3" rgba="0 0 0 0" mass="0" />
-        <geom name="handle_left_collision_13" type="box" pos="-0.069 0.123 0" size="0.0695 0.00225 0.0075" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_0" type="box" pos="-0.0233333333 -0.098 0" size="0.0238333333 0.00178125 0.00538043478" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_1" type="box" pos="-0.0738888889 -0.098 0" size="0.0277222222 0.00178125 0.00538043478" euler="0 0 3.14159265" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_2" type="box" pos="-0.106468679 -0.0969343135 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 2.94524311" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_3" type="box" pos="-0.116368174 -0.0928338084 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 2.55254403" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_4" type="box" pos="-0.12394492 -0.085257063 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 2.15984495" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_5" type="box" pos="-0.128045425 -0.0753575681 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 1.76714587" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_6" type="box" pos="-0.129111111 -0.0466666667 0" size="0.0238333333 0.00178125 0.00538043478" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_7" type="box" pos="-0.129111111 -3.46944695e-18 0" size="0.0238333333 0.00178125 0.00538043478" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_8" type="box" pos="-0.129111111 0.0466666667 0" size="0.0238333333 0.00178125 0.00538043478" euler="0 0 1.57079633" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_9" type="box" pos="-0.128045425 0.0753575681 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 1.37444679" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_10" type="box" pos="-0.12394492 0.085257063 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 0.981747704" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_11" type="box" pos="-0.116368174 0.0928338084 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 0.589048623" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_12" type="box" pos="-0.106468679 0.0969343135 0" size="0.00596252902 0.00178125 0.00538043478" euler="0 0 0.196349541" group="3" rgba="0 0 0 0" mass="0" />
+        <geom name="handle_left_collision_13" type="box" pos="-0.0505555556 0.098 0" size="0.0510555556 0.00178125 0.00538043478" euler="0 0 0" group="3" rgba="0 0 0 0" mass="0" />
       </body>
     </body>
   </worldbody>
