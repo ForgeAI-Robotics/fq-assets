@@ -2580,7 +2580,15 @@ def Xform "Refrigerator" (
             float physics:upperLimit = 90
         }
 
-        def PhysicsRevoluteJoint "refrigerator_right_hinge"
+        def PhysicsRevoluteJoint "refrigerator_right_hinge" (
+            customData = {
+                dictionary fq = {
+                    double simulationFrictionlossNm = 1.6
+                    double simulationDampingNmSRad = 0.15
+                    bool resistanceRuntimeSupported = false
+                }
+            }
+        )
         {
             uniform token physics:axis = "Z"
             rel physics:body0 = </Refrigerator/cabinet>

@@ -273,7 +273,7 @@
         <geom name="col_071_0" type="box" pos="0.171999998 0.141500011 0.79997915" size="0.125000007 0.00200000405 0.0455207825" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
       </body>
       <body name="refrigerator_door_right" pos="0.342000008 -0.275000006 0.849583328">
-        <joint name="refrigerator_right_hinge" type="hinge" axis="0 0 1" range="0.0 89.99999999971945" damping=".15" frictionloss="0" armature=".002" limited="true" pos="0.012 0 0" />
+        <joint name="refrigerator_right_hinge" type="hinge" axis="0 0 1" range="0.0 89.99999999971945" damping=".15" frictionloss="1.6" armature=".002" limited="true" pos="0.012 0 0" />
         <inertial pos="-0.165 -0.022 0.598" mass="7.0" diaginertia="0.85 0.92 0.08" />
         <geom name="part_076" type="mesh" mesh="baseline_fridge_part_076" rgba="0.529999971 0.560000002 0.579999983 1" contype="0" conaffinity="0" group="2" density="0" />
         <geom name="part_077" type="mesh" mesh="baseline_fridge_part_077" rgba="0.023 0.0299999993 0.0320000015 1" contype="0" conaffinity="0" group="2" density="0" />

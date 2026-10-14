@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/haier_bcd402",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "kind": "articulated",
   "units": "meter",
   "up_axis": "Z",
@@ -45,7 +45,8 @@
     "MuJoCo parent-child contact filtering applies; full self-collision not calibrated",
     "USD structural export does not imply Isaac runtime validation",
     "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation",
-    "Both hinge axes geometrically corrected to cabinet outer sides (+/-0.354 m); not hardware calibrated. Mullion remains independent with contact disabled."
+    "Both hinge axes geometrically corrected to cabinet outer sides (+/-0.354 m); not hardware calibrated. Mullion remains independent with contact disabled.",
+    "Right-door frictionloss 1.6 Nm and uniform [1.0,2.3] Nm profile are simulation parameters, not measured calibration; USD torque friction is metadata only."
   ],
   "calibration_record": "assets/fq/haier_bcd402/calibration_v2.json",
   "mass_properties": {
@@ -64,5 +65,32 @@
     },
     "inertia_status": "Cabinet placeholder inertia scaled by 76.7/70 at unchanged estimated COM; movable component inertia unchanged",
     "cabinet_scope": "Fixed assembly including compressor, shelves and currently fixed freezer drawers; excludes separately counted upper doors and mullion"
+  },
+  "simulation_resistance": {
+    "schema_version": 1,
+    "status": "simulation_parameter_not_measured_calibration",
+    "target_joint": "refrigerator_right_hinge",
+    "default_mode": "fixed",
+    "frictionloss_Nm": 1.6,
+    "damping_Nm_s_rad": 0.15,
+    "randomization": {
+      "mode": "uniform",
+      "bounds_Nm": [
+        1.0,
+        2.3
+      ],
+      "sample_once_per_episode": true,
+      "rng": "numpy PCG64 SeedSequence([seed, episode_index])"
+    },
+    "scope": "Right door only; left door and mullion unchanged",
+    "basis": "Low-confidence prior-assisted equivalent resistance estimate; uniform distribution is simulation augmentation, not measured population distribution",
+    "source_task": "在 fq assets 基线场景尝试开柜",
+    "source_candidate_sha256": "9b4d556c19623e96c23c0d7426b18ac247bf82bf1c4ad81682dcdbb13e1c46e6",
+    "limitations": [
+      "Seal breakaway and static/dynamic friction difference not identified",
+      "Existing SONIC robot policy failed opening at 1.6 Nm; controller adaptation is separate",
+      "MuJoCo frictionloss is a torque. USD custom metadata records it; native PhysX behavior is not implemented or validated."
+    ],
+    "usd_runtime_supported": false
   }
 }

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "simulation_parameter_not_measured_calibration",
+  "target_joint": "refrigerator_right_hinge",
+  "default_mode": "fixed",
+  "frictionloss_Nm": 1.6,
+  "damping_Nm_s_rad": 0.15,
+  "randomization": {
+    "mode": "uniform",
+    "bounds_Nm": [
+      1.0,
+      2.3
+    ],
+    "sample_once_per_episode": true,
+    "rng": "numpy PCG64 SeedSequence([seed, episode_index])"
+  },
+  "scope": "Right door only; left door and mullion unchanged",
+  "basis": "Low-confidence prior-assisted equivalent resistance estimate; uniform distribution is simulation augmentation, not measured population distribution",
+  "source_task": "在 fq assets 基线场景尝试开柜",
+  "source_candidate_sha256": "9b4d556c19623e96c23c0d7426b18ac247bf82bf1c4ad81682dcdbb13e1c46e6",
+  "limitations": [
+    "Seal breakaway and static/dynamic friction difference not identified",
+    "Existing SONIC robot policy failed opening at 1.6 Nm; controller adaptation is separate",
+    "MuJoCo frictionloss is a torque. USD custom metadata records it; native PhysX behavior is not implemented or validated."
+  ],
+  "usd_runtime_supported": false
+}

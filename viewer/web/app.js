@@ -64,7 +64,7 @@ function showProperties(a){
   }
   if(a.joints.length&&!isRobot(a)){
     html+=section('关节与阻力',row('可动关节',`${a.joints.length} 个`)+
-      (a.slug==='haier_bcd402'?row('开门力度','未标定','status-label')+'<p class="property-note">尚无实测开门力曲线。拖动仅改变姿态，不代表真实开门阻力；竖梁为独立关节。</p>':'<p class="property-note">两个被动提手转轴，角度受模型限位约束。浏览器不模拟抓取或接触力。</p>')+
+      (a.slug==='haier_bcd402'?(a.simulation_resistance?row('右门等效摩擦阻力',`${a.simulation_resistance.frictionloss_Nm} N·m`)+row('每条轨迹随机范围','1.0–2.3 N·m · 均匀采样')+row('右门粘性阻尼',`${a.simulation_resistance.damping_Nm_s_rad} N·m·s/rad`)+row('参数状态','仿真参数 · 非实测标定','status-label')+'<p class="property-note">随机模式每条轨迹采样一次并保持不变，只作用于右门。浏览器仅展示姿态；USD 阻力仅记录元数据，尚未实现等效运行时。门封启动吸力未标定。</p>':row('开门力度','未标定','status-label')):'<p class="property-note">两个被动提手转轴，角度受模型限位约束。浏览器不模拟抓取或接触力。</p>')+
       a.joints.map(j=>`<details class="property-details"><summary>${esc(label(j.name))} · ${fmt(deg(j.range[0]),1)}° ～ ${fmt(deg(j.range[1]),1)}°</summary>${row('阻尼',`${fmt(j.damping,5)} N·m·s/rad`)}${row('关节摩擦力矩',`${fmt(j.friction_loss,5)} N·m`)}${row('刚度',`${fmt(j.stiffness,5)} N·m/rad`)}<p class="property-note">以上为模型参数，非实测开门/提手作用力。</p></details>`).join(''));
   }
   html+=section('版本与来源',row(a.kind==='scene'?'场景版本':'物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)),'mono')+

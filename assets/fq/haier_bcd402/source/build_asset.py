@@ -31,7 +31,7 @@ for link in anchors:
     if link=='cabinet':b=E.SubElement(world,'body',name='refrigerator_base')
     else:
         parent=parents[link];b=E.SubElement(bs[parent],'body',name='refrigerator_'+link,pos=text(rel(anchors[link],anchors[parent])))
-        E.SubElement(b,'joint',name=joints[link],type='hinge',pos=text(offsets[link]),axis='0 0 -1' if link=='door_left' else '0 0 1',range='0 1.57079632679',damping='.15' if link!='mullion' else '.01',frictionloss='0',armature='.002')
+        E.SubElement(b,'joint',name=joints[link],type='hinge',pos=text(offsets[link]),axis='0 0 -1' if link=='door_left' else '0 0 1',range='0 1.57079632679',damping='.15' if link!='mullion' else '.01',frictionloss='1.6' if link=='door_right' else '0',armature='.002')
         E.SubElement(b,'inertial',pos=text(coms[link]),mass=str(masses[link]),diaginertia=text(inertias[link]))
     if link=='cabinet':E.SubElement(b,'inertial',pos=text(coms[link]),mass=str(masses[link]),diaginertia=text(inertias[link]))
     bs[link]=b
@@ -71,10 +71,13 @@ for v in G['visuals']:
     mat=UsdShade.Material.Define(stage,'/Refrigerator/Materials/'+v['name']);shader=UsdShade.Shader.Define(stage,mat.GetPath().AppendChild('Shader'));shader.CreateIdAttr('UsdPreviewSurface');shader.CreateInput('diffuseColor',Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(*v['rgba'][:3]));shader.CreateInput('opacity',Sdf.ValueTypeNames.Float).Set(v['rgba'][3]);shader.CreateInput('roughness',Sdf.ValueTypeNames.Float).Set(.35);mat.CreateSurfaceOutput().ConnectToSource(shader.ConnectableAPI(),'surface');UsdShade.MaterialBindingAPI.Apply(m.GetPrim()).Bind(mat)
 for c in G['collisions']:
     o=UsdGeom.Cube.Define(stage,bodypaths[c['link']]+'/Collision/'+c['name']);o.CreateSizeAttr(1);o.AddTranslateOp().Set(Gf.Vec3d(*c['center']));o.AddScaleOp().Set(Gf.Vec3f(*c['size']));o.CreatePurposeAttr('guide');UsdPhysics.CollisionAPI.Apply(o.GetPrim()).CreateCollisionEnabledAttr(c['link']!='mullion')
+stage.GetPrimAtPath('/Refrigerator/Joints/refrigerator_right_hinge').SetCustomDataByKey('fq:simulationFrictionlossNm',1.6)
+stage.GetPrimAtPath('/Refrigerator/Joints/refrigerator_right_hinge').SetCustomDataByKey('fq:simulationDampingNmSRad',0.15)
+stage.GetPrimAtPath('/Refrigerator/Joints/refrigerator_right_hinge').SetCustomDataByKey('fq:resistanceRuntimeSupported',False)
 stage.GetRootLayer().Save()
 meta={'asset_id':'refrigerator:haier_bcd402_v1','entries':{'mujoco':'refrigerator.xml','isaac':'refrigerator.usda','blender':'source/haier_bcd402_body_v1.blend'},'initial_joint_positions':{j:0. for j in joints.values()},'joint_limits_rad':{j:[0,math.pi/2] for j in joints.values()},'units':'meter','up_axis':'Z','front_axis':'-Y','fixed_base':True,'contents_included':False,'physics_calibrated':False,'estimated_mass_kg':masses,'limitations':['Component dimensions are estimated from photos','Mass, inertia, friction and damping are provisional engineering placeholders','No seal adhesion or pressure differential model','Mullion is independent and has no automatic folding constraint','Freezer is static','MuJoCo parent-child contact filtering applies; full self-collision not calibrated','USD structural export does not imply Isaac runtime validation'],'preferred_robot':'g1_o7_left_wholebody','visual_meshes':len(G['visuals']),'collision_boxes':len(G['collisions'])}
 meta['limitations'].append('Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation')
-meta['version']='0.1.3'
+meta['version']='0.1.4'
 meta['limitations'].append('Both hinge axes geometrically corrected to cabinet outer sides; not hardware calibrated.')
 (R/'manifest.json').write_text(json.dumps(meta,indent=2))
 print('BUILT',R)
