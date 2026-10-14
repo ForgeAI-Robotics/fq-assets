@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <mujoco model="haier_bcd402_v1">
   <compiler angle="radian" meshdir="meshes" autolimits="true" />
   <option timestep=".002" gravity="0 0 -9.81" />
@@ -114,6 +115,7 @@
   </asset>
   <worldbody>
     <body name="refrigerator_base">
+      <inertial pos="0 0 0.9" mass="76.7" diaginertia="21.9142857143 21.9142857143 5.47857142857" />
       <body name="refrigerator_door_left" pos="-0.342000008 -0.275000006 0.849583328">
         <joint name="refrigerator_left_hinge" type="hinge" axis="0 0 -1" range="0 1.57079632679" damping=".15" frictionloss="0" armature=".002" />
         <inertial pos="0.165 -0.022 0.598" mass="7.0" diaginertia="0.85 0.92 0.08" />

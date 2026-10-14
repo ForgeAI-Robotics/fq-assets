@@ -207,6 +207,7 @@
     </body>
     <geom name="meeting_panel" type="box" pos="2.7 10.4 2.62" size=".65 .25 .018" material="light_material" contype="0" conaffinity="0" />
     <body name="refrigerator_base" pos="16.5 11.9 0.0">
+      <inertial pos="0 0 0.9" mass="76.7" diaginertia="21.9142857143 21.9142857143 5.47857142857" />
       <body name="refrigerator_door_left" pos="-0.342000008 -0.275000006 0.849583328">
         <joint name="refrigerator_left_hinge" type="hinge" axis="0 0 -1" range="0.0 89.99999999971945" damping=".15" frictionloss="0" armature=".002" limited="true" />
         <inertial pos="0.165 -0.022 0.598" mass="7.0" diaginertia="0.85 0.92 0.08" />

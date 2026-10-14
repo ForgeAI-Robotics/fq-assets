@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.3.8",
+  "release": "0.3.9",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -19,7 +19,7 @@
     },
     {
       "id": "fq:articulated/haier_bcd402",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "manifest": "assets/fq/haier_bcd402/asset.json"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "id": "fq:scenes/office_baseline",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "manifest": "scenes/fq/office_baseline/asset.json"
     },
     {

@@ -20,8 +20,8 @@ def Xform "Refrigerator" (
     )
     {
         point3f physics:centerOfMass = (0, 0, 0.9)
-        float3 physics:diagonalInertia = (20, 20, 5)
-        float physics:mass = 70
+        float3 physics:diagonalInertia = (21.9142857, 21.9142857, 5.47857143)
+        float physics:mass = 76.7
         double3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate"]
 

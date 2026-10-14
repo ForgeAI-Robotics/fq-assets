@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/haier_bcd402",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "kind": "articulated",
   "units": "meter",
   "up_axis": "Z",
@@ -45,7 +45,25 @@
     "MuJoCo parent-child contact filtering applies; full self-collision not calibrated",
     "USD structural export does not imply Isaac runtime validation",
     "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation",
-    "Right hinge axis geometrically corrected to cabinet outer side; not hardware calibrated. Left hinge unchanged."
+    "Right hinge axis geometrically corrected to cabinet outer side; not hardware calibrated. Left hinge unchanged.",
+    "Left door outer edge col_049_0 contacts cabinet col_001_0 near 26.5 degrees under applied torque. Same before and after mass update; full left-door opening is not validated."
   ],
-  "calibration_record": "assets/fq/haier_bcd402/calibration_v2.json"
+  "calibration_record": "assets/fq/haier_bcd402/calibration_v2.json",
+  "mass_properties": {
+    "total_mass_kg": 91.0,
+    "movable_mass_kg": 14.3,
+    "fixed_assembly_mass_kg": 76.7,
+    "model": "Haier BCD-402WDBA",
+    "total_source_url": "https://www.haier.com/cooling/20141110_86605.shtml",
+    "total_source": "Manufacturer specified appliance weight; excludes food and drinks",
+    "component_status": "Estimated allocation, not measured component masses",
+    "components_kg": {
+      "cabinet": 76.7,
+      "door_left": 7.0,
+      "door_right": 7.0,
+      "mullion": 0.3
+    },
+    "inertia_status": "Cabinet placeholder inertia scaled by 76.7/70 at unchanged estimated COM; movable component inertia unchanged",
+    "cabinet_scope": "Fixed assembly including compressor, shelves and currently fixed freezer drawers; excludes separately counted upper doors and mullion"
+  }
 }

@@ -15,11 +15,11 @@ anchors=G['anchors'];parents={'door_left':'cabinet','door_right':'cabinet','mull
 joints={'door_left':'refrigerator_left_hinge','door_right':'refrigerator_right_hinge','mullion':'refrigerator_mullion_hinge'}
 offsets={link:[0.,0.,0.] for link in anchors}
 offsets['door_right'][0]=G['right_hinge_axis_cabinet_x_m']-anchors['door_right'][0]
-masses={'cabinet':70.,'door_left':7.,'door_right':7.,'mullion':.3}
+masses={'cabinet':76.7,'door_left':7.,'door_right':7.,'mullion':.3}
 coms={'cabinet':[0,0,.9],'door_left':[.165,-.022,.598],'door_right':[-.165,-.022,.598],'mullion':[.018,.007,.554]}
 # Keep the same world-space center of mass if Blender exports a shifted body frame.
 coms['door_right'][0]+=.342000008-anchors['door_right'][0]
-inertias={'cabinet':[20,20,5],'door_left':[.85,.92,.08],'door_right':[.85,.92,.08],'mullion':[.031,.031,.0001]}
+inertias={'cabinet':[21.9142857143,21.9142857143,5.47857142857],'door_left':[.85,.92,.08],'door_right':[.85,.92,.08],'mullion':[.031,.031,.0001]}
 def text(v):return ' '.join(f'{float(x):.9g}' for x in v)
 def rel(a,b):return [a[i]-b[i] for i in range(3)]
 x=E.Element('mujoco',model='haier_bcd402_v1');E.SubElement(x,'compiler',angle='radian',meshdir='meshes',autolimits='true')
@@ -31,6 +31,7 @@ for link in anchors:
         parent=parents[link];b=E.SubElement(bs[parent],'body',name='refrigerator_'+link,pos=text(rel(anchors[link],anchors[parent])))
         E.SubElement(b,'joint',name=joints[link],type='hinge',pos=text(offsets[link]),axis='0 0 -1' if link=='door_left' else '0 0 1',range='0 1.57079632679',damping='.15' if link!='mullion' else '.01',frictionloss='0',armature='.002')
         E.SubElement(b,'inertial',pos=text(coms[link]),mass=str(masses[link]),diaginertia=text(inertias[link]))
+    if link=='cabinet':E.SubElement(b,'inertial',pos=text(coms[link]),mass=str(masses[link]),diaginertia=text(inertias[link]))
     bs[link]=b
 for v in G['visuals']:
     name=v['name'];fp=R/'meshes'/f'{name}.obj'

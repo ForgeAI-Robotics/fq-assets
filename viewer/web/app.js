@@ -39,9 +39,11 @@ function showProperties(a){
     return;
   }
   let html=section('基础信息',row('资产类型',esc(a.kind_label))+row('来源',esc(provenance(a)))+row('坐标约定','米制 · Z 向上')+row('基座',a.fixed_base?'固定':'自由运动')+`<div class="asset-id">${esc(a.id)}</div>`);
-  html+=section('尺寸与质量',`<div class="value-large">${a.mass_kg==null?'—':fmt(a.mass_kg)}<small>${a.mass_kg==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${a.mass_kg==null?'固定场景几何不以 0 kg 表示':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.kind==='camera'?'近似仿真质量 · 非实测':a.kind==='end_effector'?'手模型质量 · 未完成实测标定':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
-    (a.fixed_base&&!['scene','end_effector','camera'].includes(a.kind)&&a.mass_kg!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
+  const mass=a.mass_properties; const displayMass=mass?mass.total_mass_kg:a.mass_kg;
+  html+=section('尺寸与质量',`<div class="value-large">${displayMass==null?'—':fmt(displayMass)}<small>${displayMass==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${displayMass==null?'固定场景几何不以 0 kg 表示':mass?'整机参考质量 · 部件分配为估计':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.kind==='camera'?'近似仿真质量 · 非实测':a.kind==='end_effector'?'手模型质量 · 未完成实测标定':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
+    (!mass&&a.fixed_base&&!['scene','end_effector','camera'].includes(a.kind)&&displayMass!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
     (a.dimensions_body_m?row('篮身尺寸（不含提手）',a.dimensions_body_m.map(v=>fmt(v)).join(' × ')+' m','value-small')+row('底部尺寸（估计）','0.240 × 0.150 m','value-small'):'')+
+    (mass?row('可动部件质量（估计）',`${fmt(mass.movable_mass_kg)} kg`)+row('固定柜体总成（估计）',`${fmt(mass.fixed_assembly_mass_kg)} kg`)+`<a class="text-button" target="_blank" rel="noopener" href="${esc(mass.total_source_url)}">${esc(mass.model)} 官方整机重量 ↗</a>`:'')+
     row('外观包围尺寸',a.dimension_m.map(v=>fmt(v)).join(' × ')+' m','value-small')+
     (a.bodies.length>1?`<details class="property-details"><summary>查看 ${a.bodies.length} 个部件质量</summary>${a.bodies.map(b=>row(esc(b.name),`${fmt(b.mass)} kg`,'value-small')).join('')}</details>`:''));
   if(a.kind==='camera'){
