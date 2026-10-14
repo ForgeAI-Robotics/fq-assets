@@ -1,0 +1,371 @@
+{
+  "passed": true,
+  "validation": "27 isolated SIMPLE drops with the following final contact settings; no robot grasp or PhysX test",
+  "floor_and_wall_priority": 2,
+  "solref": [
+    0.002,
+    1
+  ],
+  "margin_m": 0.001,
+  "timestep_s": 0.0005,
+  "multiccd": true,
+  "peak_penetration_m": 0.0002364856999301575,
+  "cases": [
+    {
+      "height": 0.975,
+      "offset": 0,
+      "tilt_rad": 0,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -2.460554844953733e-06,
+        7.744443504424185e-07,
+        0.07969995342245552
+      ]
+    },
+    {
+      "height": 0.975,
+      "offset": 0,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -1.5973051349157237e-05,
+        0.0075166407513412225,
+        0.07970969681941938
+      ]
+    },
+    {
+      "height": 0.975,
+      "offset": 0,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -1.2608401484911238e-05,
+        -0.007540937648533792,
+        0.07970577375075683
+      ]
+    },
+    {
+      "height": 0.975,
+      "offset": 0.025,
+      "tilt_rad": 0,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        0.02500020540158748,
+        9.409271805164677e-07,
+        0.07970009782809735
+      ]
+    },
+    {
+      "height": 0.975,
+      "offset": 0.025,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        0.024991211296310562,
+        0.007541686765761721,
+        0.07970933336992451
+      ]
+    },
+    {
+      "height": 0.975,
+      "offset": 0.025,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        0.025012138952286975,
+        -0.007543948932671094,
+        0.07969986349426744
+      ]
+    },
+    {
+      "height": 0.975,
+      "offset": -0.025,
+      "tilt_rad": 0,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -0.024999461803623932,
+        1.7686693998065161e-06,
+        0.0796998861475666
+      ]
+    },
+    {
+      "height": 0.975,
+      "offset": -0.025,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -0.024995677275744296,
+        0.0075644237947148935,
+        0.079706578440968
+      ]
+    },
+    {
+      "height": 0.975,
+      "offset": -0.025,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -0.025035473630702885,
+        -0.007550430699381982,
+        0.07970234393281081
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": 0,
+      "tilt_rad": 0,
+      "peak_penetration_m": 8.633776277354238e-05,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        -3.7460428332239704e-06,
+        2.5774351594536465e-07,
+        0.07969995191748293
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": 0,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -9.208530876138199e-06,
+        0.007520755295696013,
+        0.07969995025171508
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": 0,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        1.4122802197710966e-05,
+        -0.0075225191899135875,
+        0.07970223134644079
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": 0.025,
+      "tilt_rad": 0,
+      "peak_penetration_m": 8.634256612424893e-05,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        0.024999727917002793,
+        -1.4512569134873411e-06,
+        0.07969988538611746
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": 0.025,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        0.024998778541864726,
+        0.007518451603022388,
+        0.07970499558841225
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": 0.025,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        0.02501719714973752,
+        -0.007522322894709345,
+        0.07969992190903931
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": -0.025,
+      "tilt_rad": 0,
+      "peak_penetration_m": 8.634197698238538e-05,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        -0.02499944587589309,
+        1.3993738774844689e-06,
+        0.07969987748529313
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": -0.025,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -0.0250117335082336,
+        0.007513545424213085,
+        0.0796999272705176
+      ]
+    },
+    {
+      "height": 1.025,
+      "offset": -0.025,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -0.02500115359393838,
+        -0.0075352079865472115,
+        0.07971003609693868
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": 0,
+      "tilt_rad": 0,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -4.4998639484961885e-06,
+        1.2070581663849247e-07,
+        0.07969995795902625
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": 0,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0.00023648076779414387,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        1.2259111331214322e-05,
+        0.007568186386605722,
+        0.07971551752539827
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": 0,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0.0002364856999301575,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        7.638386515326168e-06,
+        -0.0075040946136751335,
+        0.07970988355843385
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": 0.025,
+      "tilt_rad": 0,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        0.02499963961958036,
+        -1.3529725529122112e-06,
+        0.07969987714225461
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": 0.025,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0.00023639824773949414,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        0.02492126224931086,
+        0.007623405998578909,
+        0.0797083846094083
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": 0.025,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0.00023633116016199673,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        0.024998596484451872,
+        -0.007595745563370454,
+        0.07970830824013045
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": -0.025,
+      "tilt_rad": 0,
+      "peak_penetration_m": 0,
+      "worst_pair": null,
+      "local_final": [
+        -0.02500004075829638,
+        -6.139045717330195e-07,
+        0.07969989741973943
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": -0.025,
+      "tilt_rad": 0.1,
+      "peak_penetration_m": 0.00023632876563409286,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        -0.024994380501009134,
+        0.007566413057561287,
+        0.07972159323238891
+      ]
+    },
+    {
+      "height": 1.075,
+      "offset": -0.025,
+      "tilt_rad": -0.1,
+      "peak_penetration_m": 0.0002363987213745396,
+      "worst_pair": [
+        "fq_basket__basket_floor",
+        "fq_target__coke_collision_0"
+      ],
+      "local_final": [
+        -0.02500457201786813,
+        -0.007630326814466569,
+        0.07970986073025352
+      ]
+    }
+  ],
+  "physical_files_sha256": {
+    "basket_asset.xml": "27f4443acfbd94a8bbd4f29d7b9f4696b76446ddb59b62deb3d2bbf265236083",
+    "basket.xml": "62166d6502eedb82365f1d5bc5618b56d9bb6c4b05cf30bd38e3662113c905cb",
+    "test_mujoco.xml": "4d32b55a63258eea813cf004363e2aafb720f8ba32be24542a44aac5472e8a98"
+  }
+}

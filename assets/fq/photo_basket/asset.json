@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/photo_basket",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "kind": "articulated",
   "units": "meter",
   "up_axis": "Z",
@@ -34,5 +34,24 @@
     0.28,
     0.19,
     0.165
-  ]
+  ],
+  "contact_policy": {
+    "engine": "MuJoCo",
+    "scope": "basket floor and segmented walls",
+    "priority": 2,
+    "solref": [
+      0.002,
+      1
+    ],
+    "solimp": [
+      0.98,
+      0.999,
+      0.0005
+    ],
+    "margin_m": 0.001,
+    "gap_m": 0,
+    "recommended_timestep_s": 0.0005,
+    "reason": "Override priority-1 can softness; numerical contact layer, not measured material compliance",
+    "multiccd_required": true
+  }
 }

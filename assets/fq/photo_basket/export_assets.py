@@ -29,6 +29,7 @@ for c in G['body_collision']:
     args=dict(name='basket_'+c['name'],group='3',rgba='0 0 0 0',mass='0')
     if 'vertices' in c:args.update(type='mesh',mesh=c['name'])
     else:args.update(type='box',pos=fmt(c['center']),size=fmt([s/2 for s in c['size']]))
+    args.update(priority='2',solref='.002 1',solimp='.98 .999 .0005',margin='.001',gap='0')
     sub(body,'geom',**args)
 for sign,name in [(1,'handle_right'),(-1,'handle_left')]:
     h=sub(body,'body',name=name,pos=fmt([sign*P['handle_anchor_x'],0,P['handle_pivot_z']]))

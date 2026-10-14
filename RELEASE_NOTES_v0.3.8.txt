@@ -1,0 +1,2 @@
+Basket 0.1.2: correct floor and wall MuJoCo contact priority; solref 0.002/1, margin 1 mm, recommended physics timestep 0.5 ms. Geometry, mass and friction unchanged. Isolated SIMPLE drop, handle and exact replay validation; no active task updated. Numerical contact layer is not material calibration.
+27 placement variations at 0.5 ms with MULTICCD: peak penetration 0.237 mm or less. More rigid contact settings were rejected for instability during handle motion.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.3.7",
+  "release": "0.3.8",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -14,7 +14,7 @@
     },
     {
       "id": "fq:articulated/photo_basket",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "manifest": "assets/fq/photo_basket/asset.json"
     },
     {

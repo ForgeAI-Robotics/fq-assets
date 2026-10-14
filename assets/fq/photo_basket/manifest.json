@@ -1,6 +1,6 @@
 {
   "asset_id": "basket:photo_basket_v1",
-  "asset_version": "1.0.1",
+  "asset_version": "1.0.2",
   "type": "articulated",
   "canonical_path": "assets/basket/photo_basket_v1",
   "entries": {
@@ -55,7 +55,7 @@
   "validation": {
     "mujoco_dynamics_passed": true,
     "isaac_full_visual_usd_dynamics_passed": false,
-    "reports": "validation/basket_6550_20261014.json",
+    "reports": "validation/basket_contact_20261014.json",
     "usd_structure_passed": true
   }
 }

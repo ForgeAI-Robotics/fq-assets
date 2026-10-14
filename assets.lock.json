@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "release": "0.3.7",
+  "release": "0.3.8",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
-    "fq:articulated/photo_basket": "0.1.1",
+    "fq:articulated/photo_basket": "0.1.2",
     "fq:articulated/haier_bcd402": "0.1.1",
     "fq:objects/conference_table": "0.2.0",
     "fq:scenes/office_baseline": "0.1.4",
