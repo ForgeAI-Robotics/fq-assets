@@ -14,10 +14,12 @@ G['collisions']=[c for c in G['collisions'] if 'handle_shadow' not in c['source'
 anchors=G['anchors'];parents={'door_left':'cabinet','door_right':'cabinet','mullion':'door_left'}
 joints={'door_left':'refrigerator_left_hinge','door_right':'refrigerator_right_hinge','mullion':'refrigerator_mullion_hinge'}
 offsets={link:[0.,0.,0.] for link in anchors}
+offsets['door_left'][0]=G['left_hinge_axis_cabinet_x_m']-anchors['door_left'][0]
 offsets['door_right'][0]=G['right_hinge_axis_cabinet_x_m']-anchors['door_right'][0]
 masses={'cabinet':76.7,'door_left':7.,'door_right':7.,'mullion':.3}
 coms={'cabinet':[0,0,.9],'door_left':[.165,-.022,.598],'door_right':[-.165,-.022,.598],'mullion':[.018,.007,.554]}
 # Keep the same world-space center of mass if Blender exports a shifted body frame.
+coms['door_left'][0]+=-.342000008-anchors['door_left'][0]
 coms['door_right'][0]+=.342000008-anchors['door_right'][0]
 inertias={'cabinet':[21.9142857143,21.9142857143,5.47857142857],'door_left':[.85,.92,.08],'door_right':[.85,.92,.08],'mullion':[.031,.031,.0001]}
 def text(v):return ' '.join(f'{float(x):.9g}' for x in v)
@@ -72,8 +74,8 @@ for c in G['collisions']:
 stage.GetRootLayer().Save()
 meta={'asset_id':'refrigerator:haier_bcd402_v1','entries':{'mujoco':'refrigerator.xml','isaac':'refrigerator.usda','blender':'source/haier_bcd402_body_v1.blend'},'initial_joint_positions':{j:0. for j in joints.values()},'joint_limits_rad':{j:[0,math.pi/2] for j in joints.values()},'units':'meter','up_axis':'Z','front_axis':'-Y','fixed_base':True,'contents_included':False,'physics_calibrated':False,'estimated_mass_kg':masses,'limitations':['Component dimensions are estimated from photos','Mass, inertia, friction and damping are provisional engineering placeholders','No seal adhesion or pressure differential model','Mullion is independent and has no automatic folding constraint','Freezer is static','MuJoCo parent-child contact filtering applies; full self-collision not calibrated','USD structural export does not imply Isaac runtime validation'],'preferred_robot':'g1_o7_left_wholebody','visual_meshes':len(G['visuals']),'collision_boxes':len(G['collisions'])}
 meta['limitations'].append('Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation')
-meta['version']='0.1.1'
-meta['limitations'].append('Right hinge axis geometrically corrected to cabinet outer side; not hardware calibrated. Left hinge unchanged.')
+meta['version']='0.1.3'
+meta['limitations'].append('Both hinge axes geometrically corrected to cabinet outer sides; not hardware calibrated.')
 (R/'manifest.json').write_text(json.dumps(meta,indent=2))
 print('BUILT',R)
 

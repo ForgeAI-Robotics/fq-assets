@@ -1,3 +1,7 @@
+# v0.3.10
+
+Correct left fridge pivot to eliminate cabinet collision across 0-90 degrees; preserve 91 kg mass and collision geometry. Fridge 0.1.3, baseline 0.1.6.
+
 首个 FQ 仿真资产基准版本，在 4080S 整理和验证。
 
 - 发布 navigate 办公主场景：测试区、走道、圆桌区和会议室，保留门洞、禁入区及固定布局。

@@ -1,0 +1,175 @@
+{
+  "geometry": {
+    "passed": true,
+    "closed_geometry_collision_masks_masses_inertia_unchanged": true,
+    "parent_child_filter_disabled": true,
+    "sweep_configurations": 723,
+    "max_penetration_m": 0,
+    "previous_left_max_penetration_m": 0.0035207299836963225,
+    "joint_anchors_m": [
+      [
+        -0.35400000800000003,
+        -0.275000006,
+        0.849583328
+      ],
+      [
+        0.35400000800000003,
+        -0.275000006,
+        0.849583328
+      ]
+    ],
+    "usd_anchor_max_error_m": 5.587935447692871e-09,
+    "physics_calibrated": false,
+    "isaac_runtime_tested": false,
+    "regenerated_geometry_max_error": 7.600000073715307e-09
+  },
+  "dynamics": {
+    "passed": true,
+    "asset_commit": "d2fddffa6cc724efd2f9b5917cf5fca071dbcd50",
+    "runtime": {
+      "mujoco": "3.3.6",
+      "timestep": 0.0005,
+      "adapter_sha256": "c67dd97dcb8c0317fd7a31257577059131cd27dee0a06cea298981a65261fede",
+      "image": "sha256:32c0380e7cc471f5da378c38ef73e18ecd64e13bdcf7aa2de07c42e6fe4f4809"
+    },
+    "torque_driven": true,
+    "max_torque_nm": 8,
+    "parent_child_filter_disabled": true,
+    "milestones": [
+      {
+        "time_s": 6.99999999999884,
+        "angles_deg": [
+          89.99999952007543,
+          89.99999914836795
+        ]
+      },
+      {
+        "time_s": 14.000000000005619,
+        "angles_deg": [
+          4.10263426069319e-07,
+          8.516321662551668e-07
+        ]
+      },
+      {
+        "time_s": 20.999999999996408,
+        "angles_deg": [
+          89.9999995930319,
+          4.0754669372020033e-19
+        ]
+      },
+      {
+        "time_s": 27.999999999980094,
+        "angles_deg": [
+          4.1026342808918703e-07,
+          1.9503057087736422e-31
+        ]
+      },
+      {
+        "time_s": 34.99999999998509,
+        "angles_deg": [
+          2.8854762467117475e-20,
+          89.99999914836795
+        ]
+      },
+      {
+        "time_s": 42.00000000001852,
+        "angles_deg": [
+          1.0121751280846787e-33,
+          8.516321662627258e-07
+        ]
+      }
+    ],
+    "max_fridge_penetration_m": 0.0,
+    "fixed_base_unchanged": true,
+    "continuation_steps": 70000,
+    "physics_calibrated": false,
+    "isaac_runtime_tested": false
+  },
+  "replay": {
+    "passed": true,
+    "asset_commit": "d2fddffa6cc724efd2f9b5917cf5fca071dbcd50",
+    "runtime": {
+      "mujoco": "3.3.6",
+      "timestep": 0.0005,
+      "adapter_sha256": "c67dd97dcb8c0317fd7a31257577059131cd27dee0a06cea298981a65261fede",
+      "image": "sha256:32c0380e7cc471f5da378c38ef73e18ecd64e13bdcf7aa2de07c42e6fe4f4809"
+    },
+    "torque_driven": true,
+    "max_torque_nm": 8,
+    "parent_child_filter_disabled": true,
+    "milestones": [
+      {
+        "time_s": 14.000000000005619,
+        "angles_deg": [
+          4.10263426069319e-07,
+          8.516321662551668e-07
+        ]
+      },
+      {
+        "time_s": 20.999999999996408,
+        "angles_deg": [
+          89.9999995930319,
+          4.0754669372020033e-19
+        ]
+      },
+      {
+        "time_s": 27.999999999980094,
+        "angles_deg": [
+          4.1026342808918703e-07,
+          1.9503057087736422e-31
+        ]
+      },
+      {
+        "time_s": 34.99999999998509,
+        "angles_deg": [
+          2.8854762467117475e-20,
+          89.99999914836795
+        ]
+      },
+      {
+        "time_s": 42.00000000001852,
+        "angles_deg": [
+          1.0121751280846787e-33,
+          8.516321662627258e-07
+        ]
+      }
+    ],
+    "max_fridge_penetration_m": 0.0,
+    "fixed_base_unchanged": true,
+    "continuation_steps": 70000,
+    "physics_calibrated": false,
+    "isaac_runtime_tested": false,
+    "replay_max_abs_error": 0.0
+  },
+  "baseline": {
+    "passed": true,
+    "asset_commit": "d2fddffa6cc724efd2f9b5917cf5fca071dbcd50",
+    "versions": {
+      "fq:objects/coke_cn": "0.1.1",
+      "fq:objects/round_table": "0.1.1",
+      "fq:articulated/photo_basket": "0.1.2",
+      "fq:articulated/haier_bcd402": "0.1.3",
+      "fq:objects/conference_table": "0.2.0",
+      "fq:scenes/office_baseline": "0.1.6",
+      "fq:materials/wall": "0.1.0",
+      "fq:materials/floor": "0.1.0",
+      "fq:materials/carpet": "0.1.0",
+      "fq:materials/wood": "0.1.0",
+      "fq:materials/stone": "0.1.0",
+      "fq:end_effectors/o6_left": "0.1.0",
+      "fq:end_effectors/o6_right": "0.1.0",
+      "fq:robots/g1_o6": "0.1.3",
+      "fq:end_effectors/o7_left": "0.1.0",
+      "fq:end_effectors/o7_right": "0.1.0",
+      "fq:robots/g1_o7": "0.1.2",
+      "fq:cameras/realsense_d435i": "0.1.0"
+    },
+    "door_sweep_configurations": 361,
+    "fridge_instances": 1,
+    "static_geometry_preserved": true,
+    "usd_body_max_error": 0.0,
+    "dynamic_steps": 200,
+    "isaac_gpu_tested": false
+  },
+  "note": "Candidate validation; final lock and replay receipts are in SIMPLE-fq-fridge-opening/evidence/fridge-opening. No physics changes after this run."
+}

@@ -31,5 +31,18 @@
     "basis": "Geometric correction of estimated axis to cabinet outer side; not measured hardware calibration",
     "validated_scope": "Right door 0-90 degree static collision sweep; fixture-supported G1+O6 palm push to about55 degrees",
     "physics_calibrated": false
+  },
+  "left_hinge_correction": {
+    "revision": "2026-10-14",
+    "axis_cabinet_x_m": -0.354,
+    "original_axis_cabinet_x_m": -0.342,
+    "joint_offset_in_original_door_frame_m": [
+      -0.012,
+      0,
+      0
+    ],
+    "basis": "Mirror existing right-axis geometric correction to cabinet outer side. No measured hardware hinge calibration. Closed meshes and collision primitives unchanged.",
+    "validated_scope": "See validation/fridge_opening_20261014.json",
+    "physics_calibrated": false
   }
 }
