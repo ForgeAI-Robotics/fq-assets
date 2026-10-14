@@ -35,14 +35,14 @@ over "World"
         prepend references = @../../../assets/fq/haier_bcd402/refrigerator.usda@
     )
     {
-        double3 xformOp:translate = (16.5, 11.9, 0)
+        double3 xformOp:translate = (15.5, 11.9, 0)
         uniform token[] xformOpOrder = ["xformOp:translate"]
 
         over "Joints"
         {
             over "fixed_base"
             {
-                point3f physics:localPos0 = (16.5, 11.9, 0)
+                point3f physics:localPos0 = (15.5, 11.9, 0)
             }
         }
     }

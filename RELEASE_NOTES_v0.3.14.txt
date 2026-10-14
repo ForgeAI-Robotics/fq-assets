@@ -1,0 +1,5 @@
+v0.3.14 — baseline refrigerator moved 1 m left
+Office baseline 0.1.10; refrigerator remains 0.1.6.
+User reported a displacement toward the round table in the top-down floor plan. Position changes from [16.5, 11.9, 0] to [15.5, 11.9, 0] metres (world -X), with orientation unchanged. The 1 m displacement is approximate, not a surveyed absolute position.
+MJCF placement, USD transform AND world fixed-joint anchor, scene manifest and reference layout are synchronized. Standalone assets, door geometry, 82 cm lower edge, 91 kg mass and resistance parameters are unchanged.
+Isolated SIMPLE baseline placement/collision, door opening and same-engine replay checks cover MuJoCo and CPU PhysX. Existing task snapshots are not changed.

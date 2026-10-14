@@ -206,7 +206,7 @@
       <geom name="coke_collision_0" type="mesh" mesh="coke_collision_0" rgba="0 0 0 0" group="3" mass="0.35" condim="4" friction="0.6 0.003 0.0001" solref="0.008 1" priority="1" />
     </body>
     <geom name="meeting_panel" type="box" pos="2.7 10.4 2.62" size=".65 .25 .018" material="light_material" contype="0" conaffinity="0" />
-    <body name="refrigerator_base" pos="16.5 11.9 0.0">
+    <body name="refrigerator_base" pos="15.5 11.9 0.0">
       <inertial pos="0 0 0.9" mass="76.7" diaginertia="21.9142857 21.9142857 5.47857143" />
       <body name="refrigerator_door_left" pos="-0.342000008 -0.275000006 0.849583328">
         <joint name="refrigerator_left_hinge" type="hinge" pos="-0.0119999924 0 0" axis="0 0 -1" range="0.0 89.99999999971945" damping=".15" frictionloss="0" armature=".002" limited="true" />

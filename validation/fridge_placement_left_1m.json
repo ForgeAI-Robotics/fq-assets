@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "old_position_m": [
+    16.5,
+    11.9,
+    0
+  ],
+  "new_position_m": [
+    15.5,
+    11.9,
+    0
+  ],
+  "displacement_m": [
+    -1,
+    0,
+    0
+  ],
+  "orientation_and_other_geometry_unchanged": true,
+  "standalone_assets_byte_identical": true,
+  "usd_world_anchor_matches": true,
+  "wall_clearance_m": {
+    "east": 1.191450028000002,
+    "north_east": 0.08690999749999939
+  },
+  "round_table_horizontal_gap_m": 3.996000033617017,
+  "sweep_configurations": 723,
+  "max_fridge_penetration_m": 0,
+  "measurement_status": "User-reported approximate 1m plan-left displacement"
+}

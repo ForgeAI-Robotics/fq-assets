@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/office_baseline",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -47,7 +47,7 @@
       "asset_id": "fq:articulated/haier_bcd402",
       "version": "0.1.6",
       "position_m": [
-        16.5,
+        15.5,
         11.9,
         0.0
       ],
@@ -57,7 +57,7 @@
         0,
         0
       ],
-      "location": "Northeast corner, east/right of round table in floor plan",
+      "location": "Moved 1 m left toward round table in top-down floor plan; orientation unchanged",
       "front_direction_world": [
         0,
         -1,
@@ -68,7 +68,8 @@
         "refrigerator_left_hinge": 0,
         "refrigerator_right_hinge": 0,
         "refrigerator_mullion_hinge": 0
-      }
+      },
+      "position_status": "Approximate user-reported displacement, 2026-10-14"
     }
   }
 }

@@ -29,7 +29,7 @@ for l,rr in [(x,0) for x in np.arange(0,90.01,.5)]+[(0,x) for x in np.arange(0,9
 bm=mujoco.MjModel.from_xml_path(str(r/'scenes/fq/office_baseline/scene.xml'));bd=mujoco.MjData(bm);mujoco.mj_forward(bm,bd)
 for side in ['left','right']:
  lo,hi=visual_bounds(bm,bd,'refrigerator_door_'+side);assert abs(lo[2]-.82)<2e-6
-np.testing.assert_allclose(bd.xpos[bm.body('refrigerator_base').id],[16.5,11.9,0],atol=1e-8)
+np.testing.assert_allclose(bd.xpos[bm.body('refrigerator_base').id],json.loads((r/'scenes/fq/office_baseline/asset.json').read_text())['placements']['refrigerator']['position_m'],atol=1e-8)
 g=json.loads((f/'source/geometry.json').read_text());shadow=next(v for v in g['visuals'] if v['source']=='Freezer_upper_handle_shadow');top=max(v[2] for v in shadow['vertices']);assert abs(top-.812)<1e-6
 report={'passed':True,'asset_version':'0.1.6','doors':result,'inter_compartment_gap_cm':float((.82-top)*100),'mass_kg':float(sum(m.body_mass)),'static_sweep_configurations':count,'max_penetration_m':worst,'baseline_placement_unchanged':True,'resistance_unchanged':True,'physics_calibrated':False}
 a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
