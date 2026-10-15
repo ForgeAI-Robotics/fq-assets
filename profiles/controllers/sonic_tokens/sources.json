@@ -1,0 +1,332 @@
+[
+  {
+    "path": "v3/dataset_manifest.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/dataset_manifest.json",
+    "sha256": "35ba17f5be41d6d69096d1be442e967648b9440830bd0af7dcf8ba1b2f7fbf86"
+  },
+  {
+    "path": "v3/sonic_v1_1_motion_control_v3.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/config/token_remote/sonic_v1_1_motion_control_v3.json",
+    "sha256": "aa0ba8cda9fb6859843842ec3a7f162dddbd2eb3ff6e9202568a8be301272376"
+  },
+  {
+    "path": "v3/sonic_v1_1_motion_control_v3_mujoco_eval.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/config/token_remote/sonic_v1_1_motion_control_v3_mujoco_eval.json",
+    "sha256": "abbab81d9c7eb6fdc3b41d75d83b27565246f1c53ad084fc506a72873b4c5055"
+  },
+  {
+    "path": "v3/stand_r01_20260805_165259/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/stand_r01_20260805_165259/frames.npz",
+    "sha256": "7f227ae139f28137d7337243a0c087c1e4b539ef4a565e87a471b15e7206e9f9"
+  },
+  {
+    "path": "v3/stand_r01_20260805_165259/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/stand_r01_20260805_165259/metadata.json",
+    "sha256": "5740efb0087f79c5a7dda992184d39fe643d38f2e2c4ad705fa1f2b080f25b77"
+  },
+  {
+    "path": "v3/forward_slow_r01_20260806_103149/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/forward_slow_r01_20260806_103149/frames.npz",
+    "sha256": "3034a169c47160f950590684a16530b20dd876ff41859b1477a034548b64e07d"
+  },
+  {
+    "path": "v3/forward_slow_r01_20260806_103149/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/forward_slow_r01_20260806_103149/metadata.json",
+    "sha256": "fdc6de518e3d2f94be11c7c1db4c3f9a0db3aeb0381ce7c3620388040f66a6cb"
+  },
+  {
+    "path": "v3/forward_normal_r02_20260806_105913/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/forward_normal_r02_20260806_105913/frames.npz",
+    "sha256": "2756620a85d1e7205b47b0558133171bc342e1340d877dc50864c0b822ef6ee7"
+  },
+  {
+    "path": "v3/forward_normal_r02_20260806_105913/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/forward_normal_r02_20260806_105913/metadata.json",
+    "sha256": "8212a6713ff329920d4dceb25c45167adeecb853c74e60e87a6b6ed9f227612b"
+  },
+  {
+    "path": "v3/forward_run_r01_20260806_115351/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/forward_run_r01_20260806_115351/frames.npz",
+    "sha256": "05f7279a02b0e7d92706b37a2970df765531710eb01ce6be277a573d821fcb5c"
+  },
+  {
+    "path": "v3/forward_run_r01_20260806_115351/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/forward_run_r01_20260806_115351/metadata.json",
+    "sha256": "8aa4b5644c3c6581f8e3d09a913e9afd3183f6ad0a701d6e5968aa49914e2932"
+  },
+  {
+    "path": "v3/backward_continuous_r01_20260805_165700/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/backward_continuous_r01_20260805_165700/frames.npz",
+    "sha256": "d4e493d849eff0f399ff90d8cc44a51f0ffdf4028413820a7a940d7c8559c629"
+  },
+  {
+    "path": "v3/backward_continuous_r01_20260805_165700/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/backward_continuous_r01_20260805_165700/metadata.json",
+    "sha256": "0377e6d99b3b690a1eed1f2b2df779970adb401e222ef57080e5217190846cfe"
+  },
+  {
+    "path": "v3/strafe_left_continuous_r03_20260805_170053/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/strafe_left_continuous_r03_20260805_170053/frames.npz",
+    "sha256": "6712d331192f1600fdd5bb0f0ad075a35cc80e5b7355cb996cc457f00f58d387"
+  },
+  {
+    "path": "v3/strafe_left_continuous_r03_20260805_170053/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/strafe_left_continuous_r03_20260805_170053/metadata.json",
+    "sha256": "ed67080f51dc99af073e22b5e9f0ae7e10da97b4bd49a4a87e39239d8d0846b8"
+  },
+  {
+    "path": "v3/strafe_right_continuous_r01_20260805_170108/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/strafe_right_continuous_r01_20260805_170108/frames.npz",
+    "sha256": "dc49fe212fe48c01eb36fb1cb3949fe8dbcd8f9c63bf17248610d04752d28a79"
+  },
+  {
+    "path": "v3/strafe_right_continuous_r01_20260805_170108/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/strafe_right_continuous_r01_20260805_170108/metadata.json",
+    "sha256": "6317ae0b4b46a132902a38a7718f39dc035a65d3419789228aa2cd35873f1c47"
+  },
+  {
+    "path": "v3/turn_left_continuous_r01_20260806_110154/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/turn_left_continuous_r01_20260806_110154/frames.npz",
+    "sha256": "0e36aa5585f516065d4a66584ac0480b1ffa22df9debeec1eddc7196c451aaca"
+  },
+  {
+    "path": "v3/turn_left_continuous_r01_20260806_110154/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/turn_left_continuous_r01_20260806_110154/metadata.json",
+    "sha256": "15bbed068f5f148c7aabb04af7408191c3b4a14f5ae2c1c9c21f317929c0f66d"
+  },
+  {
+    "path": "v3/turn_right_continuous_r02_20260806_110411/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/turn_right_continuous_r02_20260806_110411/frames.npz",
+    "sha256": "17fd8e4d400167004bc62b92858ece59c062858194bf5cd5fa8b2f63b06036b2"
+  },
+  {
+    "path": "v3/turn_right_continuous_r02_20260806_110411/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/turn_right_continuous_r02_20260806_110411/metadata.json",
+    "sha256": "45497f5880ca703a05e178c29b9a8d18f065094f61a896dde8364e22d029d614"
+  },
+  {
+    "path": "v3/turn_left_normal_r03_20260806_115830/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/turn_left_normal_r03_20260806_115830/frames.npz",
+    "sha256": "35b23c3ff833b28a6297f5dd7a03380a5280d60543f7fc89e708730dda9d759b"
+  },
+  {
+    "path": "v3/turn_left_normal_r03_20260806_115830/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/turn_left_normal_r03_20260806_115830/metadata.json",
+    "sha256": "5cf72e58a60554b833b754db31f39ff10f5110c57ed58a777271d5eb381c9b4d"
+  },
+  {
+    "path": "v3/turn_right_normal_r03_20260806_115908/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/turn_right_normal_r03_20260806_115908/frames.npz",
+    "sha256": "08c205b69d8c81a22331a88af2c0a6f13b7c0153a6349a964e35be9a4618774e"
+  },
+  {
+    "path": "v3/turn_right_normal_r03_20260806_115908/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v3/turn_right_normal_r03_20260806_115908/metadata.json",
+    "sha256": "d382e50cf5755d7d9d45a3b9ce58a6bf5662789428f1a8aaeae3a1d1b27ba034"
+  },
+  {
+    "path": "v4/dataset_manifest.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/dataset_manifest.json",
+    "sha256": "58a03a9045dbf8ca7a91fd2d43c9da33f4ce42e876b827641ecae88e0bf3d2e3"
+  },
+  {
+    "path": "v4/sonic_v1_1_motion_control_v4.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/config/token_remote/sonic_v1_1_motion_control_v4.json",
+    "sha256": "0805b185ed27bc786256ecb59e7cf696e5e6f66c13880da7dad3c71539e175a9"
+  },
+  {
+    "path": "v4/sonic_v1_1_motion_control_v4_mujoco_eval.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/config/token_remote/sonic_v1_1_motion_control_v4_mujoco_eval.json",
+    "sha256": "7cfe2dca614a4b4dd35f51662d0bfe5e6c52a0576421dc67ed72f4b0967fc4b5"
+  },
+  {
+    "path": "v4/stand_r01_20260805_165259/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/stand_r01_20260805_165259/frames.npz",
+    "sha256": "7f227ae139f28137d7337243a0c087c1e4b539ef4a565e87a471b15e7206e9f9"
+  },
+  {
+    "path": "v4/stand_r01_20260805_165259/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/stand_r01_20260805_165259/metadata.json",
+    "sha256": "2bb058963dd02ca1bb6b24f9373b866ddd210bbfd081d8be3644b13854483054"
+  },
+  {
+    "path": "v4/forward_slow_r02_20260902_105334/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/forward_slow_r02_20260902_105334/frames.npz",
+    "sha256": "b71a0e2ca58c437ef8739a59cb0d1a836a71c28c0be4280f202280927160c939"
+  },
+  {
+    "path": "v4/forward_slow_r02_20260902_105334/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/forward_slow_r02_20260902_105334/metadata.json",
+    "sha256": "b2f5a45d9612e4579443d9b5d7e0ad2544b73762941a2f79eeb25881ea5f0728"
+  },
+  {
+    "path": "v4/forward_normal_r02_20260806_105913/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/forward_normal_r02_20260806_105913/frames.npz",
+    "sha256": "2756620a85d1e7205b47b0558133171bc342e1340d877dc50864c0b822ef6ee7"
+  },
+  {
+    "path": "v4/forward_normal_r02_20260806_105913/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/forward_normal_r02_20260806_105913/metadata.json",
+    "sha256": "3ebfa8d35c069b11c4567b8fed4fae0a9516488fb5cfda767033f310ee373cf5"
+  },
+  {
+    "path": "v4/forward_run_r01_20260806_115351/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/forward_run_r01_20260806_115351/frames.npz",
+    "sha256": "05f7279a02b0e7d92706b37a2970df765531710eb01ce6be277a573d821fcb5c"
+  },
+  {
+    "path": "v4/forward_run_r01_20260806_115351/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/forward_run_r01_20260806_115351/metadata.json",
+    "sha256": "f5813f9059ee86028c0372c00bd8729831273ef0e214fcfd55f0f7988d4ef1a3"
+  },
+  {
+    "path": "v4/backward_continuous_r01_20260805_165700/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/backward_continuous_r01_20260805_165700/frames.npz",
+    "sha256": "d4e493d849eff0f399ff90d8cc44a51f0ffdf4028413820a7a940d7c8559c629"
+  },
+  {
+    "path": "v4/backward_continuous_r01_20260805_165700/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/backward_continuous_r01_20260805_165700/metadata.json",
+    "sha256": "8e282b27f4bb86948a1eabdd4979cdf7b3a16b5761cf6c8fd99b33251ee60e25"
+  },
+  {
+    "path": "v4/strafe_left_continuous_r03_20260805_170053/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/strafe_left_continuous_r03_20260805_170053/frames.npz",
+    "sha256": "6712d331192f1600fdd5bb0f0ad075a35cc80e5b7355cb996cc457f00f58d387"
+  },
+  {
+    "path": "v4/strafe_left_continuous_r03_20260805_170053/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/strafe_left_continuous_r03_20260805_170053/metadata.json",
+    "sha256": "c36f7ffee355766f747f3a2faf2313a8c456850395a01bb156862c57e250c52c"
+  },
+  {
+    "path": "v4/strafe_right_continuous_r01_20260805_170108/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/strafe_right_continuous_r01_20260805_170108/frames.npz",
+    "sha256": "dc49fe212fe48c01eb36fb1cb3949fe8dbcd8f9c63bf17248610d04752d28a79"
+  },
+  {
+    "path": "v4/strafe_right_continuous_r01_20260805_170108/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/strafe_right_continuous_r01_20260805_170108/metadata.json",
+    "sha256": "13bbc4cfd885e034dc0eeeddf426aff20eb46b532b63fc7df060a9f74e9cb3dd"
+  },
+  {
+    "path": "v4/turn_left_continuous_r01_20260806_110154/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_left_continuous_r01_20260806_110154/frames.npz",
+    "sha256": "0e36aa5585f516065d4a66584ac0480b1ffa22df9debeec1eddc7196c451aaca"
+  },
+  {
+    "path": "v4/turn_left_continuous_r01_20260806_110154/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_left_continuous_r01_20260806_110154/metadata.json",
+    "sha256": "804241155fccae1ee9f6fb08a3259bf642002ba289fbda798fb8f0475efb052b"
+  },
+  {
+    "path": "v4/turn_right_continuous_r02_20260806_110411/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_right_continuous_r02_20260806_110411/frames.npz",
+    "sha256": "17fd8e4d400167004bc62b92858ece59c062858194bf5cd5fa8b2f63b06036b2"
+  },
+  {
+    "path": "v4/turn_right_continuous_r02_20260806_110411/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_right_continuous_r02_20260806_110411/metadata.json",
+    "sha256": "df4f8f2daec8225cf3aeca2a5685b34aee69e0ac528e9ec9bada3bda05a1e0f6"
+  },
+  {
+    "path": "v4/turn_left_continuous_r01_20260902_105522/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_left_continuous_r01_20260902_105522/frames.npz",
+    "sha256": "b30cdb0f6475f99367bf4fb173554fbec7e240330e579534eead901ed7859c05"
+  },
+  {
+    "path": "v4/turn_left_continuous_r01_20260902_105522/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_left_continuous_r01_20260902_105522/metadata.json",
+    "sha256": "948a67bc5c6b30768a4d4e0256fbfc2bef92fa7abcc9e8a8f6605246de80e842"
+  },
+  {
+    "path": "v4/turn_right_continuous_r03_20260902_110013/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_right_continuous_r03_20260902_110013/frames.npz",
+    "sha256": "7b5d3a1999e48b40fc71089c356efe8b606f18a601fcc124ea652b106d359166"
+  },
+  {
+    "path": "v4/turn_right_continuous_r03_20260902_110013/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_right_continuous_r03_20260902_110013/metadata.json",
+    "sha256": "fc22e24ba10e971fa7e47615c9cf1d30d5ef4377ed3b5c6e570abeb8df2af1c5"
+  },
+  {
+    "path": "v4/turn_left_normal_r03_20260806_115830/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_left_normal_r03_20260806_115830/frames.npz",
+    "sha256": "35b23c3ff833b28a6297f5dd7a03380a5280d60543f7fc89e708730dda9d759b"
+  },
+  {
+    "path": "v4/turn_left_normal_r03_20260806_115830/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_left_normal_r03_20260806_115830/metadata.json",
+    "sha256": "520c6f789662bf920a449f8761a97882fd397756f61ae403a58758a43b9a1486"
+  },
+  {
+    "path": "v4/turn_right_normal_r03_20260806_115908/frames.npz",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_right_normal_r03_20260806_115908/frames.npz",
+    "sha256": "08c205b69d8c81a22331a88af2c0a6f13b7c0153a6349a964e35be9a4618774e"
+  },
+  {
+    "path": "v4/turn_right_normal_r03_20260806_115908/metadata.json",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_right_normal_r03_20260806_115908/metadata.json",
+    "sha256": "acceacc7b708901e152d50e8989184bd5302fec1b3d2b3bbc2b298c464fffb8c"
+  },
+  {
+    "path": "token_remote.py",
+    "source_host": "yuchen-4090",
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/navigation/token_remote.py",
+    "sha256": "749678d6f15eebce5a3bf4033aed8b01c00df9ca2582fe8ccbe9b89e46c01198"
+  }
+]

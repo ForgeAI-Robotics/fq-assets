@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "fq:controllers/sonic_tokens",
+  "version": "0.1.0",
+  "decoder_sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
+  "startup_profile": "profiles/controllers/sonic_tokens/o7_startup.json",
+  "simulation_controller": "profiles/controllers/sonic_tokens/o7_startup.py",
+  "sequencer": "profiles/controllers/sonic_tokens/token_remote.py",
+  "preview_mode": "full recorded token sequence at 50 Hz after startup and 1-second handover; no navigation planner",
+  "source": "G1 navigate simulation startup; Yuchen SONIC deployment sequencer",
+  "hardware_validated": false
+}

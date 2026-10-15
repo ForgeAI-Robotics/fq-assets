@@ -1,0 +1,121 @@
+{
+  "format": "sonic_token_control_mujoco_eval_v1",
+  "dataset": "sonic_v1_1_motion_control_v3",
+  "date": "2026-08-06",
+  "scene": "gear_sonic/data/robot_model/model_data/g1/scene_43dof_scene0033.xml",
+  "safety_gates": {
+    "minimum_base_z_m": 0.70,
+    "maximum_base_tilt_deg": 12.0,
+    "minimum_final_base_z_m": 0.70
+  },
+  "selection_policy": "Real-G1 recording metrics select each source clip; MuJoCo then applies stability, direction, and obstacle-free behavior gates.",
+  "results": {
+    "forward_slow": {
+      "duration_s": 12.0,
+      "dx_m": 5.775,
+      "dy_m": -0.392,
+      "yaw_change_deg": -4.91,
+      "minimum_base_z_m": 0.758,
+      "maximum_base_tilt_deg": 6.79,
+      "result": "pass",
+      "selected_clip": "forward_slow_r01_20260806_103149",
+      "loop_policy": "preserve_full_recorded_steady_section",
+      "loop_frames": [172, 458],
+      "note": "The 1.44 s short-cycle alternative increased yaw drift to -9.84 deg and was rejected."
+    },
+    "forward_normal": {
+      "duration_s": 10.0,
+      "dx_m": 5.122,
+      "dy_m": -0.371,
+      "yaw_change_deg": -4.87,
+      "minimum_base_z_m": 0.754,
+      "maximum_base_tilt_deg": 6.64,
+      "result": "pass",
+      "selected_clip": "forward_normal_r02_20260806_105913",
+      "loop_policy": "preserve_full_recorded_steady_section",
+      "loop_frames": [170, 303],
+      "note": "r01 was straighter in MuJoCo but had 2.6x higher real-G1 yaw drift. The 1.36 s short-cycle alternative accumulated -24.15 deg yaw and was rejected."
+    },
+    "forward_run": {
+      "duration_s": 7.0,
+      "scene": "gear_sonic/data/robot_model/model_data/g1/scene_43dof.xml",
+      "initial_base_xy_m": [0.0, 0.0],
+      "dx_m": 3.753,
+      "dy_m": -0.274,
+      "yaw_change_deg": -2.96,
+      "minimum_base_z_m": 0.740,
+      "maximum_base_tilt_deg": 9.02,
+      "result": "pass",
+      "selected_clip": "forward_run_r01_20260806_115351",
+      "loop": {
+        "enter_frames": [32, 291],
+        "cycle_frames": [291, 322],
+        "cycle_duration_s": 0.62,
+        "phase_error": 0.08385831446661253,
+        "trimmed_initial_idle_s": 0.64
+      },
+      "note": "Validated on the obstacle-free flat scene after rejecting obstacle-contact trials and a faster but left-biased cycle. Arm raise is played once; only the phase-matched gait cycle repeats while W remains held."
+    },
+    "backward_continuous": {
+      "duration_s": 3.0,
+      "dx_m": -0.347,
+      "dy_m": -0.009,
+      "yaw_change_deg": 0.86,
+      "minimum_base_z_m": 0.753,
+      "maximum_base_tilt_deg": 7.99,
+      "result": "pass"
+    },
+    "strafe_left_continuous": {
+      "duration_s": 3.0,
+      "dx_m": -0.117,
+      "dy_m": 1.316,
+      "yaw_change_deg": 17.78,
+      "minimum_base_z_m": 0.720,
+      "maximum_base_tilt_deg": 8.46,
+      "result": "pass_with_heading_drift",
+      "note": "This was the lowest-yaw-drift real-G1 left-strafe recording; closed-loop yaw correction remains recommended for navigation."
+    },
+    "strafe_right_continuous": {
+      "duration_s": 3.0,
+      "dx_m": -0.003,
+      "dy_m": -1.448,
+      "yaw_change_deg": 3.64,
+      "minimum_base_z_m": 0.728,
+      "maximum_base_tilt_deg": 6.98,
+      "result": "pass"
+    },
+    "turn_left_continuous": {
+      "duration_s": 3.0,
+      "yaw_change_deg": 37.04,
+      "minimum_base_z_m": 0.775,
+      "maximum_base_tilt_deg": 5.60,
+      "result": "pass"
+    },
+    "turn_right_continuous": {
+      "duration_s": 3.0,
+      "yaw_change_deg": -13.13,
+      "minimum_base_z_m": 0.777,
+      "maximum_base_tilt_deg": 5.62,
+      "result": "pass"
+    },
+    "turn_left_normal": {
+      "duration_s": 3.0,
+      "yaw_change_deg": 117.88,
+      "minimum_base_z_m": 0.772,
+      "maximum_base_tilt_deg": 5.57,
+      "result": "pass"
+    },
+    "turn_right_normal": {
+      "duration_s": 3.0,
+      "yaw_change_deg": -96.79,
+      "minimum_base_z_m": 0.770,
+      "maximum_base_tilt_deg": 5.62,
+      "result": "pass"
+    }
+  },
+  "known_limitations": [
+    "Forward slow and normal have similar MuJoCo displacement; the default remains slow because the real-G1 recording has the cleanest low-speed heading metric.",
+    "Left strafe exhibits MuJoCo heading drift and should be paired with IMU yaw feedback in autonomous navigation.",
+    "Run includes a deliberate arm-raise and gait-entry transition, so short taps may stop before reaching the run loop."
+  ]
+}

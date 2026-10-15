@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "fq:actions/sonic_v4_turn_right_continuous",
+  "version": "0.1.0",
+  "kind": "action",
+  "name": "G1 · SONIC v4 · 右连续转向",
+  "origin": "fq",
+  "upstream_origin": "旧 G1 部署文件；FQ 整理，非全部 FQ 原创",
+  "default_robot": "fq:robots/g1_o6",
+  "compatible_asset_versions": {
+    "fq:robots/g1_o6": "0.1.4",
+    "fq:robots/g1_o7": "0.1.3"
+  },
+  "duration_s": 20.82,
+  "trajectory": "actions/g1/sonic_v4_turn_right_continuous/trajectory.json",
+  "initial_pose": {
+    "left_hip_pitch_joint": -0.312,
+    "left_hip_roll_joint": 0.0,
+    "left_hip_yaw_joint": 0.0,
+    "left_knee_joint": 0.669,
+    "left_ankle_pitch_joint": -0.363,
+    "left_ankle_roll_joint": 0.0,
+    "right_hip_pitch_joint": -0.312,
+    "right_hip_roll_joint": 0.0,
+    "right_hip_yaw_joint": 0.0,
+    "right_knee_joint": 0.669,
+    "right_ankle_pitch_joint": -0.363,
+    "right_ankle_roll_joint": 0.0,
+    "waist_yaw_joint": 0.0,
+    "waist_roll_joint": 0.0,
+    "waist_pitch_joint": 0.0,
+    "left_shoulder_pitch_joint": 0.2,
+    "left_shoulder_roll_joint": 0.2,
+    "left_shoulder_yaw_joint": 0.0,
+    "left_elbow_joint": 0.6,
+    "left_wrist_roll_joint": 0.0,
+    "left_wrist_pitch_joint": 0.0,
+    "left_wrist_yaw_joint": 0.0,
+    "right_shoulder_pitch_joint": 0.2,
+    "right_shoulder_roll_joint": -0.2,
+    "right_shoulder_yaw_joint": 0.0,
+    "right_elbow_joint": 0.6,
+    "right_wrist_roll_joint": 0.0,
+    "right_wrist_pitch_joint": 0.0,
+    "right_wrist_yaw_joint": 0.0
+  },
+  "source": {
+    "token": {
+      "path": "v4/turn_right_continuous_r02_20260806_110411/frames.npz",
+      "source_host": "yuchen-4090",
+      "source_path": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/derived/sonic_v1_1_motion_control_v4/turn_right_continuous_r02_20260806_110411/frames.npz",
+      "sha256": "17fd8e4d400167004bc62b92858ece59c062858194bf5cd5fa8b2f63b06036b2"
+    },
+    "dataset_manifest": "actions/token_libraries/v4/dataset_manifest.json"
+  },
+  "validation_status": "G1+O6 token 动态仿真完成；O6/O7关节回放检查通过；实机未验收",
+  "limitations": [
+    "原始64维 token 已入库；浏览器播放配套解码器在 G1+O6 上生成的仿真结果。",
+    "预览按50 Hz逐帧执行完整记录；不代表导航循环拼接或实机执行验收。",
+    "预览前使用独立站稳和1秒 token 过渡；O7仅验证关节回放兼容性，未完成其动态验证。"
+  ],
+  "playback": "decoded_token_simulation",
+  "controller_bundle": "profiles/controllers/sonic_tokens/controller.json",
+  "motion_group": "sonic_token",
+  "token_library_version": "v4",
+  "primitive": "turn_right_continuous",
+  "policy_family": "SONIC v1.1 · token v4",
+  "token_file": "actions/token_libraries/v4/turn_right_continuous_r02_20260806_110411/frames.npz",
+  "token_metadata": "actions/token_libraries/v4/turn_right_continuous_r02_20260806_110411/metadata.json",
+  "phase_boundaries": {
+    "motion_start": 97,
+    "loop_start": 135,
+    "loop_end": 914,
+    "motion_end": 952
+  },
+  "simulation_validation": {
+    "slug": "sonic_v4_turn_right_continuous",
+    "source_sha256": "17fd8e4d400167004bc62b92858ece59c062858194bf5cd5fa8b2f63b06036b2",
+    "trace_file": "17fd8e4d400167004bc62b92858ece59c062858194bf5cd5fa8b2f63b06036b2.json",
+    "trace_sha256": "575b46e96cbe345df1f8d4367aafde124b5340807fbadf90e00c43b4fdc4f49e",
+    "frames": 1042,
+    "expected_frames": 1042,
+    "duration_s": 20.82,
+    "stop": "completed",
+    "min_pelvis_z_m": 0.7733981577365353,
+    "max_tilt_deg": 3.1145314822729033,
+    "displacement_m": [
+      0.20548654031705124,
+      0.04472118803001625,
+      -0.002580181159483441
+    ],
+    "warmup": {
+      "mode": "sonic_initial_token",
+      "ready": true,
+      "dynamic_warmup": true,
+      "warmup_seconds": 3.001999999999891,
+      "max_tilt_deg": 6.1545780929035026,
+      "final_tilt_deg": 3.4989324527769514,
+      "horizontal_drift_m": 0.05886196385135105
+    },
+    "source_max_gap_s": 0.03178763389587402,
+    "hardware_validated": false,
+    "robot": "g1_o6",
+    "physics_hz": 500,
+    "policy_hz": 50,
+    "token_playback": "full recorded sequence, one frame per policy step; not loop sequencer navigation",
+    "handover_s": 1,
+    "reused_identical_source": true
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "format": "sonic_token_control_selection_v1",
+  "name": "sonic_v1_1_motion_control_v4",
+  "status": "real_metrics_selected_mujoco_validated",
+  "supersedes": "sonic_v1_1_motion_control_v3",
+  "validation_report": "gear_sonic/config/token_remote/sonic_v1_1_motion_control_v4_mujoco_eval.json",
+  "defaults": {
+    "forward_mode": "normal",
+    "turn_mode": "normal",
+    "micro_turn_threshold_deg": 15.0,
+    "slow_turn_threshold_deg": 30.0,
+    "forward_loop_policy": {
+      "slow": "preserve_full_recorded_steady_section",
+      "normal": "preserve_full_recorded_steady_section",
+      "run": "phase_matched_short_cycle"
+    }
+  },
+  "selection_evidence": {
+    "forward_slow": "r02 has the lowest measured real-G1 yaw drift: 0.0442 deg/s",
+    "turn_left_micro_continuous": "r01 selected after matched obstacle-free MuJoCo: 8.83 deg/s versus right r03 at 7.78 deg/s; r03 left was asymmetric at 14.93 deg/s and r02 had a 0.5996 s stream gap",
+    "turn_right_micro_continuous": "r03 is the slowest right candidate: 6.9413 deg/s"
+  },
+  "selections": {
+    "stand": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/stand_r01_20260805_165259",
+    "forward_slow": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_slow_fine_recollect_20260902_105154/forward_slow_r02_20260902_105334",
+    "forward_normal": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/forward_normal_r02_20260806_105913",
+    "forward_run": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/forward_run_r01_20260806_115351",
+    "backward_continuous": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/backward_continuous_r01_20260805_165700",
+    "strafe_left_continuous": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/strafe_left_continuous_r03_20260805_170053",
+    "strafe_right_continuous": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/strafe_right_continuous_r01_20260805_170108",
+    "turn_left_continuous": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/turn_left_continuous_r01_20260806_110154",
+    "turn_right_continuous": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/turn_right_continuous_r02_20260806_110411",
+    "turn_left_micro_continuous": {
+      "source": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_micro_amplitude_continuous_turn_recollect_20260902_105512/turn_left_continuous_r01_20260902_105522",
+      "source_primitive": "turn_left_continuous"
+    },
+    "turn_right_micro_continuous": {
+      "source": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_micro_amplitude_continuous_turn_recollect_20260902_105512/turn_right_continuous_r03_20260902_110013",
+      "source_primitive": "turn_right_continuous"
+    },
+    "turn_left_normal": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/turn_left_normal_r03_20260806_115830",
+    "turn_right_normal": "gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/turn_right_normal_r03_20260806_115908"
+  },
+  "selection_file": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/config/token_remote/sonic_v1_1_motion_control_v4.json",
+  "built_entries": {
+    "stand": {
+      "directory": "stand_r01_20260805_165259",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/stand_r01_20260805_165259",
+      "frame_count": 259,
+      "phase_boundaries": {
+        "motion_start": 0,
+        "loop_start": 0,
+        "loop_end": 259,
+        "motion_end": 259
+      }
+    },
+    "forward_slow": {
+      "directory": "forward_slow_r02_20260902_105334",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_slow_fine_recollect_20260902_105154/forward_slow_r02_20260902_105334",
+      "frame_count": 755,
+      "phase_boundaries": {
+        "motion_start": 120,
+        "loop_start": 157,
+        "loop_end": 605,
+        "motion_end": 642
+      }
+    },
+    "forward_normal": {
+      "directory": "forward_normal_r02_20260806_105913",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/forward_normal_r02_20260806_105913",
+      "frame_count": 480,
+      "phase_boundaries": {
+        "motion_start": 84,
+        "loop_start": 122,
+        "loop_end": 309,
+        "motion_end": 347
+      }
+    },
+    "forward_run": {
+      "directory": "forward_run_r01_20260806_115351",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/forward_run_r01_20260806_115351",
+      "frame_count": 671,
+      "phase_boundaries": {
+        "motion_start": 1,
+        "loop_start": 183,
+        "loop_end": 542,
+        "motion_end": 633
+      }
+    },
+    "backward_continuous": {
+      "directory": "backward_continuous_r01_20260805_165700",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/backward_continuous_r01_20260805_165700",
+      "frame_count": 521,
+      "phase_boundaries": {
+        "motion_start": 91,
+        "loop_start": 129,
+        "loop_end": 410,
+        "motion_end": 448
+      }
+    },
+    "strafe_left_continuous": {
+      "directory": "strafe_left_continuous_r03_20260805_170053",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/strafe_left_continuous_r03_20260805_170053",
+      "frame_count": 391,
+      "phase_boundaries": {
+        "motion_start": 69,
+        "loop_start": 106,
+        "loop_end": 267,
+        "motion_end": 304
+      }
+    },
+    "strafe_right_continuous": {
+      "directory": "strafe_right_continuous_r01_20260805_170108",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/strafe_right_continuous_r01_20260805_170108",
+      "frame_count": 441,
+      "phase_boundaries": {
+        "motion_start": 98,
+        "loop_start": 135,
+        "loop_end": 316,
+        "motion_end": 353
+      }
+    },
+    "turn_left_continuous": {
+      "directory": "turn_left_continuous_r01_20260806_110154",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/turn_left_continuous_r01_20260806_110154",
+      "frame_count": 1224,
+      "phase_boundaries": {
+        "motion_start": 97,
+        "loop_start": 135,
+        "loop_end": 1153,
+        "motion_end": 1191
+      }
+    },
+    "turn_right_continuous": {
+      "directory": "turn_right_continuous_r02_20260806_110411",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/turn_right_continuous_r02_20260806_110411",
+      "frame_count": 1042,
+      "phase_boundaries": {
+        "motion_start": 97,
+        "loop_start": 135,
+        "loop_end": 914,
+        "motion_end": 952
+      }
+    },
+    "turn_left_micro_continuous": {
+      "directory": "turn_left_continuous_r01_20260902_105522",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_micro_amplitude_continuous_turn_recollect_20260902_105512/turn_left_continuous_r01_20260902_105522",
+      "frame_count": 1988,
+      "phase_boundaries": {
+        "motion_start": 109,
+        "loop_start": 147,
+        "loop_end": 1848,
+        "motion_end": 1886
+      }
+    },
+    "turn_right_micro_continuous": {
+      "directory": "turn_right_continuous_r03_20260902_110013",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_micro_amplitude_continuous_turn_recollect_20260902_105512/turn_right_continuous_r03_20260902_110013",
+      "frame_count": 2624,
+      "phase_boundaries": {
+        "motion_start": 121,
+        "loop_start": 159,
+        "loop_end": 2465,
+        "motion_end": 2503
+      }
+    },
+    "turn_left_normal": {
+      "directory": "turn_left_normal_r03_20260806_115830",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/turn_left_normal_r03_20260806_115830",
+      "frame_count": 545,
+      "phase_boundaries": {
+        "motion_start": 92,
+        "loop_start": 129,
+        "loop_end": 446,
+        "motion_end": 483
+      }
+    },
+    "turn_right_normal": {
+      "directory": "turn_right_normal_r03_20260806_115908",
+      "source": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_forward_turn_recollect_20260806/turn_right_normal_r03_20260806_115908",
+      "frame_count": 574,
+      "phase_boundaries": {
+        "motion_start": 77,
+        "loop_start": 115,
+        "loop_end": 439,
+        "motion_end": 477
+      }
+    }
+  }
+}

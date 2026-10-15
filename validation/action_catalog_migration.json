@@ -1,0 +1,19 @@
+{
+  "removed_from_current_catalog": [
+    "fq:actions/wave",
+    "fq:actions/handshake",
+    "fq:actions/salute",
+    "fq:actions/sonic_walk",
+    "fq:actions/sonic_walk_mirror",
+    "fq:actions/walk_7100_020",
+    "fq:actions/walk_7100_030",
+    "fq:actions/turn_7100_left",
+    "fq:actions/turn_7100_right"
+  ],
+  "preserved": [
+    "fq:actions/stand_initial",
+    "fq:actions/safe_stand"
+  ],
+  "reason": "Replace unrelated reference/model7100 recordings and old gesture entries with user-requested SONIC token v3/v4 library. Old releases preserve historical assets.",
+  "squat": "No published squat entry existed; no squat data removed."
+}

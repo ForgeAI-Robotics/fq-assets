@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.6.1",
+  "release": "0.7.0",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
@@ -30,14 +30,29 @@
   "actions": {
     "fq:actions/stand_initial": "0.1.0",
     "fq:actions/safe_stand": "0.1.0",
-    "fq:actions/wave": "0.1.0",
-    "fq:actions/handshake": "0.1.0",
-    "fq:actions/salute": "0.1.0",
-    "fq:actions/sonic_walk": "0.1.0",
-    "fq:actions/sonic_walk_mirror": "0.1.0",
-    "fq:actions/walk_7100_020": "0.1.0",
-    "fq:actions/walk_7100_030": "0.1.0",
-    "fq:actions/turn_7100_left": "0.1.0",
-    "fq:actions/turn_7100_right": "0.1.0"
+    "fq:actions/sonic_v3_stand": "0.1.0",
+    "fq:actions/sonic_v3_forward_slow": "0.1.0",
+    "fq:actions/sonic_v3_forward_normal": "0.1.0",
+    "fq:actions/sonic_v3_forward_run": "0.1.0",
+    "fq:actions/sonic_v3_backward_continuous": "0.1.0",
+    "fq:actions/sonic_v3_strafe_left_continuous": "0.1.0",
+    "fq:actions/sonic_v3_strafe_right_continuous": "0.1.0",
+    "fq:actions/sonic_v3_turn_left_continuous": "0.1.0",
+    "fq:actions/sonic_v3_turn_right_continuous": "0.1.0",
+    "fq:actions/sonic_v3_turn_left_normal": "0.1.0",
+    "fq:actions/sonic_v3_turn_right_normal": "0.1.0",
+    "fq:actions/sonic_v4_stand": "0.1.0",
+    "fq:actions/sonic_v4_forward_slow": "0.1.0",
+    "fq:actions/sonic_v4_forward_normal": "0.1.0",
+    "fq:actions/sonic_v4_forward_run": "0.1.0",
+    "fq:actions/sonic_v4_backward_continuous": "0.1.0",
+    "fq:actions/sonic_v4_strafe_left_continuous": "0.1.0",
+    "fq:actions/sonic_v4_strafe_right_continuous": "0.1.0",
+    "fq:actions/sonic_v4_turn_left_continuous": "0.1.0",
+    "fq:actions/sonic_v4_turn_right_continuous": "0.1.0",
+    "fq:actions/sonic_v4_turn_left_micro_continuous": "0.1.0",
+    "fq:actions/sonic_v4_turn_right_micro_continuous": "0.1.0",
+    "fq:actions/sonic_v4_turn_left_normal": "0.1.0",
+    "fq:actions/sonic_v4_turn_right_normal": "0.1.0"
   }
 }

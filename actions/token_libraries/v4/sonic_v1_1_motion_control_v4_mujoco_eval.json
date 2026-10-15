@@ -1,0 +1,80 @@
+{
+  "format": "sonic_token_control_mujoco_eval_v1",
+  "dataset": "sonic_v1_1_motion_control_v4",
+  "date": "2026-09-02",
+  "scene": "gear_sonic/data/robot_model/model_data/g1/scene_43dof.xml",
+  "scene_profile": "obstacle_free_flat_ground",
+  "safety_gates": {
+    "minimum_base_z_m": 0.70,
+    "maximum_base_tilt_deg": 12.0,
+    "minimum_final_base_z_m": 0.70
+  },
+  "selection_policy": "Select from matched real-G1 recording metrics, reject stream gaps, then apply matched obstacle-free MuJoCo stability, direction, speed-separation, symmetry, and navigation-branch gates.",
+  "results": {
+    "forward_slow": {
+      "selected_clip": "forward_slow_r02_20260902_105334",
+      "real_yaw_drift_deg_s": 0.0442,
+      "mujoco_action_window_s": 7.98,
+      "dx_m": 1.919,
+      "dy_m": -0.035,
+      "yaw_change_deg": 1.87,
+      "minimum_base_z_m": 0.761,
+      "maximum_base_tilt_deg": 5.98,
+      "result": "pass",
+      "matched_v3_control": {
+        "selected_clip": "forward_slow_r01_20260806_103149",
+        "distance_m": 3.814,
+        "yaw_change_deg": -7.13,
+        "minimum_base_z_m": 0.757,
+        "maximum_base_tilt_deg": 5.64
+      },
+      "note": "The new clip is approximately half the old MuJoCo displacement over the matched action window and has lower heading drift without reducing the stability margin."
+    },
+    "turn_left_micro_continuous": {
+      "selected_clip": "turn_left_continuous_r01_20260902_105522",
+      "real_yaw_rate_deg_s": 9.0745,
+      "mujoco_action_window_s": 7.78,
+      "yaw_change_deg": 68.72,
+      "yaw_rate_deg_s": 8.83,
+      "minimum_base_z_m": 0.779,
+      "maximum_base_tilt_deg": 5.42,
+      "result": "pass",
+      "rejected": {
+        "turn_left_continuous_r02_20260902_105606": "0.5996 s recording gap",
+        "turn_left_continuous_r03_20260902_105731": "14.93 deg/s in matched MuJoCo, asymmetric with the selected right micro turn"
+      }
+    },
+    "turn_right_micro_continuous": {
+      "selected_clip": "turn_right_continuous_r03_20260902_110013",
+      "real_yaw_rate_deg_s": 6.9413,
+      "mujoco_action_window_s": 7.98,
+      "yaw_change_deg": -62.09,
+      "yaw_rate_deg_s": -7.78,
+      "minimum_base_z_m": 0.772,
+      "maximum_base_tilt_deg": 5.20,
+      "result": "pass"
+    },
+    "navigation_micro_branch": {
+      "micro_turn_threshold_deg": 15.0,
+      "slow_turn_threshold_deg": 30.0,
+      "injected_turn_error_deg": 12.0,
+      "observed_states": [
+        "q-micro:enter",
+        "q-micro:loop",
+        "blend-q-micro",
+        "idle"
+      ],
+      "minimum_base_z_m": 0.778,
+      "maximum_base_tilt_deg": 6.75,
+      "result": "pass",
+      "log_directory": "project_logs/sonic/sonic_v1_1_scene0033_nav_20260902_112758"
+    }
+  },
+  "validation": {
+    "python_compile": "pass",
+    "token_unit_tests": "44 passed",
+    "dataset_dry_run": "pass",
+    "real_robot_execution": "not_run"
+  },
+  "remaining_risk": "The new clips have not yet been exercised on the physical G1 through the keyboard and autonomous navigation stacks. First use requires support rig, clear area, and a physical E-stop operator."
+}

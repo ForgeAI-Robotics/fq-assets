@@ -1,3 +1,7 @@
+## v0.7.0 — SONIC token motion libraries
+
+Replace the current unrelated walking-reference/model7100 and gesture catalog with the actual SONIC token libraries: v3 (11 primitives), v4 (13 primitives). Preserve stand initialization and safe-stand, for 26 current entries. No published squat action existed. Original token arrays, timestamps, metadata, enter/loop/exit boundaries, upstream evaluations, decoder hash and matching simulation startup profile are bundled. All 24 token entries complete isolated free-base G1+O6 MuJoCo simulation, with shared results only for byte-identical source files; O6/O7 joint-limit and kinematic replay checks pass. Browser shows decoded simulation root motion and filters by token library version. O7 dynamic execution, navigation-loop sequencing and hardware validation are not claimed. SIMPLE can load version-locked token arrays without issuing controls. Old releases preserve the removed catalog. No hand collision or fridge changes in this release.
+
 ## v0.6.1 — Motion loading feedback
 
 Disable playback until both robot and trajectory are ready; show loading/failure status instead of silently ignoring early clicks. Reset stale clocks when switching actions. Clearly label fixed-root historical playback in the viewport and playback panel. Motion payloads and SIMPLE execution locks are unchanged.

@@ -1,127 +1,31 @@
 {
   "schema_version": 1,
   "id": "fq:controllers/locomotion",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "entries": [
     {
-      "name": "SONIC sonic_v1_1",
+      "name": "SONIC v1.1 · token v3",
+      "status": "动作库原始数据已录入；本次隔离仿真状态见各动作",
+      "preview_binding": "使用匹配 decoder 的 token 仿真预览",
+      "weights_included": false,
       "files": [
         {
-          "path": "/home/dev/sonic/gear_sonic_deploy/policy/sonic_v1_1/model_encoder.onnx",
-          "sha256": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae",
-          "bytes": 50117796,
-          "source_host": "old-g1"
-        },
-        {
-          "path": "/home/dev/sonic/gear_sonic_deploy/policy/sonic_v1_1/model_decoder.onnx",
-          "sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
-          "bytes": 149778638,
-          "source_host": "old-g1"
+          "path": "model_decoder.onnx",
+          "sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509"
         }
-      ],
-      "status": "已登记来源与 SHA256；未验证当前策略行走",
-      "weights_included": false,
-      "preview_binding": "仅 model7100 有历史日志片段；SONIC 参考轨迹与具体策略版本不绑定"
+      ]
     },
     {
-      "name": "SONIC low_latency",
+      "name": "SONIC v1.1 · token v4",
+      "status": "动作库原始数据已录入；本次隔离仿真状态见各动作",
+      "preview_binding": "使用匹配 decoder 的 token 仿真预览",
+      "weights_included": false,
       "files": [
         {
-          "path": "/home/dev/sonic/gear_sonic_deploy/policy/low_latency/model_encoder.onnx",
-          "sha256": "60be43157f57d812f38bdbb740a5de5d5d070e8840d9edc16f02a91a6d06255b",
-          "bytes": 45933505,
-          "source_host": "old-g1"
-        },
-        {
-          "path": "/home/dev/sonic/gear_sonic_deploy/policy/low_latency/model_decoder.onnx",
-          "sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab",
-          "bytes": 149763762,
-          "source_host": "old-g1"
+          "path": "model_decoder.onnx",
+          "sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509"
         }
-      ],
-      "status": "已登记来源与 SHA256；未验证当前策略行走",
-      "weights_included": false,
-      "preview_binding": "仅 model7100 有历史日志片段；SONIC 参考轨迹与具体策略版本不绑定"
-    },
-    {
-      "name": "SONIC release",
-      "files": [
-        {
-          "path": "/home/dev/sonic/gear_sonic_deploy/policy/release/model_encoder.onnx",
-          "sha256": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3",
-          "bytes": 50100513,
-          "source_host": "old-g1"
-        },
-        {
-          "path": "/home/dev/sonic/gear_sonic_deploy/policy/release/model_decoder.onnx",
-          "sha256": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed",
-          "bytes": 40900688,
-          "source_host": "old-g1"
-        }
-      ],
-      "status": "已登记来源与 SHA256；未验证当前策略行走",
-      "weights_included": false,
-      "preview_binding": "仅 model7100 有历史日志片段；SONIC 参考轨迹与具体策略版本不绑定"
-    },
-    {
-      "name": "high_stand_student_model999",
-      "files": [
-        {
-          "path": "/home/dev/unitree_wbc_agile_deploy_v1/policies/high_stand_student_model999.onnx",
-          "sha256": "90bc208d1844c07ba8e3987a551ecd7ca5444fe70a0ced4ae1bc50d25464a178",
-          "bytes": 2050687,
-          "source_host": "old-g1"
-        }
-      ],
-      "status": "已登记来源与 SHA256；未验证当前策略行走",
-      "weights_included": false,
-      "preview_binding": "仅 model7100 有历史日志片段；SONIC 参考轨迹与具体策略版本不绑定"
-    },
-    {
-      "name": "payload_long_student_model7100",
-      "files": [
-        {
-          "path": "/home/dev/unitree_wbc_agile_deploy_v1/policies/payload_long_student_model7100.onnx",
-          "sha256": "574706f4447befca4d3e1f4a85afbd387ec982193c2d3314f932052ec60c2b6c",
-          "bytes": 2050687,
-          "source_host": "old-g1"
-        }
-      ],
-      "status": "已登记来源与 SHA256；未验证当前策略行走",
-      "weights_included": false,
-      "preview_binding": "仅 model7100 有历史日志片段；SONIC 参考轨迹与具体策略版本不绑定"
-    },
-    {
-      "name": "teleop_v2_student_model6000",
-      "files": [
-        {
-          "path": "/home/dev/unitree_wbc_agile_deploy_v1/policies/teleop_v2_student_model6000.onnx",
-          "sha256": "155bf32417740aec8fa47fcb5ca0023a018e425cbe01153410feba0a336621b3",
-          "bytes": 2189952,
-          "source_host": "old-g1"
-        }
-      ],
-      "status": "已登记来源与 SHA256；未验证当前策略行走",
-      "weights_included": false,
-      "preview_binding": "仅 model7100 有历史日志片段；SONIC 参考轨迹与具体策略版本不绑定"
-    },
-    {
-      "name": "g1_lower_body_stage2_model700_speed1p0",
-      "files": [
-        {
-          "path": "/home/dev/unitree_model700_tuning_v1/rl_lower_body/exported/g1_lower_body_stage2_model700_speed1p0.onnx",
-          "sha256": "65b9b4e07d5e06c6dbe352bdea25ff701a6bb974bf5767bfd3c7765b282a4f06",
-          "bytes": 826997,
-          "source_host": "old-g1"
-        }
-      ],
-      "status": "已登记来源与 SHA256；未验证当前策略行走",
-      "weights_included": false,
-      "preview_binding": "仅 model7100 有历史日志片段；SONIC 参考轨迹与具体策略版本不绑定"
+      ]
     }
-  ],
-  "limitations": [
-    "权重仅登记哈希，不包含可执行控制器或自动部署入口。",
-    "release / low_latency / sonic_v1_1 的观测契约不同，不可混用 token 或解码器。"
   ]
 }

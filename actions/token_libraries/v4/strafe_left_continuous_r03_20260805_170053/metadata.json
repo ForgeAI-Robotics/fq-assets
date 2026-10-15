@@ -1,0 +1,43 @@
+{
+  "format": "sonic_pose_primitive_v2",
+  "checkpoint": "sonic_v1_1",
+  "primitive": "strafe_left_continuous",
+  "motion_kind": "continuous",
+  "repetition": 3,
+  "target_yaw_deg": null,
+  "measured_yaw_change_deg": 1.4071346968756735,
+  "yaw_label_basis": null,
+  "measured_yaw_acceptance_range_deg": null,
+  "recommended_turn_control": null,
+  "measured_displacement_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "source_state": "stand",
+  "target_state": "strafe_left_continuous",
+  "terminal_state": "stand",
+  "phase_boundaries": {
+    "motion_start": 69,
+    "loop_start": 106,
+    "loop_end": 267,
+    "motion_end": 304
+  },
+  "events": [],
+  "started_unix": 1785920453.1884089,
+  "saved_unix": 1785920461.0301566,
+  "frame_count": 391,
+  "duration_s": 7.799900054931641,
+  "token_dim": 64,
+  "stream_mode": 1,
+  "contains_enter_loop_exit": true,
+  "action_endpoint": "tcp://127.0.0.1:5556",
+  "state_endpoint": "tcp://192.168.0.240:5557",
+  "marker_source": "VR",
+  "operator_protocol": "stand-marker-enter-loop-exit-stand-marker",
+  "collection_profile": "continuous",
+  "minimum_loop_duration_s": 3.0,
+  "settle_window_s": 0.6,
+  "derived_dataset": "sonic_v1_1_motion_control_v4",
+  "derived_from": "/home/lgj_4090/文档/sonic_wbc/GR00T-WholeBodyControl/gear_sonic/data/pose_primitives/raw/sonic_v1_1_continuous_v2/strafe_left_continuous_r03_20260805_170053"
+}

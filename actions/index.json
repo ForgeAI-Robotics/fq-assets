@@ -12,49 +12,124 @@
       "manifest": "actions/g1/safe_stand/asset.json"
     },
     {
-      "id": "fq:actions/wave",
+      "id": "fq:actions/sonic_v3_stand",
       "version": "0.1.0",
-      "manifest": "actions/g1/wave/asset.json"
+      "manifest": "actions/g1/sonic_v3_stand/asset.json"
     },
     {
-      "id": "fq:actions/handshake",
+      "id": "fq:actions/sonic_v3_forward_slow",
       "version": "0.1.0",
-      "manifest": "actions/g1/handshake/asset.json"
+      "manifest": "actions/g1/sonic_v3_forward_slow/asset.json"
     },
     {
-      "id": "fq:actions/salute",
+      "id": "fq:actions/sonic_v3_forward_normal",
       "version": "0.1.0",
-      "manifest": "actions/g1/salute/asset.json"
+      "manifest": "actions/g1/sonic_v3_forward_normal/asset.json"
     },
     {
-      "id": "fq:actions/sonic_walk",
+      "id": "fq:actions/sonic_v3_forward_run",
       "version": "0.1.0",
-      "manifest": "actions/g1/sonic_walk/asset.json"
+      "manifest": "actions/g1/sonic_v3_forward_run/asset.json"
     },
     {
-      "id": "fq:actions/sonic_walk_mirror",
+      "id": "fq:actions/sonic_v3_backward_continuous",
       "version": "0.1.0",
-      "manifest": "actions/g1/sonic_walk_mirror/asset.json"
+      "manifest": "actions/g1/sonic_v3_backward_continuous/asset.json"
     },
     {
-      "id": "fq:actions/walk_7100_020",
+      "id": "fq:actions/sonic_v3_strafe_left_continuous",
       "version": "0.1.0",
-      "manifest": "actions/g1/walk_7100_020/asset.json"
+      "manifest": "actions/g1/sonic_v3_strafe_left_continuous/asset.json"
     },
     {
-      "id": "fq:actions/walk_7100_030",
+      "id": "fq:actions/sonic_v3_strafe_right_continuous",
       "version": "0.1.0",
-      "manifest": "actions/g1/walk_7100_030/asset.json"
+      "manifest": "actions/g1/sonic_v3_strafe_right_continuous/asset.json"
     },
     {
-      "id": "fq:actions/turn_7100_left",
+      "id": "fq:actions/sonic_v3_turn_left_continuous",
       "version": "0.1.0",
-      "manifest": "actions/g1/turn_7100_left/asset.json"
+      "manifest": "actions/g1/sonic_v3_turn_left_continuous/asset.json"
     },
     {
-      "id": "fq:actions/turn_7100_right",
+      "id": "fq:actions/sonic_v3_turn_right_continuous",
       "version": "0.1.0",
-      "manifest": "actions/g1/turn_7100_right/asset.json"
+      "manifest": "actions/g1/sonic_v3_turn_right_continuous/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v3_turn_left_normal",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v3_turn_left_normal/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v3_turn_right_normal",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v3_turn_right_normal/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_stand",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_stand/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_forward_slow",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_forward_slow/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_forward_normal",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_forward_normal/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_forward_run",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_forward_run/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_backward_continuous",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_backward_continuous/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_strafe_left_continuous",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_strafe_left_continuous/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_strafe_right_continuous",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_strafe_right_continuous/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_turn_left_continuous",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_turn_left_continuous/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_turn_right_continuous",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_turn_right_continuous/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_turn_left_micro_continuous",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_turn_left_micro_continuous/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_turn_right_micro_continuous",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_turn_right_micro_continuous/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_turn_left_normal",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_turn_left_normal/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_v4_turn_right_normal",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_v4_turn_right_normal/asset.json"
     }
   ]
 }
