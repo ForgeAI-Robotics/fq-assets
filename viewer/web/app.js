@@ -149,7 +149,7 @@ async function buildModel(data,url,token){
     if(g.rgba[3]>.01&&g.group!==3&&!(isRobot(selected)&&g.collision&&g.group!==1&&data.geoms.some(v=>v.body===g.body&&v.group===1))){
       const texture=materialDef?.texture?textures.get(new URL(materialDef.texture,url).href):null;
       if(texture&&g.type!==7)texture.repeat.set(...materialDef.repeat);
-      const mat=new THREE.MeshStandardMaterial({color,map:texture,roughness:Math.max(.3,1-(materialDef?.shininess||0)*.65),metalness:(g.name.includes('metal')||g.name.includes('aluminium')) ? .65 : .05,transparent:g.rgba[3]<.99,opacity:g.rgba[3],side:THREE.DoubleSide,depthWrite:g.rgba[3]>.5});
+      const mat=new THREE.MeshStandardMaterial({color,map:texture,roughness:materialDef?.roughness??Math.max(.3,1-(materialDef?.shininess||0)*.65),metalness:materialDef?.metalness??((g.name.includes('metal')||g.name.includes('aluminium')) ? .65 : .05),transparent:g.rgba[3]<.99,opacity:g.rgba[3],side:THREE.DoubleSide,depthWrite:g.rgba[3]>.5});
       const mesh=new THREE.Mesh(geometry,mat);mesh.position.fromArray(g.pos);mesh.quaternion.set(g.quat[1],g.quat[2],g.quat[3],g.quat[0]);mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.joint=nearestJoint(g.body);mesh.name=g.name;
       bodyGroups.get(g.body).add(mesh);pickables.push(mesh);if(g.cutaway)cutaways.push(mesh);
     }

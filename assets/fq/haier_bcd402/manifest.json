@@ -46,12 +46,13 @@
     "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation",
     "Both hinge axes geometrically corrected to cabinet outer sides (+/-0.354 m); not hardware calibrated. Mullion remains independent with contact disabled.",
     "CPU PhysX validated with SIMPLE adapter; not measured hardware resistance or GPU validation.",
-    "82 cm floor-to-upper-door-lower-edge measured by user; upper compartment and upper freezer transition adjusted geometrically, not independently measured. Original Blender file remains provenance, use calibrated geometry.json for regeneration."
+    "82 cm floor-to-upper-door-lower-edge measured by user; upper compartment and upper freezer transition adjusted geometrically, not independently measured. Original Blender file remains provenance, use calibrated geometry.json for regeneration.",
+    "Upper doors share a user-approved 10 mm central arch; geometry and regional materials are simulation estimates. Regenerate using source/build_asset.py including author_arch.py, not geometry.json alone. Window lighting is environment configuration."
   ],
   "preferred_robot": "g1_o7_left_wholebody",
   "visual_meshes": 109,
-  "collision_boxes": 88,
-  "version": "0.1.7",
+  "collision_boxes": 64,
+  "version": "0.1.8",
   "mass_properties": {
     "total_mass_kg": 91.0,
     "movable_mass_kg": 14.3,
@@ -116,5 +117,8 @@
     "basis": "User measurement confirmed 2026-10-14",
     "upper_door_top_m": 1.798,
     "upper_door_top_status": "Retained model value, not newly measured"
-  }
+  },
+  "collision_convex_meshes": 986,
+  "geometry_modifier": "source/author_arch.py",
+  "appearance": "appearance.json"
 }

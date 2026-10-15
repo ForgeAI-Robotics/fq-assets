@@ -1,0 +1,66 @@
+{
+  "status": "simulation_geometry_not_hardware_calibration",
+  "shared_arch_peak_m": 0.01,
+  "visuals": [
+    {
+      "part": "part_049",
+      "triangles": 146432,
+      "maximum_bulge_m": 0.009996551014335784,
+      "outer_top_bottom_edge_displacement_m": 3.2909128905828093e-10,
+      "width_m": 0.34599998593330383,
+      "height_m": 0.9780000504106283
+    },
+    {
+      "part": "part_076",
+      "triangles": 146432,
+      "maximum_bulge_m": 0.009996551014335785,
+      "outer_top_bottom_edge_displacement_m": 3.290912878323203e-10,
+      "width_m": 0.34599998593330383,
+      "height_m": 0.9780000504106283
+    },
+    {
+      "part": "part_108",
+      "triangles": 624,
+      "maximum_bulge_m": 0.009795918270033222,
+      "outer_top_bottom_edge_displacement_m": 0,
+      "width_m": 0.34599998593330383,
+      "height_m": 0.9780000504106283
+    },
+    {
+      "part": "part_109",
+      "triangles": 48,
+      "maximum_bulge_m": 0.00963899991198948,
+      "outer_top_bottom_edge_displacement_m": 0,
+      "width_m": 0.34599998593330383,
+      "height_m": 0.9780000504106283
+    },
+    {
+      "part": "part_110",
+      "triangles": 48,
+      "maximum_bulge_m": 0.00963899991198948,
+      "outer_top_bottom_edge_displacement_m": 0,
+      "width_m": 0.34599998593330383,
+      "height_m": 0.9780000504106283
+    },
+    {
+      "part": "part_111",
+      "triangles": 48,
+      "maximum_bulge_m": 0.00963899991198948,
+      "outer_top_bottom_edge_displacement_m": 0,
+      "width_m": 0.34599998593330383,
+      "height_m": 0.9780000504106283
+    },
+    {
+      "part": "part_112",
+      "triangles": 6208,
+      "maximum_bulge_m": 0.006897510017453601,
+      "outer_top_bottom_edge_displacement_m": 0,
+      "width_m": 0.34599998593330383,
+      "height_m": 0.9780000504106283
+    }
+  ],
+  "convex_collision_parts": 986,
+  "sampled_convex_surface_error_m": 0.00018238984287891058,
+  "mass_kg": 91,
+  "hinges_and_resistance_unchanged": true
+}

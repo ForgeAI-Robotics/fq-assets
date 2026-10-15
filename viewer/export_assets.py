@@ -22,6 +22,7 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,required=True)
     ap.add_argument('--out',type=Path,required=True);ap.add_argument('--commit',required=True)
     args=ap.parse_args();root=args.root.resolve();out=args.out;out.mkdir(parents=True,exist_ok=True)
+    appearance=json.loads((root/'assets/fq/haier_bcd402/appearance.json').read_text())
     index=json.loads((root/'catalog/index.json').read_text());catalog=[]
     for item in index['assets']:
         meta=json.loads((root/item['manifest']).read_text())
@@ -65,6 +66,12 @@ def main():
                     im.save(dest/texture,optimize=True);tex_cache[tid]=texture
             materials.append({'rgba':m.mat_rgba[i].tolist(),'texture':texture,'repeat':m.mat_texrepeat[i].tolist(),
                               'shininess':float(m.mat_shininess[i]),'specular':float(m.mat_specular[i])})
+        for i,mat in enumerate(materials):
+            matname=name(m,mujoco.mjtObj.mjOBJ_MATERIAL,i)
+            part=matname.split('pbr_',1)[-1] if 'pbr_' in matname else None
+            if part in appearance['region_assignment']:
+                props=appearance['presets'][appearance['region_assignment'][part]]
+                mat.update(roughness=props['roughness'],metalness=props['metallic'])
         bodies=[];joints=[];geoms=[];bounds=[]
         for i in range(m.nbody):
             b={'id':i,'name':name(m,mujoco.mjtObj.mjOBJ_BODY,i),'parent':int(m.body_parentid[i]),

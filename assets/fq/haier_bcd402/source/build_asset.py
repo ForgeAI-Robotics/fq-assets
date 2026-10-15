@@ -90,3 +90,6 @@ if previous.exists():
 (R/'manifest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
 print('BUILT',R)
 
+
+from author_arch import author as author_arch
+author_arch(R,G)

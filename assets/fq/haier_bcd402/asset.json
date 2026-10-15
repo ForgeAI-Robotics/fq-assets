@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/haier_bcd402",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "kind": "articulated",
   "units": "meter",
   "up_axis": "Z",
@@ -46,7 +46,8 @@
     "Mullion contact response disabled pending guide-linkage calibration; not suitable for seal/contact policy evaluation",
     "Both hinge axes geometrically corrected to cabinet outer sides (+/-0.354 m); not hardware calibrated. Mullion remains independent with contact disabled.",
     "CPU PhysX validated with SIMPLE adapter; not measured hardware resistance or GPU validation.",
-    "82 cm floor-to-upper-door-lower-edge measured by user; upper compartment and upper freezer transition adjusted geometrically, not independently measured. Original Blender file remains provenance, use calibrated geometry.json for regeneration."
+    "82 cm floor-to-upper-door-lower-edge measured by user; upper compartment and upper freezer transition adjusted geometrically, not independently measured. Original Blender file remains provenance, use calibrated geometry.json for regeneration.",
+    "Upper doors share a user-approved 10 mm central arch; geometry and regional materials are simulation estimates. Regenerate using source/build_asset.py including author_arch.py, not geometry.json alone. Window lighting is environment configuration."
   ],
   "calibration_record": "assets/fq/haier_bcd402/calibration_v3.json",
   "mass_properties": {
@@ -112,5 +113,7 @@
     "basis": "User measurement confirmed 2026-10-14",
     "upper_door_top_m": 1.798,
     "upper_door_top_status": "Retained model value, not newly measured"
-  }
+  },
+  "appearance": "assets/fq/haier_bcd402/appearance.json",
+  "geometry_revision": "assets/fq/haier_bcd402/arch_geometry.json"
 }

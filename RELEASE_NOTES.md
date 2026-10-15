@@ -1,3 +1,7 @@
+## v0.7.2 — Refrigerator shared 10 mm arch and regional materials
+
+Refrigerator 0.1.8 and baseline 0.1.12 use a shared upper-door arch peaking near the center seam at 10 mm. Front display/markings conform to the surface. Both simulation formats use piecewise convex collisions preserving existing handle recesses. Silver panels, side paint, liner, seals and display have separate estimated material parameters; browser reads explicit PBR values. Window lighting remains an environment setting. Geometry/materials are user-directed estimates, not hardware measurements. Mass remains 91 kg, hinge positions and zero right-door resistance remain unchanged.
+
 ## v0.7.1 — O6 right palm and zero refrigerator resistance
 
 O6 right hand 0.1.2 and G1+O6 0.1.5 use the 64-part right-palm convex decomposition from G1 navigate replay, in MJCF and the combined robot URDF. Original palm visual, masses, inertias, joints, actuators and contact masks are retained. The two reproduced thumb-root cavity false contacts (0.655 / 1.497 mm) are eliminated. This is a simulation collision correction, not hardware/grasp calibration.
