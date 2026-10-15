@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:end_effectors/o7_left",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "end_effector",
   "name": "LinkerHand O7 左手",
   "origin": "fq",
@@ -31,5 +31,12 @@
   "handedness": "left",
   "root_body": "left_o7_hand_base_link",
   "mount_frame": "手掌基座局部坐标；安装位姿保存在机器人组合清单",
-  "source_assembly": "fq:robots/g1_o7"
+  "source_assembly": "fq:robots/g1_o7",
+  "profiles": [
+    {
+      "id": "fq:poses/o7_left_task",
+      "version": "0.1.0",
+      "path": "profiles/poses/o7_left_task.json"
+    }
+  ]
 }

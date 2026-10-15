@@ -28,7 +28,7 @@ class Catalog:
             sha=self.run(['git','rev-parse','origin/main'],self.repo)
             if time.time()-self.release_time>300:
                 try:
-                    raw=self.run([str(Path.home()/'.local/bin/gh'),'api','repos/ForgeAI-Robotics/fq-sim-assets/releases/latest'],timeout=35)
+                    raw=self.run([str(Path.home()/'.local/bin/gh'),'api','repos/ForgeAI-Robotics/fq-assets/releases/latest'],timeout=35)
                     r=json.loads(raw)
                     with self.lock:self.release={'tag':r['tag_name'],'url':r['html_url']}
                     self.release_time=time.time()
@@ -61,7 +61,7 @@ class Catalog:
     def response(self):
         with self.lock:
             return {**(self.catalog or {'assets':[],'main_commit':None}),'latest_release':self.release,
-                    'sync':dict(self.status),'sync_interval_seconds':self.interval,'repository':'https://github.com/ForgeAI-Robotics/fq-sim-assets'}
+                    'sync':dict(self.status),'sync_interval_seconds':self.interval,'repository':'https://github.com/ForgeAI-Robotics/fq-assets'}
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--repo',type=Path,required=True);ap.add_argument('--state',type=Path,required=True)

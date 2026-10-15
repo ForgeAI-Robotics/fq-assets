@@ -1,3 +1,7 @@
+## v0.4.0 — FQ Assets and pose profiles
+
+Repository renamed to ForgeAI-Robotics/fq-assets. Added versioned O6 left/right task commands, O7 left task commands and a G1 BeyondMimic initial joint pose. Source file hashes and verification status are recorded. Right O6 values were approved by an operator using the left profile; they are not an independent right-hand calibration. No O7 right profile was inferred. G1 named-joint limits and kinematic replay pass for both robot models; physical balance and hardware validation remain pending. Loading profiles never changes the default pose or sends commands. Existing model geometry, dynamics, camera parameters and baseline placement are unchanged.
+
 # v0.3.10
 
 Correct left fridge pivot to eliminate cabinet collision across 0-90 degrees; preserve 91 kg mass and collision geometry. Fridge 0.1.3, baseline 0.1.6.

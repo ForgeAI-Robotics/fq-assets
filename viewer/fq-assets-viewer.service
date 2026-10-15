@@ -1,5 +1,5 @@
 [Unit]
-Description=FQ Sim Assets viewer
+Description=FQ Assets viewer
 After=network-online.target
 [Service]
 WorkingDirectory=/home/fangqi/code/fq-sim-assets/viewer

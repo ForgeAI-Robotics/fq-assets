@@ -72,6 +72,7 @@ function showProperties(a){
     row('最新库发布',esc(catalog.latest_release.tag))+
     `<p class="property-note">本页展示 main 上的当前资产。整体发布版本与单个物体版本分别记录。</p>`+
     `<details class="property-details"><summary>来源与模型依据</summary><p class="property-note">${esc(a.upstream_origin)}</p><p class="property-note">属性取自 ${esc(a.property_source)}。${a.dimensions_body_m?'篮身尺寸依据产品标签；底部、圆角和提手细节为估计值。':a.calibration?'保留用户尺寸或标定记录；部分参数仍为估算。':''}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看资产清单 ↗</a></details>`);
+  if(a.pose_profiles?.length) html+=section('姿态配置',a.pose_profiles.map(p=>row(p.name,`v${esc(p.version)}`)+row('验证状态',esc(p.validation.label))+row('单位',esc(p.units))+row('来源',esc(p.source.source_host+' · '+p.source.source_path))+Object.entries(p.poses).map(([name,pose])=>row(name,esc(pose.position.join(', ')))).join('')+`<p class="property-note">${p.limitations.map(esc).join('<br>')}</p>`).join(''));
   $('properties-content').innerHTML=html;
 }
 function renderList(){

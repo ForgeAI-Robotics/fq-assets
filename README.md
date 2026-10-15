@@ -5,7 +5,7 @@ FQ 仿真资产库。首版 `v0.1.0` 发布 navigate 项目的办公场地主场
 ## 获取固定版本
 
 ```bash
-git clone https://github.com/ForgeAI-Robotics/fq-sim-assets.git
+git clone https://github.com/ForgeAI-Robotics/fq-assets.git
 cd fq-sim-assets
 git checkout v0.1.0
 git lfs pull

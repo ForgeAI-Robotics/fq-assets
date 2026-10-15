@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.3.14",
+  "release": "0.4.0",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
@@ -13,12 +13,18 @@
     "fq:materials/carpet": "0.1.0",
     "fq:materials/wood": "0.1.0",
     "fq:materials/stone": "0.1.0",
-    "fq:end_effectors/o6_left": "0.1.0",
-    "fq:end_effectors/o6_right": "0.1.0",
-    "fq:robots/g1_o6": "0.1.3",
-    "fq:end_effectors/o7_left": "0.1.0",
+    "fq:end_effectors/o6_left": "0.1.1",
+    "fq:end_effectors/o6_right": "0.1.1",
+    "fq:robots/g1_o6": "0.1.4",
+    "fq:end_effectors/o7_left": "0.1.1",
     "fq:end_effectors/o7_right": "0.1.0",
-    "fq:robots/g1_o7": "0.1.2",
+    "fq:robots/g1_o7": "0.1.3",
     "fq:cameras/realsense_d435i": "0.1.0"
+  },
+  "profiles": {
+    "fq:poses/o6_left_task": "0.1.0",
+    "fq:poses/o6_right_task": "0.1.0",
+    "fq:poses/o7_left_task": "0.1.0",
+    "fq:poses/g1_beyondmimic_initial": "0.1.0"
   }
 }

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "fq:poses/o7_left_task",
+  "version": "0.1.0",
+  "name": "O7_LEFT 任务手势",
+  "kind": "hand_command_presets",
+  "compatible_assets": [
+    "fq:end_effectors/o7_left",
+    "fq:robots/g1_o7"
+  ],
+  "units": "protocol_uint8",
+  "joint_order": [
+    "thumb_flexion",
+    "thumb_abduction",
+    "index_flexion",
+    "middle_flexion",
+    "ring_flexion",
+    "little_flexion",
+    "thumb_rotation"
+  ],
+  "poses": {
+    "open": {
+      "description_zh": "左手张开",
+      "position": [
+        255,
+        179,
+        255,
+        255,
+        255,
+        255,
+        170
+      ]
+    },
+    "closed": {
+      "description_zh": "第一个 VLA（抓取可乐）的左手闭合姿势",
+      "position": [
+        67,
+        151,
+        0,
+        0,
+        0,
+        0,
+        37
+      ]
+    },
+    "light_switch": {
+      "description_zh": "第二个 VLA（开灯）的指向姿势；以闭合姿势为基础，仅食指保持张开",
+      "position": [
+        67,
+        151,
+        255,
+        0,
+        0,
+        0,
+        37
+      ]
+    }
+  },
+  "task_profiles": {
+    "coke": {
+      "open_pose": "open",
+      "closed_pose": "closed"
+    },
+    "light_switch": {
+      "open_pose": "open",
+      "closed_pose": "light_switch"
+    }
+  },
+  "source": {
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/g1_groot_n17_inference/hardware/linkerhand/config/left_o7_poses.json",
+    "sha256": "6c196e7543e317041261e0269ef12548f58a018e1ff0d5ada4e881de7886395a",
+    "source_host": "yuchen-4090",
+    "captured_at": "2026-10-15"
+  },
+  "validation": {
+    "status": "pending_hardware_verification",
+    "label": "历史任务配置；待实机复核",
+    "independently_measured": false
+  },
+  "limitations": [
+    "控制值为协议字节，不是弧度；未建立到模型关节角的标定映射。",
+    "不自动应用到仿真或实机。"
+  ],
+  "compatible_asset_versions": {
+    "fq:end_effectors/o7_left": "0.1.1",
+    "fq:robots/g1_o7": "0.1.3"
+  }
+}

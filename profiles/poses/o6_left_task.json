@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "fq:poses/o6_left_task",
+  "version": "0.1.0",
+  "name": "O6_LEFT 任务手势",
+  "kind": "hand_command_presets",
+  "compatible_assets": [
+    "fq:end_effectors/o6_left",
+    "fq:robots/g1_o6"
+  ],
+  "units": "protocol_uint8",
+  "joint_order": [
+    "thumb_flexion",
+    "thumb_abduction",
+    "index_flexion",
+    "middle_flexion",
+    "ring_flexion",
+    "little_flexion"
+  ],
+  "poses": {
+    "open": {
+      "description_zh": "抓可乐正式张开端点",
+      "position": [
+        250,
+        179,
+        250,
+        250,
+        250,
+        250
+      ]
+    },
+    "closed": {
+      "description_zh": "抓可乐正式闭合端点",
+      "position": [
+        110,
+        0,
+        0,
+        110,
+        0,
+        0
+      ]
+    }
+  },
+  "task_profiles": {
+    "coke": {
+      "open_pose": "open",
+      "closed_pose": "closed"
+    }
+  },
+  "source": {
+    "source_path": "/home/lgj_4090/文档/sonic_wbc/g1_groot_n17_inference/hardware/linkerhand_o6/config/left_o6_poses.json",
+    "sha256": "14adb0ffde7646c55094a2599abc41fea2bc8cd710bad85f226c15972499269d",
+    "source_host": "yuchen-4090",
+    "captured_at": "2026-10-15"
+  },
+  "validation": {
+    "status": "operator_approved",
+    "label": "操作员批准；待实机复核",
+    "independently_measured": false
+  },
+  "limitations": [
+    "控制值为协议字节，不是弧度；未建立到模型关节角的标定映射。",
+    "不自动应用到仿真或实机。"
+  ],
+  "control": {
+    "torque": 5,
+    "speed": 120,
+    "limits_zh": "抓可乐正式力矩/速度"
+  },
+  "control_units": "vendor_protocol_raw",
+  "source_approval": {
+    "task": "grasp_coke",
+    "numeric_profile_shared_by_both_hands": true,
+    "basis": "operator_direct_approval",
+    "source": "left_o6_calibration_gui"
+  },
+  "source_calibration_verified": true,
+  "compatible_asset_versions": {
+    "fq:end_effectors/o6_left": "0.1.1",
+    "fq:robots/g1_o6": "0.1.4"
+  }
+}
