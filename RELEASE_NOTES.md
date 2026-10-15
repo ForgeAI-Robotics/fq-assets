@@ -1,3 +1,7 @@
+## v0.6.0 — G1 locomotion library
+
+Add two SONIC walking references with pelvis motion and four measured model7100 log excerpts (forward 0.2/0.3 command, left/right turn command). Preserve timestamps, named joint mapping, source hashes and policy association limits. Register seven policy variants by SHA256 without distributing executable weights. Browser filters references, historical recordings and existing stand/gesture actions; reference root poses use quaternion interpolation, historical records explicitly remain fixed-root. All 11 actions pass O6/O7 joint limits and deterministic kinematic reconstruction. Source-reference body FK agrees within 2.3 micrometers. These are not dynamic balance or current hardware acceptance tests.
+
 ## v0.5.1 — Hand open/close preview
 
 Add Open / Close buttons and a 0–100% slider to all O6/O7 standalone hand pages. Motion respects model joint limits and dependent-joint couplings; thumb roll stays neutral. These are illustrative model poses, not calibrated protocol-byte conversions or Coke task presets. No model physics or task locks changed.

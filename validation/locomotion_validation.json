@@ -1,0 +1,204 @@
+{
+  "results": [
+    {
+      "id": "fq:actions/stand_initial",
+      "robot": "g1_o6",
+      "frames": 2,
+      "duration_s": 3.0,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/stand_initial",
+      "robot": "g1_o7",
+      "frames": 2,
+      "duration_s": 3.0,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/safe_stand",
+      "robot": "g1_o6",
+      "frames": 500,
+      "duration_s": 9.98,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/safe_stand",
+      "robot": "g1_o7",
+      "frames": 500,
+      "duration_s": 9.98,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/wave",
+      "robot": "g1_o6",
+      "frames": 222,
+      "duration_s": 7.8,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/wave",
+      "robot": "g1_o7",
+      "frames": 222,
+      "duration_s": 7.8,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/handshake",
+      "robot": "g1_o6",
+      "frames": 150,
+      "duration_s": 5.03,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/handshake",
+      "robot": "g1_o7",
+      "frames": 150,
+      "duration_s": 5.03,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/salute",
+      "robot": "g1_o6",
+      "frames": 180,
+      "duration_s": 6.0,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/salute",
+      "robot": "g1_o7",
+      "frames": 180,
+      "duration_s": 6.0,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/sonic_walk",
+      "robot": "g1_o6",
+      "frames": 455,
+      "duration_s": 9.08,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/sonic_walk",
+      "robot": "g1_o7",
+      "frames": 455,
+      "duration_s": 9.08,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/sonic_walk_mirror",
+      "robot": "g1_o6",
+      "frames": 455,
+      "duration_s": 9.08,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/sonic_walk_mirror",
+      "robot": "g1_o7",
+      "frames": 455,
+      "duration_s": 9.08,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/walk_7100_020",
+      "robot": "g1_o6",
+      "frames": 821,
+      "duration_s": 16.399745941,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/walk_7100_020",
+      "robot": "g1_o7",
+      "frames": 821,
+      "duration_s": 16.399745941,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/walk_7100_030",
+      "robot": "g1_o6",
+      "frames": 410,
+      "duration_s": 8.179816723,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/walk_7100_030",
+      "robot": "g1_o7",
+      "frames": 410,
+      "duration_s": 8.179816723,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/turn_7100_left",
+      "robot": "g1_o6",
+      "frames": 144,
+      "duration_s": 2.859479904,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/turn_7100_left",
+      "robot": "g1_o7",
+      "frames": 144,
+      "duration_s": 2.859479904,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/turn_7100_right",
+      "robot": "g1_o6",
+      "frames": 108,
+      "duration_s": 2.140192032,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    },
+    {
+      "id": "fq:actions/turn_7100_right",
+      "robot": "g1_o7",
+      "frames": 108,
+      "duration_s": 2.140192032,
+      "limit_violations": [],
+      "kinematic_replay_error_m": 0.0
+    }
+  ],
+  "passed": true,
+  "hardware_validated": false,
+  "source_fk_verification": [
+    {
+      "source": "walking_quip_360_R_002__A428",
+      "robot": "g1_o6",
+      "max_body_position_error_m": 2.1995351858144526e-06
+    },
+    {
+      "source": "walking_quip_360_R_002__A428",
+      "robot": "g1_o7",
+      "max_body_position_error_m": 2.1995351858144526e-06
+    },
+    {
+      "source": "walking_quip_360_R_002__A428_M",
+      "robot": "g1_o6",
+      "max_body_position_error_m": 2.253318784768526e-06
+    },
+    {
+      "source": "walking_quip_360_R_002__A428_M",
+      "robot": "g1_o7",
+      "max_body_position_error_m": 2.253318784768526e-06
+    }
+  ]
+}

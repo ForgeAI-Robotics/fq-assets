@@ -37,7 +37,7 @@ function section(title,body){return `<section class="prop-section"><h3>${esc(tit
 function provenance(a){if(a.kind==='camera')return 'RealSense 上游 · FQ 适配';if(isRobot(a))return 'FQ 适配 · '+(a.kind==='robot'?'Unitree / LinkerHand':'LinkerHand');if(a.origin==='simple')return 'SIMPLE 原生';return (a.upstream_origin||'').includes('SimFoundry')?'FQ 派生 · SimFoundry':'FQ 自建';}
 function showProperties(a){
   if(a.kind==='action'){
-    $('properties-content').innerHTML=section('动作信息',row('动作版本','v'+esc(a.version))+row('预览模型','G1 + O6')+row('时长',esc(a.duration_s)+' s')+row('验证状态',esc(a.validation_status))+row('整体发布',esc(catalog.latest_release.tag)))+section('来源与限制',`<p class="property-note">${a.limitations.map(esc).join('<br>')}</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(JSON.stringify(a.source,null,2))}</pre><a target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看动作清单</a>`);
+    $('properties-content').innerHTML=section('动作信息',row('动作版本','v'+esc(a.version))+row('预览模型','G1 + O6')+row('动作类型',a.motion_group==='reference'?'SONIC 参考轨迹':a.motion_group==='recording'?'历史实机记录 · 固定基座':'站姿 / 手势')+row('策略关联',esc(a.policy_family||'见来源记录'))+row('时长',esc(a.duration_s)+' s')+row('验证状态',esc(a.validation_status))+row('整体发布',esc(catalog.latest_release.tag)))+section('来源与限制',`<p class="property-note">${a.limitations.map(esc).join('<br>')}</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(JSON.stringify(a.source,null,2))}</pre><a target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看动作清单</a>`);
     return;
   }
   if(a.kind==='material'){
@@ -84,7 +84,10 @@ function showProperties(a){
 function renderList(){
   if(!catalog)return;
   const q=$('search').value.trim().toLowerCase(),origin=$('origin-filter').value,type=$('type-filter').value;
-  const items=catalog.assets.filter(a=>(category==='object'?!['scene','action'].includes(a.kind):a.kind===category)&&(!q||`${a.name} ${a.id} ${a.subtitle}`.toLowerCase().includes(q))&&(origin==='all'||a.origin===origin)&&(category!=='object'||type==='all'||a.kind===type));
+  $('motion-filters').hidden=category!=='action';
+  $('controller-list').innerHTML=(catalog.locomotion_controllers?.entries||[]).map(p=>`<details class="policy-record"><summary>${esc(p.name)}</summary><p>${esc(p.status)}</p><p>${esc(p.preview_binding)}</p>${p.files.map(f=>`<p>${esc(f.path.split('/').pop())}<br><code title="${esc(f.sha256)}">SHA256 ${esc(f.sha256)}</code></p>`).join('')}</details>`).join('');
+  const motionFilter=$('motion-filter').value;
+  const items=catalog.assets.filter(a=>(category!=='action'||motionFilter==='all'||(a.motion_group||'other')===motionFilter)&&(category==='object'?!['scene','action'].includes(a.kind):a.kind===category)&&(!q||`${a.name} ${a.id} ${a.subtitle}`.toLowerCase().includes(q))&&(origin==='all'||a.origin===origin)&&(category!=='object'||type==='all'||a.kind===type));
   $('asset-list').innerHTML=items.length?items.map(a=>`<button class="asset-card ${selected?.id===a.id?'active':''}" data-slug="${esc(a.slug)}" aria-pressed="${selected?.id===a.id}" aria-label="查看${esc(a.name)}"><span class="asset-thumb"><img src="${a.thumbnail}" alt="" loading="lazy"></span><span class="asset-card-info"><div class="asset-card-name">${esc(a.name)}</div><div class="asset-card-meta"><span>v${esc(a.version)}</span><span class="source-badge">${esc(a.origin.toUpperCase())}</span></div></span></button>`).join(''):'<div class="empty-note">没有匹配的资产。<br>尝试其他关键词或筛选条件。</div>';
   document.querySelectorAll('.asset-card').forEach(b=>b.onclick=()=>selectAsset(b.dataset.slug));
 }
@@ -166,6 +169,7 @@ function updateBodies(){
 }
 function frameModel(){
   if(!activeModel)return;
+  modelRoot.userData.motionXYZ=[0,0,0];
   const [lo,hi]=activeModel.bounds,center=new THREE.Vector3(...lo).add(new THREE.Vector3(...hi)).multiplyScalar(.5),size=new THREE.Vector3(...hi).sub(new THREE.Vector3(...lo)),extent=Math.max(...size.toArray(),.05);
   const dir=new THREE.Vector3(.9,-1.8,selected.kind==='scene'?2.1:.85).normalize();camera.position.copy(center).addScaledVector(dir,extent*1.85);controls.target.copy(center);camera.near=extent/1000;camera.far=extent*100;camera.updateProjectionMatrix();controls.minDistance=extent*.18;controls.maxDistance=extent*8;controls.update();
   keyLight.position.copy(center).add(new THREE.Vector3(extent,-extent,extent*2));keyLight.target.position.copy(center);fill.position.copy(center).add(new THREE.Vector3(-extent,extent,extent));fill.target.position.copy(center);
@@ -220,13 +224,14 @@ renderer.domElement.addEventListener('pointermove',e=>{
 function endDrag(e){if(!drag)return;drag=null;controls.enabled=true;updateJointUI();if(renderer.domElement.hasPointerCapture(e.pointerId))renderer.domElement.releasePointerCapture(e.pointerId);e.stopImmediatePropagation();}
 renderer.domElement.addEventListener('pointerup',endDrag,true);renderer.domElement.addEventListener('pointercancel',endDrag,true);
 $('orbit-mode').onclick=()=>setMode(false);$('joint-mode').onclick=()=>setMode(true);
-$('reset-view').onclick=frameModel;$('reset-joints').onclick=()=>{handAnimation=null;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';selected.joints.forEach(j=>angles.set(j.name,j.initial));applyCouplings();updateBodies();updateJointUI();};
+$('reset-view').onclick=()=>{frameModel();if(motion)seekMotion(motionTime);};$('reset-joints').onclick=()=>{handAnimation=null;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';selected.joints.forEach(j=>angles.set(j.name,j.initial));applyCouplings();updateBodies();updateJointUI();};
 $('collision-toggle').onclick=()=>{showCollision=!showCollision;colliders.forEach(m=>m.visible=showCollision);$('collision-toggle').setAttribute('aria-pressed',showCollision);};
 $('cutaway-toggle').onclick=()=>{cutaway=!cutaway;applyCutaway();};
 $('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('资产链接已复制');}catch{const input=document.createElement('input');input.value=location.href;document.body.append(input);input.select();const ok=document.execCommand('copy');input.remove();toast(ok?'资产链接已复制':'请复制浏览器地址栏中的链接');}};
 $('refresh').onclick=()=>{refresh();toast('正在获取最新同步结果');};
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{setCategory(b.dataset.kind);const first=catalog?.assets.find(a=>category==='object'?!['scene','action'].includes(a.kind):a.kind===category);if(first)selectAsset(first.slug);});
 $('joint-group').onchange=renderJoints;
+$('motion-filter').onchange=renderList;
 $('search').oninput=renderList;$('origin-filter').onchange=renderList;$('type-filter').onchange=renderList;
 $('material-repeat').oninput=()=>{const n=Number($('material-repeat').value);$('material-repeat-value').textContent=`${n} ×`;modelRoot?.traverse(o=>{if(o.material?.map)o.material.map.repeat.set(n,n);});};
 await refresh();setInterval(refresh,20000);
@@ -238,7 +243,18 @@ function seekMotion(t){
  let hi=fs.findIndex(f=>f.t>=motionTime);if(hi<0)hi=fs.length-1;const lo=Math.max(0,hi-1),span=fs[hi].t-fs[lo].t,alpha=span>0?(motionTime-fs[lo].t)/span:0;
  for(const [name,value] of Object.entries(selected.initial_pose))if(jointMap.has(name))angles.set(name,value);
  motion.joint_order.forEach((name,i)=>{if(jointMap.has(name))angles.set(name,fs[lo].position[i]*(1-alpha)+fs[hi].position[i]*alpha);});
- applyCouplings();updateBodies();$('action-time').value=motionTime;$('action-clock').textContent=motionTime.toFixed(2)+' / '+selected.duration_s+' s';
+ applyCouplings();updateBodies();
+ if(motion.root_frame==='pelvis_world_wxyz'){
+  const p=fs[lo].base_pose.map((v,i)=>v*(1-alpha)+fs[hi].base_pose[i]*alpha),origin=fs[0].base_pose;
+  const a=fs[lo].base_pose,b=fs[hi].base_pose;
+  const rotation=new THREE.Quaternion(a[4],a[5],a[6],a[3]).normalize().slerp(new THREE.Quaternion(b[4],b[5],b[6],b[3]).normalize(),alpha);
+  const body=activeModel.bodies.find(b=>b.name==='pelvis');
+  if(body){const g=bodyGroups.get(body.id);g.matrix.compose(new THREE.Vector3(p[0]-origin[0],p[1]-origin[1],p[2]),rotation,new THREE.Vector3(1,1,1));g.matrixWorldNeedsUpdate=true;modelRoot.updateMatrixWorld(true);}
+  const x=p[0]-origin[0],y=p[1]-origin[1],z=p[2]-(body?.pos[2]||0),last=modelRoot.userData.motionXYZ||[0,0,0];
+  const delta=new THREE.Vector3(x-last[0],y-last[1],z-last[2]);camera.position.add(delta);controls.target.add(delta);keyLight.position.add(delta);keyLight.target.position.add(delta);fill.position.add(delta);fill.target.position.add(delta);modelRoot.userData.motionXYZ=[x,y,z];
+  if(ground)ground.position.z=-.002;if(grid)grid.position.z=-.001;
+ }
+ $('action-time').value=motionTime;$('action-clock').textContent=motionTime.toFixed(2)+' / '+selected.duration_s+' s';
 }
 $('action-play').onclick=()=>{if(!motion)return;if(motionTime>=selected.duration_s)seekMotion(0);playing=!playing;$('action-play').textContent=playing?'暂停':'播放';};
 $('action-reset').onclick=()=>{playing=false;$('action-play').textContent='播放';seekMotion(0);};

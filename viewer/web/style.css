@@ -4,3 +4,5 @@
 .hand-preset-buttons{display:flex;gap:10px;margin:12px 0}.hand-preset-buttons button{border:1px solid #b7c5b5;border-radius:7px;background:#f3f5ee;color:#345541;padding:8px 22px;cursor:pointer;font:inherit}.hand-preset-buttons button:hover{background:#e4ebdf}.hand-closure-label{display:flex;align-items:center;gap:10px;font-size:12px}.hand-closure-label input{flex:1;min-width:0}.hand-closure-label output{min-width:36px}
 
 .hand-preset-note{font-size:11px;line-height:1.6;color:#7d8878;margin:12px 0}
+
+#motion-filters{padding:10px 16px;font-size:12px} #motion-filter{width:100%;margin:8px 0;padding:8px} #controller-records{margin:8px 0;max-height:230px;overflow:auto}.policy-record{padding:8px;border-bottom:1px solid #ddd}.policy-record code{overflow-wrap:anywhere;font-size:10px}.policy-record p{line-height:1.5;color:#596359}

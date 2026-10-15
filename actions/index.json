@@ -25,6 +25,36 @@
       "id": "fq:actions/salute",
       "version": "0.1.0",
       "manifest": "actions/g1/salute/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_walk",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_walk/asset.json"
+    },
+    {
+      "id": "fq:actions/sonic_walk_mirror",
+      "version": "0.1.0",
+      "manifest": "actions/g1/sonic_walk_mirror/asset.json"
+    },
+    {
+      "id": "fq:actions/walk_7100_020",
+      "version": "0.1.0",
+      "manifest": "actions/g1/walk_7100_020/asset.json"
+    },
+    {
+      "id": "fq:actions/walk_7100_030",
+      "version": "0.1.0",
+      "manifest": "actions/g1/walk_7100_030/asset.json"
+    },
+    {
+      "id": "fq:actions/turn_7100_left",
+      "version": "0.1.0",
+      "manifest": "actions/g1/turn_7100_left/asset.json"
+    },
+    {
+      "id": "fq:actions/turn_7100_right",
+      "version": "0.1.0",
+      "manifest": "actions/g1/turn_7100_right/asset.json"
     }
   ]
 }

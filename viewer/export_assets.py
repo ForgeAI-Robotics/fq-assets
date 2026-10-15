@@ -173,6 +173,7 @@ def main():
             trajectory=json.loads((root/meta['trajectory']).read_text());dump(dest/'trajectory.json',trajectory)
             info={**robot,**meta,'slug':slug,'manifest_path':item['manifest'],'kind_label':'动作','subtitle':meta['validation_status'],'model_url':robot['model_url'],'thumbnail':robot['thumbnail'],'trajectory_url':f'/data/{args.commit}/{slug}/trajectory.json','pose_profiles':[]}
             dump(dest/'properties.json',info);catalog.append(info)
-    dump(out/'catalog.json',{'main_commit':args.commit,'assets':catalog})
+    controllers=json.loads((root/'profiles/controllers/locomotion/index.json').read_text()) if (root/'profiles/controllers/locomotion/index.json').exists() else None
+    dump(out/'catalog.json',{'main_commit':args.commit,'assets':catalog,'locomotion_controllers':controllers})
 
 if __name__=='__main__':main()

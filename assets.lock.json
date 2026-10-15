@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.5.1",
+  "release": "0.6.0",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
@@ -32,6 +32,12 @@
     "fq:actions/safe_stand": "0.1.0",
     "fq:actions/wave": "0.1.0",
     "fq:actions/handshake": "0.1.0",
-    "fq:actions/salute": "0.1.0"
+    "fq:actions/salute": "0.1.0",
+    "fq:actions/sonic_walk": "0.1.0",
+    "fq:actions/sonic_walk_mirror": "0.1.0",
+    "fq:actions/walk_7100_020": "0.1.0",
+    "fq:actions/walk_7100_030": "0.1.0",
+    "fq:actions/turn_7100_left": "0.1.0",
+    "fq:actions/turn_7100_right": "0.1.0"
   }
 }
