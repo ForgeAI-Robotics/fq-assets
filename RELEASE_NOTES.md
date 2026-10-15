@@ -1,3 +1,7 @@
+## v0.5.0 — Actions and SONIC stand resources
+
+Add Object / Scene / Action navigation and G1 timeline playback for stand, safe-stand, wave, handshake and salute. Preserve old-G1 stand gains, joint mappings, action scales, INIT recipe, 64-value safe token, observation configuration and policy hashes. No policy binaries or robot launchers are published. Matched-decoder CPU MuJoCo stand test completes 10 s with deterministic replay; wrists are at the sides, not held together in front of the chest. Gesture timestamps are uniformly inferred from source task durations. All five trajectories pass named-joint/limit checks on O6 and O7. Browser previews are kinematic; gestures are not dynamic-balance or hardware validated. Model geometry, physics and ongoing task locks remain unchanged.
+
 ## v0.4.1 — old G1 O7 pose configuration
 
 Use the user-selected old G1 left O7 open thumb_rotation protocol value 83 (previously 170). Preserve previous values and provenance. Closed and light-switch poses, robot geometry and dynamics unchanged. Readback only; hardware execution not validated. Existing SIMPLE locks remain unchanged.

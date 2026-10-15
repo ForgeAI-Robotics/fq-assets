@@ -1,0 +1,22 @@
+{
+  "scope": "CPU MuJoCo free-base G1+O6, matched SONIC decoder, constant safe-stand token; no real robot control",
+  "frames": 500,
+  "duration_s": 10.0,
+  "stop": "completed",
+  "max_tilt_rad": 0.10653559014788219,
+  "replay_max_joint_error_rad": 0.0,
+  "final_wrists_in_torso_m": {
+    "left": [
+      0.0022678368558729273,
+      0.23836762013035162,
+      -0.11373448872472863
+    ],
+    "right": [
+      -0.002692903042965599,
+      -0.24946097977636722,
+      -0.11076205753582878
+    ]
+  },
+  "policy_sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
+  "initialization": "29-joint default pose, feet placed on isolated plane; not full real-robot INIT state machine"
+}

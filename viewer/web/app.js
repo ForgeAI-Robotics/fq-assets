@@ -6,8 +6,9 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const deg=r=>r*180/Math.PI, rad=d=>d*Math.PI/180;
 const jointLabels={handle_right_hinge:'右提手',handle_left_hinge:'左提手',refrigerator_left_hinge:'左门',refrigerator_right_hinge:'右门',refrigerator_mullion_hinge:'中间竖梁'};
 const label=j=>jointLabels[j]||j.replace(/^left_/, '左 ').replace(/^right_/, '右 ').replace(/o[67]_/, '').replace(/thumb/g,'拇指').replace(/index/g,'食指').replace(/middle/g,'中指').replace(/ring/g,'无名指').replace(/pinky/g,'小指').replace(/hip/g,'髋').replace(/knee/g,'膝').replace(/ankle/g,'踝').replace(/waist/g,'腰').replace(/shoulder/g,'肩').replace(/elbow/g,'肘').replace(/wrist/g,'腕').replace(/_joint$/,'').replace(/_/g,' ');
-const isRobot=a=>['robot','end_effector'].includes(a?.kind);
+const isRobot=a=>['robot','end_effector','action'].includes(a?.kind);
 const independentDof=a=>a.joints.filter(j=>!j.coupling).length;
+let motion=null,playing=false,motionTime=0,previousFrame=0;
 let catalog=null,selected=null,category='object',loadId=0,activeModel=null,modelRoot=null;
 let bodyGroups=new Map(),jointMap=new Map(),angles=new Map(),pickables=[],colliders=[],cutaways=[],jointMode=false;
 let showCollision=false,cutaway=true,ground=null,grid=null,drag=null,toastTimer;
@@ -34,6 +35,10 @@ function row(key,value,cls=''){return `<div class="prop-row"><span>${esc(key)}</
 function section(title,body){return `<section class="prop-section"><h3>${esc(title)}</h3>${body}</section>`;}
 function provenance(a){if(a.kind==='camera')return 'RealSense 上游 · FQ 适配';if(isRobot(a))return 'FQ 适配 · '+(a.kind==='robot'?'Unitree / LinkerHand':'LinkerHand');if(a.origin==='simple')return 'SIMPLE 原生';return (a.upstream_origin||'').includes('SimFoundry')?'FQ 派生 · SimFoundry':'FQ 自建';}
 function showProperties(a){
+  if(a.kind==='action'){
+    $('properties-content').innerHTML=section('动作信息',row('动作版本','v'+esc(a.version))+row('预览模型','G1 + O6')+row('时长',esc(a.duration_s)+' s')+row('验证状态',esc(a.validation_status))+row('整体发布',esc(catalog.latest_release.tag)))+section('来源与限制',`<p class="property-note">${a.limitations.map(esc).join('<br>')}</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(JSON.stringify(a.source,null,2))}</pre><a target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看动作清单</a>`);
+    return;
+  }
   if(a.kind==='material'){
     $('properties-content').innerHTML=section('材质/纹理',row('名称',esc(a.name))+row('来源',esc(provenance(a)))+row('分辨率',a.resolution.join(' × '))+row('色彩空间',esc(a.color_space))+row('贴图通道','基础颜色 · 法线/粗糙度贴图暂缺')+row('实际重复尺寸',a.tile_size_m?`${a.tile_size_m} m（估计）`:'未记录')+row('用途',a.usage_status==='in_use'?'基准场景使用中':'备用，未绑定基准场景')+'<p class="property-note">视觉外观不包含质量或接触摩擦。预览光照为近似效果。</p>')+section('版本与来源',row('物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)))+row('最新库发布',esc(catalog.latest_release.tag))+`<p class="property-note">${esc(a.upstream_origin)}</p><div class="asset-id">${esc(a.id)}</div><p class="property-note">引用：${esc(a.used_by.join(', ')||'暂无')}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看材质清单 ↗</a>`);
     return;
@@ -78,11 +83,11 @@ function showProperties(a){
 function renderList(){
   if(!catalog)return;
   const q=$('search').value.trim().toLowerCase(),origin=$('origin-filter').value,type=$('type-filter').value;
-  const items=catalog.assets.filter(a=>(category==='scene'?a.kind==='scene':a.kind!=='scene')&&(!q||`${a.name} ${a.id} ${a.subtitle}`.toLowerCase().includes(q))&&(origin==='all'||a.origin===origin)&&(category==='scene'||type==='all'||a.kind===type));
+  const items=catalog.assets.filter(a=>(category==='object'?!['scene','action'].includes(a.kind):a.kind===category)&&(!q||`${a.name} ${a.id} ${a.subtitle}`.toLowerCase().includes(q))&&(origin==='all'||a.origin===origin)&&(category!=='object'||type==='all'||a.kind===type));
   $('asset-list').innerHTML=items.length?items.map(a=>`<button class="asset-card ${selected?.id===a.id?'active':''}" data-slug="${esc(a.slug)}" aria-pressed="${selected?.id===a.id}" aria-label="查看${esc(a.name)}"><span class="asset-thumb"><img src="${a.thumbnail}" alt="" loading="lazy"></span><span class="asset-card-info"><div class="asset-card-name">${esc(a.name)}</div><div class="asset-card-meta"><span>v${esc(a.version)}</span><span class="source-badge">${esc(a.origin.toUpperCase())}</span></div></span></button>`).join(''):'<div class="empty-note">没有匹配的资产。<br>尝试其他关键词或筛选条件。</div>';
   document.querySelectorAll('.asset-card').forEach(b=>b.onclick=()=>selectAsset(b.dataset.slug));
 }
-function setCategory(kind){category=kind;document.querySelectorAll('.tabs button').forEach(b=>{b.classList.toggle('active',b.dataset.kind===kind);b.setAttribute('aria-selected',b.dataset.kind===kind);});$('type-filter').disabled=kind==='scene';renderList();}
+function setCategory(kind){category=kind;document.querySelectorAll('.tabs button').forEach(b=>{b.classList.toggle('active',b.dataset.kind===kind);b.setAttribute('aria-selected',b.dataset.kind===kind);});$('type-filter').disabled=kind!=='object';renderList();}
 async function refresh(){
   try{
     const res=await fetch('/api/catalog',{cache:'no-store'});if(!res.ok)throw Error('连接失败');const next=await res.json();
@@ -93,7 +98,7 @@ async function refresh(){
     $('sync-text').textContent=next.sync.error?'同步暂不可用':next.sync.syncing?'main 同步中':'main 已同步';
     $('sync-text').title=next.sync.error||`每 ${next.sync_interval_seconds} 秒同步 main`;
     $('checked-at').textContent=next.sync.last_success?`已同步 ${new Date(next.sync.last_success).toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})} · 每分钟更新`:'正在准备首次快照';
-    $('object-count').textContent=next.assets.filter(a=>a.kind!=='scene').length;$('scene-count').textContent=next.assets.filter(a=>a.kind==='scene').length;$('total').textContent=next.assets.length;
+    $('object-count').textContent=next.assets.filter(a=>!['scene','action'].includes(a.kind)).length;$('scene-count').textContent=next.assets.filter(a=>a.kind==='scene').length;$('total').textContent=next.assets.length;$('action-count').textContent=next.assets.filter(a=>a.kind==='action').length;
     renderList();
     if(next.assets.length&&(!selected||changed)){
       const requested=new URL(location.href).searchParams.get('asset');
@@ -176,6 +181,7 @@ function applyCouplings(){
 function setJoint(jname,value){const j=jointMap.get(jname);if(!j)return;angles.set(jname,THREE.MathUtils.clamp(value,...(j.control_range||j.range)));applyCouplings();updateBodies();updateJointUI();}
 function updateJointUI(){for(const [name,value] of angles){const row=document.querySelector(`[data-joint="${CSS.escape(name)}"]`);if(row){row.querySelector('input').value=deg(value);row.querySelector('output').textContent=`${fmt(deg(value),1)}°`;row.classList.toggle('active',drag?.name===name);}}}
 function renderJoints(){
+  if(selected?.kind==='action'){$('joint-panel').hidden=true;return;}
   $('joint-panel').hidden=!selected.joints.length;$('joint-count').textContent=isRobot(selected)?`${independentDof(selected)} 个独立 / ${selected.joints.length} 个转动关节`:`${selected.joints.length} 个`;
   const group=$('joint-group').value;
   const controls=selected.joints.filter(j=>!j.coupling&&(!isRobot(selected)||group==='all'||(group==='left'?j.name.startsWith('left_'):group==='right'?j.name.startsWith('right_'):!j.name.startsWith('left_')&&!j.name.startsWith('right_'))));
@@ -184,15 +190,15 @@ function renderJoints(){
 }
 function setMode(enabled){jointMode=enabled&&!!selected?.joints.length;$('joint-mode').classList.toggle('active',jointMode);$('orbit-mode').classList.toggle('active',!jointMode);$('joint-mode').setAttribute('aria-pressed',jointMode);$('orbit-mode').setAttribute('aria-pressed',!jointMode);$('interaction-hint').textContent=jointMode?'拖动门 / 提手调整 · 拖动空白旋转':'拖动旋转 · 滚轮缩放 · 右键平移';}
 async function selectAsset(slug){
-  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;const token=++loadId;setCategory(a.kind==='scene'?'scene':'object');
+  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;playing=false;motion=null;$('action-panel').hidden=a.kind!=='action';$('action-play').textContent='播放';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
-  $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':'物体'} / ${a.kind_label}`;
+  $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':a.kind==='action'?'动作':'物体'} / ${a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
   $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isRobot(a)?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'在模型上拖动门 / 提手，或使用滑块。角度受模型限位约束，操作不会写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
   if(a.kind==='scene'){$('scene-info').innerHTML='<strong>固定基准 · 办公场地</strong><p>测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。</p><p>保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。</p><div class="scene-chips">'+(a.dependencies||[]).map(id=>{const dep=catalog.assets.find(x=>x.id===id);return dep?`<button data-asset="${esc(dep.slug)}">${esc(dep.name)} · v${esc(dep.version)} ↗</button>`:'';}).join('')+'</div>';document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
   $('material-controls').hidden=a.kind!=='material';$('collision-toggle').hidden=a.kind==='material';$('material-repeat').value=1;$('material-repeat-value').textContent='1 ×';
   showProperties(a);renderList();setMode(!!a.joints.length&&!isRobot(a));$('viewport').dataset.ready='false';$('loading').hidden=false;$('loading').querySelector('strong').textContent=`正在加载${a.name}`;$('viewer-error').hidden=true;
-  try{const url=new URL(a.model_url,location.origin);const res=await fetch(url);if(!res.ok)throw Error('模型文件暂不可用');const data=await res.json();if(token!==loadId)return;await buildModel(data,url,token);}
+  try{const url=new URL(a.model_url,location.origin);const res=await fetch(url);if(!res.ok)throw Error('模型文件暂不可用');const data=await res.json();if(token!==loadId)return;await buildModel(data,url,token);if(a.kind==='action'&&token===loadId){const response=await fetch(a.trajectory_url);if(!response.ok)throw Error('动作数据加载失败');const loaded=await response.json();if(token!==loadId)return;motion=loaded;$('action-time').max=a.duration_s;seekMotion(0);}}
   catch(e){if(token!==loadId)return;$('loading').hidden=true;$('viewer-error').hidden=false;$('viewer-error').textContent=`模型加载失败：${e.message}。请刷新后重试。`;console.error(e);}
 }
 
@@ -217,8 +223,23 @@ $('collision-toggle').onclick=()=>{showCollision=!showCollision;colliders.forEac
 $('cutaway-toggle').onclick=()=>{cutaway=!cutaway;applyCutaway();};
 $('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('资产链接已复制');}catch{const input=document.createElement('input');input.value=location.href;document.body.append(input);input.select();const ok=document.execCommand('copy');input.remove();toast(ok?'资产链接已复制':'请复制浏览器地址栏中的链接');}};
 $('refresh').onclick=()=>{refresh();toast('正在获取最新同步结果');};
-document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{setCategory(b.dataset.kind);const first=catalog?.assets.find(a=>category==='scene'?a.kind==='scene':a.kind!=='scene');if(first&&(selected?.kind==='scene')!==(category==='scene'))selectAsset(first.slug);});
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{setCategory(b.dataset.kind);const first=catalog?.assets.find(a=>category==='object'?!['scene','action'].includes(a.kind):a.kind===category);if(first)selectAsset(first.slug);});
 $('joint-group').onchange=renderJoints;
 $('search').oninput=renderList;$('origin-filter').onchange=renderList;$('type-filter').onchange=renderList;
 $('material-repeat').oninput=()=>{const n=Number($('material-repeat').value);$('material-repeat-value').textContent=`${n} ×`;modelRoot?.traverse(o=>{if(o.material?.map)o.material.map.repeat.set(n,n);});};
 await refresh();setInterval(refresh,20000);
+
+
+function seekMotion(t){
+ if(!motion||selected?.kind!=='action')return;
+ motionTime=Math.max(0,Math.min(selected.duration_s,t));const fs=motion.frames;
+ let hi=fs.findIndex(f=>f.t>=motionTime);if(hi<0)hi=fs.length-1;const lo=Math.max(0,hi-1),span=fs[hi].t-fs[lo].t,alpha=span>0?(motionTime-fs[lo].t)/span:0;
+ for(const [name,value] of Object.entries(selected.initial_pose))if(jointMap.has(name))angles.set(name,value);
+ motion.joint_order.forEach((name,i)=>{if(jointMap.has(name))angles.set(name,fs[lo].position[i]*(1-alpha)+fs[hi].position[i]*alpha);});
+ applyCouplings();updateBodies();$('action-time').value=motionTime;$('action-clock').textContent=motionTime.toFixed(2)+' / '+selected.duration_s+' s';
+}
+$('action-play').onclick=()=>{if(!motion)return;if(motionTime>=selected.duration_s)seekMotion(0);playing=!playing;$('action-play').textContent=playing?'暂停':'播放';};
+$('action-reset').onclick=()=>{playing=false;$('action-play').textContent='播放';seekMotion(0);};
+$('action-time').oninput=()=>{playing=false;$('action-play').textContent='播放';seekMotion(Number($('action-time').value));};
+function animateMotion(now){if(playing&&motion){seekMotion(motionTime+Math.min((now-previousFrame)/1000,.1));if(motionTime>=selected.duration_s){playing=false;$('action-play').textContent='播放';}}previousFrame=now;requestAnimationFrame(animateMotion);}
+requestAnimationFrame(animateMotion);

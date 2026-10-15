@@ -165,6 +165,14 @@ def main():
         dump(dest/'model.json',model);dump(dest/'properties.json',info)
         catalog.append(info)
         print(slug,len(binary),len(joints),flush=True)
+    if (root/'actions/index.json').exists():
+        for item in json.loads((root/'actions/index.json').read_text())['actions']:
+            meta=json.loads((root/item['manifest']).read_text())
+            robot=next(a for a in catalog if a['id']==meta['default_robot'])
+            slug=meta['id'].split('/')[-1];dest=out/slug;dest.mkdir(exist_ok=True)
+            trajectory=json.loads((root/meta['trajectory']).read_text());dump(dest/'trajectory.json',trajectory)
+            info={**robot,**meta,'slug':slug,'manifest_path':item['manifest'],'kind_label':'动作','subtitle':meta['validation_status'],'model_url':robot['model_url'],'thumbnail':robot['thumbnail'],'trajectory_url':f'/data/{args.commit}/{slug}/trajectory.json','pose_profiles':[]}
+            dump(dest/'properties.json',info);catalog.append(info)
     dump(out/'catalog.json',{'main_commit':args.commit,'assets':catalog})
 
 if __name__=='__main__':main()

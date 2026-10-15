@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "fq:actions/safe_stand",
+  "version": "0.1.0",
+  "kind": "action",
+  "name": "G1 · safe-stand token",
+  "origin": "fq",
+  "upstream_origin": "旧 G1 部署文件；FQ 整理，非全部 FQ 原创",
+  "default_robot": "fq:robots/g1_o6",
+  "compatible_asset_versions": {
+    "fq:robots/g1_o6": "0.1.4",
+    "fq:robots/g1_o7": "0.1.3"
+  },
+  "duration_s": 9.98,
+  "trajectory": "actions/g1/safe_stand/trajectory.json",
+  "initial_pose": {
+    "left_hip_pitch_joint": -0.312,
+    "left_hip_roll_joint": 0.0,
+    "left_hip_yaw_joint": 0.0,
+    "left_knee_joint": 0.669,
+    "left_ankle_pitch_joint": -0.363,
+    "left_ankle_roll_joint": 0.0,
+    "right_hip_pitch_joint": -0.312,
+    "right_hip_roll_joint": 0.0,
+    "right_hip_yaw_joint": 0.0,
+    "right_knee_joint": 0.669,
+    "right_ankle_pitch_joint": -0.363,
+    "right_ankle_roll_joint": 0.0,
+    "waist_yaw_joint": 0.0,
+    "waist_roll_joint": 0.0,
+    "waist_pitch_joint": 0.0,
+    "left_shoulder_pitch_joint": 0.2,
+    "left_shoulder_roll_joint": 0.2,
+    "left_shoulder_yaw_joint": 0.0,
+    "left_elbow_joint": 0.6,
+    "left_wrist_roll_joint": 0.0,
+    "left_wrist_pitch_joint": 0.0,
+    "left_wrist_yaw_joint": 0.0,
+    "right_shoulder_pitch_joint": 0.2,
+    "right_shoulder_roll_joint": -0.2,
+    "right_shoulder_yaw_joint": 0.0,
+    "right_elbow_joint": 0.6,
+    "right_wrist_roll_joint": 0.0,
+    "right_wrist_pitch_joint": 0.0,
+    "right_wrist_yaw_joint": 0.0
+  },
+  "source": {
+    "source_host": "old-g1",
+    "path": "/home/dev/sonic/gear_sonic_deploy/policy/sonic_v1_1/safe_stand_token.txt",
+    "sha256": "46e77ced84a434956d70f6265d3871cda916e6b79c9c3780b0c35c8fcb07c89a",
+    "captured_at": "2026-10-15"
+  },
+  "validation_status": "G1+O6 隔离仿真10秒通过；重复回放误差0",
+  "limitations": [
+    "使用哈希匹配的SONIC v1.1解码器，双腕位于躯干两侧偏下，不是双手在胸前。",
+    "页面播放已记录的关节轨迹；不在浏览器执行策略。",
+    "O7仅供兼容关节姿态预览，未完成O7的token动态验证；实机未验证。"
+  ],
+  "playback": "kinematic_joint_preview",
+  "controller_bundle": "profiles/controllers/sonic_stand/stand.json"
+}

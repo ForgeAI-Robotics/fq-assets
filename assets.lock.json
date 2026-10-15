@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.4.1",
+  "release": "0.5.0",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
@@ -26,5 +26,12 @@
     "fq:poses/o6_right_task": "0.1.0",
     "fq:poses/o7_left_task": "0.1.1",
     "fq:poses/g1_beyondmimic_initial": "0.1.0"
+  },
+  "actions": {
+    "fq:actions/stand_initial": "0.1.0",
+    "fq:actions/safe_stand": "0.1.0",
+    "fq:actions/wave": "0.1.0",
+    "fq:actions/handshake": "0.1.0",
+    "fq:actions/salute": "0.1.0"
   }
 }

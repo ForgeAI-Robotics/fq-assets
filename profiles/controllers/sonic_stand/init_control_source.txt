@@ -1,0 +1,44 @@
+     * Called at 50 Hz until the ramp completes, at which point the state machine
+     * transitions to WAIT_FOR_CONTROL and the Dex3 hands open.
+     * @return True once LowState data is available; false if not yet ready.
+     */
+    bool InitControl() {
+      auto low_state_data = low_state_buffer_.GetDataWithTime();
+      const std::shared_ptr<const LowState_> ls = low_state_data.data;
+      if (!ls) {
+        return false;
+      }
+      MotorCommand motor_command_tmp;
+      for (int i = 0; i < G1_NUM_MOTOR; ++i) {
+        motor_command_tmp.tau_ff.at(i) = 0.0;
+        motor_command_tmp.q_target.at(i) = static_cast<float>(default_angles[i]);
+        motor_command_tmp.dq_target.at(i) = 0.0;
+        motor_command_tmp.kp.at(i) = kps[i];
+        motor_command_tmp.kd.at(i) = kds[i];
+      }
+      time_ += control_dt_;
+      if (time_ < duration_) {
+        for (int i = 0; i < G1_NUM_MOTOR; i++) {
+          double ratio = std::clamp(time_ / duration_, 0.0, 1.0);
+          double current_pos = ls->motor_state()[i].q();
+          motor_command_tmp.q_target.at(i) =
+              static_cast<float>(current_pos * (1.0 - ratio) + default_angles[i] * ratio);
+        }
+        dex3_hands_.close(true);
+        dex3_hands_.close(false);
+      } else {
+        program_state_ = ProgramState::WAIT_FOR_CONTROL;
+        dex3_hands_.open(true);
+        dex3_hands_.open(false);
+        std::cout << "Init Done" << std::endl;
+      }
+      motor_command_buffer_.SetData(motor_command_tmp);
+      return true;
+    }
+
+    /// Check for valid LowState data and recent updates; if invalid, transition to ERROR state.
+    bool CheckSafety() {
+      auto low_state_data = low_state_buffer_.GetDataWithTime();
+      const std::shared_ptr<const LowState_> ls = low_state_data.data;
+      if (!ls) {
+        std::cout << "[ERROR] LowState data is not available in the middle of the control loop!" << std::endl;

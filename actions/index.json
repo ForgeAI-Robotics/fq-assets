@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "actions": [
+    {
+      "id": "fq:actions/stand_initial",
+      "version": "0.1.0",
+      "manifest": "actions/g1/stand_initial/asset.json"
+    },
+    {
+      "id": "fq:actions/safe_stand",
+      "version": "0.1.0",
+      "manifest": "actions/g1/safe_stand/asset.json"
+    },
+    {
+      "id": "fq:actions/wave",
+      "version": "0.1.0",
+      "manifest": "actions/g1/wave/asset.json"
+    },
+    {
+      "id": "fq:actions/handshake",
+      "version": "0.1.0",
+      "manifest": "actions/g1/handshake/asset.json"
+    },
+    {
+      "id": "fq:actions/salute",
+      "version": "0.1.0",
+      "manifest": "actions/g1/salute/asset.json"
+    }
+  ]
+}

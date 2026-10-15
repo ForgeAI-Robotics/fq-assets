@@ -1,0 +1,63 @@
+{
+  "safe_stand_token.txt": {
+    "source_host": "old-g1",
+    "path": "/home/dev/sonic/gear_sonic_deploy/policy/sonic_v1_1/safe_stand_token.txt",
+    "sha256": "46e77ced84a434956d70f6265d3871cda916e6b79c9c3780b0c35c8fcb07c89a",
+    "captured_at": "2026-10-15"
+  },
+  "observation_config.yaml": {
+    "source_host": "old-g1",
+    "path": "/home/dev/sonic/gear_sonic_deploy/policy/sonic_v1_1/observation_config.yaml",
+    "sha256": "4a67713b310932e50aca81f19188c8d76013148e98b15c8b5bbea995f12e59f0",
+    "captured_at": "2026-10-15"
+  },
+  "policy_parameters.hpp": {
+    "source_host": "old-g1",
+    "path": "/home/dev/sonic/gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/policy_parameters.hpp",
+    "sha256": "5c9256f72c11565f708da65303231e7447d655c3232d87fe0110709e74fe1b37",
+    "captured_at": "2026-10-15"
+  },
+  "runtime.cpp": {
+    "source_host": "old-g1",
+    "path": "/home/dev/sonic/gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/g1_deploy_onnx_ref.cpp",
+    "sha256": "010a62637fc847fb73cad24e01b76c38d2650d7f41b5c19440f53b5b05558fc8",
+    "captured_at": "2026-10-15"
+  },
+  "wave.txt": {
+    "source_host": "old-g1",
+    "path": "/opt/zyhy/resource/motion/sayhi.txt",
+    "sha256": "c53fa59c02f4cfa4aa2fb6bc6747df45fe1fa91dbc70e1ebd7f300254c42fea8",
+    "captured_at": "2026-10-15"
+  },
+  "handshake.txt": {
+    "source_host": "old-g1",
+    "path": "/opt/zyhy/resource/motion/shakehand-sh.txt",
+    "sha256": "86828322cbc125fd7e0a45ec8ee4d2a941bb23806148c6a7679ccba32f793c05",
+    "captured_at": "2026-10-15"
+  },
+  "salute.txt": {
+    "source_host": "old-g1",
+    "path": "/opt/zyhy/resource/motion/salute.txt",
+    "sha256": "8ad2a91869a7402ee372a4f4f8607c6c275c4e4172607383f2e79388f30d1351",
+    "captured_at": "2026-10-15"
+  },
+  "wave.json": {
+    "source_host": "old-g1",
+    "path": "/opt/zyhy/resource/motion/打招呼.json",
+    "sha256": "5e2e114e912e84a782d08684cdec6e7a603ca109e14ceaff9a293a046d7c1aab",
+    "captured_at": "2026-10-15"
+  },
+  "handshake.json": {
+    "source_host": "old-g1",
+    "path": "/opt/zyhy/resource/motion/握手.json",
+    "sha256": "e25c2fef643f9bdf533350e22be506a50cfd981586a32aa239e593fd5f2bbcef",
+    "captured_at": "2026-10-15"
+  },
+  "salute.json": {
+    "source_host": "old-g1",
+    "path": "/opt/zyhy/resource/motion/敬礼.json",
+    "sha256": "2ecf68ce33188c342b7d957d311462d3199cb52519010449c35a00a3a8df58ca",
+    "captured_at": "2026-10-15"
+  },
+  "policy_hashes": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509  /home/dev/sonic/gear_sonic_deploy/policy/sonic_v1_1/model_decoder.onnx\nfb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae  /home/dev/sonic/gear_sonic_deploy/policy/sonic_v1_1/model_encoder.onnx\n"
+}
