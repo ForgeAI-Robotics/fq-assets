@@ -1,0 +1,7 @@
+{
+  "collision_geoms_unchanged": 1084,
+  "physics_steps": 1000,
+  "qpos_max_difference": 0.0,
+  "window_visual_prims": 11,
+  "baseline_version": "0.1.13"
+}

@@ -1,0 +1,87 @@
+{
+  "asset_commit": "d1a512cb7a6a009ad373b093f1e5f8f1eee5eb11",
+  "baseline_version": "0.1.12",
+  "fridge_version": "0.1.8",
+  "trace_sha256": "8832e70ea3a545fe8d040ba333401616586b83855d3580a68f70000216b6919c",
+  "camera_position": [
+    13.9,
+    8.7,
+    1.7
+  ],
+  "camera_target": [
+    15.95,
+    11.6,
+    1.2
+  ],
+  "auto_exposure": false,
+  "prescribed_visual_replay": true,
+  "physics_stepped": false,
+  "windows": {
+    "corner_y": 12.340909,
+    "wall_x": 17.1022727,
+    "window_y_ranges": [
+      [
+        10.040909,
+        11.540909
+      ],
+      [
+        7.740909,
+        9.240909
+      ]
+    ],
+    "height_m": 2.7,
+    "opening_width_m": 1.5,
+    "frame_width_m": 0.035,
+    "collision": "original_closed_facade_preserved",
+    "glazing": "ideal_transmission_no_rendered_pane",
+    "source": "user_dimensions_2026-10-15"
+  },
+  "modes": {
+    "off": {
+      "schema_version": 1,
+      "seed": 20261015,
+      "episode": "fridge-preview",
+      "mode": "off",
+      "yaw_deg": -28.523918795301633,
+      "elevation_deg": 46.74712071768761,
+      "intensity": 0,
+      "temperature_K": 6674.914466946424,
+      "angle_deg": 0.53,
+      "status": "simulation_parameters_not_measured",
+      "glazing": "ideal_transmission",
+      "sha256": "ce9f35633b7067e5d606af8649338d17208d2ac31b84d078da03772f5beaaeac",
+      "frames": 29
+    },
+    "soft": {
+      "schema_version": 1,
+      "seed": 20261015,
+      "episode": "fridge-preview",
+      "mode": "soft",
+      "yaw_deg": -28.523918795301633,
+      "elevation_deg": 46.74712071768761,
+      "intensity": 783.8980239094369,
+      "temperature_K": 6494.942471697713,
+      "angle_deg": 12,
+      "status": "simulation_parameters_not_measured",
+      "glazing": "ideal_transmission",
+      "sha256": "c668633d6dc8e556521edbd0c1700e40f9296165f4be6315c63e04a0edc9fcca",
+      "frames": 29
+    },
+    "sun": {
+      "schema_version": 1,
+      "seed": 20261015,
+      "episode": "fridge-preview",
+      "mode": "sun",
+      "yaw_deg": -28.523918795301633,
+      "elevation_deg": 46.74712071768761,
+      "intensity": 3105.2532812920854,
+      "temperature_K": 6494.942471697713,
+      "angle_deg": 0.53,
+      "status": "simulation_parameters_not_measured",
+      "glazing": "ideal_transmission",
+      "sha256": "164f42ddeb1457c8add665380c75c4c9468da44b2d406f7639ab408fe598c348",
+      "frames": 29
+    }
+  },
+  "max_body_pose_error_m": 0.0
+}

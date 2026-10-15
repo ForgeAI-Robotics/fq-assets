@@ -1,0 +1,21 @@
+{
+  "corner_y": 12.340909,
+  "wall_x": 17.1022727,
+  "window_y_ranges": [
+    [
+      10.040909,
+      11.540909
+    ],
+    [
+      7.740909,
+      9.240909
+    ]
+  ],
+  "height_m": 2.7,
+  "opening_width_m": 1.5,
+  "frame_width_m": 0.035,
+  "collision": "original_closed_facade_preserved",
+  "glazing": "ideal_transmission_no_rendered_pane",
+  "source": "user_dimensions_2026-10-15",
+  "status": "user_confirmed_layout_simulation_glazing"
+}

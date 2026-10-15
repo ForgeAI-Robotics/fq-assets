@@ -2,7 +2,7 @@
 
 FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、标定与来源记录。资产采用米制、Z 轴向上；MuJoCo 四元数为 `wxyz`。
 
-当前发布版本为 **[v0.7.2](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.7.2)**。本次更新冰箱 **0.1.8** 和办公基准场景 **0.1.12**。各资产版本以对应 `asset.json` 为准，发布清单见 `assets.lock.json`；变更记录见 [RELEASE_NOTES.md](RELEASE_NOTES.md)。
+当前发布版本为 **[v0.7.3](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.7.3)**。本次更新冰箱 **0.1.8** 和办公基准场景 **0.1.12**。各资产版本以对应 `asset.json` 为准，发布清单见 `assets.lock.json`；变更记录见 [RELEASE_NOTES.md](RELEASE_NOTES.md)。
 
 ## 获取与版本锁定
 
@@ -11,13 +11,13 @@ FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、�
 ```bash
 git clone https://github.com/ForgeAI-Robotics/fq-assets.git
 cd fq-assets
-git checkout v0.7.2
+git checkout v0.7.3
 git lfs pull
 python3 tools/check_integrity.py
 python3 tools/catalog.py
 ```
 
-GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.7.2。
+GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.7.3。
 
 网页展示 `main` 上的当前资产；仿真和回放使用锁定的完整提交及文件校验值。更新 `main` 不应改变已有任务或历史轨迹使用的快照。
 
@@ -56,7 +56,7 @@ python3 tools/catalog.py --resolve fq:articulated/haier_bcd402 --backend usd
 
 ## 冰箱：整体弧面与分区域材质
 
-v0.7.2 的左右上门共用一个横向弧面：左右外侧保持原位，中缝附近向外突出约 **1 cm**；上下边缘平滑收回，内侧结构与铰链保持原位。显示面板和标识随门面调整，下层抽屉未改为弧面。
+v0.7.3 的左右上门共用一个横向弧面：左右外侧保持原位，中缝附近向外突出约 **1 cm**；上下边缘平滑收回，内侧结构与铰链保持原位。显示面板和标识随门面调整，下层抽屉未改为弧面。
 
 分区域材质覆盖银色门板、侧板、塑料内衬、密封条和显示面板。参数见 `assets/fq/haier_bcd402/appearance.json`：USD 和前端使用显式粗糙度、金属度；MuJoCo 使用其材质模型近似。**窗边光照是环境设置，没有烘焙到材质中**，可另行重打光。
 
@@ -72,7 +72,7 @@ v0.7.2 的左右上门共用一个横向弧面：左右外侧保持原位，中�
 
 SIMPLE 已有资产/场景注册、动态物体、物理参数及版本锁定接入。基准场景由任务保持固定；随机参数与资产锁写入回放记录，回放不会自动升级到 `main`。运行时实现和命令以 SIMPLE 项目的 `FQ_INTEGRATION.md` 为准；本仓库 `integrations/` 中的旧接入记录需结合其版本阅读。
 
-v0.7.2 在 4080S 的独立集成目录为 `/home/fangqi/code/SIMPLE-fq-arch-release`，SIMPLE 提交 `5953b863bbc37002e9c4273c0ee997124cefd0c5`，资产锁定 `d1a512cb7a6a009ad373b093f1e5f8f1eee5eb11`。旧任务继续使用原目录和锁定；网页同步新 `main` 不等于运行任务自动换版。
+v0.7.3 在 4080S 的独立集成目录为 `/home/fangqi/code/SIMPLE-fq-arch-release`，SIMPLE 提交 `5953b863bbc37002e9c4273c0ee997124cefd0c5`，资产锁定 `d1a512cb7a6a009ad373b093f1e5f8f1eee5eb11`。旧任务继续使用原目录和锁定；网页同步新 `main` 不等于运行任务自动换版。
 
 ## 验证与边界
 
@@ -83,7 +83,7 @@ python3 -m pip install -r requirements-validation.txt
 python3 tools/validate.py --output /tmp/fq-assets-validation.json
 ```
 
-基础加载检查不能替代针对改动的动力学验证。v0.7.2 已在隔离环境完成：
+基础加载检查不能替代针对改动的动力学验证。v0.7.3 已在隔离环境完成：
 
 - 723 个单门/组合开门姿态，关闭 MuJoCo 父子接触过滤后无穿透。
 - 凸体外表面采样最大误差约 **0.183 mm**；质量、惯量、铰链和阻力参数保持一致。
@@ -94,3 +94,14 @@ python3 tools/validate.py --output /tmp/fq-assets-validation.json
 几何证据见 `validation/fridge_arch_geometry.json`，完整回放证据见上述 SIMPLE 目录的 `evidence/fridge-arch-v072/validation.json`。CPU PhysX 通过不代表 GPU PhysX、真实机器人接触任务或硬件材质已标定。历史 `validation/` 报告仅覆盖各自记录的版本与范围。
 
 `provenance/source_files.json` 描述原始输入，`checksums.json` 校验当前提交中的文件。历史源脚本可能包含机器专用路径，不应直接当成当前构建入口。
+
+## Baseline windows (v0.7.3)
+
+Baseline 0.1.13 adds two 1.5 m windows on the refrigerator right exterior wall.
+From the inside corner: 0.8 m wall, 1.5 m window, 0.8 m wall, 1.5 m window.
+Height follows the existing 2.7 m wall. Frame width is estimated at 35 mm.
+Glazing uses ideal light transmission; glass reflection/refraction is not modeled.
+The closed facade collision remains unchanged. USD, MuJoCo and viewer visuals agree.
+SIMPLE daylight is optional, sampled once per episode and recorded for replay.
+Sunlight parameters are simulation distributions, not measured calibration.
+Fridge remains 0.1.8; no mass, joint, resistance or door collision changes.
