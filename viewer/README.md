@@ -1,80 +1,93 @@
 # FQ Assets viewer
 
-Lightweight read-only LAN catalog for the assets on `main`. Python's standard
-library serves the UI; vendored Three.js 0.180.0 renders compiled MuJoCo geometry.
-No frontend build, CDN, database or browser-side Python runtime is required.
+Read-only LAN catalog for assets on `main`. The three top-level categories are
+**Objects, Scenes and Actions**. Robots, hands, cameras and materials/textures
+are object subtypes. Python's standard library serves the UI; vendored Three.js
+0.180.0 renders exported MuJoCo geometry without a frontend build or CDN.
 
-## Deployed on 4080S
+## Deployment on 4080S
 
-- URL: http://192.168.31.69:18780
+- URL: http://192.168.31.69:18780/
 - Service: `systemctl --user status fq-assets-viewer`
 - Logs: `journalctl --user -u fq-assets-viewer -n 50`
-- Restart: `systemctl --user restart fq-assets-viewer`
-- State: `/home/fangqi/.local/share/fq-assets-viewer`
-- User lingering and the service are enabled for restart persistence.
+- Application checkout: `/home/fangqi/code/fq-assets-arch-release`
+- State and immutable snapshots: `/home/fangqi/.local/share/fq-assets-viewer`
+- Service configuration: inspect `systemctl --user cat fq-assets-viewer`; the
+  machine-specific override takes precedence over the repository's example unit.
 
-This is a LAN service without authentication. Do not expose this port publicly.
-The browser only receives rendered geometry, textures, catalog metadata and
-previews. It receives no GitHub credentials. Assets cannot be modified via HTTP.
+The service is LAN-only without authentication. Assets cannot be edited over
+HTTP, and GitHub credentials are not sent to the browser.
 
 ## Version semantics
 
-The header reads the latest GitHub release (currently v0.1.0). Every 60 seconds,
-the server fetches `origin/main`; each object's version comes directly from its
-`asset.json` in that commit, not the release tag or a duplicated catalog version.
-An object at 0.1.1 on main can therefore appear under the v0.1.0 release header.
-Browser catalog polling is every 20 seconds; release metadata refreshes every
-five minutes. The commit is visible in the UI.
+The header displays the latest GitHub release (**v0.7.2** at this documentation
+update). The server fetches `origin/main` every 60 seconds. Each object's version
+comes from its `asset.json` at that commit, independently of the release header.
+For v0.7.2 the refrigerator is **0.1.8**, and office baseline is **0.1.12**.
+Browser polling is every 20 seconds; release metadata refreshes every five minutes.
 
-Each commit gets a detached worktree with LFS objects and an immutable exported
-snapshot. Catalog activation occurs only after the whole export succeeds. A
-failure leaves the last successful snapshot available and marks sync status.
-Snapshots persist across restarts. Old snapshots/worktrees are retained; prune
-them manually when no longer needed (never remove the active snapshot named in
-`current.json`). Application code changes require a service deployment/restart;
-asset-only updates on main are automatic.
+Each commit gets a detached worktree with hydrated LFS files and an immutable
+export snapshot. Activation occurs after the complete export succeeds. A sync
+failure keeps the last successful snapshot and reports an error. Old snapshots
+are retained; never remove the snapshot referenced by `current.json` while active.
 
-## Model and property semantics
+Asset-only changes on `main` sync automatically. Application-code changes require
+deployment of the corresponding viewer code and a service restart. Documentation
+commits may advance the displayed main SHA without changing the asset versions.
+SIMPLE uses a separate pinned asset snapshot and never upgrades a running task
+merely because the browser has refreshed.
 
-- Objects: Coke, round table, basket, refrigerator, conference table.
-- Scene: office baseline, with a ceiling cutaway and collision overlay.
-- Orbit, zoom, pan; drag doors/handles or use joint sliders; restore initial pose.
-- Meshes, body transforms, hinge axes/pivots/limits and physical metadata come
-  from MuJoCo 3.3.6's compiled MJCF. Browser geometry is generated, not authored
-  separately. Textures are capped at 2048 pixels for this preview.
-- Joint motion is a kinematic preview; it does not simulate contact or force.
-- Friction and mass are model settings, not measured values. A fixed refrigerator
-  only defines some moving-part masses, so their sum is not whole-appliance mass.
-  Opening force is uncalibrated; mullion is independent; freezer is static.
-- FQ provenance and upstream origins remain visible. Existing assets' licenses
-  and limitations remain governed by the repository's NOTICE and manifests.
+## Model, material and property semantics
 
-## Runtime prerequisites
+- Orbit, zoom and pan; drag doors/handles or use sliders; restore initial pose.
+  Calibrated hand-pose presets and action previews are also available.
+- Geometry, body transforms, hinge pivots/axes/limits and physical metadata come
+  from compiled MJCF. Textures are capped at 2048 pixels for browser preview.
+- Refrigerator regional roughness and metalness come from `appearance.json` and
+  are exported explicitly for both the standalone asset and baseline. Other
+  materials retain the existing renderer fallback. Window lighting is not baked
+  into the refrigerator; browser lighting differs from the isolated window-light
+  comparison and from a particular SIMPLE rendering environment.
+- The upper refrigerator doors share a 10 mm central arch and conforming front
+  details. Collision overlay shows the synchronized piecewise convex geometry.
+- Browser motion is **kinematic only**: it does not test contacts, force or torque.
+- Refrigerator whole-appliance mass is 91 kg, with 14.3 kg in movable parts and
+  76.7 kg in the fixed assembly. Component allocation and inertia are estimates.
+- Right-door frictionloss and viscous damping are zero simulation settings;
+  fixed and uniform modes both use zero. Left-door/mullion settings remain
+  unchanged. Real seal force is uncalibrated, mullion motion is independent, and
+  the freezer is static. Appearance parameters are not measured hardware values.
+- Provenance and licenses remain governed by NOTICE.md and asset manifests.
 
-4080S uses Python >=3.10, Git + LFS, existing authenticated `~/.local/bin/gh`, and
-Docker image `g1-navigation-sim:20261008` (MuJoCo 3.3.6 + NumPy). Pillow 11.3.0 is
-mounted read-only from `~/.local/share/fq-assets-validation-deps`. The exporter
-container has no network and runs with the current user's UID/GID.
+## Runtime and manual startup
 
-`fq-assets-viewer.service` records the current machine-specific paths. Install
-it in `~/.config/systemd/user/`, then daemon-reload and enable --now the service.
-To run manually:
+4080S uses Python 3.10+, Git LFS, authenticated `~/.local/bin/gh`, and the existing
+`g1-navigation-sim:20261008` exporter image. Validation dependencies are mounted
+read-only from `~/.local/share/fq-assets-validation-deps`. Export containers run
+without network access and with the current user's UID/GID.
 
 ```sh
-python3 server.py --repo /path/to/fq-sim-assets --state /path/to/viewer-state --host 0.0.0.0 --port 18780
+python3 viewer/server.py --repo /path/to/fq-assets --state /path/to/viewer-state --host 0.0.0.0 --port 18780
 ```
+
+Run this from the repository root. A separate state directory and port should be
+used for development previews so they do not replace the active service.
 
 ## Validation
 
-`python3 -m unittest test_versions` tests a main asset at 0.1.1 against a release
-at v0.1.0, including restoration of the cached catalog.
+From `viewer/`, `python3 -m unittest test_versions` tests release/main version
+separation and restoration of the cached catalog. The older version numbers in
+these fixtures are test data, not the currently deployed release.
 
-Run `verify_export.py --root ASSET_ROOT --snapshot SNAPSHOT` with MuJoCo/NumPy to
-compare every exported body's pose with MuJoCo at three joint configurations,
-and verify mass and manifest-version provenance. Initial deployment passed 51
-body-pose comparisons across all six assets. Browser QA covered real pointer
-drags on both refrigerator doors and both basket handles, asset/scene switching,
-texture orientation and an error-free browser console.
+`verify_export.py --root ASSET_ROOT --snapshot SNAPSHOT` checks body transforms
+at three joint configurations, mass and manifest versions. v0.7.2 passed **711
+body-pose comparisons**, explicit regional-material export checks, and deployed
+browser checks for both door controls and the published version. The slider's
+display rounds to its configured step; browser movement is not a dynamics test.
 
-Third-party viewer code is Three.js 0.180.0, under its included MIT license in
-`web/vendor/LICENSE.txt`.
+The corresponding SIMPLE validation separately covers torque-driven opening and
+closing plus independent same-engine replay in MuJoCo and CPU PhysX, fixed and
+uniform modes. Four replay errors were zero. This does not establish hardware,
+GPU PhysX or cross-engine replay equivalence.
+
+Third-party Three.js 0.180.0 is covered by `web/vendor/LICENSE.txt` (MIT).

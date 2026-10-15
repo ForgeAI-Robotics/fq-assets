@@ -1,84 +1,96 @@
-# fq-sim-assets
+# fq-assets
 
-FQ 仿真资产库。首版 `v0.1.0` 发布 navigate 项目的办公场地主场景，以及可乐、圆桌、会议桌、篮子和冰箱。米制、Z 轴向上；MuJoCo 四元数采用 wxyz。
+FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、标定与来源记录。资产采用米制、Z 轴向上；MuJoCo 四元数为 `wxyz`。
 
-## 获取固定版本
+当前发布版本为 **[v0.7.2](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.7.2)**。本次更新冰箱 **0.1.8** 和办公基准场景 **0.1.12**。各资产版本以对应 `asset.json` 为准，发布清单见 `assets.lock.json`；变更记录见 [RELEASE_NOTES.md](RELEASE_NOTES.md)。
+
+## 获取与版本锁定
+
+安装 Git LFS 后获取完整资产：
 
 ```bash
 git clone https://github.com/ForgeAI-Robotics/fq-assets.git
-cd fq-sim-assets
-git checkout v0.1.0
+cd fq-assets
+git checkout v0.7.2
 git lfs pull
 python3 tools/check_integrity.py
 python3 tools/catalog.py
 ```
 
-Release 附件 `fq-sim-assets-v0.1.0.tar.gz` 包含实际资产文件，不依赖 Git LFS 下载。GitHub 自动生成的源码压缩包不保证包含 LFS 实体，请优先使用这个专门附件。
+GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.7.2。
 
-4080S 工作副本：`/home/fangqi/code/fq-sim-assets`。原 navigate 与 SIMPLE 目录保持原状。
+网页展示 `main` 上的当前资产；仿真和回放使用锁定的完整提交及文件校验值。更新 `main` 不应改变已有任务或历史轨迹使用的快照。
 
-## 基准场景
+## 目录与分类
 
-入口：`scenes/fq/office_baseline/scene.xml`（MuJoCo）与 `scene.usda`（USD）。
+前端仅有三个一级分类：**物体、场景、动作**。
 
-- 场地：机器人测试区、走道、圆桌区、会议室及禁入区域；不是整栋建筑的实测模型。
-- 固定门净宽约 0.80 m、会议桌宽 1.20 m；其余图纸估算与照片来源见 provenance。
-- 基准包含圆桌和中文可乐，保持 navigate 的固定位置和静态碰撞语义。
-- 冰箱已固定放置在圆桌右侧东北墙角；篮子仍作为独立资产提供。
-- 不包含机器人、控制器、策略权重、导航服务或随机化任务。
-- 会议桌更新为 V7 六块木板、三段独立金属带和视频木纹平铺外观；会议室移除旧柜子，仅保留桌子。桌底仍为原保守整盒碰撞，不适合桌底穿越任务。
-- 会议室门固定打开。玻璃围护中的不可见禁入碰撞体有意保留。
-- 顶棚保留在正式场景中；validation/previews 的场景图仅为去顶棚预览。
+| 目录 | 内容 |
+|---|---|
+| `assets/` | 可乐、圆桌、会议桌、篮子、冰箱；G1+O6/O7、独立 O6/O7 手、D435i；墙面、地面等材质/纹理 |
+| `scenes/` | 固定办公基准场景 |
+| `actions/` | stand 初始化、安全站立及 SONIC v3/v4 站立、前后行走、侧移和转向等动作 |
+| `profiles/` | O6/O7 姿态及 G1 初始化配置 |
+| `calibration/` | 标定数据及坐标约定 |
+| `catalog/` | 资产索引，representation 路径均相对仓库根目录 |
+| `provenance/` | 来源、原始校验值及历史制作依据 |
+| `validation/` | 按版本保留的验证证据 |
+| `viewer/` | 本地网页服务与模型导出工具 |
 
-![主场景去顶棚预览](validation/previews/fq_scenes_office_baseline.png)
-
-## 资产目录
-
-| ID | 类型 | 说明 |
-|---|---|---|
-| `fq:scenes/office_baseline` | 场景 | 固定办公场地，无机器人 |
-| `fq:objects/coke_cn` | 刚体 | 中文标签；独立入口为动态罐体 |
-| `fq:objects/round_table` | 固定家具 | SimFoundry 派生圆桌 |
-| `fq:objects/conference_table` | 固定家具 | 保留基准世界坐标；1.20 m 宽 |
-| `fq:articulated/photo_basket` | 关节资产 | 自由篮体、两个被动提手转轴 |
-| `fq:articulated/haier_bcd402` | 关节资产 | 固定柜体、左右门及独立竖梁转轴 |
-
-`catalog/index.json` 索引各 asset.json，`assets.lock.json` 固定版本。representation 路径相对于仓库根目录。此版本不自动注册到 SIMPLE，也不改动原项目默认场景。
+机器人、灵巧手、相机、材质/纹理均作为“物体”的子类筛选。`origin` 区分 FQ 和 SIMPLE；资产曾经存放在 SIMPLE 中，不代表它是 SIMPLE 原生资产。许可证和上游归属见 [NOTICE.md](NOTICE.md)。
 
 ```bash
 python3 tools/catalog.py --resolve fq:scenes/office_baseline --backend mujoco
-python3 tools/catalog.py --resolve fq:articulated/photo_basket --backend usd
+python3 tools/catalog.py --resolve fq:articulated/haier_bcd402 --backend usd
 ```
 
-资产按需要加载；后续 SIMPLE 适配层可读取该目录注册资源，再由任务选择随机候选池。`origin` 支持 fq/simple；本版收录的均为 FQ 自建或 FQ 派生资产，不因为曾存放于 SIMPLE 就标为 SIMPLE 原生。
+## 基准场景
 
-## 来源与能力边界
+入口为 `scenes/fq/office_baseline/scene.xml`（MuJoCo）及 `scene.usda`（USD）。场地包含机器人测试区、走道、圆桌区和会议室，并非整栋建筑的实测模型。
 
-`provenance/source_files.json` 记录每个引入文件的源位置和原始 SHA-256；`checksums.json` 记录发布后文件内容。二者分别描述原始输入与发布结果。`provenance/source_scripts` 为历史制作依据，包含当时机器路径，不是可直接运行的通用构建入口。
+- 固定场景包含圆桌、中文可乐、会议桌和冰箱；篮子独立提供，机器人由任务加载。
+- 冰箱已按用户描述，从原墙角沿俯视图向圆桌方向移动约 1 m，位置为 `[15.5, 11.9, 0]` m，朝向不变。这个位移为估计值。
+- 基准布局保持固定；动态物体和域随机由 SIMPLE 任务配置选择，不直接随机修改基准源文件。
+- 会议室门固定打开；玻璃围护的禁入碰撞体和正式场景顶棚保留。网页去顶棚仅用于观察。
+- 会议桌底部仍为保守整盒碰撞，不适合桌底穿越任务。
 
-可乐、圆桌的上游为 SimFoundry，经 FQ 尺度、碰撞和材质处理；中文标签为生成式视觉修复。篮子为用户照片建模。冰箱保留 v2 用户尺寸校准记录，但质量、惯量、摩擦和门封等仍未完整标定。竖梁没有自动折叠联动，下冷冻区固定。模型可动不等于机器人抓取/开门任务已验收。
+## 冰箱：整体弧面与分区域材质
 
-资产许可证不因移入此库而改变，见 NOTICE.md。原始 manifest/README 内的旧版本和验证记录属于历史证据；本版入口以 asset.json 为准。
+v0.7.2 的左右上门共用一个横向弧面：左右外侧保持原位，中缝附近向外突出约 **1 cm**；上下边缘平滑收回，内侧结构与铰链保持原位。显示面板和标识随门面调整，下层抽屉未改为弧面。
 
-## 验证
+分区域材质覆盖银色门板、侧板、塑料内衬、密封条和显示面板。参数见 `assets/fq/haier_bcd402/appearance.json`：USD 和前端使用显式粗糙度、金属度；MuJoCo 使用其材质模型近似。**窗边光照是环境设置，没有烘焙到材质中**，可另行重打光。
 
-Python 3.10+，验证依赖固定在 `requirements-validation.txt`：
+受影响的门板碰撞体替换为 **986 块小凸体**，保留原有把手凹槽；MJCF、USD 和基准场景同步。生成依据、数量和误差见 `arch_geometry.json`。整机质量保持 **91 kg**，可动部件合计 **14.3 kg**；右门摩擦阻力和粘性阻尼仍为零，固定/随机模式均使用 `[0, 0]` 范围。
+
+弧度、材质和部件质量分配是仿真估计，不是实机完整标定。中间竖梁仍独立、没有自动折叠联动，接触响应禁用；下冷冻区固定，门封吸力未标定。
+
+构建入口为 `assets/fq/haier_bcd402/source/build_asset.py`，它读取基础 `geometry.json`，并通过 `author_arch.py` / `door_arch.py` 生成弧面、凸体和材质。不能仅凭基础 `geometry.json` 恢复最终形状。请在隔离工作副本中安装验证依赖后构建，再运行 `tools/sync_baseline_fridge.py` 同步基准 MJCF；不要在运行任务使用的快照上重建。
+
+## 网页与 SIMPLE 接入
+
+4080S 内网目录：**http://192.168.31.69:18780/**。支持属性、旋转查看、碰撞体显示、门/提手拖动、手部开合姿态及动作预览。浏览器只展示姿态，不运行接触物理。部署和版本语义见 [viewer/README.md](viewer/README.md)。
+
+SIMPLE 已有资产/场景注册、动态物体、物理参数及版本锁定接入。基准场景由任务保持固定；随机参数与资产锁写入回放记录，回放不会自动升级到 `main`。运行时实现和命令以 SIMPLE 项目的 `FQ_INTEGRATION.md` 为准；本仓库 `integrations/` 中的旧接入记录需结合其版本阅读。
+
+v0.7.2 在 4080S 的独立集成目录为 `/home/fangqi/code/SIMPLE-fq-arch-release`，SIMPLE 提交 `5953b863bbc37002e9c4273c0ee997124cefd0c5`，资产锁定 `d1a512cb7a6a009ad373b093f1e5f8f1eee5eb11`。旧任务继续使用原目录和锁定；网页同步新 `main` 不等于运行任务自动换版。
+
+## 验证与边界
+
+Python 3.10+，依赖见 `requirements-validation.txt`。基础加载检查：
 
 ```bash
 python3 -m pip install -r requirements-validation.txt
 python3 tools/validate.py --output /tmp/fq-assets-validation.json
-# 有可用 OpenGL/EGL 环境时生成预览
-MUJOCO_GL=egl python3 tools/validate.py --output /tmp/fq-assets-validation.json --render
 ```
 
-MuJoCo 检查全部入口、可乐/篮子落稳、五个关节的范围采样、门净宽和固定布局。USD 检查资源闭包、单位、关节和实例位置。发布前在只挂载此资产库的独立容器中验证，运行入口不能引用源项目目录。验证结论与引擎版本见 `validation/`；USD 结构通过不等于 PhysX 接触物理已标定。
+基础加载检查不能替代针对改动的动力学验证。v0.7.2 已在隔离环境完成：
 
-Isaac Sim 4.5.0 的独立加载检查见 `validation/isaac_load.json`：打开全部 USD 入口并启动固定基准场景时间线。此项覆盖加载与启动，不是冰箱开门、篮子抓取或完整导航策略回归。
+- 723 个单门/组合开门姿态，关闭 MuJoCo 父子接触过滤后无穿透。
+- 凸体外表面采样最大误差约 **0.183 mm**；质量、惯量、铰链和阻力参数保持一致。
+- MuJoCo 与 CPU PhysX 的力矩驱动开合；两扇门约 90°打开并回到关闭位置。
+- 两引擎的固定/随机模式独立进程回放，四组最大误差均为 **0**；这是同引擎回放，不是跨引擎轨迹一致性声明。
+- 前端 711 项 body-pose 变换检查，以及发布后的门控件和版本核对。
 
-## 后续工作
+几何证据见 `validation/fridge_arch_geometry.json`，完整回放证据见上述 SIMPLE 目录的 `evidence/fridge-arch-v072/validation.json`。CPU PhysX 通过不代表 GPU PhysX、真实机器人接触任务或硬件材质已标定。历史 `validation/` 报告仅覆盖各自记录的版本与范围。
 
-发布后讨论本地网页资产目录：读取同一资产清单，支持旋转查看、关节限位内拖动提手和冰箱门；浏览器展示和真实物理交互需分别标明。SIMPLE 场景/资产注册和受约束的域随机也是后续独立接入事项。本版不部署网页服务。
-
-## v0.2.0 模型目录
-
-新增两套 G1 机器人组合、四只独立手以及五项材质，详见 [版本说明](RELEASE_NOTES_v0.2.0.md)。现有 SIMPLE 运行仍使用自己的锁定快照。
+`provenance/source_files.json` 描述原始输入，`checksums.json` 校验当前提交中的文件。历史源脚本可能包含机器专用路径，不应直接当成当前构建入口。
