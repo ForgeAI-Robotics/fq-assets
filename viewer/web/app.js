@@ -8,6 +8,7 @@ const jointLabels={handle_right_hinge:'右提手',handle_left_hinge:'左提手',
 const label=j=>jointLabels[j]||j.replace(/^left_/, '左 ').replace(/^right_/, '右 ').replace(/o[67]_/, '').replace(/thumb/g,'拇指').replace(/index/g,'食指').replace(/middle/g,'中指').replace(/ring/g,'无名指').replace(/pinky/g,'小指').replace(/hip/g,'髋').replace(/knee/g,'膝').replace(/ankle/g,'踝').replace(/waist/g,'腰').replace(/shoulder/g,'肩').replace(/elbow/g,'肘').replace(/wrist/g,'腕').replace(/_joint$/,'').replace(/_/g,' ');
 const isRobot=a=>['robot','end_effector','action'].includes(a?.kind);
 const independentDof=a=>a.joints.filter(j=>!j.coupling).length;
+let handAnimation=null;
 let motion=null,playing=false,motionTime=0,previousFrame=0;
 let catalog=null,selected=null,category='object',loadId=0,activeModel=null,modelRoot=null;
 let bodyGroups=new Map(),jointMap=new Map(),angles=new Map(),pickables=[],colliders=[],cutaways=[],jointMode=false;
@@ -178,9 +179,10 @@ function applyCutaway(){cutaways.forEach(m=>m.visible=!(selected?.kind==='scene'
 function applyCouplings(){
   for(const c of activeModel?.couplings||[]){const driver=jointMap.get(c.driver),dependent=jointMap.get(c.joint);if(!driver||!dependent)continue;const x=angles.get(c.driver)-driver.reference;angles.set(c.joint,dependent.reference+c.polycoef.reduce((sum,k,i)=>sum+k*x**i,0));}
 }
-function setJoint(jname,value){const j=jointMap.get(jname);if(!j)return;angles.set(jname,THREE.MathUtils.clamp(value,...(j.control_range||j.range)));applyCouplings();updateBodies();updateJointUI();}
+function setJoint(jname,value){handAnimation=null;if(selected?.kind==='end_effector')$('hand-closure-value').textContent='自定义';const j=jointMap.get(jname);if(!j)return;angles.set(jname,THREE.MathUtils.clamp(value,...(j.control_range||j.range)));applyCouplings();updateBodies();updateJointUI();}
 function updateJointUI(){for(const [name,value] of angles){const row=document.querySelector(`[data-joint="${CSS.escape(name)}"]`);if(row){row.querySelector('input').value=deg(value);row.querySelector('output').textContent=`${fmt(deg(value),1)}°`;row.classList.toggle('active',drag?.name===name);}}}
 function renderJoints(){
+  $('hand-presets').hidden=selected?.kind!=='end_effector';
   if(selected?.kind==='action'){$('joint-panel').hidden=true;return;}
   $('joint-panel').hidden=!selected.joints.length;$('joint-count').textContent=isRobot(selected)?`${independentDof(selected)} 个独立 / ${selected.joints.length} 个转动关节`:`${selected.joints.length} 个`;
   const group=$('joint-group').value;
@@ -190,7 +192,7 @@ function renderJoints(){
 }
 function setMode(enabled){jointMode=enabled&&!!selected?.joints.length;$('joint-mode').classList.toggle('active',jointMode);$('orbit-mode').classList.toggle('active',!jointMode);$('joint-mode').setAttribute('aria-pressed',jointMode);$('orbit-mode').setAttribute('aria-pressed',!jointMode);$('interaction-hint').textContent=jointMode?'拖动门 / 提手调整 · 拖动空白旋转':'拖动旋转 · 滚轮缩放 · 右键平移';}
 async function selectAsset(slug){
-  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;playing=false;motion=null;$('action-panel').hidden=a.kind!=='action';$('action-play').textContent='播放';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
+  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;handAnimation=null;$('hand-presets').hidden=true;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';playing=false;motion=null;$('action-panel').hidden=a.kind!=='action';$('action-play').textContent='播放';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':a.kind==='action'?'动作':'物体'} / ${a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
@@ -218,7 +220,7 @@ renderer.domElement.addEventListener('pointermove',e=>{
 function endDrag(e){if(!drag)return;drag=null;controls.enabled=true;updateJointUI();if(renderer.domElement.hasPointerCapture(e.pointerId))renderer.domElement.releasePointerCapture(e.pointerId);e.stopImmediatePropagation();}
 renderer.domElement.addEventListener('pointerup',endDrag,true);renderer.domElement.addEventListener('pointercancel',endDrag,true);
 $('orbit-mode').onclick=()=>setMode(false);$('joint-mode').onclick=()=>setMode(true);
-$('reset-view').onclick=frameModel;$('reset-joints').onclick=()=>{selected.joints.forEach(j=>angles.set(j.name,j.initial));applyCouplings();updateBodies();updateJointUI();};
+$('reset-view').onclick=frameModel;$('reset-joints').onclick=()=>{handAnimation=null;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';selected.joints.forEach(j=>angles.set(j.name,j.initial));applyCouplings();updateBodies();updateJointUI();};
 $('collision-toggle').onclick=()=>{showCollision=!showCollision;colliders.forEach(m=>m.visible=showCollision);$('collision-toggle').setAttribute('aria-pressed',showCollision);};
 $('cutaway-toggle').onclick=()=>{cutaway=!cutaway;applyCutaway();};
 $('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('资产链接已复制');}catch{const input=document.createElement('input');input.value=location.href;document.body.append(input);input.select();const ok=document.execCommand('copy');input.remove();toast(ok?'资产链接已复制':'请复制浏览器地址栏中的链接');}};
@@ -243,3 +245,34 @@ $('action-reset').onclick=()=>{playing=false;$('action-play').textContent='播�
 $('action-time').oninput=()=>{playing=false;$('action-play').textContent='播放';seekMotion(Number($('action-time').value));};
 function animateMotion(now){if(playing&&motion){seekMotion(motionTime+Math.min((now-previousFrame)/1000,.1));if(motionTime>=selected.duration_s){playing=false;$('action-play').textContent='播放';}}previousFrame=now;requestAnimationFrame(animateMotion);}
 requestAnimationFrame(animateMotion);
+
+function handTargets(amount){
+ const targets=new Map();
+ for(const j of selected.joints.filter(j=>!j.coupling)){
+  const [lo,hi]=j.control_range||j.range;const open=THREE.MathUtils.clamp(0,lo,hi);
+  // Thumb roll is opposition, not flexion. Keep its neutral value.
+  const closed=j.name.endsWith('thumb_cmc_roll')?open:hi;
+  targets.set(j.name,open+(closed-open)*amount);
+ }
+ return targets;
+}
+function previewHand(percent,animate){
+ if(selected?.kind!=='end_effector'||$('viewport').dataset.ready!=='true')return;
+ const target=handTargets(percent/100);$('hand-closure').value=percent;$('hand-closure-value').textContent=percent+'%';
+ if(animate)handAnimation={started:performance.now(),from:new Map(angles),target,assetId:selected.id};
+ else{handAnimation=null;for(const [name,value] of target)angles.set(name,value);applyCouplings();updateBodies();updateJointUI();}
+}
+$('hand-open').onclick=()=>previewHand(0,true);
+$('hand-close').onclick=()=>previewHand(100,true);
+$('hand-closure').oninput=()=>previewHand(Number($('hand-closure').value),false);
+function animateHand(now){
+ if(handAnimation){
+  if(selected?.id!==handAnimation.assetId)handAnimation=null;
+  else{const t=Math.min(1,(now-handAnimation.started)/450),blend=t*t*(3-2*t);
+   for(const [name,value] of handAnimation.target)angles.set(name,handAnimation.from.get(name)*(1-blend)+value*blend);
+   applyCouplings();updateBodies();updateJointUI();if(t>=1)handAnimation=null;
+  }
+ }
+ requestAnimationFrame(animateHand);
+}
+requestAnimationFrame(animateHand);

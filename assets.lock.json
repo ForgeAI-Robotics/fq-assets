@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.5.0",
+  "release": "0.5.1",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
