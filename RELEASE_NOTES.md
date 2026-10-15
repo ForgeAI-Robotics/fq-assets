@@ -1,3 +1,7 @@
+## v0.4.1 — old G1 O7 pose configuration
+
+Use the user-selected old G1 left O7 open thumb_rotation protocol value 83 (previously 170). Preserve previous values and provenance. Closed and light-switch poses, robot geometry and dynamics unchanged. Readback only; hardware execution not validated. Existing SIMPLE locks remain unchanged.
+
 ## v0.4.0 — FQ Assets and pose profiles
 
 Repository renamed to ForgeAI-Robotics/fq-assets. Added versioned O6 left/right task commands, O7 left task commands and a G1 BeyondMimic initial joint pose. Source file hashes and verification status are recorded. Right O6 values were approved by an operator using the left profile; they are not an independent right-hand calibration. No O7 right profile was inferred. G1 named-joint limits and kinematic replay pass for both robot models; physical balance and hardware validation remain pending. Loading profiles never changes the default pose or sends commands. Existing model geometry, dynamics, camera parameters and baseline placement are unchanged.

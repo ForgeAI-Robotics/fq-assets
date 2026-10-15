@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:poses/o7_left_task",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "O7_LEFT 任务手势",
   "kind": "hand_command_presets",
   "compatible_assets": [
@@ -28,7 +28,7 @@
         255,
         255,
         255,
-        170
+        83
       ]
     },
     "closed": {
@@ -67,14 +67,14 @@
     }
   },
   "source": {
-    "source_path": "/home/lgj_4090/文档/sonic_wbc/g1_groot_n17_inference/hardware/linkerhand/config/left_o7_poses.json",
-    "sha256": "6c196e7543e317041261e0269ef12548f58a018e1ff0d5ada4e881de7886395a",
-    "source_host": "yuchen-4090",
+    "source_host": "old-g1",
+    "source_path": "/home/dev/sonic_open_light_hand/left_o7_poses.json",
+    "sha256": "25a4a3d48ca1a041e7f1984b852e7e3fabb726887e9865b912e04fe79c026bbe",
     "captured_at": "2026-10-15"
   },
   "validation": {
-    "status": "pending_hardware_verification",
-    "label": "历史任务配置；待实机复核",
+    "status": "device_config_readback_user_selected",
+    "label": "旧 G1 配置读取；用户指定采用；未执行实机动作验证",
     "independently_measured": false
   },
   "limitations": [
@@ -84,5 +84,23 @@
   "compatible_asset_versions": {
     "fq:end_effectors/o7_left": "0.1.1",
     "fq:robots/g1_o7": "0.1.3"
+  },
+  "previous_source": {
+    "source": {
+      "source_path": "/home/lgj_4090/文档/sonic_wbc/g1_groot_n17_inference/hardware/linkerhand/config/left_o7_poses.json",
+      "sha256": "6c196e7543e317041261e0269ef12548f58a018e1ff0d5ada4e881de7886395a",
+      "source_host": "yuchen-4090",
+      "captured_at": "2026-10-15"
+    },
+    "version": "0.1.0",
+    "open_position": [
+      255,
+      179,
+      255,
+      255,
+      255,
+      255,
+      170
+    ]
   }
 }
