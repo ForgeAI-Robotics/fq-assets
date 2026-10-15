@@ -195,8 +195,12 @@ function renderJoints(){
   document.querySelectorAll('.joint-row input').forEach(input=>input.oninput=()=>setJoint(input.closest('.joint-row').dataset.joint,rad(Number(input.value))));
 }
 function setMode(enabled){jointMode=enabled&&!!selected?.joints.length;$('joint-mode').classList.toggle('active',jointMode);$('orbit-mode').classList.toggle('active',!jointMode);$('joint-mode').setAttribute('aria-pressed',jointMode);$('orbit-mode').setAttribute('aria-pressed',!jointMode);$('interaction-hint').textContent=jointMode?'拖动门 / 提手调整 · 拖动空白旋转':'拖动旋转 · 滚轮缩放 · 右键平移';}
+function setMotionReady(ready){
+ for(const id of ['action-play','action-reset','action-time'])$(id).disabled=!ready;
+ $('action-play').textContent=ready?'播放':'加载动作中…';
+}
 async function selectAsset(slug){
-  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;handAnimation=null;$('hand-presets').hidden=true;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';playing=false;motion=null;$('action-panel').hidden=a.kind!=='action';$('action-play').textContent='播放';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
+  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;handAnimation=null;$('hand-presets').hidden=true;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';playing=false;motion=null;motionTime=0;setMotionReady(false);$('action-clock').textContent='等待模型与轨迹加载';$('action-time').value=0;$('action-panel').hidden=a.kind!=='action';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':a.kind==='action'?'动作':'物体'} / ${a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
@@ -204,8 +208,8 @@ async function selectAsset(slug){
   if(a.kind==='scene'){$('scene-info').innerHTML='<strong>固定基准 · 办公场地</strong><p>测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。</p><p>保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。</p><div class="scene-chips">'+(a.dependencies||[]).map(id=>{const dep=catalog.assets.find(x=>x.id===id);return dep?`<button data-asset="${esc(dep.slug)}">${esc(dep.name)} · v${esc(dep.version)} ↗</button>`:'';}).join('')+'</div>';document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
   $('material-controls').hidden=a.kind!=='material';$('collision-toggle').hidden=a.kind==='material';$('material-repeat').value=1;$('material-repeat-value').textContent='1 ×';
   showProperties(a);renderList();setMode(!!a.joints.length&&!isRobot(a));$('viewport').dataset.ready='false';$('loading').hidden=false;$('loading').querySelector('strong').textContent=`正在加载${a.name}`;$('viewer-error').hidden=true;
-  try{const url=new URL(a.model_url,location.origin);const res=await fetch(url);if(!res.ok)throw Error('模型文件暂不可用');const data=await res.json();if(token!==loadId)return;await buildModel(data,url,token);if(a.kind==='action'&&token===loadId){const response=await fetch(a.trajectory_url);if(!response.ok)throw Error('动作数据加载失败');const loaded=await response.json();if(token!==loadId)return;motion=loaded;$('action-time').max=a.duration_s;seekMotion(0);}}
-  catch(e){if(token!==loadId)return;$('loading').hidden=true;$('viewer-error').hidden=false;$('viewer-error').textContent=`模型加载失败：${e.message}。请刷新后重试。`;console.error(e);}
+  try{const url=new URL(a.model_url,location.origin);const res=await fetch(url);if(!res.ok)throw Error('模型文件暂不可用');const data=await res.json();if(token!==loadId)return;await buildModel(data,url,token);if(a.kind==='action'&&token===loadId){const response=await fetch(a.trajectory_url);if(!response.ok)throw Error('动作数据加载失败');const loaded=await response.json();if(token!==loadId)return;motion=loaded;$('action-time').max=a.duration_s;seekMotion(0);setMotionReady(true);$('pose-label').textContent=a.motion_group==='recording'?'原地关节回放 · 不含位移':'动作轨迹回放';$('action-description').textContent=a.motion_group==='recording'?'历史关节记录：播放时腿部运动，机器人位置固定。日志未记录实际行走位移。':'G1 + O6 默认预览 · 记录轨迹播放，不运行实机控制。手指保持模型初始姿态。';}}
+  catch(e){if(token!==loadId)return;$('loading').hidden=true;$('viewer-error').hidden=false;$('viewer-error').textContent=`模型加载失败：${e.message}。请刷新后重试。`;if(a.kind==='action'){$('action-play').textContent='加载失败';$('action-clock').textContent='动作未就绪，请刷新重试';}console.error(e);}
 }
 
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
@@ -254,7 +258,7 @@ function seekMotion(t){
   const delta=new THREE.Vector3(x-last[0],y-last[1],z-last[2]);camera.position.add(delta);controls.target.add(delta);keyLight.position.add(delta);keyLight.target.position.add(delta);fill.position.add(delta);fill.target.position.add(delta);modelRoot.userData.motionXYZ=[x,y,z];
   if(ground)ground.position.z=-.002;if(grid)grid.position.z=-.001;
  }
- $('action-time').value=motionTime;$('action-clock').textContent=motionTime.toFixed(2)+' / '+selected.duration_s+' s';
+ $('action-time').value=motionTime;$('action-clock').textContent=motionTime.toFixed(2)+' / '+selected.duration_s.toFixed(2)+' s';
 }
 $('action-play').onclick=()=>{if(!motion)return;if(motionTime>=selected.duration_s)seekMotion(0);playing=!playing;$('action-play').textContent=playing?'暂停':'播放';};
 $('action-reset').onclick=()=>{playing=false;$('action-play').textContent='播放';seekMotion(0);};

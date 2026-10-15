@@ -1,3 +1,7 @@
+## v0.6.1 — Motion loading feedback
+
+Disable playback until both robot and trajectory are ready; show loading/failure status instead of silently ignoring early clicks. Reset stale clocks when switching actions. Clearly label fixed-root historical playback in the viewport and playback panel. Motion payloads and SIMPLE execution locks are unchanged.
+
 ## v0.6.0 — G1 locomotion library
 
 Add two SONIC walking references with pelvis motion and four measured model7100 log excerpts (forward 0.2/0.3 command, left/right turn command). Preserve timestamps, named joint mapping, source hashes and policy association limits. Register seven policy variants by SHA256 without distributing executable weights. Browser filters references, historical recordings and existing stand/gesture actions; reference root poses use quaternion interpolation, historical records explicitly remain fixed-root. All 11 actions pass O6/O7 joint limits and deterministic kinematic reconstruction. Source-reference body FK agrees within 2.3 micrometers. These are not dynamic balance or current hardware acceptance tests.

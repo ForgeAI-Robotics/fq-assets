@@ -6,3 +6,5 @@
 .hand-preset-note{font-size:11px;line-height:1.6;color:#7d8878;margin:12px 0}
 
 #motion-filters{padding:10px 16px;font-size:12px} #motion-filter{width:100%;margin:8px 0;padding:8px} #controller-records{margin:8px 0;max-height:230px;overflow:auto}.policy-record{padding:8px;border-bottom:1px solid #ddd}.policy-record code{overflow-wrap:anywhere;font-size:10px}.policy-record p{line-height:1.5;color:#596359}
+
+#action-panel button:disabled{opacity:.5;cursor:wait} #action-description{font-weight:500}
