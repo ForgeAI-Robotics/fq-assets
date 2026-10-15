@@ -14,9 +14,10 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path);p.add_argument('--snapshot',type=Path);a=p.parse_args()
     cat=json.loads((a.snapshot/'catalog.json').read_text());checks=0
     for asset in cat['assets']:
+        if asset.get('kind')=='action':continue
         meta=json.loads((a.root/asset['manifest_path']).read_text())
         assert asset['version']==meta['version']
-        if meta['kind']=='material':continue
+        if meta['kind'] in ('material','action'):continue
         model=mujoco.MjModel.from_xml_path(str(a.root/meta['representations']['mujoco']))
         exported=json.loads((a.snapshot/asset['slug']/'model.json').read_text())
         assert abs((asset['mass_kg'] or 0)-model.body_mass.sum())<1e-8

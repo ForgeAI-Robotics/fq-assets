@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.7.0",
+  "release": "0.7.1",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -19,7 +19,7 @@
     },
     {
       "id": "fq:articulated/haier_bcd402",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "manifest": "assets/fq/haier_bcd402/asset.json"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "id": "fq:scenes/office_baseline",
-      "version": "0.1.10",
+      "version": "0.1.11",
       "manifest": "scenes/fq/office_baseline/asset.json"
     },
     {
@@ -64,12 +64,12 @@
     },
     {
       "id": "fq:end_effectors/o6_right",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "manifest": "assets/fq/end_effectors/o6_right/asset.json"
     },
     {
       "id": "fq:robots/g1_o6",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "manifest": "assets/fq/robots/g1_o6/asset.json"
     },
     {

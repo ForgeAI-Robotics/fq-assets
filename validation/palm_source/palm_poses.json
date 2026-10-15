@@ -1,0 +1,28 @@
+{
+  "saved": {
+    "right_o6_thumb_cmc_yaw": 1.3472362814548293,
+    "right_o6_thumb_cmc_pitch": -0.003998411568981955,
+    "right_o6_thumb_ip": -0.005528037633896251,
+    "right_o6_index_mcp_pitch": 0.9787508324993479,
+    "right_o6_index_dip": 0.868465826557882,
+    "right_o6_middle_mcp_pitch": 0.9041480028359141,
+    "right_o6_middle_dip": 0.804588848027291,
+    "right_o6_ring_mcp_pitch": 1.1779359312864146,
+    "right_o6_ring_dip": 1.045948948242752,
+    "right_o6_pinky_mcp_pitch": 1.1393068401709163,
+    "right_o6_pinky_dip": 1.011231321327377
+  },
+  "measured_thumb_FK": {
+    "right_o6_thumb_cmc_yaw": 1.36,
+    "right_o6_thumb_cmc_pitch": 0.3298039215686274,
+    "right_o6_thumb_ip": 0.6134352941176471,
+    "right_o6_index_mcp_pitch": 0.9787508324993479,
+    "right_o6_index_dip": 0.868465826557882,
+    "right_o6_middle_mcp_pitch": 0.9041480028359141,
+    "right_o6_middle_dip": 0.804588848027291,
+    "right_o6_ring_mcp_pitch": 1.1779359312864146,
+    "right_o6_ring_dip": 1.045948948242752,
+    "right_o6_pinky_mcp_pitch": 1.1393068401709163,
+    "right_o6_pinky_dip": 1.011231321327377
+  }
+}

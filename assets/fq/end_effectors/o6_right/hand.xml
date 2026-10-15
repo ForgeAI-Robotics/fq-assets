@@ -14,12 +14,139 @@
     <mesh name="o6_right_ring_distal" content_type="model/stl" file="o6_right_ring_distal.STL" />
     <mesh name="o6_right_pinky_proximal" content_type="model/stl" file="o6_right_pinky_proximal.STL" />
     <mesh name="o6_right_pinky_distal" content_type="model/stl" file="o6_right_pinky_distal.STL" />
+    <mesh name="right_palm_convex_000" file="right_palm_part_000.obj" />
+    <mesh name="right_palm_convex_001" file="right_palm_part_001.obj" />
+    <mesh name="right_palm_convex_002" file="right_palm_part_002.obj" />
+    <mesh name="right_palm_convex_003" file="right_palm_part_003.obj" />
+    <mesh name="right_palm_convex_004" file="right_palm_part_004.obj" />
+    <mesh name="right_palm_convex_005" file="right_palm_part_005.obj" />
+    <mesh name="right_palm_convex_006" file="right_palm_part_006.obj" />
+    <mesh name="right_palm_convex_007" file="right_palm_part_007.obj" />
+    <mesh name="right_palm_convex_008" file="right_palm_part_008.obj" />
+    <mesh name="right_palm_convex_009" file="right_palm_part_009.obj" />
+    <mesh name="right_palm_convex_010" file="right_palm_part_010.obj" />
+    <mesh name="right_palm_convex_011" file="right_palm_part_011.obj" />
+    <mesh name="right_palm_convex_012" file="right_palm_part_012.obj" />
+    <mesh name="right_palm_convex_013" file="right_palm_part_013.obj" />
+    <mesh name="right_palm_convex_014" file="right_palm_part_014.obj" />
+    <mesh name="right_palm_convex_015" file="right_palm_part_015.obj" />
+    <mesh name="right_palm_convex_016" file="right_palm_part_016.obj" />
+    <mesh name="right_palm_convex_017" file="right_palm_part_017.obj" />
+    <mesh name="right_palm_convex_018" file="right_palm_part_018.obj" />
+    <mesh name="right_palm_convex_019" file="right_palm_part_019.obj" />
+    <mesh name="right_palm_convex_020" file="right_palm_part_020.obj" />
+    <mesh name="right_palm_convex_021" file="right_palm_part_021.obj" />
+    <mesh name="right_palm_convex_022" file="right_palm_part_022.obj" />
+    <mesh name="right_palm_convex_023" file="right_palm_part_023.obj" />
+    <mesh name="right_palm_convex_024" file="right_palm_part_024.obj" />
+    <mesh name="right_palm_convex_025" file="right_palm_part_025.obj" />
+    <mesh name="right_palm_convex_026" file="right_palm_part_026.obj" />
+    <mesh name="right_palm_convex_027" file="right_palm_part_027.obj" />
+    <mesh name="right_palm_convex_028" file="right_palm_part_028.obj" />
+    <mesh name="right_palm_convex_029" file="right_palm_part_029.obj" />
+    <mesh name="right_palm_convex_030" file="right_palm_part_030.obj" />
+    <mesh name="right_palm_convex_031" file="right_palm_part_031.obj" />
+    <mesh name="right_palm_convex_032" file="right_palm_part_032.obj" />
+    <mesh name="right_palm_convex_033" file="right_palm_part_033.obj" />
+    <mesh name="right_palm_convex_034" file="right_palm_part_034.obj" />
+    <mesh name="right_palm_convex_035" file="right_palm_part_035.obj" />
+    <mesh name="right_palm_convex_036" file="right_palm_part_036.obj" />
+    <mesh name="right_palm_convex_037" file="right_palm_part_037.obj" />
+    <mesh name="right_palm_convex_038" file="right_palm_part_038.obj" />
+    <mesh name="right_palm_convex_039" file="right_palm_part_039.obj" />
+    <mesh name="right_palm_convex_040" file="right_palm_part_040.obj" />
+    <mesh name="right_palm_convex_041" file="right_palm_part_041.obj" />
+    <mesh name="right_palm_convex_042" file="right_palm_part_042.obj" />
+    <mesh name="right_palm_convex_043" file="right_palm_part_043.obj" />
+    <mesh name="right_palm_convex_044" file="right_palm_part_044.obj" />
+    <mesh name="right_palm_convex_045" file="right_palm_part_045.obj" />
+    <mesh name="right_palm_convex_046" file="right_palm_part_046.obj" />
+    <mesh name="right_palm_convex_047" file="right_palm_part_047.obj" />
+    <mesh name="right_palm_convex_048" file="right_palm_part_048.obj" />
+    <mesh name="right_palm_convex_049" file="right_palm_part_049.obj" />
+    <mesh name="right_palm_convex_050" file="right_palm_part_050.obj" />
+    <mesh name="right_palm_convex_051" file="right_palm_part_051.obj" />
+    <mesh name="right_palm_convex_052" file="right_palm_part_052.obj" />
+    <mesh name="right_palm_convex_053" file="right_palm_part_053.obj" />
+    <mesh name="right_palm_convex_054" file="right_palm_part_054.obj" />
+    <mesh name="right_palm_convex_055" file="right_palm_part_055.obj" />
+    <mesh name="right_palm_convex_056" file="right_palm_part_056.obj" />
+    <mesh name="right_palm_convex_057" file="right_palm_part_057.obj" />
+    <mesh name="right_palm_convex_058" file="right_palm_part_058.obj" />
+    <mesh name="right_palm_convex_059" file="right_palm_part_059.obj" />
+    <mesh name="right_palm_convex_060" file="right_palm_part_060.obj" />
+    <mesh name="right_palm_convex_061" file="right_palm_part_061.obj" />
+    <mesh name="right_palm_convex_062" file="right_palm_part_062.obj" />
+    <mesh name="right_palm_convex_063" file="right_palm_part_063.obj" />
   </asset>
   <worldbody>
     <body name="right_o6_hand_base_link" pos="0 0 0" quat="1 0 0 0">
       <inertial pos="-0.00160321 0.000358463 0.0538003" quat="0.999267 -0.0369342 -0.00667783 0.00753493" mass="0.0674008" diaginertia="5.22457e-05 3.34005e-05 2.27714e-05" />
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o6_right_hand_base_link" />
-      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="o6_right_hand_base_link" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_000" name="right_palm_convex_000" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_001" name="right_palm_convex_001" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_002" name="right_palm_convex_002" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_003" name="right_palm_convex_003" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_004" name="right_palm_convex_004" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_005" name="right_palm_convex_005" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_006" name="right_palm_convex_006" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_007" name="right_palm_convex_007" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_008" name="right_palm_convex_008" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_009" name="right_palm_convex_009" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_010" name="right_palm_convex_010" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_011" name="right_palm_convex_011" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_012" name="right_palm_convex_012" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_013" name="right_palm_convex_013" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_014" name="right_palm_convex_014" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_015" name="right_palm_convex_015" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_016" name="right_palm_convex_016" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_017" name="right_palm_convex_017" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_018" name="right_palm_convex_018" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_019" name="right_palm_convex_019" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_020" name="right_palm_convex_020" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_021" name="right_palm_convex_021" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_022" name="right_palm_convex_022" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_023" name="right_palm_convex_023" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_024" name="right_palm_convex_024" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_025" name="right_palm_convex_025" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_026" name="right_palm_convex_026" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_027" name="right_palm_convex_027" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_028" name="right_palm_convex_028" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_029" name="right_palm_convex_029" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_030" name="right_palm_convex_030" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_031" name="right_palm_convex_031" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_032" name="right_palm_convex_032" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_033" name="right_palm_convex_033" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_034" name="right_palm_convex_034" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_035" name="right_palm_convex_035" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_036" name="right_palm_convex_036" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_037" name="right_palm_convex_037" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_038" name="right_palm_convex_038" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_039" name="right_palm_convex_039" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_040" name="right_palm_convex_040" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_041" name="right_palm_convex_041" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_042" name="right_palm_convex_042" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_043" name="right_palm_convex_043" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_044" name="right_palm_convex_044" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_045" name="right_palm_convex_045" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_046" name="right_palm_convex_046" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_047" name="right_palm_convex_047" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_048" name="right_palm_convex_048" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_049" name="right_palm_convex_049" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_050" name="right_palm_convex_050" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_051" name="right_palm_convex_051" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_052" name="right_palm_convex_052" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_053" name="right_palm_convex_053" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_054" name="right_palm_convex_054" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_055" name="right_palm_convex_055" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_056" name="right_palm_convex_056" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_057" name="right_palm_convex_057" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_058" name="right_palm_convex_058" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_059" name="right_palm_convex_059" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_060" name="right_palm_convex_060" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_061" name="right_palm_convex_061" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_062" name="right_palm_convex_062" group="3" />
+      <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="right_palm_convex_063" name="right_palm_convex_063" group="3" />
       <body name="right_o6_thumb_metacarpals_base2" pos="0.011508 0.022975 0.032794">
         <inertial pos="0.00162796 0.00276672 -0.00184228" quat="0.958658 0.114191 -0.0354615 -0.258221" mass="0.00138591" diaginertia="5.49427e-08 4.70357e-08 2.7769e-08" />
         <joint name="right_o6_thumb_cmc_yaw" pos="0 0 0" axis="0 0 -1" range="0 1.36" actuatorfrcrange="-100 100" armature="0.01" damping="0.05" />

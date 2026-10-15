@@ -3,25 +3,39 @@
   "status": "simulation_parameter_not_measured_calibration",
   "target_joint": "refrigerator_right_hinge",
   "default_mode": "fixed",
-  "frictionloss_Nm": 1.6,
-  "damping_Nm_s_rad": 0.15,
+  "frictionloss_Nm": 0.0,
+  "damping_Nm_s_rad": 0.0,
   "randomization": {
     "mode": "uniform",
     "bounds_Nm": [
-      1.0,
-      2.3
+      0.0,
+      0.0
     ],
     "sample_once_per_episode": true,
     "rng": "numpy PCG64 SeedSequence([seed, episode_index])"
   },
   "scope": "Right door only; left door and mullion unchanged",
-  "basis": "Low-confidence prior-assisted equivalent resistance estimate; uniform distribution is simulation augmentation, not measured population distribution",
-  "source_task": "在 fq assets 基线场景尝试开柜",
-  "source_candidate_sha256": "9b4d556c19623e96c23c0d7426b18ac247bf82bf1c4ad81682dcdbb13e1c46e6",
+  "basis": "User-approved zero-resistance simulation setting from G1 navigate replay comparison; not a measured hardware estimate",
+  "source_task": "G1 navigate replay: door_no_resistance, 2026-10-14",
   "limitations": [
-    "Seal breakaway and static/dynamic friction difference not identified",
-    "Existing SONIC robot policy failed opening at 1.6 Nm; controller adaptation is separate",
-    "MuJoCo frictionloss is a torque. USD custom metadata records it; native PhysX behavior is not implemented or validated."
+    "Right-door dry friction and viscous damping intentionally disabled; left door and mullion unchanged",
+    "Uniform mode is retained for replay compatibility but samples zero from [0, 0]",
+    "Seal force and real hardware resistance are not calibrated",
+    "Same-engine replay only; CPU PhysX validation does not imply GPU/hardware validation"
   ],
-  "usd_runtime_supported": false
+  "usd_runtime_supported": true,
+  "physx": {
+    "runtime": "SIMPLE simple.fq.physx.PhysXFridge",
+    "tested_engine": "Isaac Sim 4.5.0 / CPU PhysX",
+    "model": "zero_velocity_implicit_drive_with_per_step_torque_cap",
+    "regularization_slope_Nm_s_rad": 10000.0,
+    "torque_cap": "F + damping_Nm_s_rad * abs(previous_joint_velocity_rad_s)",
+    "physics_dt_s": 0.0005,
+    "raw_usd": "Zero right-door drive damping and max force; runtime adapter preserves zero in both fixed and uniform modes",
+    "modes": [
+      "fixed",
+      "uniform"
+    ],
+    "replay": "assets SHA + runtime hash + image + sampled resistance + q/v/time; same-engine replay only"
+  }
 }

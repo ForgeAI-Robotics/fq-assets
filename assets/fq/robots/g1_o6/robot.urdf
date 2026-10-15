@@ -1357,10 +1357,388 @@
         <color rgba="0.7 0.7 0.7 1" />
       </material>
     </visual>
-    <collision>
+    <collision name="right_palm_convex_000">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/o6_right_hand_base_link.STL" />
+        <mesh filename="meshes/right_palm_part_000.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_001">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_001.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_002">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_002.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_003">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_003.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_004">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_004.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_005">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_005.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_006">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_006.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_007">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_007.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_008">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_008.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_009">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_009.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_010">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_010.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_011">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_011.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_012">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_012.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_013">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_013.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_014">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_014.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_015">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_015.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_016">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_016.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_017">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_017.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_018">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_018.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_019">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_019.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_020">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_020.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_021">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_021.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_022">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_022.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_023">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_023.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_024">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_024.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_025">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_025.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_026">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_026.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_027">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_027.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_028">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_028.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_029">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_029.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_030">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_030.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_031">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_031.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_032">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_032.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_033">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_033.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_034">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_034.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_035">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_035.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_036">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_036.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_037">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_037.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_038">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_038.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_039">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_039.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_040">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_040.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_041">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_041.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_042">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_042.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_043">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_043.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_044">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_044.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_045">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_045.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_046">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_046.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_047">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_047.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_048">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_048.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_049">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_049.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_050">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_050.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_051">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_051.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_052">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_052.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_053">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_053.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_054">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_054.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_055">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_055.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_056">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_056.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_057">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_057.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_058">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_058.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_059">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_059.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_060">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_060.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_061">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_061.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_062">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_062.obj" />
+      </geometry>
+    </collision>
+    <collision name="right_palm_convex_063">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_palm_part_063.obj" />
       </geometry>
     </collision>
   </link>

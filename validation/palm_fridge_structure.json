@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "hardware_validated": false,
+  "palm": [
+    {
+      "file": "assets/fq/end_effectors/o6_right/hand.xml",
+      "unchanged": [
+        "body_mass",
+        "body_inertia",
+        "body_pos",
+        "body_quat",
+        "jnt_range",
+        "jnt_pos",
+        "jnt_axis",
+        "dof_frictionloss",
+        "dof_damping",
+        "actuator_ctrlrange",
+        "actuator_gear",
+        "eq_data",
+        "exclude_signature"
+      ],
+      "parts": 64,
+      "checks": [
+        {
+          "pose": "saved",
+          "old_contacts": 1,
+          "old_penetration_mm": 0.6548529032789838,
+          "new_contacts": 0,
+          "new_penetration_mm": 0
+        },
+        {
+          "pose": "measured_thumb_FK",
+          "old_contacts": 1,
+          "old_penetration_mm": 1.4967385268826692,
+          "new_contacts": 0,
+          "new_penetration_mm": 0
+        }
+      ]
+    },
+    {
+      "file": "assets/fq/robots/g1_o6/robot.xml",
+      "unchanged": [
+        "body_mass",
+        "body_inertia",
+        "body_pos",
+        "body_quat",
+        "jnt_range",
+        "jnt_pos",
+        "jnt_axis",
+        "dof_frictionloss",
+        "dof_damping",
+        "actuator_ctrlrange",
+        "actuator_gear",
+        "eq_data",
+        "exclude_signature"
+      ],
+      "parts": 64,
+      "checks": [
+        {
+          "pose": "saved",
+          "old_contacts": 1,
+          "old_penetration_mm": 0.6548529032789725,
+          "new_contacts": 0,
+          "new_penetration_mm": 0
+        },
+        {
+          "pose": "measured_thumb_FK",
+          "old_contacts": 1,
+          "old_penetration_mm": 1.4967385268826512,
+          "new_contacts": 0,
+          "new_penetration_mm": 0
+        }
+      ]
+    }
+  ],
+  "fridge": [
+    {
+      "file": "assets/fq/haier_bcd402/refrigerator.xml",
+      "frictionloss_Nm": 0.0,
+      "damping_Nm_s_rad": 0.0,
+      "other_physical_parameters_unchanged": true,
+      "sweep_max_penetration_m": 0.0
+    },
+    {
+      "file": "scenes/fq/office_baseline/scene.xml",
+      "frictionloss_Nm": 0.0,
+      "damping_Nm_s_rad": 0.0,
+      "other_physical_parameters_unchanged": true,
+      "sweep_max_penetration_m": 0.0
+    }
+  ],
+  "usd_standalone_and_baseline_zero": true,
+  "urdf_parts": 64
+}

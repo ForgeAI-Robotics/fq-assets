@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:end_effectors/o6_right",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "kind": "end_effector",
   "name": "LinkerHand O6 右手",
   "origin": "fq",
@@ -25,7 +25,8 @@
   "limitations": [
     "质量、惯量、碰撞与驱动参数来自现有仿真模型，非实测标定",
     "浏览器仅作关节姿态预览，不代表抓取、平衡或真实驱动力已验证",
-    "O6 安装件 provisional：仅模型组合、运动学检查和视觉检查；未完成最终碰撞、抓取或硬件部署验证"
+    "O6 安装件 provisional：仅模型组合、运动学检查和视觉检查；未完成最终碰撞、抓取或硬件部署验证",
+    "Corrects convex-hull thumb-root cavity filling; not full grasp or hardware validation"
   ],
   "family": "o6",
   "release_status": "model_snapshot",
@@ -39,5 +40,6 @@
       "version": "0.1.0",
       "path": "profiles/poses/o6_right_task.json"
     }
-  ]
+  ],
+  "collision_revision": "assets/fq/end_effectors/o6_right/right_palm_collision.json"
 }

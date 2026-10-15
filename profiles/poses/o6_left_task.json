@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:poses/o6_left_task",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "O6_LEFT 任务手势",
   "kind": "hand_command_presets",
   "compatible_assets": [
@@ -77,6 +77,6 @@
   "source_calibration_verified": true,
   "compatible_asset_versions": {
     "fq:end_effectors/o6_left": "0.1.1",
-    "fq:robots/g1_o6": "0.1.4"
+    "fq:robots/g1_o6": "0.1.5"
   }
 }

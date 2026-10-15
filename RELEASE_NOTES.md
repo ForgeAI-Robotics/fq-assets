@@ -1,3 +1,9 @@
+## v0.7.1 — O6 right palm and zero refrigerator resistance
+
+O6 right hand 0.1.2 and G1+O6 0.1.5 use the 64-part right-palm convex decomposition from G1 navigate replay, in MJCF and the combined robot URDF. Original palm visual, masses, inertias, joints, actuators and contact masks are retained. The two reproduced thumb-root cavity false contacts (0.655 / 1.497 mm) are eliminated. This is a simulation collision correction, not hardware/grasp calibration.
+
+Refrigerator 0.1.7 and baseline 0.1.11 set right-hinge frictionloss and damping to zero. Uniform sampling is retained but its range is [0, 0]. MJCF, USD passive drives, regeneration source and frontend use the same simulation-only setting. Left door, mullion, geometry, 91 kg mass and contact friction are unchanged. Existing motions keep their original dynamic simulation provenance; compatibility metadata is revised for the new model with kinematic checks, without claiming a new dynamic walking acceptance.
+
 ## v0.7.0 — SONIC token motion libraries
 
 Replace the current unrelated walking-reference/model7100 and gesture catalog with the actual SONIC token libraries: v3 (11 primitives), v4 (13 primitives). Preserve stand initialization and safe-stand, for 26 current entries. No published squat action existed. Original token arrays, timestamps, metadata, enter/loop/exit boundaries, upstream evaluations, decoder hash and matching simulation startup profile are bundled. All 24 token entries complete isolated free-base G1+O6 MuJoCo simulation, with shared results only for byte-identical source files; O6/O7 joint-limit and kinematic replay checks pass. Browser shows decoded simulation root motion and filters by token library version. O7 dynamic execution, navigation-loop sequencing and hardware validation are not claimed. SIMPLE can load version-locked token arrays without issuing controls. Old releases preserve the removed catalog. No hand collision or fridge changes in this release.

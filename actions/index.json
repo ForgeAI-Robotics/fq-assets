@@ -3,132 +3,132 @@
   "actions": [
     {
       "id": "fq:actions/stand_initial",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/stand_initial/asset.json"
     },
     {
       "id": "fq:actions/safe_stand",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/safe_stand/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_stand",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_stand/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_forward_slow",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_forward_slow/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_forward_normal",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_forward_normal/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_forward_run",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_forward_run/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_backward_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_backward_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_strafe_left_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_strafe_left_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_strafe_right_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_strafe_right_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_turn_left_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_turn_left_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_turn_right_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_turn_right_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_turn_left_normal",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_turn_left_normal/asset.json"
     },
     {
       "id": "fq:actions/sonic_v3_turn_right_normal",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v3_turn_right_normal/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_stand",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_stand/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_forward_slow",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_forward_slow/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_forward_normal",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_forward_normal/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_forward_run",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_forward_run/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_backward_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_backward_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_strafe_left_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_strafe_left_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_strafe_right_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_strafe_right_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_turn_left_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_turn_left_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_turn_right_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_turn_right_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_turn_left_micro_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_turn_left_micro_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_turn_right_micro_continuous",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_turn_right_micro_continuous/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_turn_left_normal",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_turn_left_normal/asset.json"
     },
     {
       "id": "fq:actions/sonic_v4_turn_right_normal",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "actions/g1/sonic_v4_turn_right_normal/asset.json"
     }
   ]

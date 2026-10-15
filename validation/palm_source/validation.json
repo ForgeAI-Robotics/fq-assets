@@ -1,0 +1,314 @@
+{
+  "invariants": {
+    "body_mass": true,
+    "body_inertia": true,
+    "body_pos": true,
+    "body_quat": true,
+    "jnt_range": true,
+    "jnt_pos": true,
+    "jnt_axis": true,
+    "dof_frictionloss": true,
+    "dof_damping": true,
+    "actuator_ctrlrange": true,
+    "actuator_gear": true,
+    "eq_data": true,
+    "exclude_signature": true
+  },
+  "right_palm_collision_parts": 64,
+  "collision_masks": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "static_checks": [
+    {
+      "model": "old",
+      "pose": "saved",
+      "palm_thumb_contacts": [
+        {
+          "penetration_mm": 0.6548529032788635,
+          "geoms": [
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "model": "old",
+      "pose": "measured_thumb_FK",
+      "palm_thumb_contacts": [
+        {
+          "penetration_mm": 1.4967385268826185,
+          "geoms": [
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "model": "decomposed",
+      "pose": "saved",
+      "palm_thumb_contacts": []
+    },
+    {
+      "model": "decomposed",
+      "pose": "measured_thumb_FK",
+      "palm_thumb_contacts": []
+    }
+  ]
+}

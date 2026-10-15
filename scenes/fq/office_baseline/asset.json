@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/office_baseline",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -40,7 +40,7 @@
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
     "fq:objects/conference_table": "0.2.0",
-    "fq:articulated/haier_bcd402": "0.1.6"
+    "fq:articulated/haier_bcd402": "0.1.7"
   },
   "placements": {
     "refrigerator": {
