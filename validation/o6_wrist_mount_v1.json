@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "poses_checked": 3,
+  "mujoco_version": "3.3.6",
+  "physics_unchanged": true,
+  "left_head_default_unchanged": true,
+  "urdf_mjcf_agree": true,
+  "max_optical_basis_error": 1.1102230246251565e-16,
+  "real_hardware_calibration": false,
+  "render_profile_status": "visual_estimate_pending_independent_calibration"
+}

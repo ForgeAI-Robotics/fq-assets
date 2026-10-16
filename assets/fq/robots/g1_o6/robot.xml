@@ -626,7 +626,7 @@
                                 </body>
                             </body>
                           </body>
-                          <body name="d435i_right_housing" pos="0.0785547 0.0337719065 -0.0152109459" quat="0 0.707106781187 0 0.707106781187">
+                          <body name="d435i_right_housing" pos="0.0785547 0.0337719065 -0.0152109459" quat="0.68957728647954 -0.0078107836728886 0.72416892062692 0.0012377511744446">
                             <geom name="right_d435i_visual_00_0" type="mesh" mesh="d435i_visual_00_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
                             <geom name="right_d435i_visual_01_0" type="mesh" mesh="d435i_visual_01_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
                             <geom name="right_d435i_visual_02_0" type="mesh" mesh="d435i_visual_02_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
@@ -648,10 +648,10 @@
                             <geom name="right_d435i_visual_16_0" type="mesh" mesh="d435i_visual_16_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
                             <geom name="right_d435i_visual_17_0" type="mesh" mesh="d435i_visual_17_0" contype="0" conaffinity="0" group="1" density="0" rgba="0.749019607843 0.749019607843 0.749019607843 1" />
                           </body>
-                          <site name="d435i_right_rgb_optical" pos="0.0742547 0.0337719065 0.0172890541" quat="0.707106781187 0 0.707106781187 0" size=".001" rgba="0 0 0 0" />
-                          <site name="d435i_right_depth_optical" pos="0.0742547 0.0337719065 0.0022890541" quat="0.707106781187 0 0.707106781187 0" size=".001" rgba="0 0 0 0" />
-                          <camera name="d435i_right_rgb" pos="0.0742547 0.0337719065 0.0172890541" quat="0 0.707106781187 0 -0.707106781187" resolution="640 480" sensorsize="640 480" focalpixel="604.737670898 604.221618652" principalpixel="4.63046264648 13.8328399658" />
-                          <camera name="d435i_right_depth" pos="0.0742547 0.0337719065 0.0022890541" quat="0 0.707106781187 0 -0.707106781187" resolution="640 480" sensorsize="640 480" focalpixel="385.593688965 385.593688965" principalpixel="-0.787963867188 -6.96577453613" />
+                          <site name="d435i_right_rgb_optical" pos="0.072672757119739 0.033405695062942 -0.047460110806036" quat="-0.0012377511744446 0.72416892062692 0.0078107836728886 0.68957728647954" size=".001" rgba="0 0 0 0" />
+                          <site name="d435i_right_depth_optical" pos="0.073405421848637 0.033549779113505 -0.032478707594674" quat="-0.0012377511744446 0.72416892062692 0.0078107836728886 0.68957728647954" size=".001" rgba="0 0 0 0" />
+                          <camera name="d435i_right_rgb" pos="0.072672757119739 0.033405695062942 -0.047460110806036" quat="0.72416892062692 0.0012377511744446 -0.68957728647954 0.0078107836728886" resolution="640 480" sensorsize="640 480" focalpixel="604.737670898 604.221618652" principalpixel="4.63046264648 13.8328399658" />
+                          <camera name="d435i_right_depth" pos="0.073405421848637 0.033549779113505 -0.032478707594674" quat="0.72416892062692 0.0012377511744446 -0.68957728647954 0.0078107836728886" resolution="640 480" sensorsize="640 480" focalpixel="385.593688965 385.593688965" principalpixel="-0.787963867188 -6.96577453613" />
                         </body>
                       </body>
                     </body>

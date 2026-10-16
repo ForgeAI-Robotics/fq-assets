@@ -2492,7 +2492,7 @@
   <joint name="d435i_right_housing_fixed" type="fixed">
     <parent link="right_wrist_yaw_link" />
     <child link="d435i_right_housing" />
-    <origin xyz="0.0785547 0.0337719065 -0.0152109459" rpy="0.0 -1.5707963057214724 0.0" />
+    <origin xyz="0.0785547 0.0337719065 -0.0152109459" rpy="-2.9602136602154 1.5209958815735 -2.9474130440271" />
   </joint>
   <link name="d435i_head_housing">
     <visual>
@@ -2680,5 +2680,17 @@
     <parent link="torso_link" />
     <child link="d435i_head_depth_aligned_to_color_optical" />
     <origin xyz="0.04257231230795391 -0.004112736266231373 0.404528591355674" rpy="-2.355553604346951 0.01521947985728445 -1.529717755217433" />
+  </joint>
+  <link name="d435i_right_rgb_optical" />
+  <joint name="d435i_right_rgb_optical_fixed" type="fixed">
+    <parent link="right_wrist_yaw_link" />
+    <child link="d435i_right_rgb_optical" />
+    <origin xyz="0.072672757119739 0.033405695062942 -0.047460110806036" rpy="2.9602136602154 -1.5209958815735 0.19417960956274" />
+  </joint>
+  <link name="d435i_right_depth_optical" />
+  <joint name="d435i_right_depth_optical_fixed" type="fixed">
+    <parent link="right_wrist_yaw_link" />
+    <child link="d435i_right_depth_optical" />
+    <origin xyz="0.073405421848637 0.033549779113505 -0.032478707594674" rpy="2.9602136602154 -1.5209958815735 0.19417960956274" />
   </joint>
 </robot>

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:robots/g1_o6",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "kind": "robot",
   "name": "G1 + O6 双手",
   "origin": "fq",
@@ -27,9 +27,10 @@
     "质量、惯量、碰撞与驱动参数来自现有仿真模型，非实测标定",
     "浏览器仅作关节姿态预览，不代表抓取、平衡或真实驱动力已验证",
     "O6 安装件 provisional：仅模型组合、运动学检查和视觉检查；未完成最终碰撞、抓取或硬件部署验证",
-    "头部 D435i 使用 2026-10-12 新外参作为仿真默认；实机独立验证未完成，坐标桥接高度有 10mm 待确认；腕部配置不变。",
+    "头部 D435i 使用 2026-10-12 新外参作为仿真默认；实机独立验证未完成，坐标桥接高度有 10mm 待确认。",
     "头部槽位按相机 CAD 包络近似建模，非实测槽位；彩色视线抽样无头壳遮挡，原生深度边缘 5/825 抽样点仍有头壳遮挡。头部接触几何已改变，未完成 Isaac/实机验证。",
-    "Corrects convex-hull thumb-root cavity filling; not full grasp or hardware validation"
+    "Corrects convex-hull thumb-root cavity filling; not full grasp or hardware validation",
+    "右腕安装反向已修正；小角度与双腕预览 profile 为视觉估计，未完成各设备内参/手眼独立标定。左腕默认安装保持不变，渲染可显式选择双腕 profile。"
   ],
   "family": "o6",
   "release_status": "model_snapshot",
@@ -86,13 +87,20 @@
         -0.0152109459
       ],
       "quaternion_wxyz": [
-        0.0,
-        0.707106781187,
-        0.0,
-        0.707106781187
+        0.6895772864795442,
+        -0.0078107836728886085,
+        0.7241689206269171,
+        0.0012377511744446135
       ],
-      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
-      "physics": "visual_only"
+      "extrinsic_status": "visual_estimate_pending_independent_calibration",
+      "physics": "visual_only",
+      "optical_position": [
+        0.07267275711973918,
+        0.03340569506294176,
+        -0.0474601108060362
+      ],
+      "profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json",
+      "correction": "Fixed right housing roll and off-centre RGB/depth positions; small orientation adjustment is a visual estimate, not measured calibration."
     },
     "head": {
       "asset_id": "fq:cameras/realsense_d435i",
@@ -138,5 +146,6 @@
       "path": "profiles/poses/g1_beyondmimic_initial.json"
     }
   ],
-  "collision_revision": "assets/fq/robots/g1_o6/right_palm_collision.json"
+  "collision_revision": "assets/fq/robots/g1_o6/right_palm_collision.json",
+  "wrist_camera_profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json"
 }

@@ -1,3 +1,11 @@
+# v0.7.4 — G1 O6 right wrist camera mounting correction
+
+G1 O6 0.1.6 fixes the reversed right wrist camera housing orientation and recomputes the off-centre RGB and native depth reference positions. MJCF camera/site frames and URDF housing/optical frames agree. The mounting centre stays at its CAD location. Head and left wrist defaults, joints, masses, actuators, collision geometry, and refrigerator assets are unchanged.
+
+The right default includes the small orientation estimate used in the reviewed Isaac preview. This is a visual estimate, not independently measured hand-eye calibration. Per-device wrist intrinsics were unavailable; existing reference intrinsics are retained. `assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json` preserves the complete reviewed two-wrist profile for explicitly selected rendering; its body IDs refer to the recorded reference model and consumers must resolve/check parent names. The left wrist adjustment is opt-in through this profile, not a new default.
+
+Evidence: original real episodes 9 and 22, 640 x 480 RGB; OPEN raw endpoints match. Right RGB's 32.5 mm lateral housing offset must rotate with the housing: rotating only the view does not correct the optical centre. Four approximate finger landmarks cannot determine full extrinsics and intrinsics independently. Robot physical parameters and motion trajectories were not changed.
+
 # v0.7.3 — baseline floor-to-ceiling windows
 
 Baseline 0.1.13 adds two 1.5 m windows on the refrigerator right exterior wall.

@@ -1,0 +1,244 @@
+{
+  "status": "visual_estimate_pending_independent_calibration",
+  "source_episode": 22,
+  "reference_frame": 0,
+  "reference_resolution": [
+    640,
+    480
+  ],
+  "intrinsics_status": "existing reference intrinsics retained; per-device calibration not found in source metadata",
+  "source_hand_raw_open": [
+    250,
+    179,
+    250,
+    250,
+    250,
+    250
+  ],
+  "fit_limitations": [
+    "Four nearly collinear finger-cap landmarks cannot independently identify six extrinsic parameters. Housing centres are held at CAD values; only small orientation corrections are fitted.",
+    "Right optical position changes because the off-centre RGB lens follows the corrected housing roll.",
+    "Landmarks are manually read, approximate, and hand angle bridge is approximate.",
+    "Fit residual is not a hand-eye calibration accuracy estimate."
+  ],
+  "cameras": {
+    "left": {
+      "camera_name": "d435i_left_rgb",
+      "parent_body_id": 30,
+      "housing_body_id": 47,
+      "parent_link": "left_wrist_yaw_link",
+      "camera_position_m": [
+        0.07295080123000858,
+        -0.03618907528463275,
+        -0.04742109358116232
+      ],
+      "camera_quaternion_wxyz": [
+        0.7192939159860673,
+        -0.05357896129060481,
+        -0.692607248692927,
+        0.0063840731874212535
+      ],
+      "housing_position_m": [
+        0.0785547,
+        -0.0337719065,
+        -0.0152109459
+      ],
+      "housing_quaternion_wxyz": [
+        0.692607248692927,
+        -0.006384073187421251,
+        0.7192939159860673,
+        -0.05357896129060482
+      ],
+      "previous_camera_position_m": [
+        0.0742547,
+        -0.0337719065,
+        -0.0477109459
+      ],
+      "housing_translation_delta_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "optical_local_xyz_rotation_delta_deg": [
+        -3.7318903309272855,
+        2.321623410259473,
+        4.78810246814475
+      ],
+      "base_orientation_note": "right housing roll corrected 180 degrees; left original roll retained",
+      "landmark_names": [
+        "pinky",
+        "ring",
+        "middle",
+        "index"
+      ],
+      "landmark_points_in_wrist_m": [
+        [
+          0.24578965675132358,
+          -0.014970858761439597,
+          -0.034250881540341296
+        ],
+        [
+          0.2520128259113187,
+          -0.013489130026446104,
+          -0.014625314664660688
+        ],
+        [
+          0.25605890652241853,
+          -0.012979129856833886,
+          0.0063169940225596185
+        ],
+        [
+          0.25202225706862674,
+          -0.01495176585549585,
+          0.02765124643155156
+        ]
+      ],
+      "target_pixels": [
+        [
+          375,
+          145
+        ],
+        [
+          454,
+          140
+        ],
+        [
+          532,
+          150
+        ],
+        [
+          622,
+          169
+        ]
+      ],
+      "projected_pixels": [
+        [
+          393.0256430248915,
+          143.20382130579483
+        ],
+        [
+          459.12687377382895,
+          145.955375131917
+        ],
+        [
+          527.6022786489183,
+          151.3965868074407
+        ],
+        [
+          605.726436423572,
+          162.72463014182364
+        ]
+      ],
+      "landmark_rms_px": 9.456485460666654
+    },
+    "right": {
+      "camera_name": "d435i_right_rgb",
+      "parent_body_id": 54,
+      "housing_body_id": 71,
+      "parent_link": "right_wrist_yaw_link",
+      "camera_position_m": [
+        0.07267275711973918,
+        0.03340569506294176,
+        -0.0474601108060362
+      ],
+      "camera_quaternion_wxyz": [
+        0.7241689206269171,
+        0.0012377511744446129,
+        -0.6895772864795442,
+        0.007810783672888608
+      ],
+      "housing_position_m": [
+        0.0785547,
+        0.0337719065,
+        -0.0152109459
+      ],
+      "housing_quaternion_wxyz": [
+        0.6895772864795442,
+        -0.0078107836728886085,
+        0.7241689206269171,
+        0.0012377511744446135
+      ],
+      "previous_camera_position_m": [
+        0.0742547,
+        0.0337719065,
+        0.0172890541
+      ],
+      "housing_translation_delta_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "optical_local_xyz_rotation_delta_deg": [
+        0.7468866839598314,
+        2.7996871046090535,
+        0.5510267200648148
+      ],
+      "base_orientation_note": "right housing roll corrected 180 degrees; left original roll retained",
+      "landmark_names": [
+        "pinky",
+        "ring",
+        "middle",
+        "index"
+      ],
+      "landmark_points_in_wrist_m": [
+        [
+          0.24579395506985952,
+          0.014951108793687655,
+          -0.03424264558418452
+        ],
+        [
+          0.2520172994162358,
+          0.013468199199873935,
+          -0.014617639612879445
+        ],
+        [
+          0.2560633240734531,
+          0.012957448824191203,
+          0.006321992810593438
+        ],
+        [
+          0.2520261107641087,
+          0.01493103724002874,
+          0.027653263099854636
+        ]
+      ],
+      "target_pixels": [
+        [
+          374,
+          329
+        ],
+        [
+          452,
+          330
+        ],
+        [
+          530,
+          328
+        ],
+        [
+          618,
+          330
+        ]
+      ],
+      "projected_pixels": [
+        [
+          390.8815719426801,
+          326.9802955782668
+        ],
+        [
+          456.5101781733781,
+          330.7507669388465
+        ],
+        [
+          524.9597277098949,
+          331.9853325147561
+        ],
+        [
+          603.9192868822981,
+          327.91285278801024
+        ]
+      ],
+      "landmark_rms_px": 8.320771604531686
+    }
+  }
+}

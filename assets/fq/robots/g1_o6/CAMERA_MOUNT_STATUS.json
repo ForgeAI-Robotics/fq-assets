@@ -31,13 +31,20 @@
         -0.0152109459
       ],
       "quaternion_wxyz": [
-        0.0,
-        0.707106781187,
-        0.0,
-        0.707106781187
+        0.6895772864795442,
+        -0.0078107836728886085,
+        0.7241689206269171,
+        0.0012377511744446135
       ],
-      "extrinsic_status": "cad_45mm_holes_nominal_camera_front_forward_usb_roll_assumed",
-      "physics": "visual_only"
+      "extrinsic_status": "visual_estimate_pending_independent_calibration",
+      "physics": "visual_only",
+      "optical_position": [
+        0.07267275711973918,
+        0.03340569506294176,
+        -0.0474601108060362
+      ],
+      "profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json",
+      "correction": "Fixed right housing roll and off-centre RGB/depth positions; small orientation adjustment is a visual estimate, not measured calibration."
     },
     "head": {
       "asset_id": "fq:cameras/realsense_d435i",
@@ -65,5 +72,6 @@
     }
   },
   "production_ready": false,
-  "default_simulation_enabled": true
+  "default_simulation_enabled": true,
+  "wrist_visual_profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json"
 }
