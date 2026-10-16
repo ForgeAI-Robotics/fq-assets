@@ -2092,7 +2092,7 @@
         <mesh filename="meshes/o6_left_hand_transfer_flange_two_piece.stl" />
       </geometry>
       <material name="left_o6_hand_transfer_flange_link_material">
-        <color rgba="0.96 0.65 0.22 1" />
+        <color rgba="0.95 0.95 0.95 1" />
       </material>
     </visual>
   </link>
@@ -2107,7 +2107,7 @@
         <mesh filename="meshes/o6_right_hand_transfer_flange_two_piece.stl" />
       </geometry>
       <material name="right_o6_hand_transfer_flange_link_material">
-        <color rgba="0.96 0.65 0.22 1" />
+        <color rgba="0.95 0.95 0.95 1" />
       </material>
     </visual>
   </link>

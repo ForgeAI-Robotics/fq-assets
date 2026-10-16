@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:robots/g1_o6",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "kind": "robot",
   "name": "G1 + O6 双手",
   "origin": "fq",
@@ -147,5 +147,16 @@
     }
   ],
   "collision_revision": "assets/fq/robots/g1_o6/right_palm_collision.json",
-  "wrist_camera_profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json"
+  "wrist_camera_profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json",
+  "appearance_revision": {
+    "date": "2026-10-16",
+    "change": "Both O6 wrist transfer flanges changed from orange to white",
+    "rgba": [
+      0.95,
+      0.95,
+      0.95,
+      1
+    ],
+    "physics_changed": false
+  }
 }

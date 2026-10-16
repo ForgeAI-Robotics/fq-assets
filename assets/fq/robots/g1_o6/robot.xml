@@ -334,7 +334,7 @@
                           <body name="left_o6_camera_bracket_link">
                             <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.25 0.55 0.85 1" mesh="o6_left_camera_bracket_two_piece" />
                             <body name="left_o6_hand_transfer_flange_link">
-                              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.96 0.65 0.22 1" mesh="o6_left_hand_transfer_flange_two_piece" />
+                              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.95 0.95 0.95 1" mesh="o6_left_hand_transfer_flange_two_piece" />
                               <body name="left_o6_hand_base_link" pos="0.08042 0 0" quat="0.5 -0.5 0.5 -0.5">
                                 <inertial pos="-0.00157789 -0.000348767 0.0538452" quat="0.999277 -0.0364386 0.00654483 0.00864025" mass="0.0672935" diaginertia="5.2263e-05 3.34034e-05 2.27853e-05" />
                                 <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o6_left_hand_base_link" />
@@ -484,7 +484,7 @@
                           <body name="right_o6_camera_bracket_link">
                             <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.25 0.55 0.85 1" mesh="o6_right_camera_bracket_two_piece" />
                             <body name="right_o6_hand_transfer_flange_link">
-                              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.96 0.65 0.22 1" mesh="o6_right_hand_transfer_flange_two_piece" />
+                              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.95 0.95 0.95 1" mesh="o6_right_hand_transfer_flange_two_piece" />
                               <body name="right_o6_hand_base_link" pos="0.08042 0 0" quat="0.5 0.5 0.5 0.5">
                                 <inertial pos="-0.00160321 0.000358463 0.0538003" quat="0.999267 -0.0369342 -0.00667783 0.00753493" mass="0.0674008" diaginertia="5.22457e-05 3.34005e-05 2.27714e-05" />
                                 <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.7 0.7 0.7 1" mesh="o6_right_hand_base_link" />
