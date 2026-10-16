@@ -150,13 +150,19 @@
   "wrist_camera_profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json",
   "appearance_revision": {
     "date": "2026-10-16",
-    "change": "Both O6 wrist transfer flanges changed from orange to white",
+    "change": "Both O6 wrist transfer flanges and camera brackets are white",
     "rgba": [
       0.95,
       0.95,
       0.95,
-      1
+      1.0
     ],
-    "physics_changed": false
+    "physics_changed": false,
+    "bodies": [
+      "left_o6_camera_bracket_link",
+      "left_o6_hand_transfer_flange_link",
+      "right_o6_camera_bracket_link",
+      "right_o6_hand_transfer_flange_link"
+    ]
   }
 }

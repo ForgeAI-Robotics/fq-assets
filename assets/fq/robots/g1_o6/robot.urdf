@@ -1333,7 +1333,7 @@
         <mesh filename="meshes/o6_left_camera_bracket_two_piece.stl" />
       </geometry>
       <material name="left_o6_camera_bracket_link_material">
-        <color rgba="0.25 0.55 0.85 1" />
+        <color rgba="0.95 0.95 0.95 1" />
       </material>
     </visual>
   </link>
@@ -2077,7 +2077,7 @@
         <mesh filename="meshes/o6_right_camera_bracket_two_piece.stl" />
       </geometry>
       <material name="right_o6_camera_bracket_link_material">
-        <color rgba="0.25 0.55 0.85 1" />
+        <color rgba="0.95 0.95 0.95 1" />
       </material>
     </visual>
   </link>
