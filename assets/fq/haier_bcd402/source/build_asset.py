@@ -34,7 +34,7 @@ for link in anchors:
     if link=='cabinet':b=E.SubElement(world,'body',name='refrigerator_base')
     else:
         parent=parents[link];b=E.SubElement(bs[parent],'body',name='refrigerator_'+link,pos=text(rel(anchors[link],anchors[parent])))
-        E.SubElement(b,'joint',name=joints[link],type='hinge',pos=text(offsets[link]),axis='0 0 -1' if link=='door_left' else '0 0 1',range='0 1.57079632679',damping='0' if link=='door_right' else ('.15' if link=='door_left' else '.01'),frictionloss=str(RESISTANCE['frictionloss_Nm']) if link=='door_right' else '0',armature='.002')
+        E.SubElement(b,'joint',name=joints[link],type='hinge',pos=text(offsets[link]),axis='0 0 -1' if link=='door_left' else '0 0 1',range='0 1.57079632679',damping='0' if link in ('door_left','door_right') else '.01',frictionloss=str(RESISTANCE['frictionloss_Nm']) if link in ('door_left','door_right') else '0',armature='.002')
         E.SubElement(b,'inertial',pos=text(coms[link]),mass=str(masses[link]),diaginertia=text(inertias[link]))
     if link=='cabinet':E.SubElement(b,'inertial',pos=text(coms[link]),mass=str(masses[link]),diaginertia=text(inertias[link]))
     bs[link]=b

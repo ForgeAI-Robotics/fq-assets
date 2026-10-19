@@ -14143,10 +14143,16 @@ def Xform "Refrigerator" (
 
         def PhysicsRevoluteJoint "refrigerator_left_hinge" (
             prepend apiSchemas = ["PhysxJointAPI", "PhysxLimitAPI:angular", "PhysicsDriveAPI:angular"]
+            customData = {
+                dictionary fq = {
+                    double simulationDampingNmSRad = 0
+                    double simulationFrictionlossNm = 0.1
+                }
+            }
         )
         {
-            float drive:angular:physics:damping = 0.0026179939
-            float drive:angular:physics:maxForce = 1000000
+            float drive:angular:physics:damping = 174.53293
+            float drive:angular:physics:maxForce = 0.1
             float drive:angular:physics:stiffness = 0
             float drive:angular:physics:targetVelocity = 0
             uniform token drive:angular:physics:type = "force"
@@ -14178,7 +14184,7 @@ def Xform "Refrigerator" (
             }
         )
         {
-            float drive:angular:physics:damping = 174.53292519943295
+            float drive:angular:physics:damping = 174.53293
             float drive:angular:physics:maxForce = 0.1
             float drive:angular:physics:stiffness = 0
             float drive:angular:physics:targetVelocity = 0

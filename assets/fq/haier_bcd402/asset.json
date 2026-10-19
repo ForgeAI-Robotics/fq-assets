@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/haier_bcd402",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "kind": "articulated",
   "units": "meter",
   "up_axis": "Z",
@@ -84,15 +84,16 @@
       "sample_once_per_episode": true,
       "rng": "numpy PCG64 SeedSequence([seed, episode_index])"
     },
-    "scope": "Right door only; left door and mullion unchanged",
+    "scope": "Both upper doors; mullion unchanged",
     "basis": "User-approved small passive hinge friction for simulated opening; not hardware calibration",
     "source_task": "G1 O6 right-pull / left-push opening, 2026-10-19",
     "limitations": [
-      "Right-door dry friction is0.1 N m, viscous damping0; left door and mullion unchanged",
+      "Both doors: dry friction 0.1 N m and viscous damping 0; mullion unchanged",
       "Uniform compatibility mode samples0.1 from[0.1,0.1]; no unmeasured random range is introduced",
       "Seal force and real hardware resistance are not calibrated",
       "This parameter update does not certify a successful robot-opening episode",
-      "Historical CPU PhysX runtime validation does not validate this new setting or GPU/hardware behavior"
+      "Historical CPU PhysX runtime validation does not validate this new setting or GPU/hardware behavior",
+      "Legacy SIMPLE adapters may control only target_joint (right); left fixed resistance is authored in MJCF/USD. Paired randomization is not certified."
     ],
     "usd_runtime_supported": true,
     "physx": {
@@ -108,7 +109,11 @@
         "uniform"
       ],
       "replay": "assets SHA + runtime hash + image + sampled resistance + q/v/time; same-engine replay only"
-    }
+    },
+    "target_joints": [
+      "refrigerator_left_hinge",
+      "refrigerator_right_hinge"
+    ]
   },
   "measured_dimensions": {
     "floor_to_upper_door_lower_edge_m": 0.82,

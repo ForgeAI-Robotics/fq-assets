@@ -1212,7 +1212,7 @@
     <body name="refrigerator_base">
       <inertial pos="0 0 0.9" mass="76.7" diaginertia="21.9142857 21.9142857 5.47857143" />
       <body name="refrigerator_door_left" pos="-0.342000008 -0.275000006 0.849583328">
-        <joint name="refrigerator_left_hinge" type="hinge" pos="-0.0119999924 0 0" axis="0 0 -1" range="0 1.57079632679" damping=".15" frictionloss="0" armature=".002" />
+        <joint name="refrigerator_left_hinge" type="hinge" pos="-0.0119999924 0 0" axis="0 0 -1" range="0 1.57079632679" damping="0" frictionloss="0.1" armature=".002" />
         <inertial pos="0.165 -0.022 0.58767193" mass="7.0" diaginertia="0.900544576 0.970544576 0.08" />
         <body name="refrigerator_mullion" pos="0.328000009 0.0320000052 0.0395833254">
           <joint name="refrigerator_mullion_hinge" type="hinge" pos="0 0 0" axis="0 0 1" range="0 1.57079632679" damping=".01" frictionloss="0" armature=".002" />

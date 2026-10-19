@@ -2,7 +2,7 @@
 
 FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、标定与来源记录。资产采用米制、Z 轴向上；MuJoCo 四元数为 `wxyz`。
 
-当前发布版本为 **[v0.8.0](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.8.0)**。会议桌 **0.3.0** 保留原尺寸约 4.011 × 1.20 × 0.75 m、几何与碰撞，更新 SimFoundry v4 底色和粗糙度材质；基准场景 **0.1.14** 同步材质。支持 PBR 的资产在网页显示标识及原光照 / 柔光 / 强光预览。各资产版本以 `asset.json` 和 `assets.lock.json` 为准。
+当前发布版本为 **[v0.8.2](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.8.2)**。冰箱 0.1.10、基准场景 0.1.16：左右上门均为摩擦力矩 0.1 N·m、阻尼 0，中缝竖梁不变。参数为仿真设定，非实测标定。
 
 ## 获取与版本锁定
 

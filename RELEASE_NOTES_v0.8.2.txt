@@ -1,0 +1,1 @@
+Both upper refrigerator doors now use dry friction 0.1 N m and viscous damping 0. Mullion, geometry, mass, inertia and joint limits unchanged. Fridge 0.1.10; baseline 0.1.16. Simulation setting, not hardware calibration. MJCF and composed USD checked; no new PhysX dynamics acceptance. Legacy SIMPLE right-only runtime overlays are not modified.
