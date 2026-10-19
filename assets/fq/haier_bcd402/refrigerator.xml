@@ -1757,7 +1757,7 @@
         <geom name="col_049_11_arch_5_8" type="mesh" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" mesh="col_049_11_arch_5_8" />
       </body>
       <body name="refrigerator_door_right" pos="0.342000008 -0.275000006 0.849583328">
-        <joint name="refrigerator_right_hinge" type="hinge" pos="0.0119999924 0 0" axis="0 0 1" range="0 1.57079632679" damping="0" frictionloss="0" armature=".002" />
+        <joint name="refrigerator_right_hinge" type="hinge" pos="0.0119999924 0 0" axis="0 0 1" range="0 1.57079632679" damping="0" frictionloss="0.1" armature=".002" />
         <inertial pos="-0.165 -0.022 0.58767193" mass="7.0" diaginertia="0.900544576 0.970544576 0.08" />
         <geom name="part_076" type="mesh" mesh="part_076" contype="0" conaffinity="0" group="2" density="0" material="pbr_part_076" />
         <geom name="part_077" type="mesh" mesh="part_077" contype="0" conaffinity="0" group="2" density="0" material="pbr_part_077" />

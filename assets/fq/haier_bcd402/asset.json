@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/haier_bcd402",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "kind": "articulated",
   "units": "meter",
   "up_axis": "Z",
@@ -47,7 +47,8 @@
     "Both hinge axes geometrically corrected to cabinet outer sides (+/-0.354 m); not hardware calibrated. Mullion remains independent with contact disabled.",
     "CPU PhysX validated with SIMPLE adapter; not measured hardware resistance or GPU validation.",
     "82 cm floor-to-upper-door-lower-edge measured by user; upper compartment and upper freezer transition adjusted geometrically, not independently measured. Original Blender file remains provenance, use calibrated geometry.json for regeneration.",
-    "Upper doors share a user-approved 10 mm central arch; geometry and regional materials are simulation estimates. Regenerate using source/build_asset.py including author_arch.py, not geometry.json alone. Window lighting is environment configuration."
+    "Upper doors share a user-approved 10 mm central arch; geometry and regional materials are simulation estimates. Regenerate using source/build_asset.py including author_arch.py, not geometry.json alone. Window lighting is environment configuration.",
+    "Right-door frictionloss0.1 N m and damping0 are user-selected simulation settings, not hardware calibration; opening task acceptance remains separate."
   ],
   "calibration_record": "assets/fq/haier_bcd402/calibration_v3.json",
   "mass_properties": {
@@ -72,25 +73,26 @@
     "status": "simulation_parameter_not_measured_calibration",
     "target_joint": "refrigerator_right_hinge",
     "default_mode": "fixed",
-    "frictionloss_Nm": 0.0,
+    "frictionloss_Nm": 0.1,
     "damping_Nm_s_rad": 0.0,
     "randomization": {
       "mode": "uniform",
       "bounds_Nm": [
-        0.0,
-        0.0
+        0.1,
+        0.1
       ],
       "sample_once_per_episode": true,
       "rng": "numpy PCG64 SeedSequence([seed, episode_index])"
     },
     "scope": "Right door only; left door and mullion unchanged",
-    "basis": "User-approved zero-resistance simulation setting from G1 navigate replay comparison; not a measured hardware estimate",
-    "source_task": "G1 navigate replay: door_no_resistance, 2026-10-14",
+    "basis": "User-approved small passive hinge friction for simulated opening; not hardware calibration",
+    "source_task": "G1 O6 right-pull / left-push opening, 2026-10-19",
     "limitations": [
-      "Right-door dry friction and viscous damping intentionally disabled; left door and mullion unchanged",
-      "Uniform mode is retained for replay compatibility but samples zero from [0, 0]",
+      "Right-door dry friction is0.1 N m, viscous damping0; left door and mullion unchanged",
+      "Uniform compatibility mode samples0.1 from[0.1,0.1]; no unmeasured random range is introduced",
       "Seal force and real hardware resistance are not calibrated",
-      "Same-engine replay only; CPU PhysX validation does not imply GPU/hardware validation"
+      "This parameter update does not certify a successful robot-opening episode",
+      "Historical CPU PhysX runtime validation does not validate this new setting or GPU/hardware behavior"
     ],
     "usd_runtime_supported": true,
     "physx": {
@@ -100,7 +102,7 @@
       "regularization_slope_Nm_s_rad": 10000.0,
       "torque_cap": "F + damping_Nm_s_rad * abs(previous_joint_velocity_rad_s)",
       "physics_dt_s": 0.0005,
-      "raw_usd": "Zero right-door drive damping and max force; runtime adapter preserves zero in both fixed and uniform modes",
+      "raw_usd": "Zero-velocity angular drive, damping slope10000 N m s/rad converted to USD degree units, max force0.1 N m, stiffness0. SIMPLE adapter uses the same constant profile.",
       "modes": [
         "fixed",
         "uniform"

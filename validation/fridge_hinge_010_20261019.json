@@ -1,0 +1,58 @@
+{
+  "setting_not_hardware_calibration": true,
+  "mujoco": [
+    {
+      "path": "assets/fq/haier_bcd402/refrigerator.xml",
+      "frictionloss_Nm": 0.1,
+      "damping": 0.0,
+      "solver_cases": [
+        {
+          "velocity_rad_s": -0.1,
+          "added_opposing_torque_Nm": 0.1
+        },
+        {
+          "velocity_rad_s": 0.1,
+          "added_opposing_torque_Nm": -0.1
+        }
+      ]
+    },
+    {
+      "path": "scenes/fq/office_baseline/scene.xml",
+      "frictionloss_Nm": 0.1,
+      "damping": 0.0,
+      "solver_cases": [
+        {
+          "velocity_rad_s": -0.1,
+          "added_opposing_torque_Nm": 0.1
+        },
+        {
+          "velocity_rad_s": 0.1,
+          "added_opposing_torque_Nm": -0.1
+        }
+      ]
+    }
+  ],
+  "usd": [
+    {
+      "path": "assets/fq/haier_bcd402/refrigerator.usda",
+      "cap_Nm": 0.10000000149011612,
+      "drive_slope_Nm_s_degree": 174.53292846679688,
+      "dimensionless_joint_friction": 0,
+      "validation": "Composed USD attributes; not a new PhysX dynamics run"
+    },
+    {
+      "path": "scenes/fq/office_baseline/scene.usda",
+      "cap_Nm": 0.10000000149011612,
+      "drive_slope_Nm_s_degree": 174.53292846679688,
+      "dimensionless_joint_friction": 0,
+      "validation": "Composed USD attributes; not a new PhysX dynamics run"
+    }
+  ],
+  "generator_default_reads_canonical_profile": true,
+  "scope_verification": {
+    "mujoco_only_right_hinge_friction_changed": true,
+    "usd_only_right_hinge_block_changed": true,
+    "metadata_and_catalog_versions_consistent": true,
+    "geometry_mass_inertia_left_door_mullion_unchanged": true
+  }
+}

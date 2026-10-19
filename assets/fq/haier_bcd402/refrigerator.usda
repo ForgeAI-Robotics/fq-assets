@@ -14173,13 +14173,13 @@ def Xform "Refrigerator" (
                     string resistanceRuntime = "SIMPLE PhysXFridge: CPU Isaac Sim 4.5; zero-velocity capped drive"
                     bool resistanceRuntimeSupported = 1
                     double simulationDampingNmSRad = 0
-                    double simulationFrictionlossNm = 0
+                    double simulationFrictionlossNm = 0.1
                 }
             }
         )
         {
-            float drive:angular:physics:damping = 0
-            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:damping = 174.53292519943295
+            float drive:angular:physics:maxForce = 0.1
             float drive:angular:physics:stiffness = 0
             float drive:angular:physics:targetVelocity = 0
             uniform token drive:angular:physics:type = "force"

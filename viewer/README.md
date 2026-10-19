@@ -53,8 +53,8 @@ merely because the browser has refreshed.
 - Browser motion is **kinematic only**: it does not test contacts, force or torque.
 - Refrigerator whole-appliance mass is 91 kg, with 14.3 kg in movable parts and
   76.7 kg in the fixed assembly. Component allocation and inertia are estimates.
-- Right-door frictionloss and viscous damping are zero simulation settings;
-  fixed and uniform modes both use zero. Left-door/mullion settings remain
+- Right-door frictionloss is0.1 N m and viscous damping is0;
+  fixed and compatible uniform modes both use0.1 N m. This is not hardware calibration. Left-door/mullion settings remain
   unchanged. Real seal force is uncalibrated, mullion motion is independent, and
   the freezer is static. Appearance parameters are not measured hardware values.
 - Provenance and licenses remain governed by NOTICE.md and asset manifests.

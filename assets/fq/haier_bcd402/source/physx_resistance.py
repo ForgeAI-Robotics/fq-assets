@@ -4,11 +4,13 @@ Raw USD contains fixed dry resistance. SIMPLE PhysXFridge supplies the
 per-step viscous cap and episode randomization; never use dimensionless
 physxJoint:jointFriction as a torque.
 """
-import math
+import math,json
+from pathlib import Path
 from pxr import UsdPhysics,Sdf
 SLOPE=10000.0
 
-def author(stage, root='/Refrigerator', friction=0.0):
+def author(stage, root='/Refrigerator', friction=None):
+    if friction is None:friction=float(json.loads((Path(__file__).resolve().parent.parent/'simulation_resistance.json').read_text())['frictionloss_Nm'])
     p=stage.GetPrimAtPath(root)
     p.RemoveAPI(UsdPhysics.ArticulationRootAPI)
     base=stage.GetPrimAtPath(root+'/Joints/fixed_base')
