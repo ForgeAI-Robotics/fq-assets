@@ -23,6 +23,7 @@ def main():
     ap.add_argument('--out',type=Path,required=True);ap.add_argument('--commit',required=True)
     args=ap.parse_args();root=args.root.resolve();out=args.out;out.mkdir(parents=True,exist_ok=True)
     appearance=json.loads((root/'assets/fq/haier_bcd402/appearance.json').read_text())
+    table_pbr=json.loads((root/'assets/fq/conference_table/pbr.json').read_text())
     index=json.loads((root/'catalog/index.json').read_text());catalog=[]
     for item in index['assets']:
         meta=json.loads((root/item['manifest']).read_text())
@@ -72,6 +73,18 @@ def main():
             if part in appearance['region_assignment']:
                 props=appearance['presets'][appearance['region_assignment'][part]]
                 mat.update(roughness=props['roughness'],metalness=props['metallic'])
+        for i,mat in enumerate(materials):
+            matname=name(m,mujoco.mjtObj.mjOBJ_MATERIAL,i)
+            props=table_pbr['materials'].get(matname)
+            if props:
+                mat.update(roughness=props['roughness'],metalness=props['metalness'])
+                if props.get('roughness_texture'):
+                    im=Image.open(root/props['roughness_texture']).convert('RGB')
+                    im=im.transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+                    if max(im.size)>2048:im.thumbnail((2048,2048))
+                    im.save(dest/'roughness-table.png');mat['roughness_texture']='roughness-table.png'
+                    mat['roughness']=1.0 # texture contains absolute roughness
+        pbr_enabled=any('roughness' in mat for mat in materials)
         bodies=[];joints=[];geoms=[];bounds=[]
         for i in range(m.nbody):
             b={'id':i,'name':name(m,mujoco.mjtObj.mjOBJ_BODY,i),'parent':int(m.body_parentid[i]),
@@ -167,6 +180,7 @@ def main():
             xy=(xy-(lo+hi)/2)*factor+128
             for x,y in xy:draw.ellipse((x-1,y-1,x+1,y+1),fill=(95,105,98))
             im.save(dest/'preview.png')
+        info['pbr_preview']={'supported':pbr_enabled,'scope':'部分材质' if meta['kind']=='scene' else '分区域材质','roughness_map':any(mat.get('roughness_texture') for mat in materials),'status':'仿真材质 · 非实测标定'}
         model={'couplings':couplings,'bodies':bodies,'joints':joints,'geoms':geoms,'meshes':meshes,'materials':materials,'bounds':bbox,
                'buffer':'geometry.bin','mesh_vertices':sum(x['count'] for x in meshes.values()),'up_axis':'Z'}
         dump(dest/'model.json',model);dump(dest/'properties.json',info)

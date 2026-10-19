@@ -24,12 +24,23 @@ renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 $('canvas-host').append(renderer.domElement);
 const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.075;
 controls.minPolarAngle=.07;controls.maxPolarAngle=Math.PI*.9;controls.screenSpacePanning=true;
-scene.add(new THREE.HemisphereLight(0xfaf9f3,0xa9b4a1,2.3));
+const hemi=new THREE.HemisphereLight(0xfaf9f3,0xa9b4a1,2.3);scene.add(hemi);
 const keyLight=new THREE.DirectionalLight(0xfff9e9,3.2);keyLight.castShadow=true;keyLight.shadow.mapSize.set(2048,2048);keyLight.shadow.bias=-.00015;scene.add(keyLight);scene.add(keyLight.target);
 const fill=new THREE.DirectionalLight(0xffffff,1.6);scene.add(fill);scene.add(fill.target);
 new ResizeObserver(()=>{const w=$('canvas-host').clientWidth,h=$('canvas-host').clientHeight;if(w&&h){camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h);}}).observe($('canvas-host'));
 renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});
 
+let lightingMode='original';
+function setLighting(mode){
+  lightingMode=mode;
+  const preset={original:[2.3,3.2,1.6,.001,1],soft:[2.6,2.0,2.0,.002,4],strong:[.65,6.5,.45,.0006,.5]}[mode];
+  hemi.intensity=preset[0];keyLight.intensity=preset[1];fill.intensity=preset[2];
+  keyLight.shadow.radius=preset[4];keyLight.shadow.needsUpdate=true;
+  // Camera, model pose, materials and exposure remain fixed for comparison.
+  document.querySelectorAll('[data-lighting]').forEach(b=>{const active=b.dataset.lighting===mode;b.setAttribute('aria-pressed',String(active));b.classList.toggle('active',active);});
+  $('lighting-status').textContent={original:'原光照',soft:'柔光',strong:'强光'}[mode]+' · 固定曝光 / 网页近似预览';
+}
+document.querySelectorAll('[data-lighting]').forEach(b=>b.onclick=()=>setLighting(b.dataset.lighting));
 function toast(text){$('toast').textContent=text;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2800);}
 function fmt(n,d=3){return n==null?'—':Number(n).toLocaleString('zh-CN',{maximumFractionDigits:d});}
 function row(key,value,cls=''){return `<div class="prop-row"><span>${esc(key)}</span><strong class="${cls}">${value}</strong></div>`;}
@@ -45,6 +56,7 @@ function showProperties(a){
     return;
   }
   let html=section('基础信息',row('资产类型',esc(a.kind_label))+row('来源',esc(provenance(a)))+row('坐标约定','米制 · Z 向上')+row('基座',a.fixed_base?'固定':'自由运动')+`<div class="asset-id">${esc(a.id)}</div>`);
+  if(a.pbr_preview?.supported)html+=section('PBR 材质',row('重打光预览','支持 · '+esc(a.pbr_preview.scope))+row('通道',a.pbr_preview.roughness_map?'底色 + 粗糙度贴图 / 金属度参数':'分区域底色 / 粗糙度 / 金属度参数')+'<p class="property-note">光照按钮仅改变网页预览；不修改物理参数，不代表 Isaac 渲染结果完全相同。</p>');
   const mass=a.mass_properties; const displayMass=mass?mass.total_mass_kg:a.mass_kg;
   html+=section('尺寸与质量',`<div class="value-large">${displayMass==null?'—':fmt(displayMass)}<small>${displayMass==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${displayMass==null?'固定场景几何不以 0 kg 表示':mass?'整机参考质量 · 部件分配为估计':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.kind==='camera'?'近似仿真质量 · 非实测':a.kind==='end_effector'?'手模型质量 · 未完成实测标定':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
     (!mass&&a.fixed_base&&!['scene','end_effector','camera'].includes(a.kind)&&displayMass!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
@@ -113,7 +125,7 @@ async function refresh(){
   }catch(e){$('sync-text').textContent='连接暂时中断';$('sync-dot').className='dot error';if(!selected){$('loading').querySelector('strong').textContent='正在等待服务连接';setTimeout(refresh,5000);}}
 }
 function clearModel(){
-  if(modelRoot){const gs=new Set(),ms=new Set(),ts=new Set();modelRoot.traverse(o=>{if(o.geometry)gs.add(o.geometry);if(o.material){ms.add(o.material);if(o.material.map)ts.add(o.material.map);}});gs.forEach(g=>g.dispose());ms.forEach(m=>m.dispose());ts.forEach(t=>t.dispose());scene.remove(modelRoot);}
+  if(modelRoot){const gs=new Set(),ms=new Set(),ts=new Set();modelRoot.traverse(o=>{if(o.geometry)gs.add(o.geometry);if(o.material){ms.add(o.material);if(o.material.map)ts.add(o.material.map);if(o.material.roughnessMap)ts.add(o.material.roughnessMap);}});gs.forEach(g=>g.dispose());ms.forEach(m=>m.dispose());ts.forEach(t=>t.dispose());scene.remove(modelRoot);}
   if(ground){scene.remove(ground);ground.geometry.dispose();ground.material.dispose();}
   if(grid){scene.remove(grid);grid.geometry.dispose();grid.material.dispose();}
   ground=null;grid=null;bodyGroups.clear();jointMap.clear();angles.clear();pickables=[];colliders=[];cutaways=[];drag=null;controls.enabled=true;
@@ -134,6 +146,12 @@ async function buildModel(data,url,token){
   const bufferURL=new URL(data.buffer,url),buffer=await fetch(bufferURL).then(r=>{if(!r.ok)throw Error('几何文件加载失败');return r.arrayBuffer();});
   const loader=new THREE.TextureLoader(),textures=new Map();
   await Promise.all(data.materials.filter(m=>m.texture).map(async m=>{const u=new URL(m.texture,url).href;if(textures.has(u))return;const tex=await loader.loadAsync(u);tex.flipY=false;tex.colorSpace=THREE.SRGBColorSpace;tex.wrapS=tex.wrapT=THREE.RepeatWrapping;tex.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());textures.set(u,tex);}));
+  await Promise.all(data.materials.filter(m=>m.roughness_texture).map(async m=>{
+    const u=new URL(m.roughness_texture,url).href;
+    if(textures.has(u))return;
+    const tex=await loader.loadAsync(u);tex.flipY=false;tex.colorSpace=THREE.NoColorSpace;
+    tex.wrapS=tex.wrapT=THREE.RepeatWrapping;textures.set(u,tex);
+  }));
   if(token!==loadId){textures.forEach(t=>t.dispose());return;}
   clearModel();activeModel=data;modelRoot=new THREE.Group();scene.add(modelRoot);
   const geometries={};
@@ -149,7 +167,7 @@ async function buildModel(data,url,token){
     if(g.rgba[3]>.01&&g.group!==3&&!(isRobot(selected)&&g.collision&&g.group!==1&&data.geoms.some(v=>v.body===g.body&&v.group===1))){
       const texture=materialDef?.texture?textures.get(new URL(materialDef.texture,url).href):null;
       if(texture&&g.type!==7)texture.repeat.set(...materialDef.repeat);
-      const mat=new THREE.MeshStandardMaterial({color,map:texture,roughness:materialDef?.roughness??Math.max(.3,1-(materialDef?.shininess||0)*.65),metalness:materialDef?.metalness??((g.name.includes('metal')||g.name.includes('aluminium')) ? .65 : .05),transparent:g.rgba[3]<.99,opacity:g.rgba[3],side:THREE.DoubleSide,depthWrite:g.rgba[3]>.5});
+      const mat=new THREE.MeshStandardMaterial({color,map:texture,roughnessMap:materialDef?.roughness_texture?textures.get(new URL(materialDef.roughness_texture,url).href):null,roughness:materialDef?.roughness??Math.max(.3,1-(materialDef?.shininess||0)*.65),metalness:materialDef?.metalness??((g.name.includes('metal')||g.name.includes('aluminium')) ? .65 : .05),transparent:g.rgba[3]<.99,opacity:g.rgba[3],side:THREE.DoubleSide,depthWrite:g.rgba[3]>.5});
       const mesh=new THREE.Mesh(geometry,mat);mesh.position.fromArray(g.pos);mesh.quaternion.set(g.quat[1],g.quat[2],g.quat[3],g.quat[0]);mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.joint=nearestJoint(g.body);mesh.name=g.name;
       bodyGroups.get(g.body).add(mesh);pickables.push(mesh);if(g.cutaway)cutaways.push(mesh);
     }
@@ -202,6 +220,7 @@ function setMotionReady(ready){
 async function selectAsset(slug){
   const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;handAnimation=null;$('hand-presets').hidden=true;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';playing=false;motion=null;motionTime=0;setMotionReady(false);$('action-clock').textContent='等待模型与轨迹加载';$('action-time').value=0;$('action-panel').hidden=a.kind!=='action';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
+  const supportsPBR=!!a.pbr_preview?.supported;$('pbr-badge').hidden=!supportsPBR;$('lighting-controls').hidden=!supportsPBR;setLighting('original');
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':a.kind==='action'?'动作':'物体'} / ${a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
   $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isRobot(a)?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'在模型上拖动门 / 提手，或使用滑块。角度受模型限位约束，操作不会写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';

@@ -3,7 +3,7 @@
   <asset>
     <material name="furniture_material" rgba="0.78 0.75 0.66 1" specular=".12" shininess=".15" reflectance="0" />
     <material name="frame_material" rgba="0.035 0.04 0.045 1" specular=".12" shininess=".15" reflectance="0" />
-    <texture name="conference_wood_v7" type="2d" file="textures/wood_v7.png" />
+    <texture name="conference_wood_v7" type="2d" file="textures/basecolor_v4.png" />
     <material name="conference_wood_v7" texture="conference_wood_v7" texuniform="false" rgba="1 1 1 1" specular=".12" shininess=".15" />
     <material name="conference_metal_v7" rgba=".65 .65 .65 1" specular=".85" shininess=".6" reflectance=".25" />
     <material name="conference_legs_v7" rgba=".055 .06 .065 1" specular=".12" shininess=".15" />

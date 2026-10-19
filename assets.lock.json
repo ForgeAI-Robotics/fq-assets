@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "release": "0.7.5",
+  "release": "0.8.0",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
     "fq:articulated/photo_basket": "0.1.2",
     "fq:articulated/haier_bcd402": "0.1.8",
-    "fq:objects/conference_table": "0.2.0",
-    "fq:scenes/office_baseline": "0.1.13",
+    "fq:objects/conference_table": "0.3.0",
+    "fq:scenes/office_baseline": "0.1.14",
     "fq:materials/wall": "0.1.0",
     "fq:materials/floor": "0.1.0",
     "fq:materials/carpet": "0.1.0",

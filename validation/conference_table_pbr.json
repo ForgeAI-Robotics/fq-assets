@@ -1,0 +1,17 @@
+{
+  "assets/fq/conference_table/table.xml": {
+    "geometry_physics_and_uv_identical": true,
+    "geoms": 34
+  },
+  "scenes/fq/office_baseline/scene.xml": {
+    "geometry_physics_and_uv_identical": true,
+    "geoms": 1388
+  },
+  "usd_geometry_unchanged": true,
+  "nonemissive_pbr": true,
+  "viewer_validation": {
+    "table_badge": true,
+    "original_soft_strong_switch": true,
+    "fixed_camera_and_exposure": true
+  }
+}

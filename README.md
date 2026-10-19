@@ -2,7 +2,7 @@
 
 FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、标定与来源记录。资产采用米制、Z 轴向上；MuJoCo 四元数为 `wxyz`。
 
-当前发布版本为 **[v0.7.5](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.7.5)**。本次更新 G1+O6 **0.1.7**：左右腕部转接法兰统一为白色，保留右腕相机修正；物理参数不变。各资产版本以 `asset.json` 和 `assets.lock.json` 为准。
+当前发布版本为 **[v0.8.0](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.8.0)**。会议桌 **0.3.0** 保留原尺寸约 4.011 × 1.20 × 0.75 m、几何与碰撞，更新 SimFoundry v4 底色和粗糙度材质；基准场景 **0.1.14** 同步材质。支持 PBR 的资产在网页显示标识及原光照 / 柔光 / 强光预览。各资产版本以 `asset.json` 和 `assets.lock.json` 为准。
 
 ## 获取与版本锁定
 
@@ -11,13 +11,13 @@ FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、�
 ```bash
 git clone https://github.com/ForgeAI-Robotics/fq-assets.git
 cd fq-assets
-git checkout v0.7.5
+git checkout v0.8.0
 git lfs pull
 python3 tools/check_integrity.py
 python3 tools/catalog.py
 ```
 
-GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.7.5。
+GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.8.0。
 
 网页展示 `main` 上的当前资产；仿真和回放使用锁定的完整提交及文件校验值。更新 `main` 不应改变已有任务或历史轨迹使用的快照。
 
@@ -105,3 +105,7 @@ The closed facade collision remains unchanged. USD, MuJoCo and viewer visuals ag
 SIMPLE daylight is optional, sampled once per episode and recorded for replay.
 Sunlight parameters are simulation distributions, not measured calibration.
 Fridge remains 0.1.8; no mass, joint, resistance or door collision changes.
+
+### 会议桌重打光与网页预览
+
+会议桌沿用原始 UV、尺寸、场景位置和物理参数，仅迁移 v4 材质；来源与局限见 `assets/fq/conference_table/pbr.json`。USD 使用非自发光 UsdPreviewSurface，粗糙度贴图为 Raw；MuJoCo 使用底色近似。网页 PBR 预览使用固定曝光切换照明，会议桌和冰箱支持分区域材质，基准场景为部分材质支持。网页效果不等同 Isaac 光线追踪结果，底色仍可能残留少量原照明。

@@ -20,15 +20,17 @@ def Xform "World"
                     uniform token info:id = "UsdPreviewSurface"
                     color3f inputs:diffuseColor = (0.65, 0.6, 0.5)
                     color3f inputs:diffuseColor.connect = </World/meeting_table_v7/Looks/wood/Texture.outputs:rgb>
+                    color3f inputs:emissiveColor = (0, 0, 0)
                     float inputs:metallic = 0
-                    float inputs:roughness = 0.58
+                    float inputs:roughness = 0.483589
+                    float inputs:roughness.connect = </World/meeting_table_v7/Looks/wood/Roughness.outputs:r>
                     token outputs:surface
                 }
 
                 def Shader "Texture"
                 {
                     uniform token info:id = "UsdUVTexture"
-                    asset inputs:file = @textures/wood_v7.png@
+                    asset inputs:file = @textures/basecolor_v4.png@
                     token inputs:sourceColorSpace = "sRGB"
                     float2 inputs:st.connect = </World/meeting_table_v7/Looks/wood/UV.outputs:result>
                     token inputs:wrapS = "clamp"
@@ -41,6 +43,15 @@ def Xform "World"
                     uniform token info:id = "UsdPrimvarReader_float2"
                     token inputs:varname = "st"
                     float2 outputs:result
+                }
+
+                def Shader "Roughness"
+                {
+                    uniform token info:id = "UsdUVTexture"
+                    asset inputs:file = @textures/roughness_v4.png@
+                    token inputs:sourceColorSpace = "raw"
+                    float2 inputs:st.connect = </World/meeting_table_v7/Looks/wood/UV.outputs:result>
+                    float outputs:r
                 }
             }
 

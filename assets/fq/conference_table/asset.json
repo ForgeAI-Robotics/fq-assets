@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:objects/conference_table",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "kind": "fixture",
   "units": "meter",
   "up_axis": "Z",
@@ -17,7 +17,15 @@
   "coordinates": "Retains baseline world coordinates; not origin-normalized",
   "measured_width_m": 1.2,
   "physics_calibrated": false,
-  "visual_style": "uniform repeated real-video wood with independent three-part metal cable cover",
-  "visual_provenance": "assets/fq/conference_table/appearance_v7.json",
-  "collision_model": "unchanged conservative full box; no under-table traversal"
+  "visual_style": "Original size with v4 relightable base color and roughness",
+  "visual_provenance": "assets/fq/conference_table/pbr.json",
+  "collision_model": "unchanged conservative full box; no under-table traversal",
+  "pbr": {
+    "supported": true,
+    "channels": [
+      "base_color",
+      "roughness"
+    ],
+    "status": "estimated_material"
+  }
 }

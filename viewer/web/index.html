@@ -25,9 +25,10 @@
       <div class="library-footer"><span class="branch-symbol">⑂</span><div><b>main 实时目录</b><small>物体版本来自 main，不锁定到 Release</small></div></div>
     </aside>
     <section class="viewer-column">
-      <div class="asset-heading"><div><div class="breadcrumb" id="breadcrumb">资产库 / 物体</div><h1 id="asset-name">选择一个资产</h1><p id="asset-subtitle">查看模型、基础属性与关节</p></div><div class="asset-heading-actions"><span id="asset-version" class="version-pill">main</span><button id="copy-link" class="icon-button" aria-label="复制当前资产链接" title="复制当前资产链接">↗</button></div></div>
+      <div class="asset-heading"><div><div class="breadcrumb" id="breadcrumb">资产库 / 物体</div><h1 id="asset-name">选择一个资产</h1><p id="asset-subtitle">查看模型、基础属性与关节</p></div><div class="asset-heading-actions"><span id="pbr-badge" class="version-pill" hidden>PBR</span><span id="asset-version" class="version-pill">main</span><button id="copy-link" class="icon-button" aria-label="复制当前资产链接" title="复制当前资产链接">↗</button></div></div>
       <div id="viewport" class="viewport" aria-label="三维资产预览">
         <div class="viewer-top"><div class="viewer-label"><span class="dot"></span>交互预览 <span class="viewer-label-divider">/</span><span id="pose-label">静态姿态</span></div><div id="mode-toggle" class="mode-toggle" hidden><button id="orbit-mode" class="active" aria-pressed="true">旋转查看</button><button id="joint-mode" aria-pressed="false">拖动关节</button></div></div>
+        <div id="lighting-controls" hidden style="position:absolute;left:16px;top:54px;z-index:3;background:#fffffff0;border-radius:10px;padding:8px;max-width:calc(100% - 32px)"><div class="mode-toggle" aria-label="PBR 光照预览"><button data-lighting="original" aria-pressed="true" class="active">原光照</button><button data-lighting="soft" aria-pressed="false">柔光</button><button data-lighting="strong" aria-pressed="false">强光</button></div><small id="lighting-status" style="display:block;margin-top:5px;color:#66736a">原光照 · 固定曝光 / 网页近似预览</small></div>
         <div id="canvas-host"></div>
         <div id="loading" class="loading"><span class="spinner"></span><strong>正在准备资产</strong><small>加载真实网格与贴图</small></div>
         <div id="viewer-error" class="viewer-error" hidden></div>

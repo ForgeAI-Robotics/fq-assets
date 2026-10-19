@@ -1454,7 +1454,7 @@
     <texture name="coke_cn_texture" type="2d" file="../../../assets/fq/tabletop/common/textures/coke_cn.png" />
     <material name="coke_cn_label" texture="coke_cn_texture" specular=".2" shininess=".25" />
     <material name="coke_cn_aluminium" rgba=".55 .57 .60 1" specular=".8" shininess=".6" />
-    <texture name="conference_wood_v7" type="2d" file="../../../assets/fq/conference_table/textures/wood_v7.png" />
+    <texture name="conference_wood_v7" type="2d" file="../../../assets/fq/conference_table/textures/basecolor_v4.png" />
     <material name="conference_wood_v7" texture="conference_wood_v7" texuniform="false" rgba="1 1 1 1" specular=".12" shininess=".15" />
     <material name="conference_metal_v7" rgba=".65 .65 .65 1" specular=".85" shininess=".6" reflectance=".25" />
     <material name="conference_legs_v7" rgba=".055 .06 .065 1" specular=".12" shininess=".15" />

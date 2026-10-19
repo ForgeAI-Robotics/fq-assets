@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "estimated_relightable_material_not_measured",
+  "materials": {
+    "conference_wood_v7": {
+      "roughness": 0.483589,
+      "metalness": 0,
+      "roughness_texture": "assets/fq/conference_table/textures/roughness_v4.png"
+    },
+    "conference_metal_v7": {
+      "roughness": 0.38,
+      "metalness": 1
+    },
+    "conference_legs_v7": {
+      "roughness": 0.3,
+      "metalness": 0
+    }
+  },
+  "channels": [
+    "base_color",
+    "roughness"
+  ],
+  "normal_map": false,
+  "geometry_preserved": true,
+  "source": "SimFoundry meeting_room_20260915 v4_20261019 / multiscale_065",
+  "source_machine": "192.168.31.41",
+  "limitations": [
+    "Residual broad shading remains in base color",
+    "Original dimensions, geometry, UVs and collision retained; not the resized v4 geometry",
+    "MuJoCo uses base-color approximation; USD and web use explicit PBR roughness"
+  ],
+  "texture_hashes": {
+    "basecolor_v4.png": "78ad39c3f35ed9ece477fe29667a6b804e80bd2e048fa6aee7b56e238b3614d4",
+    "roughness_v4.png": "eeca7914c952fd1cd763451f537890e4bc64ee2334d0af7dc9cd6c44d4158005"
+  },
+  "uv_atlas_compatibility": [
+    {
+      "board": "board_0_0",
+      "max_uv_bound_delta": 0.00012871634680777788
+    },
+    {
+      "board": "board_0_1",
+      "max_uv_bound_delta": 0.00012871634680777788
+    },
+    {
+      "board": "board_0_2",
+      "max_uv_bound_delta": 0.00012871634680777788
+    },
+    {
+      "board": "board_1_0",
+      "max_uv_bound_delta": 0.00012874603271484375
+    },
+    {
+      "board": "board_1_1",
+      "max_uv_bound_delta": 0.00012874603271484375
+    },
+    {
+      "board": "board_1_2",
+      "max_uv_bound_delta": 0.00012874603271484375
+    }
+  ]
+}
