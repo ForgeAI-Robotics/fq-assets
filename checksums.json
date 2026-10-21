@@ -2000,6 +2000,7 @@
     "viewer/web/vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
     "RELEASE_NOTES_v0.9.2.txt": "2ee4da22bfc115c41e08139a91476da3ecf2a44ea6403159adbcf4814663e86d",
     "RELEASE_NOTES_v0.9.3.txt": "987f34473e0acb2a74c5ca925a1910518a38e8e037e2d51f99fe12bc6952a15a",
-    "assets/fq/mesh_trash_bin/import_validation.json": "6102e1be3ecc678f6d89597a0b7eeaee80953e14c154b0aa9d453fa31f03bf43"
+    "assets/fq/mesh_trash_bin/import_validation.json": "6102e1be3ecc678f6d89597a0b7eeaee80953e14c154b0aa9d453fa31f03bf43",
+    "validation/previews/fq_objects_mesh_trash_bin.png": "d449bad43419f07d150c6861ae73697f4f0ca6c75adf6b697a58fc75460f7d9d"
   }
 }
