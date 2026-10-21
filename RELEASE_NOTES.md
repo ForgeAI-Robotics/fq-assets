@@ -75,3 +75,6 @@ Correct left fridge pivot to eliminate cabinet collision across 0-90 degrees; pr
 基准中篮子与冰箱尚未指定正式摆放位置；导航中的可乐保持固定，独立可乐资产可自由运动。SIMPLE 自动注册、域随机适配和网页浏览服务不属于本次发布。
 
 请下载附件 `fq-sim-assets-v0.1.0.tar.gz` 获得完整实体文件，并用 `SHA256SUMS` 校验。Git 克隆后需要 `git lfs pull`。引擎运行证据与范围见仓库 `validation/`。
+
+### Baseline 0.1.18
+Two upright coke cans placed in the lowest pocket on the refrigerator right door. Baseline display placements follow the door rigidly; no free-can dynamics or added door mass. MuJoCo and USD placements match. A 31-pose 0–90 degree collision sweep found no penetration.

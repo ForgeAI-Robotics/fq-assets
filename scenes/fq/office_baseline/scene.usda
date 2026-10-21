@@ -45,6 +45,35 @@ over "World"
                 point3f physics:localPos0 = (15.5, 11.9, 0)
             }
         }
+
+        over "door_right"
+        {
+            def Xform "right_door_coke_1" (
+                prepend references = @../../../assets/fq/tabletop/isaac/coke.usd@
+            )
+            {
+                double3 xformOp:translate = (-0.222, 0.084, 0.114006675)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                over "Meshes"
+                {
+                    bool physics:rigidBodyEnabled = 0
+                }
+            }
+
+            def Xform "right_door_coke_2" (
+                prepend references = @../../../assets/fq/tabletop/isaac/coke.usd@
+            )
+            {
+                double3 xformOp:translate = (-0.122, 0.084, 0.114006675)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+
+                over "Meshes"
+                {
+                    bool physics:rigidBodyEnabled = 0
+                }
+            }
+        }
     }
 
     over "meeting_cabinet" (
