@@ -52,6 +52,8 @@ bpy.ops.object.select_all(action='DESELECT')
 for o in asset_objects:o.select_set(True)
 bpy.context.view_layer.objects.active=obj
 bpy.ops.export_scene.obj(filepath=str(R/'trash_bin.obj'),use_selection=True,use_materials=True,axis_forward='Y',axis_up='Z',use_triangles=True)
+# MuJoCo imports only the first OBJ shape; flatten object/group declarations.
+p=R/'trash_bin.obj';p.write_text('o Wastebasket\n'+'\n'.join(l for l in p.read_text().splitlines() if not l.startswith(('o ','g ')))+'\n')
 # Set up an isolated CPU studio preview, not a scene deployment.
 bpy.ops.mesh.primitive_plane_add(size=200,location=(0,0,0));floor=bpy.context.object;floor.name='PreviewFloor';fm=bpy.data.materials.new('StudioFloor');fm.diffuse_color=(.45,.46,.48,1);floor.data.materials.append(fm)
 world=bpy.context.scene.world;world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.65,.68,.72,1);world.node_tree.nodes['Background'].inputs[1].default_value=.5

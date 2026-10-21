@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.9.2",
+  "release": "0.9.3",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -94,7 +94,7 @@
     },
     {
       "id": "fq:objects/mesh_trash_bin",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "manifest": "assets/fq/mesh_trash_bin/asset.json"
     }
   ]

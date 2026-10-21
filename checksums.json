@@ -1,6 +1,6 @@
 {
   "algorithm": "sha256",
-  "release": "0.9.2",
+  "release": "0.9.3",
   "files": {
     ".gitattributes": "1e0457487bb0a83b153bddb2029a5aa619be0d345c58e6b9995dbdc028b92b9a",
     ".gitignore": "ea4e560ffac3f984d5724da98bc1c0b9d09d82d05db797129fafbe18e9c46b83",
@@ -136,7 +136,7 @@
     "actions/token_libraries/v4/turn_right_continuous_r03_20260902_110013/metadata.json": "fc22e24ba10e971fa7e47615c9cf1d30d5ef4377ed3b5c6e570abeb8df2af1c5",
     "actions/token_libraries/v4/turn_right_normal_r03_20260806_115908/frames.npz": "08c205b69d8c81a22331a88af2c0a6f13b7c0153a6349a964e35be9a4618774e",
     "actions/token_libraries/v4/turn_right_normal_r03_20260806_115908/metadata.json": "acceacc7b708901e152d50e8989184bd5302fec1b3d2b3bbc2b298c464fffb8c",
-    "assets.lock.json": "295ad7fd8bad7e8a3685eeec7c6e099487cce09a0ee1697ddd50315d7b48d2f8",
+    "assets.lock.json": "a7d59763a6426e4318464e884b92fa3a3c76ac5e468741343c2662502cf6bd52",
     "assets/fq/cameras/realsense_d435i/asset.json": "3e2a0a52a177928d4038e8b5750fe1c8e67df161d543b18477f88513672abd3a",
     "assets/fq/cameras/realsense_d435i/camera.xml": "00816487555c128fd988e9de4d016e7c747489234d29335941320f8802b09fe0",
     "assets/fq/cameras/realsense_d435i/meshes/d435i_00_0.stl": "419be431cd7b3e08d59165647580c0cc48727b291794a1224731b9fefbc38aec",
@@ -1428,8 +1428,8 @@
     "assets/fq/materials/wall/asset.json": "2d7fd671ca47761be2f24f338f2d526a1d0faf0d0a176f8b89f99cf26ad34142",
     "assets/fq/materials/wood/asset.json": "58bce7ef13f5e933df658bdf2fd3779e4e7dce723196221c785cbd67a6b9094a",
     "assets/fq/mesh_trash_bin/README.txt": "96870c32e31fe617578241683bf575b0bffd9b84c47c6e4c9899d67b3aec8c9a",
-    "assets/fq/mesh_trash_bin/asset.json": "8dabf94c854252662c9959e86a27164b933d4c3d10fc67adc3be51c218356c0a",
-    "assets/fq/mesh_trash_bin/build_bin.py": "51dca5270d0ebb1f4b10a8c725867e5618b1c79bae7b03be1ba47f326fcdaac6",
+    "assets/fq/mesh_trash_bin/asset.json": "ca25cd0d2099254abccd730e42ae3dd5c263df637350623149e674869305cd9a",
+    "assets/fq/mesh_trash_bin/build_bin.py": "bf77f413d7f411b9055e13b600b9cd0fee5ad3470a2b52a2d2dfab4db4ff4b18",
     "assets/fq/mesh_trash_bin/collision.xml": "4a67e9e8798fcc3322ed23c01628c5dd39afbee04986265761ecc5febdfd659d",
     "assets/fq/mesh_trash_bin/collision_geometry.json": "4c3eff6c4461cda819f7f11e6a772c680f450fbdd92dd35cea3c2e7fa9bb4931",
     "assets/fq/mesh_trash_bin/drop_validation.json": "f4ccd636d6ea6faa625d03ef24dd789f5f8756f705d525dd54f2d59c8003ec3b",
@@ -1439,7 +1439,7 @@
     "assets/fq/mesh_trash_bin/textures/powdercoat_roughness.png": "3b938365e39020e0d2e9de5af007a6b051cffe7f021a97f70ef24e7c48e51dd5",
     "assets/fq/mesh_trash_bin/trash_bin.blend": "24451aea227faed775d55ace029864245eba1a7d2c9806f719cfb75004f40711",
     "assets/fq/mesh_trash_bin/trash_bin.mtl": "40113819f538f43c9507ec55e22c3dc28180209835dfa5133abe5bf4646c4852",
-    "assets/fq/mesh_trash_bin/trash_bin.obj": "0d2ea35b6b45f6cc5f20cde4728660974c48b73ade3549827945c981ac7400d2",
+    "assets/fq/mesh_trash_bin/trash_bin.obj": "ef7d44bdd350883dd109f0ca8ae6f445014e05363f6fcd3f78d7ae77719f003b",
     "assets/fq/mesh_trash_bin/trash_bin.xml": "10cffe123ed80a16be9191e573df708896c880e2a48ab0b7f63b65bf649fab70",
     "assets/fq/photo_basket/README.md": "5858f8a1faad4d055f7bf2c7b861015741cd760e9374e59a540d86070351e326",
     "assets/fq/photo_basket/SOURCE_README.md": "528fbe1d0bba6ef78c13cf95a519fde145e98756edd50303e2c75ae43a1542cd",
@@ -1805,7 +1805,7 @@
     "calibration/g1_head/20261012/head-forward-convention-audit.json": "c821884330d60620fa910b8b08617a69c40e754a127600e9920b28bdc0d3f7a2",
     "calibration/g1_head/20261012/new_pose_contract.json": "9b17b6be4bf8b18e880638e1db4b68ac53ab1094bfa190f6e71b299d293ce056",
     "calibration/g1_head/20261012/source_handeye.json": "48d95e0e0387f0d0def0f579cf707d08eda212cd62773558f4c740b3bf25dc82",
-    "catalog/index.json": "b1a2b1486a67846be015f19cdbbcd122d1bee69a969131672d4f276e56303c26",
+    "catalog/index.json": "4a7cb957361165494d9d49bc15d7eb8d3bb8e5a6e5df10d6517ed620aa3fc748",
     "integrations/physx-fridge.txt": "3e247f4cc84e753d6280910427ce59ffec517886520346c8e35290b625f793d9",
     "integrations/simple.json": "b855598b22fad924f4a285f7ba8b1b5f72ba12252b4554145d25606ad610adee",
     "previews/office_navigation_historical.jpg": "d35242c8af0b78c61c401657a0c7bc555cf1df0d4fc7595a0913f1304594b0ef",
@@ -1998,6 +1998,8 @@
     "viewer/web/vendor/addons/controls/OrbitControls.js": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
     "viewer/web/vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
     "viewer/web/vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
-    "RELEASE_NOTES_v0.9.2.txt": "2ee4da22bfc115c41e08139a91476da3ecf2a44ea6403159adbcf4814663e86d"
+    "RELEASE_NOTES_v0.9.2.txt": "2ee4da22bfc115c41e08139a91476da3ecf2a44ea6403159adbcf4814663e86d",
+    "RELEASE_NOTES_v0.9.3.txt": "987f34473e0acb2a74c5ca925a1910518a38e8e037e2d51f99fe12bc6952a15a",
+    "assets/fq/mesh_trash_bin/import_validation.json": "6102e1be3ecc678f6d89597a0b7eeaee80953e14c154b0aa9d453fa31f03bf43"
   }
 }

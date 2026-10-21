@@ -1,0 +1,1 @@
+Preserve wastebasket rim, bottom ring and floor in MuJoCo OBJ import by flattening OBJ shapes. Blender source remains editable. Real lattice, PBR and collision-only groups retained.
