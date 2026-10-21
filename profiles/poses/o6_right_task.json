@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:poses/o6_right_task",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "name": "O6_RIGHT 任务手势",
   "kind": "hand_command_presets",
   "compatible_assets": [
@@ -78,6 +78,7 @@
   "source_calibration_verified": true,
   "compatible_asset_versions": {
     "fq:end_effectors/o6_right": "0.1.2",
-    "fq:robots/g1_o6": "0.1.5"
-  }
+    "fq:robots/g1_o6": "0.1.7"
+  },
+  "compatibility_note": "G1 O6 0.1.6/0.1.7 only changed flange/bracket appearance; joint definitions and pose values unchanged."
 }

@@ -37,7 +37,7 @@
   "profiles": [
     {
       "id": "fq:poses/o6_right_task",
-      "version": "0.1.0",
+      "version": "0.1.2",
       "path": "profiles/poses/o6_right_task.json"
     }
   ],

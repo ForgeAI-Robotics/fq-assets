@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "release": "0.9.3",
+  "release": "0.9.4",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
     "fq:articulated/photo_basket": "0.1.2",
     "fq:articulated/haier_bcd402": "0.1.10",
     "fq:objects/conference_table": "0.4.0",
-    "fq:scenes/office_baseline": "0.1.18",
+    "fq:scenes/office_baseline": "0.1.19",
     "fq:materials/wall": "0.1.0",
     "fq:materials/floor": "0.1.0",
     "fq:materials/carpet": "0.1.0",
@@ -23,10 +23,10 @@
     "fq:objects/mesh_trash_bin": "0.1.2"
   },
   "profiles": {
-    "fq:poses/o6_left_task": "0.1.1",
-    "fq:poses/o6_right_task": "0.1.1",
+    "fq:poses/o6_left_task": "0.1.2",
+    "fq:poses/o6_right_task": "0.1.2",
     "fq:poses/o7_left_task": "0.1.1",
-    "fq:poses/g1_beyondmimic_initial": "0.1.1"
+    "fq:poses/g1_beyondmimic_initial": "0.1.2"
   },
   "actions": {
     "fq:actions/stand_initial": "0.1.1",

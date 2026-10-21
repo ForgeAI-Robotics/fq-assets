@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "profile": "fq:poses/o6_left_task",
+      "schema_and_units": "pass",
+      "hardware_validated": false
+    },
+    {
+      "profile": "fq:poses/o6_right_task",
+      "schema_and_units": "pass",
+      "hardware_validated": false
+    },
+    {
+      "profile": "fq:poses/o7_left_task",
+      "schema_and_units": "pass",
+      "hardware_validated": false
+    },
+    {
+      "asset": "fq:robots/g1_o6",
+      "joint_names_and_limits": "pass",
+      "kinematic_pose_replay_max_error": 0.0,
+      "balance_or_dynamics_validated": false
+    },
+    {
+      "asset": "fq:robots/g1_o7",
+      "joint_names_and_limits": "pass",
+      "kinematic_pose_replay_max_error": 0.0,
+      "balance_or_dynamics_validated": false
+    },
+    {
+      "profile": "fq:poses/g1_beyondmimic_initial",
+      "schema_and_units": "pass",
+      "hardware_validated": false
+    }
+  ],
+  "scope": "Protocol value validation and G1 named-joint kinematics; no protocol-to-angle calibration, dynamic balance or hardware control"
+}

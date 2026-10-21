@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/office_baseline",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -35,7 +35,7 @@
     "Coke and round table are fixed in the navigation baseline; standalone coke is dynamic",
     "Refrigerator inherits provisional physics and independent mullion; CPU PhysX opening validated with SIMPLE adapter",
     "Meeting room contains table only; conference table V7 visuals retain conservative full-box collision",
-    "Two coke cans in the lowest right-door pocket are fixed display placements attached to the door; not free graspable dynamics."
+    "Right-door cans are independent dynamic 0.35kg rigid bodies, initialized in the lowest pocket; retention requires contact dynamics, not parenting to the door."
   ],
   "dependency_versions": {
     "fq:objects/coke_cn": "0.1.1",
@@ -72,30 +72,42 @@
       },
       "position_status": "Approximate user-reported displacement, 2026-10-14"
     },
-    "refrigerator_right_door_cokes": [
-      {
-        "name": "right_door_coke_1",
-        "parent": "refrigerator_door_right",
-        "position_m": [
-          -0.222,
-          0.084,
-          0.114006675
-        ],
-        "asset_id": "fq:objects/coke_cn",
-        "attachment": "fixed_baseline_display"
-      },
-      {
-        "name": "right_door_coke_2",
-        "parent": "refrigerator_door_right",
-        "position_m": [
-          -0.122,
-          0.084,
-          0.114006675
-        ],
-        "asset_id": "fq:objects/coke_cn",
-        "attachment": "fixed_baseline_display"
+    "right_door_coke_1": {
+      "name": "right_door_coke_1",
+      "parent": "world",
+      "position_m": [
+        15.620000008,
+        11.708999994000001,
+        0.963590003
+      ],
+      "asset_id": "fq:objects/coke_cn",
+      "attachment": "free_dynamic",
+      "mass_kg": 0.35,
+      "support_body": "refrigerator_door_right",
+      "support_geom": "col_084_0",
+      "version": "0.1.1",
+      "mujoco_bodies": {
+        "coke": "right_door_coke_1"
       }
-    ]
+    },
+    "right_door_coke_2": {
+      "name": "right_door_coke_2",
+      "parent": "world",
+      "position_m": [
+        15.720000008,
+        11.708999994000001,
+        0.963590003
+      ],
+      "asset_id": "fq:objects/coke_cn",
+      "attachment": "free_dynamic",
+      "mass_kg": 0.35,
+      "support_body": "refrigerator_door_right",
+      "support_geom": "col_084_0",
+      "version": "0.1.1",
+      "mujoco_bodies": {
+        "coke": "right_door_coke_2"
+      }
+    }
   },
   "windows": {
     "corner_y": 12.340909,

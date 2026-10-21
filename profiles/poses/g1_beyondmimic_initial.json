@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:poses/g1_beyondmimic_initial",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "name": "G1 BeyondMimic 初始姿态",
   "kind": "joint_positions",
   "compatible_assets": [
@@ -93,7 +93,8 @@
     "显式选择使用，不替换机器人默认姿态。"
   ],
   "compatible_asset_versions": {
-    "fq:robots/g1_o6": "0.1.5",
+    "fq:robots/g1_o6": "0.1.7",
     "fq:robots/g1_o7": "0.1.3"
-  }
+  },
+  "compatibility_note": "G1 O6 0.1.6/0.1.7 only changed flange/bracket appearance; joint definitions and pose values unchanged."
 }

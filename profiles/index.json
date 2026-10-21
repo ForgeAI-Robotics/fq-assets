@@ -3,12 +3,12 @@
   "profiles": [
     {
       "id": "fq:poses/o6_left_task",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "path": "profiles/poses/o6_left_task.json"
     },
     {
       "id": "fq:poses/o6_right_task",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "path": "profiles/poses/o6_right_task.json"
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "id": "fq:poses/g1_beyondmimic_initial",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "path": "profiles/poses/g1_beyondmimic_initial.json"
     }
   ]

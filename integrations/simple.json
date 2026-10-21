@@ -64,6 +64,38 @@
             0
           ],
           "replaceable": true
+        },
+        "right_door_coke_1": {
+          "asset_id": "fq:objects/coke_cn",
+          "mujoco_body": "right_door_coke_1",
+          "usd_prim": "right_door_coke_1",
+          "pose": [
+            15.620000008,
+            11.708999994000001,
+            0.963590003,
+            1,
+            0,
+            0,
+            0
+          ],
+          "replaceable": true,
+          "dynamic": true
+        },
+        "right_door_coke_2": {
+          "asset_id": "fq:objects/coke_cn",
+          "mujoco_body": "right_door_coke_2",
+          "usd_prim": "right_door_coke_2",
+          "pose": [
+            15.720000008,
+            11.708999994000001,
+            0.963590003,
+            1,
+            0,
+            0,
+            0
+          ],
+          "replaceable": true,
+          "dynamic": true
         }
       },
       "material_slots": {
