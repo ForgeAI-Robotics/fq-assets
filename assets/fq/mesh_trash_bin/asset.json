@@ -1,0 +1,55 @@
+{
+  "id": "fq:objects/mesh_trash_bin",
+  "version": "0.1.0",
+  "status": "bottom_diameter_pending_measurement",
+  "dimensions_m": {
+    "height": 0.28,
+    "top_outer_diameter": 0.26,
+    "bottom_outer_diameter": 0.22
+  },
+  "photo_basis": "User supplied mesh wastebasket photograph; no bag or contents",
+  "geometry": {
+    "diamond_lattice_real_mesh": true,
+    "strand_count": 192,
+    "wire_width_m": 0.00072,
+    "wire_thickness_m": 0.00048,
+    "dimensions_estimated": true
+  },
+  "pbr": {
+    "material": "black powder coated steel",
+    "base_color": "textures/powdercoat_basecolor.png",
+    "roughness": "textures/powdercoat_roughness.png",
+    "normal": "textures/powdercoat_normal.png",
+    "metallic": 0.2,
+    "status": "estimated_not_measured"
+  },
+  "physics": "provisional; no measured mass/friction",
+  "dimension_provenance": {
+    "height": "user_measured",
+    "top_outer_diameter": "user_measured_interpreted_as_outer_diameter",
+    "bottom_outer_diameter": "estimated_pending_calibration"
+  },
+  "representations": {
+    "mujoco": "assets/fq/mesh_trash_bin/trash_bin.xml",
+    "blender": "assets/fq/mesh_trash_bin/trash_bin.blend",
+    "mesh": "assets/fq/mesh_trash_bin/trash_bin.obj"
+  },
+  "collision": {
+    "type": "48 convex wall wedges and one floor disc",
+    "open_top": true,
+    "fixed_base_for_preview": true,
+    "mesh_holes_not_collision_holes": true
+  },
+  "render_preview": "Three.js PBR; legacy Blender render unavailable",
+  "schema_version": 1,
+  "kind": "fixture",
+  "name": "金属网垃圾桶",
+  "description": "空桶 / 高28cm，上口外径26cm，底径暂估22cm（待标定）",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "physics_calibrated": false,
+  "license_status": "FQ generated geometry and procedural PBR maps; based on user supplied photograph",
+  "dimensions_source": "User measured height 28cm and top diameter interpreted as outer diameter 26cm. Bottom diameter 22cm estimated, pending calibration."
+}

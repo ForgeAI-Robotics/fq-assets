@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.9.0",
+  "release": "0.9.1",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -91,6 +91,11 @@
       "id": "fq:cameras/realsense_d435i",
       "version": "0.1.0",
       "manifest": "assets/fq/cameras/realsense_d435i/asset.json"
+    },
+    {
+      "id": "fq:objects/mesh_trash_bin",
+      "version": "0.1.0",
+      "manifest": "assets/fq/mesh_trash_bin/asset.json"
     }
   ]
 }

@@ -84,6 +84,13 @@ def main():
                     if max(im.size)>2048:im.thumbnail((2048,2048))
                     im.save(dest/'roughness-table.png');mat['roughness_texture']='roughness-table.png'
                     mat['roughness']=1.0 # texture contains absolute roughness
+        if slug=='mesh_trash_bin':
+            for mat in materials:
+                mat.update(roughness=1.0,metalness=.2)
+                for channel in ('roughness','normal'):
+                    im=Image.open(root/f'assets/fq/mesh_trash_bin/textures/powdercoat_{channel}.png').convert('RGB').transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+                    im.save(dest/f'{channel}-bin.png');mat[f'{channel}_texture']=f'{channel}-bin.png'
+                mat['normal_scale']=.2
         pbr_enabled=any('roughness' in mat for mat in materials)
         bodies=[];joints=[];geoms=[];bounds=[]
         for i in range(m.nbody):

@@ -1,0 +1,42 @@
+{
+  "engine": "3.3.6",
+  "real_coke_version": "0.1.1",
+  "bin_fixed_for_test": true,
+  "duration_s": 8,
+  "cases": [
+    {
+      "start_x": 0,
+      "settled_position": [
+        -2.9055571612135486e-05,
+        -1.0315517010066051e-05,
+        0.0781293923940241
+      ],
+      "linear_speed_m_s": 0.0023288452749848807,
+      "angular_speed_rad_s": 0.03916833924560525,
+      "steady_max_penetration_m": 8.002692339850373e-05
+    },
+    {
+      "start_x": 0.045,
+      "settled_position": [
+        0.04510428831436571,
+        0.0001633917158289063,
+        0.07815364880661778
+      ],
+      "linear_speed_m_s": 0.00020048982496783174,
+      "angular_speed_rad_s": 0.0023718344106389245,
+      "steady_max_penetration_m": 7.31397196452778e-05
+    },
+    {
+      "start_x": -0.045,
+      "settled_position": [
+        -0.045085754535570365,
+        -0.00013682413483428004,
+        0.07814122902656212
+      ],
+      "linear_speed_m_s": 0.00358795317383206,
+      "angular_speed_rad_s": 0.05617590121975718,
+      "steady_max_penetration_m": 7.396260647616579e-05
+    }
+  ],
+  "dimension_status": "top_26cm_height_28cm_user_measured_bottom_pending"
+}

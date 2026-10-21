@@ -1,0 +1,1 @@
+Adds mesh wastebasket 0.1.0 with Blender/OBJ source, procedural PBR, real apertures and open-top collision. Height 28cm / top outer diameter26cm, bottom diameter22cm pending calibration. Includes pending v0.9.0 conference table update. Three fixed-bin coke drop tests passed; no running SIMPLE tasks changed.

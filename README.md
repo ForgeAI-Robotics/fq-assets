@@ -113,3 +113,7 @@ Fridge remains 0.1.8; no mass, joint, resistance or door collision changes.
 ## 会议桌 351 cm 修订
 
 长 3.51 m，宽 1.20 m、高 0.75 m 沿用；保留世界中心。两端 X 支架用 6 cm 方截面斜杆近似，端部留空 4 cm，长边留空 4.5 cm。碰撞为桌面盒与四根斜杆盒，移除原整块占位碰撞，桌下中央留空。底色、粗糙度贴图和 UV 沿用；尺寸与支架依据用户确认，非结构强度或实机动力学标定。历史尺寸保持记录，当前参数见 asset.json。
+
+## Mesh wastebasket (0.9.1)
+
+FQ mesh_trash_bin 0.1.0: empty real diamond lattice with PBR maps and open-top collision. User measured height 28 cm and upper diameter 26 cm (outer diameter interpretation). Bottom diameter 22 cm remains estimated and pending calibration. Fixed-bin coke drop verification passed at three positions; physical mass and tipping are not calibrated.
