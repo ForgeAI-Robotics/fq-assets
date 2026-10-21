@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <mujoco model="fq_office_baseline_v0_1_1">
   <option gravity="0 0 -9.81" integrator="implicitfast" />
   <statistic center="8.5 6.2 0" extent="19" />
@@ -1378,15 +1379,15 @@
       <geom name="col_046_0" type="box" pos="0 -0.316000015 0.635999965" size="0.349000007 0.0379999876 0.145999983" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
       <geom name="col_107_0" type="box" pos="0 -0.216999993 1.75235997" size="0.0215000007 0.0304999948 0.0118174719" rgba="0 0 0 0" group="3" density="0" friction=".5 .005 .0001" contype="1" conaffinity="1" />
     </body>
-    <geom name="meeting_table_board_0_0" pos="3.42676144154 10.0402402878 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_0" />
-    <geom name="meeting_table_board_0_1" pos="2.25568199138 10.0402402878 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_1" />
-    <geom name="meeting_table_board_0_2" pos="1.08460212398 10.0402402878 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_2" />
-    <geom name="meeting_table_board_1_0" pos="3.42676144154 10.6415786743 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_0" />
-    <geom name="meeting_table_board_1_1" pos="2.25568199138 10.6415786743 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_1" />
-    <geom name="meeting_table_board_1_2" pos="1.08460212398 10.6415786743 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_2" />
-    <geom name="meeting_table_cable_cover_0" pos="3.42676144154 10.3409090042 0.746881067753" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.579061981028 0.0541200637817 0.00311893224716" />
-    <geom name="meeting_table_cable_cover_1" pos="2.25568199138 10.3409090042 0.746881067753" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.579062085338 0.0541200637817 0.00311893224716" />
-    <geom name="meeting_table_cable_cover_2" pos="1.08460217614 10.3409090042 0.746881067753" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.579062033183 0.0541200637817 0.00311893224716" />
+    <geom name="meeting_table_board_0_0" pos="3.54743945154 10.0402402878 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_0" />
+    <geom name="meeting_table_board_0_1" pos="2.37636000138 10.0402402878 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_1" />
+    <geom name="meeting_table_board_0_2" pos="1.20528013398 10.0402402878 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_0_2" />
+    <geom name="meeting_table_board_1_0" pos="3.54743945154 10.6415786743 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_0" />
+    <geom name="meeting_table_board_1_1" pos="2.37636000138 10.6415786743 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_1" />
+    <geom name="meeting_table_board_1_2" pos="1.20528013398 10.6415786743 0.722969293594" material="conference_wood_v7" contype="0" conaffinity="0" mass="0" type="mesh" mesh="meeting_table_board_1_2" />
+    <geom name="meeting_table_cable_cover_0" pos="3.54743945154 10.3409090042 0.746881067753" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.579061981028 0.0541200637817 0.00311893224716" />
+    <geom name="meeting_table_cable_cover_1" pos="2.37636000138 10.3409090042 0.746881067753" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.579062085338 0.0541200637817 0.00311893224716" />
+    <geom name="meeting_table_cable_cover_2" pos="1.20528018614 10.3409090042 0.746881067753" material="conference_metal_v7" contype="0" conaffinity="0" mass="0" type="box" size="0.579062033183 0.0541200637817 0.00311893224716" />
     <geom name="daylight_Wall0" type="box" pos="17.1022727 3.8988635 1.35" size="0.056818000972270966 3.842045545578003 1.350000023841858" contype="0" conaffinity="0" mass="0" material="wall_material" />
     <geom name="daylight_Wall1" type="box" pos="17.1022727 9.640909 1.35" size="0.056818000972270966 0.4000000059604645 1.350000023841858" contype="0" conaffinity="0" mass="0" material="wall_material" />
     <geom name="daylight_Wall2" type="box" pos="17.1022727 11.940909 1.35" size="0.056818000972270966 0.4000000059604645 1.350000023841858" contype="0" conaffinity="0" mass="0" material="wall_material" />
@@ -1398,15 +1399,15 @@
     <geom name="daylight_Frame1_1" type="box" pos="17.1022727 9.240909 1.35" size="0.05999999865889549 0.017500000074505806 1.350000023841858" contype="0" conaffinity="0" mass="0" rgba="0.035 0.035 0.035 1" />
     <geom name="daylight_Rail1_0" type="box" pos="17.1022727 8.490909 0.0175" size="0.05999999865889549 0.75 0.017500000074505806" contype="0" conaffinity="0" mass="0" rgba="0.035 0.035 0.035 1" />
     <geom name="daylight_Rail1_1" type="box" pos="17.1022727 8.490909 2.6825" size="0.05999999865889549 0.75 0.017500000074505806" contype="0" conaffinity="0" mass="0" rgba="0.035 0.035 0.035 1" />
-    <geom name="meeting_table_top_collision" type="box" pos="2.25568199 10.34090948 0.726088196039" size="1.755 0.6 0.0239118039608" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" friction=".7 .005 .0001" />
-    <geom name="meeting_table_x_m1_m1" type="box" pos="0.57068199 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
-    <geom name="meeting_table_x_m1_m1_collision" type="box" pos="0.57068199 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
-    <geom name="meeting_table_x_m1_1" type="box" pos="0.57068199 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
-    <geom name="meeting_table_x_m1_1_collision" type="box" pos="0.57068199 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
-    <geom name="meeting_table_x_1_m1" type="box" pos="3.94068199 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
-    <geom name="meeting_table_x_1_m1_collision" type="box" pos="3.94068199 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
-    <geom name="meeting_table_x_1_1" type="box" pos="3.94068199 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
-    <geom name="meeting_table_x_1_1_collision" type="box" pos="3.94068199 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
+    <geom name="meeting_table_top_collision" type="box" pos="2.37636 10.34090948 0.726088196039" size="1.755 0.6 0.0239118039608" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" friction=".7 .005 .0001" />
+    <geom name="meeting_table_x_m1_m1" type="box" pos="0.69136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
+    <geom name="meeting_table_x_m1_m1_collision" type="box" pos="0.69136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
+    <geom name="meeting_table_x_m1_1" type="box" pos="0.69136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
+    <geom name="meeting_table_x_m1_1_collision" type="box" pos="0.69136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
+    <geom name="meeting_table_x_1_m1" type="box" pos="4.06136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
+    <geom name="meeting_table_x_1_m1_collision" type="box" pos="4.06136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
+    <geom name="meeting_table_x_1_1" type="box" pos="4.06136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
+    <geom name="meeting_table_x_1_1_collision" type="box" pos="4.06136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
   <body name="right_door_coke_1" pos="15.620000008 11.708999994000001 0.963590003" quat="1 0 0 0">
       <freejoint name="right_door_coke_1_free" /><geom name="right_door_coke_1_coke_visual" mesh="coke_visual" material="coke_cn_label" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
       <geom name="right_door_coke_1_coke_visual_cn_ends" mesh="coke_cn_ends" material="coke_cn_aluminium" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />

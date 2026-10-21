@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "wall": "meeting_east_wall (meeting-room entrance wall)",
+  "measurement": "tabletop nearest short edge to wall inner face",
+  "mjcf_clearance_m": 1.38,
+  "usd_clearance_m": 1.3800003608190918,
+  "table_dimensions_m": [
+    3.5099998712539673,
+    1.1999998092651367,
+    0.7499999714801238
+  ],
+  "translation_m": [
+    0.12067801,
+    0,
+    0
+  ],
+  "all_table_geoms_shifted": 18,
+  "unrelated_mjcf_elements_unchanged": true,
+  "standalone_table_and_pbr_unchanged": true
+}

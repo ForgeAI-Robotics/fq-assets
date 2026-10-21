@@ -97,6 +97,8 @@ over "World"
         prepend references = @../../../assets/fq/conference_table/table.usda@</World/meeting_table_v7>
     )
     {
+        double3 xformOp:translate:wall_clearance = (0.12067800999999978, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate:wall_clearance"]
     }
 
     over "meeting_table_collision" (

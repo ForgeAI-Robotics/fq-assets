@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/office_baseline",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -34,7 +34,7 @@
     "Invisible restricted-zone colliders intentionally preserved",
     "Coke and round table are fixed in the navigation baseline; standalone coke is dynamic",
     "Refrigerator inherits provisional physics and independent mullion; CPU PhysX opening validated with SIMPLE adapter",
-    "Meeting room contains table only; conference table V7 visuals retain conservative full-box collision",
+    "Meeting room contains table only; conference table uses tabletop and four X-frame collision boxes",
     "Right-door cans are independent dynamic 0.35kg rigid bodies, initialized in the lowest pocket; retention requires contact dynamics, not parenting to the door."
   ],
   "dependency_versions": {
@@ -129,5 +129,24 @@
     "glazing": "ideal_transmission_no_rendered_pane",
     "source": "user_dimensions_2026-10-15",
     "status": "user_confirmed_layout_simulation_glazing"
+  },
+  "conference_table_placement": {
+    "wall_geom": "meeting_east_wall",
+    "wall_description": "Meeting-room entrance wall, inner face",
+    "measurement_definition": "Nearest tabletop short edge to wall inner face, perpendicular distance",
+    "clearance_m": 1.38,
+    "wall_inner_x_m": 5.51136,
+    "table_center_m": [
+      2.3763599999999996,
+      10.34090948,
+      0.0
+    ],
+    "translation_from_previous_m": [
+      0.12067800999999978,
+      0,
+      0
+    ],
+    "source": "User measurement 2026-10-21",
+    "status": "user_measured"
   }
 }
