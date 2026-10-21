@@ -1,6 +1,6 @@
 {
   "id": "fq:objects/mesh_trash_bin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "bottom_diameter_pending_measurement",
   "dimensions_m": {
     "height": 0.28,

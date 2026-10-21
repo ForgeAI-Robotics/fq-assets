@@ -1,0 +1,1 @@
+Fix mesh wastebasket collision-only visibility group so real lattice remains open in the viewer. Collision geometry and physics parameters unchanged.

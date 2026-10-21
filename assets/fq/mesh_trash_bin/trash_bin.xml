@@ -56,55 +56,55 @@
   </asset>
   <worldbody>
     <body name="bin_fixed">
-      <geom name="bin_bottom" type="cylinder" size=".107 .0015" pos="0 0 .004" friction=".6 .005 .0001" solref=".004 1" />
-      <geom name="wall_00" type="mesh" mesh="wall_00" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_01" type="mesh" mesh="wall_01" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_02" type="mesh" mesh="wall_02" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_03" type="mesh" mesh="wall_03" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_04" type="mesh" mesh="wall_04" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_05" type="mesh" mesh="wall_05" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_06" type="mesh" mesh="wall_06" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_07" type="mesh" mesh="wall_07" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_08" type="mesh" mesh="wall_08" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_09" type="mesh" mesh="wall_09" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_10" type="mesh" mesh="wall_10" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_11" type="mesh" mesh="wall_11" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_12" type="mesh" mesh="wall_12" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_13" type="mesh" mesh="wall_13" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_14" type="mesh" mesh="wall_14" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_15" type="mesh" mesh="wall_15" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_16" type="mesh" mesh="wall_16" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_17" type="mesh" mesh="wall_17" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_18" type="mesh" mesh="wall_18" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_19" type="mesh" mesh="wall_19" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_20" type="mesh" mesh="wall_20" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_21" type="mesh" mesh="wall_21" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_22" type="mesh" mesh="wall_22" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_23" type="mesh" mesh="wall_23" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_24" type="mesh" mesh="wall_24" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_25" type="mesh" mesh="wall_25" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_26" type="mesh" mesh="wall_26" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_27" type="mesh" mesh="wall_27" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_28" type="mesh" mesh="wall_28" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_29" type="mesh" mesh="wall_29" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_30" type="mesh" mesh="wall_30" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_31" type="mesh" mesh="wall_31" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_32" type="mesh" mesh="wall_32" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_33" type="mesh" mesh="wall_33" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_34" type="mesh" mesh="wall_34" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_35" type="mesh" mesh="wall_35" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_36" type="mesh" mesh="wall_36" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_37" type="mesh" mesh="wall_37" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_38" type="mesh" mesh="wall_38" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_39" type="mesh" mesh="wall_39" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_40" type="mesh" mesh="wall_40" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_41" type="mesh" mesh="wall_41" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_42" type="mesh" mesh="wall_42" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_43" type="mesh" mesh="wall_43" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_44" type="mesh" mesh="wall_44" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_45" type="mesh" mesh="wall_45" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_46" type="mesh" mesh="wall_46" friction=".5 .005 .0001" solref=".004 1" />
-      <geom name="wall_47" type="mesh" mesh="wall_47" friction=".5 .005 .0001" solref=".004 1" />
+      <geom name="bin_bottom" type="cylinder" size=".107 .0015" pos="0 0 .004" friction=".6 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_00" type="mesh" mesh="wall_00" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_01" type="mesh" mesh="wall_01" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_02" type="mesh" mesh="wall_02" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_03" type="mesh" mesh="wall_03" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_04" type="mesh" mesh="wall_04" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_05" type="mesh" mesh="wall_05" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_06" type="mesh" mesh="wall_06" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_07" type="mesh" mesh="wall_07" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_08" type="mesh" mesh="wall_08" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_09" type="mesh" mesh="wall_09" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_10" type="mesh" mesh="wall_10" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_11" type="mesh" mesh="wall_11" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_12" type="mesh" mesh="wall_12" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_13" type="mesh" mesh="wall_13" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_14" type="mesh" mesh="wall_14" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_15" type="mesh" mesh="wall_15" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_16" type="mesh" mesh="wall_16" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_17" type="mesh" mesh="wall_17" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_18" type="mesh" mesh="wall_18" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_19" type="mesh" mesh="wall_19" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_20" type="mesh" mesh="wall_20" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_21" type="mesh" mesh="wall_21" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_22" type="mesh" mesh="wall_22" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_23" type="mesh" mesh="wall_23" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_24" type="mesh" mesh="wall_24" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_25" type="mesh" mesh="wall_25" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_26" type="mesh" mesh="wall_26" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_27" type="mesh" mesh="wall_27" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_28" type="mesh" mesh="wall_28" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_29" type="mesh" mesh="wall_29" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_30" type="mesh" mesh="wall_30" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_31" type="mesh" mesh="wall_31" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_32" type="mesh" mesh="wall_32" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_33" type="mesh" mesh="wall_33" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_34" type="mesh" mesh="wall_34" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_35" type="mesh" mesh="wall_35" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_36" type="mesh" mesh="wall_36" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_37" type="mesh" mesh="wall_37" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_38" type="mesh" mesh="wall_38" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_39" type="mesh" mesh="wall_39" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_40" type="mesh" mesh="wall_40" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_41" type="mesh" mesh="wall_41" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_42" type="mesh" mesh="wall_42" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_43" type="mesh" mesh="wall_43" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_44" type="mesh" mesh="wall_44" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_45" type="mesh" mesh="wall_45" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_46" type="mesh" mesh="wall_46" friction=".5 .005 .0001" solref=".004 1" group="3" />
+      <geom name="wall_47" type="mesh" mesh="wall_47" friction=".5 .005 .0001" solref=".004 1" group="3" />
       <geom name="bin_visual" type="mesh" mesh="bin_visual" material="coat" contype="0" conaffinity="0" mass="0" group="2" />
     </body>
   </worldbody>
