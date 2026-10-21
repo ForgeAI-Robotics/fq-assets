@@ -1,0 +1,31 @@
+{
+  "assets/fq/conference_table/table.xml": {
+    "collision_boxes": 5,
+    "x_beams": 4,
+    "center_under_table_clear": true,
+    "other_geoms_unchanged": true
+  },
+  "scenes/fq/office_baseline/scene.xml": {
+    "collision_boxes": 5,
+    "x_beams": 4,
+    "center_under_table_clear": true,
+    "other_geoms_unchanged": true
+  },
+  "assets/fq/conference_table/table.usda": {
+    "size_m": [
+      3.5099998712539673,
+      1.1999998092651367,
+      0.7499999714801238
+    ],
+    "collision_boxes": 5
+  },
+  "scenes/fq/office_baseline/scene.usda": {
+    "size_m": [
+      3.5099998712539673,
+      1.1999998092651367,
+      0.7499999714801238
+    ],
+    "collision_boxes": 5
+  },
+  "pbr_texture_bytes_unchanged": true
+}

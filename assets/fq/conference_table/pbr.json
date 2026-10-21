@@ -21,12 +21,11 @@
     "roughness"
   ],
   "normal_map": false,
-  "geometry_preserved": true,
+  "geometry_preserved": false,
   "source": "SimFoundry meeting_room_20260915 v4_20261019 / multiscale_065",
   "source_machine": "192.168.31.41",
   "limitations": [
     "Residual broad shading remains in base color",
-    "Original dimensions, geometry, UVs and collision retained; not the resized v4 geometry",
     "MuJoCo uses base-color approximation; USD and web use explicit PBR roughness"
   ],
   "texture_hashes": {
@@ -58,5 +57,6 @@
       "board": "board_1_2",
       "max_uv_bound_delta": 0.00012874603271484375
     }
-  ]
+  ],
+  "geometry_revision": "351 cm X-frame; texture bytes, UVs and PBR parameters retained"
 }

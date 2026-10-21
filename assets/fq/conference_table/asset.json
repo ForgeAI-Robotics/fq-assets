@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:objects/conference_table",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "kind": "fixture",
   "units": "meter",
   "up_axis": "Z",
@@ -17,9 +17,9 @@
   "coordinates": "Retains baseline world coordinates; not origin-normalized",
   "measured_width_m": 1.2,
   "physics_calibrated": false,
-  "visual_style": "Original size with v4 relightable base color and roughness",
+  "visual_style": "351 cm tabletop with two end X frames; retained v4 PBR",
   "visual_provenance": "assets/fq/conference_table/pbr.json",
-  "collision_model": "unchanged conservative full box; no under-table traversal",
+  "collision_model": "Tabletop box and four oriented beam boxes; center underside open",
   "pbr": {
     "supported": true,
     "channels": [
@@ -27,5 +27,23 @@
       "roughness"
     ],
     "status": "estimated_material"
+  },
+  "measured_length_m": 3.51,
+  "geometry_parameters": {
+    "length_m": 3.51,
+    "width_m": 1.2,
+    "height_m": 0.75,
+    "short_edge_clearance_m": 0.04,
+    "long_edge_clearance_m": 0.045,
+    "beam_section_m": [
+      0.06,
+      0.06
+    ],
+    "frame_count": 2,
+    "world_center_xy_m": [
+      2.25568199,
+      10.34090948
+    ],
+    "basis": "User approved dimensions and X-frame approximation; width/height retained; not load-bearing engineering validation"
   }
 }

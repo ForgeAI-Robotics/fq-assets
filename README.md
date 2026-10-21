@@ -2,7 +2,7 @@
 
 FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、标定与来源记录。资产采用米制、Z 轴向上；MuJoCo 四元数为 `wxyz`。
 
-当前发布版本为 **[v0.8.2](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.8.2)**。冰箱 0.1.10、基准场景 0.1.16：左右上门均为摩擦力矩 0.1 N·m、阻尼 0，中缝竖梁不变。参数为仿真设定，非实测标定。
+当前发布版本为 **[v0.9.0](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.9.0)**。会议桌 0.4.0：长 351 cm，两端 X 形支架，保留 v4 PBR；基准场景 0.1.17 同步几何与碰撞。左右冰箱门沿用 0.1 N·m 摩擦、阻尼 0。
 
 ## 获取与版本锁定
 
@@ -11,13 +11,13 @@ FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、�
 ```bash
 git clone https://github.com/ForgeAI-Robotics/fq-assets.git
 cd fq-assets
-git checkout v0.8.0
+git checkout v0.9.0
 git lfs pull
 python3 tools/check_integrity.py
 python3 tools/catalog.py
 ```
 
-GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.8.0。
+GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.9.0。
 
 网页展示 `main` 上的当前资产；仿真和回放使用锁定的完整提交及文件校验值。更新 `main` 不应改变已有任务或历史轨迹使用的快照。
 
@@ -109,3 +109,7 @@ Fridge remains 0.1.8; no mass, joint, resistance or door collision changes.
 ### 会议桌重打光与网页预览
 
 会议桌沿用原始 UV、尺寸、场景位置和物理参数，仅迁移 v4 材质；来源与局限见 `assets/fq/conference_table/pbr.json`。USD 使用非自发光 UsdPreviewSurface，粗糙度贴图为 Raw；MuJoCo 使用底色近似。网页 PBR 预览使用固定曝光切换照明，会议桌和冰箱支持分区域材质，基准场景为部分材质支持。网页效果不等同 Isaac 光线追踪结果，底色仍可能残留少量原照明。
+
+## 会议桌 351 cm 修订
+
+长 3.51 m，宽 1.20 m、高 0.75 m 沿用；保留世界中心。两端 X 支架用 6 cm 方截面斜杆近似，端部留空 4 cm，长边留空 4.5 cm。碰撞为桌面盒与四根斜杆盒，移除原整块占位碰撞，桌下中央留空。底色、粗糙度贴图和 UV 沿用；尺寸与支架依据用户确认，非结构强度或实机动力学标定。历史尺寸保持记录，当前参数见 asset.json。

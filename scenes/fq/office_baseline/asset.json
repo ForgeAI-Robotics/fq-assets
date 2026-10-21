@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/office_baseline",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -39,7 +39,7 @@
   "dependency_versions": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.1",
-    "fq:objects/conference_table": "0.3.0",
+    "fq:objects/conference_table": "0.4.0",
     "fq:articulated/haier_bcd402": "0.1.10"
   },
   "placements": {

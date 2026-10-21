@@ -94,5 +94,11 @@ over "World"
     )
     {
     }
+
+    over "meeting_table_collision" (
+        active = false
+    )
+    {
+    }
 }
 
