@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.9.9",
+  "release": "0.9.10",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -29,7 +29,7 @@
     },
     {
       "id": "fq:scenes/office_baseline",
-      "version": "0.1.23",
+      "version": "0.1.24",
       "manifest": "scenes/fq/office_baseline/asset.json"
     },
     {

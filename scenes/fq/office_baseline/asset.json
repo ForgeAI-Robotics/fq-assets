@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/office_baseline",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -36,7 +36,7 @@
     "Coke and round table are fixed in the navigation baseline; standalone coke is dynamic",
     "Refrigerator inherits provisional physics and independent mullion; CPU PhysX opening validated with SIMPLE adapter",
     "Right-door cans are independent dynamic 0.35kg rigid bodies, initialized in the lowest pocket; retention requires contact dynamics, not parenting to the door.",
-    "Three office chairs are fixed posed furniture in baseline; standalone chair retains articulated MuJoCo dynamics. Layout is authored, not measured."
+    "Six office chairs are fixed posed furniture in baseline; standalone chair retains articulated MuJoCo dynamics. Layout is authored, not measured."
   ],
   "dependency_versions": {
     "fq:objects/coke_cn": "0.1.1",
@@ -169,6 +169,69 @@
         0,
         0,
         0.9981347984218669
+      ],
+      "fixed_base": true,
+      "joints_baked": true
+    },
+    "office_chair_4": {
+      "name": "office_chair_4",
+      "asset_id": "fq:articulated/office_chair",
+      "version": "0.1.0",
+      "position_m": [
+        1.22,
+        11.53,
+        0
+      ],
+      "yaw_deg": -12,
+      "seat_swivel_deg": 30,
+      "armrest_lowering_m": 0.04,
+      "quaternion_wxyz": [
+        0.9945218953682733,
+        0,
+        0,
+        -0.10452846326765347
+      ],
+      "fixed_base": true,
+      "joints_baked": true
+    },
+    "office_chair_5": {
+      "name": "office_chair_5",
+      "asset_id": "fq:articulated/office_chair",
+      "version": "0.1.0",
+      "position_m": [
+        2.43,
+        11.38,
+        0
+      ],
+      "yaw_deg": 9,
+      "seat_swivel_deg": -32,
+      "armrest_lowering_m": 0.04,
+      "quaternion_wxyz": [
+        0.996917333733128,
+        0,
+        0,
+        0.07845909572784494
+      ],
+      "fixed_base": true,
+      "joints_baked": true
+    },
+    "office_chair_6": {
+      "name": "office_chair_6",
+      "asset_id": "fq:articulated/office_chair",
+      "version": "0.1.0",
+      "position_m": [
+        3.64,
+        11.6,
+        0
+      ],
+      "yaw_deg": -7,
+      "seat_swivel_deg": 12,
+      "armrest_lowering_m": 0.04,
+      "quaternion_wxyz": [
+        0.9981347984218669,
+        0,
+        0,
+        -0.06104853953485687
       ],
       "fixed_base": true,
       "joints_baked": true

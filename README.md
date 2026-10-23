@@ -125,3 +125,7 @@ Office chair 0.1.0 uses the refined V2 geometry, regional PBR and adjustable MuJ
 ## Baseline meeting chairs — v0.9.9
 
 Baseline 0.1.23 includes three differently oriented, fixed office chairs along the conference table long side. See scenes/fq/office_baseline/chair_placements.json. This is a saved varied layout, not per-start randomization or a measured arrangement.
+
+## Six meeting chairs — v0.9.10
+
+Baseline 0.1.24 places three chairs on each long side of the conference table. Original three poses are preserved; opposite chairs follow the same fixed, varied-placement convention with armrests lowered 4 cm.

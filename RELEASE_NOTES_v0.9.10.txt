@@ -1,0 +1,3 @@
+v0.9.10 — Six baseline meeting chairs
+
+Baseline 0.1.24 adds three office chairs on the opposite long side, preserving the original three placements exactly. All six use distinct saved positions/base headings/upper swivel angles and 4 cm lowered armrests. Fixed baseline furniture; standalone chair dynamics unchanged. MJCF collision clearance and fixed-pose checks passed; 726 USD/MJCF visual mesh bounds agree within 1 micrometer. No running tasks updated.

@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "visual_meshes_compared": 363,
-  "max_world_bounds_error_m": 5.46969859627211e-07,
+  "visual_meshes_compared": 726,
+  "max_world_bounds_error_m": 8.505146151804865e-07,
   "scope": "USD vs MJCF posed visual bounds; USD chair colliders authored from the same MuJoCo primitives; static placement only"
 }

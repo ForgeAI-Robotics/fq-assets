@@ -21,11 +21,11 @@ for a in chairs:
 assert not violations,violations[:20]
 # Chairs are fixed scenery: preserve all body world poses across integration.
 ids=[i for i in range(m.nbody) if (m.body(i).name or '').startswith('office_chair_')];before=d.xpos[ids].copy();mj.mj_step(m,d,nstep=500);mj.mj_forward(m,d);delta=float(np.max(np.abs(d.xpos[ids]-before)));assert delta==0
-report={'passed':True,'chair_count':3,'collision_shapes':len(chairs),'pairs_checked':checked,'penetrations_over_2mm':violations,'fixed_pose_drift_m':delta,'method':'MuJoCo geomDistance against neighboring scene and chairs; fixed furniture, no chair dynamics','placement_status':'authored varied placement; not measured','baseline_joints_unchanged':m.njnt}
+report={'passed':True,'chair_count':6,'collision_shapes':len(chairs),'pairs_checked':checked,'penetrations_over_2mm':violations,'fixed_pose_drift_m':delta,'method':'MuJoCo geomDistance against neighboring scene and chairs; fixed furniture, no chair dynamics','placement_status':'authored varied placement; not measured','baseline_joints_unchanged':m.njnt}
 (r/'validation/baseline_chairs.json').write_text(json.dumps(report,indent=2));print(json.dumps(report))
 # Detail render: omit ceiling and walls only in this diagnostic image.
 for i in range(m.ngeom):
  n=m.geom(i).name or ''
- if not (n.startswith('office_chair_') or n.startswith('meeting_table') or n=='floor') :m.geom_rgba[i,3]=0
-ren=mj.Renderer(m,720,960);cam=mj.MjvCamera();cam.lookat[:]=[2.4,9.9,.45];cam.distance=5.3;cam.azimuth=-70;cam.elevation=-32;opt=mj.MjvOption();opt.geomgroup[3]=0
+ if not (n.startswith('office_chair_') or n.startswith('meeting_table') or n=='floor') :m.geom_rgba[i,3]=0;m.geom_group[i]=5
+ren=mj.Renderer(m,720,960);cam=mj.MjvCamera();cam.lookat[:]=[2.4,10.35,.45];cam.distance=6.0;cam.azimuth=-70;cam.elevation=-42;opt=mj.MjvOption();opt.geomgroup[3]=0;opt.geomgroup[5]=0;opt.sitegroup[:]=0
 ren.update_scene(d,camera=cam,scene_option=opt);Image.fromarray(ren.render()).save(r/'validation/previews/baseline_chairs_detail.png');ren.close()
