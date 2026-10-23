@@ -24,11 +24,21 @@
   },
   "assets/fq/tabletop/isaac/round_table.usd": {
     "all_existing_collision_attributes_unchanged": true,
-    "pbr_bound_regions": 3
+    "pbr_bound_regions": 3,
+    "world_visual_dimensions_m": [
+      0.6999999821442943,
+      0.6999999651896478,
+      0.750000041098362
+    ]
   },
   "scenes/fq/office_baseline/scene.usda": {
     "all_existing_collision_attributes_unchanged": true,
-    "pbr_bound_regions": 3
+    "pbr_bound_regions": 3,
+    "world_visual_dimensions_m": [
+      0.6999999821442948,
+      0.6999999651896474,
+      0.750000041098362
+    ]
   },
   "appearance_status": "estimated, not measured; browser lighting is not Isaac RTX validation"
 }

@@ -58,6 +58,11 @@ for rel,base in [('assets/fq/tabletop/isaac/round_table.usd','/World'),('scenes/
  for part,(v,n,uv,f) in meshes.items():
   m=UsdGeom.Mesh.Define(s,base+'/Meshes/'+part+'_visual');m.CreatePointsAttr(v);m.CreateFaceVertexCountsAttr([3]*len(f));m.CreateFaceVertexIndicesAttr([i for face in f for i in face]);m.CreateNormalsAttr(n);m.SetNormalsInterpolation('vertex');m.CreateSubdivisionSchemeAttr('none')
   UsdGeom.PrimvarsAPI(m).CreatePrimvar('st',Sdf.ValueTypeNames.TexCoord2fArray,'vertex').Set(uv)
+  legacy=s.GetPrimAtPath(base+'/Meshes').GetAttribute('xformOp:scale:dimensions_20261013').Get()
+  if legacy:
+   attr=m.GetPrim().GetAttribute('xformOp:scale:cancelLegacyVisualScale')
+   if not attr:attr=UsdGeom.Xformable(m).AddScaleOp(opSuffix='cancelLegacyVisualScale').GetAttr()
+   attr.Set(Gf.Vec3f(*(1/x for x in legacy)))
   mat=UsdShade.Material.Define(s,base+'/RoundTablePBR/'+part);shader=UsdShade.Shader.Define(s,str(mat.GetPath())+'/Surface');shader.CreateIdAttr('UsdPreviewSurface');pr=materials[f'round_table_{part}_pbr']
   # USD inputs are linear; web stores the same swatch in sRGB.
   linear=lambda x:x/12.92 if x<=.04045 else ((x+.055)/1.055)**2.4

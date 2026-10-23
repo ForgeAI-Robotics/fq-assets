@@ -35,6 +35,9 @@ for rel,base in [('assets/fq/tabletop/isaac/round_table.usd','/World'),('scenes/
   prim=b.GetPrimAtPath(base+'/Meshes/'+part+'_visual');assert not prim.HasAPI(UsdPhysics.CollisionAPI)
   mat,_=UsdShade.MaterialBindingAPI(prim).ComputeBoundMaterial();assert mat
   bounds=UsdGeom.BBoxCache(0,['default','render']).ComputeWorldBound(prim).ComputeAlignedRange()
- report[rel]={'all_existing_collision_attributes_unchanged':True,'pbr_bound_regions':3}
+ bounds=[UsdGeom.BBoxCache(0,['default','render']).ComputeWorldBound(b.GetPrimAtPath(base+'/Meshes/'+part+'_visual')).ComputeAlignedRange() for part in ['top','pillar','base']]
+ size=np.max([list(x.GetMax()) for x in bounds],axis=0)-np.min([list(x.GetMin()) for x in bounds],axis=0)
+ np.testing.assert_allclose(size,[.7,.7,.75],atol=2e-6)
+ report[rel]={'all_existing_collision_attributes_unchanged':True,'pbr_bound_regions':3,'world_visual_dimensions_m':size.tolist()}
 report['appearance_status']='estimated, not measured; browser lighting is not Isaac RTX validation'
 (r/'validation/round_table_pbr.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

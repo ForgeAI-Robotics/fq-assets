@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:objects/round_table",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "kind": "fixture",
   "units": "meter",
   "up_axis": "Z",
@@ -19,7 +19,8 @@
     "FQ collision/scale/material adaptation",
     "Photo-reference table material",
     "Visual and collision geometry resized to 0.70 x 0.70 x 0.75 m; preserve floor origin and materials.",
-    "Regularized circular rim with 1 mm bevel and explicit normals; three PBR regions; dimensions and collisions preserved."
+    "Regularized circular rim with 1 mm bevel and explicit normals; three PBR regions; dimensions and collisions preserved.",
+    "USD visual-only inverse compensation for legacy Meshes dimensions scale; no collision transforms changed."
   ],
   "physics_calibrated": false,
   "dimensions_m": [
