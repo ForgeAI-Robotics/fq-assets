@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "estimated_appearance_not_measured",
+  "materials": {
+    "round_table_top_pbr": {
+      "roughness": 0.48,
+      "metalness": 0,
+      "base_color": [
+        0.815,
+        0.797,
+        0.756
+      ]
+    },
+    "round_table_pillar_pbr": {
+      "roughness": 0.32,
+      "metalness": 0,
+      "base_color": [
+        0.76,
+        0.75,
+        0.71
+      ]
+    },
+    "round_table_base_pbr": {
+      "roughness": 0.38,
+      "metalness": 0,
+      "base_color": [
+        0.74,
+        0.73,
+        0.69
+      ]
+    }
+  },
+  "regions": [
+    "top",
+    "pillar",
+    "base"
+  ],
+  "edge_bevel_m": {
+    "top": 0.001,
+    "pillar": 0.0006,
+    "base": 0.0012
+  },
+  "source": "FQ cleanup of existing table silhouette; original photo-derived tabletop base color retained",
+  "collision_changed": false
+}

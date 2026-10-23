@@ -24,6 +24,8 @@ def main():
     args=ap.parse_args();root=args.root.resolve();out=args.out;out.mkdir(parents=True,exist_ok=True)
     appearance=json.loads((root/'assets/fq/haier_bcd402/appearance.json').read_text())
     table_pbr=json.loads((root/'assets/fq/conference_table/pbr.json').read_text())
+    round_pbr=root/'assets/fq/tabletop/round_table/pbr.json'
+    if round_pbr.exists():table_pbr['materials'].update(json.loads(round_pbr.read_text())['materials'])
     index=json.loads((root/'catalog/index.json').read_text());catalog=[]
     for item in index['assets']:
         meta=json.loads((root/item['manifest']).read_text())

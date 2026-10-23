@@ -191,7 +191,8 @@ function frameModel(){
   const [lo,hi]=activeModel.bounds,center=new THREE.Vector3(...lo).add(new THREE.Vector3(...hi)).multiplyScalar(.5),size=new THREE.Vector3(...hi).sub(new THREE.Vector3(...lo)),extent=Math.max(...size.toArray(),.05);
   const dir=new THREE.Vector3(.9,-1.8,selected.kind==='scene'?2.1:.85).normalize();camera.position.copy(center).addScaledVector(dir,extent*1.85);controls.target.copy(center);camera.near=extent/1000;camera.far=extent*100;camera.updateProjectionMatrix();controls.minDistance=extent*.18;controls.maxDistance=extent*8;controls.update();
   keyLight.position.copy(center).add(new THREE.Vector3(extent,-extent,extent*2));keyLight.target.position.copy(center);fill.position.copy(center).add(new THREE.Vector3(-extent,extent,extent));fill.target.position.copy(center);
-  Object.assign(keyLight.shadow.camera,{left:-extent,right:extent,top:extent,bottom:-extent,near:.001,far:extent*8});keyLight.shadow.camera.updateProjectionMatrix();keyLight.shadow.normalBias=extent*.001;
+  Object.assign(keyLight.shadow.camera,{left:-extent,right:extent,top:extent,bottom:-extent,near:.001,far:extent*8});keyLight.shadow.camera.updateProjectionMatrix();keyLight.shadow.normalBias=extent*(selected?.slug === 'round_table' ? .003 : .001);
+  keyLight.shadow.bias=selected?.slug === 'round_table' ? .00005 : -.00015; // Avoid self-shadow scalloping on the small beveled rim.
   if(!ground&&selected.kind!=='scene'){
     ground=new THREE.Mesh(new THREE.PlaneGeometry(extent*30,extent*30),new THREE.MeshStandardMaterial({color:0xeeeee7,roughness:1,metalness:0}));ground.position.set(center.x,center.y,lo[2]-.002*extent);ground.receiveShadow=true;scene.add(ground);
     grid=new THREE.GridHelper(extent*8,32,0xd5dacd,0xe1e4d9);grid.rotation.x=Math.PI/2;grid.position.set(center.x,center.y,lo[2]-.001*extent);grid.material.transparent=true;grid.material.opacity=.55;scene.add(grid);

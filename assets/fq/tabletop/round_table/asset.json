@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:objects/round_table",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "kind": "fixture",
   "units": "meter",
   "up_axis": "Z",
@@ -18,7 +18,8 @@
   "modifications": [
     "FQ collision/scale/material adaptation",
     "Photo-reference table material",
-    "Visual and collision geometry resized to 0.70 x 0.70 x 0.75 m; preserve floor origin and materials."
+    "Visual and collision geometry resized to 0.70 x 0.70 x 0.75 m; preserve floor origin and materials.",
+    "Regularized circular rim with 1 mm bevel and explicit normals; three PBR regions; dimensions and collisions preserved."
   ],
   "physics_calibrated": false,
   "dimensions_m": [
@@ -26,5 +27,6 @@
     0.7,
     0.75
   ],
-  "dimensions_source": "User-confirmed dimensions on 2026-10-13; replaces historical DREAM export sizing, not a new sensor calibration."
+  "dimensions_source": "User-confirmed dimensions on 2026-10-13; replaces historical DREAM export sizing, not a new sensor calibration.",
+  "appearance": "assets/fq/tabletop/round_table/pbr.json"
 }

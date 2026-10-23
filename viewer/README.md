@@ -91,3 +91,7 @@ uniform modes. Four replay errors were zero. This does not establish hardware,
 GPU PhysX or cross-engine replay equivalence.
 
 Third-party Three.js 0.180.0 is covered by `web/vendor/LICENSE.txt` (MIT).
+
+## Round table v0.1.2
+
+The exporter reads `assets/fq/tabletop/round_table/pbr.json` for tabletop, pillar and base materials in both standalone and baseline previews. Soft/strong controls keep camera and exposure fixed. Material parameters are estimates; these browser previews are not Isaac RTX renders. The standalone round table uses adjusted shadow bias for its 1 mm beveled rim.

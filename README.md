@@ -2,7 +2,7 @@
 
 FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、标定与来源记录。资产采用米制、Z 轴向上；MuJoCo 四元数为 `wxyz`。
 
-当前发布版本为 **[v0.9.0](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.9.0)**。会议桌 0.4.0：长 351 cm，两端 X 形支架，保留 v4 PBR；基准场景 0.1.17 同步几何与碰撞。左右冰箱门沿用 0.1 N·m 摩擦、阻尼 0。
+当前发布版本为 **[v0.9.6](https://github.com/ForgeAI-Robotics/fq-assets/releases/tag/v0.9.6)**。圆桌 0.1.2：桌沿规则化、1 mm 小倒角和显式法线，桌面/支柱/底座分区域 PBR；尺寸 70 × 70 × 75 cm、碰撞和物理参数不变。基准场景 0.1.21 同步外观。
 
 ## 获取与版本锁定
 
@@ -11,13 +11,13 @@ FQ 机器人资产库：统一管理物体、场景和动作，以及姿态、�
 ```bash
 git clone https://github.com/ForgeAI-Robotics/fq-assets.git
 cd fq-assets
-git checkout v0.9.0
+git checkout v0.9.6
 git lfs pull
 python3 tools/check_integrity.py
 python3 tools/catalog.py
 ```
 
-GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.9.0。
+GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 的专用附件不代表当前版本；请使用当前标签及 Git LFS 获取 v0.9.6。
 
 网页展示 `main` 上的当前资产；仿真和回放使用锁定的完整提交及文件校验值。更新 `main` 不应改变已有任务或历史轨迹使用的快照。
 

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <mujoco model="fq_office_baseline_v0_1_1">
   <option gravity="0 0 -9.81" integrator="implicitfast" />
   <statistic center="8.5 6.2 0" extent="19" />
@@ -194,10 +193,12 @@
     <site name="start" pos="13.0 10.2 .025" size=".18" rgba=".1 .7 .3 .8" />
     <site name="goal" pos="4.65 11.827272727272726 .025" size=".18" rgba=".9 .3 .1 .8" />
     <body name="round_table" pos="10.8 11.55 -0.0" quat="1 0 0 0">
-      <geom name="round_table_visual" mesh="round_table_visual" material="round_table_mat" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
       <geom name="round_table_collision_0" type="mesh" mesh="round_table_collision_0" rgba="0 0 0 0" group="3" mass="0" condim="4" friction=".8 .01 .001" solref=".008 1" />
       <geom name="round_table_collision_1" type="mesh" mesh="round_table_collision_1" rgba="0 0 0 0" group="3" mass="0" condim="4" friction=".8 .01 .001" solref=".008 1" />
       <geom name="round_table_collision_2" type="mesh" mesh="round_table_collision_2" rgba="0 0 0 0" group="3" mass="0" condim="4" friction=".8 .01 .001" solref=".008 1" />
+      <geom name="round_table_top_visual" mesh="round_table_top_pbr" material="round_table_top_pbr" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="round_table_pillar_visual" mesh="round_table_pillar_pbr" material="round_table_pillar_pbr" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="round_table_base_visual" mesh="round_table_base_pbr" material="round_table_base_pbr" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
     </body>
     <body name="coke" pos="10.8 11.55 0.8247" quat="1 0 0 0">
       <geom name="coke_visual" mesh="coke_visual" material="coke_cn_label" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
@@ -1408,17 +1409,19 @@
     <geom name="meeting_table_x_1_m1_collision" type="box" pos="4.06136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 -0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
     <geom name="meeting_table_x_1_1" type="box" pos="4.06136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="0" conaffinity="0" friction=".7 .005 .0001" material="conference_legs_v7" mass="0" />
     <geom name="meeting_table_x_1_1_collision" type="box" pos="4.06136 10.34090948 0.351088196039" size="0.03 0.03 0.63004054033" quat="0.870767841536 0.491694382871 0 0" contype="1" conaffinity="1" friction=".7 .005 .0001" rgba="0 0 0 0" group="3" />
-  <body name="right_door_coke_1" pos="15.620000008 11.708999994000001 0.963590003" quat="1 0 0 0">
-      <freejoint name="right_door_coke_1_free" /><geom name="right_door_coke_1_coke_visual" mesh="coke_visual" material="coke_cn_label" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
+    <body name="right_door_coke_1" pos="15.620000008 11.708999994000001 0.963590003" quat="1 0 0 0">
+      <freejoint name="right_door_coke_1_free" />
+      <geom name="right_door_coke_1_coke_visual" mesh="coke_visual" material="coke_cn_label" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
       <geom name="right_door_coke_1_coke_visual_cn_ends" mesh="coke_cn_ends" material="coke_cn_aluminium" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
       <geom name="right_door_coke_1_coke_collision_0" type="mesh" mesh="coke_collision_0" rgba="0 0 0 0" group="3" mass="0.35" condim="4" friction="0.6 0.003 0.0001" solref="0.008 1" priority="1" />
     </body>
     <body name="right_door_coke_2" pos="15.720000008 11.708999994000001 0.963590003" quat="1 0 0 0">
-      <freejoint name="right_door_coke_2_free" /><geom name="right_door_coke_2_coke_visual" mesh="coke_visual" material="coke_cn_label" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
+      <freejoint name="right_door_coke_2_free" />
+      <geom name="right_door_coke_2_coke_visual" mesh="coke_visual" material="coke_cn_label" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
       <geom name="right_door_coke_2_coke_visual_cn_ends" mesh="coke_cn_ends" material="coke_cn_aluminium" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
       <geom name="right_door_coke_2_coke_collision_0" type="mesh" mesh="coke_collision_0" rgba="0 0 0 0" group="3" mass="0.35" condim="4" friction="0.6 0.003 0.0001" solref="0.008 1" priority="1" />
     </body>
-    </worldbody>
+  </worldbody>
   <asset>
     <texture name="floor_texture" type="2d" file="textures/carpet_photo_v1.png" />
     <texture name="wall_texture" type="cube" file="textures/wall.png" />
@@ -1435,8 +1438,6 @@
     <material name="light_material" rgba="1 1 0.96 1" specular=".12" shininess=".15" reflectance="0" emission="1" />
     <material name="logo_material" rgba="0.9 0.9 0.88 1" specular=".55" shininess=".65" reflectance="0" />
     <material name="ceiling_material" rgba="0.94 0.94 0.92 1" specular=".12" shininess=".15" reflectance="0" emission=".15" />
-    <mesh name="round_table_visual" file="../../../assets/fq/tabletop/common/meshes/round_table_textured.obj" />
-    <material name="round_table_mat" rgba="1 1 1 1" specular=".15" shininess=".2" texture="surface_table_tex" />
     <mesh name="round_table_collision_0" file="../../../assets/fq/tabletop/common/meshes/round_table_collision_base.obj" />
     <mesh name="round_table_collision_1" file="../../../assets/fq/tabletop/common/meshes/round_table_collision_pillar.obj" />
     <mesh name="round_table_collision_2" file="../../../assets/fq/tabletop/common/meshes/round_table_collision_top.obj" />
@@ -2663,6 +2664,12 @@
     <mesh name="baseline_fridge_col_076_11_arch_5_6" file="../../../assets/fq/haier_bcd402/meshes/col_076_11_arch_5_6.obj" />
     <mesh name="baseline_fridge_col_076_11_arch_5_7" file="../../../assets/fq/haier_bcd402/meshes/col_076_11_arch_5_7.obj" />
     <mesh name="baseline_fridge_col_076_11_arch_5_8" file="../../../assets/fq/haier_bcd402/meshes/col_076_11_arch_5_8.obj" />
+    <mesh name="round_table_top_pbr" file="../../../assets/fq/tabletop/common/meshes/round_table_top_pbr.obj" />
+    <material name="round_table_top_pbr" rgba="1 1 1 1" specular=".25" shininess="0.52" texture="surface_table_tex" />
+    <mesh name="round_table_pillar_pbr" file="../../../assets/fq/tabletop/common/meshes/round_table_pillar_pbr.obj" />
+    <material name="round_table_pillar_pbr" rgba="0.76 0.75 0.71 1" specular=".25" shininess="0.6799999999999999" />
+    <mesh name="round_table_base_pbr" file="../../../assets/fq/tabletop/common/meshes/round_table_base_pbr.obj" />
+    <material name="round_table_base_pbr" rgba="0.74 0.73 0.69 1" specular=".25" shininess="0.62" />
   </asset>
   <contact>
     <exclude body1="refrigerator_base" body2="refrigerator_mullion" />

@@ -1,0 +1,34 @@
+{
+  "collision_mesh_bytes_unchanged": true,
+  "assets/fq/tabletop/mujoco/round_table.xml": {
+    "dimensions_m": [
+      0.6999999880790729,
+      0.6999999880790729,
+      0.7499999999990417
+    ],
+    "negative_normal_count": 0,
+    "minimum_face_normal_dot": 0.9806042313575745,
+    "all_original_physics_and_body_placements_unchanged": true,
+    "compiled": true
+  },
+  "scenes/fq/office_baseline/scene.xml": {
+    "dimensions_m": [
+      0.6999999880790746,
+      0.6999999880790746,
+      0.7499999999990417
+    ],
+    "negative_normal_count": 0,
+    "minimum_face_normal_dot": 0.9806042313575745,
+    "all_original_physics_and_body_placements_unchanged": true,
+    "compiled": true
+  },
+  "assets/fq/tabletop/isaac/round_table.usd": {
+    "all_existing_collision_attributes_unchanged": true,
+    "pbr_bound_regions": 3
+  },
+  "scenes/fq/office_baseline/scene.usda": {
+    "all_existing_collision_attributes_unchanged": true,
+    "pbr_bound_regions": 3
+  },
+  "appearance_status": "estimated, not measured; browser lighting is not Isaac RTX validation"
+}
