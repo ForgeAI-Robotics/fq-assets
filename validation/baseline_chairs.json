@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "chair_count": 3,
+  "collision_shapes": 69,
+  "pairs_checked": 297,
+  "penetrations_over_2mm": [],
+  "fixed_pose_drift_m": 0.0,
+  "method": "MuJoCo geomDistance against neighboring scene and chairs; fixed furniture, no chair dynamics",
+  "placement_status": "authored varied placement; not measured",
+  "baseline_joints_unchanged": 5
+}

@@ -243,5 +243,3437 @@ over "World"
             bool physics:rigidBodyEnabled = 1
         }
     }
+
+    def Xform "office_chair_1" (
+        prepend references = @../../../assets/fq/office_chair/chair.usda@
+    )
+    {
+        float xformOp:rotateZ = 168
+        double3 xformOp:translate = (1.18, 9.12, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+        over "Collision" (
+            active = false
+        )
+        {
+        }
+
+        over "Visuals"
+        {
+            over "GasLiftSleeve"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "GasLiftBottom"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "FiveStarHub"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_0"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_1"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_2"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_3"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_4"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "SeatCushion"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "UpperBackCushion"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarCushion"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearLumbarTextile"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearTextile"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "SeatStitch"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackOuterFrame_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarLoop_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YBranch_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LowerBackCross_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUnderSeatMount_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackOuterFrame_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarLoop_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YBranch_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LowerBackCross_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUnderSeatMount_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackTopFrame"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YSpineLower"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YSpineUpper"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_0"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_2"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_3"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "UnderSeatMechanism"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "HeightLever"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "HeightLeverPaddle"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "GasLiftChrome"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUpright_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestBase_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestPad_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmHeightButton_neg1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUpright_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestBase_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestPad_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmHeightButton_1"
+            {
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_0"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, 0.32556817)
+                double3 xformOp:translate = (0.12343703803968814, -0.16380648212672977, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_0"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, 0.32556817)
+                double3 xformOp:translate = (0.12343703803968814, -0.16380648212672977, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_0_neg1"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, 0.32556817)
+                double3 xformOp:translate = (0.12343703803968814, -0.16380648212672977, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_0_neg1"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, 0.32556817)
+                double3 xformOp:translate = (0.12343703803968814, -0.16380648212672977, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_0_1"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, 0.32556817)
+                double3 xformOp:translate = (0.12343703803968811, -0.16380648212672977, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_0_1"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, 0.32556817)
+                double3 xformOp:translate = (0.12343703803968811, -0.16380648212672977, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_1"
+            {
+                quatf xformOp:orient = (0.8870108, 0, 0, -0.4617486)
+                double3 xformOp:translate = (-0.2580328939510324, 0.1343234225494205, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_1"
+            {
+                quatf xformOp:orient = (0.8870108, 0, 0, -0.4617486)
+                double3 xformOp:translate = (-0.2580328939510324, 0.1343234225494205, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_1_neg1"
+            {
+                quatf xformOp:orient = (0.8870108, 0, 0, -0.4617486)
+                double3 xformOp:translate = (-0.2580328939510324, 0.13432342254942053, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_1_neg1"
+            {
+                quatf xformOp:orient = (0.8870108, 0, 0, -0.4617486)
+                double3 xformOp:translate = (-0.2580328939510324, 0.13432342254942053, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_1_1"
+            {
+                quatf xformOp:orient = (0.8870108, 0, 0, -0.4617486)
+                double3 xformOp:translate = (-0.2580328939510324, 0.13432342254942053, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_1_1"
+            {
+                quatf xformOp:orient = (0.8870108, 0, 0, -0.4617486)
+                double3 xformOp:translate = (-0.2580328939510324, 0.13432342254942053, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_2"
+            {
+                quatf xformOp:orient = (0.9998477, 0, 0, 0.017452406)
+                double3 xformOp:translate = (0.00321463158759705, 0.010514586145753693, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_2"
+            {
+                quatf xformOp:orient = (0.9998477, 0, 0, 0.017452406)
+                double3 xformOp:translate = (0.00321463158759705, 0.010514586145753693, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_2_neg1"
+            {
+                quatf xformOp:orient = (0.9998477, 0, 0, 0.017452406)
+                double3 xformOp:translate = (0.00321463158759705, 0.010514586145753693, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_2_neg1"
+            {
+                quatf xformOp:orient = (0.9998477, 0, 0, 0.017452406)
+                double3 xformOp:translate = (0.00321463158759705, 0.010514586145753693, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_2_1"
+            {
+                quatf xformOp:orient = (0.9998477, 0, 0, 0.017452406)
+                double3 xformOp:translate = (0.00321463158759705, 0.010514586145753693, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_2_1"
+            {
+                quatf xformOp:orient = (0.9998477, 0, 0, 0.017452406)
+                double3 xformOp:translate = (0.00321463158759705, 0.010514586145753693, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_3"
+            {
+                quatf xformOp:orient = (0.8703557, 0, 0, 0.49242356)
+                double3 xformOp:translate = (-0.3082326599462503, 0.03511867560941029, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_3"
+            {
+                quatf xformOp:orient = (0.8703557, 0, 0, 0.49242356)
+                double3 xformOp:translate = (-0.3082326599462503, 0.03511867560941029, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_3_neg1"
+            {
+                quatf xformOp:orient = (0.8703557, 0, 0, 0.49242356)
+                double3 xformOp:translate = (-0.3082326599462503, 0.03511867560941029, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_3_neg1"
+            {
+                quatf xformOp:orient = (0.8703557, 0, 0, 0.49242356)
+                double3 xformOp:translate = (-0.3082326599462503, 0.03511867560941029, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_3_1"
+            {
+                quatf xformOp:orient = (0.8703557, 0, 0, 0.49242356)
+                double3 xformOp:translate = (-0.3082326599462503, 0.03511867560941029, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_3_1"
+            {
+                quatf xformOp:orient = (0.8703557, 0, 0, 0.49242356)
+                double3 xformOp:translate = (-0.3082326599462503, 0.03511867560941029, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_4"
+            {
+                quatf xformOp:orient = (0.9563047, 0, 0, -0.2923717)
+                double3 xformOp:translate = (0.17415901301084127, 0.05996775728290665, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_4"
+            {
+                quatf xformOp:orient = (0.9563047, 0, 0, -0.2923717)
+                double3 xformOp:translate = (0.17415901301084127, 0.05996775728290665, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_4_neg1"
+            {
+                quatf xformOp:orient = (0.9563047, 0, 0, -0.2923717)
+                double3 xformOp:translate = (0.17415901301084127, 0.05996775728290665, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_4_neg1"
+            {
+                quatf xformOp:orient = (0.9563047, 0, 0, -0.2923717)
+                double3 xformOp:translate = (0.17415901301084127, 0.05996775728290665, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_4_1"
+            {
+                quatf xformOp:orient = (0.9563047, 0, 0, -0.2923717)
+                double3 xformOp:translate = (0.17415901301084127, 0.05996775728290665, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_4_1"
+            {
+                quatf xformOp:orient = (0.9563047, 0, 0, -0.2923717)
+                double3 xformOp:translate = (0.17415901301084127, 0.05996775728290665, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+        }
+
+        def "PhysicsCollision"
+        {
+            def Capsule "spoke_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.2712729253727124
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.19374567, -0.59628785, 0)
+                double3 xformOp:translate = (0.16881253384053707, 0.05485051963478327, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292711690953
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.62697417, -3.8391097e-17, 0)
+                double3 xformOp:translate = (1.0868741002809003e-17, 0.17750000208616257, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.2712729253727124
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.19374567, 0.59628785, 0)
+                double3 xformOp:translate = (-0.16881253384053707, 0.05485051963478327, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_3" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292674480574
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, -0.5072327, 0.36852616, 0)
+                double3 xformOp:translate = (-0.10433188173919916, -0.14360052160918713, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_4" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292674480574
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, -0.5072327, -0.36852616, 0)
+                double3 xformOp:translate = (0.10433188173919916, -0.14360052160918713, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Cylinder "gaslift" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.3
+                double radius = 0.033
+                token visibility = "invisible"
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.209)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Cube "seat" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                float3 xformOp:scale = (0.235, 0.225, 0.038)
+                double3 xformOp:translate = (-0.007042073441788362, -0.013244213892883905, 0.45)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "back" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9652031, -0.09928125, 0.024753597, -0.24065216)
+                float3 xformOp:scale = (0.22, 0.024, 0.22)
+                double3 xformOp:translate = (0.1173678906964727, 0.22073689821473175, 0.9390000000000001)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "lumbar" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                float3 xformOp:scale = (0.19, 0.035, 0.095)
+                double3 xformOp:translate = (0.07276809223181308, 0.1368568768931337, 0.674)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                float3 xformOp:scale = (0.044, 0.132, 0.025)
+                double3 xformOp:translate = (-0.2716033590337361, 0.10477411589506, 0.6639999999999999)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_post_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                float3 xformOp:scale = (0.027, 0.034, 0.14)
+                double3 xformOp:translate = (-0.24812978089444154, 0.14892149553800635, 0.49900000000000005)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                float3 xformOp:scale = (0.044, 0.132, 0.025)
+                double3 xformOp:translate = (0.23874034963872373, -0.16658044739518488, 0.6639999999999999)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_post_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9702957, 0, 0, -0.2419219)
+                float3 xformOp:scale = (0.027, 0.034, 0.14)
+                double3 xformOp:translate = (0.2622139277780183, -0.12243306775223853, 0.49900000000000005)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_0_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6685826, -0.5647206, -0.42554748, 0.23021145)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.318728681062948, 0.09890091054670769, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_0_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6685826, -0.5647206, -0.42554748, 0.23021145)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.29385755388629664, 0.11567669765083011, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_1_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6272114, -0.32650557, -0.6272114, -0.32650557)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.0184334710767336, 0.3095956365718777, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_1_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6272114, -0.32650557, -0.6272114, -0.32650557)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.001226177986202226, 0.33417019790054747, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_2_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.70699906, 0.67620957, -0.20673801, 0.012340715)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.3069833826469782, 0.11506692693698725, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_2_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.70699906, 0.67620957, -0.20673801, 0.012340715)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.3152525033214882, 0.08622907605883769, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_3_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6154344, 0.08004676, 0.7025614, 0.34819603)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.1942711537320444, -0.2717473783968768, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_3_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6154344, 0.08004676, 0.7025614, 0.34819603)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.16665600812847126, -0.2600254445421986, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_4_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.67620957, -0.23021145, 0.6685826, -0.20673801)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.17058028602727257, -0.26735653560287514, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_4_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.67620957, -0.23021145, 0.6685826, -0.20673801)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.2005620108378454, -0.2663095507018002, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
+
+    def Xform "office_chair_2" (
+        prepend references = @../../../assets/fq/office_chair/chair.usda@
+    )
+    {
+        float xformOp:rotateZ = 185
+        double3 xformOp:translate = (2.4, 9.3, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+        over "Collision" (
+            active = false
+        )
+        {
+        }
+
+        over "Visuals"
+        {
+            over "GasLiftSleeve"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "GasLiftBottom"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "FiveStarHub"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_0"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_1"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_2"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_3"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_4"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "SeatCushion"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "UpperBackCushion"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarCushion"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearLumbarTextile"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearTextile"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "SeatStitch"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackOuterFrame_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarLoop_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YBranch_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LowerBackCross_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUnderSeatMount_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackOuterFrame_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarLoop_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YBranch_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LowerBackCross_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUnderSeatMount_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackTopFrame"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YSpineLower"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YSpineUpper"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_0"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_2"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_3"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "UnderSeatMechanism"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "HeightLever"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "HeightLeverPaddle"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "GasLiftChrome"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUpright_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestBase_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestPad_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmHeightButton_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUpright_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestBase_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestPad_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmHeightButton_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_0"
+            {
+                quatf xformOp:orient = (0.7933533, 0, 0, -0.6087614)
+                double3 xformOp:translate = (0.12802150660323985, 0.361521582130917, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_0"
+            {
+                quatf xformOp:orient = (0.7933533, 0, 0, -0.6087614)
+                double3 xformOp:translate = (0.12802150660323985, 0.361521582130917, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_0_neg1"
+            {
+                quatf xformOp:orient = (0.7933533, 0, 0, -0.6087614)
+                double3 xformOp:translate = (0.12802150660323985, 0.361521582130917, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_0_neg1"
+            {
+                quatf xformOp:orient = (0.7933533, 0, 0, -0.6087614)
+                double3 xformOp:translate = (0.12802150660323985, 0.361521582130917, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_0_1"
+            {
+                quatf xformOp:orient = (0.7933533, 0, 0, -0.6087614)
+                double3 xformOp:translate = (0.12802150660323983, 0.361521582130917, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_0_1"
+            {
+                quatf xformOp:orient = (0.7933533, 0, 0, -0.6087614)
+                double3 xformOp:translate = (0.12802150660323983, 0.361521582130917, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, -0.15643446)
+                double3 xformOp:translate = (-0.09734035322810844, 0.015417197367026625, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, -0.15643446)
+                double3 xformOp:translate = (-0.09734035322810844, 0.015417197367026625, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_1_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, -0.15643446)
+                double3 xformOp:translate = (-0.09734035322810844, 0.015417197367026625, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_1_neg1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, -0.15643446)
+                double3 xformOp:translate = (-0.09734035322810844, 0.015417197367026625, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_1_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, -0.15643446)
+                double3 xformOp:translate = (-0.09734035322810844, 0.015417197367026625, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_1_1"
+            {
+                quatf xformOp:orient = (0.98768836, 0, 0, -0.15643446)
+                double3 xformOp:translate = (-0.09734035322810844, 0.015417197367026625, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_2"
+            {
+                quatf xformOp:orient = (0.9426415, 0, 0, 0.33380687)
+                double3 xformOp:translate = (-0.005504968286354772, 0.21022625733487804, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_2"
+            {
+                quatf xformOp:orient = (0.9426415, 0, 0, 0.33380687)
+                double3 xformOp:translate = (-0.005504968286354772, 0.21022625733487804, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_2_neg1"
+            {
+                quatf xformOp:orient = (0.9426415, 0, 0, 0.33380687)
+                double3 xformOp:translate = (-0.005504968286354772, 0.21022625733487804, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_2_neg1"
+            {
+                quatf xformOp:orient = (0.9426415, 0, 0, 0.33380687)
+                double3 xformOp:translate = (-0.005504968286354772, 0.21022625733487804, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_2_1"
+            {
+                quatf xformOp:orient = (0.9426415, 0, 0, 0.33380687)
+                double3 xformOp:translate = (-0.005504968286354772, 0.21022625733487804, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_2_1"
+            {
+                quatf xformOp:orient = (0.9426415, 0, 0, 0.33380687)
+                double3 xformOp:translate = (-0.005504968286354772, 0.21022625733487804, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_3"
+            {
+                quatf xformOp:orient = (0.8910065, 0, 0, -0.4539905)
+                double3 xformOp:translate = (0.12984764552787098, -0.25484035322810844, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_3"
+            {
+                quatf xformOp:orient = (0.8910065, 0, 0, -0.4539905)
+                double3 xformOp:translate = (0.12984764552787098, -0.25484035322810844, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_3_neg1"
+            {
+                quatf xformOp:orient = (0.8910065, 0, 0, -0.4539905)
+                double3 xformOp:translate = (0.12984764552787098, -0.25484035322810844, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_3_neg1"
+            {
+                quatf xformOp:orient = (0.8910065, 0, 0, -0.4539905)
+                double3 xformOp:translate = (0.12984764552787098, -0.25484035322810844, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_3_1"
+            {
+                quatf xformOp:orient = (0.8910065, 0, 0, -0.4539905)
+                double3 xformOp:translate = (0.12984764552787098, -0.25484035322810844, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_3_1"
+            {
+                quatf xformOp:orient = (0.8910065, 0, 0, -0.4539905)
+                double3 xformOp:translate = (0.12984764552787098, -0.25484035322810844, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_4"
+            {
+                quatf xformOp:orient = (0.99965733, 0, 0, 0.026176948)
+                double3 xformOp:translate = (-0.013083568708569776, -0.010039375369162606, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_4"
+            {
+                quatf xformOp:orient = (0.99965733, 0, 0, 0.026176948)
+                double3 xformOp:translate = (-0.013083568708569776, -0.010039375369162606, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_4_neg1"
+            {
+                quatf xformOp:orient = (0.99965733, 0, 0, 0.026176948)
+                double3 xformOp:translate = (-0.013083568708569776, -0.010039375369162606, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_4_neg1"
+            {
+                quatf xformOp:orient = (0.99965733, 0, 0, 0.026176948)
+                double3 xformOp:translate = (-0.013083568708569776, -0.010039375369162606, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_4_1"
+            {
+                quatf xformOp:orient = (0.99965733, 0, 0, 0.026176948)
+                double3 xformOp:translate = (-0.013083568708569776, -0.010039375369162606, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_4_1"
+            {
+                quatf xformOp:orient = (0.99965733, 0, 0, 0.026176948)
+                double3 xformOp:translate = (-0.013083568708569776, -0.010039375369162606, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+        }
+
+        def "PhysicsCollision"
+        {
+            def Capsule "spoke_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.2712729253727124
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.19374567, -0.59628785, 0)
+                double3 xformOp:translate = (0.16881253384053707, 0.05485051963478327, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292711690953
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.62697417, -3.8391097e-17, 0)
+                double3 xformOp:translate = (1.0868741002809003e-17, 0.17750000208616257, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.2712729253727124
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.19374567, 0.59628785, 0)
+                double3 xformOp:translate = (-0.16881253384053707, 0.05485051963478327, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_3" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292674480574
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, -0.5072327, 0.36852616, 0)
+                double3 xformOp:translate = (-0.10433188173919916, -0.14360052160918713, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_4" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292674480574
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, -0.5072327, -0.36852616, 0)
+                double3 xformOp:translate = (0.10433188173919916, -0.14360052160918713, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Cylinder "gaslift" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.3
+                double radius = 0.033
+                token visibility = "invisible"
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.209)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Cube "seat" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                float3 xformOp:scale = (0.235, 0.225, 0.038)
+                double3 xformOp:translate = (0.004635254915624212, -0.014265847744427304, 0.45)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "back" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9825044, -0.101060875, -0.01600647, 0.15561341)
+                float3 xformOp:scale = (0.22, 0.024, 0.22)
+                double3 xformOp:translate = (-0.07725424859373686, 0.2377641290737884, 0.9390000000000001)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "lumbar" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                float3 xformOp:scale = (0.19, 0.035, 0.095)
+                double3 xformOp:translate = (-0.04789763412811685, 0.14741376002574882, 0.674)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                float3 xformOp:scale = (0.044, 0.132, 0.025)
+                double3 xformOp:translate = (-0.2640397384061762, -0.12259288944469018, 0.6639999999999999)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_post_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                float3 xformOp:scale = (0.027, 0.034, 0.14)
+                double3 xformOp:translate = (-0.2794905881249236, -0.0750400636299325, 0.49900000000000005)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                float3 xformOp:scale = (0.044, 0.132, 0.025)
+                double3 xformOp:translate = (0.28567092801242255, 0.05601893330402943, 0.6639999999999999)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_post_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.98768836, 0, 0, 0.15643446)
+                float3 xformOp:scale = (0.027, 0.034, 0.14)
+                double3 xformOp:translate = (0.27022007829367517, 0.10357175911878712, 0.49900000000000005)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_0_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.5609855, -0.6665482, 0.23603709, -0.43045932)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.29353841253397234, 0.07910672088753795, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_0_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.5609855, -0.6665482, 0.23603709, -0.43045932)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.318698529572335, 0.0954458919379888, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_1_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.69840115, -0.11061587, -0.69840115, -0.11061587)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.0179740516769267, 0.32177742327991765, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_1_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.69840115, -0.11061587, -0.69840115, -0.11061587)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.010557643811927905, 0.3310479331111661, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_2_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6665482, 0.7068645, 0.018509898, 0.23603709)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.3161612869941192, 0.10704364423102296, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_2_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6665482, 0.7068645, 0.018509898, 0.23603709)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.3054102485077603, 0.07903623143610689, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_3_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6300368, 0.6300368, 0.32101977, -0.32101977)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.19715235447212903, -0.23984035322810843, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_3_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6300368, 0.6300368, 0.32101977, -0.32101977)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.19715235447212903, -0.2698403532281084, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_4_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.7068645, -0.43045932, 0.5609855, 0.018509898)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.18104700974287247, -0.2736059106313397, 0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_4_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.7068645, -0.43045932, 0.5609855, 0.018509898)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.20436138858658157, -0.2547262988998446, 0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
+
+    def Xform "office_chair_3" (
+        prepend references = @../../../assets/fq/office_chair/chair.usda@
+    )
+    {
+        float xformOp:rotateZ = 173
+        double3 xformOp:translate = (3.61, 9.03, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+        over "Collision" (
+            active = false
+        )
+        {
+        }
+
+        over "Visuals"
+        {
+            over "GasLiftSleeve"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "GasLiftBottom"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "FiveStarHub"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_0"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_1"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_2"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_3"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "StarSpoke_4"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "SeatCushion"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "UpperBackCushion"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarCushion"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearLumbarTextile"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearTextile"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "SeatStitch"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackOuterFrame_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarLoop_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YBranch_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LowerBackCross_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUnderSeatMount_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackOuterFrame_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LumbarLoop_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YBranch_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "LowerBackCross_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUnderSeatMount_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "BackTopFrame"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YSpineLower"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "YSpineUpper"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_0_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_1_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_2_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_3_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_4_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_5_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_6_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_7_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_8_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_9_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_10_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_11_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_0"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_2"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "RearHex_12_3"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "UnderSeatMechanism"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "HeightLever"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "HeightLeverPaddle"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "GasLiftChrome"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUpright_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestBase_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestPad_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmHeightButton_neg1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmUpright_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestBase_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmrestPad_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "ArmHeightButton_1"
+            {
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                double3 xformOp:translate = (0, 0, -0.036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_0"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, -0.32556817)
+                double3 xformOp:translate = (0.0035796270854122625, 0.20507669837569412, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_0"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, -0.32556817)
+                double3 xformOp:translate = (0.0035796270854122625, 0.20507669837569412, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_0_neg1"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, -0.32556817)
+                double3 xformOp:translate = (0.0035796270854122625, 0.20507669837569412, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_0_neg1"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, -0.32556817)
+                double3 xformOp:translate = (0.0035796270854122625, 0.20507669837569412, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_0_1"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, -0.32556817)
+                double3 xformOp:translate = (0.0035796270854122625, 0.20507669837569412, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_0_1"
+            {
+                quatf xformOp:orient = (0.94551855, 0, 0, -0.32556817)
+                double3 xformOp:translate = (0.0035796270854122625, 0.20507669837569412, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_1"
+            {
+                quatf xformOp:orient = (0.9862856, 0, 0, 0.1650476)
+                double3 xformOp:translate = (0.10255396865400436, 0.017161648686215225, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_1"
+            {
+                quatf xformOp:orient = (0.9862856, 0, 0, 0.1650476)
+                double3 xformOp:translate = (0.10255396865400436, 0.017161648686215225, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_1_neg1"
+            {
+                quatf xformOp:orient = (0.9862856, 0, 0, 0.1650476)
+                double3 xformOp:translate = (0.10255396865400436, 0.017161648686215225, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_1_neg1"
+            {
+                quatf xformOp:orient = (0.9862856, 0, 0, 0.1650476)
+                double3 xformOp:translate = (0.10255396865400436, 0.017161648686215225, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_1_1"
+            {
+                quatf xformOp:orient = (0.9862856, 0, 0, 0.1650476)
+                double3 xformOp:translate = (0.10255396865400436, 0.017161648686215225, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_1_1"
+            {
+                quatf xformOp:orient = (0.9862856, 0, 0, 0.1650476)
+                double3 xformOp:translate = (0.10255396865400436, 0.017161648686215225, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_2"
+            {
+                quatf xformOp:orient = (0.7986355, 0, 0, -0.60181504)
+                double3 xformOp:translate = (-0.3105761440942612, -0.21746775728290668, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_2"
+            {
+                quatf xformOp:orient = (0.7986355, 0, 0, -0.60181504)
+                double3 xformOp:translate = (-0.3105761440942612, -0.21746775728290668, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_2_neg1"
+            {
+                quatf xformOp:orient = (0.7986355, 0, 0, -0.60181504)
+                double3 xformOp:translate = (-0.3105761440942612, -0.21746775728290668, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_2_neg1"
+            {
+                quatf xformOp:orient = (0.7986355, 0, 0, -0.60181504)
+                double3 xformOp:translate = (-0.3105761440942612, -0.21746775728290668, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_2_1"
+            {
+                quatf xformOp:orient = (0.7986355, 0, 0, -0.60181504)
+                double3 xformOp:translate = (-0.3105761440942612, -0.21746775728290668, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_2_1"
+            {
+                quatf xformOp:orient = (0.7986355, 0, 0, -0.60181504)
+                double3 xformOp:translate = (-0.3105761440942612, -0.21746775728290668, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_3"
+            {
+                quatf xformOp:orient = (0.9890159, 0, 0, -0.14780942)
+                double3 xformOp:translate = (0.06641783119276823, -0.06526862093521324, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_3"
+            {
+                quatf xformOp:orient = (0.9890159, 0, 0, -0.14780942)
+                double3 xformOp:translate = (0.06641783119276823, -0.06526862093521324, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_3_neg1"
+            {
+                quatf xformOp:orient = (0.9890159, 0, 0, -0.14780942)
+                double3 xformOp:translate = (0.06641783119276823, -0.06526862093521324, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_3_neg1"
+            {
+                quatf xformOp:orient = (0.9890159, 0, 0, -0.14780942)
+                double3 xformOp:translate = (0.06641783119276823, -0.06526862093521324, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_3_1"
+            {
+                quatf xformOp:orient = (0.9890159, 0, 0, -0.14780942)
+                double3 xformOp:translate = (0.06641783119276823, -0.06526862093521324, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_3_1"
+            {
+                quatf xformOp:orient = (0.9890159, 0, 0, -0.14780942)
+                double3 xformOp:translate = (0.06641783119276823, -0.06526862093521324, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterStem_4"
+            {
+                quatf xformOp:orient = (0.9396926, 0, 0, 0.34202015)
+                double3 xformOp:translate = (-0.12049079930480988, -0.17863495611421304, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterFork_4"
+            {
+                quatf xformOp:orient = (0.9396926, 0, 0, 0.34202015)
+                double3 xformOp:translate = (-0.12049079930480988, -0.17863495611421304, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_4_neg1"
+            {
+                quatf xformOp:orient = (0.9396926, 0, 0, 0.34202015)
+                double3 xformOp:translate = (-0.12049079930480988, -0.17863495611421304, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_4_neg1"
+            {
+                quatf xformOp:orient = (0.9396926, 0, 0, 0.34202015)
+                double3 xformOp:translate = (-0.12049079930480988, -0.17863495611421304, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterWheel_4_1"
+            {
+                quatf xformOp:orient = (0.9396926, 0, 0, 0.34202015)
+                double3 xformOp:translate = (-0.12049079930480988, -0.17863495611421304, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "CasterHub_4_1"
+            {
+                quatf xformOp:orient = (0.9396926, 0, 0, 0.34202015)
+                double3 xformOp:translate = (-0.12049079930480988, -0.17863495611421304, 0.0040000000000000036)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+        }
+
+        def "PhysicsCollision"
+        {
+            def Capsule "spoke_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.2712729253727124
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.19374567, -0.59628785, 0)
+                double3 xformOp:translate = (0.16881253384053707, 0.05485051963478327, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292711690953
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.62697417, -3.8391097e-17, 0)
+                double3 xformOp:translate = (1.0868741002809003e-17, 0.17750000208616257, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.2712729253727124
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, 0.19374567, 0.59628785, 0)
+                double3 xformOp:translate = (-0.16881253384053707, 0.05485051963478327, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_3" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292674480574
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, -0.5072327, 0.36852616, 0)
+                double3 xformOp:translate = (-0.10433188173919916, -0.14360052160918713, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Capsule "spoke_4" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.27127292674480574
+                double radius = 0.025
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.77904004, -0.5072327, -0.36852616, 0)
+                double3 xformOp:translate = (0.10433188173919916, -0.14360052160918713, 0.1250000030696392)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Cylinder "gaslift" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double height = 0.3
+                double radius = 0.033
+                token visibility = "invisible"
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.209)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            def Cube "seat" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                float3 xformOp:scale = (0.235, 0.225, 0.038)
+                double3 xformOp:translate = (-0.0020875965144009816, -0.014854021031123554, 0.44999999999999996)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "back" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9923283, -0.10207137, 0.007137525, -0.06939036)
+                float3 xformOp:scale = (0.22, 0.024, 0.22)
+                double3 xformOp:translate = (0.03479327524001636, 0.24756701718539256, 0.939)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "lumbar" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                float3 xformOp:scale = (0.19, 0.035, 0.095)
+                double3 xformOp:translate = (0.02157183064881014, 0.15349155065494338, 0.6739999999999999)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                float3 xformOp:scale = (0.044, 0.132, 0.025)
+                double3 xformOp:translate = (-0.2910585303999161, 0.005561643771503949, 0.6639999999999998)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_post_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                float3 xformOp:scale = (0.027, 0.034, 0.14)
+                double3 xformOp:translate = (-0.2840998753519128, 0.05507504720858246, 0.49899999999999994)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                float3 xformOp:scale = (0.044, 0.132, 0.025)
+                double3 xformOp:translate = (0.28131641333271146, -0.07488040858341387, 0.6639999999999998)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "arm_post_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double size = 2
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.9975641, 0, 0, -0.06975647)
+                float3 xformOp:scale = (0.027, 0.034, 0.14)
+                double3 xformOp:translate = (0.28827506838071476, -0.025367005146335355, 0.49899999999999994)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_0_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6685826, -0.70699906, 0.012340715, -0.23021145)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.3057288119325193, 0.0791407221964118, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_0_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6685826, -0.70699906, 0.012340715, -0.23021145)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.3159894162322893, 0.10733150081998906, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_1_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6974092, 0.11670628, -0.6974092, 0.11670628)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.010275960780503884, 0.3312297452240492, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_1_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6974092, 0.11670628, -0.6974092, 0.11670628)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.018089596487475615, 0.3214627005903345, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_2_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.5647206, 0.40557978, -0.579228, -0.42554748)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.2841731462672569, 0.10880955070180004, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_2_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.5647206, 0.40557978, -0.579228, -0.42554748)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.3141548710778298, 0.10985653560287512, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_3_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6993398, 0.4956177, 0.5043442, -0.104517035)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.20376320593997732, -0.2500826008552236, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_3_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.6993398, 0.4956177, 0.5043442, -0.104517035)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (-0.18570875524541586, -0.2740416661566424, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_4_neg1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.66446304, -0.5862181, 0.3954091, 0.24184476)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.19316707475344597, -0.27229785186944444, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "wheel_contact_4_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                double radius = 1
+                token visibility = "invisible"
+                quatf xformOp:orient = (0.66446304, -0.5862181, 0.3954091, 0.24184476)
+                float3 xformOp:scale = (0.032, 0.032, 0.012)
+                double3 xformOp:translate = (0.20042473162143604, -0.24318898008116455, 0.036000000000000004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
 }
 

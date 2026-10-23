@@ -1421,6 +1421,558 @@
       <geom name="right_door_coke_2_coke_visual_cn_ends" mesh="coke_cn_ends" material="coke_cn_aluminium" type="mesh" contype="0" conaffinity="0" group="2" mass="0" />
       <geom name="right_door_coke_2_coke_collision_0" type="mesh" mesh="coke_collision_0" rgba="0 0 0 0" group="3" mass="0.35" condim="4" friction="0.6 0.003 0.0001" solref="0.008 1" priority="1" />
     </body>
+    <body name="office_chair_1" pos="1.18 9.12 0" quat="0.10452846326765346 0 0 0.9945218953682733">
+      <body name="office_chair_1__chair_base" pos="0.0 0.0 0.004" quat="1.0 0.0 0.0 0.0">
+        <geom name="office_chair_1__spoke_0" type="capsule" fromto="0.042797546833753586 0.013905765488743782 0.15000000596046448 0.29482752084732056 0.09579527378082275 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__spoke_1" type="capsule" fromto="2.7554554596756583e-18 0.04500000178813934 0.15000000596046448 1.8982026545942347e-17 0.3100000023841858 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__spoke_2" type="capsule" fromto="-0.042797546833753586 0.013905765488743782 0.15000000596046448 -0.29482752084732056 0.09579527378082275 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__spoke_3" type="capsule" fromto="-0.02645033784210682 -0.0364057682454586 0.15000000596046448 -0.1822134256362915 -0.25079527497291565 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__spoke_4" type="capsule" fromto="0.02645033784210682 -0.0364057682454586 0.15000000596046448 0.1822134256362915 -0.25079527497291565 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__gaslift" type="cylinder" pos="0 0 0.205" size="0.033 0.15" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__GasLiftSleeve" mesh="officechair__part_083" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__GasLiftBottom" mesh="officechair__part_084" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__FiveStarHub" mesh="officechair__part_085" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__StarSpoke_0" mesh="officechair__part_086" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__StarSpoke_1" mesh="officechair__part_093" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__StarSpoke_2" mesh="officechair__part_100" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__StarSpoke_3" mesh="officechair__part_107" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__StarSpoke_4" mesh="officechair__part_114" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__chair_upper" pos="0.0 0.0 0.0040000000000000036" quat="0.9702957262759965 0.0 0.0 -0.24192189559966773">
+        <geom name="office_chair_1__seat" type="box" pos="0 -0.015 0.446" size="0.235 0.225 0.038" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__back" type="box" pos="0 0.25 0.935" size="0.22 0.024 0.22" euler="-0.205 0 0" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__lumbar" type="box" pos="0 0.155 0.67" size="0.19 0.035 0.095" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__SeatCushion" mesh="officechair__part_000" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__UpperBackCushion" mesh="officechair__part_001" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__LumbarCushion" mesh="officechair__part_002" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearLumbarTextile" mesh="officechair__part_003" type="mesh" material="officechair__DarkRearTextile" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearTextile" mesh="officechair__part_004" type="mesh" material="officechair__DarkRearTextile" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__SeatStitch" mesh="officechair__part_005" type="mesh" material="officechair__FabricSeams" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__BackOuterFrame_-1" mesh="officechair__part_006" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__LumbarLoop_-1" mesh="officechair__part_007" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__YBranch_-1" mesh="officechair__part_008" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__LowerBackCross_-1" mesh="officechair__part_009" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__ArmUnderSeatMount_-1" mesh="officechair__part_011" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__BackOuterFrame_1" mesh="officechair__part_015" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__LumbarLoop_1" mesh="officechair__part_016" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__YBranch_1" mesh="officechair__part_017" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__LowerBackCross_1" mesh="officechair__part_018" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__ArmUnderSeatMount_1" mesh="officechair__part_020" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__BackTopFrame" mesh="officechair__part_024" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__YSpineLower" mesh="officechair__part_025" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__YSpineUpper" mesh="officechair__part_026" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_0_0" mesh="officechair__part_027" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_0_1" mesh="officechair__part_028" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_0_2" mesh="officechair__part_029" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_0_3" mesh="officechair__part_030" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_1_0" mesh="officechair__part_031" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_1_1" mesh="officechair__part_032" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_1_2" mesh="officechair__part_033" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_1_3" mesh="officechair__part_034" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_2_0" mesh="officechair__part_035" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_2_1" mesh="officechair__part_036" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_2_2" mesh="officechair__part_037" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_2_3" mesh="officechair__part_038" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_3_0" mesh="officechair__part_039" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_3_1" mesh="officechair__part_040" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_3_2" mesh="officechair__part_041" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_3_3" mesh="officechair__part_042" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_4_0" mesh="officechair__part_043" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_4_1" mesh="officechair__part_044" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_4_2" mesh="officechair__part_045" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_4_3" mesh="officechair__part_046" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_5_0" mesh="officechair__part_047" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_5_1" mesh="officechair__part_048" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_5_2" mesh="officechair__part_049" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_5_3" mesh="officechair__part_050" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_6_0" mesh="officechair__part_051" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_6_1" mesh="officechair__part_052" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_6_2" mesh="officechair__part_053" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_6_3" mesh="officechair__part_054" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_7_0" mesh="officechair__part_055" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_7_1" mesh="officechair__part_056" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_7_2" mesh="officechair__part_057" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_7_3" mesh="officechair__part_058" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_8_0" mesh="officechair__part_059" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_8_1" mesh="officechair__part_060" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_8_2" mesh="officechair__part_061" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_8_3" mesh="officechair__part_062" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_9_0" mesh="officechair__part_063" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_9_1" mesh="officechair__part_064" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_9_2" mesh="officechair__part_065" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_9_3" mesh="officechair__part_066" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_10_0" mesh="officechair__part_067" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_10_1" mesh="officechair__part_068" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_10_2" mesh="officechair__part_069" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_10_3" mesh="officechair__part_070" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_11_0" mesh="officechair__part_071" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_11_1" mesh="officechair__part_072" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_11_2" mesh="officechair__part_073" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_11_3" mesh="officechair__part_074" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_12_0" mesh="officechair__part_075" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_12_1" mesh="officechair__part_076" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_12_2" mesh="officechair__part_077" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__RearHex_12_3" mesh="officechair__part_078" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__UnderSeatMechanism" mesh="officechair__part_079" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__HeightLever" mesh="officechair__part_080" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__HeightLeverPaddle" mesh="officechair__part_081" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__GasLiftChrome" mesh="officechair__part_082" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__armrest_left" pos="0.0 0.0 -0.036" quat="0.9702957262759965 0.0 0.0 -0.24192189559966773">
+        <geom name="office_chair_1__arm_-1" type="box" pos="-0.289 -0.035 0.7" size="0.044 0.132 0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__arm_post_-1" type="box" pos="-0.289 0.015 0.535" size="0.027 0.034 0.14" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__ArmUpright_-1" mesh="officechair__part_010" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__ArmrestBase_-1" mesh="officechair__part_012" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__ArmrestPad_-1" mesh="officechair__part_013" type="mesh" material="officechair__ArmrestSoftPad" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__ArmHeightButton_-1" mesh="officechair__part_014" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__armrest_right" pos="0.0 0.0 -0.036" quat="0.9702957262759965 0.0 0.0 -0.24192189559966773">
+        <geom name="office_chair_1__arm_1" type="box" pos="0.289 -0.035 0.7" size="0.044 0.132 0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__arm_post_1" type="box" pos="0.289 0.015 0.535" size="0.027 0.034 0.14" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_1__ArmUpright_1" mesh="officechair__part_019" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__ArmrestBase_1" mesh="officechair__part_021" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__ArmrestPad_1" mesh="officechair__part_022" type="mesh" material="officechair__ArmrestSoftPad" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__ArmHeightButton_1" mesh="officechair__part_023" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__caster_fork_0" pos="0.12343703803968814 -0.16380648212672977 0.0040000000000000036" quat="0.9455185755993168 0.0 0.0 0.3255681544571567">
+        <geom name="office_chair_1__CasterStem_0" mesh="officechair__part_087" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterFork_0" mesh="officechair__part_088" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_0_neg1" pos="0.12343703803968814 -0.16380648212672977 0.0040000000000000036" quat="0.9455185755993168 0.0 0.0 0.3255681544571567">
+        <geom name="office_chair_1__wheel_contact_0_neg1" type="ellipsoid" pos="0.3156307357441394 0.08678270941618049 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_0_-1" mesh="officechair__part_089" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_0_-1" mesh="officechair__part_090" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_0_1" pos="0.12343703803968811 -0.16380648212672977 0.0040000000000000036" quat="0.9455185755993168 0.0 0.0 0.3255681544571567">
+        <geom name="office_chair_1__wheel_contact_0_1" type="ellipsoid" pos="0.30636022591289097 0.11531440490503511 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_0_1" mesh="officechair__part_091" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_0_1" mesh="officechair__part_092" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__caster_fork_1" pos="-0.2580328939510324 0.1343234225494205 0.0040000000000000036" quat="0.8870108331782217 0.0 0.0 -0.4617486132350339">
+        <geom name="office_chair_1__CasterStem_1" mesh="officechair__part_094" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterFork_1" mesh="officechair__part_095" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_1_neg1" pos="-0.2580328939510324 0.13432342254942053 0.0040000000000000036" quat="0.8870108331782217 0.0 0.0 -0.4617486132350339">
+        <geom name="office_chair_1__wheel_contact_1_neg1" type="ellipsoid" pos="0.01500000000000002 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_1_-1" mesh="officechair__part_096" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_1_-1" mesh="officechair__part_097" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_1_1" pos="-0.2580328939510324 0.13432342254942053 0.0040000000000000036" quat="0.8870108331782217 0.0 0.0 -0.4617486132350339">
+        <geom name="office_chair_1__wheel_contact_1_1" type="ellipsoid" pos="-0.014999999999999979 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_1_1" mesh="officechair__part_098" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_1_1" mesh="officechair__part_099" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__caster_fork_2" pos="0.00321463158759705 0.010514586145753693 0.0040000000000000036" quat="0.9998476951563913 0.0 0.0 0.01745240643728351">
+        <geom name="office_chair_1__CasterStem_2" mesh="officechair__part_101" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterFork_2" mesh="officechair__part_102" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_2_neg1" pos="0.00321463158759705 0.010514586145753693 0.0040000000000000036" quat="0.9998476951563913 0.0 0.0 0.01745240643728351">
+        <geom name="office_chair_1__wheel_contact_2_neg1" type="ellipsoid" pos="-0.30636022591289097 0.11531440490503514 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_2_-1" mesh="officechair__part_103" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_2_-1" mesh="officechair__part_104" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_2_1" pos="0.00321463158759705 0.010514586145753693 0.0040000000000000036" quat="0.9998476951563913 0.0 0.0 0.01745240643728351">
+        <geom name="office_chair_1__wheel_contact_2_1" type="ellipsoid" pos="-0.3156307357441394 0.08678270941618055 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_2_1" mesh="officechair__part_105" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_2_1" mesh="officechair__part_106" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__caster_fork_3" pos="-0.3082326599462503 0.03511867560941029 0.0040000000000000036" quat="0.8703556959398997 0.0 0.0 0.49242356010346716">
+        <geom name="office_chair_1__CasterStem_3" mesh="officechair__part_108" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterFork_3" mesh="officechair__part_109" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_3_neg1" pos="-0.3082326599462503 0.03511867560941029 0.0040000000000000036" quat="0.8703556959398997 0.0 0.0 0.49242356010346716">
+        <geom name="office_chair_1__wheel_contact_3_neg1" type="ellipsoid" pos="-0.20434103241526297 -0.2557317783762207 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_3_-1" mesh="officechair__part_110" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_3_-1" mesh="officechair__part_111" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_3_1" pos="-0.3082326599462503 0.03511867560941029 0.0040000000000000036" quat="0.8703556959398997 0.0 0.0 0.49242356010346716">
+        <geom name="office_chair_1__wheel_contact_3_1" type="ellipsoid" pos="-0.18007052258401457 -0.27336533594499485 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_3_1" mesh="officechair__part_112" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_3_1" mesh="officechair__part_113" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__caster_fork_4" pos="0.17415901301084127 0.05996775728290665 0.0040000000000000036" quat="0.9563047559630354 0.0 0.0 -0.29237170472273677">
+        <geom name="office_chair_1__CasterStem_4" mesh="officechair__part_115" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterFork_4" mesh="officechair__part_116" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_4_neg1" pos="0.17415901301084127 0.05996775728290665 0.0040000000000000036" quat="0.9563047559630354 0.0 0.0 -0.29237170472273677">
+        <geom name="office_chair_1__wheel_contact_4_neg1" type="ellipsoid" pos="0.18007052258401446 -0.27336533594499496 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_4_-1" mesh="officechair__part_117" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_4_-1" mesh="officechair__part_118" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_1__wheel_4_1" pos="0.17415901301084127 0.05996775728290665 0.0040000000000000036" quat="0.9563047559630354 0.0 0.0 -0.29237170472273677">
+        <geom name="office_chair_1__wheel_contact_4_1" type="ellipsoid" pos="0.20434103241526286 -0.2557317783762208 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_1__CasterWheel_4_1" mesh="officechair__part_119" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_1__CasterHub_4_1" mesh="officechair__part_120" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+    </body>
+    <body name="office_chair_2" pos="2.4 9.3 0" quat="-0.04361938736533589 0 0 0.9990482215818578">
+      <body name="office_chair_2__chair_base" pos="0.0 0.0 0.004" quat="1.0 0.0 0.0 0.0">
+        <geom name="office_chair_2__spoke_0" type="capsule" fromto="0.042797546833753586 0.013905765488743782 0.15000000596046448 0.29482752084732056 0.09579527378082275 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__spoke_1" type="capsule" fromto="2.7554554596756583e-18 0.04500000178813934 0.15000000596046448 1.8982026545942347e-17 0.3100000023841858 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__spoke_2" type="capsule" fromto="-0.042797546833753586 0.013905765488743782 0.15000000596046448 -0.29482752084732056 0.09579527378082275 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__spoke_3" type="capsule" fromto="-0.02645033784210682 -0.0364057682454586 0.15000000596046448 -0.1822134256362915 -0.25079527497291565 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__spoke_4" type="capsule" fromto="0.02645033784210682 -0.0364057682454586 0.15000000596046448 0.1822134256362915 -0.25079527497291565 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__gaslift" type="cylinder" pos="0 0 0.205" size="0.033 0.15" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__GasLiftSleeve" mesh="officechair__part_083" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__GasLiftBottom" mesh="officechair__part_084" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__FiveStarHub" mesh="officechair__part_085" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__StarSpoke_0" mesh="officechair__part_086" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__StarSpoke_1" mesh="officechair__part_093" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__StarSpoke_2" mesh="officechair__part_100" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__StarSpoke_3" mesh="officechair__part_107" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__StarSpoke_4" mesh="officechair__part_114" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__chair_upper" pos="0.0 0.0 0.0040000000000000036" quat="0.9876883405951378 0.0 0.0 0.15643446504023087">
+        <geom name="office_chair_2__seat" type="box" pos="0 -0.015 0.446" size="0.235 0.225 0.038" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__back" type="box" pos="0 0.25 0.935" size="0.22 0.024 0.22" euler="-0.205 0 0" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__lumbar" type="box" pos="0 0.155 0.67" size="0.19 0.035 0.095" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__SeatCushion" mesh="officechair__part_000" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__UpperBackCushion" mesh="officechair__part_001" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__LumbarCushion" mesh="officechair__part_002" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearLumbarTextile" mesh="officechair__part_003" type="mesh" material="officechair__DarkRearTextile" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearTextile" mesh="officechair__part_004" type="mesh" material="officechair__DarkRearTextile" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__SeatStitch" mesh="officechair__part_005" type="mesh" material="officechair__FabricSeams" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__BackOuterFrame_-1" mesh="officechair__part_006" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__LumbarLoop_-1" mesh="officechair__part_007" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__YBranch_-1" mesh="officechair__part_008" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__LowerBackCross_-1" mesh="officechair__part_009" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__ArmUnderSeatMount_-1" mesh="officechair__part_011" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__BackOuterFrame_1" mesh="officechair__part_015" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__LumbarLoop_1" mesh="officechair__part_016" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__YBranch_1" mesh="officechair__part_017" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__LowerBackCross_1" mesh="officechair__part_018" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__ArmUnderSeatMount_1" mesh="officechair__part_020" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__BackTopFrame" mesh="officechair__part_024" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__YSpineLower" mesh="officechair__part_025" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__YSpineUpper" mesh="officechair__part_026" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_0_0" mesh="officechair__part_027" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_0_1" mesh="officechair__part_028" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_0_2" mesh="officechair__part_029" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_0_3" mesh="officechair__part_030" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_1_0" mesh="officechair__part_031" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_1_1" mesh="officechair__part_032" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_1_2" mesh="officechair__part_033" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_1_3" mesh="officechair__part_034" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_2_0" mesh="officechair__part_035" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_2_1" mesh="officechair__part_036" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_2_2" mesh="officechair__part_037" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_2_3" mesh="officechair__part_038" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_3_0" mesh="officechair__part_039" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_3_1" mesh="officechair__part_040" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_3_2" mesh="officechair__part_041" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_3_3" mesh="officechair__part_042" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_4_0" mesh="officechair__part_043" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_4_1" mesh="officechair__part_044" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_4_2" mesh="officechair__part_045" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_4_3" mesh="officechair__part_046" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_5_0" mesh="officechair__part_047" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_5_1" mesh="officechair__part_048" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_5_2" mesh="officechair__part_049" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_5_3" mesh="officechair__part_050" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_6_0" mesh="officechair__part_051" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_6_1" mesh="officechair__part_052" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_6_2" mesh="officechair__part_053" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_6_3" mesh="officechair__part_054" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_7_0" mesh="officechair__part_055" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_7_1" mesh="officechair__part_056" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_7_2" mesh="officechair__part_057" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_7_3" mesh="officechair__part_058" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_8_0" mesh="officechair__part_059" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_8_1" mesh="officechair__part_060" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_8_2" mesh="officechair__part_061" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_8_3" mesh="officechair__part_062" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_9_0" mesh="officechair__part_063" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_9_1" mesh="officechair__part_064" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_9_2" mesh="officechair__part_065" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_9_3" mesh="officechair__part_066" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_10_0" mesh="officechair__part_067" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_10_1" mesh="officechair__part_068" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_10_2" mesh="officechair__part_069" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_10_3" mesh="officechair__part_070" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_11_0" mesh="officechair__part_071" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_11_1" mesh="officechair__part_072" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_11_2" mesh="officechair__part_073" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_11_3" mesh="officechair__part_074" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_12_0" mesh="officechair__part_075" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_12_1" mesh="officechair__part_076" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_12_2" mesh="officechair__part_077" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__RearHex_12_3" mesh="officechair__part_078" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__UnderSeatMechanism" mesh="officechair__part_079" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__HeightLever" mesh="officechair__part_080" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__HeightLeverPaddle" mesh="officechair__part_081" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__GasLiftChrome" mesh="officechair__part_082" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__armrest_left" pos="0.0 0.0 -0.036" quat="0.9876883405951378 0.0 0.0 0.15643446504023087">
+        <geom name="office_chair_2__arm_-1" type="box" pos="-0.289 -0.035 0.7" size="0.044 0.132 0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__arm_post_-1" type="box" pos="-0.289 0.015 0.535" size="0.027 0.034 0.14" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__ArmUpright_-1" mesh="officechair__part_010" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__ArmrestBase_-1" mesh="officechair__part_012" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__ArmrestPad_-1" mesh="officechair__part_013" type="mesh" material="officechair__ArmrestSoftPad" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__ArmHeightButton_-1" mesh="officechair__part_014" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__armrest_right" pos="0.0 0.0 -0.036" quat="0.9876883405951378 0.0 0.0 0.15643446504023087">
+        <geom name="office_chair_2__arm_1" type="box" pos="0.289 -0.035 0.7" size="0.044 0.132 0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__arm_post_1" type="box" pos="0.289 0.015 0.535" size="0.027 0.034 0.14" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_2__ArmUpright_1" mesh="officechair__part_019" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__ArmrestBase_1" mesh="officechair__part_021" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__ArmrestPad_1" mesh="officechair__part_022" type="mesh" material="officechair__ArmrestSoftPad" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__ArmHeightButton_1" mesh="officechair__part_023" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__caster_fork_0" pos="0.12802150660323985 0.361521582130917 0.0040000000000000036" quat="0.7933533402912352 0.0 0.0 -0.6087614290087207">
+        <geom name="office_chair_2__CasterStem_0" mesh="officechair__part_087" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterFork_0" mesh="officechair__part_088" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_0_neg1" pos="0.12802150660323985 0.361521582130917 0.0040000000000000036" quat="0.7933533402912352 0.0 0.0 -0.6087614290087207">
+        <geom name="office_chair_2__wheel_contact_0_neg1" type="ellipsoid" pos="0.3156307357441394 0.08678270941618049 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_0_-1" mesh="officechair__part_089" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_0_-1" mesh="officechair__part_090" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_0_1" pos="0.12802150660323983 0.361521582130917 0.0040000000000000036" quat="0.7933533402912352 0.0 0.0 -0.6087614290087207">
+        <geom name="office_chair_2__wheel_contact_0_1" type="ellipsoid" pos="0.30636022591289097 0.11531440490503511 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_0_1" mesh="officechair__part_091" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_0_1" mesh="officechair__part_092" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__caster_fork_1" pos="-0.09734035322810844 0.015417197367026625 0.0040000000000000036" quat="0.9876883405951378 0.0 0.0 -0.15643446504023087">
+        <geom name="office_chair_2__CasterStem_1" mesh="officechair__part_094" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterFork_1" mesh="officechair__part_095" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_1_neg1" pos="-0.09734035322810844 0.015417197367026625 0.0040000000000000036" quat="0.9876883405951378 0.0 0.0 -0.15643446504023087">
+        <geom name="office_chair_2__wheel_contact_1_neg1" type="ellipsoid" pos="0.01500000000000002 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_1_-1" mesh="officechair__part_096" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_1_-1" mesh="officechair__part_097" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_1_1" pos="-0.09734035322810844 0.015417197367026625 0.0040000000000000036" quat="0.9876883405951378 0.0 0.0 -0.15643446504023087">
+        <geom name="office_chair_2__wheel_contact_1_1" type="ellipsoid" pos="-0.014999999999999979 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_1_1" mesh="officechair__part_098" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_1_1" mesh="officechair__part_099" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__caster_fork_2" pos="-0.005504968286354772 0.21022625733487804 0.0040000000000000036" quat="0.9426414910921784 0.0 0.0 0.3338068592337709">
+        <geom name="office_chair_2__CasterStem_2" mesh="officechair__part_101" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterFork_2" mesh="officechair__part_102" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_2_neg1" pos="-0.005504968286354772 0.21022625733487804 0.0040000000000000036" quat="0.9426414910921784 0.0 0.0 0.3338068592337709">
+        <geom name="office_chair_2__wheel_contact_2_neg1" type="ellipsoid" pos="-0.30636022591289097 0.11531440490503514 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_2_-1" mesh="officechair__part_103" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_2_-1" mesh="officechair__part_104" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_2_1" pos="-0.005504968286354772 0.21022625733487804 0.0040000000000000036" quat="0.9426414910921784 0.0 0.0 0.3338068592337709">
+        <geom name="office_chair_2__wheel_contact_2_1" type="ellipsoid" pos="-0.3156307357441394 0.08678270941618055 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_2_1" mesh="officechair__part_105" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_2_1" mesh="officechair__part_106" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__caster_fork_3" pos="0.12984764552787098 -0.25484035322810844 0.0040000000000000036" quat="0.8910065241883679 0.0 0.0 -0.45399049973954675">
+        <geom name="office_chair_2__CasterStem_3" mesh="officechair__part_108" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterFork_3" mesh="officechair__part_109" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_3_neg1" pos="0.12984764552787098 -0.25484035322810844 0.0040000000000000036" quat="0.8910065241883679 0.0 0.0 -0.45399049973954675">
+        <geom name="office_chair_2__wheel_contact_3_neg1" type="ellipsoid" pos="-0.20434103241526297 -0.2557317783762207 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_3_-1" mesh="officechair__part_110" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_3_-1" mesh="officechair__part_111" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_3_1" pos="0.12984764552787098 -0.25484035322810844 0.0040000000000000036" quat="0.8910065241883679 0.0 0.0 -0.45399049973954675">
+        <geom name="office_chair_2__wheel_contact_3_1" type="ellipsoid" pos="-0.18007052258401457 -0.27336533594499485 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_3_1" mesh="officechair__part_112" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_3_1" mesh="officechair__part_113" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__caster_fork_4" pos="-0.013083568708569776 -0.010039375369162606 0.0040000000000000036" quat="0.9996573249755573 0.0 0.0 0.026176948307873153">
+        <geom name="office_chair_2__CasterStem_4" mesh="officechair__part_115" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterFork_4" mesh="officechair__part_116" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_4_neg1" pos="-0.013083568708569776 -0.010039375369162606 0.0040000000000000036" quat="0.9996573249755573 0.0 0.0 0.026176948307873153">
+        <geom name="office_chair_2__wheel_contact_4_neg1" type="ellipsoid" pos="0.18007052258401446 -0.27336533594499496 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_4_-1" mesh="officechair__part_117" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_4_-1" mesh="officechair__part_118" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_2__wheel_4_1" pos="-0.013083568708569776 -0.010039375369162606 0.0040000000000000036" quat="0.9996573249755573 0.0 0.0 0.026176948307873153">
+        <geom name="office_chair_2__wheel_contact_4_1" type="ellipsoid" pos="0.20434103241526286 -0.2557317783762208 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_2__CasterWheel_4_1" mesh="officechair__part_119" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_2__CasterHub_4_1" mesh="officechair__part_120" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+    </body>
+    <body name="office_chair_3" pos="3.61 9.03 0" quat="0.06104853953485691 0 0 0.9981347984218669">
+      <body name="office_chair_3__chair_base" pos="0.0 0.0 0.004" quat="1.0 0.0 0.0 0.0">
+        <geom name="office_chair_3__spoke_0" type="capsule" fromto="0.042797546833753586 0.013905765488743782 0.15000000596046448 0.29482752084732056 0.09579527378082275 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__spoke_1" type="capsule" fromto="2.7554554596756583e-18 0.04500000178813934 0.15000000596046448 1.8982026545942347e-17 0.3100000023841858 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__spoke_2" type="capsule" fromto="-0.042797546833753586 0.013905765488743782 0.15000000596046448 -0.29482752084732056 0.09579527378082275 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__spoke_3" type="capsule" fromto="-0.02645033784210682 -0.0364057682454586 0.15000000596046448 -0.1822134256362915 -0.25079527497291565 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__spoke_4" type="capsule" fromto="0.02645033784210682 -0.0364057682454586 0.15000000596046448 0.1822134256362915 -0.25079527497291565 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__gaslift" type="cylinder" pos="0 0 0.205" size="0.033 0.15" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__GasLiftSleeve" mesh="officechair__part_083" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__GasLiftBottom" mesh="officechair__part_084" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__FiveStarHub" mesh="officechair__part_085" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__StarSpoke_0" mesh="officechair__part_086" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__StarSpoke_1" mesh="officechair__part_093" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__StarSpoke_2" mesh="officechair__part_100" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__StarSpoke_3" mesh="officechair__part_107" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__StarSpoke_4" mesh="officechair__part_114" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__chair_upper" pos="0.0 0.0 0.0040000000000000036" quat="0.9975640502598242 0.0 0.0 -0.0697564737441253">
+        <geom name="office_chair_3__seat" type="box" pos="0 -0.015 0.446" size="0.235 0.225 0.038" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__back" type="box" pos="0 0.25 0.935" size="0.22 0.024 0.22" euler="-0.205 0 0" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__lumbar" type="box" pos="0 0.155 0.67" size="0.19 0.035 0.095" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__SeatCushion" mesh="officechair__part_000" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__UpperBackCushion" mesh="officechair__part_001" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__LumbarCushion" mesh="officechair__part_002" type="mesh" material="officechair__GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearLumbarTextile" mesh="officechair__part_003" type="mesh" material="officechair__DarkRearTextile" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearTextile" mesh="officechair__part_004" type="mesh" material="officechair__DarkRearTextile" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__SeatStitch" mesh="officechair__part_005" type="mesh" material="officechair__FabricSeams" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__BackOuterFrame_-1" mesh="officechair__part_006" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__LumbarLoop_-1" mesh="officechair__part_007" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__YBranch_-1" mesh="officechair__part_008" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__LowerBackCross_-1" mesh="officechair__part_009" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__ArmUnderSeatMount_-1" mesh="officechair__part_011" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__BackOuterFrame_1" mesh="officechair__part_015" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__LumbarLoop_1" mesh="officechair__part_016" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__YBranch_1" mesh="officechair__part_017" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__LowerBackCross_1" mesh="officechair__part_018" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__ArmUnderSeatMount_1" mesh="officechair__part_020" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__BackTopFrame" mesh="officechair__part_024" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__YSpineLower" mesh="officechair__part_025" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__YSpineUpper" mesh="officechair__part_026" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_0_0" mesh="officechair__part_027" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_0_1" mesh="officechair__part_028" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_0_2" mesh="officechair__part_029" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_0_3" mesh="officechair__part_030" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_1_0" mesh="officechair__part_031" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_1_1" mesh="officechair__part_032" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_1_2" mesh="officechair__part_033" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_1_3" mesh="officechair__part_034" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_2_0" mesh="officechair__part_035" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_2_1" mesh="officechair__part_036" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_2_2" mesh="officechair__part_037" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_2_3" mesh="officechair__part_038" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_3_0" mesh="officechair__part_039" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_3_1" mesh="officechair__part_040" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_3_2" mesh="officechair__part_041" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_3_3" mesh="officechair__part_042" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_4_0" mesh="officechair__part_043" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_4_1" mesh="officechair__part_044" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_4_2" mesh="officechair__part_045" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_4_3" mesh="officechair__part_046" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_5_0" mesh="officechair__part_047" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_5_1" mesh="officechair__part_048" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_5_2" mesh="officechair__part_049" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_5_3" mesh="officechair__part_050" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_6_0" mesh="officechair__part_051" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_6_1" mesh="officechair__part_052" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_6_2" mesh="officechair__part_053" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_6_3" mesh="officechair__part_054" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_7_0" mesh="officechair__part_055" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_7_1" mesh="officechair__part_056" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_7_2" mesh="officechair__part_057" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_7_3" mesh="officechair__part_058" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_8_0" mesh="officechair__part_059" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_8_1" mesh="officechair__part_060" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_8_2" mesh="officechair__part_061" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_8_3" mesh="officechair__part_062" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_9_0" mesh="officechair__part_063" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_9_1" mesh="officechair__part_064" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_9_2" mesh="officechair__part_065" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_9_3" mesh="officechair__part_066" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_10_0" mesh="officechair__part_067" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_10_1" mesh="officechair__part_068" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_10_2" mesh="officechair__part_069" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_10_3" mesh="officechair__part_070" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_11_0" mesh="officechair__part_071" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_11_1" mesh="officechair__part_072" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_11_2" mesh="officechair__part_073" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_11_3" mesh="officechair__part_074" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_12_0" mesh="officechair__part_075" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_12_1" mesh="officechair__part_076" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_12_2" mesh="officechair__part_077" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__RearHex_12_3" mesh="officechair__part_078" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__UnderSeatMechanism" mesh="officechair__part_079" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__HeightLever" mesh="officechair__part_080" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__HeightLeverPaddle" mesh="officechair__part_081" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__GasLiftChrome" mesh="officechair__part_082" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__armrest_left" pos="0.0 0.0 -0.036" quat="0.9975640502598242 0.0 0.0 -0.0697564737441253">
+        <geom name="office_chair_3__arm_-1" type="box" pos="-0.289 -0.035 0.7" size="0.044 0.132 0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__arm_post_-1" type="box" pos="-0.289 0.015 0.535" size="0.027 0.034 0.14" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__ArmUpright_-1" mesh="officechair__part_010" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__ArmrestBase_-1" mesh="officechair__part_012" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__ArmrestPad_-1" mesh="officechair__part_013" type="mesh" material="officechair__ArmrestSoftPad" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__ArmHeightButton_-1" mesh="officechair__part_014" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__armrest_right" pos="0.0 0.0 -0.036" quat="0.9975640502598242 0.0 0.0 -0.0697564737441253">
+        <geom name="office_chair_3__arm_1" type="box" pos="0.289 -0.035 0.7" size="0.044 0.132 0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__arm_post_1" type="box" pos="0.289 0.015 0.535" size="0.027 0.034 0.14" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="1" />
+        <geom name="office_chair_3__ArmUpright_1" mesh="officechair__part_019" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__ArmrestBase_1" mesh="officechair__part_021" type="mesh" material="officechair__WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__ArmrestPad_1" mesh="officechair__part_022" type="mesh" material="officechair__ArmrestSoftPad" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__ArmHeightButton_1" mesh="officechair__part_023" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__caster_fork_0" pos="0.0035796270854122625 0.20507669837569412 0.0040000000000000036" quat="0.9455185755993168 0.0 0.0 -0.3255681544571567">
+        <geom name="office_chair_3__CasterStem_0" mesh="officechair__part_087" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterFork_0" mesh="officechair__part_088" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_0_neg1" pos="0.0035796270854122625 0.20507669837569412 0.0040000000000000036" quat="0.9455185755993168 0.0 0.0 -0.3255681544571567">
+        <geom name="office_chair_3__wheel_contact_0_neg1" type="ellipsoid" pos="0.3156307357441394 0.08678270941618049 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_0_-1" mesh="officechair__part_089" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_0_-1" mesh="officechair__part_090" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_0_1" pos="0.0035796270854122625 0.20507669837569412 0.0040000000000000036" quat="0.9455185755993168 0.0 0.0 -0.3255681544571567">
+        <geom name="office_chair_3__wheel_contact_0_1" type="ellipsoid" pos="0.30636022591289097 0.11531440490503511 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_0_1" mesh="officechair__part_091" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_0_1" mesh="officechair__part_092" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__caster_fork_1" pos="0.10255396865400436 0.017161648686215225 0.0040000000000000036" quat="0.9862856015372314 0.0 0.0 0.16504760586067765">
+        <geom name="office_chair_3__CasterStem_1" mesh="officechair__part_094" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterFork_1" mesh="officechair__part_095" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_1_neg1" pos="0.10255396865400436 0.017161648686215225 0.0040000000000000036" quat="0.9862856015372314 0.0 0.0 0.16504760586067765">
+        <geom name="office_chair_3__wheel_contact_1_neg1" type="ellipsoid" pos="0.01500000000000002 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_1_-1" mesh="officechair__part_096" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_1_-1" mesh="officechair__part_097" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_1_1" pos="0.10255396865400436 0.017161648686215225 0.0040000000000000036" quat="0.9862856015372314 0.0 0.0 0.16504760586067765">
+        <geom name="office_chair_3__wheel_contact_1_1" type="ellipsoid" pos="-0.014999999999999979 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_1_1" mesh="officechair__part_098" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_1_1" mesh="officechair__part_099" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__caster_fork_2" pos="-0.3105761440942612 -0.21746775728290668 0.0040000000000000036" quat="0.7986355100472928 0.0 0.0 -0.6018150231520483">
+        <geom name="office_chair_3__CasterStem_2" mesh="officechair__part_101" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterFork_2" mesh="officechair__part_102" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_2_neg1" pos="-0.3105761440942612 -0.21746775728290668 0.0040000000000000036" quat="0.7986355100472928 0.0 0.0 -0.6018150231520483">
+        <geom name="office_chair_3__wheel_contact_2_neg1" type="ellipsoid" pos="-0.30636022591289097 0.11531440490503514 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_2_-1" mesh="officechair__part_103" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_2_-1" mesh="officechair__part_104" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_2_1" pos="-0.3105761440942612 -0.21746775728290668 0.0040000000000000036" quat="0.7986355100472928 0.0 0.0 -0.6018150231520483">
+        <geom name="office_chair_3__wheel_contact_2_1" type="ellipsoid" pos="-0.3156307357441394 0.08678270941618055 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_2_1" mesh="officechair__part_105" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_2_1" mesh="officechair__part_106" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__caster_fork_3" pos="0.06641783119276823 -0.06526862093521324 0.0040000000000000036" quat="0.9890158633619168 0.0 0.0 -0.14780941112961063">
+        <geom name="office_chair_3__CasterStem_3" mesh="officechair__part_108" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterFork_3" mesh="officechair__part_109" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_3_neg1" pos="0.06641783119276823 -0.06526862093521324 0.0040000000000000036" quat="0.9890158633619168 0.0 0.0 -0.14780941112961063">
+        <geom name="office_chair_3__wheel_contact_3_neg1" type="ellipsoid" pos="-0.20434103241526297 -0.2557317783762207 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_3_-1" mesh="officechair__part_110" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_3_-1" mesh="officechair__part_111" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_3_1" pos="0.06641783119276823 -0.06526862093521324 0.0040000000000000036" quat="0.9890158633619168 0.0 0.0 -0.14780941112961063">
+        <geom name="office_chair_3__wheel_contact_3_1" type="ellipsoid" pos="-0.18007052258401457 -0.27336533594499485 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_3_1" mesh="officechair__part_112" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_3_1" mesh="officechair__part_113" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__caster_fork_4" pos="-0.12049079930480988 -0.17863495611421304 0.0040000000000000036" quat="0.9396926207859084 0.0 0.0 0.3420201433256687">
+        <geom name="office_chair_3__CasterStem_4" mesh="officechair__part_115" type="mesh" material="officechair__GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterFork_4" mesh="officechair__part_116" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_4_neg1" pos="-0.12049079930480988 -0.17863495611421304 0.0040000000000000036" quat="0.9396926207859084 0.0 0.0 0.3420201433256687">
+        <geom name="office_chair_3__wheel_contact_4_neg1" type="ellipsoid" pos="0.18007052258401446 -0.27336533594499496 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_4_-1" mesh="officechair__part_117" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_4_-1" mesh="officechair__part_118" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="office_chair_3__wheel_4_1" pos="-0.12049079930480988 -0.17863495611421304 0.0040000000000000036" quat="0.9396926207859084 0.0 0.0 0.3420201433256687">
+        <geom name="office_chair_3__wheel_contact_4_1" type="ellipsoid" pos="0.20434103241526286 -0.2557317783762208 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="1" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+        <geom name="office_chair_3__CasterWheel_4_1" mesh="officechair__part_119" type="mesh" material="officechair__BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="office_chair_3__CasterHub_4_1" mesh="officechair__part_120" type="mesh" material="officechair__BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+    </body>
   </worldbody>
   <asset>
     <texture name="floor_texture" type="2d" file="textures/carpet_photo_v1.png" />
@@ -2670,6 +3222,135 @@
     <material name="round_table_pillar_pbr" rgba="0.76 0.75 0.71 1" specular=".25" shininess="0.6799999999999999" />
     <mesh name="round_table_base_pbr" file="../../../assets/fq/tabletop/common/meshes/round_table_base_pbr.obj" />
     <material name="round_table_base_pbr" rgba="0.74 0.73 0.69 1" specular=".25" shininess="0.62" />
+    <material name="officechair__GreyWovenFabric" rgba="0.3199999928474426 0.33500000834465027 0.32499998807907104 1.0" />
+    <material name="officechair__DarkRearTextile" rgba="0.03500000014901161 0.0430000014603138 0.03999999910593033 1.0" />
+    <material name="officechair__FabricSeams" rgba="0.38999998569488525 0.41999998688697815 0.38999998569488525 1.0" />
+    <material name="officechair__WarmGreyCoatedFrame" rgba="0.699999988079071 0.7200000286102295 0.6700000166893005 1.0" />
+    <material name="officechair__BlackMechanism" rgba="0.017999999225139618 0.02199999988079071 0.020999999716877937 1.0" />
+    <material name="officechair__ArmrestSoftPad" rgba="0.5699999928474426 0.6100000143051147 0.550000011920929 1.0" />
+    <material name="officechair__GasLiftSteel" rgba="0.5199999809265137 0.5600000023841858 0.5799999833106995 1.0" />
+    <material name="officechair__BlackWheelTread" rgba="0.02500000037252903 0.02800000086426735 0.027000000700354576 1.0" />
+    <mesh name="officechair__part_000" file="../../../assets/fq/office_chair/meshes/part_000.obj" />
+    <mesh name="officechair__part_001" file="../../../assets/fq/office_chair/meshes/part_001.obj" />
+    <mesh name="officechair__part_002" file="../../../assets/fq/office_chair/meshes/part_002.obj" />
+    <mesh name="officechair__part_003" file="../../../assets/fq/office_chair/meshes/part_003.obj" />
+    <mesh name="officechair__part_004" file="../../../assets/fq/office_chair/meshes/part_004.obj" />
+    <mesh name="officechair__part_005" file="../../../assets/fq/office_chair/meshes/part_005.obj" />
+    <mesh name="officechair__part_006" file="../../../assets/fq/office_chair/meshes/part_006.obj" />
+    <mesh name="officechair__part_007" file="../../../assets/fq/office_chair/meshes/part_007.obj" />
+    <mesh name="officechair__part_008" file="../../../assets/fq/office_chair/meshes/part_008.obj" />
+    <mesh name="officechair__part_009" file="../../../assets/fq/office_chair/meshes/part_009.obj" />
+    <mesh name="officechair__part_010" file="../../../assets/fq/office_chair/meshes/part_010.obj" />
+    <mesh name="officechair__part_011" file="../../../assets/fq/office_chair/meshes/part_011.obj" />
+    <mesh name="officechair__part_012" file="../../../assets/fq/office_chair/meshes/part_012.obj" />
+    <mesh name="officechair__part_013" file="../../../assets/fq/office_chair/meshes/part_013.obj" />
+    <mesh name="officechair__part_014" file="../../../assets/fq/office_chair/meshes/part_014.obj" />
+    <mesh name="officechair__part_015" file="../../../assets/fq/office_chair/meshes/part_015.obj" />
+    <mesh name="officechair__part_016" file="../../../assets/fq/office_chair/meshes/part_016.obj" />
+    <mesh name="officechair__part_017" file="../../../assets/fq/office_chair/meshes/part_017.obj" />
+    <mesh name="officechair__part_018" file="../../../assets/fq/office_chair/meshes/part_018.obj" />
+    <mesh name="officechair__part_019" file="../../../assets/fq/office_chair/meshes/part_019.obj" />
+    <mesh name="officechair__part_020" file="../../../assets/fq/office_chair/meshes/part_020.obj" />
+    <mesh name="officechair__part_021" file="../../../assets/fq/office_chair/meshes/part_021.obj" />
+    <mesh name="officechair__part_022" file="../../../assets/fq/office_chair/meshes/part_022.obj" />
+    <mesh name="officechair__part_023" file="../../../assets/fq/office_chair/meshes/part_023.obj" />
+    <mesh name="officechair__part_024" file="../../../assets/fq/office_chair/meshes/part_024.obj" />
+    <mesh name="officechair__part_025" file="../../../assets/fq/office_chair/meshes/part_025.obj" />
+    <mesh name="officechair__part_026" file="../../../assets/fq/office_chair/meshes/part_026.obj" />
+    <mesh name="officechair__part_027" file="../../../assets/fq/office_chair/meshes/part_027.obj" />
+    <mesh name="officechair__part_028" file="../../../assets/fq/office_chair/meshes/part_028.obj" />
+    <mesh name="officechair__part_029" file="../../../assets/fq/office_chair/meshes/part_029.obj" />
+    <mesh name="officechair__part_030" file="../../../assets/fq/office_chair/meshes/part_030.obj" />
+    <mesh name="officechair__part_031" file="../../../assets/fq/office_chair/meshes/part_031.obj" />
+    <mesh name="officechair__part_032" file="../../../assets/fq/office_chair/meshes/part_032.obj" />
+    <mesh name="officechair__part_033" file="../../../assets/fq/office_chair/meshes/part_033.obj" />
+    <mesh name="officechair__part_034" file="../../../assets/fq/office_chair/meshes/part_034.obj" />
+    <mesh name="officechair__part_035" file="../../../assets/fq/office_chair/meshes/part_035.obj" />
+    <mesh name="officechair__part_036" file="../../../assets/fq/office_chair/meshes/part_036.obj" />
+    <mesh name="officechair__part_037" file="../../../assets/fq/office_chair/meshes/part_037.obj" />
+    <mesh name="officechair__part_038" file="../../../assets/fq/office_chair/meshes/part_038.obj" />
+    <mesh name="officechair__part_039" file="../../../assets/fq/office_chair/meshes/part_039.obj" />
+    <mesh name="officechair__part_040" file="../../../assets/fq/office_chair/meshes/part_040.obj" />
+    <mesh name="officechair__part_041" file="../../../assets/fq/office_chair/meshes/part_041.obj" />
+    <mesh name="officechair__part_042" file="../../../assets/fq/office_chair/meshes/part_042.obj" />
+    <mesh name="officechair__part_043" file="../../../assets/fq/office_chair/meshes/part_043.obj" />
+    <mesh name="officechair__part_044" file="../../../assets/fq/office_chair/meshes/part_044.obj" />
+    <mesh name="officechair__part_045" file="../../../assets/fq/office_chair/meshes/part_045.obj" />
+    <mesh name="officechair__part_046" file="../../../assets/fq/office_chair/meshes/part_046.obj" />
+    <mesh name="officechair__part_047" file="../../../assets/fq/office_chair/meshes/part_047.obj" />
+    <mesh name="officechair__part_048" file="../../../assets/fq/office_chair/meshes/part_048.obj" />
+    <mesh name="officechair__part_049" file="../../../assets/fq/office_chair/meshes/part_049.obj" />
+    <mesh name="officechair__part_050" file="../../../assets/fq/office_chair/meshes/part_050.obj" />
+    <mesh name="officechair__part_051" file="../../../assets/fq/office_chair/meshes/part_051.obj" />
+    <mesh name="officechair__part_052" file="../../../assets/fq/office_chair/meshes/part_052.obj" />
+    <mesh name="officechair__part_053" file="../../../assets/fq/office_chair/meshes/part_053.obj" />
+    <mesh name="officechair__part_054" file="../../../assets/fq/office_chair/meshes/part_054.obj" />
+    <mesh name="officechair__part_055" file="../../../assets/fq/office_chair/meshes/part_055.obj" />
+    <mesh name="officechair__part_056" file="../../../assets/fq/office_chair/meshes/part_056.obj" />
+    <mesh name="officechair__part_057" file="../../../assets/fq/office_chair/meshes/part_057.obj" />
+    <mesh name="officechair__part_058" file="../../../assets/fq/office_chair/meshes/part_058.obj" />
+    <mesh name="officechair__part_059" file="../../../assets/fq/office_chair/meshes/part_059.obj" />
+    <mesh name="officechair__part_060" file="../../../assets/fq/office_chair/meshes/part_060.obj" />
+    <mesh name="officechair__part_061" file="../../../assets/fq/office_chair/meshes/part_061.obj" />
+    <mesh name="officechair__part_062" file="../../../assets/fq/office_chair/meshes/part_062.obj" />
+    <mesh name="officechair__part_063" file="../../../assets/fq/office_chair/meshes/part_063.obj" />
+    <mesh name="officechair__part_064" file="../../../assets/fq/office_chair/meshes/part_064.obj" />
+    <mesh name="officechair__part_065" file="../../../assets/fq/office_chair/meshes/part_065.obj" />
+    <mesh name="officechair__part_066" file="../../../assets/fq/office_chair/meshes/part_066.obj" />
+    <mesh name="officechair__part_067" file="../../../assets/fq/office_chair/meshes/part_067.obj" />
+    <mesh name="officechair__part_068" file="../../../assets/fq/office_chair/meshes/part_068.obj" />
+    <mesh name="officechair__part_069" file="../../../assets/fq/office_chair/meshes/part_069.obj" />
+    <mesh name="officechair__part_070" file="../../../assets/fq/office_chair/meshes/part_070.obj" />
+    <mesh name="officechair__part_071" file="../../../assets/fq/office_chair/meshes/part_071.obj" />
+    <mesh name="officechair__part_072" file="../../../assets/fq/office_chair/meshes/part_072.obj" />
+    <mesh name="officechair__part_073" file="../../../assets/fq/office_chair/meshes/part_073.obj" />
+    <mesh name="officechair__part_074" file="../../../assets/fq/office_chair/meshes/part_074.obj" />
+    <mesh name="officechair__part_075" file="../../../assets/fq/office_chair/meshes/part_075.obj" />
+    <mesh name="officechair__part_076" file="../../../assets/fq/office_chair/meshes/part_076.obj" />
+    <mesh name="officechair__part_077" file="../../../assets/fq/office_chair/meshes/part_077.obj" />
+    <mesh name="officechair__part_078" file="../../../assets/fq/office_chair/meshes/part_078.obj" />
+    <mesh name="officechair__part_079" file="../../../assets/fq/office_chair/meshes/part_079.obj" />
+    <mesh name="officechair__part_080" file="../../../assets/fq/office_chair/meshes/part_080.obj" />
+    <mesh name="officechair__part_081" file="../../../assets/fq/office_chair/meshes/part_081.obj" />
+    <mesh name="officechair__part_082" file="../../../assets/fq/office_chair/meshes/part_082.obj" />
+    <mesh name="officechair__part_083" file="../../../assets/fq/office_chair/meshes/part_083.obj" />
+    <mesh name="officechair__part_084" file="../../../assets/fq/office_chair/meshes/part_084.obj" />
+    <mesh name="officechair__part_085" file="../../../assets/fq/office_chair/meshes/part_085.obj" />
+    <mesh name="officechair__part_086" file="../../../assets/fq/office_chair/meshes/part_086.obj" />
+    <mesh name="officechair__part_087" file="../../../assets/fq/office_chair/meshes/part_087.obj" />
+    <mesh name="officechair__part_088" file="../../../assets/fq/office_chair/meshes/part_088.obj" />
+    <mesh name="officechair__part_089" file="../../../assets/fq/office_chair/meshes/part_089.obj" />
+    <mesh name="officechair__part_090" file="../../../assets/fq/office_chair/meshes/part_090.obj" />
+    <mesh name="officechair__part_091" file="../../../assets/fq/office_chair/meshes/part_091.obj" />
+    <mesh name="officechair__part_092" file="../../../assets/fq/office_chair/meshes/part_092.obj" />
+    <mesh name="officechair__part_093" file="../../../assets/fq/office_chair/meshes/part_093.obj" />
+    <mesh name="officechair__part_094" file="../../../assets/fq/office_chair/meshes/part_094.obj" />
+    <mesh name="officechair__part_095" file="../../../assets/fq/office_chair/meshes/part_095.obj" />
+    <mesh name="officechair__part_096" file="../../../assets/fq/office_chair/meshes/part_096.obj" />
+    <mesh name="officechair__part_097" file="../../../assets/fq/office_chair/meshes/part_097.obj" />
+    <mesh name="officechair__part_098" file="../../../assets/fq/office_chair/meshes/part_098.obj" />
+    <mesh name="officechair__part_099" file="../../../assets/fq/office_chair/meshes/part_099.obj" />
+    <mesh name="officechair__part_100" file="../../../assets/fq/office_chair/meshes/part_100.obj" />
+    <mesh name="officechair__part_101" file="../../../assets/fq/office_chair/meshes/part_101.obj" />
+    <mesh name="officechair__part_102" file="../../../assets/fq/office_chair/meshes/part_102.obj" />
+    <mesh name="officechair__part_103" file="../../../assets/fq/office_chair/meshes/part_103.obj" />
+    <mesh name="officechair__part_104" file="../../../assets/fq/office_chair/meshes/part_104.obj" />
+    <mesh name="officechair__part_105" file="../../../assets/fq/office_chair/meshes/part_105.obj" />
+    <mesh name="officechair__part_106" file="../../../assets/fq/office_chair/meshes/part_106.obj" />
+    <mesh name="officechair__part_107" file="../../../assets/fq/office_chair/meshes/part_107.obj" />
+    <mesh name="officechair__part_108" file="../../../assets/fq/office_chair/meshes/part_108.obj" />
+    <mesh name="officechair__part_109" file="../../../assets/fq/office_chair/meshes/part_109.obj" />
+    <mesh name="officechair__part_110" file="../../../assets/fq/office_chair/meshes/part_110.obj" />
+    <mesh name="officechair__part_111" file="../../../assets/fq/office_chair/meshes/part_111.obj" />
+    <mesh name="officechair__part_112" file="../../../assets/fq/office_chair/meshes/part_112.obj" />
+    <mesh name="officechair__part_113" file="../../../assets/fq/office_chair/meshes/part_113.obj" />
+    <mesh name="officechair__part_114" file="../../../assets/fq/office_chair/meshes/part_114.obj" />
+    <mesh name="officechair__part_115" file="../../../assets/fq/office_chair/meshes/part_115.obj" />
+    <mesh name="officechair__part_116" file="../../../assets/fq/office_chair/meshes/part_116.obj" />
+    <mesh name="officechair__part_117" file="../../../assets/fq/office_chair/meshes/part_117.obj" />
+    <mesh name="officechair__part_118" file="../../../assets/fq/office_chair/meshes/part_118.obj" />
+    <mesh name="officechair__part_119" file="../../../assets/fq/office_chair/meshes/part_119.obj" />
+    <mesh name="officechair__part_120" file="../../../assets/fq/office_chair/meshes/part_120.obj" />
   </asset>
   <contact>
     <exclude body1="refrigerator_base" body2="refrigerator_mullion" />

@@ -1,0 +1,3 @@
+v0.9.9 — Baseline meeting chairs
+
+Baseline 0.1.23 adds three fixed posed office-chair 0.1.0 instances along one long side of the conference table. Positions, base headings and upper swivel angles vary and are saved deterministically. All armrests are lowered 4 cm. MJCF/USD visual poses and collision shapes are synchronized. Layout is authored, not measured. Standalone chair dynamics are unchanged.

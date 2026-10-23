@@ -93,10 +93,10 @@ def main():
                     im=Image.open(root/f'assets/fq/mesh_trash_bin/textures/powdercoat_{channel}.png').convert('RGB').transpose(Image.Transpose.FLIP_TOP_BOTTOM)
                     im.save(dest/f'{channel}-bin.png');mat[f'{channel}_texture']=f'{channel}-bin.png'
                 mat['normal_scale']=.2
-        if slug=='office_chair':
-            props=json.loads((root/meta['appearance']).read_text())
+        if slug in ('office_chair','office_baseline'):
+            props=json.loads((root/'assets/fq/office_chair/pbr.json').read_text())
             for i,mat in enumerate(materials):
-                key=name(m,mujoco.mjtObj.mjOBJ_MATERIAL,i)
+                key=name(m,mujoco.mjtObj.mjOBJ_MATERIAL,i).removeprefix('officechair__')
                 if key not in props:continue
                 mat.update(roughness=props[key]['roughness'],metalness=props[key]['metallic'])
                 if key=='GreyWovenFabric':
@@ -126,9 +126,9 @@ def main():
             mat=int(m.geom_matid[i]);rgba=m.geom_rgba[i].tolist()
             # MuJoCo's default geom color defers to its material, explicit transparent colliders do not.
             if mat>=0 and np.allclose(rgba,[.5,.5,.5,1],atol=1e-6):rgba=m.mat_rgba[mat].tolist()
-            if slug=='office_chair' and mat>=0 and rgba[3]>.01:
+            if mat>=0 and rgba[3]>.01 and (slug=='office_chair' or name(m,mujoco.mjtObj.mjOBJ_MATERIAL,mat).startswith('officechair__')):
                 # Blender/MuJoCo parameters are linear; viewer geom colors are sRGB.
-                if name(m,mujoco.mjtObj.mjOBJ_MATERIAL,mat)=='GreyWovenFabric':rgba=[1,1,1,rgba[3]]
+                if name(m,mujoco.mjtObj.mjOBJ_MATERIAL,mat).removeprefix('officechair__')=='GreyWovenFabric':rgba=[1,1,1,rgba[3]]
                 else:rgba=[12.92*x if x<=.0031308 else 1.055*x**(1/2.4)-.055 for x in rgba[:3]]+[rgba[3]]
             gname=name(m,mujoco.mjtObj.mjOBJ_GEOM,i)
             g={'name':gname,'body':int(m.geom_bodyid[i]),'type':int(m.geom_type[i]),'mesh':int(m.geom_dataid[i]),
