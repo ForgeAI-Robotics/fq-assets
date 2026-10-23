@@ -93,16 +93,29 @@ def main():
                     im=Image.open(root/f'assets/fq/mesh_trash_bin/textures/powdercoat_{channel}.png').convert('RGB').transpose(Image.Transpose.FLIP_TOP_BOTTOM)
                     im.save(dest/f'{channel}-bin.png');mat[f'{channel}_texture']=f'{channel}-bin.png'
                 mat['normal_scale']=.2
+        if slug=='office_chair':
+            props=json.loads((root/meta['appearance']).read_text())
+            for i,mat in enumerate(materials):
+                key=name(m,mujoco.mjtObj.mjOBJ_MATERIAL,i)
+                if key not in props:continue
+                mat.update(roughness=props[key]['roughness'],metalness=props[key]['metallic'])
+                if key=='GreyWovenFabric':
+                    im=Image.open(root/'assets/fq/office_chair/textures/fabric_basecolor.png').convert('RGB').transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+                    im.save(dest/'fabric-chair.png');mat['texture']='fabric-chair.png';mat['rgba']=[1,1,1,1]
+                    for channel in ('roughness','normal'):
+                        im=Image.open(root/f'assets/fq/office_chair/textures/fabric_{channel}.png').convert('RGB').transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+                        im.save(dest/f'{channel}-chair.png');mat[f'{channel}_texture']=f'{channel}-chair.png'
+                    mat['normal_scale']=.25;mat['roughness']=1.0
         pbr_enabled=any('roughness' in mat for mat in materials)
         bodies=[];joints=[];geoms=[];bounds=[]
         for i in range(m.nbody):
             b={'id':i,'name':name(m,mujoco.mjtObj.mjOBJ_BODY,i),'parent':int(m.body_parentid[i]),
                'pos':m.body_pos[i].tolist(),'quat':m.body_quat[i].tolist(),'mass':float(m.body_mass[i]),'joints':[]}
             for j in range(int(m.body_jntadr[i]),int(m.body_jntadr[i]+m.body_jntnum[i])):
-                if m.jnt_type[j]!=mujoco.mjtJoint.mjJNT_HINGE:continue
+                if m.jnt_type[j] not in (mujoco.mjtJoint.mjJNT_HINGE,mujoco.mjtJoint.mjJNT_SLIDE):continue
                 jname=name(m,mujoco.mjtObj.mjOBJ_JOINT,j);qadr=int(m.jnt_qposadr[j]);dof=int(m.jnt_dofadr[j])
                 limits=m.jnt_range[j].tolist() if m.jnt_limited[j] else [-math.pi,math.pi]
-                joint={'name':jname,'body':i,'pivot':m.jnt_pos[j].tolist(),'axis':m.jnt_axis[j].tolist(),
+                joint={'type':'slide' if m.jnt_type[j]==mujoco.mjtJoint.mjJNT_SLIDE else 'hinge','name':jname,'body':i,'pivot':m.jnt_pos[j].tolist(),'axis':m.jnt_axis[j].tolist(),
                        'range':limits,'reference':float(m.qpos0[qadr]),
                        'initial':float(meta.get('initial_joint_positions',{}).get(jname,m.qpos0[qadr])),
                        'damping':float(m.dof_damping[dof]),'friction_loss':float(m.dof_frictionloss[dof]),

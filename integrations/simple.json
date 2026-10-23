@@ -43,6 +43,16 @@
       "fixed": true,
       "spawnable": false,
       "reason": "World-space fixture; use the baseline scene instance"
+    },
+    "fq:articulated/office_chair": {
+      "root_body": "chair_base",
+      "fixed": false,
+      "spawnable": true,
+      "supported_dynamic_engines": [
+        "mujoco"
+      ],
+      "usd_dynamic_supported": false,
+      "reason": "USD contains visual geometry only; PhysX caster articulation pending"
     }
   },
   "scenes": {

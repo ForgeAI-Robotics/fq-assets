@@ -1,0 +1,361 @@
+<mujoco model="office_chair_candidate">
+  <compiler angle="radian" />
+  <asset>
+    <material name="GreyWovenFabric" rgba="0.3199999928474426 0.33500000834465027 0.32499998807907104 1.0" />
+    <material name="DarkRearTextile" rgba="0.03500000014901161 0.0430000014603138 0.03999999910593033 1.0" />
+    <material name="FabricSeams" rgba="0.38999998569488525 0.41999998688697815 0.38999998569488525 1.0" />
+    <material name="WarmGreyCoatedFrame" rgba="0.699999988079071 0.7200000286102295 0.6700000166893005 1.0" />
+    <material name="BlackMechanism" rgba="0.017999999225139618 0.02199999988079071 0.020999999716877937 1.0" />
+    <material name="ArmrestSoftPad" rgba="0.5699999928474426 0.6100000143051147 0.550000011920929 1.0" />
+    <material name="GasLiftSteel" rgba="0.5199999809265137 0.5600000023841858 0.5799999833106995 1.0" />
+    <material name="BlackWheelTread" rgba="0.02500000037252903 0.02800000086426735 0.027000000700354576 1.0" />
+    <mesh name="part_000" file="meshes/part_000.obj" />
+    <mesh name="part_001" file="meshes/part_001.obj" />
+    <mesh name="part_002" file="meshes/part_002.obj" />
+    <mesh name="part_003" file="meshes/part_003.obj" />
+    <mesh name="part_004" file="meshes/part_004.obj" />
+    <mesh name="part_005" file="meshes/part_005.obj" />
+    <mesh name="part_006" file="meshes/part_006.obj" />
+    <mesh name="part_007" file="meshes/part_007.obj" />
+    <mesh name="part_008" file="meshes/part_008.obj" />
+    <mesh name="part_009" file="meshes/part_009.obj" />
+    <mesh name="part_010" file="meshes/part_010.obj" />
+    <mesh name="part_011" file="meshes/part_011.obj" />
+    <mesh name="part_012" file="meshes/part_012.obj" />
+    <mesh name="part_013" file="meshes/part_013.obj" />
+    <mesh name="part_014" file="meshes/part_014.obj" />
+    <mesh name="part_015" file="meshes/part_015.obj" />
+    <mesh name="part_016" file="meshes/part_016.obj" />
+    <mesh name="part_017" file="meshes/part_017.obj" />
+    <mesh name="part_018" file="meshes/part_018.obj" />
+    <mesh name="part_019" file="meshes/part_019.obj" />
+    <mesh name="part_020" file="meshes/part_020.obj" />
+    <mesh name="part_021" file="meshes/part_021.obj" />
+    <mesh name="part_022" file="meshes/part_022.obj" />
+    <mesh name="part_023" file="meshes/part_023.obj" />
+    <mesh name="part_024" file="meshes/part_024.obj" />
+    <mesh name="part_025" file="meshes/part_025.obj" />
+    <mesh name="part_026" file="meshes/part_026.obj" />
+    <mesh name="part_027" file="meshes/part_027.obj" />
+    <mesh name="part_028" file="meshes/part_028.obj" />
+    <mesh name="part_029" file="meshes/part_029.obj" />
+    <mesh name="part_030" file="meshes/part_030.obj" />
+    <mesh name="part_031" file="meshes/part_031.obj" />
+    <mesh name="part_032" file="meshes/part_032.obj" />
+    <mesh name="part_033" file="meshes/part_033.obj" />
+    <mesh name="part_034" file="meshes/part_034.obj" />
+    <mesh name="part_035" file="meshes/part_035.obj" />
+    <mesh name="part_036" file="meshes/part_036.obj" />
+    <mesh name="part_037" file="meshes/part_037.obj" />
+    <mesh name="part_038" file="meshes/part_038.obj" />
+    <mesh name="part_039" file="meshes/part_039.obj" />
+    <mesh name="part_040" file="meshes/part_040.obj" />
+    <mesh name="part_041" file="meshes/part_041.obj" />
+    <mesh name="part_042" file="meshes/part_042.obj" />
+    <mesh name="part_043" file="meshes/part_043.obj" />
+    <mesh name="part_044" file="meshes/part_044.obj" />
+    <mesh name="part_045" file="meshes/part_045.obj" />
+    <mesh name="part_046" file="meshes/part_046.obj" />
+    <mesh name="part_047" file="meshes/part_047.obj" />
+    <mesh name="part_048" file="meshes/part_048.obj" />
+    <mesh name="part_049" file="meshes/part_049.obj" />
+    <mesh name="part_050" file="meshes/part_050.obj" />
+    <mesh name="part_051" file="meshes/part_051.obj" />
+    <mesh name="part_052" file="meshes/part_052.obj" />
+    <mesh name="part_053" file="meshes/part_053.obj" />
+    <mesh name="part_054" file="meshes/part_054.obj" />
+    <mesh name="part_055" file="meshes/part_055.obj" />
+    <mesh name="part_056" file="meshes/part_056.obj" />
+    <mesh name="part_057" file="meshes/part_057.obj" />
+    <mesh name="part_058" file="meshes/part_058.obj" />
+    <mesh name="part_059" file="meshes/part_059.obj" />
+    <mesh name="part_060" file="meshes/part_060.obj" />
+    <mesh name="part_061" file="meshes/part_061.obj" />
+    <mesh name="part_062" file="meshes/part_062.obj" />
+    <mesh name="part_063" file="meshes/part_063.obj" />
+    <mesh name="part_064" file="meshes/part_064.obj" />
+    <mesh name="part_065" file="meshes/part_065.obj" />
+    <mesh name="part_066" file="meshes/part_066.obj" />
+    <mesh name="part_067" file="meshes/part_067.obj" />
+    <mesh name="part_068" file="meshes/part_068.obj" />
+    <mesh name="part_069" file="meshes/part_069.obj" />
+    <mesh name="part_070" file="meshes/part_070.obj" />
+    <mesh name="part_071" file="meshes/part_071.obj" />
+    <mesh name="part_072" file="meshes/part_072.obj" />
+    <mesh name="part_073" file="meshes/part_073.obj" />
+    <mesh name="part_074" file="meshes/part_074.obj" />
+    <mesh name="part_075" file="meshes/part_075.obj" />
+    <mesh name="part_076" file="meshes/part_076.obj" />
+    <mesh name="part_077" file="meshes/part_077.obj" />
+    <mesh name="part_078" file="meshes/part_078.obj" />
+    <mesh name="part_079" file="meshes/part_079.obj" />
+    <mesh name="part_080" file="meshes/part_080.obj" />
+    <mesh name="part_081" file="meshes/part_081.obj" />
+    <mesh name="part_082" file="meshes/part_082.obj" />
+    <mesh name="part_083" file="meshes/part_083.obj" />
+    <mesh name="part_084" file="meshes/part_084.obj" />
+    <mesh name="part_085" file="meshes/part_085.obj" />
+    <mesh name="part_086" file="meshes/part_086.obj" />
+    <mesh name="part_087" file="meshes/part_087.obj" />
+    <mesh name="part_088" file="meshes/part_088.obj" />
+    <mesh name="part_089" file="meshes/part_089.obj" />
+    <mesh name="part_090" file="meshes/part_090.obj" />
+    <mesh name="part_091" file="meshes/part_091.obj" />
+    <mesh name="part_092" file="meshes/part_092.obj" />
+    <mesh name="part_093" file="meshes/part_093.obj" />
+    <mesh name="part_094" file="meshes/part_094.obj" />
+    <mesh name="part_095" file="meshes/part_095.obj" />
+    <mesh name="part_096" file="meshes/part_096.obj" />
+    <mesh name="part_097" file="meshes/part_097.obj" />
+    <mesh name="part_098" file="meshes/part_098.obj" />
+    <mesh name="part_099" file="meshes/part_099.obj" />
+    <mesh name="part_100" file="meshes/part_100.obj" />
+    <mesh name="part_101" file="meshes/part_101.obj" />
+    <mesh name="part_102" file="meshes/part_102.obj" />
+    <mesh name="part_103" file="meshes/part_103.obj" />
+    <mesh name="part_104" file="meshes/part_104.obj" />
+    <mesh name="part_105" file="meshes/part_105.obj" />
+    <mesh name="part_106" file="meshes/part_106.obj" />
+    <mesh name="part_107" file="meshes/part_107.obj" />
+    <mesh name="part_108" file="meshes/part_108.obj" />
+    <mesh name="part_109" file="meshes/part_109.obj" />
+    <mesh name="part_110" file="meshes/part_110.obj" />
+    <mesh name="part_111" file="meshes/part_111.obj" />
+    <mesh name="part_112" file="meshes/part_112.obj" />
+    <mesh name="part_113" file="meshes/part_113.obj" />
+    <mesh name="part_114" file="meshes/part_114.obj" />
+    <mesh name="part_115" file="meshes/part_115.obj" />
+    <mesh name="part_116" file="meshes/part_116.obj" />
+    <mesh name="part_117" file="meshes/part_117.obj" />
+    <mesh name="part_118" file="meshes/part_118.obj" />
+    <mesh name="part_119" file="meshes/part_119.obj" />
+    <mesh name="part_120" file="meshes/part_120.obj" />
+  </asset>
+  <worldbody>
+    <body name="chair_base" pos="0 0 .004">
+      <freejoint name="chair_free" />
+      <inertial pos="0 0 .16" mass="3" diaginertia=".055 .055 .10" />
+      <body name="chair_upper">
+        <joint name="seat_swivel" type="hinge" pos="0 0 .30" axis="0 0 1" damping=".08" frictionloss=".04" armature=".001" />
+        <inertial pos="0 .07 .65" mass="8" diaginertia=".60 .55 .38" />
+        <geom name="seat" type="box" pos="0 -0.015 0.446" size="0.235 0.225 0.038" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+        <geom name="back" type="box" pos="0 0.25 0.935" size="0.22 0.024 0.22" euler="-0.205 0 0" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+        <geom name="lumbar" type="box" pos="0 0.155 0.67" size="0.19 0.035 0.095" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+        <body name="armrest_left">
+          <joint name="armrest_left_lift" type="slide" axis="0 0 1" range="-.06 0" damping="20" />
+          <inertial pos="-0.289 0 .60" mass=".5" diaginertia=".006 .006 .001" />
+          <geom name="arm_-1" type="box" pos="-0.289 -0.035 0.7" size="0.044 0.132 0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+          <geom name="arm_post_-1" type="box" pos="-0.289 0.015 0.535" size="0.027 0.034 0.14" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+          <geom name="ArmUpright_-1" mesh="part_010" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="ArmrestBase_-1" mesh="part_012" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="ArmrestPad_-1" mesh="part_013" type="mesh" material="ArmrestSoftPad" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="ArmHeightButton_-1" mesh="part_014" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <body name="armrest_right">
+          <joint name="armrest_right_lift" type="slide" axis="0 0 1" range="-.06 0" damping="20" />
+          <inertial pos="0.289 0 .60" mass=".5" diaginertia=".006 .006 .001" />
+          <geom name="arm_1" type="box" pos="0.289 -0.035 0.7" size="0.044 0.132 0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+          <geom name="arm_post_1" type="box" pos="0.289 0.015 0.535" size="0.027 0.034 0.14" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+          <geom name="ArmUpright_1" mesh="part_019" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="ArmrestBase_1" mesh="part_021" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="ArmrestPad_1" mesh="part_022" type="mesh" material="ArmrestSoftPad" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="ArmHeightButton_1" mesh="part_023" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <geom name="SeatCushion" mesh="part_000" type="mesh" material="GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="UpperBackCushion" mesh="part_001" type="mesh" material="GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="LumbarCushion" mesh="part_002" type="mesh" material="GreyWovenFabric" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearLumbarTextile" mesh="part_003" type="mesh" material="DarkRearTextile" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearTextile" mesh="part_004" type="mesh" material="DarkRearTextile" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="SeatStitch" mesh="part_005" type="mesh" material="FabricSeams" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="BackOuterFrame_-1" mesh="part_006" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="LumbarLoop_-1" mesh="part_007" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="YBranch_-1" mesh="part_008" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="LowerBackCross_-1" mesh="part_009" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="ArmUnderSeatMount_-1" mesh="part_011" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="BackOuterFrame_1" mesh="part_015" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="LumbarLoop_1" mesh="part_016" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="YBranch_1" mesh="part_017" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="LowerBackCross_1" mesh="part_018" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="ArmUnderSeatMount_1" mesh="part_020" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="BackTopFrame" mesh="part_024" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="YSpineLower" mesh="part_025" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="YSpineUpper" mesh="part_026" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_0_0" mesh="part_027" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_0_1" mesh="part_028" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_0_2" mesh="part_029" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_0_3" mesh="part_030" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_1_0" mesh="part_031" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_1_1" mesh="part_032" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_1_2" mesh="part_033" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_1_3" mesh="part_034" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_2_0" mesh="part_035" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_2_1" mesh="part_036" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_2_2" mesh="part_037" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_2_3" mesh="part_038" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_3_0" mesh="part_039" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_3_1" mesh="part_040" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_3_2" mesh="part_041" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_3_3" mesh="part_042" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_4_0" mesh="part_043" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_4_1" mesh="part_044" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_4_2" mesh="part_045" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_4_3" mesh="part_046" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_5_0" mesh="part_047" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_5_1" mesh="part_048" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_5_2" mesh="part_049" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_5_3" mesh="part_050" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_6_0" mesh="part_051" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_6_1" mesh="part_052" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_6_2" mesh="part_053" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_6_3" mesh="part_054" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_7_0" mesh="part_055" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_7_1" mesh="part_056" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_7_2" mesh="part_057" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_7_3" mesh="part_058" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_8_0" mesh="part_059" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_8_1" mesh="part_060" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_8_2" mesh="part_061" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_8_3" mesh="part_062" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_9_0" mesh="part_063" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_9_1" mesh="part_064" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_9_2" mesh="part_065" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_9_3" mesh="part_066" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_10_0" mesh="part_067" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_10_1" mesh="part_068" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_10_2" mesh="part_069" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_10_3" mesh="part_070" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_11_0" mesh="part_071" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_11_1" mesh="part_072" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_11_2" mesh="part_073" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_11_3" mesh="part_074" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_12_0" mesh="part_075" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_12_1" mesh="part_076" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_12_2" mesh="part_077" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="RearHex_12_3" mesh="part_078" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="UnderSeatMechanism" mesh="part_079" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="HeightLever" mesh="part_080" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="HeightLeverPaddle" mesh="part_081" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="GasLiftChrome" mesh="part_082" type="mesh" material="GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="caster_fork_0">
+        <joint name="caster_swivel_0" type="hinge" pos="0.2995828026329734 0.09734035322810843 0.078" axis="0 0 1" damping=".008" frictionloss=".001" armature=".00001" />
+        <inertial pos="0.3109954808285152 0.1010485571606078 0.055" mass=".2" diaginertia=".00015 .00015 .00012" />
+        <body name="wheel_0_neg1">
+          <joint name="wheel_roll_0_neg1" type="hinge" pos="0.3156307357441394 0.08678270941618049 0.032" axis="-0.3090169943749474 0.9510565162951535 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="0.3156307357441394 0.08678270941618049 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_0_neg1" type="ellipsoid" pos="0.3156307357441394 0.08678270941618049 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_0_-1" mesh="part_089" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_0_-1" mesh="part_090" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <body name="wheel_0_1">
+          <joint name="wheel_roll_0_1" type="hinge" pos="0.30636022591289097 0.11531440490503511 0.032" axis="-0.3090169943749474 0.9510565162951535 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="0.30636022591289097 0.11531440490503511 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_0_1" type="ellipsoid" pos="0.30636022591289097 0.11531440490503511 0.032" quat="0.7071067811865476 -0.6724985119639574 -0.21850801222441052 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_0_1" mesh="part_091" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_0_1" mesh="part_092" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <geom name="CasterStem_0" mesh="part_087" type="mesh" material="GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="CasterFork_0" mesh="part_088" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="caster_fork_1">
+        <joint name="caster_swivel_1" type="hinge" pos="1.9288187086570813e-17 0.315 0.078" axis="0 0 1" damping=".008" frictionloss=".001" armature=".00001" />
+        <inertial pos="2.0022975166059227e-17 0.327 0.055" mass=".2" diaginertia=".00015 .00015 .00012" />
+        <body name="wheel_1_neg1">
+          <joint name="wheel_roll_1_neg1" type="hinge" pos="0.01500000000000002 0.327 0.032" axis="-1.0 6.123233995736766e-17 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="0.01500000000000002 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_1_neg1" type="ellipsoid" pos="0.01500000000000002 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_1_-1" mesh="part_096" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_1_-1" mesh="part_097" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <body name="wheel_1_1">
+          <joint name="wheel_roll_1_1" type="hinge" pos="-0.014999999999999979 0.327 0.032" axis="-1.0 6.123233995736766e-17 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="-0.014999999999999979 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_1_1" type="ellipsoid" pos="-0.014999999999999979 0.327 0.032" quat="0.7071067811865476 -4.329780281177467e-17 -0.7071067811865476 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_1_1" mesh="part_098" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_1_1" mesh="part_099" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <geom name="CasterStem_1" mesh="part_094" type="mesh" material="GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="CasterFork_1" mesh="part_095" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="caster_fork_2">
+        <joint name="caster_swivel_2" type="hinge" pos="-0.2995828026329734 0.09734035322810847 0.078" axis="0 0 1" damping=".008" frictionloss=".001" armature=".00001" />
+        <inertial pos="-0.3109954808285152 0.10104855716060784 0.055" mass=".2" diaginertia=".00015 .00015 .00012" />
+        <body name="wheel_2_neg1">
+          <joint name="wheel_roll_2_neg1" type="hinge" pos="-0.30636022591289097 0.11531440490503514 0.032" axis="-0.3090169943749475 -0.9510565162951535 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="-0.30636022591289097 0.11531440490503514 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_2_neg1" type="ellipsoid" pos="-0.30636022591289097 0.11531440490503514 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_2_-1" mesh="part_103" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_2_-1" mesh="part_104" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <body name="wheel_2_1">
+          <joint name="wheel_roll_2_1" type="hinge" pos="-0.3156307357441394 0.08678270941618055 0.032" axis="-0.3090169943749475 -0.9510565162951535 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="-0.3156307357441394 0.08678270941618055 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_2_1" type="ellipsoid" pos="-0.3156307357441394 0.08678270941618055 0.032" quat="0.7071067811865476 0.6724985119639574 -0.2185080122244106 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_2_1" mesh="part_105" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_2_1" mesh="part_106" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <geom name="CasterStem_2" mesh="part_101" type="mesh" material="GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="CasterFork_2" mesh="part_102" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="caster_fork_3">
+        <joint name="caster_swivel_3" type="hinge" pos="-0.18515235447212908 -0.25484035322810844 0.078" axis="0 0 1" damping=".008" frictionloss=".001" armature=".00001" />
+        <inertial pos="-0.19220577749963877 -0.26454855716060777 0.055" mass=".2" diaginertia=".00015 .00015 .00012" />
+        <body name="wheel_3_neg1">
+          <joint name="wheel_roll_3_neg1" type="hinge" pos="-0.20434103241526297 -0.2557317783762207 0.032" axis="0.8090169943749473 -0.5877852522924732 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="-0.20434103241526297 -0.2557317783762207 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_3_neg1" type="ellipsoid" pos="-0.20434103241526297 -0.2557317783762207 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_3_-1" mesh="part_110" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_3_-1" mesh="part_111" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <body name="wheel_3_1">
+          <joint name="wheel_roll_3_1" type="hinge" pos="-0.18007052258401457 -0.27336533594499485 0.032" axis="0.8090169943749473 -0.5877852522924732 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="-0.18007052258401457 -0.27336533594499485 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_3_1" type="ellipsoid" pos="-0.18007052258401457 -0.27336533594499485 0.032" quat="0.7071067811865476 0.4156269377774535 0.5720614028176843 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_3_1" mesh="part_112" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_3_1" mesh="part_113" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <geom name="CasterStem_3" mesh="part_108" type="mesh" material="GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="CasterFork_3" mesh="part_109" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <body name="caster_fork_4">
+        <joint name="caster_swivel_4" type="hinge" pos="0.18515235447212897 -0.2548403532281085 0.078" axis="0 0 1" damping=".008" frictionloss=".001" armature=".00001" />
+        <inertial pos="0.19220577749963866 -0.2645485571606079 0.055" mass=".2" diaginertia=".00015 .00015 .00012" />
+        <body name="wheel_4_neg1">
+          <joint name="wheel_roll_4_neg1" type="hinge" pos="0.18007052258401446 -0.27336533594499496 0.032" axis="0.8090169943749476 0.5877852522924729 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="0.18007052258401446 -0.27336533594499496 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_4_neg1" type="ellipsoid" pos="0.18007052258401446 -0.27336533594499496 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_4_-1" mesh="part_117" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_4_-1" mesh="part_118" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <body name="wheel_4_1">
+          <joint name="wheel_roll_4_1" type="hinge" pos="0.20434103241526286 -0.2557317783762208 0.032" axis="0.8090169943749476 0.5877852522924729 0.0" damping=".0003" armature=".000001" />
+          <inertial pos="0.20434103241526286 -0.2557317783762208 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" mass=".1" diaginertia=".0000304 .0000304 .0000512" />
+          <geom name="wheel_contact_4_1" type="ellipsoid" pos="0.20434103241526286 -0.2557317783762208 0.032" quat="0.7071067811865476 -0.4156269377774533 0.5720614028176845 0.0" size=".032 .032 .012" group="3" rgba="0 0 0 0" contype="1" conaffinity="2" condim="4" friction=".9 .00002 .0001" solref=".008 1" solimp=".95 .99 .001" mass="0" />
+          <geom name="CasterWheel_4_1" mesh="part_119" type="mesh" material="BlackWheelTread" contype="0" conaffinity="0" group="2" mass="0" />
+          <geom name="CasterHub_4_1" mesh="part_120" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+        </body>
+        <geom name="CasterStem_4" mesh="part_115" type="mesh" material="GasLiftSteel" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="CasterFork_4" mesh="part_116" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      </body>
+      <geom name="spoke_0" type="capsule" fromto="0.042797546833753586 0.013905765488743782 0.15000000596046448 0.29482752084732056 0.09579527378082275 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+      <geom name="spoke_1" type="capsule" fromto="2.7554554596756583e-18 0.04500000178813934 0.15000000596046448 1.8982026545942347e-17 0.3100000023841858 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+      <geom name="spoke_2" type="capsule" fromto="-0.042797546833753586 0.013905765488743782 0.15000000596046448 -0.29482752084732056 0.09579527378082275 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+      <geom name="spoke_3" type="capsule" fromto="-0.02645033784210682 -0.0364057682454586 0.15000000596046448 -0.1822134256362915 -0.25079527497291565 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+      <geom name="spoke_4" type="capsule" fromto="0.02645033784210682 -0.0364057682454586 0.15000000596046448 0.1822134256362915 -0.25079527497291565 0.09200000017881393" size="0.025" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+      <geom name="gaslift" type="cylinder" pos="0 0 0.205" size="0.033 0.15" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" mass="0" contype="1" conaffinity="2" />
+      <geom name="GasLiftSleeve" mesh="part_083" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="GasLiftBottom" mesh="part_084" type="mesh" material="BlackMechanism" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="FiveStarHub" mesh="part_085" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="StarSpoke_0" mesh="part_086" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="StarSpoke_1" mesh="part_093" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="StarSpoke_2" mesh="part_100" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="StarSpoke_3" mesh="part_107" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="StarSpoke_4" mesh="part_114" type="mesh" material="WarmGreyCoatedFrame" contype="0" conaffinity="0" group="2" mass="0" />
+    </body>
+  </worldbody>
+  <option timestep=".001" integrator="implicitfast" cone="elliptic" iterations="80" gravity="0 0 -9.81" />
+  <actuator>
+    <position name="armrest_left_servo" joint="armrest_left_lift" kp="8000" kv="80" ctrlrange="-.06 0" />
+    <position name="armrest_right_servo" joint="armrest_right_lift" kp="8000" kv="80" ctrlrange="-.06 0" />
+  </actuator>
+</mujoco>

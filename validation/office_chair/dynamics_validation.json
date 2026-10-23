@@ -1,0 +1,75 @@
+{
+  "engine": "MuJoCo 3.3.6",
+  "nq": 25,
+  "nv": 24,
+  "total_mass_kg": 13.999999999999998,
+  "tests": {
+    "rest": {
+      "displacement_m": 8.468052192770977e-06,
+      "seat_rotation_deg": -9.08145924287537e-17,
+      "max_penetration_mm": 0.17405449817241986,
+      "max_base_tilt_deg": 0.005567831143725741,
+      "max_wheel_rotation_deg": 0.02313770060369386,
+      "max_caster_rotation_deg": 0.039231165311111295,
+      "final_speed_m_s": 1.2098372245913808e-06,
+      "force_N": 0,
+      "torque_Nm": 0,
+      "state_replay_max_position_error_m": 4.9995679176793187e-08,
+      "repeat_max_qpos_error": 0.0
+    },
+    "swivel": {
+      "displacement_m": 0.003201151607416626,
+      "seat_rotation_deg": 418.5215544940568,
+      "max_penetration_mm": 0.18384611258920325,
+      "max_base_tilt_deg": 0.007191789109907421,
+      "max_wheel_rotation_deg": 31.7852584105105,
+      "max_caster_rotation_deg": 43.354547326276624,
+      "final_speed_m_s": 0.0006431375935412423,
+      "force_N": 0,
+      "torque_Nm": 0.6,
+      "state_replay_max_position_error_m": 4.998390398314786e-08,
+      "repeat_max_qpos_error": 0.0
+    },
+    "push": {
+      "displacement_m": 0.9278326696503637,
+      "seat_rotation_deg": -100.9674197950968,
+      "max_penetration_mm": 0.187160630654791,
+      "max_base_tilt_deg": 0.008654226952695285,
+      "max_wheel_rotation_deg": 1735.1411440370318,
+      "max_caster_rotation_deg": 160.0774854450227,
+      "final_speed_m_s": 0.10745381317748957,
+      "force_N": 4,
+      "torque_Nm": 0,
+      "state_replay_max_position_error_m": 4.9998131829154246e-08,
+      "repeat_max_qpos_error": 0.0
+    },
+    "side_push": {
+      "displacement_m": 0.9451172733710356,
+      "seat_rotation_deg": -4.766302981073014e-17,
+      "max_penetration_mm": 0.1740514093167833,
+      "max_base_tilt_deg": 0.00556734607132434,
+      "max_wheel_rotation_deg": 1720.4607883730823,
+      "max_caster_rotation_deg": 143.96512657834674,
+      "final_speed_m_s": 0.10528000674027467,
+      "force_N": 4,
+      "torque_Nm": 0,
+      "state_replay_max_position_error_m": 4.998913916143266e-08,
+      "repeat_max_qpos_error": 0.0
+    },
+    "combined": {
+      "displacement_m": 0.8632684174509303,
+      "seat_rotation_deg": 249.60562555025075,
+      "max_penetration_mm": 0.18668389517288025,
+      "max_base_tilt_deg": 0.007959530283943014,
+      "max_wheel_rotation_deg": 2139.949825559998,
+      "max_caster_rotation_deg": 178.52901287786187,
+      "final_speed_m_s": 0.11670438224799903,
+      "force_N": 4,
+      "torque_Nm": 0.6,
+      "state_replay_max_position_error_m": 4.999205394096151e-08,
+      "repeat_max_qpos_error": 0.0
+    }
+  },
+  "passed": true,
+  "scope": "Unoccupied chair on flat plane; simulated force/torque; not robot contact or PhysX validation"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "fq:articulated/office_chair",
+  "name": "办公椅",
+  "description": "照片重建 V2 · 上半部旋转 / 扶手升降 / 五组双脚轮 · 仿真参数待标定",
+  "version": "0.1.0",
+  "kind": "articulated",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "upstream_origin": "FQ Blender reconstruction from six user-provided reference photos; photos not redistributed",
+  "provenance": "assets/fq/office_chair/candidate.json",
+  "license_status": "FQ-authored geometry and procedural textures; see NOTICE.md",
+  "representations": {
+    "mujoco": "assets/fq/office_chair/chair_adjustable.xml",
+    "usd": "assets/fq/office_chair/chair.usda",
+    "gltf": "assets/fq/office_chair/chair.glb",
+    "blender": "assets/fq/office_chair/chair.blend"
+  },
+  "physics_calibrated": false,
+  "dimensions_m": [
+    0.6984167098999023,
+    0.6645022630691528,
+    1.1899998188018799
+  ],
+  "mass_kg": 14,
+  "appearance": "assets/fq/office_chair/pbr.json",
+  "initial_joint_positions": {
+    "seat_swivel": 0,
+    "armrest_left_lift": 0,
+    "armrest_right_lift": 0,
+    "caster_swivel_0": 0,
+    "wheel_roll_0_neg1": 0,
+    "wheel_roll_0_1": 0,
+    "caster_swivel_1": 0,
+    "wheel_roll_1_neg1": 0,
+    "wheel_roll_1_1": 0,
+    "caster_swivel_2": 0,
+    "wheel_roll_2_neg1": 0,
+    "wheel_roll_2_1": 0,
+    "caster_swivel_3": 0,
+    "wheel_roll_3_neg1": 0,
+    "wheel_roll_3_1": 0,
+    "caster_swivel_4": 0,
+    "wheel_roll_4_neg1": 0,
+    "wheel_roll_4_1": 0
+  },
+  "runtime_support": {
+    "mujoco": "articulated dynamics tested",
+    "usd_physx": "static visual only; articulation not implemented"
+  },
+  "limitations": [
+    "Dimensions, mass, inertia, friction and armrest travel are simulation estimates, not measured calibration.",
+    "Five swivel casters with ten wheel axles; self-contact disabled within the chair.",
+    "Unoccupied flat-floor validation; no occupied chair, soft fabric or real-robot acceptance.",
+    "USD is a visual representation; use MuJoCo for validated chair dynamics."
+  ]
+}

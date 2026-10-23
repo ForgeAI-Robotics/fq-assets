@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.9.7",
+  "release": "0.9.8",
   "assets": [
     {
       "id": "fq:objects/coke_cn",
@@ -96,6 +96,11 @@
       "id": "fq:objects/mesh_trash_bin",
       "version": "0.1.2",
       "manifest": "assets/fq/mesh_trash_bin/asset.json"
+    },
+    {
+      "id": "fq:articulated/office_chair",
+      "version": "0.1.0",
+      "manifest": "assets/fq/office_chair/asset.json"
     }
   ]
 }

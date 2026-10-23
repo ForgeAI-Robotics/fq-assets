@@ -1,0 +1,5 @@
+v0.9.8 - Office chair V2
+
+Adds office_chair 0.1.0 with 19-joint MuJoCo articulation, regional PBR, source Blender/GLB/USD and estimated calibration status. Frontend supports slide joints in centimeters.
+Isolated tests cover rest, swivel, forward/lateral push, combined input, deterministic rerun and body-state replay. Lower armrests 4 cm and insert from conference table long-side center without contact.
+USD is visual only, not PhysX dynamics. No running simulation or robot task is modified.

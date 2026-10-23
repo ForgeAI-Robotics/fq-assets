@@ -1,0 +1,9 @@
+{
+  "physics_fields_equal": true,
+  "checks": 222,
+  "step_qpos_max_error": 0.0,
+  "joints": 19,
+  "mass_kg": 13.999999999999998,
+  "collision_geometry_preserved": true,
+  "visuals_remain_photo_estimates": true
+}

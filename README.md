@@ -117,3 +117,7 @@ Fridge remains 0.1.8; no mass, joint, resistance or door collision changes.
 ## Mesh wastebasket (0.9.1)
 
 FQ mesh_trash_bin 0.1.0: empty real diamond lattice with PBR maps and open-top collision. User measured height 28 cm and upper diameter 26 cm (outer diameter interpretation). Bottom diameter 22 cm remains estimated and pending calibration. Fixed-bin coke drop verification passed at three positions; physical mass and tipping are not calibrated.
+
+## Office chair — v0.9.8
+
+Office chair 0.1.0 uses the refined V2 geometry, regional PBR and adjustable MuJoCo dynamics. See [asset documentation](assets/fq/office_chair/README.md). Dimensions and physical parameters are estimates. USD is visual only. The viewer supports armrest slides in cm.

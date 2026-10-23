@@ -1,0 +1,30 @@
+{
+  "status": "simulation_estimates_not_hardware_calibrated",
+  "total_mass_kg": 14,
+  "base_mass_kg": 3,
+  "upper_mass_kg": 9,
+  "caster_fork_mass_kg_each": 0.2,
+  "wheel_mass_kg_each": 0.1,
+  "seat_swivel_damping_Nms_rad": 0.08,
+  "seat_swivel_friction_Nm": 0.04,
+  "caster_swivel_damping_Nms_rad": 0.008,
+  "wheel_roll_damping_Nms_rad": 0.0003,
+  "wheel_radius_m": 0.032,
+  "caster_offset_m": 0.012,
+  "wheel_ground_sliding_friction": 0.9,
+  "internal_self_collision": false,
+  "enabled": [
+    "free_base",
+    "seat_swivel",
+    "five_caster_swivels",
+    "ten_independent_wheel_axles"
+  ],
+  "not_implemented": [
+    "height_adjustment",
+    "reclining",
+    "armrest_adjustment",
+    "PhysX_runtime_validation"
+  ],
+  "wheel_collision": "rounded_tread_ellipsoid_32_32_12_mm",
+  "contact_torsional_friction_m": 2e-05
+}

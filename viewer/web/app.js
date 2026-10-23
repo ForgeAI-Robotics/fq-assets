@@ -4,7 +4,8 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const deg=r=>r*180/Math.PI, rad=d=>d*Math.PI/180;
-const jointLabels={handle_right_hinge:'右提手',handle_left_hinge:'左提手',refrigerator_left_hinge:'左门',refrigerator_right_hinge:'右门',refrigerator_mullion_hinge:'中间竖梁'};
+const jointDisplay=(j,v)=>j.type==='slide'?v*100:deg(v),jointValue=(j,v)=>j.type==='slide'?v/100:rad(v),jointUnit=j=>j.type==='slide'?' cm':'°';
+const jointLabels={seat_swivel:'座椅旋转',armrest_left_lift:'左扶手升降',armrest_right_lift:'右扶手升降',handle_right_hinge:'右提手',handle_left_hinge:'左提手',refrigerator_left_hinge:'左门',refrigerator_right_hinge:'右门',refrigerator_mullion_hinge:'中间竖梁'};
 const label=j=>jointLabels[j]||j.replace(/^left_/, '左 ').replace(/^right_/, '右 ').replace(/o[67]_/, '').replace(/thumb/g,'拇指').replace(/index/g,'食指').replace(/middle/g,'中指').replace(/ring/g,'无名指').replace(/pinky/g,'小指').replace(/hip/g,'髋').replace(/knee/g,'膝').replace(/ankle/g,'踝').replace(/waist/g,'腰').replace(/shoulder/g,'肩').replace(/elbow/g,'肘').replace(/wrist/g,'腕').replace(/_joint$/,'').replace(/_/g,' ');
 const isRobot=a=>['robot','end_effector','action'].includes(a?.kind);
 const independentDof=a=>a.joints.filter(j=>!j.coupling).length;
@@ -84,7 +85,7 @@ function showProperties(a){
   if(a.joints.length&&!isRobot(a)){
     html+=section('关节与阻力',row('可动关节',`${a.joints.length} 个`)+
       (a.slug==='haier_bcd402'?(a.simulation_resistance?row('左右门等效摩擦阻力（各）',`${a.simulation_resistance.frictionloss_Nm} N·m`)+row('每条轨迹随机范围',`${a.simulation_resistance.randomization.bounds_Nm.join('–')} N·m · 均匀采样`)+row('左右门粘性阻尼（各）',`${a.simulation_resistance.damping_Nm_s_rad} N·m·s/rad`)+row('参数状态','仿真参数 · 非实测标定','status-label')+'<p class="property-note">左右门摩擦按上方配置生效，粘性阻尼单独记录；随机上下限相同时等同固定值，仅为仿真配置。中缝竖梁保持原配置。浏览器仅展示姿态；USD/PhysX 已接入 SIMPLE 阻力运行时（CPU 验证），支持固定 / 随机模式，回放须使用同一引擎。门封启动吸力未标定。</p>':row('开门力度','未标定','status-label')):'<p class="property-note">两个被动提手转轴，角度受模型限位约束。浏览器不模拟抓取或接触力。</p>')+
-      a.joints.map(j=>`<details class="property-details"><summary>${esc(label(j.name))} · ${fmt(deg(j.range[0]),1)}° ～ ${fmt(deg(j.range[1]),1)}°</summary>${row('阻尼',`${fmt(j.damping,5)} N·m·s/rad`)}${row('关节摩擦力矩',`${fmt(j.friction_loss,5)} N·m`)}${row('刚度',`${fmt(j.stiffness,5)} N·m/rad`)}<p class="property-note">以上为模型参数，非实测开门/提手作用力。</p></details>`).join(''));
+      a.joints.map(j=>`<details class="property-details"><summary>${esc(label(j.name))} · ${fmt(jointDisplay(j,j.range[0]),1)}${jointUnit(j)} ～ ${fmt(jointDisplay(j,j.range[1]),1)}${jointUnit(j)}</summary>${row('阻尼',`${fmt(j.damping,5)} ${j.type==='slide'?'N·s/m':'N·m·s/rad'}`)}${row(j.type==='slide'?'关节摩擦力':'关节摩擦力矩',`${fmt(j.friction_loss,5)} ${j.type==='slide'?'N':'N·m'}`)}${row('刚度',`${fmt(j.stiffness,5)} ${j.type==='slide'?'N/m':'N·m/rad'}`)}<p class="property-note">以上为模型参数，非实测开门/提手作用力。</p></details>`).join(''));
   }
   html+=section('版本与来源',row(a.kind==='scene'?'场景版本':'物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)),'mono')+
     row('最新库发布',esc(catalog.latest_release.tag))+
@@ -180,7 +181,7 @@ function updateBodies(){
   if(!activeModel)return;
   for(const b of activeModel.bodies){
     const group=bodyGroups.get(b.id),base=new THREE.Matrix4().compose(new THREE.Vector3(...b.pos),new THREE.Quaternion(b.quat[1],b.quat[2],b.quat[3],b.quat[0]),new THREE.Vector3(1,1,1));
-    for(const jname of b.joints){const j=jointMap.get(jname),p=j.pivot,q=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(...j.axis),angles.get(jname)-j.reference);base.multiply(new THREE.Matrix4().makeTranslation(...p)).multiply(new THREE.Matrix4().makeRotationFromQuaternion(q)).multiply(new THREE.Matrix4().makeTranslation(-p[0],-p[1],-p[2]));}
+    for(const jname of b.joints){const j=jointMap.get(jname),p=j.pivot,delta=angles.get(jname)-j.reference;if(j.type==='slide'){base.multiply(new THREE.Matrix4().makeTranslation(...j.axis.map(x=>x*delta)));}else{const q=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(...j.axis),delta);base.multiply(new THREE.Matrix4().makeTranslation(...p)).multiply(new THREE.Matrix4().makeRotationFromQuaternion(q)).multiply(new THREE.Matrix4().makeTranslation(-p[0],-p[1],-p[2]));}}
     group.matrix.copy(base);group.matrixWorldNeedsUpdate=true;
   }
   modelRoot.updateMatrixWorld(true);
@@ -203,15 +204,15 @@ function applyCouplings(){
   for(const c of activeModel?.couplings||[]){const driver=jointMap.get(c.driver),dependent=jointMap.get(c.joint);if(!driver||!dependent)continue;const x=angles.get(c.driver)-driver.reference;angles.set(c.joint,dependent.reference+c.polycoef.reduce((sum,k,i)=>sum+k*x**i,0));}
 }
 function setJoint(jname,value){handAnimation=null;if(selected?.kind==='end_effector')$('hand-closure-value').textContent='自定义';const j=jointMap.get(jname);if(!j)return;angles.set(jname,THREE.MathUtils.clamp(value,...(j.control_range||j.range)));applyCouplings();updateBodies();updateJointUI();}
-function updateJointUI(){for(const [name,value] of angles){const row=document.querySelector(`[data-joint="${CSS.escape(name)}"]`);if(row){row.querySelector('input').value=deg(value);row.querySelector('output').textContent=`${fmt(deg(value),1)}°`;row.classList.toggle('active',drag?.name===name);}}}
+function updateJointUI(){for(const [name,value] of angles){const row=document.querySelector(`[data-joint="${CSS.escape(name)}"]`);if(row){const j=jointMap.get(name);row.querySelector('input').value=jointDisplay(j,value);row.querySelector('output').textContent=`${fmt(jointDisplay(j,value),1)}${jointUnit(j)}`;row.classList.toggle('active',drag?.name===name);}}}
 function renderJoints(){
   $('hand-presets').hidden=selected?.kind!=='end_effector';
   if(selected?.kind==='action'){$('joint-panel').hidden=true;return;}
   $('joint-panel').hidden=!selected.joints.length;$('joint-count').textContent=isRobot(selected)?`${independentDof(selected)} 个独立 / ${selected.joints.length} 个转动关节`:`${selected.joints.length} 个`;
   const group=$('joint-group').value;
   const controls=selected.joints.filter(j=>!j.coupling&&(!isRobot(selected)||group==='all'||(group==='left'?j.name.startsWith('left_'):group==='right'?j.name.startsWith('right_'):!j.name.startsWith('left_')&&!j.name.startsWith('right_'))));
-  $('joint-controls').innerHTML=controls.map(j=>`<div class="joint-row" data-joint="${esc(j.name)}"><label for="joint-${esc(j.name)}">${esc(label(j.name))}</label><input id="joint-${esc(j.name)}" type="range" aria-label="${esc(label(j.name))}角度" min="${deg((j.control_range||j.range)[0])}" max="${deg((j.control_range||j.range)[1])}" step="0.1" value="${deg(angles.get(j.name))}"><output>${fmt(deg(angles.get(j.name)),1)}°</output></div>`).join('');
-  document.querySelectorAll('.joint-row input').forEach(input=>input.oninput=()=>setJoint(input.closest('.joint-row').dataset.joint,rad(Number(input.value))));
+  $('joint-controls').innerHTML=controls.map(j=>`<div class="joint-row" data-joint="${esc(j.name)}"><label for="joint-${esc(j.name)}">${esc(label(j.name))}</label><input id="joint-${esc(j.name)}" type="range" aria-label="${esc(label(j.name))}${j.type==='slide'?'位移':'角度'}" min="${jointDisplay(j,(j.control_range||j.range)[0])}" max="${jointDisplay(j,(j.control_range||j.range)[1])}" step="0.1" value="${jointDisplay(j,angles.get(j.name))}"><output>${fmt(jointDisplay(j,angles.get(j.name)),1)}${jointUnit(j)}</output></div>`).join('');
+  document.querySelectorAll('.joint-row input').forEach(input=>input.oninput=()=>setJoint(input.closest('.joint-row').dataset.joint,jointValue(jointMap.get(input.closest('.joint-row').dataset.joint),Number(input.value))));
 }
 function setMode(enabled){jointMode=enabled&&!!selected?.joints.length;$('joint-mode').classList.toggle('active',jointMode);$('orbit-mode').classList.toggle('active',!jointMode);$('joint-mode').setAttribute('aria-pressed',jointMode);$('orbit-mode').setAttribute('aria-pressed',!jointMode);$('interaction-hint').textContent=jointMode?'拖动门 / 提手调整 · 拖动空白旋转':'拖动旋转 · 滚轮缩放 · 右键平移';}
 function setMotionReady(ready){
@@ -224,7 +225,7 @@ async function selectAsset(slug){
   const supportsPBR=!!a.pbr_preview?.supported;$('pbr-badge').hidden=!supportsPBR;$('lighting-controls').hidden=!supportsPBR;setLighting('original');
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':a.kind==='action'?'动作':'物体'} / ${a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
-  $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isRobot(a)?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'在模型上拖动门 / 提手，或使用滑块。角度受模型限位约束，操作不会写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
+  $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isRobot(a)?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'转动关节可拖动或使用滑块；升降关节请使用厘米滑块。仅姿态预览，不运行接触物理，也不写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
   if(a.kind==='scene'){$('scene-info').innerHTML='<strong>固定基准 · 办公场地</strong><p>测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。</p><p>保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。</p><div class="scene-chips">'+(a.dependencies||[]).map(id=>{const dep=catalog.assets.find(x=>x.id===id);return dep?`<button data-asset="${esc(dep.slug)}">${esc(dep.name)} · v${esc(dep.version)} ↗</button>`:'';}).join('')+'</div>';document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
   $('material-controls').hidden=a.kind!=='material';$('collision-toggle').hidden=a.kind==='material';$('material-repeat').value=1;$('material-repeat-value').textContent='1 ×';
   showProperties(a);renderList();setMode(!!a.joints.length&&!isRobot(a));$('viewport').dataset.ready='false';$('loading').hidden=false;$('loading').querySelector('strong').textContent=`正在加载${a.name}`;$('viewer-error').hidden=true;
@@ -236,7 +237,7 @@ const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
 function ray(e){const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);raycaster.setFromCamera(pointer,camera);}
 renderer.domElement.addEventListener('pointerdown',e=>{
   if(!jointMode||e.button!==0||!modelRoot||$('viewport').dataset.ready!=='true')return;ray(e);const hit=raycaster.intersectObjects(pickables,false).find(h=>h.object.visible);if(!hit?.object.userData.joint)return;
-  const name=hit.object.userData.joint,j=jointMap.get(name),group=bodyGroups.get(j.body),pivot=group.localToWorld(new THREE.Vector3(...j.pivot)),axis=new THREE.Vector3(...j.axis).transformDirection(group.matrixWorld),plane=new THREE.Plane().setFromNormalAndCoplanarPoint(axis,pivot),pt=raycaster.ray.intersectPlane(plane,new THREE.Vector3());
+  const name=hit.object.userData.joint,j=jointMap.get(name);if(j.type==='slide')return;const group=bodyGroups.get(j.body),pivot=group.localToWorld(new THREE.Vector3(...j.pivot)),axis=new THREE.Vector3(...j.axis).transformDirection(group.matrixWorld),plane=new THREE.Plane().setFromNormalAndCoplanarPoint(axis,pivot),pt=raycaster.ray.intersectPlane(plane,new THREE.Vector3());
   drag={name,start:angles.get(name),x:e.clientX,y:e.clientY,plane,pivot,axis,vector:pt&&Math.abs(raycaster.ray.direction.dot(axis))>.08?pt.clone().sub(pivot).normalize():null};
   controls.enabled=false;renderer.domElement.setPointerCapture(e.pointerId);e.preventDefault();e.stopImmediatePropagation();updateJointUI();
 },true);

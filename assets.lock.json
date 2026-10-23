@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "0.9.7",
+  "release": "0.9.8",
   "assets": {
     "fq:objects/coke_cn": "0.1.1",
     "fq:objects/round_table": "0.1.3",
@@ -20,7 +20,8 @@
     "fq:end_effectors/o7_right": "0.1.0",
     "fq:robots/g1_o7": "0.1.3",
     "fq:cameras/realsense_d435i": "0.1.0",
-    "fq:objects/mesh_trash_bin": "0.1.2"
+    "fq:objects/mesh_trash_bin": "0.1.2",
+    "fq:articulated/office_chair": "0.1.0"
   },
   "profiles": {
     "fq:poses/o6_left_task": "0.1.2",

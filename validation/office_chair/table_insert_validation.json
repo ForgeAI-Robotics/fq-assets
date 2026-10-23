@@ -1,0 +1,29 @@
+{
+  "armrest_slide_range_m": [
+    -0.06,
+    0
+  ],
+  "range_status": "simulation_design_not_measured",
+  "target_lowering_m": 0.04,
+  "actual_lowering_m": [
+    0.04000000002391989,
+    0.04000000002391989
+  ],
+  "chair_y_m": -0.7816492676476363,
+  "table_near_edge_y_m": -0.7,
+  "collision_armrest_top_m": 0.6848584982763983,
+  "table_underside_m": 0.7021763920784,
+  "table_contact_count": 0,
+  "table_contact_examples": [],
+  "max_floor_penetration_mm": 1.5173411458631325,
+  "max_tilt_deg": 0.005572710088153549,
+  "max_push_force_N": 8.080173310048309,
+  "method": "Force-guided straight insertion with upper yaw stabilization, not robot contact manipulation",
+  "chair_mass_kg": 14.0,
+  "final_base_speed_m_s": 0.0014358651128637075,
+  "vertical_clearance_m": 0.01731789380200166,
+  "passed": true,
+  "replay_frame_count": 180,
+  "replay_finite": true,
+  "replay_max_position_error_m": 0.0
+}
