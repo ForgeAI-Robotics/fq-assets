@@ -126,6 +126,46 @@
       "id": "third_party:characters/rocketbox_male_adult_06",
       "version": "0.1.0",
       "manifest": "assets/third_party/characters/rocketbox_male_adult_06/asset.json"
+    },
+    {
+      "id": "third_party:bags/gso_digital_camo_double_decker_lunch_bag",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/gso_digital_camo_double_decker_lunch_bag/asset.json"
+    },
+    {
+      "id": "third_party:bags/gso_jansport_school_backpack_blue_streak",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/gso_jansport_school_backpack_blue_streak/asset.json"
+    },
+    {
+      "id": "third_party:bags/gso_olive_kids_birdie_sidekick_backpack",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/gso_olive_kids_birdie_sidekick_backpack/asset.json"
+    },
+    {
+      "id": "third_party:bags/gso_olive_kids_butterfly_garden_munch_n_lunch_bag",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/gso_olive_kids_butterfly_garden_munch_n_lunch_bag/asset.json"
+    },
+    {
+      "id": "third_party:bags/gso_olive_kids_dinosaur_land_sidekick_backpack",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/gso_olive_kids_dinosaur_land_sidekick_backpack/asset.json"
+    },
+    {
+      "id": "third_party:bags/gso_olive_kids_mermaids_pack_n_snack_backpack",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/gso_olive_kids_mermaids_pack_n_snack_backpack/asset.json"
+    },
+    {
+      "id": "third_party:bags/gso_olive_kids_trains_planes_trucks_bogo_backpack",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/gso_olive_kids_trains_planes_trucks_bogo_backpack/asset.json"
+    },
+    {
+      "id": "third_party:bags/gso_us_army_stash_lunch_bag",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/gso_us_army_stash_lunch_bag/asset.json"
     }
   ]
 }

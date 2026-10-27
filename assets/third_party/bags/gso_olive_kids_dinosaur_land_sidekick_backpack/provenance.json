@@ -1,0 +1,45 @@
+{
+  "createdAt": "2020-09-03T17:52:50Z",
+  "updatedAt": "2026-10-27T07:02:12Z",
+  "name": "Olive_Kids_Dinosaur_Land_Sidekick_Backpack",
+  "owner": "GoogleResearch",
+  "description": "Olive Kids Dinosaur Land Sidekick Backpack",
+  "likes": 0,
+  "downloads": 2964,
+  "filesize": 10060821,
+  "upload_date": "2020-09-03T17:52:47Z",
+  "modify_date": "2020-09-18T20:08:57Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/GoogleResearch/models/Olive_Kids_Dinosaur_Land_Sidekick_Backpack/tip/files/thumbnails/0.jpg",
+  "private": false,
+  "categories": [
+    "Bag"
+  ],
+  "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Dinosaur_Land_Sidekick_Backpack",
+  "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Dinosaur_Land_Sidekick_Backpack/tip/Olive_Kids_Dinosaur_Land_Sidekick_Backpack.zip",
+  "archive_sha256": "960de181187c89b834865fe889f0120bd0082f47abed125a93f138e39b4f5950",
+  "modifications": [
+    "XY centered; Z grounded; metric scale unchanged",
+    "USD and MuJoCo format conversion",
+    "Approximate convex hull collision and mass"
+  ],
+  "source_files": {
+    "model.config": "69aa26b0e461a5767e3229b169dfba704d03d65ae963d9473dacd8066ca2a82b",
+    "model.sdf": "d2e08e121c91b1ef4cf874a35a72eed3a3ef34c3c5afcd8c4bd294bafe4ae839",
+    "source.json": "8005316b810029e0b4eab6f70b75686f6b02eacb29117caa79c8c99c9ff2f7a6",
+    "metadata.pbtxt": "c77461acbd661068aa383b5677e0d0debecde098e40749f7c56edfc39a7c0624",
+    "thumbnails/1.jpg": "df10c1a3ab30c4e81c907b13fe4db3a5df2225c969635872ba54e0a27034fe5b",
+    "thumbnails/4.jpg": "0fc077b5ccce7ef66d759d3ab4ade7caf15c0d6d5b983e1ecc285df589286653",
+    "thumbnails/0.jpg": "5b18dbd327ec0e50670ed73df06412a7ac8dc2808f9e11f072830ac93edc0376",
+    "thumbnails/3.jpg": "7370f0b2a8953b171f3d1876f0c9d69d880dad24708d6fa0a84d32c530173cb7",
+    "thumbnails/2.jpg": "a51d0c9070583e9e29db6697057d448e44ab0ff5f1088b46b45b08552aaa8aa6",
+    "materials/textures/texture.png": "3a6f2f860b026acaa83a4b91e20af191ffe78c9dd6c1a818d945171cdeec893c",
+    "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+    "meshes/model.obj": "df92c01851186fc30becc39acf05cfad2d1c574d3f2e9d982c5fb37a9c311e0a"
+  }
+}

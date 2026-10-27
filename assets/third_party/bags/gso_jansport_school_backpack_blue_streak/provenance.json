@@ -1,0 +1,45 @@
+{
+  "createdAt": "2020-09-03T16:59:38Z",
+  "updatedAt": "2026-10-27T03:36:25Z",
+  "name": "Jansport_School_Backpack_Blue_Streak",
+  "owner": "GoogleResearch",
+  "description": "Jansport School Backpack, Blue Streak",
+  "likes": 1,
+  "downloads": 3486,
+  "filesize": 8958755,
+  "upload_date": "2020-09-03T16:59:34Z",
+  "modify_date": "2020-09-18T20:10:04Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/GoogleResearch/models/Jansport_School_Backpack_Blue_Streak/tip/files/thumbnails/0.jpg",
+  "private": false,
+  "categories": [
+    "Bag"
+  ],
+  "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Jansport_School_Backpack_Blue_Streak",
+  "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Jansport_School_Backpack_Blue_Streak/tip/Jansport_School_Backpack_Blue_Streak.zip",
+  "archive_sha256": "6789c4bcbf4be4acb57fa8e275e18520a2ff02856613cf30a79a5cdbbb20714a",
+  "modifications": [
+    "XY centered; Z grounded; metric scale unchanged",
+    "USD and MuJoCo format conversion",
+    "Approximate convex hull collision and mass"
+  ],
+  "source_files": {
+    "model.config": "1e19e31456b216103fda5e0a8fd613218650e659a194c959dcc9bf56dcf1817a",
+    "model.sdf": "0ec2c65fbdbd1c926cd8051ac8a5f513cd7126f681733400d8ea1d7fd02b8f55",
+    "source.json": "9d777bb90901590c4bab10b3369a7ef1f49387eaa8d14ef44bf4d5140d0e6b04",
+    "metadata.pbtxt": "7dc7600d41ac95cc9a1e2386521dcf74b6dc8f94c85a1b80a75b7f2e583d55ac",
+    "thumbnails/1.jpg": "899df6895485dd76e2880fb1cfaaaf51087d15f0dbd3f396489befee7d059bbb",
+    "thumbnails/4.jpg": "0ba7b29b48538408ae3d0de1c8e5ffde50149c4218b35568bfe9d16d52065520",
+    "thumbnails/0.jpg": "433591746893bf2a38950faf8a4e5994b4ed12e7add68994e4db753c6bd214ab",
+    "thumbnails/3.jpg": "5043121e0f2bed2efd5978880883202be706147bdedea33ba0a78040ef271257",
+    "thumbnails/2.jpg": "83c0f1192280033fd4c0714ffefb269668c9bbf179b1338c09cf76326e878c47",
+    "materials/textures/texture.png": "63fb44985112382ed53e394e703b96be060aaf7aa8432b4f63f77144f74d27d0",
+    "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+    "meshes/model.obj": "922ecd2e715a3a07b569555621586607ae041157e57ec012850982a428a71cf0"
+  }
+}

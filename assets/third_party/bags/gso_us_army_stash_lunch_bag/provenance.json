@@ -1,0 +1,45 @@
+{
+  "createdAt": "2020-09-03T18:32:39Z",
+  "updatedAt": "2026-10-27T07:04:36Z",
+  "name": "US_Army_Stash_Lunch_Bag",
+  "owner": "GoogleResearch",
+  "description": "U.S. Army Stash Lunch Bag",
+  "likes": 0,
+  "downloads": 3270,
+  "filesize": 13686195,
+  "upload_date": "2020-09-03T18:32:35Z",
+  "modify_date": "2020-09-18T20:07:41Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/GoogleResearch/models/US_Army_Stash_Lunch_Bag/tip/files/thumbnails/0.jpg",
+  "private": false,
+  "categories": [
+    "Bag"
+  ],
+  "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/US_Army_Stash_Lunch_Bag",
+  "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/US_Army_Stash_Lunch_Bag/tip/US_Army_Stash_Lunch_Bag.zip",
+  "archive_sha256": "a128bd169ab0441eb195936b94d60bc64e1a11c34968cf7b3a5d5a251536c619",
+  "modifications": [
+    "XY centered; Z grounded; metric scale unchanged",
+    "USD and MuJoCo format conversion",
+    "Approximate convex hull collision and mass"
+  ],
+  "source_files": {
+    "model.config": "1cdd6c43434b5d938859fe041d052406af970c675c902f9ae55175a47306b661",
+    "model.sdf": "597258cb282adabc53bbb1fd0a5d765c7563b553174aeda1a101b02173860535",
+    "source.json": "ebc069bb2fd30e7b0635104e2ec781e229792e4ab8de59d4f9f3d03f87d5ff79",
+    "metadata.pbtxt": "227d55646c427255aa923c2fa8d9b4d3424df657814c30baba09633f7ec1591b",
+    "thumbnails/1.jpg": "690a28f5547c412501c939eb18c6d9d5387250b1242d8bc78a66b58dc84f44b7",
+    "thumbnails/4.jpg": "2772cade86bd820da52cee4c0b3fe3213ac25b43c93edd8cf818ce3edd7614b8",
+    "thumbnails/0.jpg": "f2026fb7500ab0b8b2099fa6c5a150612b03ccd4ff80aab87a93618432142283",
+    "thumbnails/3.jpg": "e6a5b53beafa759409cb3743920eced2fd2b71ba421c440392ffcaf05272915f",
+    "thumbnails/2.jpg": "7fdfe86f6d99f7eb62dc0d59d98021dbf028a90e6f4ba4c00d344ce8eb452d02",
+    "materials/textures/texture.png": "a80e0e7c7a4140d2b3551f61b2a8ce73d2788345058126a4190fb3093a15a95c",
+    "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+    "meshes/model.obj": "813d5d73d4ad4604a12907a7d63b6dbbe4f9fc23285f753c4e28ef26f8615233"
+  }
+}

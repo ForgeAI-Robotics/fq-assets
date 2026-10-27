@@ -1,0 +1,45 @@
+{
+  "createdAt": "2020-09-03T17:52:19Z",
+  "updatedAt": "2026-10-27T04:56:06Z",
+  "name": "Olive_Kids_Butterfly_Garden_Munch_n_Lunch_Bag",
+  "owner": "GoogleResearch",
+  "description": "Olive Kids Butterfly Garden Munch 'n Lunch Bag",
+  "likes": 0,
+  "downloads": 3077,
+  "filesize": 11420741,
+  "upload_date": "2020-09-03T17:52:16Z",
+  "modify_date": "2020-09-18T20:08:59Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/GoogleResearch/models/Olive_Kids_Butterfly_Garden_Munch_n_Lunch_Bag/tip/files/thumbnails/0.jpg",
+  "private": false,
+  "categories": [
+    "Bag"
+  ],
+  "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Butterfly_Garden_Munch_n_Lunch_Bag",
+  "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Butterfly_Garden_Munch_n_Lunch_Bag/tip/Olive_Kids_Butterfly_Garden_Munch_n_Lunch_Bag.zip",
+  "archive_sha256": "5d4b217d55781a30126a83eb0997971bba70bb3b006b96ad0b76b79b8bf529b2",
+  "modifications": [
+    "XY centered; Z grounded; metric scale unchanged",
+    "USD and MuJoCo format conversion",
+    "Approximate convex hull collision and mass"
+  ],
+  "source_files": {
+    "model.config": "062c47f877aa2998e59cbe2493b03c528412c931b9ddaa7d6382216e5bf1f339",
+    "model.sdf": "03e334e96bf816e7c04b9a967a34121222159b281bd487432e27d3689eded064",
+    "source.json": "5743bb8a03fb1c3c524236b3468c7291cd473fcbe8881c52788b3a17ebb972ae",
+    "metadata.pbtxt": "97535225be556a1cd5924043f3b19f7608cdfe273847c9a56a30afdf14cc5175",
+    "thumbnails/1.jpg": "44a7f8aed952d915552b2b7517129d92f95e0eb764654b02bb5d9315d8c35dd6",
+    "thumbnails/4.jpg": "d1fdbc45c7925acc93e33922c1bf30e444a79bf7fedaab013c3204cf2c6e8d72",
+    "thumbnails/0.jpg": "f161ab69460b9af41903bfba6b73fba63e7f1f2bfa95097a393871d703099330",
+    "thumbnails/3.jpg": "6d690461e4db5281b0cf7d7c184cef61205bd4ab15196f8950b98b7e3be9e117",
+    "thumbnails/2.jpg": "3164efe54bb4695ad523788a78c7cad0f280da7f387ace25a394f752921c327e",
+    "materials/textures/texture.png": "ade47b8d5d8adfaa9d7fffc16c3b738303375ea805c9742811491a48175657c2",
+    "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+    "meshes/model.obj": "0c4d9bef689daf5dd727532f1b7700453d2ea892ff1eb74225055f50d621248b"
+  }
+}

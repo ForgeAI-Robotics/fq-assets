@@ -26,7 +26,15 @@
     "third_party:characters/rocketbox_female_adult_01": "0.1.0",
     "third_party:characters/rocketbox_female_adult_05": "0.1.0",
     "third_party:characters/rocketbox_male_adult_01": "0.1.0",
-    "third_party:characters/rocketbox_male_adult_06": "0.1.0"
+    "third_party:characters/rocketbox_male_adult_06": "0.1.0",
+    "third_party:bags/gso_digital_camo_double_decker_lunch_bag": "0.1.0",
+    "third_party:bags/gso_jansport_school_backpack_blue_streak": "0.1.0",
+    "third_party:bags/gso_olive_kids_birdie_sidekick_backpack": "0.1.0",
+    "third_party:bags/gso_olive_kids_butterfly_garden_munch_n_lunch_bag": "0.1.0",
+    "third_party:bags/gso_olive_kids_dinosaur_land_sidekick_backpack": "0.1.0",
+    "third_party:bags/gso_olive_kids_mermaids_pack_n_snack_backpack": "0.1.0",
+    "third_party:bags/gso_olive_kids_trains_planes_trucks_bogo_backpack": "0.1.0",
+    "third_party:bags/gso_us_army_stash_lunch_bag": "0.1.0"
   },
   "profiles": {
     "fq:poses/o6_left_task": "0.1.2",

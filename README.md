@@ -141,3 +141,7 @@ RealBot-01、L2、S2 的 [来源核查与缺件清单](docs/realman_realbot_inta
 ## 带骨骼的人物资产
 
 新增四个 Microsoft Rocketbox 成人形象（MIT），提供带骨骼 USD、含面部形变的 GLB 和 MuJoCo 静态预览。详见 [人物资产说明](docs/character_assets.md)。机场环境暂不自动加入人物。
+
+## Baggage assets
+
+Eight textured Google scans (five backpacks, three small carry bags), with USD/MuJoCo rigid collision previews. See [baggage notes](docs/baggage_assets.md).

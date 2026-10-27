@@ -1,0 +1,45 @@
+{
+  "createdAt": "2020-09-03T17:53:33Z",
+  "updatedAt": "2026-10-27T03:30:13Z",
+  "name": "Olive_Kids_Trains_Planes_Trucks_Bogo_Backpack",
+  "owner": "GoogleResearch",
+  "description": "Olive Kids Trains, Planes, Trucks Bogo Backpack",
+  "likes": 0,
+  "downloads": 3703,
+  "filesize": 8431015,
+  "upload_date": "2020-09-03T17:53:30Z",
+  "modify_date": "2020-09-18T20:08:55Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/GoogleResearch/models/Olive_Kids_Trains_Planes_Trucks_Bogo_Backpack/tip/files/thumbnails/0.jpg",
+  "private": false,
+  "categories": [
+    "Bag"
+  ],
+  "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Trains_Planes_Trucks_Bogo_Backpack",
+  "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Trains_Planes_Trucks_Bogo_Backpack/tip/Olive_Kids_Trains_Planes_Trucks_Bogo_Backpack.zip",
+  "archive_sha256": "337538a58fc12e5a229f368b2c58a9735f9b687de51ed2b48a66fa56dbd5be06",
+  "modifications": [
+    "XY centered; Z grounded; metric scale unchanged",
+    "USD and MuJoCo format conversion",
+    "Approximate convex hull collision and mass"
+  ],
+  "source_files": {
+    "model.config": "b5f780eee11b04fb64d0fa5dac26b4a59e6da870ac3f5d8c669ba88df75bba8c",
+    "model.sdf": "0d08033e97339298872e3615e70a7463e69366a423198a52082ba925aed0dfe3",
+    "source.json": "b5449bbad953e21d5add1d56d1b5164cc958dd8bc6756ada246152ec02a05276",
+    "metadata.pbtxt": "ef0088daff0805a33433da0a824e04da77e9536dc8be4e56943ed064c0d5d632",
+    "thumbnails/1.jpg": "efda3556fdce748e1b12e4ab1dc42b09328ad51d37d18f9376cb3e43cee6a02a",
+    "thumbnails/4.jpg": "3e4c7b6f8f5079184037623f62127cfc43adc5375e60fb7b9e8c42cfac90b551",
+    "thumbnails/0.jpg": "12892e7ef81d75d894277a39de8da7c5e7667613fddc3ed1bfe7683740d90361",
+    "thumbnails/3.jpg": "68e5dfc264afab66b28f22356f329279c2165f9649a4e6fd32bc0a5d8828a5e8",
+    "thumbnails/2.jpg": "3d635326b56a14ef4dbd94c22902d9390b4d650c3a606fda2d63328ca39af2e8",
+    "materials/textures/texture.png": "3ac8b8635b27b7dc1d2075e39b63fd774ade6309a130a935e22ee22d2f6c8460",
+    "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+    "meshes/model.obj": "c6124834764ae08c881578c14212b8efa9f03d8edc61cf20fba50636f74cf488"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "createdAt": "2020-09-03T16:41:44Z",
+  "updatedAt": "2026-10-27T04:55:00Z",
+  "name": "Digital_Camo_Double_Decker_Lunch_Bag",
+  "owner": "GoogleResearch",
+  "description": "Digital Camo Double Decker Lunch Bag",
+  "likes": 0,
+  "downloads": 3274,
+  "filesize": 12403943,
+  "upload_date": "2020-09-03T16:41:40Z",
+  "modify_date": "2020-09-18T20:10:36Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/GoogleResearch/models/Digital_Camo_Double_Decker_Lunch_Bag/tip/files/thumbnails/0.jpg",
+  "private": false,
+  "categories": [
+    "Bag"
+  ],
+  "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Digital_Camo_Double_Decker_Lunch_Bag",
+  "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Digital_Camo_Double_Decker_Lunch_Bag/tip/Digital_Camo_Double_Decker_Lunch_Bag.zip",
+  "archive_sha256": "683fd25d6684ee030bf33cc69449a4eca543902fcf01565d0bb0486f3796560b",
+  "modifications": [
+    "XY centered; Z grounded; metric scale unchanged",
+    "USD and MuJoCo format conversion",
+    "Approximate convex hull collision and mass"
+  ],
+  "source_files": {
+    "model.config": "77d58dcbcf2dc571aaf7a5bb4b61f2aa2a4cc320fd3d54227046f96c9cb4b9e9",
+    "model.sdf": "e505e9cabfbed46cca7367fec58cdbd1c526345498435f5e401c4838a79df1c9",
+    "source.json": "738e1a9db924d4ed66f8ac6e485826df4543516c16b269128b8735ab07396a64",
+    "metadata.pbtxt": "66e56f68cd0440ad22be5a4b104d8a28c17c2457f7dd427630043efac995ab80",
+    "thumbnails/1.jpg": "98035407a951ff12d7a97518c89659e93974ee1d5103d325f28a09bab23de1eb",
+    "thumbnails/4.jpg": "b11388744b0d94c087c78635f8f0942ede001a708effd2fbdae2caa8dedd4dc1",
+    "thumbnails/0.jpg": "910bc2c456ff3d034e0d769382b2443d1c6fe4fde59544a46012f8420522be4a",
+    "thumbnails/3.jpg": "74374ff8ed52e124ab24b1bd2815873b8e332e99758f89cb0078d07643ac67d9",
+    "thumbnails/2.jpg": "09fcf2651ead58f607652206265746072983900b3152fae628b47681dd2491ea",
+    "materials/textures/texture.png": "2cd9ed5d0693257fbfb081395b6c6f54e9850d6ec3acdafe446d98359723c320",
+    "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+    "meshes/model.obj": "7645babbb28c0c828ee4a9fa681e5df701adfcbeab7763bb77f29744efcea514"
+  }
+}

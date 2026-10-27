@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="gso_olive_kids_butterfly_garden_munch_n_lunch_bag">
+  <compiler angle="radian" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+  </visual>
+  <asset>
+    <mesh name="bag" file="model.obj" />
+    <texture name="color" type="2d" file="texture.png" />
+    <material name="fabric" texture="color" specular=".1" shininess=".1" />
+  </asset>
+  <worldbody>
+    <body name="bag">
+      <freejoint name="root" />
+      <geom name="bag_surface" type="mesh" mesh="bag" material="fabric" mass="0.25" friction=".7 .005 .0001" />
+    </body>
+  </worldbody>
+</mujoco>

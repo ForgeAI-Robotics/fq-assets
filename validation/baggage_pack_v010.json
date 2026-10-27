@@ -1,0 +1,18 @@
+{
+  "ids": [
+    "third_party:bags/gso_digital_camo_double_decker_lunch_bag",
+    "third_party:bags/gso_jansport_school_backpack_blue_streak",
+    "third_party:bags/gso_olive_kids_birdie_sidekick_backpack",
+    "third_party:bags/gso_olive_kids_butterfly_garden_munch_n_lunch_bag",
+    "third_party:bags/gso_olive_kids_dinosaur_land_sidekick_backpack",
+    "third_party:bags/gso_olive_kids_mermaids_pack_n_snack_backpack",
+    "third_party:bags/gso_olive_kids_trains_planes_trucks_bogo_backpack",
+    "third_party:bags/gso_us_army_stash_lunch_bag"
+  ],
+  "count": 8,
+  "mujoco_drop_test": true,
+  "isaac_render": true,
+  "physx_dynamic_test": false,
+  "soft_body": false,
+  "human_attachment_fitted": false
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "third_party:bags/gso_olive_kids_dinosaur_land_sidekick_backpack",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "Olive Kids Dinosaur Land Sidekick Backpack",
+  "description": "Google scanned baggage; metric texture-mapped rigid prop",
+  "origin": "third_party",
+  "upstream_origin": "Google Scanned Objects / CC-BY-4.0",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "CC-BY-4.0",
+  "representations": {
+    "mujoco": "assets/third_party/bags/gso_olive_kids_dinosaur_land_sidekick_backpack/model.xml",
+    "usd": "assets/third_party/bags/gso_olive_kids_dinosaur_land_sidekick_backpack/model.usdc"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.310127,
+    0.292282,
+    0.380161
+  ],
+  "mass_kg": 0.5,
+  "physics_calibrated": false,
+  "provenance": "assets/third_party/bags/gso_olive_kids_dinosaur_land_sidekick_backpack/provenance.json",
+  "limitations": [
+    "Rigid convex hull fills strap/handle gaps; not cloth or articulated handles",
+    "Mass/friction are estimates, not measured",
+    "No explosive detection or alarm logic embedded",
+    "Not fitted to human back/hand; attachment and strap deformation pending"
+  ]
+}

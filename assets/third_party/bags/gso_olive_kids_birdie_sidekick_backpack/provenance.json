@@ -1,0 +1,45 @@
+{
+  "createdAt": "2020-09-03T17:52:13Z",
+  "updatedAt": "2026-10-27T03:30:35Z",
+  "name": "Olive_Kids_Birdie_Sidekick_Backpack",
+  "owner": "GoogleResearch",
+  "description": "Olive Kids Birdie Sidekick Backpack",
+  "likes": 0,
+  "downloads": 3347,
+  "filesize": 7792825,
+  "upload_date": "2020-09-03T17:52:10Z",
+  "modify_date": "2020-09-18T20:09:00Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/GoogleResearch/models/Olive_Kids_Birdie_Sidekick_Backpack/tip/files/thumbnails/0.jpg",
+  "private": false,
+  "categories": [
+    "Bag"
+  ],
+  "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Birdie_Sidekick_Backpack",
+  "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Birdie_Sidekick_Backpack/tip/Olive_Kids_Birdie_Sidekick_Backpack.zip",
+  "archive_sha256": "9f52e2af5185a343119788450cd38caf14a65b88427b364a2923c01eacd42594",
+  "modifications": [
+    "XY centered; Z grounded; metric scale unchanged",
+    "USD and MuJoCo format conversion",
+    "Approximate convex hull collision and mass"
+  ],
+  "source_files": {
+    "model.config": "41f0a9961552bca81e5f83d106bbf2d92a92a2096a4b7298e5cec61cf0ce5b35",
+    "model.sdf": "faee16554ce961711cc790b1961773f7ae5ff6687c55540a458b17b2cd962d6f",
+    "source.json": "112cd42782118cd7c75545c130cab5ec4ab5142ebb5148ddf629f818703f6ba1",
+    "metadata.pbtxt": "673b7d50b062829234ee41c4b1ccca35079529f532fb1573fc852c222ac3d5f3",
+    "thumbnails/1.jpg": "e6121bff54d937ec8db9a442f07f956d4704d23a579ff47f4b0a96a7acb1eb21",
+    "thumbnails/4.jpg": "07ff482e9883aa943a6744b816ae8ef58654da1ef66bd042a1a64a4572f068fe",
+    "thumbnails/0.jpg": "e7dd4e1a61f29f952fe0607f8a08a008d29172088a2cdbac96a3af145897f7d5",
+    "thumbnails/3.jpg": "c57d2fe47f13ff8addd0c828360fc67957d5e218e96ea24eca928ea8fa2d188d",
+    "thumbnails/2.jpg": "5dea79484f6ff3c4463d4cfd6decfbaa3a6e33bb9791bcb3b354e5d01d049761",
+    "materials/textures/texture.png": "2858c8a5b3c4904c91ea87bc48f1ab6593c87c03e7412089d2bab27ba9cf7468",
+    "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+    "meshes/model.obj": "3a51db25cb95378bb4312f1d7a0f56f1799784af4d4d742f1cbc83b6cde62dfa"
+  }
+}

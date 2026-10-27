@@ -23,3 +23,7 @@ O6 安装件为 provisional，模型质量/惯量并非实测总成标定。四�
 ## Microsoft Rocketbox 人物资产
 
 四个人物来自 Microsoft Rocketbox，固定提交 `0943055db6ec570bcef9f2c8b41c9e5467c808f9`，上游 MIT 许可逐项保留。FQ 修改了路径、坐标、格式和检查动作。此许可仅适用于这些人物及其对应来源，不改变仓库其他资产的许可状态。
+
+## Google Scanned Objects baggage
+
+Eight bag scans are Copyright 2020 Google LLC, CC-BY-4.0. Per-model source URLs, hashes, licenses and modifications are retained in assets/third_party/bags/. This license does not change other repository assets.

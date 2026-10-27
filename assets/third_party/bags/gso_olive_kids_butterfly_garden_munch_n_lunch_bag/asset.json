@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "third_party:bags/gso_olive_kids_butterfly_garden_munch_n_lunch_bag",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "Olive Kids Butterfly Garden Munch n Lunch Bag",
+  "description": "Google scanned baggage; metric texture-mapped rigid prop",
+  "origin": "third_party",
+  "upstream_origin": "Google Scanned Objects / CC-BY-4.0",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "CC-BY-4.0",
+  "representations": {
+    "mujoco": "assets/third_party/bags/gso_olive_kids_butterfly_garden_munch_n_lunch_bag/model.xml",
+    "usd": "assets/third_party/bags/gso_olive_kids_butterfly_garden_munch_n_lunch_bag/model.usdc"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.22481099999999998,
+    0.16853400000000002,
+    0.265105
+  ],
+  "mass_kg": 0.25,
+  "physics_calibrated": false,
+  "provenance": "assets/third_party/bags/gso_olive_kids_butterfly_garden_munch_n_lunch_bag/provenance.json",
+  "limitations": [
+    "Rigid convex hull fills strap/handle gaps; not cloth or articulated handles",
+    "Mass/friction are estimates, not measured",
+    "No explosive detection or alarm logic embedded",
+    "Not fitted to human back/hand; attachment and strap deformation pending"
+  ]
+}

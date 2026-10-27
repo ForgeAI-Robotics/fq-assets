@@ -1,0 +1,45 @@
+{
+  "createdAt": "2020-09-03T17:53:15Z",
+  "updatedAt": "2026-10-27T07:02:13Z",
+  "name": "Olive_Kids_Mermaids_Pack_n_Snack_Backpack",
+  "owner": "GoogleResearch",
+  "description": "Olive Kids Mermaids Pack 'n Snack Backpack",
+  "likes": 0,
+  "downloads": 3648,
+  "filesize": 10752366,
+  "upload_date": "2020-09-03T17:53:11Z",
+  "modify_date": "2020-09-18T20:08:56Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/GoogleResearch/models/Olive_Kids_Mermaids_Pack_n_Snack_Backpack/tip/files/thumbnails/0.jpg",
+  "private": false,
+  "categories": [
+    "Bag"
+  ],
+  "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Mermaids_Pack_n_Snack_Backpack",
+  "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Olive_Kids_Mermaids_Pack_n_Snack_Backpack/tip/Olive_Kids_Mermaids_Pack_n_Snack_Backpack.zip",
+  "archive_sha256": "ade6a438ea776d1732f1d90a9aae7d1103a6c2f3baf76cfe8ebbfe681d851a02",
+  "modifications": [
+    "XY centered; Z grounded; metric scale unchanged",
+    "USD and MuJoCo format conversion",
+    "Approximate convex hull collision and mass"
+  ],
+  "source_files": {
+    "model.config": "b2712d019adcc4015def0223450a4646280f86bcea706cba48bdb96f01fb473b",
+    "model.sdf": "39c83f19e54242ea3fc43d7d6efe0acc890e0657e97dd83ce82acbcc2a08499f",
+    "source.json": "0e04124a3fa395f88555577a9ea3d364da87656b4d5488803d8200d094de9b6f",
+    "metadata.pbtxt": "8fb883a069ee5cc6a329bd7c4a7de8c9ab69e1ea72ee4aecec524725fb58b83c",
+    "thumbnails/1.jpg": "4933033cac289b3edf7ce9691b7d2118a60fc273fc497404e8ed5d5ff5800a40",
+    "thumbnails/4.jpg": "b74ec0932833635bb9f0baa514569b6f67ec56826db14c00b22053878de039a8",
+    "thumbnails/0.jpg": "9b3d6ec42afb9d45a4db288397d1f7f9b0fe612bed7669f87136ac67aea0fb44",
+    "thumbnails/3.jpg": "1eff1c26a234a8b1e2710e29dd4042e8ec4ec24e33bd4b52f4b2b316e4bb5fea",
+    "thumbnails/2.jpg": "35a5fea40efcc192332bd8fcba15e977874d8729b6c864078ccc3a4fd7cdd74a",
+    "materials/textures/texture.png": "fd5c06d2a3432fe6e6f190bb0d376aaaf22b4f1731e539fdff0e2cebf91b94d4",
+    "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+    "meshes/model.obj": "65984a65f5cc8f20fe0d04b369ba0c3c994963b709cb7d8f4639657a8f3d9c44"
+  }
+}
