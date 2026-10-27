@@ -27,3 +27,7 @@ O6 安装件为 provisional，模型质量/惯量并非实测总成标定。四�
 ## Google Scanned Objects baggage
 
 Eight bag scans are Copyright 2020 Google LLC, CC-BY-4.0. Per-model source URLs, hashes, licenses and modifications are retained in assets/third_party/bags/. This license does not change other repository assets.
+
+## Lansi wheel-arm robot
+
+User-supplied model; owner confirmed public publication on 2026-10-27. No upstream license text supplied; no general downstream license is implied. See assets/user_supplied/lansi_wheel_arm_robot/provenance.json.

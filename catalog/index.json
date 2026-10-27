@@ -166,6 +166,11 @@
       "id": "third_party:bags/gso_us_army_stash_lunch_bag",
       "version": "0.1.0",
       "manifest": "assets/third_party/bags/gso_us_army_stash_lunch_bag/asset.json"
+    },
+    {
+      "id": "user_supplied:robots/lansi_wheel_arm_robot",
+      "version": "0.1.0",
+      "manifest": "assets/user_supplied/lansi_wheel_arm_robot/asset.json"
     }
   ]
 }

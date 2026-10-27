@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "user_supplied:robots/lansi_wheel_arm_robot",
+  "version": "0.1.0",
+  "kind": "robot",
+  "name": "蓝思轮式双臂机器人 / wheel_arm_robot",
+  "origin": "user_supplied",
+  "license": "LicenseRef-Not-Supplied",
+  "license_status": "Project owner explicitly confirmed public publication on 2026-10-27; no upstream license text supplied",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "urdf": "assets/user_supplied/lansi_wheel_arm_robot/wheel_arm_robot/urdf/wheel_arm_robot.urdf",
+    "mujoco": "assets/user_supplied/lansi_wheel_arm_robot/wheel_arm_robot/urdf/robot.xml"
+  },
+  "dependencies": [],
+  "physics_calibrated": false,
+  "validation": "assets/user_supplied/lansi_wheel_arm_robot/validation.json",
+  "limitations": [
+    "24 revolute joints have zero effort and velocity in source",
+    "No controller or actuators",
+    "Preview meshes reduced; original STL retained",
+    "Exact commercial model and redistribution terms not supplied"
+  ],
+  "description": "用户提供的完整 URDF；26 个活动关节；固定基座、无驱动预览",
+  "upstream_origin": "蓝思（用户提供）· FQ 格式适配",
+  "publication_authorized": true,
+  "release_status": "model_preview_unactuated",
+  "provenance": "assets/user_supplied/lansi_wheel_arm_robot/provenance.json"
+}

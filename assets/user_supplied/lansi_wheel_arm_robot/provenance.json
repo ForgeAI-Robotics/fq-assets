@@ -1,0 +1,48 @@
+{
+  "source": "User-supplied wheel_arm_robot.zip",
+  "source_archive_sha256": "3172b15e8ed4ba26e57d3e67e7f365d3e5ce6efbe4e054ed4ca3a0e12475f298",
+  "vendor_attribution": "Lansi / 蓝思, supplied by user; exact commercial model not established",
+  "public_publication_authorization": {
+    "date": "2026-10-27",
+    "basis": "User explicitly confirmed after being informed fq-assets is public and package has no license declaration"
+  },
+  "license": "No upstream license text supplied; publication permission is not a blanket downstream open-source license",
+  "modifications": [
+    "Original URDF/CSV/STL retained byte-for-byte",
+    "Preview STL reduction recorded in wheel_arm_robot/mesh_conversion.json",
+    "Relative mesh paths for preview URDF",
+    "Fixed-base unactuated MuJoCo conversion; collision display hidden"
+  ],
+  "source_files": {
+    "wheel_arm_robot/urdf/wheel_arm_robot.urdf": "f5617ca5c969b6b5b6dae2c82a07e2f173f8481729caabfcaee4b5136bb32f89",
+    "wheel_arm_robot/urdf/wheel_arm_robot.csv": "56276e504032e0d46d2ace6defe42c5b0938ec8eed3bdfe1fe7e4be588391e4d",
+    "wheel_arm_robot/meshes/left_wrist_pitch_link.STL": "4b40f07ca4c3e679f90a728335d9e79f6e0fde9eaf01f54156adcf29d32b12d5",
+    "wheel_arm_robot/meshes/hip_pitch_link.STL": "b6963b6d56c7ebfa31aeccb977f22cbd0e50f5b91f0aab340b550cdf9c2cddb4",
+    "wheel_arm_robot/meshes/right_wheel_link.STL": "36a97e0802d4d06e926bff54f5ac282484033016afb2356020e0cd12a8d19a0f",
+    "wheel_arm_robot/meshes/right_claw_link.STL": "1248548fb40bb8f54c0addb43a108915a6b03ba55a7a02219026f0944066306e",
+    "wheel_arm_robot/meshes/right_shoulder_roll_link.STL": "e6e89f9f4ffaaf0dc0d4dbb42704cabdeed047022d52aac8d7ee1a2f278a6a66",
+    "wheel_arm_robot/meshes/right_shoulder_pitch_link.STL": "a87af8be3a10c0b84172323eac23129be7030faeb882bc7c6316d03d1e181d6a",
+    "wheel_arm_robot/meshes/sens_link.STL": "5de7ce0427a34ed8ebf352a8c5ceb7808df5d967aefaf84a1d9ae841ce7ccf59",
+    "wheel_arm_robot/meshes/left_wrist_roll_link.STL": "363e5ca43415441b6023065d297a26e3303a479b66cebb9a8d1a4cbc89388e77",
+    "wheel_arm_robot/meshes/left_shoulder_roll_link.STL": "c1ef8bdcba680cda77b0e4290a42c1e8a8258e42f1a30053a47b5505a267a8ba",
+    "wheel_arm_robot/meshes/right_elbow_link.STL": "5779ffbeef2acd0a9b73571885f25f5100e18fb10b7b93ece05093710bf03097",
+    "wheel_arm_robot/meshes/right_shoulder_yaw_link.STL": "ef90f524b376b7f969faea9639a095233fe1d249361e230e0b8540e53e172cea",
+    "wheel_arm_robot/meshes/knee_pitch_link.STL": "13e097aab4ebfe47c549444dfc8ee506d4f071daec2b33c637a109d173146d1a",
+    "wheel_arm_robot/meshes/left_shoulder_yaw_link.STL": "8922c517c2341ffd6c8585cdf3e111ce5fdc7c1fe547d61d35b89930fa1996ab",
+    "wheel_arm_robot/meshes/neck_yaw_link.STL": "96ffdd4448957f9f21da24868b8439a2494317656464d59aa6bc5061a1ce12a0",
+    "wheel_arm_robot/meshes/torso_yaw_link.STL": "c53d33d911bd46a03f8bd032cd21812246746eeacd64de4163b1bf675aef39be",
+    "wheel_arm_robot/meshes/right_claw_link_g.STL": "af33bfb747f3ab6424e608d07e187ee5f69336898597869ff31bd3624335cbf0",
+    "wheel_arm_robot/meshes/base_link.STL": "ea0b3c830c52b493dfd2c7679e1fa0ba8770882ee46f8af22cacbfb8ae39a195",
+    "wheel_arm_robot/meshes/ankle_pitch_link.STL": "e0aa6fc6deef96cfcefaf1072370ce9bd7475a1e376389ea5cb8cde1e4f0465b",
+    "wheel_arm_robot/meshes/right_wrist_pitch_link.STL": "2a5e2478290d964a81b5193a3a76903b6e1275191a113c74af22f38ac8900127",
+    "wheel_arm_robot/meshes/neck_pitch_link.STL": "4e685c7c68f5c72efa662687e7a8a86c2e85ac37118df8a4054f3cfcc80f1185",
+    "wheel_arm_robot/meshes/right_wrist_roll_link.STL": "24515e3e0c01edc003c9d3af97ed23110c18f1db503281b074b9e3349ffa3045",
+    "wheel_arm_robot/meshes/left_wrist_yaw_link.STL": "af139032ad541bec0f9bd4cf50e130a5a934aff1ece4bd5677dd51a9e885d53e",
+    "wheel_arm_robot/meshes/left_wheel_link.STL": "bd27f2d9ff98347719453b5783e51ac8be3880e7fe727a279c33f07bab3735c6",
+    "wheel_arm_robot/meshes/left_elbow_link.STL": "0a3072737e40571e6fbc44315f2fa0dbb166b64833c6e2f96ea14d0debab721d",
+    "wheel_arm_robot/meshes/left_claw_link_g.STL": "b25b34b09db8c8048b3cbb617d6e3e13e5fdb714fa7f2369837f57d6d09f83d7",
+    "wheel_arm_robot/meshes/left_claw_link.STL": "bd0430ad8a1bb73b8ac62f89e62e0d2ab3519450b2356e9d4012237e9cb80851",
+    "wheel_arm_robot/meshes/right_wrist_yaw_link.STL": "1179eb45f47ba52a1ac483023f9af9dc3ce49845363dec561cb8a65f64b22a42",
+    "wheel_arm_robot/meshes/left_shoulder_pitch_link.STL": "92b89307c71b25e734079eb9ca68e1bc409ed88be7b7f71b4e314588f27aa6a8"
+  }
+}

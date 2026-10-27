@@ -1,0 +1,142 @@
+[
+  {
+    "mesh": "ankle_pitch_link.STL",
+    "original_triangles": 17496,
+    "preview_triangles": 17496
+  },
+  {
+    "mesh": "base_link.STL",
+    "original_triangles": 389778,
+    "preview_triangles": 79999
+  },
+  {
+    "mesh": "hip_pitch_link.STL",
+    "original_triangles": 21328,
+    "preview_triangles": 21328
+  },
+  {
+    "mesh": "knee_pitch_link.STL",
+    "original_triangles": 14944,
+    "preview_triangles": 14944
+  },
+  {
+    "mesh": "left_claw_link.STL",
+    "original_triangles": 1332,
+    "preview_triangles": 1332
+  },
+  {
+    "mesh": "left_claw_link_g.STL",
+    "original_triangles": 1059,
+    "preview_triangles": 1059
+  },
+  {
+    "mesh": "left_elbow_link.STL",
+    "original_triangles": 20621,
+    "preview_triangles": 20621
+  },
+  {
+    "mesh": "left_shoulder_pitch_link.STL",
+    "original_triangles": 6558,
+    "preview_triangles": 6558
+  },
+  {
+    "mesh": "left_shoulder_roll_link.STL",
+    "original_triangles": 19662,
+    "preview_triangles": 19662
+  },
+  {
+    "mesh": "left_shoulder_yaw_link.STL",
+    "original_triangles": 18686,
+    "preview_triangles": 18686
+  },
+  {
+    "mesh": "left_wheel_link.STL",
+    "original_triangles": 45384,
+    "preview_triangles": 45384
+  },
+  {
+    "mesh": "left_wrist_pitch_link.STL",
+    "original_triangles": 30252,
+    "preview_triangles": 30252
+  },
+  {
+    "mesh": "left_wrist_roll_link.STL",
+    "original_triangles": 14884,
+    "preview_triangles": 14884
+  },
+  {
+    "mesh": "left_wrist_yaw_link.STL",
+    "original_triangles": 8526,
+    "preview_triangles": 8526
+  },
+  {
+    "mesh": "neck_pitch_link.STL",
+    "original_triangles": 67642,
+    "preview_triangles": 67642
+  },
+  {
+    "mesh": "neck_yaw_link.STL",
+    "original_triangles": 6734,
+    "preview_triangles": 6734
+  },
+  {
+    "mesh": "right_claw_link.STL",
+    "original_triangles": 1332,
+    "preview_triangles": 1332
+  },
+  {
+    "mesh": "right_claw_link_g.STL",
+    "original_triangles": 1059,
+    "preview_triangles": 1059
+  },
+  {
+    "mesh": "right_elbow_link.STL",
+    "original_triangles": 20623,
+    "preview_triangles": 20623
+  },
+  {
+    "mesh": "right_shoulder_pitch_link.STL",
+    "original_triangles": 53134,
+    "preview_triangles": 53134
+  },
+  {
+    "mesh": "right_shoulder_roll_link.STL",
+    "original_triangles": 19550,
+    "preview_triangles": 19550
+  },
+  {
+    "mesh": "right_shoulder_yaw_link.STL",
+    "original_triangles": 18720,
+    "preview_triangles": 18720
+  },
+  {
+    "mesh": "right_wheel_link.STL",
+    "original_triangles": 43734,
+    "preview_triangles": 43734
+  },
+  {
+    "mesh": "right_wrist_pitch_link.STL",
+    "original_triangles": 35286,
+    "preview_triangles": 35286
+  },
+  {
+    "mesh": "right_wrist_roll_link.STL",
+    "original_triangles": 14699,
+    "preview_triangles": 14699
+  },
+  {
+    "mesh": "right_wrist_yaw_link.STL",
+    "original_triangles": 8690,
+    "preview_triangles": 8690
+  },
+  {
+    "mesh": "sens_link.STL",
+    "original_triangles": 89545,
+    "preview_triangles": 79999
+  },
+  {
+    "mesh": "torso_yaw_link.STL",
+    "original_triangles": 243178,
+    "preview_triangles": 80851
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "source_archive_sha256": "3172b15e8ed4ba26e57d3e67e7f365d3e5ce6efbe4e054ed4ca3a0e12475f298",
+  "source_name": "wheel_arm_robot",
+  "vendor": "Lansi (user attribution)",
+  "exact_vendor_model": "not specified in archive",
+  "links": 28,
+  "joint_types": {
+    "revolute": 24,
+    "fixed": 1,
+    "continuous": 2
+  },
+  "mujoco_joints": 26,
+  "mujoco_geoms": 56,
+  "mujoco_actuators": 0,
+  "mesh_dependencies_resolved": true,
+  "zero_effort_or_velocity": [
+    "ankle_pitch_joint",
+    "knee_pitch_joint",
+    "hip_pitch_joint",
+    "torso_yaw_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_yaw_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_claw_joint",
+    "left_claw_joint_g",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_yaw_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_claw_joint",
+    "right_claw_joint_g",
+    "neck_yaw_joint",
+    "neck_pitch_joint"
+  ],
+  "license": "not supplied",
+  "publication": "Public publication explicitly authorized by project owner on 2026-10-27",
+  "limitations": [
+    "No control actuators added",
+    "Source joint limits, inertias and meshes retained; hardware calibration not verified",
+    "Fixed base MuJoCo import for inspection; no mobile base controller",
+    "Collision meshes use engine convex hulls, not validated self collision geometry"
+  ],
+  "published_mujoco_load": true,
+  "source_urdf_mesh_dependencies_complete": true,
+  "controller_validated": false
+}
