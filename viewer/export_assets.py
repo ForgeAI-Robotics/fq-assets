@@ -172,7 +172,7 @@ def main():
             limits=driver.get('control_range',driver['range'])
             driver['control_range']=[max(limits[0],allowed[0]),min(limits[1],allowed[1])]
             if driver['control_range'][0]>driver['control_range'][1]:raise ValueError('Incompatible coupled joint limits')
-        title,kind_label,subtitle=NAMES.get(slug,(meta.get('name',slug),{'camera':'相机','robot':'机器人','end_effector':'灵巧手 / 末端执行器'}.get(meta['kind'],meta['kind']),meta.get('description','')))
+        title,kind_label,subtitle=NAMES.get(slug,(meta.get('name',slug),{'character':'人物','camera':'相机','robot':'机器人','end_effector':'灵巧手 / 末端执行器'}.get(meta['kind'],meta['kind']),meta.get('description','')))
         if meta['kind']=='camera':subtitle='RGB-D / 双目红外 / 六轴 IMU · 设备规格'
         if meta['kind'] in ('robot','end_effector'):subtitle='FQ 适配 / '+str(len(joints))+' 个转轴 · '+str(m.nu)+' 个驱动'
 

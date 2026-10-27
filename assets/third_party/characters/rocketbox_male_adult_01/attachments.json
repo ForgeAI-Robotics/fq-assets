@@ -1,0 +1,20 @@
+{
+  "backpack": {
+    "source_bone": "Bip01 Spine2",
+    "usd_joint": "Bip01_Pelvis/Bip01_Spine/Bip01_Spine1/Bip01_Spine2",
+    "offset_calibrated": false,
+    "note": "Attachment joint only; bag pose/straps/hand grip must be fitted per asset"
+  },
+  "left_hand": {
+    "source_bone": "Bip01 L Hand",
+    "usd_joint": "Bip01_Pelvis/Bip01_Spine/Bip01_Spine1/Bip01_Spine2/Bip01_Neck/Bip01_L_Clavicle/Bip01_L_UpperArm/Bip01_L_Forearm/Bip01_L_Hand",
+    "offset_calibrated": false,
+    "note": "Attachment joint only; bag pose/straps/hand grip must be fitted per asset"
+  },
+  "right_hand": {
+    "source_bone": "Bip01 R Hand",
+    "usd_joint": "Bip01_Pelvis/Bip01_Spine/Bip01_Spine1/Bip01_Spine2/Bip01_Neck/Bip01_R_Clavicle/Bip01_R_UpperArm/Bip01_R_Forearm/Bip01_R_Hand",
+    "offset_calibrated": false,
+    "note": "Attachment joint only; bag pose/straps/hand grip must be fitted per asset"
+  }
+}

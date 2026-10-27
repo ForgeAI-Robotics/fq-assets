@@ -137,3 +137,7 @@ Baseline 0.1.24 places three chairs on each long side of the conference table. O
 ## 睿尔曼 RealBot 待接入型号
 
 RealBot-01、L2、S2 的 [来源核查与缺件清单](docs/realman_realbot_intake.md) 已登记。当前尚未取得完整整机 URDF 与网格，未作为可加载资产发布。
+
+## 带骨骼的人物资产
+
+新增四个 Microsoft Rocketbox 成人形象（MIT），提供带骨骼 USD、含面部形变的 GLB 和 MuJoCo 静态预览。详见 [人物资产说明](docs/character_assets.md)。机场环境暂不自动加入人物。

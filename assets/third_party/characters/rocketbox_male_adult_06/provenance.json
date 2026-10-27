@@ -1,0 +1,71 @@
+{
+  "repository": "https://github.com/microsoft/Microsoft-Rocketbox",
+  "commit": "0943055db6ec570bcef9f2c8b41c9e5467c808f9",
+  "source_character": "Male_Adult_06",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "sha256": "17474e386e0b9e1a700cc3d06b2b0882a2c376d9c6b49c7f8274409b8f8d2352",
+      "bytes": 1066,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/LICENSE.md"
+    },
+    {
+      "path": "Assets/Avatars/Adults/Male_Adult_06/Export/Male_Adult_06_facial.fbx",
+      "sha256": "9d7b04fa670de69820ca13fa09f8ed5b4ff59e741522cc1db533e24747af8d0c",
+      "bytes": 2082768,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_06/Export/Male_Adult_06_facial.fbx"
+    },
+    {
+      "path": "Assets/Avatars/Adults/Male_Adult_06/Textures/m011_body_color.tga",
+      "sha256": "f92110adc6f33c8802652e4c2f5282226e3fbee672f510b3fb765a1599dd3f91",
+      "bytes": 12582956,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_06/Textures/m011_body_color.tga"
+    },
+    {
+      "path": "Assets/Avatars/Adults/Male_Adult_06/Textures/m011_body_normal.tga",
+      "sha256": "7416e297789e42ce3f23af46a3dea9d372046034e2b18c0bf4a3b18569a97c72",
+      "bytes": 12582956,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_06/Textures/m011_body_normal.tga"
+    },
+    {
+      "path": "Assets/Avatars/Adults/Male_Adult_06/Textures/m011_body_specular.tga",
+      "sha256": "ea260e6d6464b5deac4ab187e046472fd0ef27141b56eccec861bbc3d454fde7",
+      "bytes": 12582956,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_06/Textures/m011_body_specular.tga"
+    },
+    {
+      "path": "Assets/Avatars/Adults/Male_Adult_06/Textures/m011_head_color.tga",
+      "sha256": "b3f7731c506ae105bead54cb558c366ed9e72463565f78727365e52a90b841c5",
+      "bytes": 12582956,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_06/Textures/m011_head_color.tga"
+    },
+    {
+      "path": "Assets/Avatars/Adults/Male_Adult_06/Textures/m011_head_normal.tga",
+      "sha256": "1710343a59dfb60f8369772aebfafbb3c507f2b1f62f4341effe7ed07ee431b9",
+      "bytes": 12582956,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_06/Textures/m011_head_normal.tga"
+    },
+    {
+      "path": "Assets/Avatars/Adults/Male_Adult_06/Textures/m011_head_specular.tga",
+      "sha256": "75ff79448342413273d4ce225887fa46d98671bb0a97460134a1c2971b4e2719",
+      "bytes": 12582956,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_06/Textures/m011_head_specular.tga"
+    },
+    {
+      "path": "Assets/Avatars/Adults/Male_Adult_06/Textures/m011_opacity_color.tga",
+      "sha256": "7cb2146e511c1bd207f5e7f061c8b66915db1bbc15c3748c6d98469630fd346d",
+      "bytes": 16777260,
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_06/Textures/m011_opacity_color.tga"
+    }
+  ],
+  "modifications": [
+    "Repaired source FBX absolute texture references",
+    "Converted selected TGA maps to PNG without resizing",
+    "Recentered XY and grounded feet, retaining source metric height",
+    "Converted to GLB with skin and facial targets and UsdSkel with skeletal inspection motion",
+    "Generated static OBJ/MJCF preview and non-anatomical navigation capsule"
+  ],
+  "source_fbx_included": false,
+  "original_downloads_retained_outside_repository": true
+}

@@ -1,0 +1,23 @@
+{
+  "source_name": "Male_Adult_06",
+  "slug": "rocketbox_male_adult_06",
+  "joints": 80,
+  "glb_morph_targets": 175,
+  "height_m": 1.831321058969479,
+  "blender_skin_deformation_max_m": 0.03633165251541732,
+  "usd_skin_deformation_max_m": 0.0363394170999527,
+  "usd_unresolved_dependencies": [],
+  "usd_facial_morphs_included": false,
+  "navigation_proxy_only": true,
+  "walking_or_baggage_fit_validated": false,
+  "glb_self_contained": true,
+  "glb_skin_count": 1,
+  "glb_animation_count": 1,
+  "glb_morph_targets_verified": 175,
+  "mujoco_preview_compile": true,
+  "mujoco_preview_static": true,
+  "mujoco_navigation_proxy_count": 1,
+  "rendered_preview": "validation/previews/third_party_characters_rocketbox_male_adult_06.png",
+  "isaac_stage_load": true,
+  "isaac_batch_render": true
+}

@@ -1,0 +1,23 @@
+{
+  "source_name": "Female_Adult_01",
+  "slug": "rocketbox_female_adult_01",
+  "joints": 80,
+  "glb_morph_targets": 175,
+  "height_m": 1.7433471651747823,
+  "blender_skin_deformation_max_m": 0.03995565552743846,
+  "usd_skin_deformation_max_m": 0.03996437042951584,
+  "usd_unresolved_dependencies": [],
+  "usd_facial_morphs_included": false,
+  "navigation_proxy_only": true,
+  "walking_or_baggage_fit_validated": false,
+  "glb_self_contained": true,
+  "glb_skin_count": 1,
+  "glb_animation_count": 1,
+  "glb_morph_targets_verified": 175,
+  "mujoco_preview_compile": true,
+  "mujoco_preview_static": true,
+  "mujoco_navigation_proxy_count": 1,
+  "rendered_preview": "validation/previews/third_party_characters_rocketbox_female_adult_01.png",
+  "isaac_stage_load": true,
+  "isaac_batch_render": true
+}

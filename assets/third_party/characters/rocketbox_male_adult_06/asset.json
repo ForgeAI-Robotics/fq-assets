@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "third_party:characters/rocketbox_male_adult_06",
+  "version": "0.1.0",
+  "kind": "character",
+  "name": "男性旅客 · 红色长袖 / Rocketbox",
+  "description": "80 节点骨骼；GLB 保留 175 面部形变；USD 支持骨骼；网页为静态预览",
+  "origin": "third_party",
+  "upstream_origin": "Microsoft Rocketbox · MIT；FQ 格式转换与验证",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "MIT",
+  "license_status": "Microsoft MIT license retained in asset directory",
+  "representations": {
+    "mujoco": "assets/third_party/characters/rocketbox_male_adult_06/preview.xml",
+    "usd": "assets/third_party/characters/rocketbox_male_adult_06/character.usdc",
+    "glb": "assets/third_party/characters/rocketbox_male_adult_06/character.glb"
+  },
+  "representation_conventions": {
+    "mujoco": "meter, Z-up, static visual snapshot",
+    "usd": "meter, Z-up, UsdSkel rig, facial morphs not included",
+    "glb": "glTF 2.0 meter, Y-up, skin + facial morph targets"
+  },
+  "provenance": "assets/third_party/characters/rocketbox_male_adult_06/provenance.json",
+  "vendor_revision": "0943055db6ec570bcef9f2c8b41c9e5467c808f9",
+  "release_status": "rigged_character_preview",
+  "physics_calibrated": false,
+  "dependencies": [],
+  "skeletal_joint_count": 80,
+  "glb_facial_morph_targets": 175,
+  "height_m": 1.831321058969479,
+  "attachment_map": "assets/third_party/characters/rocketbox_male_adult_06/attachments.json",
+  "validation": "assets/third_party/characters/rocketbox_male_adult_06/validation.json",
+  "capabilities": {
+    "glb_skeleton": true,
+    "glb_facial_morphs": true,
+    "usd_skeleton": true,
+    "usd_facial_morphs": false,
+    "isaac_stage_render": true,
+    "mujoco_static_preview": true,
+    "navigation_collision_proxy": true,
+    "walking_controller": false,
+    "baggage_fitted": false,
+    "physical_human_contact": false
+  },
+  "limitations": [
+    "Web/MuJoCo is a static A-pose preview; skeletal animation is in USD/GLB",
+    "One authored inspection motion is included; no walking/waiting/sampling behavior controller",
+    "Single capsule is a navigation occupancy approximation, not anatomically accurate or calibrated human contact geometry",
+    "Back and hand bones are identified, but no backpack, straps or grip offsets have been fitted",
+    "USD omits facial morph targets; GLB retains 175 source targets",
+    "Four adult clothed appearances; limited age/body-size variation, not a representative airport population",
+    "PNG color/normal maps converted losslessly from source TGA; roughness is an approximate material setting"
+  ]
+}

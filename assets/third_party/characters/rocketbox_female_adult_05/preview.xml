@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="rocketbox_female_adult_05">
+  <compiler angle="radian" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+  </visual>
+  <asset>
+    <texture name="f005_body" type="2d" file="textures/f005_body_color.png" />
+    <material name="f005_body" texture="f005_body" rgba="1 1 1 1" specular=".15" shininess=".15" />
+    <texture name="f005_head" type="2d" file="textures/f005_head_color.png" />
+    <material name="f005_head" texture="f005_head" rgba="1 1 1 1" specular=".15" shininess=".15" />
+    <texture name="f005_opacity" type="2d" file="textures/f005_opacity_color.png" />
+    <material name="f005_opacity" texture="f005_opacity" rgba="1 1 1 1" specular=".15" shininess=".15" />
+    <mesh name="f005_body" file="meshes/f005_body.obj" />
+    <mesh name="f005_head" file="meshes/f005_head.obj" />
+    <mesh name="f005_opacity" file="meshes/f005_opacity.obj" />
+  </asset>
+  <worldbody>
+    <geom name="f005_body" type="mesh" mesh="f005_body" material="f005_body" contype="0" conaffinity="0" />
+    <geom name="f005_head" type="mesh" mesh="f005_head" material="f005_head" contype="0" conaffinity="0" />
+    <geom name="f005_opacity" type="mesh" mesh="f005_opacity" material="f005_opacity" contype="0" conaffinity="0" />
+    <geom name="navigation_proxy" type="capsule" pos="0 0 0.8680892008269439" size=".23 0.6380892008269439" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" />
+  </worldbody>
+</mujoco>

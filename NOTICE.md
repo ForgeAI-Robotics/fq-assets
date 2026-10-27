@@ -19,3 +19,7 @@ O6 安装件为 provisional，模型质量/惯量并非实测总成标定。四�
 ## D435i 相机（v0.3.0）
 
 来自现有 FQ D435i 管线及 RealSense 官方模型；官方 D435i xacro 复用 d435 外壳网格。原 xacro 版权头和 Apache-2.0 文本保留在 provenance/cameras/realsense。确切上游提交未记录，按本地源文件 SHA256 固定，不能将本地提取时间当上游版本。仿真质量和参考内参不作为实测参数。详情见 RELEASE_NOTES_v0.3.0.md。
+
+## Microsoft Rocketbox 人物资产
+
+四个人物来自 Microsoft Rocketbox，固定提交 `0943055db6ec570bcef9f2c8b41c9e5467c808f9`，上游 MIT 许可逐项保留。FQ 修改了路径、坐标、格式和检查动作。此许可仅适用于这些人物及其对应来源，不改变仓库其他资产的许可状态。

@@ -106,6 +106,26 @@
       "id": "fq:scenes/airport_preview",
       "version": "0.2.0",
       "manifest": "scenes/fq/airport_preview/asset.json"
+    },
+    {
+      "id": "third_party:characters/rocketbox_female_adult_01",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/characters/rocketbox_female_adult_01/asset.json"
+    },
+    {
+      "id": "third_party:characters/rocketbox_female_adult_05",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/characters/rocketbox_female_adult_05/asset.json"
+    },
+    {
+      "id": "third_party:characters/rocketbox_male_adult_01",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/characters/rocketbox_male_adult_01/asset.json"
+    },
+    {
+      "id": "third_party:characters/rocketbox_male_adult_06",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/characters/rocketbox_male_adult_06/asset.json"
     }
   ]
 }
