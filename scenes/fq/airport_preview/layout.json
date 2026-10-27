@@ -1,0 +1,65 @@
+{
+  "version": "0.2.0",
+  "units": "meter",
+  "bounds_xy": [
+    -2.4,
+    2.4,
+    -1.8,
+    3.65
+  ],
+  "entry": {
+    "center": [
+      0,
+      -1.8
+    ],
+    "clear_post_spacing_m": 1.6,
+    "belt_geom": "EntryBelt"
+  },
+  "exit": {
+    "center": [
+      0,
+      3.65
+    ],
+    "clear_post_spacing_m": 1.6,
+    "belt_geom": "ReleaseBelt"
+  },
+  "nominal_gate_width_note": "1.6 m between post centres; cassette/base geometry reduces clear width",
+  "passenger_stations": [
+    [
+      -0.7,
+      -0.45
+    ],
+    [
+      -0.7,
+      1
+    ],
+    [
+      -0.7,
+      2.45
+    ]
+  ],
+  "equipment_table_center": [
+    1.65,
+    1.35
+  ],
+  "detector_on_table": true,
+  "baggage_stays_with_passenger": true,
+  "sampling_targets": [
+    "person/clothing per confirmed SOP",
+    "accompanying baggage per confirmed SOP"
+  ],
+  "demonstration_batch_size": 3,
+  "batch_size_is_official_sop": false,
+  "gate_state": "both_closed",
+  "gate_geometry": "fixed rigid belt proxies; no flexible belt or opening controller",
+  "workflow_intent": [
+    "admit batch through entry",
+    "close entry",
+    "sample each person and accompanying bag",
+    "bind sample to person and await valid results",
+    "authorize batch release only after all required negative results and no unresolved exception",
+    "human supervisor opens exit belt",
+    "batch leaves and exit closes"
+  ],
+  "workflow_implemented": false
+}

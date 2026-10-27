@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/airport_preview",
-  "version": "0.1.1",
-  "name": "机场入口安检预览场景",
-  "description": "入口通道、采样工位、检测仪外壳、等候/隔离区和伸缩隔离带；仅环境预览",
+  "version": "0.2.0",
+  "name": "机场入口批次防爆检测场景",
+  "description": "软带围合检测等待区、入口/出口挡带、区内检测桌；旅客随身携包逐人采样的环境布局",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -29,13 +29,18 @@
     "collision_validated": true,
     "device_logic": false,
     "brain_connected": false,
-    "static_collision": true
+    "static_collision": true,
+    "enclosed_batch_layout": true,
+    "baggage_removal_required": false,
+    "workflow_simulation": false,
+    "gate_controller": false
   },
   "limitations": [
-    "Concept layout, not surveyed Hongqiao airport CAD",
-    "Detector is a visual housing, not a vendor device model",
-    "Belt is fixed closed in this static scene; no flexible dynamics or opening controller",
-    "Static collision smoke tests only; no calibrated contact, robot balance or throughput acceptance",
-    "No passenger, robot, baggage, workflow or Connection implementation bundled"
-  ]
+    "Concept dimensions, not surveyed Hongqiao airport CAD; three-person batch is a demonstration choice, not a confirmed SOP requirement",
+    "Belts are fixed closed rigid collision proxies; no flexible dynamics or opening controller",
+    "Detector, tray and waste bin use solid simplified geometry; insertion, grasping and disposal not implemented",
+    "Static collision smoke tests only; no calibrated contacts, robot swept-volume validation or human-contact safety validation",
+    "No people, robots, baggage motion, device result logic or Connection implementation bundled"
+  ],
+  "layout": "scenes/fq/airport_preview/layout.json"
 }

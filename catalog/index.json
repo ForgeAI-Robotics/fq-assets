@@ -104,7 +104,7 @@
     },
     {
       "id": "fq:scenes/airport_preview",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "manifest": "scenes/fq/airport_preview/asset.json"
     }
   ]

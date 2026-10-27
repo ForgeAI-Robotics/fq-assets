@@ -1,0 +1,233 @@
+{
+  "asset_id": "fq:scenes/airport_preview",
+  "version": "0.2.0",
+  "geom_count": 149,
+  "static_colliders": 101,
+  "usd_mujoco_geometry_names_match": true,
+  "unresolved_usd_dependencies": [],
+  "actor_payloads_included": false,
+  "scope": "Enclosed environment and static collision, not operational workflow or flexible belt simulation",
+  "mujoco_dynamic_probes": [
+    {
+      "test": "floor",
+      "passed": true,
+      "final_xyz": [
+        4.0,
+        -3.0,
+        0.04963281815753985
+      ],
+      "contacts": [
+        "Floor",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "worktop",
+      "passed": true,
+      "final_xyz": [
+        1.65,
+        0.75,
+        0.7921328181575396
+      ],
+      "contacts": [
+        "Worktop",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "detector",
+      "passed": true,
+      "final_xyz": [
+        1.65,
+        1.75,
+        1.1321328181575392
+      ],
+      "contacts": [
+        "Detector",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "exit",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        3.3936526716262163,
+        0.98
+      ],
+      "contacts": [
+        "ReleaseBelt",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "entry",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        -2.0563473283740064,
+        0.98
+      ],
+      "contacts": [
+        "EntryBelt",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "left",
+      "passed": true,
+      "final_xyz": [
+        -2.1436526716262163,
+        0.7,
+        0.98
+      ],
+      "contacts": [
+        "BoundaryLBelt1",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "right",
+      "passed": true,
+      "final_xyz": [
+        2.1436526716262163,
+        -0.6,
+        0.98
+      ],
+      "contacts": [
+        "BoundaryRBelt0",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "front_flank",
+      "passed": true,
+      "final_xyz": [
+        -1.6,
+        -2.0563473283740064,
+        0.98
+      ],
+      "contacts": [
+        "EntryFlankL",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "rear_flank",
+      "passed": true,
+      "final_xyz": [
+        -1.6,
+        3.3936526716262163,
+        0.98
+      ],
+      "contacts": [
+        "ExitFlankL",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "central_aisle",
+      "passed": true,
+      "final_xyz": [
+        0.3,
+        0.9000000000000016,
+        0.98
+      ],
+      "contacts": []
+    },
+    {
+      "test": "gates_open",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        4.799999999999673,
+        0.98
+      ],
+      "contacts": []
+    }
+  ],
+  "preview_rendered": true,
+  "isaac_physx_dynamic_probes": [
+    {
+      "test": "floor",
+      "passed": true,
+      "final_xyz": [
+        4.0,
+        -3.0,
+        0.05000000074505806
+      ]
+    },
+    {
+      "test": "worktop",
+      "passed": true,
+      "final_xyz": [
+        1.649999976158142,
+        0.75,
+        0.7924999594688416
+      ]
+    },
+    {
+      "test": "detector",
+      "passed": true,
+      "final_xyz": [
+        1.649999976158142,
+        1.75,
+        1.1325000524520874
+      ]
+    },
+    {
+      "test": "exit",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        3.5930001735687256,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "entry",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        -1.8569999933242798,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "left",
+      "passed": true,
+      "final_xyz": [
+        -2.3430001735687256,
+        0.699999988079071,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "right",
+      "passed": true,
+      "final_xyz": [
+        2.3430001735687256,
+        -0.6000000238418579,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "front_flank",
+      "passed": true,
+      "final_xyz": [
+        -1.600000023841858,
+        -1.8569999933242798,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "rear_flank",
+      "passed": true,
+      "final_xyz": [
+        -1.600000023841858,
+        3.5930001735687256,
+        0.9800000190734863
+      ]
+    }
+  ]
+}

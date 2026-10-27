@@ -22,7 +22,7 @@
     "fq:cameras/realsense_d435i": "0.1.0",
     "fq:objects/mesh_trash_bin": "0.1.2",
     "fq:articulated/office_chair": "0.1.0",
-    "fq:scenes/airport_preview": "0.1.1"
+    "fq:scenes/airport_preview": "0.2.0"
   },
   "profiles": {
     "fq:poses/o6_left_task": "0.1.2",
