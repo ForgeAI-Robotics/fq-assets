@@ -1,0 +1,13 @@
+{
+  "source": "FQ airport concept v0.6.1 environment",
+  "extraction": "Removed all robot/person/baggage/active-tool geometry and unused materials before copying textures",
+  "removed_actor_geoms": 220,
+  "geometry_origin": "Project-authored primitives and sign planes",
+  "textures_origin": "Project-generated signage, rendered with Noto Sans CJK; no font binaries bundled",
+  "not_included": [
+    "Unitree G1",
+    "LinkerHand O6",
+    "NVIDIA people",
+    "Google Research backpack"
+  ]
+}

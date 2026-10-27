@@ -1,0 +1,17 @@
+{
+  "asset_id": "fq:scenes/airport_preview",
+  "version": "0.1.0",
+  "removed_actor_geoms": 220,
+  "usd_geometry_count": 142,
+  "usd_resolved_assets": 9,
+  "unresolved_dependencies": [],
+  "mujoco_bodies": 1,
+  "actor_payloads_included": false,
+  "physics_validated": false,
+  "mujoco_compile": true,
+  "mujoco_geoms": 142,
+  "mujoco_joints": 0,
+  "preview_rendered": true,
+  "viewer_export": true,
+  "viewer_asset_count": 47
+}

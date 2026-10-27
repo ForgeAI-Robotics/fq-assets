@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="FQ_airport_environment_preview">
+  <compiler angle="radian" autolimits="true" fusestatic="false" balanceinertia="true" />
+  <option gravity="0 0 -9.81" timestep=".002" />
+  <visual>
+    <global offwidth="1920" offheight="1080" azimuth="135" elevation="-25" />
+    <quality shadowsize="4096" offsamples="4" />
+    <headlight ambient=".22 .22 .22" diffuse=".22 .22 .22" specular=".03 .03 .03" />
+    <map znear=".02" zfar="100" fogstart="20" fogend="45" />
+  </visual>
+  <asset>
+    <texture name="sky" type="skybox" builtin="gradient" rgb1=".48 .63 .77" rgb2=".92 .94 .96" width="512" height="3072" />
+    <material name="floor" rgba="0.68 0.71 0.73 1" specular="0.15" shininess="0.15" />
+    <material name="white" rgba="0.88 0.9 0.91 1" specular="0.2" shininess="0.3" />
+    <material name="steel" rgba="0.54 0.6 0.65 1" specular="0.65" shininess="0.7" />
+    <material name="navy" rgba="0.025 0.07 0.12 1" specular="0.1" />
+    <material name="teal" rgba="0.025 0.4 0.41 1" />
+    <material name="blue" rgba="0.04 0.3 0.68 1" />
+    <material name="dark" rgba="0.035 0.045 0.055 1" />
+    <material name="glass" rgba="0.65 0.86 0.91 0.18" specular="0.5" shininess="0.5" />
+    <texture name="EntranceSign" type="2d" file="textures/mj_EntranceSign.png" />
+    <material name="EntranceSign" texture="EntranceSign" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="EntranceSign" vertex="-1.8 0.0 -0.4 1.8 0.0 -0.4 1.8 0.0 0.4 -1.8 0.0 0.4" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <texture name="SamplingLabel" type="2d" file="textures/mj_SamplingLabel.png" />
+    <material name="SamplingLabel" texture="SamplingLabel" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="SamplingLabel" vertex="-0.7 0.0 -0.11 0.7 0.0 -0.11 0.7 0.0 0.11 -0.7 0.0 0.11" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <texture name="DetectorLabel" type="2d" file="textures/mj_DetectorLabel.png" />
+    <material name="DetectorLabel" texture="DetectorLabel" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="DetectorLabel" vertex="-0.22 0.0 -0.05 0.22 0.0 -0.05 0.22 0.0 0.05 -0.22 0.0 0.05" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <texture name="WaitSign" type="2d" file="textures/mj_WaitSign.png" />
+    <material name="WaitSign" texture="WaitSign" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="WaitSign" vertex="-1.05 0.0 -0.2 1.05 0.0 -0.2 1.05 0.0 0.2 -1.05 0.0 0.2" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <texture name="AlarmSign" type="2d" file="textures/mj_AlarmSign.png" />
+    <material name="AlarmSign" texture="AlarmSign" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="AlarmSign" vertex="-0.85 0.0 -0.175 0.85 0.0 -0.175 0.85 0.0 0.175 -0.85 0.0 0.175" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <texture name="SupervisorLabel" type="2d" file="textures/mj_SupervisorLabel.png" />
+    <material name="SupervisorLabel" texture="SupervisorLabel" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="SupervisorLabel" vertex="-0.6 0.0 -0.11 0.6 0.0 -0.11 0.6 0.0 0.11 -0.6 0.0 0.11" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <texture name="GuideRole" type="2d" file="textures/mj_GuideRole.png" />
+    <material name="GuideRole" texture="GuideRole" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="GuideRole" vertex="-0.5 0.0 -0.11 0.5 0.0 -0.11 0.5 0.0 0.11 -0.5 0.0 0.11" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <texture name="SamplerRole" type="2d" file="textures/mj_SamplerRole.png" />
+    <material name="SamplerRole" texture="SamplerRole" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="SamplerRole" vertex="-0.5 0.0 -0.11 0.5 0.0 -0.11 0.5 0.0 0.11 -0.5 0.0 0.11" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <texture name="ReviewerRole" type="2d" file="textures/mj_ReviewerRole.png" />
+    <material name="ReviewerRole" texture="ReviewerRole" texuniform="false" rgba="1 1 1 1" specular="0" />
+    <mesh name="ReviewerRole" vertex="-0.5 0.0 -0.11 0.5 0.0 -0.11 0.5 0.0 0.11 -0.5 0.0 0.11" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+  </asset>
+  <worldbody>
+    <geom name="Floor" type="box" pos="0 0 -0.07" size="8.0 9.0 0.07" material="floor" contype="0" conaffinity="0" />
+    <geom name="FloorX-8.0" type="box" pos="-8.0 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX-7.1" type="box" pos="-7.1 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX-6.2" type="box" pos="-6.199999999999999 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX-5.3" type="box" pos="-5.299999999999999 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX-4.4" type="box" pos="-4.399999999999999 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX-3.5" type="box" pos="-3.4999999999999982 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX-2.6" type="box" pos="-2.599999999999998 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX-1.7" type="box" pos="-1.6999999999999975 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX-0.8" type="box" pos="-0.7999999999999972 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX0.1" type="box" pos="0.1000000000000032 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX1.0" type="box" pos="1.0000000000000036 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX1.9" type="box" pos="1.900000000000004 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX2.8" type="box" pos="2.8000000000000043 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX3.7" type="box" pos="3.7000000000000046 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX4.6" type="box" pos="4.600000000000005 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX5.5" type="box" pos="5.500000000000005 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX6.4" type="box" pos="6.400000000000006 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorX7.3" type="box" pos="7.300000000000006 0 0.001" size="0.003 9.0 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-9.0" type="box" pos="0 -9.0 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-8.1" type="box" pos="0 -8.1 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-7.2" type="box" pos="0 -7.199999999999999 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-6.3" type="box" pos="0 -6.299999999999999 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-5.4" type="box" pos="0 -5.399999999999999 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-4.5" type="box" pos="0 -4.499999999999998 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-3.6" type="box" pos="0 -3.599999999999998 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-2.7" type="box" pos="0 -2.6999999999999975 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-1.8" type="box" pos="0 -1.7999999999999972 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY-0.9" type="box" pos="0 -0.8999999999999968 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY0.0" type="box" pos="0 3.552713678800501e-15 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY0.9" type="box" pos="0 0.9000000000000039 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY1.8" type="box" pos="0 1.8000000000000043 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY2.7" type="box" pos="0 2.7000000000000046 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY3.6" type="box" pos="0 3.600000000000005 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY4.5" type="box" pos="0 4.500000000000005 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY5.4" type="box" pos="0 5.400000000000006 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY6.3" type="box" pos="0 6.300000000000006 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY7.2" type="box" pos="0 7.200000000000006 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY8.1" type="box" pos="0 8.100000000000009 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="FloorY9.0" type="box" pos="0 9.000000000000007 0.001" size="8.0 0.003 0.001" material="white" contype="0" conaffinity="0" />
+    <geom name="BackWall-1" type="box" pos="-4.7 6.8 2.2" size="3.3 0.08 2.2" material="white" contype="0" conaffinity="0" />
+    <geom name="BackWall1" type="box" pos="4.7 6.8 2.2" size="3.3 0.08 2.2" material="white" contype="0" conaffinity="0" />
+    <geom name="ExitLintel" type="box" pos="0 6.8 3.65" size="1.4 0.08 0.75" material="white" contype="0" conaffinity="0" />
+    <geom name="WallJoint-6" type="box" pos="-6 6.71 2.2" size="0.0075 0.01 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="WallJoint-3" type="box" pos="-3 6.71 2.2" size="0.0075 0.01 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="WallJoint0" type="box" pos="0 6.71 2.2" size="0.0075 0.01 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="WallJoint3" type="box" pos="3 6.71 2.2" size="0.0075 0.01 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="WallJoint6" type="box" pos="6 6.71 2.2" size="0.0075 0.01 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="Column-5.2" type="cylinder" pos="-5.2 2 2.2" size="0.23 2.2" material="white" contype="0" conaffinity="0" />
+    <geom name="Column5.2" type="cylinder" pos="5.2 2 2.2" size="0.23 2.2" material="white" contype="0" conaffinity="0" />
+    <geom name="Window-4" type="box" pos="6.8 -4 2.2" size="0.01 1.475 2.15" material="glass" contype="0" conaffinity="0" />
+    <geom name="Mullion-4" type="box" pos="6.78 -5.5 2.2" size="0.045 0.04 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="Window-1" type="box" pos="6.8 -1 2.2" size="0.01 1.475 2.15" material="glass" contype="0" conaffinity="0" />
+    <geom name="Mullion-1" type="box" pos="6.78 -2.5 2.2" size="0.045 0.04 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="Window2" type="box" pos="6.8 2 2.2" size="0.01 1.475 2.15" material="glass" contype="0" conaffinity="0" />
+    <geom name="Mullion2" type="box" pos="6.78 0.5 2.2" size="0.045 0.04 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="Window5" type="box" pos="6.8 5 2.2" size="0.01 1.475 2.15" material="glass" contype="0" conaffinity="0" />
+    <geom name="Mullion5" type="box" pos="6.78 3.5 2.2" size="0.045 0.04 2.2" material="steel" contype="0" conaffinity="0" />
+    <geom name="CeilingSlat-4" type="box" pos="-4 5.5 4.3" size="0.05 1.2 0.075" material="white" contype="0" conaffinity="0" />
+    <geom name="CeilingSlat-2" type="box" pos="-2 5.5 4.3" size="0.05 1.2 0.075" material="white" contype="0" conaffinity="0" />
+    <geom name="CeilingSlat0" type="box" pos="0 5.5 4.3" size="0.05 1.2 0.075" material="white" contype="0" conaffinity="0" />
+    <geom name="CeilingSlat2" type="box" pos="2 5.5 4.3" size="0.05 1.2 0.075" material="white" contype="0" conaffinity="0" />
+    <geom name="CeilingSlat4" type="box" pos="4 5.5 4.3" size="0.05 1.2 0.075" material="white" contype="0" conaffinity="0" />
+    <light name="light0" pos="-3 -3 6" dir="0.3 0.4 -1" directional="true" diffuse=".38 .38 .38" ambient=".03 .03 .03" specular=".04 .04 .04" castshadow="true" />
+    <light name="light1" pos="3 0 5" dir="-0.4 0 -1" directional="true" diffuse=".12 .12 .12" ambient=".03 .03 .03" specular=".04 .04 .04" castshadow="false" />
+    <light name="light2" pos="0 5 5" dir="0 -0.2 -1" directional="true" diffuse=".12 .12 .12" ambient=".03 .03 .03" specular=".04 .04 .04" castshadow="false" />
+    <geom name="EntranceSign" type="mesh" mesh="EntranceSign" material="EntranceSign" pos="0 4.0 2.65" contype="0" conaffinity="0" />
+    <geom name="EntranceSign_back" type="box" pos="0.0 4.018 2.65" size="1.8 0.015 0.4" material="navy" contype="0" conaffinity="0" />
+    <geom name="SignPost-1.6" type="cylinder" pos="-1.6 4 3.4" size="0.015 0.35" material="steel" contype="0" conaffinity="0" />
+    <geom name="SignPost1.6" type="cylinder" pos="1.6 4 3.4" size="0.015 0.35" material="steel" contype="0" conaffinity="0" />
+    <geom name="Worktop" type="box" pos="-0.55 0.62 0.71" size="0.825 0.5 0.0325" material="white" contype="0" conaffinity="0" />
+    <geom name="TableLeg-1.250.35" type="box" pos="-1.25 0.35 0.34" size="0.0275 0.0275 0.34" material="steel" contype="0" conaffinity="0" />
+    <geom name="TableLeg-1.250.89" type="box" pos="-1.25 0.89 0.34" size="0.0275 0.0275 0.34" material="steel" contype="0" conaffinity="0" />
+    <geom name="TableLeg0.150.35" type="box" pos="0.15 0.35 0.34" size="0.0275 0.0275 0.34" material="steel" contype="0" conaffinity="0" />
+    <geom name="TableLeg0.150.89" type="box" pos="0.15 0.89 0.34" size="0.0275 0.0275 0.34" material="steel" contype="0" conaffinity="0" />
+    <geom name="TableFront" type="box" pos="-0.55 0.29 0.51" size="0.75 0.0175 0.15" material="navy" contype="0" conaffinity="0" />
+    <geom name="SamplingLabel" type="mesh" mesh="SamplingLabel" material="SamplingLabel" pos="-0.55 0.265 0.53" contype="0" conaffinity="0" />
+    <geom name="SamplingLabel_back" type="box" pos="-0.55 0.28300000000000003 0.53" size="0.7 0.015 0.11" material="navy" contype="0" conaffinity="0" />
+    <geom name="BagMat" type="box" pos="-0.5 0.72 0.748" size="0.24 0.225 0.006" material="dark" contype="0" conaffinity="0" />
+    <geom name="SwabTray" type="box" pos="-0.4 0.99 0.762" size="0.125 0.125 0.0175" material="steel" contype="0" conaffinity="0" />
+    <geom name="NewSwab0" type="box" pos="-0.46 0.99 0.785" size="0.015 0.085 0.003" material="white" contype="0" conaffinity="0" />
+    <geom name="NewSwab1" type="box" pos="-0.395 0.99 0.785" size="0.015 0.085 0.003" material="white" contype="0" conaffinity="0" />
+    <geom name="NewSwab2" type="box" pos="-0.33 0.99 0.785" size="0.015 0.085 0.003" material="white" contype="0" conaffinity="0" />
+    <geom name="DetectorStand" type="box" pos="0.19 1.38 0.38" size="0.27 0.25 0.38" material="white" contype="0" conaffinity="0" />
+    <geom name="Detector" type="box" pos="0.19 1.38 0.94" size="0.26 0.24 0.17" material="white" contype="0" conaffinity="0" />
+    <geom name="DetectorFace" type="box" pos="0.19 1.132 0.94" size="0.23 0.009 0.13" material="navy" contype="0" conaffinity="0" />
+    <geom name="DetectorScreen" type="box" pos="0.26 1.115 1.0" size="0.12 0.009 0.05" material="dark" contype="0" conaffinity="0" />
+    <geom name="DetectorInlet" type="box" pos="0.02 1.112 0.91" size="0.06 0.009 0.009" material="dark" contype="0" conaffinity="0" />
+    <geom name="DetectorLabel" type="mesh" mesh="DetectorLabel" material="DetectorLabel" pos="0.19 1.1 1.0" contype="0" conaffinity="0" />
+    <geom name="DetectorLabel_back" type="box" pos="0.19 1.118 1.0" size="0.22 0.015 0.05" material="navy" contype="0" conaffinity="0" />
+    <geom name="WasteBin" type="cylinder" pos="-1.55 0.95 0.28" size="0.15 0.28" material="steel" contype="0" conaffinity="0" />
+    <geom name="WasteLid" type="cylinder" pos="-1.55 0.95 0.57" size="0.16 0.01" material="dark" contype="0" conaffinity="0" />
+    <geom name="QueueBase00" type="cylinder" pos="-0.95 -4.1 0.03" size="0.13 0.03" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueuePost00" type="cylinder" pos="-0.95 -4.1 0.49" size="0.022 0.46" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueueBelt00" type="box" pos="-0.95 -3.3999999999999995 0.94" size="0.006 0.7 0.025" material="navy" contype="0" conaffinity="0" />
+    <geom name="QueueBase01" type="cylinder" pos="-0.95 -2.7 0.03" size="0.13 0.03" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueuePost01" type="cylinder" pos="-0.95 -2.7 0.49" size="0.022 0.46" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueueBelt01" type="box" pos="-0.95 -2.0 0.94" size="0.006 0.7 0.025" material="navy" contype="0" conaffinity="0" />
+    <geom name="QueueBase02" type="cylinder" pos="-0.95 -1.3 0.03" size="0.13 0.03" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueuePost02" type="cylinder" pos="-0.95 -1.3 0.49" size="0.022 0.46" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueueBase10" type="cylinder" pos="1.0 -4.1 0.03" size="0.13 0.03" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueuePost10" type="cylinder" pos="1.0 -4.1 0.49" size="0.022 0.46" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueueBelt10" type="box" pos="1.0 -3.3999999999999995 0.94" size="0.006 0.7 0.025" material="navy" contype="0" conaffinity="0" />
+    <geom name="QueueBase11" type="cylinder" pos="1.0 -2.7 0.03" size="0.13 0.03" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueuePost11" type="cylinder" pos="1.0 -2.7 0.49" size="0.022 0.46" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueueBelt11" type="box" pos="1.0 -2.0 0.94" size="0.006 0.7 0.025" material="navy" contype="0" conaffinity="0" />
+    <geom name="QueueBase12" type="cylinder" pos="1.0 -1.3 0.03" size="0.13 0.03" material="steel" contype="0" conaffinity="0" />
+    <geom name="QueuePost12" type="cylinder" pos="1.0 -1.3 0.49" size="0.022 0.46" material="steel" contype="0" conaffinity="0" />
+    <geom name="WaitMarker0" type="box" pos="1.55 1.1 0.006" size="0.275 0.275 0.0045" material="teal" contype="0" conaffinity="0" />
+    <geom name="WaitMarker1" type="box" pos="2.3 1.1 0.006" size="0.275 0.275 0.0045" material="teal" contype="0" conaffinity="0" />
+    <geom name="WaitMarker2" type="box" pos="3.05 1.1 0.006" size="0.275 0.275 0.0045" material="teal" contype="0" conaffinity="0" />
+    <geom name="WaitSign" type="mesh" mesh="WaitSign" material="WaitSign" pos="2.3 2.1 1.65" contype="0" conaffinity="0" />
+    <geom name="WaitSign_back" type="box" pos="2.3 2.118 1.65" size="1.05 0.015 0.2" material="navy" contype="0" conaffinity="0" />
+    <geom name="BeltBase-0.8" type="cylinder" pos="-0.8 3.65 0.04" size="0.17 0.04" material="steel" contype="0" conaffinity="0" />
+    <geom name="BeltPost-0.8" type="cylinder" pos="-0.8 3.65 0.5" size="0.025 0.46" material="steel" contype="0" conaffinity="0" />
+    <geom name="BeltCassette-0.8" type="cylinder" pos="-0.8 3.65 0.98" size="0.055 0.055" material="dark" contype="0" conaffinity="0" />
+    <geom name="BeltBase0.8" type="cylinder" pos="0.8 3.65 0.04" size="0.17 0.04" material="steel" contype="0" conaffinity="0" />
+    <geom name="BeltPost0.8" type="cylinder" pos="0.8 3.65 0.5" size="0.025 0.46" material="steel" contype="0" conaffinity="0" />
+    <geom name="BeltCassette0.8" type="cylinder" pos="0.8 3.65 0.98" size="0.055 0.055" material="dark" contype="0" conaffinity="0" />
+    <geom name="ReleaseBelt" type="box" pos="0 3.65 0.98" size="0.8 0.007 0.0325" material="blue" contype="0" conaffinity="0" />
+    <geom name="BeltLatch" type="box" pos="0.8 3.65 0.98" size="0.0225 0.02 0.045" material="dark" contype="0" conaffinity="0" />
+    <geom name="GatePartition-1.7" type="box" pos="-1.7 3.65 0.65" size="0.85 0.0125 0.65" material="glass" contype="0" conaffinity="0" />
+    <geom name="GatePartition1.7" type="box" pos="1.7 3.65 0.65" size="0.85 0.0125 0.65" material="glass" contype="0" conaffinity="0" />
+    <geom name="ChairSeat-3.7" type="box" pos="-3.7 2.8 0.46" size="0.275 0.25 0.035" material="navy" contype="0" conaffinity="0" />
+    <geom name="ChairBack-3.7" type="box" pos="-3.7 3.04 0.75" size="0.275 0.03 0.26" material="navy" contype="0" conaffinity="0" />
+    <geom name="ChairLeg-3.7-0.2" type="box" pos="-3.9000000000000004 2.8 0.23" size="0.02 0.02 0.215" material="steel" contype="0" conaffinity="0" />
+    <geom name="ChairLeg-3.70.2" type="box" pos="-3.5 2.8 0.23" size="0.02 0.02 0.215" material="steel" contype="0" conaffinity="0" />
+    <geom name="ChairSeat-3.0" type="box" pos="-3.0 2.8 0.46" size="0.275 0.25 0.035" material="navy" contype="0" conaffinity="0" />
+    <geom name="ChairBack-3.0" type="box" pos="-3.0 3.04 0.75" size="0.275 0.03 0.26" material="navy" contype="0" conaffinity="0" />
+    <geom name="ChairLeg-3.0-0.2" type="box" pos="-3.2 2.8 0.23" size="0.02 0.02 0.215" material="steel" contype="0" conaffinity="0" />
+    <geom name="ChairLeg-3.00.2" type="box" pos="-2.8 2.8 0.23" size="0.02 0.02 0.215" material="steel" contype="0" conaffinity="0" />
+    <geom name="AlarmSign" type="mesh" mesh="AlarmSign" material="AlarmSign" pos="-3.35 3.3 1.55" contype="0" conaffinity="0" />
+    <geom name="AlarmSign_back" type="box" pos="-3.35 3.3179999999999996 1.55" size="0.85 0.015 0.175" material="navy" contype="0" conaffinity="0" />
+    <geom name="SupervisorDesk" type="box" pos="3.7 2.9 0.76" size="0.65 0.325 0.035" material="white" contype="0" conaffinity="0" />
+    <geom name="DeskLeg3.2" type="box" pos="3.2 2.9 0.38" size="0.025 0.25 0.38" material="steel" contype="0" conaffinity="0" />
+    <geom name="DeskLeg4.2" type="box" pos="4.2 2.9 0.38" size="0.025 0.25 0.38" material="steel" contype="0" conaffinity="0" />
+    <geom name="Monitor" type="box" pos="3.65 2.82 1.02" size="0.22 0.03 0.14" material="navy" contype="0" conaffinity="0" />
+    <geom name="SupervisorLabel" type="mesh" mesh="SupervisorLabel" material="SupervisorLabel" pos="3.7 2.55 0.6" contype="0" conaffinity="0" />
+    <geom name="SupervisorLabel_back" type="box" pos="3.7 2.5679999999999996 0.6" size="0.6 0.015 0.11" material="navy" contype="0" conaffinity="0" />
+    <geom name="GuideRole" type="mesh" mesh="GuideRole" material="GuideRole" pos="-1.65 -1.2 1.67" contype="0" conaffinity="0" />
+    <geom name="GuideRole_back" type="box" pos="-1.65 -1.182 1.67" size="0.5 0.015 0.11" material="navy" contype="0" conaffinity="0" />
+    <geom name="SamplerRole" type="mesh" mesh="SamplerRole" material="SamplerRole" pos="-0.55 1.45 1.67" contype="0" conaffinity="0" />
+    <geom name="SamplerRole_back" type="box" pos="-0.55 1.468 1.67" size="0.5 0.015 0.11" material="navy" contype="0" conaffinity="0" />
+    <geom name="ReviewerRole" type="mesh" mesh="ReviewerRole" material="ReviewerRole" pos="0.9 2.0 1.67" contype="0" conaffinity="0" />
+    <geom name="ReviewerRole_back" type="box" pos="0.9 2.018 1.67" size="0.5 0.015 0.11" material="navy" contype="0" conaffinity="0" />
+  </worldbody>
+</mujoco>

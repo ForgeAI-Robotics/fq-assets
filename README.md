@@ -28,7 +28,7 @@ GitHub 自动生成的源码压缩包不保证包含 LFS 实体。历史 v0.1.0 
 | 目录 | 内容 |
 |---|---|
 | `assets/` | 可乐、圆桌、会议桌、篮子、冰箱；G1+O6/O7、独立 O6/O7 手、D435i；墙面、地面等材质/纹理 |
-| `scenes/` | 固定办公基准场景 |
+| `scenes/` | 固定办公基准场景、机场入口安检预览场景 |
 | `actions/` | stand 初始化、安全站立及 SONIC v3/v4 站立、前后行走、侧移和转向等动作 |
 | `profiles/` | O6/O7 姿态及 G1 初始化配置 |
 | `calibration/` | 标定数据及坐标约定 |
@@ -129,3 +129,7 @@ Baseline 0.1.23 includes three differently oriented, fixed office chairs along t
 ## Six meeting chairs — v0.9.10
 
 Baseline 0.1.24 places three chairs on each long side of the conference table. Original three poses are preserved; opposite chairs follow the same fixed, varied-placement convention with armrests lowered 4 cm.
+
+## 机场入口安检预览场景
+
+新增 `fq:scenes/airport_preview` 0.1.0：[场景说明](scenes/fq/airport_preview/README.md)。提供 USD 与 MuJoCo 静态环境，不含人物、机器人、行李及业务流程；可用于工位布局和视觉预览，尚未完成碰撞与动力学验证。

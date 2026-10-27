@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "fq:scenes/airport_preview",
+  "version": "0.1.0",
+  "name": "机场入口安检预览场景",
+  "description": "入口通道、采样工位、检测仪外壳、等候/隔离区和伸缩隔离带；仅环境预览",
+  "kind": "scene",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "origin": "fq",
+  "upstream_origin": "FQ project-authored concept geometry and rendered signage",
+  "provenance": "scenes/fq/airport_preview/provenance.json",
+  "license_status": "Project-authored environment; no robot, character, bag or third-party model payloads included. See NOTICE.md.",
+  "representations": {
+    "mujoco": "scenes/fq/airport_preview/scene.xml",
+    "usd": "scenes/fq/airport_preview/scene.usdc"
+  },
+  "release_status": "visual_preview",
+  "baseline": false,
+  "randomization_enabled": false,
+  "robot_included": false,
+  "people_included": false,
+  "baggage_included": false,
+  "dependencies": [],
+  "physics_calibrated": false,
+  "capabilities": {
+    "static_visual_preview": true,
+    "collision_validated": false,
+    "device_logic": false,
+    "brain_connected": false
+  },
+  "limitations": [
+    "Concept layout, not surveyed Hongqiao airport CAD",
+    "Detector is a visual housing, not a vendor device model",
+    "Belt is fixed closed in this static scene; no flexible dynamics or opening controller",
+    "No collision/contact/balance/throughput acceptance",
+    "No passenger, robot, baggage, workflow or Connection implementation bundled"
+  ]
+}

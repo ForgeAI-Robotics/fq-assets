@@ -101,6 +101,11 @@
       "id": "fq:articulated/office_chair",
       "version": "0.1.0",
       "manifest": "assets/fq/office_chair/asset.json"
+    },
+    {
+      "id": "fq:scenes/airport_preview",
+      "version": "0.1.0",
+      "manifest": "scenes/fq/airport_preview/asset.json"
     }
   ]
 }
