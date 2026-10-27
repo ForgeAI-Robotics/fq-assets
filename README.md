@@ -132,4 +132,4 @@ Baseline 0.1.24 places three chairs on each long side of the conference table. O
 
 ## 机场入口安检预览场景
 
-新增 `fq:scenes/airport_preview` 0.1.0：[场景说明](scenes/fq/airport_preview/README.md)。提供 USD 与 MuJoCo 静态环境，不含人物、机器人、行李及业务流程；可用于工位布局和视觉预览，尚未完成碰撞与动力学验证。
+新增 `fq:scenes/airport_preview` 0.1.1：[场景说明](scenes/fq/airport_preview/README.md)。提供 USD 与 MuJoCo 静态环境，不含人物、机器人、行李及业务流程；可用于工位布局和视觉预览；已配置 78 个静态碰撞体，并通过 MuJoCo 与 Isaac/PhysX 接触冒烟测试，尚未进行物理参数标定。

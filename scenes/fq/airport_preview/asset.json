@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/airport_preview",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "机场入口安检预览场景",
   "description": "入口通道、采样工位、检测仪外壳、等候/隔离区和伸缩隔离带；仅环境预览",
   "kind": "scene",
@@ -26,15 +26,16 @@
   "physics_calibrated": false,
   "capabilities": {
     "static_visual_preview": true,
-    "collision_validated": false,
+    "collision_validated": true,
     "device_logic": false,
-    "brain_connected": false
+    "brain_connected": false,
+    "static_collision": true
   },
   "limitations": [
     "Concept layout, not surveyed Hongqiao airport CAD",
     "Detector is a visual housing, not a vendor device model",
     "Belt is fixed closed in this static scene; no flexible dynamics or opening controller",
-    "No collision/contact/balance/throughput acceptance",
+    "Static collision smoke tests only; no calibrated contact, robot balance or throughput acceptance",
     "No passenger, robot, baggage, workflow or Connection implementation bundled"
   ]
 }

@@ -1,0 +1,220 @@
+{
+  "asset_id": "fq:scenes/airport_preview",
+  "version": "0.1.1",
+  "collider_count": 78,
+  "collision_geom_names": [
+    "Floor",
+    "BackWall-1",
+    "BackWall1",
+    "ExitLintel",
+    "Column-5.2",
+    "Column5.2",
+    "Window-4",
+    "Mullion-4",
+    "Window-1",
+    "Mullion-1",
+    "Window2",
+    "Mullion2",
+    "Window5",
+    "Mullion5",
+    "CeilingSlat-4",
+    "CeilingSlat-2",
+    "CeilingSlat0",
+    "CeilingSlat2",
+    "CeilingSlat4",
+    "EntranceSign_back",
+    "SignPost-1.6",
+    "SignPost1.6",
+    "Worktop",
+    "TableLeg-1.250.35",
+    "TableLeg-1.250.89",
+    "TableLeg0.150.35",
+    "TableLeg0.150.89",
+    "TableFront",
+    "BagMat",
+    "SwabTray",
+    "NewSwab0",
+    "NewSwab1",
+    "NewSwab2",
+    "DetectorStand",
+    "Detector",
+    "DetectorFace",
+    "DetectorScreen",
+    "DetectorInlet",
+    "WasteBin",
+    "WasteLid",
+    "QueueBase00",
+    "QueuePost00",
+    "QueueBelt00",
+    "QueueBase01",
+    "QueuePost01",
+    "QueueBelt01",
+    "QueueBase02",
+    "QueuePost02",
+    "QueueBase10",
+    "QueuePost10",
+    "QueueBelt10",
+    "QueueBase11",
+    "QueuePost11",
+    "QueueBelt11",
+    "QueueBase12",
+    "QueuePost12",
+    "BeltBase-0.8",
+    "BeltPost-0.8",
+    "BeltCassette-0.8",
+    "BeltBase0.8",
+    "BeltPost0.8",
+    "BeltCassette0.8",
+    "ReleaseBelt",
+    "BeltLatch",
+    "GatePartition-1.7",
+    "GatePartition1.7",
+    "ChairSeat-3.7",
+    "ChairBack-3.7",
+    "ChairLeg-3.7-0.2",
+    "ChairLeg-3.70.2",
+    "ChairSeat-3.0",
+    "ChairBack-3.0",
+    "ChairLeg-3.0-0.2",
+    "ChairLeg-3.00.2",
+    "SupervisorDesk",
+    "DeskLeg3.2",
+    "DeskLeg4.2",
+    "Monitor"
+  ],
+  "visual_only_count": 64,
+  "scope": "Static primitive contacts; fixed closed rigid belt proxy; no robot balance, flexible belt or device workflow validation",
+  "mujoco_dynamic_probes": [
+    {
+      "test": "floor",
+      "passed": true,
+      "final_xyz": [
+        4.0,
+        -3.0,
+        0.04963281815753985
+      ],
+      "contacts": [
+        "Floor",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "worktop",
+      "passed": true,
+      "final_xyz": [
+        -1.0,
+        0.65,
+        0.7921328181575396
+      ],
+      "contacts": [
+        "Worktop",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "detector",
+      "passed": true,
+      "final_xyz": [
+        0.19,
+        1.38,
+        1.1596328181575393
+      ],
+      "contacts": [
+        "Detector",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "belt",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        3.3936526716262163,
+        0.98
+      ],
+      "contacts": [
+        "ReleaseBelt",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "partition",
+      "passed": true,
+      "final_xyz": [
+        1.7,
+        3.3971569615164423,
+        0.6
+      ],
+      "contacts": [
+        "GatePartition1.7",
+        "probe_geom"
+      ]
+    },
+    {
+      "test": "open_passage",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        8.399999999999958,
+        0.6
+      ],
+      "contacts": []
+    }
+  ],
+  "isaac_physx_dynamic_probes": [
+    {
+      "test": "floor",
+      "passed": true,
+      "final_xyz": [
+        4.0,
+        -3.0,
+        0.05000000074505806
+      ]
+    },
+    {
+      "test": "worktop",
+      "passed": true,
+      "final_xyz": [
+        -1.0,
+        0.6499999761581421,
+        0.7924999594688416
+      ]
+    },
+    {
+      "test": "detector",
+      "passed": true,
+      "final_xyz": [
+        0.1899999976158142,
+        1.3799999952316284,
+        1.159999966621399
+      ]
+    },
+    {
+      "test": "belt",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        3.5930001735687256,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "partition",
+      "passed": true,
+      "final_xyz": [
+        1.7000000476837158,
+        3.5875000953674316,
+        0.6000000238418579
+      ]
+    },
+    {
+      "test": "open_passage",
+      "passed": true,
+      "final_xyz": [
+        0.0,
+        14.449921607971191,
+        0.6000000238418579
+      ]
+    }
+  ]
+}
