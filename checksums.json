@@ -5,7 +5,7 @@
     ".gitattributes": "1e0457487bb0a83b153bddb2029a5aa619be0d345c58e6b9995dbdc028b92b9a",
     ".gitignore": "ea4e560ffac3f984d5724da98bc1c0b9d09d82d05db797129fafbe18e9c46b83",
     "NOTICE.md": "6d0ea1991454855b32b70e5df31e1249610868af00fff3e2274d8f042d2264be",
-    "README.md": "6ee91c837faed3b8e18083db8b7ece3ac4043e87a3bba9138e8c5bfaae29a5a1",
+    "README.md": "7be4edd59fcd77f96044091d018b1c37012feade061b498a7399a145322a8764",
     "RELEASE_NOTES.md": "d4cab081fa2577b7dd9a8d6ff380798882ee2d4263dba739ac7e4efecaf7bdbc",
     "RELEASE_NOTES_v0.2.0.md": "4924b013daca44473a502fbb1668f359b3160f629d0911e5078fe1de68f7ab7c",
     "RELEASE_NOTES_v0.3.0.md": "bb6819f4ee955f62ef5302c4987a1fe184653cf08af6160172cd11095d35cd25",
@@ -2200,6 +2200,9 @@
     "scenes/fq/airport_preview/textures/mj_DetectorLabel.png": "c15a8ffb2cef20b1dff0e9cfd49762cd3193b7999ff3de71f250bf4aea58f45b",
     "validation/airport_preview_v011.json": "fac9bab27097fc02a47198ea395509f4064531b6a380205787281ffe616494fc",
     "tools/validate_airport_collision_mujoco.py": "2e2469dfe77129f9804bb8ad2185c2023a019b2a8ccd044fe986c8c5cc863756",
-    "tools/validate_airport_collision_isaac.py": "86dee2f92c78a23b256d171007df5a6ee247e1c5b42b4b0d5e1a29d5f0a6d6d9"
+    "tools/validate_airport_collision_isaac.py": "86dee2f92c78a23b256d171007df5a6ee247e1c5b42b4b0d5e1a29d5f0a6d6d9",
+    "docs/realman_realbot_intake.md": "b096d482efb01991c68ea7ce2adcb2910ed40a2db335174f6ecb9642d78de047",
+    "catalog/intake/realman_realbot.json": "fd7077810c462fee2f39bff49c8a38df4d932632d743523c654b59d2b552d79f",
+    "provenance/realman/realbot_public_source_audit.json": "a8baf331c28d23aaf67ba1f42eb9c6ba2a1d77937dfb8734d0ab9af95a78af45"
   }
 }

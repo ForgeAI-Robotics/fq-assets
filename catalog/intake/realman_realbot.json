@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "kind": "asset_intake",
+  "checked_on": "2026-10-27",
+  "not_runtime_catalog": true,
+  "candidates": [
+    {
+      "candidate_id": "realman:robots/realbot_01",
+      "manufacturer": "RealMan Robotics",
+      "name": "RealBot-01",
+      "requested_on": "2026-10-27",
+      "status": "awaiting_vendor_model",
+      "usable_asset": false,
+      "complete_urdf_found": false,
+      "model_payload_included": false,
+      "representations": {},
+      "product_url": "https://www.realman-robotics.cn/cn/products/realbot-humanoid.html",
+      "developer_docs": "https://develop.realman-robotics.com/wheelRobot/RealBot01/",
+      "missing_for_import": [
+        "Complete whole-body URDF or expandable Xacro including chassis, torso, head and both arms",
+        "All referenced meshes and textures, with relative/package path mapping",
+        "Exact model generation and end-effector variant",
+        "Joint types, axes, limits, origin transforms, mass and inertia",
+        "Collision geometry and collision exclusions",
+        "Permission/license to redistribute model and meshes in fq-assets"
+      ],
+      "evidence": "provenance/realman/realbot_public_source_audit.json"
+    },
+    {
+      "candidate_id": "realman:robots/realbot_l2",
+      "manufacturer": "RealMan Robotics",
+      "name": "RealBot-L2",
+      "requested_on": "2026-10-27",
+      "status": "awaiting_vendor_model",
+      "usable_asset": false,
+      "complete_urdf_found": false,
+      "model_payload_included": false,
+      "representations": {},
+      "product_url": "https://www.realman-robotics.cn/cn/products/realbot-l2.html",
+      "developer_docs": "https://develop.realman-robotics.com/wheelRobot/RealBotL2/",
+      "missing_for_import": [
+        "Complete whole-body URDF or expandable Xacro including chassis, torso, head and both arms",
+        "All referenced meshes and textures, with relative/package path mapping",
+        "Exact model generation and end-effector variant",
+        "Joint types, axes, limits, origin transforms, mass and inertia",
+        "Collision geometry and collision exclusions",
+        "Permission/license to redistribute model and meshes in fq-assets"
+      ],
+      "evidence": "provenance/realman/realbot_public_source_audit.json"
+    },
+    {
+      "candidate_id": "realman:robots/realbot_s2",
+      "manufacturer": "RealMan Robotics",
+      "name": "RealBot-S2",
+      "requested_on": "2026-10-27",
+      "status": "awaiting_vendor_model",
+      "usable_asset": false,
+      "complete_urdf_found": false,
+      "model_payload_included": false,
+      "representations": {},
+      "product_url": "https://www.realman-robotics.cn/cn/products/realbot-s2.html",
+      "developer_docs": "https://develop.realman-robotics.com/wheelRobot/RealBotS2/",
+      "missing_for_import": [
+        "Complete whole-body URDF or expandable Xacro including chassis, torso, head and both arms",
+        "All referenced meshes and textures, with relative/package path mapping",
+        "Exact model generation and end-effector variant",
+        "Joint types, axes, limits, origin transforms, mass and inertia",
+        "Collision geometry and collision exclusions",
+        "Permission/license to redistribute model and meshes in fq-assets"
+      ],
+      "evidence": "provenance/realman/realbot_public_source_audit.json"
+    }
+  ]
+}

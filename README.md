@@ -133,3 +133,7 @@ Baseline 0.1.24 places three chairs on each long side of the conference table. O
 ## 机场入口安检预览场景
 
 新增 `fq:scenes/airport_preview` 0.1.1：[场景说明](scenes/fq/airport_preview/README.md)。提供 USD 与 MuJoCo 静态环境，不含人物、机器人、行李及业务流程；可用于工位布局和视觉预览；已配置 78 个静态碰撞体，并通过 MuJoCo 与 Isaac/PhysX 接触冒烟测试，尚未进行物理参数标定。
+
+## 睿尔曼 RealBot 待接入型号
+
+RealBot-01、L2、S2 的 [来源核查与缺件清单](docs/realman_realbot_intake.md) 已登记。当前尚未取得完整整机 URDF 与网格，未作为可加载资产发布。
