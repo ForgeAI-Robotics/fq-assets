@@ -1,0 +1,23 @@
+{
+  "createdAt": "2019-01-29T18:43:53Z",
+  "updatedAt": "2026-10-28T03:15:30Z",
+  "name": "Backpack",
+  "owner": "OpenRobotics",
+  "description": "Generated with mesh_to_sdf\n    https://bitbucket.org/osrf/mesh_to_sdf",
+  "likes": 0,
+  "downloads": 220075,
+  "filesize": 1778225,
+  "upload_date": "2019-01-29T18:43:50Z",
+  "modify_date": "2023-09-27T16:49:00Z",
+  "license_id": 1,
+  "license_name": "Creative Commons Zero v1.0 Universal",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_image": "https://i.creativecommons.org/p/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/OpenRobotics/models/Backpack/tip/files/thumbnails/1.png",
+  "private": false,
+  "slug": "backpack",
+  "source_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/Backpack",
+  "archive_sha256": "09681692d493a7f9d5310632205069811742190d321224ee3f75fae1b6a41c7e"
+}

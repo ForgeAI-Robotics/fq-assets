@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="swab_supply_box">
+  <compiler angle="radian" autolimits="true" />
+  <option timestep=".0002" integrator="implicitfast" iterations="100" />
+  <asset>
+    <material name="plastic" rgba=".72 .77 .8 1" specular=".3" shininess=".3" />
+    <material name="blue" rgba=".06 .27 .5 1" specular=".2" />
+    <texture name="fibers" type="2d" file="../flexible_sampling_sheet/fibers.png" />
+    <material name="nonwoven" texture="fibers" specular=".08" shininess=".05" texrepeat="3 1" />
+  </asset>
+  <worldbody>
+    <geom name="floor" type="box" pos="0 0 0.002" size="0.11 0.043 0.002" material="plastic" mass=".04" />
+    <geom name="left_wall" type="box" pos="-0.108 0 0.028" size="0.002 0.043 0.024" material="plastic" mass=".04" />
+    <geom name="right_wall" type="box" pos="0.108 0 0.028" size="0.002 0.043 0.024" material="plastic" mass=".04" />
+    <geom name="rear_wall" type="box" pos="0 0.041 0.028" size="0.106 0.002 0.024" material="plastic" mass=".04" />
+    <geom name="front_low" type="box" pos="0 -0.041 0.012" size="0.106 0.002 0.008" material="plastic" mass=".04" />
+    <geom name="front_left" type="box" pos="-0.068 -0.041 0.036" size="0.038 0.002 0.016" material="plastic" mass=".04" />
+    <geom name="front_right" type="box" pos="0.068 -0.041 0.036" size="0.038 0.002 0.016" material="plastic" mass=".04" />
+    <geom name="insert_plate" type="box" pos="0 0 0.012" size="0.094 0.025 0.008" material="blue" mass=".04" />
+    <body name="lid" pos="0 .043 .061">
+      <joint name="lid_hinge" type="hinge" axis="-1 0 0" range="0 1.92" damping=".02" />
+      <geom name="lid_panel" type="box" pos="0 -0.043 0" size="0.112 0.045 0.0025" material="plastic" mass=".04" />
+      <geom name="lid_handle" type="box" pos="0 -0.073 0.005" size="0.018 0.005 0.003" material="blue" mass=".04" />
+    </body>
+    <site name="pick_frame" pos="-.075 0 .024" size=".002" rgba="0 1 0 .4" />
+    <geom name="collection_table" type="plane" size=".5 .3 .01" rgba=".2 .26 .32 1" />
+    <flexcomp name="sampling_sheet" type="grid" dim="2" count="18 5 1" spacing=".01 .0075 .001" pos="0 0 .0252" radius=".00025" mass=".0006" rgba=".94 .94 .88 1" material="nonwoven">
+      <elasticity young="2000000" poisson=".3" thickness=".0004" elastic2d="bend" damping=".002" />
+      <edge equality="true" solref=".0005 1" solimp=".99 .9999 .0001" />
+      <contact selfcollide="auto" friction=".6 .005 .0001" solref=".0004 1" solimp=".98 .999 .0001" />
+    </flexcomp>
+    <body name="sheet_clamp" mocap="true" pos="-.085 0 .0252">
+      <geom name="clamp_visual" type="box" size=".005 .018 .004" rgba=".12 .15 .18 1" contype="0" conaffinity="0" />
+    </body>
+    <geom name="stock_sheet_0" type="box" pos="0 0 0.0202" size=".085 .015 .0002" rgba="0.88 0.88 0.84 1" />
+    <geom name="stock_sheet_1" type="box" pos="0 0 0.020749999999999998" size=".085 .015 .0002" rgba="0.89 0.89 0.85 1" />
+    <geom name="stock_sheet_2" type="box" pos="0 0 0.0213" size=".085 .015 .0002" rgba="0.9 0.9 0.86 1" />
+    <geom name="stock_sheet_3" type="box" pos="0 0 0.021849999999999998" size=".085 .015 .0002" rgba="0.91 0.91 0.87 1" />
+    <geom name="stock_sheet_4" type="box" pos="0 0 0.0224" size=".085 .015 .0002" rgba="0.92 0.92 0.88 1" />
+    <geom name="stock_sheet_5" type="box" pos="0 0 0.022949999999999998" size=".085 .015 .0002" rgba="0.93 0.93 0.89 1" />
+    <geom name="stock_sheet_6" type="box" pos="0 0 0.0235" size=".085 .015 .0002" rgba="0.94 0.94 0.8999999999999999 1" />
+    <geom name="stock_sheet_7" type="box" pos="0 0 0.02405" size=".085 .015 .0002" rgba="0.95 0.95 0.9099999999999999 1" />
+    <geom name="stock_sheet_8" type="box" pos="0 0 0.0246" size=".085 .015 .0002" rgba="0.96 0.96 0.9199999999999999 1" />
+  </worldbody>
+  <actuator>
+    <position name="lid_position" joint="lid_hinge" kp="5" kv=".2" ctrlrange="0 1.92" forcerange="-1 1" />
+  </actuator>
+  <default>
+    <geom solref=".0004 1" solimp=".98 .999 .0001" />
+  </default>
+  <equality>
+    <connect name="clamp_0" body1="sampling_sheet_0" body2="sheet_clamp" anchor="0 0 0" active="false" solref=".003 1" />
+    <connect name="clamp_1" body1="sampling_sheet_1" body2="sheet_clamp" anchor="0 0 0" active="false" solref=".003 1" />
+    <connect name="clamp_2" body1="sampling_sheet_2" body2="sheet_clamp" anchor="0 0 0" active="false" solref=".003 1" />
+    <connect name="clamp_3" body1="sampling_sheet_3" body2="sheet_clamp" anchor="0 0 0" active="false" solref=".003 1" />
+    <connect name="clamp_4" body1="sampling_sheet_4" body2="sheet_clamp" anchor="0 0 0" active="false" solref=".003 1" />
+  </equality>
+</mujoco>

@@ -1,0 +1,152 @@
+[
+  {
+    "name": "floor",
+    "pos": [
+      0,
+      0,
+      0.002
+    ],
+    "size": [
+      0.11,
+      0.043,
+      0.002
+    ],
+    "material": "plastic",
+    "body": "box"
+  },
+  {
+    "name": "left_wall",
+    "pos": [
+      -0.108,
+      0,
+      0.028
+    ],
+    "size": [
+      0.002,
+      0.043,
+      0.024
+    ],
+    "material": "plastic",
+    "body": "box"
+  },
+  {
+    "name": "right_wall",
+    "pos": [
+      0.108,
+      0,
+      0.028
+    ],
+    "size": [
+      0.002,
+      0.043,
+      0.024
+    ],
+    "material": "plastic",
+    "body": "box"
+  },
+  {
+    "name": "rear_wall",
+    "pos": [
+      0,
+      0.041,
+      0.028
+    ],
+    "size": [
+      0.106,
+      0.002,
+      0.024
+    ],
+    "material": "plastic",
+    "body": "box"
+  },
+  {
+    "name": "front_low",
+    "pos": [
+      0,
+      -0.041,
+      0.012
+    ],
+    "size": [
+      0.106,
+      0.002,
+      0.008
+    ],
+    "material": "plastic",
+    "body": "box"
+  },
+  {
+    "name": "front_left",
+    "pos": [
+      -0.068,
+      -0.041,
+      0.036
+    ],
+    "size": [
+      0.038,
+      0.002,
+      0.016
+    ],
+    "material": "plastic",
+    "body": "box"
+  },
+  {
+    "name": "front_right",
+    "pos": [
+      0.068,
+      -0.041,
+      0.036
+    ],
+    "size": [
+      0.038,
+      0.002,
+      0.016
+    ],
+    "material": "plastic",
+    "body": "box"
+  },
+  {
+    "name": "insert_plate",
+    "pos": [
+      0,
+      0,
+      0.012
+    ],
+    "size": [
+      0.094,
+      0.025,
+      0.008
+    ],
+    "material": "blue",
+    "body": "box"
+  },
+  {
+    "name": "lid_panel",
+    "pos": [
+      0,
+      -0.043,
+      0
+    ],
+    "size": [
+      0.112,
+      0.045,
+      0.0025
+    ],
+    "material": "plastic",
+    "body": "lid"
+  },
+  {
+    "name": "lid_handle",
+    "pos": [
+      0,
+      -0.073,
+      0.005
+    ],
+    "size": [
+      0.018,
+      0.005,
+      0.003
+    ],
+    "material": "blue",
+    "body": "lid"
+  }
+]

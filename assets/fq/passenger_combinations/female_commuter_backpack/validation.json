@@ -1,0 +1,20 @@
+{
+  "id": "female_commuter_backpack",
+  "usd_missing_dependencies": [],
+  "attachment_motion_max_m": 0.009540901051355287,
+  "render_review_pending": false,
+  "isaac_stage_load": true,
+  "isaac_render": true,
+  "physx_dynamic_test": false,
+  "usd_skeleton_binding_valid": true,
+  "bone_attachment_max_matrix_error": 0.00019253062768143092,
+  "checked_frames": [
+    0,
+    15,
+    30,
+    45,
+    60
+  ],
+  "matrix_tolerance": 0.001,
+  "precision_note": "USD animation stores float rotations and half-precision scales"
+}

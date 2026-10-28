@@ -1,0 +1,36 @@
+{
+  "createdAt": "2019-05-13T23:25:36Z",
+  "updatedAt": "2026-10-28T03:09:25Z",
+  "name": "JanSport Backpack Red",
+  "owner": "OpenRobotics",
+  "description": "Red JanSport backpack.",
+  "likes": 0,
+  "downloads": 8923,
+  "filesize": 485259,
+  "upload_date": "2019-05-13T23:25:33Z",
+  "modify_date": "2023-09-27T16:35:15Z",
+  "license_id": 1,
+  "license_name": "Creative Commons Zero v1.0 Universal",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_image": "https://i.creativecommons.org/p/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/OpenRobotics/models/JanSport%20Backpack%20Red/tip/files/thumbnails/1.jpg",
+  "private": false,
+  "tags": [
+    "artifact"
+  ],
+  "slug": "jansport_backpack_red",
+  "source_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/JanSport%20Backpack%20Red",
+  "archive_sha256": "5eccf9854e6e51babe11af20d462850cb1c3bc3d5248b398eb15ae947708e708",
+  "changes": [
+    "Metric coordinates preserved; XY centered; Z grounded",
+    "USD/MJCF/GLB conversion; color and available PBR maps retained",
+    "Unrelated Gazebo sensor/plugin includes omitted"
+  ],
+  "source_offset_m": [
+    1.4901161193847656e-08,
+    -0.0013274401426315308,
+    -0.003528180066496134
+  ]
+}

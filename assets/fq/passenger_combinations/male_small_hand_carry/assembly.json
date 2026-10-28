@@ -1,0 +1,40 @@
+{
+  "human_asset": "third_party:characters/rocketbox_male_adult_01",
+  "bag_asset": "third_party:bags/gso_digital_camo_double_decker_lunch_bag",
+  "mode": "hand",
+  "attachment_bone": "Bip01 R Hand",
+  "usd_joint": "Bip01_Pelvis/Bip01_Spine/Bip01_Spine1/Bip01_Spine2/Bip01_Neck/Bip01_R_Clavicle/Bip01_R_UpperArm/Bip01_R_Forearm/Bip01_R_Hand",
+  "bone_local_matrix_column_major": [
+    [
+      -21.774152605874395,
+      -32.86596038589148,
+      -91.90054590637826,
+      28.903947778522443
+    ],
+    [
+      94.96258767807893,
+      14.609922704331169,
+      -27.724561912482322,
+      9.22740168503725
+    ],
+    [
+      22.538523093308907,
+      -93.3079786311947,
+      28.029161494426,
+      -8.736057610000755
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "bag_scale": 1.0,
+  "authored_frames": 61,
+  "bag_follows_bone": true,
+  "straps": "custom fitted visual ribbons; source folded straps retained on scan",
+  "hand_grip_force_validated": false,
+  "cloth_strap_dynamics": false,
+  "walking_controller": false
+}

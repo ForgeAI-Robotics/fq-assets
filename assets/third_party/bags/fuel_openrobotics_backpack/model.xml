@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="fuel_openrobotics_backpack">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="bag" file="model.obj" />
+    <texture name="color" type="2d" file="color.png" />
+    <material name="fabric" texture="color" specular=".15" shininess=".1" />
+  </asset>
+  <worldbody>
+    <body name="bag">
+      <freejoint name="root" />
+      <geom name="bag_visual" type="mesh" mesh="bag" material="fabric" mass="0.5" contype="1" conaffinity="1" friction=".7 .005 .0001" />
+    </body>
+  </worldbody>
+</mujoco>

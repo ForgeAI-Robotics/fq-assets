@@ -1,0 +1,126 @@
+{
+  "sources": [
+    {
+      "repository": "https://github.com/microsoft/Microsoft-Rocketbox",
+      "commit": "0943055db6ec570bcef9f2c8b41c9e5467c808f9",
+      "source_character": "Female_Adult_05",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "17474e386e0b9e1a700cc3d06b2b0882a2c376d9c6b49c7f8274409b8f8d2352",
+          "bytes": 1066,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/LICENSE.md"
+        },
+        {
+          "path": "Assets/Avatars/Adults/Female_Adult_05/Export/Female_Adult_05_facial.fbx",
+          "sha256": "8fdc024d3a1088839712b9ea2510322d3e9b03e2f20b9f9554e4c7cb30f58d16",
+          "bytes": 2158576,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Female_Adult_05/Export/Female_Adult_05_facial.fbx"
+        },
+        {
+          "path": "Assets/Avatars/Adults/Female_Adult_05/Textures/f005_body_color.tga",
+          "sha256": "e15c1c5c0a7fca62be865c426c69ecad703da904d2456d040bbba73cedae8e81",
+          "bytes": 12582956,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Female_Adult_05/Textures/f005_body_color.tga"
+        },
+        {
+          "path": "Assets/Avatars/Adults/Female_Adult_05/Textures/f005_body_normal.tga",
+          "sha256": "ec9178c102448266f0c910a5ba9b0e87ee4d57c8d3428a6db5cdb4e28e5d15c2",
+          "bytes": 12582956,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Female_Adult_05/Textures/f005_body_normal.tga"
+        },
+        {
+          "path": "Assets/Avatars/Adults/Female_Adult_05/Textures/f005_body_specular.tga",
+          "sha256": "c3787081a845994f8852e83a8b4e6ec71a9b96c811f08466c52293f806999aba",
+          "bytes": 12582956,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Female_Adult_05/Textures/f005_body_specular.tga"
+        },
+        {
+          "path": "Assets/Avatars/Adults/Female_Adult_05/Textures/f005_head_color.tga",
+          "sha256": "4e3be559aab4a52d5b55c65447daa8922e633cac049361386a185753d072f1e6",
+          "bytes": 12582956,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Female_Adult_05/Textures/f005_head_color.tga"
+        },
+        {
+          "path": "Assets/Avatars/Adults/Female_Adult_05/Textures/f005_head_normal.tga",
+          "sha256": "9a700fa27b8d840c22b42534a34e69e47d919524885e589dba2394e055ae2c25",
+          "bytes": 12582956,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Female_Adult_05/Textures/f005_head_normal.tga"
+        },
+        {
+          "path": "Assets/Avatars/Adults/Female_Adult_05/Textures/f005_head_specular.tga",
+          "sha256": "3bb55a2332d762e319620e30b4c53c98c5b6e1dd284c69335009ba8c2707d8b6",
+          "bytes": 12582956,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Female_Adult_05/Textures/f005_head_specular.tga"
+        },
+        {
+          "path": "Assets/Avatars/Adults/Female_Adult_05/Textures/f005_opacity_color.tga",
+          "sha256": "8573246d70931d4a2b0fc330024c2b3df4f450de368b4eedd21bb3276855d456",
+          "bytes": 16777260,
+          "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Female_Adult_05/Textures/f005_opacity_color.tga"
+        }
+      ],
+      "modifications": [
+        "Repaired source FBX absolute texture references",
+        "Converted selected TGA maps to PNG without resizing",
+        "Recentered XY and grounded feet, retaining source metric height",
+        "Converted to GLB with skin and facial targets and UsdSkel with skeletal inspection motion",
+        "Generated static OBJ/MJCF preview and non-anatomical navigation capsule"
+      ],
+      "source_fbx_included": false,
+      "original_downloads_retained_outside_repository": true
+    },
+    {
+      "createdAt": "2020-09-03T16:59:38Z",
+      "updatedAt": "2026-10-27T03:36:25Z",
+      "name": "Jansport_School_Backpack_Blue_Streak",
+      "owner": "GoogleResearch",
+      "description": "Jansport School Backpack, Blue Streak",
+      "likes": 1,
+      "downloads": 3486,
+      "filesize": 8958755,
+      "upload_date": "2020-09-03T16:59:34Z",
+      "modify_date": "2020-09-18T20:10:04Z",
+      "license_id": 2,
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+      "permission": 0,
+      "url_name": "",
+      "thumbnail_url": "/GoogleResearch/models/Jansport_School_Backpack_Blue_Streak/tip/files/thumbnails/0.jpg",
+      "private": false,
+      "categories": [
+        "Bag"
+      ],
+      "source_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Jansport_School_Backpack_Blue_Streak",
+      "download_url": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Jansport_School_Backpack_Blue_Streak/tip/Jansport_School_Backpack_Blue_Streak.zip",
+      "archive_sha256": "6789c4bcbf4be4acb57fa8e275e18520a2ff02856613cf30a79a5cdbbb20714a",
+      "modifications": [
+        "XY centered; Z grounded; metric scale unchanged",
+        "USD and MuJoCo format conversion",
+        "Approximate convex hull collision and mass"
+      ],
+      "source_files": {
+        "model.config": "1e19e31456b216103fda5e0a8fd613218650e659a194c959dcc9bf56dcf1817a",
+        "model.sdf": "0ec2c65fbdbd1c926cd8051ac8a5f513cd7126f681733400d8ea1d7fd02b8f55",
+        "source.json": "9d777bb90901590c4bab10b3369a7ef1f49387eaa8d14ef44bf4d5140d0e6b04",
+        "metadata.pbtxt": "7dc7600d41ac95cc9a1e2386521dcf74b6dc8f94c85a1b80a75b7f2e583d55ac",
+        "thumbnails/1.jpg": "899df6895485dd76e2880fb1cfaaaf51087d15f0dbd3f396489befee7d059bbb",
+        "thumbnails/4.jpg": "0ba7b29b48538408ae3d0de1c8e5ffde50149c4218b35568bfe9d16d52065520",
+        "thumbnails/0.jpg": "433591746893bf2a38950faf8a4e5994b4ed12e7add68994e4db753c6bd214ab",
+        "thumbnails/3.jpg": "5043121e0f2bed2efd5978880883202be706147bdedea33ba0a78040ef271257",
+        "thumbnails/2.jpg": "83c0f1192280033fd4c0714ffefb269668c9bbf179b1338c09cf76326e878c47",
+        "materials/textures/texture.png": "63fb44985112382ed53e394e703b96be060aaf7aa8432b4f63f77144f74d27d0",
+        "meshes/model.mtl": "857543aabcc8a25b1c200b087d6bbe7395cd865666930960fa0f0aec421ea6aa",
+        "meshes/model.obj": "922ecd2e715a3a07b569555621586607ae041157e57ec012850982a428a71cf0"
+      }
+    }
+  ],
+  "changes": [
+    "Relaxed shoulder pose",
+    "Fitted shoulder ribbons or carry handle",
+    "Bone-local bag attachment and short breathing/arm pose animation",
+    "Static skinned OBJ preview"
+  ]
+}

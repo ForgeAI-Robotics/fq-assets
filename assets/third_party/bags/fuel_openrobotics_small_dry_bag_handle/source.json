@@ -1,0 +1,23 @@
+{
+  "createdAt": "2022-04-13T20:38:45Z",
+  "updatedAt": "2026-10-27T13:40:07Z",
+  "name": "Small Dry Bag Handle",
+  "owner": "OpenRobotics",
+  "description": "Small Dry Bag with Handle",
+  "likes": 0,
+  "downloads": 1056,
+  "filesize": 2443354,
+  "upload_date": "2022-04-13T20:38:43Z",
+  "modify_date": "2023-09-27T12:43:32Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/OpenRobotics/models/Small%20Dry%20Bag%20Handle/tip/files/thumbnails/1.png",
+  "private": false,
+  "slug": "small_dry_bag_handle",
+  "source_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/Small%20Dry%20Bag%20Handle",
+  "archive_sha256": "bed27185681f001f8deef5704b32662dbc294ee81cb636fd02948f2c9acaae83"
+}

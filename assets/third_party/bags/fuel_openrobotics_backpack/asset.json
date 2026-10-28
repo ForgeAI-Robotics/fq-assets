@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "third_party:bags/fuel_openrobotics_backpack",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "Backpack",
+  "description": "Gazebo Fuel / OpenRobotics bag prop",
+  "origin": "third_party",
+  "upstream_origin": "Gazebo Fuel / OpenRobotics",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "CC0-1.0",
+  "representations": {
+    "mujoco": "assets/third_party/bags/fuel_openrobotics_backpack/model.xml",
+    "usd": "assets/third_party/bags/fuel_openrobotics_backpack/model.usdc",
+    "glb": "assets/third_party/bags/fuel_openrobotics_backpack/model.glb"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.44157645106315613,
+    0.2636151909828186,
+    0.5223929286003113
+  ],
+  "mass_kg": 0.5,
+  "physics_calibrated": false,
+  "provenance": "assets/third_party/bags/fuel_openrobotics_backpack/provenance.json",
+  "collision": "convex hull of visual mesh",
+  "limitations": [
+    "Rigid prop; no soft straps or fabric deformation",
+    "Wheels, zippers and pull handles are fixed geometry",
+    "Mass/friction estimated; no contents or detection logic",
+    "Convex collision may close visual openings; source dry-bag compound collision approximate"
+  ]
+}

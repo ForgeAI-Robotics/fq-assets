@@ -1,0 +1,23 @@
+{
+  "createdAt": "2021-04-01T08:26:16Z",
+  "updatedAt": "2026-10-27T13:44:44Z",
+  "name": "Suitcase2H",
+  "owner": "OpenRobotics",
+  "description": "Small pink suitcase with handle up.",
+  "likes": 0,
+  "downloads": 606,
+  "filesize": 1702635,
+  "upload_date": "2021-04-01T08:26:14Z",
+  "modify_date": "2023-09-27T14:38:40Z",
+  "license_id": 1,
+  "license_name": "Creative Commons Zero v1.0 Universal",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_image": "https://i.creativecommons.org/p/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/OpenRobotics/models/Suitcase2H/tip/files/thumbnails/1.png",
+  "private": false,
+  "slug": "suitcase2h",
+  "source_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/Suitcase2H",
+  "archive_sha256": "69018add5ae304e4a0c5dd59605c492dcd78fe5142963fc6acf7a9b5db07c082"
+}

@@ -1,0 +1,26 @@
+{
+  "outer_dimensions_m": [
+    0.224,
+    0.09,
+    0.0635
+  ],
+  "inner_xy_m": [
+    0.212,
+    0.078
+  ],
+  "lid_joint": "lid_hinge",
+  "lid_open_rad": 1.65,
+  "pick_frame_m": [
+    -0.075,
+    0,
+    0.024
+  ],
+  "compatible_sheet_m": [
+    0.17,
+    0.03,
+    0.0004
+  ],
+  "concept_capacity": 10,
+  "single_sheet_separation_validated": false,
+  "sealed_container_certification": false
+}

@@ -1,0 +1,4 @@
+Source contributor: OpenRobotics, Gazebo Fuel
+CC-BY-4.0: http://creativecommons.org/licenses/by/4.0/
+Source: https://fuel.gazebosim.org/1.0/OpenRobotics/models/Small%20Dry%20Bag%20Handle
+Changes: format conversion, grounding, collision adaptation; see provenance.json.

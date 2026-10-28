@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "fq:articulated/swab_supply_box",
+  "version": "0.1.0",
+  "kind": "articulated",
+  "name": "采样布料盒 · 翻盖 / 取片缺口",
+  "description": "空腔复合碰撞；铰链盖；柔性顶片取出示例",
+  "origin": "fq",
+  "upstream_origin": "FQ authored asset / research prototype",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license_status": "See NOTICE.md; upstream licenses remain applicable",
+  "representations": {
+    "mujoco": "assets/fq/swab_supply_box/model.xml",
+    "usd": "assets/fq/swab_supply_box/model.usda",
+    "mujoco_demo": "assets/fq/swab_supply_box/dispensing_demo.xml"
+  },
+  "dependencies": [
+    {
+      "id": "fq:deformables/flexible_sampling_sheet",
+      "version": "0.1.0"
+    }
+  ],
+  "physics_calibrated": false,
+  "dimensions_m": [
+    0.224,
+    0.09,
+    0.0635
+  ],
+  "initial_joint_positions": {
+    "lid_hinge": 1.65
+  },
+  "limitations": [
+    "Prototype dimensions and dynamics; not a replicated commercial supply box",
+    "Top sheet is flexible; nine lower stock sheets are fixed spacers",
+    "Edge equality clamp approximates grip; no actual gripper friction or stack singulation validation",
+    "MuJoCo motion tested; USD hinge authored but PhysX motion not validated"
+  ]
+}

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="swab_supply_box">
+  <compiler angle="radian" autolimits="true" />
+  <option timestep=".001" />
+  <asset>
+    <material name="plastic" rgba=".72 .77 .8 1" specular=".3" shininess=".3" />
+    <material name="blue" rgba=".06 .27 .5 1" specular=".2" />
+  </asset>
+  <worldbody>
+    <geom name="floor" type="box" pos="0 0 0.002" size="0.11 0.043 0.002" material="plastic" mass=".04" />
+    <geom name="left_wall" type="box" pos="-0.108 0 0.028" size="0.002 0.043 0.024" material="plastic" mass=".04" />
+    <geom name="right_wall" type="box" pos="0.108 0 0.028" size="0.002 0.043 0.024" material="plastic" mass=".04" />
+    <geom name="rear_wall" type="box" pos="0 0.041 0.028" size="0.106 0.002 0.024" material="plastic" mass=".04" />
+    <geom name="front_low" type="box" pos="0 -0.041 0.012" size="0.106 0.002 0.008" material="plastic" mass=".04" />
+    <geom name="front_left" type="box" pos="-0.068 -0.041 0.036" size="0.038 0.002 0.016" material="plastic" mass=".04" />
+    <geom name="front_right" type="box" pos="0.068 -0.041 0.036" size="0.038 0.002 0.016" material="plastic" mass=".04" />
+    <geom name="insert_plate" type="box" pos="0 0 0.012" size="0.094 0.025 0.008" material="blue" mass=".04" />
+    <body name="lid" pos="0 .043 .061">
+      <joint name="lid_hinge" type="hinge" axis="-1 0 0" range="0 1.92" damping=".02" />
+      <geom name="lid_panel" type="box" pos="0 -0.043 0" size="0.112 0.045 0.0025" material="plastic" mass=".04" />
+      <geom name="lid_handle" type="box" pos="0 -0.073 0.005" size="0.018 0.005 0.003" material="blue" mass=".04" />
+    </body>
+    <site name="pick_frame" pos="-.075 0 .024" size=".002" rgba="0 1 0 .4" />
+  </worldbody>
+  <actuator>
+    <position name="lid_position" joint="lid_hinge" kp="5" kv=".2" ctrlrange="0 1.92" forcerange="-1 1" />
+  </actuator>
+</mujoco>

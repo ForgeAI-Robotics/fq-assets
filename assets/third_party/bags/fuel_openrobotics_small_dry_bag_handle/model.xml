@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="fuel_openrobotics_small_dry_bag_handle">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="bag" file="model.obj" />
+    <texture name="color" type="2d" file="color.png" />
+    <material name="fabric" texture="color" specular=".15" shininess=".1" />
+  </asset>
+  <worldbody>
+    <body name="bag">
+      <freejoint name="root" />
+      <geom name="bag_visual" type="mesh" mesh="bag" material="fabric" mass="0" contype="0" conaffinity="0" friction=".7 .005 .0001" />
+      <geom name="collision_0" type="cylinder" pos="-4.078447863693237e-05 0.0012751896965026849 0.11951245958060026" euler="0.0 0.0 0.0" mass="0.0625" rgba="0 0 0 0" group="3" friction=".7 .005 .0001" size="0.0797048 0.119467" />
+      <geom name="collision_1" type="cylinder" pos="-0.051719065778636934 0.0012751896965026849 0.25664845958060023" euler="0.0 0.174533 0.0" mass="0.0625" rgba="0 0 0 0" group="3" friction=".7 .005 .0001" size="0.013773 0.0296278" />
+      <geom name="collision_2" type="cylinder" pos="0.05165723422136307 0.0012751896965026849 0.25664845958060023" euler="0.0 -0.174533 0.0" mass="0.0625" rgba="0 0 0 0" group="3" friction=".7 .005 .0001" size="0.013773 0.0296278" />
+      <geom name="collision_3" type="box" pos="-0.0012304757786369325 0.0006902896965026856 0.2863364595806003" euler="0.0 0.0 0.0" mass="0.0625" rgba="0 0 0 0" group="3" friction=".7 .005 .0001" size="0.01906685 0.010073 0.002552" />
+      <geom name="collision_4" type="box" pos="-0.028031165778636933 0.0006894896965026868 0.2850624595806003" euler="0.0 -0.36 0.0" mass="0.0625" rgba="0 0 0 0" group="3" friction=".7 .005 .0001" size="0.0095 0.008 0.00125" />
+      <geom name="collision_5" type="box" pos="0.026468834221363067 0.0006894896965026868 0.2850624595806003" euler="0.0 0.36 0.0" mass="0.0625" rgba="0 0 0 0" group="3" friction=".7 .005 .0001" size="0.0095 0.008 0.00125" />
+      <geom name="collision_6" type="box" pos="-0.02653116577863693 0.0006894896965026868 0.2900624595806003" euler="0.0 0.42 0.0" mass="0.0625" rgba="0 0 0 0" group="3" friction=".7 .005 .0001" size="0.0095 0.012 0.0015" />
+      <geom name="collision_7" type="box" pos="0.026468834221363067 0.0006894896965026868 0.2900624595806003" euler="0.0 -0.42 0.0" mass="0.0625" rgba="0 0 0 0" group="3" friction=".7 .005 .0001" size="0.0095 0.012 0.0015" />
+    </body>
+  </worldbody>
+</mujoco>

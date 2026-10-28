@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "third_party:bags/fuel_openrobotics_suitcase1h",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "Suitcase1H",
+  "description": "Gazebo Fuel / OpenRobotics bag prop",
+  "origin": "third_party",
+  "upstream_origin": "Gazebo Fuel / OpenRobotics",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "CC0-1.0",
+  "representations": {
+    "mujoco": "assets/third_party/bags/fuel_openrobotics_suitcase1h/model.xml",
+    "usd": "assets/third_party/bags/fuel_openrobotics_suitcase1h/model.usdc",
+    "glb": "assets/third_party/bags/fuel_openrobotics_suitcase1h/model.glb"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.294064998626709,
+    0.4872860014438629,
+    0.9890629649162292
+  ],
+  "mass_kg": 2.5,
+  "physics_calibrated": false,
+  "provenance": "assets/third_party/bags/fuel_openrobotics_suitcase1h/provenance.json",
+  "collision": "convex hull of visual mesh",
+  "limitations": [
+    "Rigid prop; no soft straps or fabric deformation",
+    "Wheels, zippers and pull handles are fixed geometry",
+    "Mass/friction estimated; no contents or detection logic",
+    "Convex collision may close visual openings; source dry-bag compound collision approximate"
+  ]
+}

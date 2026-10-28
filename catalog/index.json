@@ -176,6 +176,61 @@
       "id": "fq:objects/sampling_swab",
       "version": "0.1.0",
       "manifest": "assets/fq/sampling_swab/asset.json"
+    },
+    {
+      "id": "fq:deformables/flexible_sampling_sheet",
+      "version": "0.1.0",
+      "manifest": "assets/fq/flexible_sampling_sheet/asset.json"
+    },
+    {
+      "id": "fq:articulated/swab_supply_box",
+      "version": "0.1.0",
+      "manifest": "assets/fq/swab_supply_box/asset.json"
+    },
+    {
+      "id": "fq:characters/female_commuter_backpack",
+      "version": "0.1.0",
+      "manifest": "assets/fq/passenger_combinations/female_commuter_backpack/asset.json"
+    },
+    {
+      "id": "fq:characters/male_commuter_backpack",
+      "version": "0.1.0",
+      "manifest": "assets/fq/passenger_combinations/male_commuter_backpack/asset.json"
+    },
+    {
+      "id": "fq:characters/male_small_hand_carry",
+      "version": "0.1.0",
+      "manifest": "assets/fq/passenger_combinations/male_small_hand_carry/asset.json"
+    },
+    {
+      "id": "third_party:bags/fuel_openrobotics_backpack",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/fuel_openrobotics_backpack/asset.json"
+    },
+    {
+      "id": "third_party:bags/fuel_openrobotics_jansport_backpack_red",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/fuel_openrobotics_jansport_backpack_red/asset.json"
+    },
+    {
+      "id": "third_party:bags/fuel_openrobotics_small_dry_bag",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/fuel_openrobotics_small_dry_bag/asset.json"
+    },
+    {
+      "id": "third_party:bags/fuel_openrobotics_small_dry_bag_handle",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/fuel_openrobotics_small_dry_bag_handle/asset.json"
+    },
+    {
+      "id": "third_party:bags/fuel_openrobotics_suitcase1h",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/fuel_openrobotics_suitcase1h/asset.json"
+    },
+    {
+      "id": "third_party:bags/fuel_openrobotics_suitcase2h",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/bags/fuel_openrobotics_suitcase2h/asset.json"
     }
   ]
 }

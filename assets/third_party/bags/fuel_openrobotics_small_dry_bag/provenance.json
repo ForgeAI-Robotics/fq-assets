@@ -1,0 +1,33 @@
+{
+  "createdAt": "2022-03-17T20:36:24Z",
+  "updatedAt": "2026-10-27T13:40:54Z",
+  "name": "Small Dry Bag",
+  "owner": "OpenRobotics",
+  "description": "Small Dry Bag",
+  "likes": 0,
+  "downloads": 1015,
+  "filesize": 8173905,
+  "upload_date": "2022-03-17T20:36:21Z",
+  "modify_date": "2023-09-27T12:46:38Z",
+  "license_id": 2,
+  "license_name": "Creative Commons Attribution 4.0 International",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_image": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+  "permission": 0,
+  "url_name": "",
+  "thumbnail_url": "/OpenRobotics/models/Small%20Dry%20Bag/tip/files/thumbnails/1.png",
+  "private": false,
+  "slug": "small_dry_bag",
+  "source_url": "https://fuel.gazebosim.org/1.0/OpenRobotics/models/Small%20Dry%20Bag",
+  "archive_sha256": "8f7306adabcf35c8b46fdc2a4a30b70a964e5d78019e3592e3d9efe81ff923f5",
+  "changes": [
+    "Metric coordinates preserved; XY centered; Z grounded",
+    "USD/MJCF/GLB conversion; color and available PBR maps retained",
+    "Unrelated Gazebo sensor/plugin includes omitted"
+  ],
+  "source_offset_m": [
+    0.00015779957175254822,
+    0.022703086957335472,
+    -0.014035899192094803
+  ]
+}

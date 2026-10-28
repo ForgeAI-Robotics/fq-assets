@@ -1,0 +1,15 @@
+{
+  "native_flex_count": 1,
+  "vertices": 90,
+  "degrees_of_freedom": 270,
+  "duration_s": 4.0,
+  "max_edge_strain": 0.0027166286112636495,
+  "nonrigid_deformation_rms_m": 0.04311343111170357,
+  "min_world_z_m": 0.00015861185356902396,
+  "contact_geometries": [
+    "curved_contact_target",
+    "table"
+  ],
+  "released": true,
+  "finite": true
+}

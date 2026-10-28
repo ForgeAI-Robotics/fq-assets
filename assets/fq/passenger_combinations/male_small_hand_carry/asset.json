@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "fq:characters/male_small_hand_carry",
+  "version": "0.1.0",
+  "kind": "character",
+  "name": "男性旅客 + 手提小包",
+  "description": "骨骼挂接人包组合；USD 姿态示例；网页为静态预览",
+  "origin": "fq",
+  "upstream_origin": "Microsoft Rocketbox (MIT) + Google Scanned Objects (CC-BY-4.0) + FQ fitting",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license_status": "See NOTICE.md; upstream licenses remain applicable",
+  "representations": {
+    "mujoco": "assets/fq/passenger_combinations/male_small_hand_carry/preview.xml",
+    "usd": "assets/fq/passenger_combinations/male_small_hand_carry/assembly.usdc"
+  },
+  "dependencies": [
+    {
+      "id": "third_party:characters/rocketbox_male_adult_01",
+      "version": "0.1.0"
+    },
+    {
+      "id": "third_party:bags/gso_digital_camo_double_decker_lunch_bag",
+      "version": "0.1.0"
+    }
+  ],
+  "physics_calibrated": false,
+  "license": "MIT AND CC-BY-4.0",
+  "limitations": [
+    "Kinematic visual assembly; no walking controller",
+    "Fitted straps are visual ribbons, not cloth physics",
+    "Hand force/contact and bag-body collision are not validated",
+    "MuJoCo/web is a static skinned snapshot; USD has bone animation"
+  ]
+}

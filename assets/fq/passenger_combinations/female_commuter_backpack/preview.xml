@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="female_commuter_backpack">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="f005_body" file="meshes/f005_body.obj" />
+    <texture name="f005_body" type="2d" file="../../../third_party/characters/rocketbox_female_adult_05/textures/f005_body_color.png" />
+    <material name="f005_body" texture="f005_body" specular=".1" />
+    <mesh name="f005_head" file="meshes/f005_head.obj" />
+    <texture name="f005_head" type="2d" file="../../../third_party/characters/rocketbox_female_adult_05/textures/f005_head_color.png" />
+    <material name="f005_head" texture="f005_head" specular=".1" />
+    <mesh name="f005_opacity" file="meshes/f005_opacity.obj" />
+    <texture name="f005_opacity" type="2d" file="../../../third_party/characters/rocketbox_female_adult_05/textures/f005_opacity_color.png" />
+    <material name="f005_opacity" texture="f005_opacity" specular=".1" />
+    <mesh name="bag" file="../../../third_party/bags/gso_jansport_school_backpack_blue_streak/model.obj" scale="0.9 0.9 0.9" />
+    <texture name="bag_texture" type="2d" file="../../../third_party/bags/gso_jansport_school_backpack_blue_streak/texture.png" />
+    <material name="bag_material" texture="bag_texture" specular=".1" />
+    <mesh name="shoulder_strap_-1" file="meshes/shoulder_strap_-1.obj" />
+    <mesh name="shoulder_strap_1" file="meshes/shoulder_strap_1.obj" />
+  </asset>
+  <worldbody>
+    <geom name="f005_body" type="mesh" mesh="f005_body" material="f005_body" contype="0" conaffinity="0" />
+    <geom name="f005_head" type="mesh" mesh="f005_head" material="f005_head" contype="0" conaffinity="0" />
+    <geom name="f005_opacity" type="mesh" mesh="f005_opacity" material="f005_opacity" contype="0" conaffinity="0" />
+    <geom name="carried_bag" type="mesh" mesh="bag" material="bag_material" pos="0.0 0.3360491173840644 0.9710605043043861" quat="6.123233995736766e-17 0.0 0.0 1.0" contype="0" conaffinity="0" />
+    <geom name="shoulder_strap_-1" type="mesh" mesh="shoulder_strap_-1" rgba=".035 .04 .045 1" contype="0" conaffinity="0" />
+    <geom name="shoulder_strap_1" type="mesh" mesh="shoulder_strap_1" rgba=".035 .04 .045 1" contype="0" conaffinity="0" />
+    <geom name="navigation_occupancy" type="capsule" pos="0 .05 0.8680892008269439" size=".25 0.6180892008269439" rgba="0 0 0 0" group="3" />
+  </worldbody>
+</mujoco>

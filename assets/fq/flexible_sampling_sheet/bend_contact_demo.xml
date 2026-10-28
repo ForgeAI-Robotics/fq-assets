@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="flexible_sampling_sheet">
+  <compiler angle="radian" />
+  <option timestep=".0002" integrator="implicitfast" solver="Newton" iterations="100" tolerance="1e-9" />
+  <worldbody>
+    <geom name="table" type="plane" size=".3 .2 .01" rgba=".18 .23 .29 1" />
+    <geom name="curved_contact_target" type="sphere" pos=".035 0 .035" size=".035" rgba=".3 .55 .65 1" />
+    <body name="sheet_clamp" mocap="true" pos="-.085 0 .12">
+      <geom name="clamp_visual" type="box" size=".005 .018 .004" rgba=".12 .15 .18 1" contype="0" conaffinity="0" />
+    </body>
+    <flexcomp name="sampling_sheet" type="grid" dim="2" count="18 5 1" spacing=".01 .0075 .001" pos="0 0 .12" radius=".00025" mass=".0006" rgba=".94 .94 .88 1" material="nonwoven">
+      <elasticity young="2000000" poisson=".3" thickness=".0004" elastic2d="bend" damping=".002" />
+      <edge equality="true" solref=".0005 1" solimp=".99 .9999 .0001" />
+      <contact selfcollide="auto" friction=".6 .005 .0001" solref=".0004 1" solimp=".98 .999 .0001" />
+    </flexcomp>
+  </worldbody>
+  <equality>
+    <connect name="clamp_0" body1="sampling_sheet_0" body2="sheet_clamp" anchor="0 0 0" active="true" solref=".003 1" />
+    <connect name="clamp_1" body1="sampling_sheet_1" body2="sheet_clamp" anchor="0 0 0" active="true" solref=".003 1" />
+    <connect name="clamp_2" body1="sampling_sheet_2" body2="sheet_clamp" anchor="0 0 0" active="true" solref=".003 1" />
+    <connect name="clamp_3" body1="sampling_sheet_3" body2="sheet_clamp" anchor="0 0 0" active="true" solref=".003 1" />
+    <connect name="clamp_4" body1="sampling_sheet_4" body2="sheet_clamp" anchor="0 0 0" active="true" solref=".003 1" />
+  </equality>
+  <default>
+    <geom solref=".0004 1" solimp=".98 .999 .0001" />
+  </default>
+  <asset>
+    <texture name="fibers" type="2d" file="fibers.png" />
+    <material name="nonwoven" texture="fibers" specular=".08" shininess=".05" texrepeat="3 1" />
+  </asset>
+</mujoco>

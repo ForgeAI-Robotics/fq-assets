@@ -1,0 +1,25 @@
+{
+  "usd_missing_dependencies": [],
+  "triangles": 2202,
+  "dimensions_m": [
+    0.17328304052352905,
+    0.1407230794429779,
+    0.2949739396572113
+  ],
+  "source_metric_scale_preserved": true,
+  "mujoco_load": true,
+  "drop_test": {
+    "steps": 1500,
+    "contacts": 3,
+    "root_position_m": [
+      1.0398818293694657e-07,
+      1.150878061788331e-07,
+      -0.00018763135821419732
+    ],
+    "finite": true
+  },
+  "soft_body_validated": false,
+  "isaac_stage_load": true,
+  "isaac_render": true,
+  "physx_dynamic_test": false
+}

@@ -1,0 +1,18 @@
+{
+  "asset_ids": [
+    "fq:deformables/flexible_sampling_sheet",
+    "fq:articulated/swab_supply_box",
+    "fq:characters/female_commuter_backpack",
+    "fq:characters/male_commuter_backpack",
+    "fq:characters/male_small_hand_carry",
+    "third_party:bags/fuel_openrobotics_backpack",
+    "third_party:bags/fuel_openrobotics_jansport_backpack_red",
+    "third_party:bags/fuel_openrobotics_small_dry_bag",
+    "third_party:bags/fuel_openrobotics_small_dry_bag_handle",
+    "third_party:bags/fuel_openrobotics_suitcase1h",
+    "third_party:bags/fuel_openrobotics_suitcase2h"
+  ],
+  "scene_version_changed": false,
+  "native_flexible_engine": "MuJoCo 3.3.6",
+  "isaac_cloth_validated": false
+}

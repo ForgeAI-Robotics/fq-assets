@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "fq:deformables/flexible_sampling_sheet",
+  "version": "0.1.0",
+  "kind": "deformable",
+  "name": "柔性片状采样布",
+  "description": "原生 MuJoCo 2D flex；网页与 USD 仅静态外观；材料未标定",
+  "origin": "fq",
+  "upstream_origin": "FQ authored asset / research prototype",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license_status": "See NOTICE.md; upstream licenses remain applicable",
+  "representations": {
+    "mujoco": "assets/fq/flexible_sampling_sheet/model.xml",
+    "viewer_mujoco": "assets/fq/flexible_sampling_sheet/preview.xml",
+    "usd": "assets/fq/flexible_sampling_sheet/preview.usda",
+    "mujoco_demo": "assets/fq/flexible_sampling_sheet/bend_contact_demo.xml"
+  },
+  "dependencies": [],
+  "physics_calibrated": false,
+  "dimensions_m": [
+    0.17,
+    0.03,
+    0.0004
+  ],
+  "mass_kg": 0.0006,
+  "preview_only": true,
+  "limitations": [
+    "Native flexible physics is implemented and tested in MuJoCo 3.3.6 only",
+    "USD and web are visual snapshots, no PhysX deformable behavior",
+    "Material dimensions/mass/modulus are assumed, not actual consumable calibration",
+    "No tearing, contamination transport, chemical detection or full robot grasp model"
+  ]
+}

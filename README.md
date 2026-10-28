@@ -153,3 +153,7 @@ Eight textured Google scans (five backpacks, three small carry bags), with USD/M
 ## 机场刚体交互 v0.3.0
 
 新增挡带开闭/碰撞联动、独立拭子、夹持接口与真实插槽。运行方法和验证边界见 [机场说明](scenes/fq/airport_preview/README.md)。
+
+## Airport supporting assets
+
+Six Fuel bags, three passenger/bag assemblies, native MuJoCo flexible sampling sheet and hinged supply box. [Details and limits](docs/airport_supporting_assets.md). Airport scene version unchanged.

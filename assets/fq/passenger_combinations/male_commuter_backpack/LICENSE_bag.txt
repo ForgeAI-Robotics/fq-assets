@@ -1,0 +1,5 @@
+Copyright 2020 Google LLC.
+Creative Commons Attribution 4.0 International (CC-BY-4.0).
+https://creativecommons.org/licenses/by/4.0/
+Source: https://fuel.gazebosim.org/1.0/GoogleResearch/models/Jansport_School_Backpack_Blue_Streak
+Changes: centered XY and grounded Z; format conversion; approximate rigid convex collision and mass.

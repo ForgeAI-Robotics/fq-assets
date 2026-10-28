@@ -36,7 +36,18 @@
     "third_party:bags/gso_olive_kids_trains_planes_trucks_bogo_backpack": "0.1.0",
     "third_party:bags/gso_us_army_stash_lunch_bag": "0.1.0",
     "user_supplied:robots/lansi_wheel_arm_robot": "0.1.0",
-    "fq:objects/sampling_swab": "0.1.0"
+    "fq:objects/sampling_swab": "0.1.0",
+    "fq:deformables/flexible_sampling_sheet": "0.1.0",
+    "fq:articulated/swab_supply_box": "0.1.0",
+    "fq:characters/female_commuter_backpack": "0.1.0",
+    "fq:characters/male_commuter_backpack": "0.1.0",
+    "fq:characters/male_small_hand_carry": "0.1.0",
+    "third_party:bags/fuel_openrobotics_backpack": "0.1.0",
+    "third_party:bags/fuel_openrobotics_jansport_backpack_red": "0.1.0",
+    "third_party:bags/fuel_openrobotics_small_dry_bag": "0.1.0",
+    "third_party:bags/fuel_openrobotics_small_dry_bag_handle": "0.1.0",
+    "third_party:bags/fuel_openrobotics_suitcase1h": "0.1.0",
+    "third_party:bags/fuel_openrobotics_suitcase2h": "0.1.0"
   },
   "profiles": {
     "fq:poses/o6_left_task": "0.1.2",

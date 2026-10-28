@@ -1,0 +1,33 @@
+{
+  "size_m": [
+    0.17,
+    0.03,
+    0.0004
+  ],
+  "mass_kg": 0.0006,
+  "grid": [
+    18,
+    5
+  ],
+  "mujoco": {
+    "young_pa": 2000000,
+    "poisson": 0.3,
+    "bending_thickness_m": 0.0004,
+    "stretch": "edge equality constraints",
+    "elastic2d": "bend",
+    "collision_radius_m": 0.00025,
+    "timestep_s": 0.0002
+  },
+  "calibrated": false,
+  "material_type": "thin sampling paper / nonwoven cloth prototype",
+  "not_implemented": [
+    "plastic creases",
+    "tearing",
+    "chemical uptake",
+    "contamination transport"
+  ],
+  "references": [
+    "https://mujoco.readthedocs.io/en/3.3.6/XMLreference.html#flex-elasticity",
+    "https://github.com/google-deepmind/mujoco/tree/3.3.6/plugin/elasticity"
+  ]
+}

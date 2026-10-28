@@ -39,7 +39,7 @@ def main():
             preview_xml.write_text(f'<mujoco><asset><texture name="t" type="2d" file={filename}/><material name="m" texture="t" texrepeat="1 1"/></asset><worldbody><geom type="box" size=".75 .75 .015" pos="0 0 .015" material="m"/><geom type="sphere" size=".38" pos="0 0 .41" material="m"/></worldbody></mujoco>')
             entry_path=preview_xml.resolve()
         else:
-            entry_path=(root/meta['representations']['mujoco']).resolve()
+            entry_path=(root/meta['representations'].get('viewer_mujoco',meta['representations']['mujoco'])).resolve()
         if meta['kind']!='material' and not entry_path.is_relative_to(root):raise ValueError('External entry')
         m=mujoco.MjModel.from_xml_path(str(entry_path));d=mujoco.MjData(m);mujoco.mj_forward(m,d)
         binary=bytearray();meshes={};materials=[];used_meshes=set(int(i) for i in m.geom_dataid[m.geom_type==mujoco.mjtGeom.mjGEOM_MESH])
@@ -172,7 +172,7 @@ def main():
             limits=driver.get('control_range',driver['range'])
             driver['control_range']=[max(limits[0],allowed[0]),min(limits[1],allowed[1])]
             if driver['control_range'][0]>driver['control_range'][1]:raise ValueError('Incompatible coupled joint limits')
-        title,kind_label,subtitle=NAMES.get(slug,(meta.get('name',slug),{'character':'人物','camera':'相机','robot':'机器人','end_effector':'灵巧手 / 末端执行器'}.get(meta['kind'],meta['kind']),meta.get('description','')))
+        title,kind_label,subtitle=NAMES.get(slug,(meta.get('name',slug),{'deformable':'柔性物体','character':'人物','camera':'相机','robot':'机器人','end_effector':'灵巧手 / 末端执行器'}.get(meta['kind'],meta['kind']),meta.get('description','')))
         if meta['kind']=='camera':subtitle='RGB-D / 双目红外 / 六轴 IMU · 设备规格'
         if meta['kind'] in ('robot','end_effector'):subtitle='FQ 适配 / '+str(len(joints))+' 个转轴 · '+str(m.nu)+' 个驱动'
 
@@ -183,6 +183,10 @@ def main():
               'joints':joints,'couplings':couplings,'actuators':actuators,'opening_force':{'status':'uncalibrated','value':None},
               'property_source':'MuJoCo 3.3.6 编译后的模型参数','physics_status':'模型设定 · 未完成实测标定',
               'model_url':f'/data/{args.commit}/{slug}/model.json','thumbnail':f'/data/{args.commit}/{slug}/preview.png'}
+        if meta['representations'].get('viewer_mujoco'):
+            info['preview_physics_note']='静态外观预览；实际柔性物理请加载原生 MuJoCo 模型'
+            info['mass_kg']=meta.get('mass_kg')
+            info['physics_status']='原生 MuJoCo 柔性；网页仅外观'
         if meta['kind']=='material':
             with Image.open(material_source) as im:
                 info['resolution']=list(im.size)

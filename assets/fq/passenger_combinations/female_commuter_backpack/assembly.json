@@ -1,0 +1,40 @@
+{
+  "human_asset": "third_party:characters/rocketbox_female_adult_05",
+  "bag_asset": "third_party:bags/gso_jansport_school_backpack_blue_streak",
+  "mode": "backpack",
+  "attachment_bone": "Bip01 Spine2",
+  "usd_joint": "Bip01_Pelvis/Bip01_Spine/Bip01_Spine1/Bip01_Spine2",
+  "bone_local_matrix_column_major": [
+    [
+      1.0320768964385378e-05,
+      -14.352300715703791,
+      88.84827087599113,
+      -26.054584503936013
+    ],
+    [
+      0.0001229153916816398,
+      88.84828021323602,
+      14.35228980449118,
+      -38.16758655878722
+    ],
+    [
+      -90.00001575658955,
+      0.00011969662159898972,
+      2.9789981442164794e-05,
+      -5.259982266941824e-05
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "bag_scale": 0.9,
+  "authored_frames": 61,
+  "bag_follows_bone": true,
+  "straps": "custom fitted visual ribbons; source folded straps retained on scan",
+  "hand_grip_force_validated": false,
+  "cloth_strap_dynamics": false,
+  "walking_controller": false
+}

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="flexible_sampling_sheet">
+  <compiler angle="radian" />
+  <option timestep=".0002" integrator="implicitfast" solver="Newton" iterations="100" tolerance="1e-9" />
+  <worldbody>
+    <flexcomp name="sampling_sheet" type="grid" dim="2" count="18 5 1" spacing=".01 .0075 .001" pos="0 0 0" radius=".00025" mass=".0006" rgba=".94 .94 .88 1" material="nonwoven">
+      <elasticity young="2000000" poisson=".3" thickness=".0004" elastic2d="bend" damping=".002" />
+      <edge equality="true" solref=".0005 1" solimp=".99 .9999 .0001" />
+      <contact selfcollide="auto" friction=".6 .005 .0001" solref=".0004 1" solimp=".98 .999 .0001" />
+    </flexcomp>
+  </worldbody>
+  <default>
+    <geom solref=".0004 1" solimp=".98 .999 .0001" />
+  </default>
+  <asset>
+    <texture name="fibers" type="2d" file="fibers.png" />
+    <material name="nonwoven" texture="fibers" specular=".08" shininess=".05" texrepeat="3 1" />
+  </asset>
+</mujoco>

@@ -1,0 +1,5 @@
+Source contributor: OpenRobotics, Gazebo Fuel
+CC0-1.0: https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://fuel.gazebosim.org/1.0/OpenRobotics/models/Suitcase1H
+Changes: format conversion, grounding, collision adaptation; see provenance.json.
+Model author: Wan Yi Seow (as recorded in source_model.config).

@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="flexible_sheet_visual_only"><asset><mesh name="sheet" file="visual.obj" /><texture name="fibers" type="2d" file="fibers.png" /><material name="nonwoven" texture="fibers" specular=".08" /></asset><worldbody><geom name="visual_snapshot" type="mesh" mesh="sheet" material="nonwoven" contype="0" conaffinity="0" /></worldbody></mujoco>

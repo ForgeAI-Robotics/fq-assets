@@ -31,3 +31,7 @@ Eight bag scans are Copyright 2020 Google LLC, CC-BY-4.0. Per-model source URLs,
 ## Lansi wheel-arm robot
 
 User-supplied model; owner confirmed public publication on 2026-10-27. No upstream license text supplied; no general downstream license is implied. See assets/user_supplied/lansi_wheel_arm_robot/provenance.json.
+
+## Airport supporting assets 2026-10-28
+
+OpenRobotics Fuel bags retain CC0 or CC-BY-4.0 as declared per asset. Passenger combinations retain Microsoft Rocketbox MIT and Google GSO CC-BY-4.0 licenses. FQ-authored box, sampling sheet and attachment additions do not relicense upstream components.
