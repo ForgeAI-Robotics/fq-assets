@@ -50,8 +50,8 @@
   ],
   "demonstration_batch_size": 3,
   "batch_size_is_official_sop": false,
-  "gate_state": "both_closed",
-  "gate_geometry": "rigid retracting proxies with runtime visibility and collision switch",
+  "gate_state": "both_latched",
+  "gate_geometry": "native MuJoCo 2D flex webbing with explicit checked handle/latch constraints and prescribed reel feed",
   "workflow_intent": [
     "admit batch through entry",
     "close entry",
@@ -71,5 +71,6 @@
     1.3,
     1.22,
     0.7525
-  ]
+  ],
+  "belt_runtime_entrypoint": "belt_interaction.xml"
 }

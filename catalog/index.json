@@ -226,6 +226,11 @@
       "id": "third_party:bags/fuel_openrobotics_suitcase2h",
       "version": "0.1.0",
       "manifest": "assets/third_party/bags/fuel_openrobotics_suitcase2h/asset.json"
+    },
+    {
+      "id": "fq:deformables/retractable_belt_kit",
+      "version": "0.1.0",
+      "manifest": "assets/fq/retractable_belt_kit/asset.json"
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "entrypoint": "belt_interaction.xml",
+  "controller": "tools/retractable_belt.py",
+  "entry": {
+    "prefix": "entry_",
+    "origin": [
+      0,
+      -1.8,
+      0
+    ]
+  },
+  "exit": {
+    "prefix": "exit_",
+    "origin": [
+      0,
+      3.65,
+      0
+    ]
+  },
+  "physics_engine": "MuJoCo 3.3.6",
+  "webbing": "native 2D flex",
+  "reel": "prescribed spiral boundary",
+  "grasp_latch": "checked explicit constraints",
+  "full_workflow": false
+}

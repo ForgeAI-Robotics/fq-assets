@@ -1,0 +1,127 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World" (
+    prepend references = @scene.usdc@</World>
+)
+{
+    over "Geometry"
+    {
+        over "G110"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "G111"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "G112"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "G113"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "G114"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "G115"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "G116"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "G117"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "Enclosure_EntryLBase"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "Enclosure_EntryLPost"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "Enclosure_EntryLCassette"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "Enclosure_EntryRBase"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "Enclosure_EntryRPost"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "Enclosure_EntryRCassette"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "Enclosure_EntryBelt"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+
+        over "Enclosure_EntryLatch"
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "EntryBeltKit" (
+        prepend references = @../../../assets/fq/retractable_belt_kit/preview.usda@
+    )
+    {
+        double3 xformOp:translate = (0, -1.8, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+
+    def Xform "ExitBeltKit" (
+        prepend references = @../../../assets/fq/retractable_belt_kit/preview.usda@
+    )
+    {
+        double3 xformOp:translate = (0, 3.65, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}
+

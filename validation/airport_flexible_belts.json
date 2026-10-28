@@ -1,0 +1,25 @@
+{
+  "cycles": {
+    "entry": {
+      "native_integrated_cycle_s": 15.149999999991369,
+      "flexes": 2,
+      "flex_vertices": 492,
+      "max_edge_strain": 0.0038326233124075237,
+      "both_final_latched": true,
+      "mutual_exclusion_rejected_open_other": true,
+      "warnings": 0
+    },
+    "exit": {
+      "native_integrated_cycle_s": 15.149999999991369,
+      "flexes": 2,
+      "flex_vertices": 492,
+      "max_edge_strain": 0.004270153743187732,
+      "both_final_latched": true,
+      "mutual_exclusion_rejected_open_other": true,
+      "warnings": 0
+    }
+  },
+  "both_gates_exercised": true,
+  "max_edge_strain": 0.004270153743187732,
+  "both_final_latched": true
+}

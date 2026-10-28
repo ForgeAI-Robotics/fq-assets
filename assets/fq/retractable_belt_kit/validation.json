@@ -1,0 +1,178 @@
+{
+  "engine": "MuJoCo 3.3.6",
+  "cycle_complete": true,
+  "duration_s": 15.199999999991253,
+  "flex_vertices": 246,
+  "max_edge_strain": 0.0024588318528844244,
+  "max_grasp_position_error_m": 0.002238230950154611,
+  "warnings": 0,
+  "negative_tests": [
+    {
+      "test": "alarm_blocks_open",
+      "reason": "Opening requires authorization and cleared alarm"
+    },
+    {
+      "test": "authorization_required",
+      "reason": "Opening requires authorization and cleared alarm"
+    },
+    {
+      "test": "occupied_blocks_close",
+      "reason": "Cannot extend belt through occupied passage"
+    },
+    {
+      "test": "unheld_handle_cannot_unlatch",
+      "reason": "Hold the handle before unlatching"
+    },
+    {
+      "test": "unaligned_gripper_cannot_grasp",
+      "reason": "Gripper is not aligned with handle"
+    },
+    {
+      "test": "latched_retraction_rejected",
+      "reason": "Unlatch before retracting the belt"
+    },
+    {
+      "test": "docked_feed_rejected",
+      "reason": "Undock before feeding the belt"
+    },
+    {
+      "test": "seated_handle_cannot_unlatch",
+      "reason": "Lift the handle at least 32 mm out of the receiver"
+    },
+    {
+      "test": "unsecured_handle_cannot_release",
+      "reason": "Cannot release an unsecured handle"
+    },
+    {
+      "test": "unseated_handle_cannot_latch",
+      "reason": "Handle is not seated in receiver"
+    }
+  ],
+  "events": [
+    {
+      "time_s": 0.4999999999999776,
+      "event": "grasped",
+      "handle_position_m": [
+        0.7799807026935741,
+        1.378777197138154e-07,
+        0.9796744831770865
+      ],
+      "stored_length_m": 0.02
+    },
+    {
+      "time_s": 1.4999999999998674,
+      "event": "unlatched",
+      "handle_position_m": [
+        0.7799968356645394,
+        1.0552531150599415e-08,
+        1.0299688105704414
+      ],
+      "stored_length_m": 0.00721894198027761
+    },
+    {
+      "time_s": 6.70000000000529,
+      "event": "docked",
+      "handle_position_m": [
+        -0.6699999275078407,
+        -2.4886646845130233e-08,
+        0.979995089040797
+      ],
+      "stored_length_m": 1.4580000000000002
+    },
+    {
+      "time_s": 6.70000000000529,
+      "event": "released_at_dock",
+      "handle_position_m": [
+        -0.6699999275078407,
+        -2.4886646845130233e-08,
+        0.979995089040797
+      ],
+      "stored_length_m": 1.4580000000000002
+    },
+    {
+      "time_s": 8.200000000007567,
+      "event": "grasped",
+      "handle_position_m": [
+        -0.6699999450329247,
+        5.6326562912315715e-09,
+        0.9799951116975829
+      ],
+      "stored_length_m": 1.4580000000000002
+    },
+    {
+      "time_s": 8.200000000007567,
+      "event": "undocked",
+      "handle_position_m": [
+        -0.6699999450329247,
+        5.6326562912315715e-09,
+        0.9799951116975829
+      ],
+      "stored_length_m": 1.4580000000000002
+    },
+    {
+      "time_s": 14.399999999993117,
+      "event": "latched",
+      "handle_position_m": [
+        0.7799914716752546,
+        -1.2649343836694605e-07,
+        0.9799963763114228
+      ],
+      "stored_length_m": 0.020000000000000018
+    },
+    {
+      "time_s": 14.399999999993117,
+      "event": "released_at_latch",
+      "handle_position_m": [
+        0.7799914716752546,
+        -1.2649343836694605e-07,
+        0.9799963763114228
+      ],
+      "stored_length_m": 0.020000000000000018
+    }
+  ],
+  "final_latched": true,
+  "scope": "native deformable webbing; prescribed reel guide boundary; explicit checked grasp/latch constraints; not calibrated reel mechanics",
+  "external_contact": {
+    "external_probe_contacts": 5963,
+    "positive_normal_force": true,
+    "max_normal_force_N_model_estimate": 0.06042969699184725,
+    "max_lateral_deflection_m": 0.039180734295681585,
+    "disabled_probe_negative_control": true,
+    "warnings": 0
+  },
+  "airport_integration": {
+    "cycles": {
+      "entry": {
+        "native_integrated_cycle_s": 15.149999999991369,
+        "flexes": 2,
+        "flex_vertices": 492,
+        "max_edge_strain": 0.0038326233124075237,
+        "both_final_latched": true,
+        "mutual_exclusion_rejected_open_other": true,
+        "warnings": 0
+      },
+      "exit": {
+        "native_integrated_cycle_s": 15.149999999991369,
+        "flexes": 2,
+        "flex_vertices": 492,
+        "max_edge_strain": 0.004270153743187732,
+        "both_final_latched": true,
+        "mutual_exclusion_rejected_open_other": true,
+        "warnings": 0
+      }
+    },
+    "both_gates_exercised": true,
+    "max_edge_strain": 0.004270153743187732,
+    "both_final_latched": true
+  },
+  "usd_static_preview": {
+    "assets/fq/retractable_belt_kit/preview.usda": {
+      "missing_dependencies": [],
+      "layers": 1
+    },
+    "scenes/fq/airport_preview/belt_preview.usda": {
+      "missing_dependencies": [],
+      "layers": 3
+    }
+  }
+}
