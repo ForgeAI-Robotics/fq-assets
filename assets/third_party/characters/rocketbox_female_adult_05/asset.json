@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "third_party:characters/rocketbox_female_adult_05",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "kind": "character",
   "name": "女性旅客 · 通勤外套 / Rocketbox",
-  "description": "80 节点骨骼；GLB 保留 175 面部形变；USD 支持骨骼；网页为静态预览",
+  "description": "19 个骨骼随动分区碰撞体；衣物候选采样区；USD 人体与碰撞同步",
   "origin": "third_party",
   "upstream_origin": "Microsoft Rocketbox · MIT；FQ 格式转换与验证",
   "units": "meter",
@@ -13,8 +13,8 @@
   "license": "MIT",
   "license_status": "Microsoft MIT license retained in asset directory",
   "representations": {
-    "mujoco": "assets/third_party/characters/rocketbox_female_adult_05/preview.xml",
-    "usd": "assets/third_party/characters/rocketbox_female_adult_05/character.usdc",
+    "mujoco": "assets/third_party/characters/rocketbox_female_adult_05/contact.xml",
+    "usd": "assets/third_party/characters/rocketbox_female_adult_05/contact_model.usda",
     "glb": "assets/third_party/characters/rocketbox_female_adult_05/character.glb"
   },
   "representation_conventions": {
@@ -45,12 +45,38 @@
     "physical_human_contact": false
   },
   "limitations": [
-    "Web/MuJoCo is a static A-pose preview; skeletal animation is in USD/GLB",
-    "One authored inspection motion is included; no walking/waiting/sampling behavior controller",
-    "Single capsule is a navigation occupancy approximation, not anatomically accurate or calibrated human contact geometry",
-    "Back and hand bones are identified, but no backpack, straps or grip offsets have been fitted",
-    "USD omits facial morph targets; GLB retains 175 source targets",
-    "Four adult clothed appearances; limited age/body-size variation, not a representative airport population",
-    "PNG color/normal maps converted losslessly from source TGA; roughness is an approximate material setting"
+    "Rigid convex regions; not deformable skin or clothing",
+    "Hands are whole-hand hulls, not finger-level contact",
+    "Kinematic bodies do not react like a dynamic human",
+    "MuJoCo visual snapshot is static; USD animates skin and colliders together",
+    "Mass, contact friction and human-contact force limits are not calibrated"
+  ],
+  "contact_regions": "assets/third_party/characters/rocketbox_female_adult_05/contact_regions.json",
+  "contact_motion": "assets/third_party/characters/rocketbox_female_adult_05/contact_motion.json",
+  "viewer_status": [
+    [
+      "人体碰撞",
+      "19 个骨骼随动凸包区域"
+    ],
+    [
+      "外形依据",
+      "从现有人物网格按骨骼权重分区提取"
+    ],
+    [
+      "运动示例",
+      "躯干转动与前臂动作；不是行走"
+    ],
+    [
+      "接触记录",
+      "区域、位置、法向和仿真接触力"
+    ],
+    [
+      "采样标注",
+      "衣物候选区；头颈回避区"
+    ],
+    [
+      "当前限制",
+      "皮肤、衣服与手指尚未精细柔性建模"
+    ]
   ]
 }

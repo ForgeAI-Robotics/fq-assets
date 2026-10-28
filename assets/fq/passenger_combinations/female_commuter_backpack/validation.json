@@ -21,17 +21,50 @@
   "usd_bag_collision_prims": [
     "/Assembly/Bag/Scan"
   ],
-  "wearer_filtered_prims": [
-    "/Assembly/Person/NavigationProxy"
-  ],
-  "mujoco_external_probe_bag_contact": {
-    "contact_steps": 191,
-    "finite": true
+  "contact_region_count": 19,
+  "contact_hull_triangles": 1034,
+  "contact_model_validation_pending": false,
+  "mujoco_contact_regions_test": {
+    "regions_tested": 19,
+    "all_positive_contact_force": true,
+    "negative_control_no_contact": true,
+    "left_hand_motion_m": 0.04343130759782538
   },
-  "physx_external_bag_contact": {
-    "enabled_probe_final_z_m": 1.3816758394241333,
-    "disabled_probe_final_z_m": 0.020000236108899117,
-    "engine": "Isaac Sim 4.5 / PhysX CPU",
-    "test": "4 second vertically guided dynamic cube drop onto kinematic bag; disabled-collider negative control"
+  "usd_collision_bone_follow_test": {
+    "frames": [
+      0,
+      15,
+      30,
+      45,
+      60
+    ],
+    "max_matrix_error": 4.8376316397202856e-08,
+    "tolerance": 0.001
+  },
+  "physx_segmented_body_test": {
+    "enabled_probe_z_m": 1.7508571147918701,
+    "disabled_probe_z_m": 0.014999935403466225,
+    "test": "Guided external probe blocked by head collider; disabling all body colliders makes probe fall to ground",
+    "scope": "one physical external contact per character; all 19 regions tested separately in MuJoCo"
+  },
+  "contact_model_bag_test": {
+    "external_probe_positive_force": true,
+    "disabled_bag_negative_control": true,
+    "bag_motion_m": 0.01927672147165391
+  },
+  "legacy_assembly_bag_validation": {
+    "physx_external_bag_contact": {
+      "enabled_probe_final_z_m": 1.3816758394241333,
+      "disabled_probe_final_z_m": 0.020000236108899117,
+      "engine": "Isaac Sim 4.5 / PhysX CPU",
+      "test": "4 second vertically guided dynamic cube drop onto kinematic bag; disabled-collider negative control"
+    },
+    "mujoco_external_probe_bag_contact": {
+      "contact_steps": 191,
+      "finite": true
+    },
+    "wearer_filtered_prims": [
+      "/Assembly/Person/NavigationProxy"
+    ]
   }
 }

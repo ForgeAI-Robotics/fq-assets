@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf8'?>
+<mujoco model="rocketbox_male_adult_06">
+  <compiler angle="radian" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+  </visual>
+  <asset>
+    <texture name="m011_body" type="2d" file="textures/m011_body_color.png" />
+    <material name="m011_body" texture="m011_body" rgba="1 1 1 1" specular=".15" shininess=".15" />
+    <texture name="m011_head" type="2d" file="textures/m011_head_color.png" />
+    <material name="m011_head" texture="m011_head" rgba="1 1 1 1" specular=".15" shininess=".15" />
+    <texture name="m011_opacity" type="2d" file="textures/m011_opacity_color.png" />
+    <material name="m011_opacity" texture="m011_opacity" rgba="1 1 1 1" specular=".15" shininess=".15" />
+    <mesh name="m011_body" file="meshes/m011_body.obj" />
+    <mesh name="m011_head" file="meshes/m011_head.obj" />
+    <mesh name="m011_opacity" file="meshes/m011_opacity.obj" />
+    <mesh name="contact_pelvis" file="contact_meshes/pelvis.obj" />
+    <mesh name="contact_abdomen" file="contact_meshes/abdomen.obj" />
+    <mesh name="contact_chest" file="contact_meshes/chest.obj" />
+    <mesh name="contact_neck" file="contact_meshes/neck.obj" />
+    <mesh name="contact_head" file="contact_meshes/head.obj" />
+    <mesh name="contact_left_shoulder" file="contact_meshes/left_shoulder.obj" />
+    <mesh name="contact_left_upper_arm" file="contact_meshes/left_upper_arm.obj" />
+    <mesh name="contact_left_forearm" file="contact_meshes/left_forearm.obj" />
+    <mesh name="contact_left_hand" file="contact_meshes/left_hand.obj" />
+    <mesh name="contact_left_thigh" file="contact_meshes/left_thigh.obj" />
+    <mesh name="contact_left_calf" file="contact_meshes/left_calf.obj" />
+    <mesh name="contact_left_foot" file="contact_meshes/left_foot.obj" />
+    <mesh name="contact_right_shoulder" file="contact_meshes/right_shoulder.obj" />
+    <mesh name="contact_right_upper_arm" file="contact_meshes/right_upper_arm.obj" />
+    <mesh name="contact_right_forearm" file="contact_meshes/right_forearm.obj" />
+    <mesh name="contact_right_hand" file="contact_meshes/right_hand.obj" />
+    <mesh name="contact_right_thigh" file="contact_meshes/right_thigh.obj" />
+    <mesh name="contact_right_calf" file="contact_meshes/right_calf.obj" />
+    <mesh name="contact_right_foot" file="contact_meshes/right_foot.obj" />
+  </asset>
+  <worldbody>
+    <geom name="m011_body" type="mesh" mesh="m011_body" material="m011_body" contype="0" conaffinity="0" />
+    <geom name="m011_head" type="mesh" mesh="m011_head" material="m011_head" contype="0" conaffinity="0" />
+    <geom name="m011_opacity" type="mesh" mesh="m011_opacity" material="m011_opacity" contype="0" conaffinity="0" />
+    <geom name="navigation_proxy" type="capsule" pos="0 0 0.9156605294847395" size=".23 0.6856605294847395" rgba="0 0 0 0" group="3" contype="0" conaffinity="0" />
+    <body name="contact_pelvis" mocap="true" pos="2.363091059637279e-12 0.037875495851039886 0.8960002660751343" quat="-9.798405513047946e-07 0.7071072553377791 1.0092013020950675e-06 0.7071063070335991">
+      <geom name="human_pelvis" type="mesh" mesh="contact_pelvis" rgba="0.25 0.25 0.25 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_abdomen" mocap="true" pos="-4.112809698337452e-10 0.039504400820817916 1.0162856496420092" quat="0.01573785704626467 0.7069315854566307 0.015736904718370446 0.7069316821088519">
+      <geom name="human_abdomen" type="mesh" mesh="contact_abdomen" rgba="0.4710526315789474 0.5973684210526315 0.3447368421052631 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_chest" mocap="true" pos="-2.131092866787754e-08 0.05756793153970714 1.3221337095253876" quat="0.014405953729584815 0.706959959702453 0.014405002299654789 0.706960097730695">
+      <geom name="human_chest" type="mesh" mesh="contact_chest" rgba="0.6921052631578948 0.3447368421052631 0.4394736842105263 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_neck" mocap="true" pos="-2.7427596583720913e-08 0.0500576198348775 1.5217901048983853" quat="-0.10489093028302385 0.6992840625088712 -0.10489184911435255 0.6992834851866748">
+      <geom name="human_neck" type="mesh" mesh="contact_neck" rgba="0.3131578947368421 0.6921052631578948 0.5342105263157895 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_head" mocap="true" pos="-2.7393466546094174e-08 0.029731864238800355 1.5880210352895634" quat="-0.053606894676323416 0.7050720132617629 -0.05360782875870085 0.7050715975374019">
+      <geom name="human_head" type="mesh" mesh="contact_head" rgba="0.5342105263157895 0.4394736842105263 0.6289473684210526 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_left_shoulder" mocap="true" pos="0.07283685563527473 0.061493534548824946 1.4603627362915375" quat="0.9934830458411058 -0.021883719174235972 0.11151350942352832 0.008790772288664494">
+      <geom name="human_left_shoulder" type="mesh" mesh="contact_left_shoulder" rgba="0.7552631578947369 0.7868421052631579 0.7236842105263157 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_left_upper_arm" mocap="true" pos="0.2104155899658115 0.06326944203969155 1.4290429686585677" quat="0.9252354015074802 0.06277820716050007 0.372335564934324 -0.03694016226335519">
+      <geom name="human_left_upper_arm" type="mesh" mesh="contact_left_upper_arm" rgba="0.3763157894736842 0.5342105263157895 0.8184210526315789 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_left_forearm" mocap="true" pos="0.4162379875981276 0.05709283404879461 1.2307585681071758" quat="0.9035941209132168 -0.0050439593659611275 0.37755710797117714 -0.2023434045019174">
+      <geom name="human_left_forearm" type="mesh" mesh="contact_left_forearm" rgba="0.5973684210526315 0.28157894736842104 0.3131578947368421 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_left_hand" mocap="true" pos="0.5877702964103416 -0.043028869968163276 1.0464193400134147" quat="-0.6299892980155176 0.6332569251882672 -0.4197166555021238 -0.16104993070823848">
+      <geom name="human_left_hand" type="mesh" mesh="contact_left_hand" rgba="0.8184210526315789 0.6289473684210526 0.40789473684210525 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_left_thigh" mocap="true" pos="0.08838736576426093 0.037875594092864465 0.8960000019515302" quat="0.11488654490852554 0.7164190711035903 0.08107908406146876 -0.6833527482097392">
+      <geom name="human_left_thigh" type="mesh" mesh="contact_left_thigh" rgba="0.4394736842105263 0.3763157894736842 0.5026315789473684 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_left_calf" mocap="true" pos="0.1095049968596399 0.021574505014306102 0.49777224350290683" quat="0.07251922171814769 0.7100541519529445 0.12511287029944343 -0.68913774636223">
+      <geom name="human_left_calf" type="mesh" mesh="contact_left_calf" rgba="0.6605263157894736 0.7236842105263157 0.5973684210526315 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_left_foot" mocap="true" pos="0.11699294136616993 0.0524125673362973 0.10226952516779414" quat="0.09454953860438083 0.7021407399999151 0.08204961828393 -0.7009469495771641">
+      <geom name="human_left_foot" type="mesh" mesh="contact_left_foot" rgba="0.28157894736842104 0.4710526315789474 0.6921052631578948 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_right_shoulder" mocap="true" pos="-0.07283695794420612 0.06149333090139726 1.460362728190911" quat="0.11151349315392863 0.008789475820740918 0.9934830629724353 -0.02188354510388089">
+      <geom name="human_right_shoulder" type="mesh" mesh="contact_right_shoulder" rgba="0.5026315789473684 0.8184210526315789 0.7868421052631579 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_right_upper_arm" mocap="true" pos="-0.2104154683336441 0.06326900254121776 1.4290429346109461" quat="0.3723356935947059 -0.03694094180214553 0.9252352931362573 0.06277858256749692">
+      <geom name="human_right_upper_arm" type="mesh" mesh="contact_right_upper_arm" rgba="0.7236842105263157 0.5657894736842105 0.28157894736842104 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_right_forearm" mocap="true" pos="-0.41623734216180414 0.0570913157681307 1.2307583833822697" quat="0.3775570733979646 -0.20234455502393958 0.9035938798813812 -0.0050435721706146635">
+      <geom name="human_right_forearm" type="mesh" mesh="contact_right_forearm" rgba="0.3447368421052631 0.3131578947368421 0.3763157894736842 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_right_hand" mocap="true" pos="-0.5877689260671446 -0.04303091466693451 1.0464202285053128" quat="-0.41971723914360054 -0.16104865459659348 -0.6299899379556294 0.6332562262567677">
+      <geom name="human_right_hand" type="mesh" mesh="contact_right_hand" rgba="0.5657894736842105 0.6605263157894736 0.4710526315789474 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_right_thigh" mocap="true" pos="-0.08838732850855742 0.037875352137510664 0.895999921746675" quat="0.08107823428069008 -0.6833528298346534 0.11488568292505533 0.7164192276465925">
+      <geom name="human_right_thigh" type="mesh" mesh="contact_right_thigh" rgba="0.7868421052631579 0.40789473684210525 0.5657894736842105 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_right_calf" mocap="true" pos="-0.10950502588548511 0.021574027615663082 0.49777247427717264" quat="0.12511164164012947 -0.6891378054782302 0.07251809041208442 0.7100544266109081">
+      <geom name="human_right_calf" type="mesh" mesh="contact_right_calf" rgba="0.40789473684210525 0.7552631578947369 0.6605263157894736 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+    <body name="contact_right_foot" mocap="true" pos="-0.11699308863853304 0.052412260065197086 0.10226955985574038" quat="0.08204879242249369 -0.7009471551314185 0.09454873107798223 0.7021407400419983">
+      <geom name="human_right_foot" type="mesh" mesh="contact_right_foot" rgba="0.6289473684210526 0.5026315789473684 0.7552631578947369 0" group="3" contype="4" conaffinity="1" friction=".6 .005 .0001" />
+    </body>
+  </worldbody>
+</mujoco>

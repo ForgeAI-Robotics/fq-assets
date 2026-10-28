@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "fq:characters/male_small_hand_carry",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "kind": "character",
   "name": "男性旅客 + 手提小包",
-  "description": "骨骼挂接人包组合；包保留对外碰撞；USD 为运动学刚体，网页为静态姿态",
+  "description": "19 个骨骼随动分区碰撞体；衣物候选采样区；USD 人体与碰撞同步",
   "origin": "fq",
   "upstream_origin": "Microsoft Rocketbox (MIT) + Google Scanned Objects (CC-BY-4.0) + FQ fitting",
   "units": "meter",
@@ -12,13 +12,13 @@
   "quaternion_order": "wxyz",
   "license_status": "See NOTICE.md; upstream licenses remain applicable",
   "representations": {
-    "mujoco": "assets/fq/passenger_combinations/male_small_hand_carry/preview.xml",
-    "usd": "assets/fq/passenger_combinations/male_small_hand_carry/assembly.usdc"
+    "mujoco": "assets/fq/passenger_combinations/male_small_hand_carry/contact.xml",
+    "usd": "assets/fq/passenger_combinations/male_small_hand_carry/contact_model.usda"
   },
   "dependencies": [
     {
       "id": "third_party:characters/rocketbox_male_adult_01",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "id": "third_party:bags/gso_digital_camo_double_decker_lunch_bag",
@@ -28,41 +28,66 @@
   "physics_calibrated": false,
   "license": "MIT AND CC-BY-4.0",
   "limitations": [
-    "Bag follows authored bone pose as a kinematic collider; no gravity-driven bag swing",
-    "MuJoCo is a static pose contact model, not a moving skeletal controller",
-    "Wearer self-contact filtered; external object contact enabled",
-    "Straps are visual ribbons; no cloth, hand force or body-surface sampling calibration",
-    "No walking controller; body collision remains a coarse navigation proxy"
+    "Rigid convex regions; not deformable skin or clothing",
+    "Hands are whole-hand hulls, not finger-level contact",
+    "Kinematic bodies do not react like a dynamic human",
+    "MuJoCo visual snapshot is static; USD animates skin and colliders together",
+    "Mass, contact friction and human-contact force limits are not calibrated"
   ],
   "collision_policy": {
     "usd": "Kinematic carried bag with convex collision; filter wearer collision prims only",
-    "mujoco": "Static pose bag collider contype=2, conaffinity=1; navigation proxy contype=4, conaffinity=1",
+    "mujoco": "Kinematic mocap bag contype=2 conaffinity=1; segmented human contype=4 conaffinity=1; external objects use contype=1",
     "filtered_wearer_prims": [
-      "/Assembly/Person/NavigationProxy"
+      "/Assembly/Person/ContactRig/pelvis",
+      "/Assembly/Person/ContactRig/abdomen",
+      "/Assembly/Person/ContactRig/chest",
+      "/Assembly/Person/ContactRig/neck",
+      "/Assembly/Person/ContactRig/head",
+      "/Assembly/Person/ContactRig/left_shoulder",
+      "/Assembly/Person/ContactRig/left_upper_arm",
+      "/Assembly/Person/ContactRig/left_forearm",
+      "/Assembly/Person/ContactRig/left_hand",
+      "/Assembly/Person/ContactRig/left_thigh",
+      "/Assembly/Person/ContactRig/left_calf",
+      "/Assembly/Person/ContactRig/left_foot",
+      "/Assembly/Person/ContactRig/right_shoulder",
+      "/Assembly/Person/ContactRig/right_upper_arm",
+      "/Assembly/Person/ContactRig/right_forearm",
+      "/Assembly/Person/ContactRig/right_hand",
+      "/Assembly/Person/ContactRig/right_thigh",
+      "/Assembly/Person/ContactRig/right_calf",
+      "/Assembly/Person/ContactRig/right_foot"
     ],
     "external_collision_enabled": true,
-    "cloth_strap_dynamics": false
+    "cloth_strap_dynamics": false,
+    "navigation_proxy_disabled": true
   },
   "viewer_status": [
     [
-      "包的碰撞",
-      "已开启对外凸包碰撞"
-    ],
-    [
-      "穿戴方式",
-      "随骨骼运动的运动学刚体"
-    ],
-    [
-      "过滤范围",
-      "仅穿戴者自身碰撞"
-    ],
-    [
       "人体碰撞",
-      "仍为粗略占位，未完成精细分区"
+      "19 个骨骼随动凸包区域"
     ],
     [
-      "背带",
-      "视觉模型，未模拟柔性"
+      "外形依据",
+      "从现有人物网格按骨骼权重分区提取"
+    ],
+    [
+      "运动示例",
+      "躯干转动与前臂动作；不是行走"
+    ],
+    [
+      "接触记录",
+      "区域、位置、法向和仿真接触力"
+    ],
+    [
+      "采样标注",
+      "衣物候选区；头颈回避区"
+    ],
+    [
+      "当前限制",
+      "皮肤、衣服与手指尚未精细柔性建模"
     ]
-  ]
+  ],
+  "contact_regions": "assets/fq/passenger_combinations/male_small_hand_carry/contact_regions.json",
+  "contact_motion": "assets/fq/passenger_combinations/male_small_hand_carry/contact_motion.json"
 }

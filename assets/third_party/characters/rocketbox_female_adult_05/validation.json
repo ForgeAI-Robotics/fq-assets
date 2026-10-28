@@ -19,5 +19,32 @@
   "mujoco_navigation_proxy_count": 1,
   "rendered_preview": "validation/previews/third_party_characters_rocketbox_female_adult_05.png",
   "isaac_stage_load": true,
-  "isaac_batch_render": true
+  "isaac_batch_render": true,
+  "contact_region_count": 19,
+  "contact_hull_triangles": 1026,
+  "usd_missing_dependencies": [],
+  "contact_model_validation_pending": false,
+  "mujoco_contact_regions_test": {
+    "regions_tested": 19,
+    "all_positive_contact_force": true,
+    "negative_control_no_contact": true,
+    "left_hand_motion_m": 0.02534989493815466
+  },
+  "usd_collision_bone_follow_test": {
+    "frames": [
+      0,
+      15,
+      30,
+      45,
+      60
+    ],
+    "max_matrix_error": 7.367287591097949e-08,
+    "tolerance": 0.001
+  },
+  "physx_segmented_body_test": {
+    "enabled_probe_z_m": 1.7508569955825806,
+    "disabled_probe_z_m": 0.015000453218817711,
+    "test": "Guided external probe blocked by head collider; disabling all body colliders makes probe fall to ground",
+    "scope": "one physical external contact per character; all 19 regions tested separately in MuJoCo"
+  }
 }

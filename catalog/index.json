@@ -109,22 +109,22 @@
     },
     {
       "id": "third_party:characters/rocketbox_female_adult_01",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "manifest": "assets/third_party/characters/rocketbox_female_adult_01/asset.json"
     },
     {
       "id": "third_party:characters/rocketbox_female_adult_05",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "manifest": "assets/third_party/characters/rocketbox_female_adult_05/asset.json"
     },
     {
       "id": "third_party:characters/rocketbox_male_adult_01",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "manifest": "assets/third_party/characters/rocketbox_male_adult_01/asset.json"
     },
     {
       "id": "third_party:characters/rocketbox_male_adult_06",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "manifest": "assets/third_party/characters/rocketbox_male_adult_06/asset.json"
     },
     {
@@ -184,17 +184,17 @@
     },
     {
       "id": "fq:characters/female_commuter_backpack",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "manifest": "assets/fq/passenger_combinations/female_commuter_backpack/asset.json"
     },
     {
       "id": "fq:characters/male_commuter_backpack",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "manifest": "assets/fq/passenger_combinations/male_commuter_backpack/asset.json"
     },
     {
       "id": "fq:characters/male_small_hand_carry",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "manifest": "assets/fq/passenger_combinations/male_small_hand_carry/asset.json"
     },
     {

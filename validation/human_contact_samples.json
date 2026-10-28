@@ -1,0 +1,2529 @@
+[
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "pelvis",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.04250097927885012,
+      -0.06012768924361075,
+      1.0334341486183916
+    ],
+    "surface_normal": [
+      -0.11190087249789558,
+      -0.24919755038864838,
+      0.9619660989944017
+    ],
+    "normal_force_N": 0.02370140476439929,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "abdomen",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.01804441544901337,
+      -0.03478865329843851,
+      1.0492757995347475
+    ],
+    "surface_normal": [
+      -0.042214314892286546,
+      -0.012569800499314996,
+      -0.9990295049364569
+    ],
+    "normal_force_N": 0.023701484590828326,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "chest",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.13744957507135508,
+      -0.039355465413960074,
+      1.2763815238802683
+    ],
+    "surface_normal": [
+      -0.9736169632525338,
+      -0.1942863020519928,
+      -0.11967807527645194
+    ],
+    "normal_force_N": 0.02370134781095006,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "neck",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.011900616927282386,
+      -0.03515547206845631,
+      1.500048489957167
+    ],
+    "surface_normal": [
+      -4.627938643694836e-06,
+      -0.7663963009848948,
+      -0.6423680485634796
+    ],
+    "normal_force_N": 0.023701491174879328,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "head",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.0418130155829531,
+      0.019981780659409053,
+      1.4983876769825573
+    ],
+    "surface_normal": [
+      0.8696614784476411,
+      -0.19079291442099378,
+      -0.4552877954777685
+    ],
+    "normal_force_N": 0.023701502828582764,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "left_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.10203638657988628,
+      0.009542386000735734,
+      1.3962969392426512
+    ],
+    "surface_normal": [
+      0.8473405088109683,
+      0.44463692500991253,
+      -0.2903654026320952
+    ],
+    "normal_force_N": 0.02370155355544129,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "left_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.21470619537890934,
+      0.014028245663721454,
+      1.2715417463187162
+    ],
+    "surface_normal": [
+      -0.6277353451249016,
+      0.25053965160745534,
+      -0.7370062546907833
+    ],
+    "normal_force_N": 0.023701464195457232,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "left_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.4026131088737296,
+      -0.060118251894827064,
+      1.1603527725752463
+    ],
+    "surface_normal": [
+      -0.5165195679306639,
+      -0.8555060010193071,
+      -0.03629074489003683
+    ],
+    "normal_force_N": 0.023701524194952868,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "left_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.5424670940723253,
+      -0.116401054813622,
+      0.9840861705183223
+    ],
+    "surface_normal": [
+      -0.8109703081317347,
+      0.3272404386871515,
+      -0.4850163446901147
+    ],
+    "normal_force_N": 0.023701514259509907,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "left_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.06724969374681619,
+      -0.0289833000819403,
+      0.8628510912445702
+    ],
+    "surface_normal": [
+      -0.8121391391556394,
+      0.15895076847445655,
+      0.5613952901948116
+    ],
+    "normal_force_N": 0.02370163850595468,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "left_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.1567408112655422,
+      0.02386730822004053,
+      0.22592293747753764
+    ],
+    "surface_normal": [
+      0.900706470513384,
+      0.4315680180825032,
+      0.0497684613350942
+    ],
+    "normal_force_N": 0.02370156451349638,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "left_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.12973215157032186,
+      -0.038572866218101756,
+      0.0007820081031760302
+    ],
+    "surface_normal": [
+      -7.165798042903611e-08,
+      -1.1042415236917238e-07,
+      -0.9999999999999913
+    ],
+    "normal_force_N": 0.023701616814110628,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "right_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.06348050080850508,
+      -0.018123502824437126,
+      1.3807102565664826
+    ],
+    "surface_normal": [
+      0.42081307562131065,
+      -0.3568965669229252,
+      -0.8339911245959174
+    ],
+    "normal_force_N": 0.02370157797511887,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "right_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.22581473297420246,
+      -0.03630384814720808,
+      1.3511565217479105
+    ],
+    "surface_normal": [
+      -0.3113070804469691,
+      -0.8152027033369073,
+      0.48839784411459364
+    ],
+    "normal_force_N": 0.02370149971273735,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "right_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.40261307736562923,
+      -0.06011823930190791,
+      1.1603532004712775
+    ],
+    "surface_normal": [
+      0.516519761039545,
+      -0.855505869676385,
+      -0.03629109263860841
+    ],
+    "normal_force_N": 0.02370150925842274,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "right_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.5424670102386693,
+      -0.11640096380077866,
+      0.9840866114929473
+    ],
+    "surface_normal": [
+      0.8109690907237037,
+      0.32724243114534024,
+      -0.4850170359367357
+    ],
+    "normal_force_N": 0.023701518851242692,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "right_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.07076778092504349,
+      -0.03427895063624467,
+      0.8575060858447618
+    ],
+    "surface_normal": [
+      0.8191985984673962,
+      0.0914399876196007,
+      0.566173458343979
+    ],
+    "normal_force_N": 0.023701503395980913,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "right_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.12237500520434261,
+      0.04971063593960635,
+      0.2583046604579934
+    ],
+    "surface_normal": [
+      -0.31347202099576066,
+      0.9494276005639017,
+      -0.017958934832159858
+    ],
+    "normal_force_N": 0.02370144377431853,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_01",
+    "region": "right_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.11820673977534354,
+      -0.021427576227205654,
+      0.07522496467413109
+    ],
+    "surface_normal": [
+      0.09031710112677407,
+      0.46745790269790793,
+      0.8793895214575446
+    ],
+    "normal_force_N": 0.02370155286163642,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "pelvis",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.0011711508043605041,
+      -0.03102702333534542,
+      1.0516906340277596
+    ],
+    "surface_normal": [
+      -4.3105859207846454e-08,
+      -0.09850460153045298,
+      0.9951365953864448
+    ],
+    "normal_force_N": 0.023701655898873544,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "abdomen",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.018959736164876465,
+      0.005329072982234947,
+      1.078497786441233
+    ],
+    "surface_normal": [
+      6.517186649217233e-08,
+      -0.2506344474997052,
+      -0.9680818011544858
+    ],
+    "normal_force_N": 0.023701532502972498,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "chest",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.0033419611594927194,
+      0.01892237999704062,
+      1.1211712030354533
+    ],
+    "surface_normal": [
+      -3.8440757400204934e-08,
+      0.10649595265214123,
+      -0.9943131358222679
+    ],
+    "normal_force_N": 0.02370154970333603,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "neck",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.00045828678002190896,
+      0.03260733898816735,
+      1.4805321222382894
+    ],
+    "surface_normal": [
+      0.0038162182692478524,
+      0.7523857944401011,
+      -0.6587116613533264
+    ],
+    "normal_force_N": 0.023701473824943878,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "head",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.017971795970853233,
+      0.059978768179103095,
+      1.5002716111727326
+    ],
+    "surface_normal": [
+      -0.00222303279679787,
+      0.08630061429869978,
+      -0.9962666621426471
+    ],
+    "normal_force_N": 0.02370150466156687,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "left_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.12063299816171633,
+      0.05077430199865768,
+      1.4169547473877666
+    ],
+    "surface_normal": [
+      -0.7891863745867694,
+      -0.047766003211731474,
+      -0.6122934550554728
+    ],
+    "normal_force_N": 0.023701468895298863,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "left_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.2237533866673952,
+      0.10251362339729742,
+      1.3016340030020952
+    ],
+    "surface_normal": [
+      -0.0624333146150393,
+      0.9746941999534854,
+      -0.21464691426436716
+    ],
+    "normal_force_N": 0.023701522950344445,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "left_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.43083195185552065,
+      0.03278105598525467,
+      1.1178072577465885
+    ],
+    "surface_normal": [
+      -0.0527629674424339,
+      0.8097882684803465,
+      -0.5843449576220119
+    ],
+    "normal_force_N": 0.023701460188769986,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "left_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.5375088483705985,
+      -0.0784389354747034,
+      0.971355619320088
+    ],
+    "surface_normal": [
+      -0.7254896947699114,
+      0.1669785663922159,
+      -0.6676697246006151
+    ],
+    "normal_force_N": 0.023701566376687765,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "left_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.10621975763483318,
+      0.0020440492878526896,
+      0.8621541180569565
+    ],
+    "surface_normal": [
+      -0.3289424271374309,
+      0.30481392154558323,
+      0.8938038671100832
+    ],
+    "normal_force_N": 0.023701439125237707,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "left_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.10364959387508524,
+      0.09846338547417,
+      0.32975670466098894
+    ],
+    "surface_normal": [
+      0.16643105218205126,
+      0.9858070412500952,
+      0.02202685386768721
+    ],
+    "normal_force_N": 0.02370145776621472,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "left_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.09148090416877759,
+      0.032943815552814046,
+      0.030756165540637783
+    ],
+    "surface_normal": [
+      -0.9037128506948041,
+      0.06023502881490072,
+      -0.4238806728228343
+    ],
+    "normal_force_N": 0.023701578942882093,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "right_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.12063298067740752,
+      0.05077429008308194,
+      1.4169547232384891
+    ],
+    "surface_normal": [
+      0.7891868019305993,
+      -0.047765624181473156,
+      -0.6122929338193505
+    ],
+    "normal_force_N": 0.02370150810561506,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "right_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.22375340205355343,
+      0.10251359027934936,
+      1.301633778156055
+    ],
+    "surface_normal": [
+      0.062432935942425515,
+      0.9746942913247719,
+      -0.21464660949688824
+    ],
+    "normal_force_N": 0.02370159791980635,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "right_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.43071116584836466,
+      0.033412906312397794,
+      1.1173348040542739
+    ],
+    "surface_normal": [
+      0.04558530679575382,
+      0.8238788568869637,
+      -0.5649297380904703
+    ],
+    "normal_force_N": 0.023701542201108212,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "right_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.5356396365557681,
+      -0.07408628494304376,
+      0.9748567919374364
+    ],
+    "surface_normal": [
+      0.7301386433266637,
+      0.18025104539174477,
+      -0.6590956851294677
+    ],
+    "normal_force_N": 0.02370150438143872,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "right_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.10621973716359523,
+      0.0020440437755928883,
+      0.8621540703609876
+    ],
+    "surface_normal": [
+      0.3289423442066725,
+      0.3048141975520254,
+      0.8938038035041773
+    ],
+    "normal_force_N": 0.02370158988061921,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "right_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.15043007451893264,
+      0.07199592900024399,
+      0.2760976372182995
+    ],
+    "surface_normal": [
+      -0.8580920102144991,
+      0.5131654581732564,
+      0.01842049249808184
+    ],
+    "normal_force_N": 0.02370149087017697,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_female_adult_05",
+    "region": "right_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.09198707966023245,
+      0.0171180627615792,
+      0.028666965306278092
+    ],
+    "surface_normal": [
+      0.9029767696997764,
+      0.049961634189721146,
+      -0.42677486862706643
+    ],
+    "normal_force_N": 0.02370148218637122,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "pelvis",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.03199960509290593,
+      -0.007233814499197467,
+      0.9364043631610923
+    ],
+    "surface_normal": [
+      3.772315146080672e-08,
+      -0.24656649096034983,
+      0.9691258770332668
+    ],
+    "normal_force_N": 0.02370152805022312,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "abdomen",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.0014605337013206784,
+      0.03172450062747285,
+      0.9378246335575919
+    ],
+    "surface_normal": [
+      -2.8393344765331463e-08,
+      0.2641505416917213,
+      -0.9644814624055611
+    ],
+    "normal_force_N": 0.023701611183893048,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "chest",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.11691913571823706,
+      -0.02479716426276434,
+      1.401108795503608
+    ],
+    "surface_normal": [
+      0.8390980628326895,
+      -0.4014591083343886,
+      0.3670763207914473
+    ],
+    "normal_force_N": 0.023701715311157313,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "neck",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.013803462499254085,
+      0.0277359277754178,
+      1.591885728578571
+    ],
+    "surface_normal": [
+      -2.1918981132388218e-07,
+      -0.28987443206379865,
+      0.9570646862337165
+    ],
+    "normal_force_N": 0.023701567293124334,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "head",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.07049219551529151,
+      -0.037129494525681164,
+      1.7339305188455179
+    ],
+    "surface_normal": [
+      -0.8681050341907164,
+      -0.48179298227132344,
+      0.11945363890162258
+    ],
+    "normal_force_N": 0.02370147511839171,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "left_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.14423047367754244,
+      0.06155549047345941,
+      1.426417420394222
+    ],
+    "surface_normal": [
+      -0.9736659432076268,
+      0.17336718733895107,
+      -0.14804880746491517
+    ],
+    "normal_force_N": 0.02370156122450333,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "left_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.28809006984937285,
+      0.10146528513706154,
+      1.3515425084783335
+    ],
+    "surface_normal": [
+      0.4695719385002363,
+      0.8049372429372832,
+      0.3627371355481205
+    ],
+    "normal_force_N": 0.023701552550811376,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "left_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.47333799506546126,
+      0.01932159106772466,
+      1.113872145657989
+    ],
+    "surface_normal": [
+      -0.4243618880737164,
+      0.4239248052080722,
+      -0.8001279569417686
+    ],
+    "normal_force_N": 0.023701586400617137,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "left_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.6048384664328618,
+      -0.07175079781491941,
+      0.964466481218845
+    ],
+    "surface_normal": [
+      -0.8022354887244427,
+      0.3307041437478209,
+      -0.49704425350171344
+    ],
+    "normal_force_N": 0.02370150419528176,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "left_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.017633956745871628,
+      0.031233214965202663,
+      0.6825696888662225
+    ],
+    "surface_normal": [
+      -0.9975113336051963,
+      0.07011683359307229,
+      0.00740060646598858
+    ],
+    "normal_force_N": 0.023701625085018403,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "left_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.07512462718571436,
+      -0.010285697477655578,
+      0.331749116497036
+    ],
+    "surface_normal": [
+      -0.7462390300118236,
+      -0.6477188738792232,
+      -0.15358245507753746
+    ],
+    "normal_force_N": 0.023701489265582146,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "left_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.12669596934042007,
+      -0.019323517388805014,
+      0.001580924358242141
+    ],
+    "surface_normal": [
+      -0.009331411903279603,
+      -0.015029279781958274,
+      -0.9998435105060828
+    ],
+    "normal_force_N": 0.023701558231255283,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "right_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.14203559389995424,
+      0.06164959317298504,
+      1.425536478430911
+    ],
+    "surface_normal": [
+      0.9679287011703698,
+      0.20271134319741513,
+      -0.1483985875597907
+    ],
+    "normal_force_N": 0.02370152466465221,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "right_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.2882224277353994,
+      0.09883433326342916,
+      1.358017367762768
+    ],
+    "surface_normal": [
+      -0.46610463477465164,
+      0.8064384805931337,
+      0.3638728438070458
+    ],
+    "normal_force_N": 0.023701484031512135,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "right_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.45810052338858276,
+      -0.025307573200219285,
+      1.1432118422585758
+    ],
+    "surface_normal": [
+      0.5034724720200788,
+      -0.8517066449547295,
+      -0.14529714676465424
+    ],
+    "normal_force_N": 0.02370150992238007,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "right_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.6048385053757399,
+      -0.07175101021565883,
+      0.9644663955068223
+    ],
+    "surface_normal": [
+      0.8022353178762759,
+      0.3307043741275198,
+      -0.4970443759714781
+    ],
+    "normal_force_N": 0.02370151601732518,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "right_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.018899796729513342,
+      0.031232874076905642,
+      0.6825727188199326
+    ],
+    "surface_normal": [
+      0.9974293505678988,
+      0.07150967001330852,
+      -0.004588869173089145
+    ],
+    "normal_force_N": 0.023701539789691424,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "right_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.15048153508281198,
+      0.06090118098806631,
+      0.30368093655233525
+    ],
+    "surface_normal": [
+      -0.9172373160650251,
+      0.39727522867701504,
+      -0.02912213415006859
+    ],
+    "normal_force_N": 0.02370145713187955,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_01",
+    "region": "right_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.1267863162722615,
+      -0.01914482937049608,
+      0.0015809266036698206
+    ],
+    "surface_normal": [
+      0.00927123798347005,
+      -0.014904355662438225,
+      -0.9998459402970746
+    ],
+    "normal_force_N": 0.023701523581328144,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "pelvis",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.04588389840761328,
+      -0.003148675677137255,
+      0.946830810592939
+    ],
+    "surface_normal": [
+      -3.279781649766234e-08,
+      -0.06444443755457564,
+      0.9979212967304955
+    ],
+    "normal_force_N": 0.023701537475724305,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "abdomen",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.020527108251470652,
+      0.034923419152280866,
+      1.0947457909354048
+    ],
+    "surface_normal": [
+      0.0628617558279542,
+      0.4223712458578395,
+      0.9042405268106065
+    ],
+    "normal_force_N": 0.023701547065335293,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "chest",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.0026474795318380635,
+      -0.007118068962063596,
+      1.1556339729523173
+    ],
+    "surface_normal": [
+      1.0235630673211599e-07,
+      -0.5058298601088045,
+      -0.8626332665868486
+    ],
+    "normal_force_N": 0.0237014164587652,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "neck",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.016019752434844277,
+      0.04675276355478045,
+      1.5866349587106239
+    ],
+    "surface_normal": [
+      0.0003351908634680611,
+      -0.17652877682478205,
+      0.9842954224214555
+    ],
+    "normal_force_N": 0.023701430304531382,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "head",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.08893296286507306,
+      0.012866232521277063,
+      1.6542991041802633
+    ],
+    "surface_normal": [
+      -0.9147193749987979,
+      -0.376986507341647,
+      -0.14549789786850825
+    ],
+    "normal_force_N": 0.02370165875523831,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "left_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.15375837562613448,
+      0.08715988015919127,
+      1.377801484978285
+    ],
+    "surface_normal": [
+      -0.7102135581273957,
+      -0.07586136388502415,
+      -0.6998869589594653
+    ],
+    "normal_force_N": 0.02370139763165645,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "left_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.2771760015518602,
+      0.004205749529661952,
+      1.36492262750121
+    ],
+    "surface_normal": [
+      0.4003693170917154,
+      -0.81882963881642,
+      0.4113665427903501
+    ],
+    "normal_force_N": 0.023701509672206095,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "left_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.4500546150377403,
+      0.0533925024633303,
+      1.1431237434075916
+    ],
+    "surface_normal": [
+      -0.07790055311554231,
+      0.8438779889936526,
+      -0.5308497372292098
+    ],
+    "normal_force_N": 0.023701514444494774,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "left_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.5989160766257904,
+      -0.06406004545587224,
+      0.9647871325823523
+    ],
+    "surface_normal": [
+      -0.776905562863705,
+      0.2776074617274187,
+      -0.5651122398114284
+    ],
+    "normal_force_N": 0.023701482231752155,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "left_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.17074969590937497,
+      0.057312503691806974,
+      0.7391431739782492
+    ],
+    "surface_normal": [
+      0.8986439887365923,
+      0.4386741884313728,
+      0.001984417210094944
+    ],
+    "normal_force_N": 0.02370155279255289,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "left_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.10630658339506124,
+      0.07152819182076377,
+      0.1449910667825976
+    ],
+    "surface_normal": [
+      -0.06866984731960357,
+      0.8169621387236995,
+      -0.5725882604115294
+    ],
+    "normal_force_N": 0.023701551656809868,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "left_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.15143389596675355,
+      0.013354369950008303,
+      0.00038780868387630434
+    ],
+    "surface_normal": [
+      -0.008021485762323984,
+      -0.0014815239828871226,
+      -0.9999667298729759
+    ],
+    "normal_force_N": 0.023701573184047565,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "right_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.13925488317270412,
+      0.08363435476603127,
+      1.4020587992274718
+    ],
+    "surface_normal": [
+      0.7192841962942603,
+      -0.1773961116347363,
+      -0.6716850932827051
+    ],
+    "normal_force_N": 0.02370145601921219,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "right_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.26053177863540816,
+      0.08770325050413097,
+      1.2754905751262497
+    ],
+    "surface_normal": [
+      0.5144060619783624,
+      0.43782346447412296,
+      -0.7373581337150827
+    ],
+    "normal_force_N": 0.023701605314300718,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "right_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.4542485619394433,
+      0.025109587723842558,
+      1.117723899469055
+    ],
+    "surface_normal": [
+      0.5778819675957543,
+      0.12732917007328975,
+      -0.8061263635287627
+    ],
+    "normal_force_N": 0.02370158737581004,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "right_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.6048372468440475,
+      -0.059955671213186824,
+      0.9643563454097006
+    ],
+    "surface_normal": [
+      0.802236843600392,
+      0.3307042317821526,
+      -0.4970420081355869
+    ],
+    "normal_force_N": 0.023701521046755034,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "right_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.016825641797588678,
+      0.00636593491842359,
+      0.6780787907081018
+    ],
+    "surface_normal": [
+      0.997700639257893,
+      -0.03529295393163477,
+      -0.057860537736625604
+    ],
+    "normal_force_N": 0.02370153376607243,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "right_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.13150243463855776,
+      0.09452597639532301,
+      0.38827694652403155
+    ],
+    "surface_normal": [
+      -0.5394724213802897,
+      0.8188159512021879,
+      0.19623950832323164
+    ],
+    "normal_force_N": 0.023701524020135655,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "rocketbox_male_adult_06",
+    "region": "right_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.15143391488520647,
+      0.013354336063722725,
+      0.00038783416391719843
+    ],
+    "surface_normal": [
+      0.00802153595535211,
+      -0.0014814765783787377,
+      -0.9999667295405706
+    ],
+    "normal_force_N": 0.023701543980019037,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "pelvis",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.0011711508043605041,
+      -0.03102702333534542,
+      1.0516906340277596
+    ],
+    "surface_normal": [
+      -4.3105859207846454e-08,
+      -0.09850460153045298,
+      0.9951365953864448
+    ],
+    "normal_force_N": 0.023701655898873544,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "abdomen",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.018959736164876465,
+      0.005329072982234947,
+      1.078497786441233
+    ],
+    "surface_normal": [
+      6.517186649217233e-08,
+      -0.2506344474997052,
+      -0.9680818011544858
+    ],
+    "normal_force_N": 0.023701532502972498,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "chest",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.0033419604277576034,
+      0.01892238047513569,
+      1.121171201897968
+    ],
+    "surface_normal": [
+      5.597668822588434e-08,
+      0.10649590720384279,
+      -0.9943131406900079
+    ],
+    "normal_force_N": 0.023701673871685404,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "neck",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.00045828678002190896,
+      0.03260733898816735,
+      1.4805321222382894
+    ],
+    "surface_normal": [
+      0.0038162182692478524,
+      0.7523857944401011,
+      -0.6587116613533264
+    ],
+    "normal_force_N": 0.023701473824943878,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "head",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.017971795970853233,
+      0.059978768179103095,
+      1.5002716111727326
+    ],
+    "surface_normal": [
+      -0.00222303279679787,
+      0.08630061429869978,
+      -0.9962666621426471
+    ],
+    "normal_force_N": 0.02370150466156687,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "left_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.12202740363414613,
+      0.05077631483198557,
+      1.4188329760945684
+    ],
+    "surface_normal": [
+      -0.751098383590662,
+      -0.05581680905010822,
+      -0.6578264983982925
+    ],
+    "normal_force_N": 0.02370149956526331,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "left_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.19341268362317915,
+      0.08883940717042343,
+      1.1974215390368377
+    ],
+    "surface_normal": [
+      -0.3482206586116753,
+      0.9069199373376529,
+      -0.23714679035466454
+    ],
+    "normal_force_N": 0.023701555299577317,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "left_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.24458002688758246,
+      0.03278105961797936,
+      1.019007064272679
+    ],
+    "surface_normal": [
+      -0.36436932543001616,
+      0.8097882494246569,
+      -0.4598673567230279
+    ],
+    "normal_force_N": 0.02370158983126669,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "left_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.25355226804346265,
+      -0.07843893436343521,
+      0.8380442304613995
+    ],
+    "surface_normal": [
+      -0.9727440276310069,
+      0.16697856040897616,
+      -0.1608950498677727
+    ],
+    "normal_force_N": 0.02370153781137319,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "left_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.10621975763483318,
+      0.0020440492878526896,
+      0.8621541180569565
+    ],
+    "surface_normal": [
+      -0.3289424271374309,
+      0.30481392154558323,
+      0.8938038671100832
+    ],
+    "normal_force_N": 0.023701439125237707,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "left_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.10364959387508524,
+      0.09846338547417,
+      0.32975670466098894
+    ],
+    "surface_normal": [
+      0.16643105218205126,
+      0.9858070412500952,
+      0.02202685386768721
+    ],
+    "normal_force_N": 0.02370145776621472,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "left_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.09148090416877759,
+      0.032943815552814046,
+      0.030756165540637783
+    ],
+    "surface_normal": [
+      -0.9037128506948041,
+      0.06023502881490072,
+      -0.4238806728228343
+    ],
+    "normal_force_N": 0.023701578942882093,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "right_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.12202738074059624,
+      0.05077630268251058,
+      1.4188329553568306
+    ],
+    "surface_normal": [
+      0.7510988594878919,
+      -0.055816485433513856,
+      -0.6578259824830869
+    ],
+    "normal_force_N": 0.02370145736702777,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "right_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.2162972498725489,
+      0.026677967023330827,
+      1.3149954683794784
+    ],
+    "surface_normal": [
+      -0.7359046344657263,
+      -0.5930856402501997,
+      0.3266401572080147
+    ],
+    "normal_force_N": 0.02370154840359991,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "right_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.24422007370465115,
+      0.033412899886705254,
+      1.018678101896873
+    ],
+    "surface_normal": [
+      0.3477254692988731,
+      0.8238788312624103,
+      -0.4475607996669987
+    ],
+    "normal_force_N": 0.023701561054962857,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "right_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.2539074482836068,
+      -0.07408629354715969,
+      0.8419972615288494
+    ],
+    "surface_normal": [
+      0.9719339189491354,
+      0.18025108843838492,
+      -0.15117540247326353
+    ],
+    "normal_force_N": 0.023701461952343704,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "right_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.10621973716359523,
+      0.0020440437755928883,
+      0.8621540703609876
+    ],
+    "surface_normal": [
+      0.3289423442066725,
+      0.3048141975520254,
+      0.8938038035041773
+    ],
+    "normal_force_N": 0.02370158988061921,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "right_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.15043007451893264,
+      0.07199592900024399,
+      0.2760976372182995
+    ],
+    "surface_normal": [
+      -0.8580920102144991,
+      0.5131654581732564,
+      0.01842049249808184
+    ],
+    "normal_force_N": 0.02370149087017697,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "female_commuter_backpack",
+    "region": "right_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.09198707966023245,
+      0.0171180627615792,
+      0.028666965306278092
+    ],
+    "surface_normal": [
+      0.9029767696997764,
+      0.049961634189721146,
+      -0.42677486862706643
+    ],
+    "normal_force_N": 0.02370148218637122,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "pelvis",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.04588389840761328,
+      -0.003148675677137255,
+      0.946830810592939
+    ],
+    "surface_normal": [
+      -3.279781649766234e-08,
+      -0.06444443755457564,
+      0.9979212967304955
+    ],
+    "normal_force_N": 0.023701537475724305,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "abdomen",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.020527108251470652,
+      0.034923419152280866,
+      1.0947457909354048
+    ],
+    "surface_normal": [
+      0.0628617558279542,
+      0.4223712458578395,
+      0.9042405268106065
+    ],
+    "normal_force_N": 0.023701547065335293,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "chest",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.0026474794832386933,
+      -0.007118069894738571,
+      1.155633971384622
+    ],
+    "surface_normal": [
+      1.0862721819322997e-07,
+      -0.5058298588210501,
+      -0.8626332673419596
+    ],
+    "normal_force_N": 0.02370160809244887,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "neck",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.016019752434844277,
+      0.04675276355478045,
+      1.5866349587106239
+    ],
+    "surface_normal": [
+      0.0003351908634680611,
+      -0.17652877682478205,
+      0.9842954224214555
+    ],
+    "normal_force_N": 0.023701430304531382,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "head",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.08893296286507306,
+      0.012866232521277063,
+      1.6542991041802633
+    ],
+    "surface_normal": [
+      -0.9147193749987979,
+      -0.376986507341647,
+      -0.14549789786850825
+    ],
+    "normal_force_N": 0.02370165875523831,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "left_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.14791923363743853,
+      0.08716520381130041,
+      1.3816895512317138
+    ],
+    "surface_normal": [
+      -0.737060687089319,
+      -0.09715519857367774,
+      -0.6688067067079473
+    ],
+    "normal_force_N": 0.023701515983687065,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "left_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.17908534309807028,
+      0.03202435065908063,
+      1.275498502014244
+    ],
+    "surface_normal": [
+      -0.9040667569081529,
+      -0.38183080170310896,
+      -0.1920118171476325
+    ],
+    "normal_force_N": 0.023701600409088704,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "left_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.25417412351399826,
+      0.05339251096722489,
+      1.0585542719737524
+    ],
+    "surface_normal": [
+      -0.35607924269991575,
+      0.843878007982846,
+      -0.40134459079593715
+    ],
+    "normal_force_N": 0.023701496547631783,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "left_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.28095845590697677,
+      -0.06406003084553824,
+      0.8278027001440336
+    ],
+    "surface_normal": [
+      -0.9595475212766748,
+      0.2776074512036838,
+      -0.0469324775393766
+    ],
+    "normal_force_N": 0.023701518296430725,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "left_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.17074969590937497,
+      0.057312503691806974,
+      0.7391431739782492
+    ],
+    "surface_normal": [
+      0.8986439887365923,
+      0.4386741884313728,
+      0.001984417210094944
+    ],
+    "normal_force_N": 0.02370155279255289,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "left_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.10630658339506124,
+      0.07152819182076377,
+      0.1449910667825976
+    ],
+    "surface_normal": [
+      -0.06866984731960357,
+      0.8169621387236995,
+      -0.5725882604115294
+    ],
+    "normal_force_N": 0.023701551656809868,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "left_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.15143389596675355,
+      0.013354369950008303,
+      0.00038780868387630434
+    ],
+    "surface_normal": [
+      -0.008021485762323984,
+      -0.0014815239828871226,
+      -0.9999667298729759
+    ],
+    "normal_force_N": 0.023701573184047565,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "right_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.13320944483480882,
+      0.08363588127080311,
+      1.40563223037129
+    ],
+    "surface_normal": [
+      0.7547330040215438,
+      -0.1835012737527228,
+      -0.6298455169100953
+    ],
+    "normal_force_N": 0.02370151571156983,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "right_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.1816301459743812,
+      0.08600781434389143,
+      1.2553237312697454
+    ],
+    "surface_normal": [
+      0.807314413190033,
+      0.5258629322126354,
+      -0.2677902439977272
+    ],
+    "normal_force_N": 0.023701463464408257,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "right_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.24376245064696675,
+      0.025109593619281348,
+      1.035009826116362
+    ],
+    "surface_normal": [
+      0.9251532331594695,
+      0.12732916429396943,
+      -0.3576014249059693
+    ],
+    "normal_force_N": 0.02370152350500719,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "right_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.28567516150356975,
+      -0.0599556630701819,
+      0.8241973961620026
+    ],
+    "surface_normal": [
+      0.9434320607073549,
+      0.33070426965944105,
+      0.023887922858422582
+    ],
+    "normal_force_N": 0.02370145562479748,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "right_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.016825641797588678,
+      0.00636593491842359,
+      0.6780787907081018
+    ],
+    "surface_normal": [
+      0.997700639257893,
+      -0.03529295393163477,
+      -0.057860537736625604
+    ],
+    "normal_force_N": 0.02370153376607243,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "right_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.13150243463855776,
+      0.09452597639532301,
+      0.38827694652403155
+    ],
+    "surface_normal": [
+      -0.5394724213802897,
+      0.8188159512021879,
+      0.19623950832323164
+    ],
+    "normal_force_N": 0.023701524020135655,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_commuter_backpack",
+    "region": "right_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.15143391488520647,
+      0.013354336063722725,
+      0.00038783416391719843
+    ],
+    "surface_normal": [
+      0.00802153595535211,
+      -0.0014814765783787377,
+      -0.9999667295405706
+    ],
+    "normal_force_N": 0.023701543980019037,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "pelvis",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.03199960509290593,
+      -0.007233814499197467,
+      0.9364043631610923
+    ],
+    "surface_normal": [
+      3.772315146080672e-08,
+      -0.24656649096034983,
+      0.9691258770332668
+    ],
+    "normal_force_N": 0.02370152805022312,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "abdomen",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.0014605337013206784,
+      0.03172450062747285,
+      0.9378246335575919
+    ],
+    "surface_normal": [
+      -2.8393344765331463e-08,
+      0.2641505416917213,
+      -0.9644814624055611
+    ],
+    "normal_force_N": 0.023701611183893048,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "chest",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.02181073320009036,
+      0.12944936146602573,
+      1.485507892524328
+    ],
+    "surface_normal": [
+      -7.315229840160555e-06,
+      0.8875095619878361,
+      0.4607892981902323
+    ],
+    "normal_force_N": 0.023701545039563114,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "neck",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.013803462499254085,
+      0.0277359277754178,
+      1.591885728578571
+    ],
+    "surface_normal": [
+      -2.1918981132388218e-07,
+      -0.28987443206379865,
+      0.9570646862337165
+    ],
+    "normal_force_N": 0.023701567293124334,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "head",
+    "sampling_tag": "avoid",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.07049219551529151,
+      -0.037129494525681164,
+      1.7339305188455179
+    ],
+    "surface_normal": [
+      -0.8681050341907164,
+      -0.48179298227132344,
+      0.11945363890162258
+    ],
+    "normal_force_N": 0.02370147511839171,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "left_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.14283490053137937,
+      0.06155722259665598,
+      1.427938405501822
+    ],
+    "surface_normal": [
+      -0.9780208018212846,
+      0.16643728908225122,
+      -0.1255943470376072
+    ],
+    "normal_force_N": 0.02370144396796411,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "left_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.18566404500844497,
+      0.04996069176017079,
+      1.3639629058827025
+    ],
+    "surface_normal": [
+      -0.8535548464650456,
+      0.112168623160276,
+      0.5087851452768255
+    ],
+    "normal_force_N": 0.023701491673254634,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "left_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.2084000868866812,
+      0.019321579210116475,
+      1.0186337093536029
+    ],
+    "surface_normal": [
+      -0.8400263969723665,
+      0.4239248571216976,
+      -0.33859026551862464
+    ],
+    "normal_force_N": 0.0237015801390686,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "left_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.2127274340316717,
+      -0.07175081545515816,
+      0.8196470225734387
+    ],
+    "surface_normal": [
+      -0.933788243335073,
+      0.3307041783634609,
+      0.13665380719960488
+    ],
+    "normal_force_N": 0.023701576418571426,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "left_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.017633956745871628,
+      0.031233214965202663,
+      0.6825696888662225
+    ],
+    "surface_normal": [
+      -0.9975113336051963,
+      0.07011683359307229,
+      0.00740060646598858
+    ],
+    "normal_force_N": 0.023701625085018403,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "left_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.07512462718571436,
+      -0.010285697477655578,
+      0.331749116497036
+    ],
+    "surface_normal": [
+      -0.7462390300118236,
+      -0.6477188738792232,
+      -0.15358245507753746
+    ],
+    "normal_force_N": 0.023701489265582146,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "left_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      0.12669596934042007,
+      -0.019323517388805014,
+      0.001580924358242141
+    ],
+    "surface_normal": [
+      -0.009331411903279603,
+      -0.015029279781958274,
+      -0.9998435105060828
+    ],
+    "normal_force_N": 0.023701558231255283,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "right_shoulder",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.14101099159205496,
+      0.06165093385238485,
+      1.4264045319668721
+    ],
+    "surface_normal": [
+      0.9714503043029417,
+      0.1973483079556597,
+      -0.13167365574312903
+    ],
+    "normal_force_N": 0.02370148226316192,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "right_upper_arm",
+    "sampling_tag": "clothing_candidate",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.260940550895312,
+      0.005353719953390157,
+      1.3310452081954807
+    ],
+    "surface_normal": [
+      -0.6614208764189449,
+      -0.7243677892979176,
+      0.19445752766309285
+    ],
+    "normal_force_N": 0.02370151516370847,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "right_forearm",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.3090681550456047,
+      -0.025307568921177845,
+      1.0639437653954422
+    ],
+    "surface_normal": [
+      0.5165496497479145,
+      -0.8517066058143853,
+      0.08816074499144239
+    ],
+    "normal_force_N": 0.023701527506829616,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "right_hand",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.353467374807354,
+      -0.0914652936609423,
+      0.8675769465194672
+    ],
+    "surface_normal": [
+      0.975495188527969,
+      -0.007768353240206794,
+      0.21988358248563647
+    ],
+    "normal_force_N": 0.02370159600381477,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "right_thigh",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.018899796729513342,
+      0.031232874076905642,
+      0.6825727188199326
+    ],
+    "surface_normal": [
+      0.9974293505678988,
+      0.07150967001330852,
+      -0.004588869173089145
+    ],
+    "normal_force_N": 0.023701539789691424,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "right_calf",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.15048153508281198,
+      0.06090118098806631,
+      0.30368093655233525
+    ],
+    "surface_normal": [
+      -0.9172373160650251,
+      0.39727522867701504,
+      -0.02912213415006859
+    ],
+    "normal_force_N": 0.02370145713187955,
+    "force_is_model_estimate": true
+  },
+  {
+    "time_s": 0.0,
+    "passenger_id": "male_small_hand_carry",
+    "region": "right_foot",
+    "sampling_tag": "contact_only",
+    "other_geom": "contact_probe",
+    "position_m": [
+      -0.1267863162722615,
+      -0.01914482937049608,
+      0.0015809266036698206
+    ],
+    "surface_normal": [
+      0.00927123798347005,
+      -0.014904355662438225,
+      -0.9998459402970746
+    ],
+    "normal_force_N": 0.023701523581328144,
+    "force_is_model_estimate": true
+  }
+]
