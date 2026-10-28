@@ -35,3 +35,7 @@ Use detailed local surfaces where the swab actually touches; calibrate their con
 ## Retractable belt update (2026-10-28)
 
 The earlier rigid-belt viewer clarification is historical. The current airport catalog references `belt_preview.xml` / `belt_preview.usda` and exposes `belt_interaction.xml` for native MuJoCo flexible belt operations. The new `retractable_belt_kit` asset includes a checked grasp/lift/unlatch/reel/seat/latch cycle and defaults to a native physics video. USD and web 3D remain static snapshots; no PhysX cloth or browser physics is claimed. Reel feed is prescribed, and full passenger/robot workflow integration remains pending.
+
+## Preview correction (2026-10-28)
+
+The airport scene page now shows only its static 3D model; operation videos remain on the belt kit page. The kit has an explicit catalog thumbnail, and static previews include a webbing collider approximation. Native MuJoCo flex dynamics are unchanged. The office thumbnail shows the entire modeled layout with ceiling hidden for the render only.

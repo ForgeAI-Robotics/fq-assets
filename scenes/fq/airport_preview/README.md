@@ -2,7 +2,7 @@
 
 ## 当前伸缩带实现
 
-入口、出口均接入 `assets/fq/retractable_belt_kit` v0.1.0。带身为 MuJoCo 原生柔性网格，支持端头抓取、抬起脱扣、受控回收停靠、重新拉出和下压扣回。网页默认播放录制视频，可切换静态三维外观。机器人、旅客和检测仪业务流程尚未集成。
+入口、出口均接入 `assets/fq/retractable_belt_kit` v0.1.1。带身为 MuJoCo 原生柔性网格，支持端头抓取、抬起脱扣、受控回收停靠、重新拉出和下压扣回。场景网页仅展示静态三维布局；操作录制视频在伸缩带套件页查看。机器人、旅客和检测仪业务流程尚未集成。
 
 - `belt_preview.xml` / `belt_preview.usda`：当前目录的静态外观入口。USD 不包含 PhysX 柔性。
 - `belt_interaction.xml`：入口和出口两套原生 MuJoCo 柔性带，共 492 个顶点。

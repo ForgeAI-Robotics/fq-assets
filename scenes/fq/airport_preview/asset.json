@@ -28,7 +28,7 @@
   "dependencies": [
     {
       "id": "fq:deformables/retractable_belt_kit",
-      "version": "0.1.0"
+      "version": "0.1.1"
     }
   ],
   "physics_calibrated": false,
@@ -68,7 +68,7 @@
     "title": "机场入口 · 围合批次检测区",
     "paragraphs": [
       "旅客不摘包，分批进入，逐人擦拭人与包；批次结果满足条件后再打开出口。桌子和检测仪位于等待区域内。",
-      "入口和出口已接入柔性伸缩带套件：端头抬起脱扣、受控回收、拉出并下压扣回。网页默认播放入口的物理仿真录制，可切换静态外观。",
+      "入口和出口已接入柔性伸缩带套件：端头抬起脱扣、受控回收、拉出并下压扣回。本场景页仅展示静态三维布局，操作视频放在伸缩带套件页。",
       "当前视频由概念夹具操作，不含人员、机器人自主控制或完整安检业务；卷筒为受控收放边界。新柔性采样布与料盒尚未接入安检流程。"
     ]
   },
@@ -82,8 +82,8 @@
       "抓取、抬起脱扣、回收停靠、拉出扣回"
     ],
     [
-      "网页默认",
-      "原生仿真轨迹在机场布局中的录制"
+      "网页展示",
+      "静态三维场景，不显示动态演示"
     ],
     [
       "机构精度",
@@ -99,12 +99,5 @@
     "flexible_sampling_sheet",
     "swab_supply_box"
   ],
-  "legacy_interaction": "scenes/fq/airport_preview/interaction.json",
-  "demonstration": {
-    "file": "validation/previews/airport_flexible_belt_cycle.mp4",
-    "poster": "validation/previews/airport_flexible_belt.png",
-    "title": "机场入口伸缩带 · 脱扣、回收与扣回",
-    "caption": "原生 MuJoCo 柔性带轨迹在机场布局中的录制；出口保持扣合。使用概念夹具，尚未接入旅客与机器人流程。",
-    "default_view": "video"
-  }
+  "legacy_interaction": "scenes/fq/airport_preview/interaction.json"
 }

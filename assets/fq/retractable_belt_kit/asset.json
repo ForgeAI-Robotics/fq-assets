@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:deformables/retractable_belt_kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "deformable",
   "name": "可操作伸缩隔离带套件",
   "description": "双立柱、柔性带身、可抓取端头与卡扣；支持抬起脱扣、受控回收、拉出扣回",
@@ -46,7 +46,7 @@
     ],
     [
       "碰撞",
-      "外部物体可接触柔性带，记录位置与估计法向力"
+      "原生柔性碰撞；静态预览也包含带身碰撞近似"
     ],
     [
       "网页展示",

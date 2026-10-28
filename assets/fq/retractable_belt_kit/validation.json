@@ -174,5 +174,11 @@
       "missing_dependencies": [],
       "layers": 3
     }
+  },
+  "static_preview_collision": {
+    "external_probe_positive_force": true,
+    "disabled_collider_negative_control": true,
+    "usd_static_collision_enabled": true,
+    "native_flex_collision_preserved": true
   }
 }
