@@ -8,6 +8,7 @@ const jointDisplay=(j,v)=>j.type==='slide'?v*100:deg(v),jointValue=(j,v)=>j.type
 const jointLabels={seat_swivel:'座椅旋转',armrest_left_lift:'左扶手升降',armrest_right_lift:'右扶手升降',handle_right_hinge:'右提手',handle_left_hinge:'左提手',refrigerator_left_hinge:'左门',refrigerator_right_hinge:'右门',refrigerator_mullion_hinge:'中间竖梁'};
 const label=j=>jointLabels[j]||j.replace(/^left_/, '左 ').replace(/^right_/, '右 ').replace(/o[67]_/, '').replace(/thumb/g,'拇指').replace(/index/g,'食指').replace(/middle/g,'中指').replace(/ring/g,'无名指').replace(/pinky/g,'小指').replace(/hip/g,'髋').replace(/knee/g,'膝').replace(/ankle/g,'踝').replace(/waist/g,'腰').replace(/shoulder/g,'肩').replace(/elbow/g,'肘').replace(/wrist/g,'腕').replace(/_joint$/,'').replace(/_/g,' ');
 const isRobot=a=>['robot','end_effector','action'].includes(a?.kind);
+const isG1Assembly=a=>a?.kind==='robot'&&['g1_o6','g1_o7'].includes(a.slug);
 const independentDof=a=>a.joints.filter(j=>!j.coupling).length;
 let handAnimation=null;
 let motion=null,playing=false,motionTime=0,previousFrame=0;
@@ -80,9 +81,9 @@ function showProperties(a){
     html+=section('接触参数 / MUJOCO',row('滑动摩擦',fr(0))+row('扭转摩擦',`${fr(1)} m`)+row('滚动摩擦',`${fr(2)} m`)+`<p class="property-note">模型设定值；有多个碰撞面时显示范围。滑动摩擦为无量纲，扭转与滚动参数使用长度单位。</p>`);
   }
   if(isRobot(a)){
-    html+=section('关节与驱动',row('独立关节自由度',independentDof(a))+row('模型转动关节数',a.joints.length)+row('驱动数',a.actuators.length)+row('从动关节数',a.couplings.length)+(a.kind==='robot'?row('本体＋双手',`29 + ${a.family==='o6'?'6 + 6 = 41':'7 + 7 = 43'}`)+row('浮动基座','另有 6 自由度，不计入关节自由度'):'')+'<p class="property-note">滑块控制独立关节，手指从动关节按模型耦合关系联动。驱动范围为模型控制输入，不等于实测力矩。</p>'+a.actuators.map(v=>`<details class="property-details"><summary>${esc(label(v.joint))}</summary>${row('关节范围',a.joints.find(j=>j.name===v.joint)?.range.map(x=>fmt(deg(x),1)+'°').join(' ～ ')||'—')}${row('驱动输入范围',v.control_range? v.control_range.map(x=>fmt(x)).join(' ～ '):'未限定')}${row('传动系数',v.gear.map(x=>fmt(x)).join(', '))}</details>`).join(''));
-    html+=section('模型状态',`<p class="property-note">${(a.limitations||[]).map(esc).join('<br>')}</p>`+row('上游手模型版本',esc(a.vendor_revision.slice(0,8)))+row('模型类型','现有仿真模型快照')+(a.family==='o7'?row('手模型代次','O7 v1（非 v3）'):''));
-    if(a.dependencies?.length)html+=section('组合依赖',a.dependencies.map(id=>row(id,`v${esc(a.dependency_versions[id])}`)).join(''));
+    html+=section('关节与驱动',row('独立关节自由度',independentDof(a))+row('模型转动关节数',a.joints.length)+row('驱动数',a.actuators.length)+row('从动关节数',a.couplings.length)+(isG1Assembly(a)?row('本体＋双手',`29 + ${a.family==='o6'?'6 + 6 = 41':'7 + 7 = 43'}`)+row('浮动基座','另有 6 自由度，不计入关节自由度'):'')+'<p class="property-note">滑块控制独立关节，手指从动关节按模型耦合关系联动。驱动范围为模型控制输入，不等于实测力矩。</p>'+a.actuators.map(v=>`<details class="property-details"><summary>${esc(label(v.joint))}</summary>${row('关节范围',a.joints.find(j=>j.name===v.joint)?.range.map(x=>fmt(deg(x),1)+'°').join(' ～ ')||'—')}${row('驱动输入范围',v.control_range? v.control_range.map(x=>fmt(x)).join(' ～ '):'未限定')}${row('传动系数',v.gear.map(x=>fmt(x)).join(', '))}</details>`).join(''));
+    html+=section('模型状态',`<p class="property-note">${(a.limitations||[]).map(esc).join('<br>')}</p>`+(a.vendor_revision?row('上游模型版本',esc(a.vendor_revision.slice(0,8))):'')+row('模型类型','现有仿真模型快照')+(a.family==='o7'?row('手模型代次','O7 v1（非 v3）'):''));
+    if(a.dependencies?.length)html+=section('组合依赖',a.dependencies.map(id=>row(id,`v${esc(a.dependency_versions?.[id]||'见资产清单')}`)).join(''));
   }
   if(a.joints.length&&!isRobot(a)){
     html+=section('关节与阻力',row('可动关节',`${a.joints.length} 个`)+
@@ -248,7 +249,7 @@ async function selectAsset(slug){
   const supportsPBR=!!a.pbr_preview?.supported;$('pbr-badge').hidden=!supportsPBR;$('lighting-controls').hidden=!supportsPBR;setLighting('original');
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':a.kind==='action'?'动作':'物体'} / ${a.kind_label==='articulated'?'关节物体':a.kind_label}`;
   $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'静态场景预览':a.kind==='deformable'?'静态外观 · 非柔性仿真':'静态姿态';
-  $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isRobot(a)?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'转动关节可拖动或使用滑块；升降关节请使用厘米滑块。仅姿态预览，不运行接触物理，也不写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
+  $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isG1Assembly(a)||a.kind==='end_effector'?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'转动关节可拖动或使用滑块；升降关节请使用厘米滑块。仅姿态预览，不运行接触物理，也不写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
   if(a.kind==='scene'){$('scene-info').innerHTML=sceneDescription(a);document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
   configureDemonstration(a);
   $('material-controls').hidden=a.kind!=='material';$('collision-toggle').hidden=a.kind==='material';$('material-repeat').value=1;$('material-repeat-value').textContent='1 ×';
