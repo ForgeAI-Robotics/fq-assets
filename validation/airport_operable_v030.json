@@ -1,0 +1,241 @@
+{
+  "tests": [
+    {
+      "test": "entry_closed",
+      "passed": true,
+      "final_y": -1.9301677508671327,
+      "belt_contact": true
+    },
+    {
+      "test": "entry_open",
+      "passed": true,
+      "final_y": -1.2000000000000215,
+      "belt_contact": false
+    },
+    {
+      "test": "entry_reclosed",
+      "passed": true,
+      "final_y": -1.9301677508671327,
+      "belt_contact": true
+    },
+    {
+      "test": "exit_closed",
+      "passed": true,
+      "final_y": 3.5198322491329295,
+      "belt_contact": true
+    },
+    {
+      "test": "exit_open",
+      "passed": true,
+      "final_y": 4.24999999999989,
+      "belt_contact": false
+    },
+    {
+      "test": "exit_reclosed",
+      "passed": true,
+      "final_y": 3.5198322491329295,
+      "belt_contact": true
+    },
+    {
+      "test": "exit_requires_authorization",
+      "passed": true
+    },
+    {
+      "test": "alarm_blocks_open",
+      "passed": true
+    },
+    {
+      "test": "both_gates_open_rejected",
+      "passed": true
+    },
+    {
+      "test": "occupied_close_rejected",
+      "passed": true
+    },
+    {
+      "test": "occupancy_during_closure_reverses",
+      "passed": true
+    },
+    {
+      "test": "remote_grasp_rejected",
+      "passed": true
+    },
+    {
+      "test": "insertion_without_hold_rejected",
+      "passed": true
+    },
+    {
+      "test": "swab_rests_on_tray",
+      "passed": true,
+      "z": 0.7923130432550041
+    },
+    {
+      "test": "bilateral_contact_then_grasp",
+      "passed": true
+    },
+    {
+      "test": "lifted_off_tray",
+      "passed": true
+    },
+    {
+      "test": "premature_insertion_rejected",
+      "passed": true
+    },
+    {
+      "test": "sample_inserted",
+      "passed": true,
+      "tip_xyz": [
+        1.5099999987391315,
+        1.5799999999999979,
+        0.8824837828876063
+      ]
+    },
+    {
+      "test": "grasp_tracking_error",
+      "passed": true,
+      "max_error_m": 0.0038181875610063983
+    },
+    {
+      "test": "released_sample_on_separate_used_tray",
+      "passed": true
+    },
+    {
+      "test": "used_swab_cannot_be_reused",
+      "passed": true
+    },
+    {
+      "test": "full_cycle_grasp_error",
+      "passed": true,
+      "max_error_m": 0.0038181875610063983
+    },
+    {
+      "test": "no_detector_shell_collision_on_nominal_path",
+      "passed": true,
+      "contacts": []
+    }
+  ],
+  "swab_contacts": [
+    [
+      "SwabSupportA",
+      "swab_pad"
+    ],
+    [
+      "SwabSupportB",
+      "swab_pad"
+    ],
+    [
+      "UsedSwabSupportA",
+      "swab_pad"
+    ],
+    [
+      "UsedSwabSupportB",
+      "swab_pad"
+    ],
+    [
+      "gripper_pad_left",
+      "swab_handle"
+    ],
+    [
+      "gripper_pad_right",
+      "swab_handle"
+    ]
+  ],
+  "soft_body": false,
+  "chemical_detection": false,
+  "physx_tests": [
+    {
+      "test": "entry_closed",
+      "passed": true,
+      "position": [
+        0.0,
+        -1.8569999933242798,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "entry_open",
+      "passed": true,
+      "position": [
+        0.0,
+        1.8499970436096191,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "entry_reclosed",
+      "passed": true,
+      "position": [
+        0.0,
+        -1.8569999933242798,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "exit_closed",
+      "passed": true,
+      "position": [
+        0.0,
+        3.5930001735687256,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "exit_open",
+      "passed": true,
+      "position": [
+        0.0,
+        7.300042629241943,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "exit_reclosed",
+      "passed": true,
+      "position": [
+        0.0,
+        3.5930001735687256,
+        0.9800000190734863
+      ]
+    },
+    {
+      "test": "rigid_swab_supported_on_tray",
+      "passed": true,
+      "position": [
+        1.2999999523162842,
+        0.949999988079071,
+        0.7925000190734863
+      ]
+    }
+  ],
+  "usd_unresolved_dependencies": [],
+  "robot_ik": {
+    "joint_names": [
+      "torso_yaw_joint",
+      "right_shoulder_pitch_joint",
+      "right_shoulder_roll_joint",
+      "right_shoulder_yaw_joint",
+      "right_elbow_joint",
+      "right_wrist_yaw_joint",
+      "right_wrist_roll_joint",
+      "right_wrist_pitch_joint"
+    ],
+    "fixed_posture": {
+      "ankle_pitch_joint": -0.5,
+      "knee_pitch_joint": 0.6,
+      "hip_pitch_joint": -0.1
+    },
+    "base_motion": "kinematic lateral repositioning; wheel traction and navigation not validated",
+    "max_joint_step_rad": 0.09536784274153465,
+    "tool_adapter": "concept extension; TCP 0.28 m along wrist local -Z",
+    "max_tcp_error_m": 0.0003096192250365622,
+    "max_rotation_error_rad": 0.004238719020069226,
+    "mode": "kinematic IK replay; not motor dynamics or friction-only grasp validation"
+  },
+  "render": {
+    "frames": 614,
+    "fps": 24,
+    "duration_s": 25.596000000001958,
+    "robot_environment_penetration_over_3mm": [],
+    "scope": "Kinematic IK and grasp-constraint replay, not motor/contact force validation"
+  }
+}

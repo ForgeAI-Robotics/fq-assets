@@ -22,7 +22,7 @@
     "fq:cameras/realsense_d435i": "0.1.0",
     "fq:objects/mesh_trash_bin": "0.1.2",
     "fq:articulated/office_chair": "0.1.0",
-    "fq:scenes/airport_preview": "0.2.0",
+    "fq:scenes/airport_preview": "0.3.0",
     "third_party:characters/rocketbox_female_adult_01": "0.1.0",
     "third_party:characters/rocketbox_female_adult_05": "0.1.0",
     "third_party:characters/rocketbox_male_adult_01": "0.1.0",
@@ -35,7 +35,8 @@
     "third_party:bags/gso_olive_kids_mermaids_pack_n_snack_backpack": "0.1.0",
     "third_party:bags/gso_olive_kids_trains_planes_trucks_bogo_backpack": "0.1.0",
     "third_party:bags/gso_us_army_stash_lunch_bag": "0.1.0",
-    "user_supplied:robots/lansi_wheel_arm_robot": "0.1.0"
+    "user_supplied:robots/lansi_wheel_arm_robot": "0.1.0",
+    "fq:objects/sampling_swab": "0.1.0"
   },
   "profiles": {
     "fq:poses/o6_left_task": "0.1.2",

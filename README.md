@@ -132,7 +132,7 @@ Baseline 0.1.24 places three chairs on each long side of the conference table. O
 
 ## 机场入口安检预览场景
 
-新增 `fq:scenes/airport_preview` 0.2.0：[场景说明](scenes/fq/airport_preview/README.md)。提供 USD 与 MuJoCo 静态环境，不含人物、机器人、行李及业务流程；可用于工位布局和视觉预览；更新为软带围合的批次检测区，检测桌在区内，旅客随身携包；已配置 101 个静态碰撞体，并通过 MuJoCo 与 Isaac/PhysX 接触冒烟测试。流程动画和物理参数标定尚未实现。
+当前 `fq:scenes/airport_preview` 0.3.0：[场景说明](scenes/fq/airport_preview/README.md)。默认入口为静态环境，另附刚体交互入口、Python 挡带控制器、独立拭子、夹持/送检示例和蓝思运动学演示。完整旅客安检流程、化学响应与物理参数标定尚未实现。
 
 ## 睿尔曼 RealBot 待接入型号
 
@@ -149,3 +149,7 @@ Eight textured Google scans (five backpacks, three small carry bags), with USD/M
 ## 蓝思轮式双臂机器人
 
 用户提供的 URDF、原始 STL 与 MuJoCo 预览已入库，版本 0.1.0。详见 [资产说明](assets/user_supplied/lansi_wheel_arm_robot/README.md)。24 个旋转关节的速度/力矩上限为 0，尚不可作为已验证控制模型。
+
+## 机场刚体交互 v0.3.0
+
+新增挡带开闭/碰撞联动、独立拭子、夹持接口与真实插槽。运行方法和验证边界见 [机场说明](scenes/fq/airport_preview/README.md)。

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "id": "fq:scenes/airport_preview",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "name": "机场入口批次防爆检测场景",
-  "description": "软带围合检测等待区、入口/出口挡带、区内检测桌；旅客随身携包逐人采样的环境布局",
+  "description": "围合检测区；可控入口/出口挡带；独立刚体拭子与可插入检测槽",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -14,15 +14,19 @@
   "license_status": "Project-authored environment; no robot, character, bag or third-party model payloads included. See NOTICE.md.",
   "representations": {
     "mujoco": "scenes/fq/airport_preview/scene.xml",
-    "usd": "scenes/fq/airport_preview/scene.usdc"
+    "usd": "scenes/fq/airport_preview/scene.usdc",
+    "operable_mujoco": "scenes/fq/airport_preview/operable.xml",
+    "operable_usd": "scenes/fq/airport_preview/operable.usda"
   },
-  "release_status": "visual_preview",
+  "release_status": "rigid_interaction_prototype",
   "baseline": false,
   "randomization_enabled": false,
   "robot_included": false,
   "people_included": false,
   "baggage_included": false,
-  "dependencies": [],
+  "dependencies": [
+    "fq:objects/sampling_swab"
+  ],
   "physics_calibrated": false,
   "capabilities": {
     "static_visual_preview": true,
@@ -33,14 +37,21 @@
     "enclosed_batch_layout": true,
     "baggage_removal_required": false,
     "workflow_simulation": false,
-    "gate_controller": false
+    "gate_controller": true,
+    "rigid_swab_pick_and_insert": true,
+    "detector_insertion_slot": true,
+    "soft_body": false,
+    "optional_robot_kinematic_demo": true
   },
   "limitations": [
-    "Concept dimensions, not surveyed Hongqiao airport CAD; three-person batch is a demonstration choice, not a confirmed SOP requirement",
-    "Belts are fixed closed rigid collision proxies; no flexible dynamics or opening controller",
-    "Detector, tray and waste bin use solid simplified geometry; insertion, grasping and disposal not implemented",
-    "Static collision smoke tests only; no calibrated contacts, robot swept-volume validation or human-contact safety validation",
-    "No people, robots, baggage motion, device result logic or Connection implementation bundled"
+    "Rigid retracting belt proxy; no flexible webbing, latch manipulation or reel dynamics",
+    "MuJoCo swab grasp requires bilateral pad contact, then an explicit weld; not friction-only grasp validation",
+    "USD supports runtime belt collision switches and rigid swab; USD grasp controller not included",
+    "Robot demo is kinematic IK with a concept tool extension and lateral base repositioning; motors, wheel traction and navigation not validated",
+    "Occupancy, alarm and release authorization are caller inputs; no Connection or chemical detector response",
+    "Prototype dimensions/mass/friction are uncalibrated; no personnel sampling/contact safety claim",
+    "Web catalog is a static preview; run Python controller for operations"
   ],
-  "layout": "scenes/fq/airport_preview/layout.json"
+  "layout": "scenes/fq/airport_preview/layout.json",
+  "interaction": "scenes/fq/airport_preview/interaction.json"
 }

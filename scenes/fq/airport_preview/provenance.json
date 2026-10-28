@@ -9,5 +9,10 @@
     "LinkerHand O6",
     "NVIDIA people",
     "Google Research backpack"
-  ]
+  ],
+  "v030_update": {
+    "date": "2026-10-28",
+    "geometry": "Project-authored rigid swab, segmented detector slot, fresh and used sample trays",
+    "controller": "Rigid belt geometry/collision switches and contact-gated weld grasp; not cloth mechanics"
+  }
 }

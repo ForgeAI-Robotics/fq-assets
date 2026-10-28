@@ -104,7 +104,7 @@
     },
     {
       "id": "fq:scenes/airport_preview",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "manifest": "scenes/fq/airport_preview/asset.json"
     },
     {
@@ -171,6 +171,11 @@
       "id": "user_supplied:robots/lansi_wheel_arm_robot",
       "version": "0.1.0",
       "manifest": "assets/user_supplied/lansi_wheel_arm_robot/asset.json"
+    },
+    {
+      "id": "fq:objects/sampling_swab",
+      "version": "0.1.0",
+      "manifest": "assets/fq/sampling_swab/asset.json"
     }
   ]
 }

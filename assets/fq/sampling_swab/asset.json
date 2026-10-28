@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "fq:objects/sampling_swab",
+  "version": "0.1.0",
+  "name": "防爆检测拭子（刚体流程原型）",
+  "kind": "rigid",
+  "origin": "fq",
+  "upstream_origin": "FQ project-authored concept geometry",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license_status": "Project-authored concept geometry; see NOTICE.md",
+  "representations": {
+    "mujoco": "assets/fq/sampling_swab/model.xml",
+    "usd": "assets/fq/sampling_swab/model.usdc"
+  },
+  "dependencies": [],
+  "physics_calibrated": false,
+  "dimensions_m": [
+    0.17,
+    0.03,
+    0.006
+  ],
+  "mass_kg": 0.01,
+  "grip_site": "swab_grip",
+  "grip_offset_m": [
+    -0.06,
+    0,
+    0
+  ],
+  "tip_site": "swab_tip",
+  "limitations": [
+    "Rigid two-part strip; not fabric or flexible swab",
+    "Dimensions and mass are assumptions, not vendor specifications",
+    "No chemical properties, contamination propagation or explosive response"
+  ]
+}
