@@ -10,16 +10,21 @@
     5
   ],
   "mujoco": {
-    "young_pa": 2000000,
+    "young_pa": 200000000,
     "poisson": 0.3,
     "bending_thickness_m": 0.0004,
     "stretch": "edge equality constraints",
     "elastic2d": "bend",
     "collision_radius_m": 0.00025,
-    "timestep_s": 0.0002
+    "timestep_s": 5e-05,
+    "damping": 2e-05,
+    "edge_solref": [
+      0.0001,
+      1
+    ]
   },
   "calibrated": false,
-  "material_type": "thin sampling paper / nonwoven cloth prototype",
+  "material_type": "stiffer sampling paper / reinforced nonwoven prototype",
   "not_implemented": [
     "plastic creases",
     "tearing",
@@ -29,5 +34,7 @@
   "references": [
     "https://mujoco.readthedocs.io/en/3.3.6/XMLreference.html#flex-elasticity",
     "https://github.com/google-deepmind/mujoco/tree/3.3.6/plugin/elasticity"
-  ]
+  ],
+  "grip_width_m": 0.01,
+  "calibration_note": "Effective stiffness chosen from numerical sag comparison; not a measured consumable material."
 }

@@ -24,9 +24,7 @@
   "robot_included": false,
   "people_included": false,
   "baggage_included": false,
-  "dependencies": [
-    "fq:objects/sampling_swab"
-  ],
+  "dependencies": [],
   "physics_calibrated": false,
   "capabilities": {
     "static_visual_preview": true,
@@ -59,7 +57,7 @@
     "paragraphs": [
       "旅客不摘包，分批进入（如 3 人），逐人擦拭人与随身包；批次结果满足放行条件后，再打开出口软带。桌子和检测仪位于等待检测区域内。",
       "当前网页展示场地布局。Python 控制器只实现挡带缩回／伸出及碰撞切换，尚无抓端头、拉起、脱扣、扣回或柔性带身。",
-      "场景内仍为历史刚体拭子；新片状采样布与料盒是独立资产，尚未接入机场操作流程。人员、机器人、大脑和检测仪报警逻辑尚未集成。"
+      "刚体拭子独立资产已删除。为保证历史操作示例仍可复现，其内嵌刚体占位保留在旧示例中；新片状采样布与料盒尚未接入该流程。人员、机器人、大脑和检测仪报警逻辑尚未集成。"
     ]
   },
   "viewer_status": [
@@ -90,7 +88,6 @@
   ],
   "related_asset_slugs": [
     "flexible_sampling_sheet",
-    "swab_supply_box",
-    "sampling_swab"
+    "swab_supply_box"
   ]
 }

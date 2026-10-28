@@ -11,7 +11,7 @@
   "lid_joint": "lid_hinge",
   "lid_open_rad": 1.65,
   "pick_frame_m": [
-    -0.075,
+    -0.08,
     0,
     0.024
   ],
@@ -22,5 +22,6 @@
   ],
   "concept_capacity": 10,
   "single_sheet_separation_validated": false,
-  "sealed_container_certification": false
+  "sealed_container_certification": false,
+  "grip_width_m": 0.01
 }

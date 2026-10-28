@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "fq:deformables/flexible_sampling_sheet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "deformable",
   "name": "柔性片状采样布",
-  "description": "片状采样布 · 默认展示 MuJoCo 柔性物理录制；可切换静态外观",
+  "description": "较挺片状采样纸／布；10 mm 宽夹持区；MuJoCo 原生柔性，参数未实测",
   "origin": "fq",
   "upstream_origin": "FQ authored asset / research prototype",
   "units": "meter",
@@ -35,23 +35,23 @@
   "viewer_status": [
     [
       "物理模型",
-      "MuJoCo 2D flex，90 个顶点"
+      "原生 MuJoCo 2D flex，仍可弯曲"
     ],
     [
-      "默认展示",
-      "实际物理录制：弯曲、接触、取片与释放"
+      "本次调整",
+      "提高抗弯刚度，夹持区宽 10 mm"
     ],
     [
-      "三维外观 / USD",
-      "静态网格，未运行柔性物理"
+      "材料状态",
+      "数值候选参数，非实物标定"
     ],
     [
-      "机场集成",
-      "尚未替换场景中的旧刚体拭子"
+      "网页默认",
+      "真实物理录制，可切换静态外观"
     ],
     [
-      "材料参数",
-      "假设值，尚未实物标定"
+      "机场流程",
+      "尚未迁移历史刚体操作示例"
     ]
   ],
   "demonstration": {

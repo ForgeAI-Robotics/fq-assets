@@ -242,6 +242,7 @@ function setMotionReady(ready){
  $('action-play').textContent=ready?'播放':'加载动作中…';
 }
 async function selectAsset(slug){
+  if(slug==='sampling_swab')slug='flexible_sampling_sheet';
   const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;handAnimation=null;$('hand-presets').hidden=true;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';playing=false;motion=null;motionTime=0;setMotionReady(false);$('action-clock').textContent='等待模型与轨迹加载';$('action-time').value=0;$('action-panel').hidden=a.kind!=='action';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
   const supportsPBR=!!a.pbr_preview?.supported;$('pbr-badge').hidden=!supportsPBR;$('lighting-controls').hidden=!supportsPBR;setLighting('original');

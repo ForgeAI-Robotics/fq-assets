@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "fq:characters/male_small_hand_carry",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "character",
   "name": "男性旅客 + 手提小包",
-  "description": "骨骼挂接人包组合；USD 姿态示例；网页为静态预览",
+  "description": "骨骼挂接人包组合；包保留对外碰撞；USD 为运动学刚体，网页为静态姿态",
   "origin": "fq",
   "upstream_origin": "Microsoft Rocketbox (MIT) + Google Scanned Objects (CC-BY-4.0) + FQ fitting",
   "units": "meter",
@@ -28,9 +28,41 @@
   "physics_calibrated": false,
   "license": "MIT AND CC-BY-4.0",
   "limitations": [
-    "Kinematic visual assembly; no walking controller",
-    "Fitted straps are visual ribbons, not cloth physics",
-    "Hand force/contact and bag-body collision are not validated",
-    "MuJoCo/web is a static skinned snapshot; USD has bone animation"
+    "Bag follows authored bone pose as a kinematic collider; no gravity-driven bag swing",
+    "MuJoCo is a static pose contact model, not a moving skeletal controller",
+    "Wearer self-contact filtered; external object contact enabled",
+    "Straps are visual ribbons; no cloth, hand force or body-surface sampling calibration",
+    "No walking controller; body collision remains a coarse navigation proxy"
+  ],
+  "collision_policy": {
+    "usd": "Kinematic carried bag with convex collision; filter wearer collision prims only",
+    "mujoco": "Static pose bag collider contype=2, conaffinity=1; navigation proxy contype=4, conaffinity=1",
+    "filtered_wearer_prims": [
+      "/Assembly/Person/NavigationProxy"
+    ],
+    "external_collision_enabled": true,
+    "cloth_strap_dynamics": false
+  },
+  "viewer_status": [
+    [
+      "包的碰撞",
+      "已开启对外凸包碰撞"
+    ],
+    [
+      "穿戴方式",
+      "随骨骼运动的运动学刚体"
+    ],
+    [
+      "过滤范围",
+      "仅穿戴者自身碰撞"
+    ],
+    [
+      "人体碰撞",
+      "仍为粗略占位，未完成精细分区"
+    ],
+    [
+      "背带",
+      "视觉模型，未模拟柔性"
+    ]
   ]
 }

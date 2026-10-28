@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:articulated/swab_supply_box",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "articulated",
   "name": "采样布料盒 · 翻盖 / 取片缺口",
   "description": "空腔复合碰撞；铰链盖；柔性顶片取出示例",
@@ -19,7 +19,7 @@
   "dependencies": [
     {
       "id": "fq:deformables/flexible_sampling_sheet",
-      "version": "0.1.0"
+      "version": "0.1.1"
     }
   ],
   "physics_calibrated": false,

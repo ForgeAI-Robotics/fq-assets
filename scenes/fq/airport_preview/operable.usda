@@ -10,7 +10,7 @@ def Xform "World" (
 )
 {
     def Xform "MovableSwab" (
-        prepend references = @../../../assets/fq/sampling_swab/model.usdc@
+        prepend references = @../../../examples/airport_operations/legacy_rigid_swab.usdc@
     )
     {
         double3 xformOp:translate = (1.3, 0.95, 0.7925)

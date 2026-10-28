@@ -36,5 +36,8 @@
   "straps": "custom fitted visual ribbons; source folded straps retained on scan",
   "hand_grip_force_validated": false,
   "cloth_strap_dynamics": false,
-  "walking_controller": false
+  "walking_controller": false,
+  "external_bag_collision": true,
+  "bag_motion": "kinematic bone following",
+  "wearer_collision_filtered": true
 }

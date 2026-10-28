@@ -20,7 +20,7 @@
       <geom name="lid_panel" type="box" pos="0 -0.043 0" size="0.112 0.045 0.0025" material="plastic" mass=".04" />
       <geom name="lid_handle" type="box" pos="0 -0.073 0.005" size="0.018 0.005 0.003" material="blue" mass=".04" />
     </body>
-    <site name="pick_frame" pos="-.075 0 .024" size=".002" rgba="0 1 0 .4" />
+    <site name="pick_frame" pos="-.08 0 .024" size=".002" rgba="0 1 0 .4" />
   </worldbody>
   <actuator>
     <position name="lid_position" joint="lid_hinge" kp="5" kv=".2" ctrlrange="0 1.92" forcerange="-1 1" />

@@ -5,7 +5,7 @@
   "render_review_pending": false,
   "isaac_stage_load": true,
   "isaac_render": true,
-  "physx_dynamic_test": false,
+  "physx_dynamic_test": true,
   "usd_skeleton_binding_valid": true,
   "bone_attachment_max_matrix_error": 0.00021358240242519422,
   "checked_frames": [
@@ -16,5 +16,22 @@
     60
   ],
   "matrix_tolerance": 0.001,
-  "precision_note": "USD animation stores float rotations and half-precision scales"
+  "precision_note": "USD animation stores float rotations and half-precision scales",
+  "usd_kinematic_bag": true,
+  "usd_bag_collision_prims": [
+    "/Assembly/Bag/Scan"
+  ],
+  "wearer_filtered_prims": [
+    "/Assembly/Person/NavigationProxy"
+  ],
+  "mujoco_external_probe_bag_contact": {
+    "contact_steps": 231,
+    "finite": true
+  },
+  "physx_external_bag_contact": {
+    "enabled_probe_final_z_m": 0.8418676257133484,
+    "disabled_probe_final_z_m": 0.019999684765934944,
+    "engine": "Isaac Sim 4.5 / PhysX CPU",
+    "test": "4 second vertically guided dynamic cube drop onto kinematic bag; disabled-collider negative control"
+  }
 }

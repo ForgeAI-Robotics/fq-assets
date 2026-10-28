@@ -3,13 +3,11 @@
   "vertices": 90,
   "degrees_of_freedom": 271,
   "duration_s": 5.0,
-  "max_edge_strain": 0.008417218014346028,
-  "nonrigid_deformation_rms_m": 0.018830761460281092,
-  "min_world_z_m": 8.556403983965913e-05,
+  "max_edge_strain": 0.0006477614220354866,
+  "nonrigid_deformation_rms_m": 0.015208473557764574,
+  "min_world_z_m": -0.00015687783201205618,
   "contact_geometries": [
     "collection_table",
-    "left_wall",
-    "right_wall",
     "stock_sheet_8"
   ],
   "released": true,
