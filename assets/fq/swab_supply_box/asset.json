@@ -36,5 +36,33 @@
     "Top sheet is flexible; nine lower stock sheets are fixed spacers",
     "Edge equality clamp approximates grip; no actual gripper friction or stack singulation validation",
     "MuJoCo motion tested; USD hinge authored but PhysX motion not validated"
+  ],
+  "demonstration": {
+    "file": "validation/previews/flexible_sheet_and_dispenser.mp4",
+    "poster": "validation/previews/swab_supply_box.png",
+    "title": "料盒开盖与柔性顶片取出",
+    "caption": "MuJoCo 物理录制回放；后半段为料盒取片。顶片为柔性模型，下层是固定占位片，未验证逐片分离。",
+    "default_view": "model"
+  },
+  "viewer_status": [
+    [
+      "盒体",
+      "空腔及分块碰撞"
+    ],
+    [
+      "翻盖",
+      "MuJoCo 驱动铰链已验证"
+    ],
+    [
+      "取片",
+      "柔性顶片夹持、提起、移出与释放"
+    ],
+    [
+      "尚未验证",
+      "多层布料分离与真实手指摩擦抓取"
+    ]
+  ],
+  "related_asset_slugs": [
+    "flexible_sampling_sheet"
   ]
 }

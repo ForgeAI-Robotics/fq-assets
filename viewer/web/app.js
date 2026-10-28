@@ -56,11 +56,13 @@ function showProperties(a){
     $('properties-content').innerHTML=section('材质/纹理',row('名称',esc(a.name))+row('来源',esc(provenance(a)))+row('分辨率',a.resolution.join(' × '))+row('色彩空间',esc(a.color_space))+row('贴图通道','基础颜色 · 法线/粗糙度贴图暂缺')+row('实际重复尺寸',a.tile_size_m?`${a.tile_size_m} m（估计）`:'未记录')+row('用途',a.usage_status==='in_use'?'基准场景使用中':'备用，未绑定基准场景')+'<p class="property-note">视觉外观不包含质量或接触摩擦。预览光照为近似效果。</p>')+section('版本与来源',row('物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)))+row('最新库发布',esc(catalog.latest_release.tag))+`<p class="property-note">${esc(a.upstream_origin)}</p><div class="asset-id">${esc(a.id)}</div><p class="property-note">引用：${esc(a.used_by.join(', ')||'暂无')}</p><a class="text-button" target="_blank" rel="noopener" href="${catalog.repository}/blob/${catalog.main_commit}/${a.manifest_path}">查看材质清单 ↗</a>`);
     return;
   }
-  let html=section('基础信息',row('资产类型',esc(a.kind_label))+row('来源',esc(provenance(a)))+row('坐标约定','米制 · Z 向上')+row('基座',a.fixed_base?'固定':'自由运动')+`<div class="asset-id">${esc(a.id)}</div>`);
+  let html=section('基础信息',row('资产类型',esc(a.kind_label))+row('来源',esc(provenance(a)))+row('坐标约定','米制 · Z 向上')+row(a.kind==='deformable'?'当前三维视图':'基座',a.kind==='deformable'?'静态外观；柔性见物理演示':a.fixed_base?'固定':'自由运动')+`<div class="asset-id">${esc(a.id)}</div>`);
+  if(a.viewer_status)html+=section('实际支持能力',a.viewer_status.map(([k,v])=>row(k,esc(v))).join(''));
+  if(a.related_asset_slugs?.length)html+=section('相关资产',a.related_asset_slugs.map(slug=>{const dep=catalog.assets.find(x=>x.slug===slug);return dep?`<p><a class="text-button" href="/?asset=${encodeURIComponent(slug)}">${esc(dep.name)} ↗</a></p>`:'';}).join(''));
   if(a.pbr_preview?.supported)html+=section('PBR 材质',row('重打光预览','支持 · '+esc(a.pbr_preview.scope))+row('通道',a.pbr_preview.roughness_map?'底色 + 粗糙度贴图 / 金属度参数':'分区域底色 / 粗糙度 / 金属度参数')+'<p class="property-note">光照按钮仅改变网页预览；不修改物理参数，不代表 Isaac 渲染结果完全相同。</p>');
   const mass=a.mass_properties; const displayMass=mass?mass.total_mass_kg:a.mass_kg;
-  html+=section('尺寸与质量',`<div class="value-large">${displayMass==null?'—':fmt(displayMass)}<small>${displayMass==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${displayMass==null?'固定场景几何不以 0 kg 表示':mass?'整机参考质量 · 部件分配为估计':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.kind==='camera'?'近似仿真质量 · 非实测':a.kind==='end_effector'?'手模型质量 · 未完成实测标定':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
-    (!mass&&a.fixed_base&&!['scene','end_effector','camera'].includes(a.kind)&&displayMass!=null?'<p class="property-note">固定基座未定义完整质量，整机重量暂缺。</p>':'')+
+  html+=section('尺寸与质量',`<div class="value-large">${displayMass==null?'—':fmt(displayMass)}<small>${displayMass==null?'未定义动态质量':'kg'}</small></div><p class="value-caption">${displayMass==null?'固定场景几何不以 0 kg 表示':a.kind==='deformable'?'原生柔性模型质量 · 假设值':mass?'整机参考质量 · 部件分配为估计':a.kind==='scene'?'已定义物体质量合计 · 非场景总重':a.kind==='camera'?'近似仿真质量 · 非实测':a.kind==='end_effector'?'手模型质量 · 未完成实测标定':a.fixed_base?'已定义部件质量合计 · 非整机重量':'模型总质量 · 未完成实测标定'}</p>`+
+    (!mass&&a.fixed_base&&!['scene','end_effector','camera','deformable'].includes(a.kind)&&displayMass!=null?'<p class="property-note">质量与动态属性请以原生模型说明为准。</p>':'')+
     (a.dimensions_body_m?row('篮身尺寸（不含提手）',a.dimensions_body_m.map(v=>fmt(v)).join(' × ')+' m','value-small')+row('底部尺寸（估计）','0.240 × 0.150 m','value-small'):'')+
     (mass?row('可动部件质量（估计）',`${fmt(mass.movable_mass_kg)} kg`)+row('固定柜体总成（估计）',`${fmt(mass.fixed_assembly_mass_kg)} kg`)+`<a class="text-button" target="_blank" rel="noopener" href="${esc(mass.total_source_url)}">${esc(mass.model)} 官方整机重量 ↗</a>`:'')+
     row('外观包围尺寸',a.dimension_m.map(v=>fmt(v)).join(' × ')+' m','value-small')+
@@ -84,7 +86,7 @@ function showProperties(a){
   }
   if(a.joints.length&&!isRobot(a)){
     html+=section('关节与阻力',row('可动关节',`${a.joints.length} 个`)+
-      (a.slug==='haier_bcd402'?(a.simulation_resistance?row('左右门等效摩擦阻力（各）',`${a.simulation_resistance.frictionloss_Nm} N·m`)+row('每条轨迹随机范围',`${a.simulation_resistance.randomization.bounds_Nm.join('–')} N·m · 均匀采样`)+row('左右门粘性阻尼（各）',`${a.simulation_resistance.damping_Nm_s_rad} N·m·s/rad`)+row('参数状态','仿真参数 · 非实测标定','status-label')+'<p class="property-note">左右门摩擦按上方配置生效，粘性阻尼单独记录；随机上下限相同时等同固定值，仅为仿真配置。中缝竖梁保持原配置。浏览器仅展示姿态；USD/PhysX 已接入 SIMPLE 阻力运行时（CPU 验证），支持固定 / 随机模式，回放须使用同一引擎。门封启动吸力未标定。</p>':row('开门力度','未标定','status-label')):'<p class="property-note">关节范围与参数来自模型。办公椅含座椅旋转、两侧扶手升降及五组双脚轮；旋转滑块范围仅用于预览。浏览器不模拟接触力，办公椅 USD 暂不支持 PhysX 动力学。</p>')+
+      (a.slug==='haier_bcd402'?(a.simulation_resistance?row('左右门等效摩擦阻力（各）',`${a.simulation_resistance.frictionloss_Nm} N·m`)+row('每条轨迹随机范围',`${a.simulation_resistance.randomization.bounds_Nm.join('–')} N·m · 均匀采样`)+row('左右门粘性阻尼（各）',`${a.simulation_resistance.damping_Nm_s_rad} N·m·s/rad`)+row('参数状态','仿真参数 · 非实测标定','status-label')+'<p class="property-note">左右门摩擦按上方配置生效，粘性阻尼单独记录；随机上下限相同时等同固定值，仅为仿真配置。中缝竖梁保持原配置。浏览器仅展示姿态；USD/PhysX 已接入 SIMPLE 阻力运行时（CPU 验证），支持固定 / 随机模式，回放须使用同一引擎。门封启动吸力未标定。</p>':row('开门力度','未标定','status-label')):'<p class="property-note">关节范围与阻力来自模型。浏览器仅展示姿态，不计算接触力；具体引擎验证状态见模型说明。</p>')+
       a.joints.map(j=>`<details class="property-details"><summary>${esc(label(j.name))} · ${fmt(jointDisplay(j,j.range[0]),1)}${jointUnit(j)} ～ ${fmt(jointDisplay(j,j.range[1]),1)}${jointUnit(j)}</summary>${row('阻尼',`${fmt(j.damping,5)} ${j.type==='slide'?'N·s/m':'N·m·s/rad'}`)}${row(j.type==='slide'?'关节摩擦力':'关节摩擦力矩',`${fmt(j.friction_loss,5)} ${j.type==='slide'?'N':'N·m'}`)}${row('刚度',`${fmt(j.stiffness,5)} ${j.type==='slide'?'N/m':'N·m/rad'}`)}<p class="property-note">以上为模型参数，非实测开门/提手作用力。</p></details>`).join(''));
   }
   html+=section('版本与来源',row(a.kind==='scene'?'场景版本':'物体版本',`v${esc(a.version)}`)+row('内容分支','main')+row('当前提交',esc(catalog.main_commit.slice(0,8)),'mono')+
@@ -94,6 +96,26 @@ function showProperties(a){
   if(a.pose_profiles?.length) html+=section('姿态配置',a.pose_profiles.map(p=>row(p.name,`v${esc(p.version)}`)+row('验证状态',esc(p.validation.label))+row('单位',esc(p.units))+row('来源',esc(p.source.source_host+' · '+p.source.source_path))+Object.entries(p.poses).map(([name,pose])=>row(name,esc(pose.position.join(', ')))).join('')+`<p class="property-note">${p.limitations.map(esc).join('<br>')}</p>`).join(''));
   $('properties-content').innerHTML=html;
 }
+
+function sceneDescription(a){
+  const info=a.viewer_summary||(a.slug==='office_baseline'?{title:'固定基准 · 办公场地',paragraphs:['测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。','保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。']}:{title:a.name,paragraphs:[a.description||'静态场景预览']});
+  return `<strong>${esc(info.title)}</strong>`+info.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')+'<div class="scene-chips">'+(a.related_asset_slugs||(a.dependencies||[]).map(id=>catalog.assets.find(x=>x.id===id)?.slug).filter(Boolean)).map(slug=>{const dep=catalog.assets.find(x=>x.slug===slug);return dep?`<button data-asset="${esc(slug)}">${esc(dep.name)} ↗</button>`:'';}).join('')+'</div>';
+}
+function setDemonstrationMode(mode){
+  const video=$('physics-demo-video'),show=mode==='video';
+  $('physics-demo').hidden=!show;$('viewport').style.display=show?'none':'';
+  if(!show)video.pause();
+  document.querySelectorAll('[data-preview-mode]').forEach(b=>{const active=b.dataset.previewMode===mode;b.setAttribute('aria-pressed',String(active));b.classList.toggle('active',active);});
+}
+function configureDemonstration(a){
+  const d=a.demonstration,video=$('physics-demo-video');video.pause();video.removeAttribute('src');video.load();
+  $('preview-modes').hidden=!d?.url;
+  if(!d?.url){setDemonstrationMode('model');return;}
+  $('physics-demo-title').textContent=d.title;$('physics-demo-caption').textContent=d.caption;video.src=d.url;video.poster=d.poster_url||'';
+  setDemonstrationMode(d.default_view==='video'?'video':'model');
+}
+document.querySelectorAll('[data-preview-mode]').forEach(b=>b.onclick=()=>setDemonstrationMode(b.dataset.previewMode));
+
 function renderList(){
   if(!catalog)return;
   const q=$('search').value.trim().toLowerCase(),origin=$('origin-filter').value,type=$('type-filter').value;
@@ -224,9 +246,10 @@ async function selectAsset(slug){
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
   const supportsPBR=!!a.pbr_preview?.supported;$('pbr-badge').hidden=!supportsPBR;$('lighting-controls').hidden=!supportsPBR;setLighting('original');
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':a.kind==='action'?'动作':'物体'} / ${a.kind_label==='articulated'?'关节物体':a.kind_label}`;
-  $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'固定基准':'静态姿态';
+  $('commit-label').textContent=`main · ${catalog.main_commit.slice(0,8)}`;$('pose-label').textContent=a.joints.length?'关节可动':a.kind==='scene'?'静态场景预览':a.kind==='deformable'?'静态外观 · 非柔性仿真':'静态姿态';
   $('mode-toggle').hidden=!a.joints.length||isRobot(a);$('joint-group').hidden=!isRobot(a);$('joint-group').value=isRobot(a)?(a.handedness==='right'?'right':'left'):'all';document.querySelector('.joint-note').textContent=isRobot(a)?'滑块控制独立关节；从动手指按模型关系联动。仅姿态预览，不运行机器人控制。':'转动关节可拖动或使用滑块；升降关节请使用厘米滑块。仅姿态预览，不运行接触物理，也不写回资产库。';$('cutaway-toggle').hidden=a.kind!=='scene';$('joint-panel').hidden=true;$('scene-info').hidden=a.kind!=='scene';
-  if(a.kind==='scene'){$('scene-info').innerHTML='<strong>固定基准 · 办公场地</strong><p>测试区、走道、圆桌与会议室。门净宽约 0.80 m；会议桌宽 1.20 m。</p><p>保留禁入区碰撞体。篮子与冰箱暂未指定正式摆放位置。</p><div class="scene-chips">'+(a.dependencies||[]).map(id=>{const dep=catalog.assets.find(x=>x.id===id);return dep?`<button data-asset="${esc(dep.slug)}">${esc(dep.name)} · v${esc(dep.version)} ↗</button>`:'';}).join('')+'</div>';document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
+  if(a.kind==='scene'){$('scene-info').innerHTML=sceneDescription(a);document.querySelectorAll('.scene-chips button').forEach(b=>b.onclick=()=>selectAsset(b.dataset.asset));}
+  configureDemonstration(a);
   $('material-controls').hidden=a.kind!=='material';$('collision-toggle').hidden=a.kind==='material';$('material-repeat').value=1;$('material-repeat-value').textContent='1 ×';
   showProperties(a);renderList();setMode(!!a.joints.length&&!isRobot(a));$('viewport').dataset.ready='false';$('loading').hidden=false;$('loading').querySelector('strong').textContent=`正在加载${a.name}`;$('viewer-error').hidden=true;
   try{const url=new URL(a.model_url,location.origin);const res=await fetch(url);if(!res.ok)throw Error('模型文件暂不可用');const data=await res.json();if(token!==loadId)return;await buildModel(data,url,token);if(a.kind==='action'&&token===loadId){const response=await fetch(a.trajectory_url);if(!response.ok)throw Error('动作数据加载失败');const loaded=await response.json();if(token!==loadId)return;motion=loaded;$('action-time').max=a.duration_s;seekMotion(0);setMotionReady(true);$('pose-label').textContent=a.motion_group==='sonic_token'?'SONIC '+a.token_library_version+' · 解码仿真':'动作轨迹回放';$('action-description').textContent=a.motion_group==='sonic_token'?'原始64维 token → SONIC v1.1 → G1+O6 隔离仿真。展示身体位移，非实机验收；状态见右侧。':'G1 + O6 默认预览 · 记录轨迹播放，不运行实机控制。手指保持模型初始姿态。';}}

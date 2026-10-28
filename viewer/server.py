@@ -84,8 +84,34 @@ def main():
             target=(root/rel).resolve()
             if not target.is_relative_to(root.resolve()) or not target.is_file() or any(p.startswith('.') for p in Path(rel).parts):
                 self.send_error(404);return
-            if target.suffix not in ('.html','.css','.js','.json','.bin','.png','.svg','.txt'):
+            if target.suffix not in ('.html','.css','.js','.json','.bin','.png','.svg','.txt','.mp4'):
                 self.send_error(404);return
+            if target.suffix=='.mp4':
+                size=target.stat().st_size;start=0;end=size-1;partial=False
+                header=self.headers.get('Range')
+                if header:
+                    import re
+                    match=re.fullmatch(r'bytes=(\d*)-(\d*)',header.strip())
+                    if match and any(match.groups()):
+                        first,last=match.groups()
+                        if first:start=int(first);end=min(int(last),size-1) if last else size-1
+                        else:start=max(0,size-int(last))
+                        partial=True
+                    if not partial or start>end or start>=size:
+                        self.send_response(416);self.send_header('Content-Range',f'bytes */{size}');self.send_header('Content-Length','0');self.end_headers();return
+                self.send_response(206 if partial else 200);self.send_header('Content-Type','video/mp4');self.send_header('Accept-Ranges','bytes');self.send_header('Content-Length',str(end-start+1));self.send_header('X-Content-Type-Options','nosniff')
+                self.send_header('Cache-Control','public, max-age=31536000, immutable' if path.startswith('/data/') else 'no-cache')
+                if partial:self.send_header('Content-Range',f'bytes {start}-{end}/{size}')
+                self.end_headers()
+                try:
+                    with target.open('rb') as f:
+                        f.seek(start);remaining=end-start+1
+                        while remaining:
+                            chunk=f.read(min(256*1024,remaining))
+                            if not chunk:break
+                            self.wfile.write(chunk);remaining-=len(chunk)
+                except (BrokenPipeError,ConnectionResetError):pass
+                return
             zipped=Path(str(target)+'.gz')
             compressed='gzip' in self.headers.get('Accept-Encoding','') and zipped.is_file()
             actual=zipped if compressed else target

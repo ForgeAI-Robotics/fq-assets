@@ -3,7 +3,7 @@
   "id": "fq:scenes/airport_preview",
   "version": "0.3.0",
   "name": "机场入口批次防爆检测场景",
-  "description": "围合检测区；可控入口/出口挡带；独立刚体拭子与可插入检测槽",
+  "description": "批次检测区静态预览；软带仅简化伸缩，尚不支持端头脱扣／扣回；场景仍使用旧刚体拭子",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -53,5 +53,44 @@
     "Web catalog is a static preview; run Python controller for operations"
   ],
   "layout": "scenes/fq/airport_preview/layout.json",
-  "interaction": "scenes/fq/airport_preview/interaction.json"
+  "interaction": "scenes/fq/airport_preview/interaction.json",
+  "viewer_summary": {
+    "title": "机场入口 · 围合批次检测区",
+    "paragraphs": [
+      "旅客不摘包，分批进入（如 3 人），逐人擦拭人与随身包；批次结果满足放行条件后，再打开出口软带。桌子和检测仪位于等待检测区域内。",
+      "当前网页展示场地布局。Python 控制器只实现挡带缩回／伸出及碰撞切换，尚无抓端头、拉起、脱扣、扣回或柔性带身。",
+      "场景内仍为历史刚体拭子；新片状采样布与料盒是独立资产，尚未接入机场操作流程。人员、机器人、大脑和检测仪报警逻辑尚未集成。"
+    ]
+  },
+  "viewer_status": [
+    [
+      "网页展示",
+      "静态场地与碰撞几何"
+    ],
+    [
+      "软带操作",
+      "仅简化缩回／伸出"
+    ],
+    [
+      "拉起与扣住",
+      "未实现"
+    ],
+    [
+      "场景内拭子",
+      "旧刚体流程原型"
+    ],
+    [
+      "柔性采样布",
+      "独立资产，尚未接入本场景"
+    ],
+    [
+      "人员与设备流程",
+      "尚未集成"
+    ]
+  ],
+  "related_asset_slugs": [
+    "flexible_sampling_sheet",
+    "swab_supply_box",
+    "sampling_swab"
+  ]
 }

@@ -13,3 +13,7 @@ Two fitted backpack poses and one small hand-carry pose. Microsoft Rocketbox MIT
 ## Sampling sheet and box
 
 Native MuJoCo 2D flex thin sampling paper/nonwoven, not a rigid swab. Edge grip, bending, curved contact, release tested. Box has hollow collision, finger access, driven lid and a top-sheet removal demo. Lower stock sheets are static; single-sheet separation is not validated. USD sheet is visual only; no Isaac native cloth claim. Dimensions and material parameters need physical consumable calibration. See per-asset reports and the video in validation/previews.
+
+## Viewer clarification
+
+The airport page describes its own batch-screening layout. Its belt controller only retracts/extends rigid proxies; endpoint lifting, unlatching/latching and flexible webbing are not implemented. The airport still uses the legacy rigid swab. The separate flexible sampling-sheet page defaults to a recorded native MuJoCo physics demonstration, with an explicit static 3D appearance switch. This playback is not a browser physics engine or an integration into the airport scene. Model versions are unchanged by these UI/documentation corrections.

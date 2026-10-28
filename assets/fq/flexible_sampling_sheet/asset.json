@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "kind": "deformable",
   "name": "柔性片状采样布",
-  "description": "原生 MuJoCo 2D flex；网页与 USD 仅静态外观；材料未标定",
+  "description": "片状采样布 · 默认展示 MuJoCo 柔性物理录制；可切换静态外观",
   "origin": "fq",
   "upstream_origin": "FQ authored asset / research prototype",
   "units": "meter",
@@ -31,5 +31,38 @@
     "USD and web are visual snapshots, no PhysX deformable behavior",
     "Material dimensions/mass/modulus are assumed, not actual consumable calibration",
     "No tearing, contamination transport, chemical detection or full robot grasp model"
+  ],
+  "viewer_status": [
+    [
+      "物理模型",
+      "MuJoCo 2D flex，90 个顶点"
+    ],
+    [
+      "默认展示",
+      "实际物理录制：弯曲、接触、取片与释放"
+    ],
+    [
+      "三维外观 / USD",
+      "静态网格，未运行柔性物理"
+    ],
+    [
+      "机场集成",
+      "尚未替换场景中的旧刚体拭子"
+    ],
+    [
+      "材料参数",
+      "假设值，尚未实物标定"
+    ]
+  ],
+  "demonstration": {
+    "file": "validation/previews/flexible_sheet_and_dispenser.mp4",
+    "poster": "validation/previews/flexible_sampling_sheet.png",
+    "title": "柔性采样布 · 弯曲、接触与料盒取片",
+    "caption": "MuJoCo 原生柔性物理录制回放；不是浏览器实时仿真。视频慢放至原速约 2/3，材料尚未实物标定。",
+    "default_view": "video"
+  },
+  "related_asset_slugs": [
+    "swab_supply_box",
+    "airport_preview"
   ]
 }

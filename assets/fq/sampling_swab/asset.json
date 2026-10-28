@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "fq:objects/sampling_swab",
   "version": "0.1.0",
-  "name": "防爆检测拭子（刚体流程原型）",
+  "name": "历史刚体拭子 · 旧流程占位",
   "kind": "rigid",
   "origin": "fq",
   "upstream_origin": "FQ project-authored concept geometry",
@@ -33,5 +33,23 @@
     "Rigid two-part strip; not fabric or flexible swab",
     "Dimensions and mass are assumptions, not vendor specifications",
     "No chemical properties, contamination propagation or explosive response"
+  ],
+  "description": "旧机场操作流程所用刚体；实际片状耗材请查看柔性采样布",
+  "viewer_status": [
+    [
+      "模型类型",
+      "历史刚体流程占位"
+    ],
+    [
+      "当前用途",
+      "旧机场抓取／插槽演示"
+    ],
+    [
+      "片状耗材",
+      "请切换到柔性采样布；未替换进机场"
+    ]
+  ],
+  "related_asset_slugs": [
+    "flexible_sampling_sheet"
   ]
 }

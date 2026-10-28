@@ -192,6 +192,18 @@ def main():
                 info['resolution']=list(im.size)
                 im.thumbnail((256,256));im.save(dest/'preview.png')
             info.update(name=meta['name'],kind_label='材质/纹理',subtitle='表面外观 / '+('当前场景使用' if meta['usage_status']=='in_use' else '备用纹理'),mass_kg=None)
+        if meta.get('demonstration'):
+            demo=dict(meta['demonstration'])
+            source=(root/demo['file']).resolve()
+            if not source.is_relative_to(root) or source.suffix!='.mp4':raise ValueError('Unsafe demonstration path')
+            shutil.copyfile(source,dest/'demonstration.mp4')
+            demo['url']=f'/data/{args.commit}/{slug}/demonstration.mp4'
+            if demo.get('poster'):
+                poster=(root/demo['poster']).resolve()
+                if not poster.is_relative_to(root):raise ValueError('Unsafe poster path')
+                shutil.copyfile(poster,dest/'demonstration_poster.png')
+                demo['poster_url']=f'/data/{args.commit}/{slug}/demonstration_poster.png'
+            info['demonstration']=demo
         info['pose_profiles']=[json.loads((root/p['path']).read_text()) for p in meta.get('profiles',[])]
         if meta.get('calibration_record'):
             info['calibration']=json.loads((root/meta['calibration_record']).read_text())
