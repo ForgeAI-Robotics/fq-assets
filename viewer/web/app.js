@@ -195,7 +195,7 @@ async function buildModel(data,url,token){
       const mesh=new THREE.Mesh(geometry,mat);mesh.position.fromArray(g.pos);mesh.quaternion.set(g.quat[1],g.quat[2],g.quat[3],g.quat[0]);mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.joint=nearestJoint(g.body);mesh.name=g.name;
       bodyGroups.get(g.body).add(mesh);pickables.push(mesh);if(g.cutaway)cutaways.push(mesh);
     }
-    if(g.collision){const cm=new THREE.Mesh(geometry,new THREE.MeshBasicMaterial({color:0x69957e,wireframe:true,transparent:true,opacity:.35,depthWrite:false}));cm.position.fromArray(g.pos);cm.quaternion.set(g.quat[1],g.quat[2],g.quat[3],g.quat[0]);cm.visible=showCollision;bodyGroups.get(g.body).add(cm);colliders.push(cm);}
+    if(g.collision){const cm=g.type===7?new THREE.Mesh(geometry,new THREE.MeshBasicMaterial({color:0x69957e,wireframe:true,transparent:true,opacity:.35,depthWrite:false})):new THREE.LineSegments(new THREE.EdgesGeometry(geometry,15),new THREE.LineBasicMaterial({color:0x69957e,transparent:true,opacity:.8,depthWrite:false}));cm.userData.cutaway=!!g.cutaway;cm.position.fromArray(g.pos);cm.quaternion.set(g.quat[1],g.quat[2],g.quat[3],g.quat[0]);cm.visible=showCollision;bodyGroups.get(g.body).add(cm);colliders.push(cm);}
   }
   applyCouplings();updateBodies();applyCutaway();frameModel();renderJoints();
   $('loading').hidden=true;$('viewport').dataset.ready='true';
@@ -225,7 +225,8 @@ function frameModel(){
     grid=new THREE.GridHelper(extent*8,32,0xd5dacd,0xe1e4d9);grid.rotation.x=Math.PI/2;grid.position.set(center.x,center.y,lo[2]-.001*extent);grid.material.transparent=true;grid.material.opacity=.55;scene.add(grid);
   }
 }
-function applyCutaway(){cutaways.forEach(m=>m.visible=!(selected?.kind==='scene'&&cutaway));$('cutaway-toggle').setAttribute('aria-pressed',cutaway);}
+function applyCollisionVisibility(){colliders.forEach(m=>m.visible=showCollision&&!(selected?.kind==='scene'&&cutaway&&m.userData.cutaway));}
+function applyCutaway(){cutaways.forEach(m=>m.visible=!(selected?.kind==='scene'&&cutaway));applyCollisionVisibility();$('cutaway-toggle').setAttribute('aria-pressed',cutaway);}
 function applyCouplings(){
   for(const c of activeModel?.couplings||[]){const driver=jointMap.get(c.driver),dependent=jointMap.get(c.joint);if(!driver||!dependent)continue;const x=angles.get(c.driver)-driver.reference;angles.set(c.joint,dependent.reference+c.polycoef.reduce((sum,k,i)=>sum+k*x**i,0));}
 }
@@ -278,7 +279,7 @@ function endDrag(e){if(!drag)return;drag=null;controls.enabled=true;updateJointU
 renderer.domElement.addEventListener('pointerup',endDrag,true);renderer.domElement.addEventListener('pointercancel',endDrag,true);
 $('orbit-mode').onclick=()=>setMode(false);$('joint-mode').onclick=()=>setMode(true);
 $('reset-view').onclick=()=>{frameModel();if(motion)seekMotion(motionTime);};$('reset-joints').onclick=()=>{handAnimation=null;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';selected.joints.forEach(j=>angles.set(j.name,j.initial));applyCouplings();updateBodies();updateJointUI();};
-$('collision-toggle').onclick=()=>{showCollision=!showCollision;colliders.forEach(m=>m.visible=showCollision);$('collision-toggle').setAttribute('aria-pressed',showCollision);};
+$('collision-toggle').onclick=()=>{showCollision=!showCollision;applyCollisionVisibility();$('collision-toggle').setAttribute('aria-pressed',showCollision);};
 $('cutaway-toggle').onclick=()=>{cutaway=!cutaway;applyCutaway();};
 $('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('资产链接已复制');}catch{const input=document.createElement('input');input.value=location.href;document.body.append(input);input.select();const ok=document.execCommand('copy');input.remove();toast(ok?'资产链接已复制':'请复制浏览器地址栏中的链接');}};
 $('refresh').onclick=()=>{refresh();toast('正在获取最新同步结果');};
