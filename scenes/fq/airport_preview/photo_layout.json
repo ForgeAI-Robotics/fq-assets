@@ -1,0 +1,9458 @@
+{
+  "materials": {
+    "stone": {
+      "color": [
+        0.9,
+        0.88,
+        0.83,
+        1
+      ],
+      "roughness": 0.27,
+      "metallic": 0.0,
+      "texture": "stone.png"
+    },
+    "frame": {
+      "color": [
+        0.075,
+        0.105,
+        0.13,
+        1
+      ],
+      "roughness": 0.3,
+      "metallic": 0.65,
+      "texture": null
+    },
+    "column": {
+      "color": [
+        0.39,
+        0.44,
+        0.44,
+        1
+      ],
+      "roughness": 0.3,
+      "metallic": 0.6,
+      "texture": null
+    },
+    "black": {
+      "color": [
+        0.025,
+        0.03,
+        0.035,
+        1
+      ],
+      "roughness": 0.3,
+      "metallic": 0.35,
+      "texture": null
+    },
+    "band": {
+      "color": [
+        0.018,
+        0.04,
+        0.12,
+        1
+      ],
+      "roughness": 0.72,
+      "metallic": 0,
+      "texture": null
+    },
+    "glass": {
+      "color": [
+        0.3,
+        0.53,
+        0.67,
+        0.3
+      ],
+      "roughness": 0.12,
+      "metallic": 0.05,
+      "texture": null
+    },
+    "ceiling": {
+      "color": [
+        0.77,
+        0.76,
+        0.7,
+        1
+      ],
+      "roughness": 0.7,
+      "metallic": 0,
+      "texture": null
+    },
+    "white": {
+      "color": [
+        0.82,
+        0.84,
+        0.82,
+        1
+      ],
+      "roughness": 0.38,
+      "metallic": 0.12,
+      "texture": null
+    },
+    "rubber": {
+      "color": [
+        0.055,
+        0.06,
+        0.063,
+        1
+      ],
+      "roughness": 0.95,
+      "metallic": 0,
+      "texture": null
+    },
+    "screen": {
+      "color": [
+        0.035,
+        0.055,
+        0.065,
+        1
+      ],
+      "roughness": 0.23,
+      "metallic": 0,
+      "texture": null
+    },
+    "green": {
+      "color": [
+        0.01,
+        0.42,
+        0.23,
+        1
+      ],
+      "roughness": 0.5,
+      "metallic": 0,
+      "texture": null
+    },
+    "lit": {
+      "color": [
+        0.98,
+        0.98,
+        0.92,
+        1
+      ],
+      "roughness": 0.6,
+      "metallic": 0,
+      "texture": null
+    },
+    "skyblue": {
+      "color": [
+        0.26,
+        0.49,
+        0.7,
+        1
+      ],
+      "roughness": 1,
+      "metallic": 0,
+      "texture": null
+    },
+    "outside": {
+      "color": [
+        0.39,
+        0.52,
+        0.59,
+        1
+      ],
+      "roughness": 0.65,
+      "metallic": 0,
+      "texture": null
+    },
+    "seam": {
+      "color": [
+        0.43,
+        0.43,
+        0.41,
+        1
+      ],
+      "roughness": 0.7,
+      "metallic": 0,
+      "texture": null
+    },
+    "door6": {
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "roughness": 0.7,
+      "metallic": 0,
+      "texture": "door6.png"
+    },
+    "direction": {
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "roughness": 0.7,
+      "metallic": 0,
+      "texture": "direction.png"
+    },
+    "notice": {
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "roughness": 0.7,
+      "metallic": 0,
+      "texture": "notice.png"
+    }
+  },
+  "geoms": [
+    {
+      "name": "StoneFloor",
+      "type": "box",
+      "pos": [
+        0,
+        -4,
+        -0.08
+      ],
+      "size": [
+        20,
+        18,
+        0.08
+      ],
+      "material": "stone",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-20",
+      "type": "box",
+      "pos": [
+        -20.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-18",
+      "type": "box",
+      "pos": [
+        -18.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-16",
+      "type": "box",
+      "pos": [
+        -16.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-14",
+      "type": "box",
+      "pos": [
+        -14.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-12",
+      "type": "box",
+      "pos": [
+        -12.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-10",
+      "type": "box",
+      "pos": [
+        -10.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-8",
+      "type": "box",
+      "pos": [
+        -8.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-6",
+      "type": "box",
+      "pos": [
+        -6.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-4",
+      "type": "box",
+      "pos": [
+        -4.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX-2",
+      "type": "box",
+      "pos": [
+        -2.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX0",
+      "type": "box",
+      "pos": [
+        0.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX2",
+      "type": "box",
+      "pos": [
+        2.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX4",
+      "type": "box",
+      "pos": [
+        4.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX6",
+      "type": "box",
+      "pos": [
+        6.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX8",
+      "type": "box",
+      "pos": [
+        8.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX10",
+      "type": "box",
+      "pos": [
+        10.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX12",
+      "type": "box",
+      "pos": [
+        12.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX14",
+      "type": "box",
+      "pos": [
+        14.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX16",
+      "type": "box",
+      "pos": [
+        16.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX18",
+      "type": "box",
+      "pos": [
+        18.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointX20",
+      "type": "box",
+      "pos": [
+        20.0,
+        -4,
+        0.001
+      ],
+      "size": [
+        0.0025,
+        18,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-22",
+      "type": "box",
+      "pos": [
+        0,
+        -22.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-20",
+      "type": "box",
+      "pos": [
+        0,
+        -20.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-18",
+      "type": "box",
+      "pos": [
+        0,
+        -18.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-16",
+      "type": "box",
+      "pos": [
+        0,
+        -16.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-14",
+      "type": "box",
+      "pos": [
+        0,
+        -14.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-12",
+      "type": "box",
+      "pos": [
+        0,
+        -12.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-10",
+      "type": "box",
+      "pos": [
+        0,
+        -10.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-8",
+      "type": "box",
+      "pos": [
+        0,
+        -8.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-6",
+      "type": "box",
+      "pos": [
+        0,
+        -6.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-4",
+      "type": "box",
+      "pos": [
+        0,
+        -4.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY-2",
+      "type": "box",
+      "pos": [
+        0,
+        -2.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY0",
+      "type": "box",
+      "pos": [
+        0,
+        0.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY2",
+      "type": "box",
+      "pos": [
+        0,
+        2.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY4",
+      "type": "box",
+      "pos": [
+        0,
+        4.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY6",
+      "type": "box",
+      "pos": [
+        0,
+        6.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY8",
+      "type": "box",
+      "pos": [
+        0,
+        8.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY10",
+      "type": "box",
+      "pos": [
+        0,
+        10.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY12",
+      "type": "box",
+      "pos": [
+        0,
+        12.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FloorJointY14",
+      "type": "box",
+      "pos": [
+        0,
+        14.0,
+        0.001
+      ],
+      "size": [
+        20,
+        0.0025,
+        0.001
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion0",
+      "type": "box",
+      "pos": [
+        -20.0,
+        6.7,
+        4.5
+      ],
+      "size": [
+        0.06,
+        0.1,
+        4.5
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion1",
+      "type": "box",
+      "pos": [
+        -18.4,
+        6.7,
+        4.5
+      ],
+      "size": [
+        0.06,
+        0.1,
+        4.5
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion2",
+      "type": "box",
+      "pos": [
+        -16.799999999999997,
+        6.7,
+        4.5
+      ],
+      "size": [
+        0.06,
+        0.1,
+        4.5
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion3",
+      "type": "box",
+      "pos": [
+        -15.199999999999996,
+        6.7,
+        4.5
+      ],
+      "size": [
+        0.06,
+        0.1,
+        4.5
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion4",
+      "type": "box",
+      "pos": [
+        -13.599999999999994,
+        6.7,
+        4.5
+      ],
+      "size": [
+        0.06,
+        0.1,
+        4.5
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion5",
+      "type": "box",
+      "pos": [
+        -11.999999999999993,
+        6.7,
+        4.5
+      ],
+      "size": [
+        0.06,
+        0.1,
+        4.5
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion6",
+      "type": "box",
+      "pos": [
+        -10.399999999999991,
+        6.7,
+        6.2
+      ],
+      "size": [
+        0.06,
+        0.1,
+        2.7
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion7",
+      "type": "box",
+      "pos": [
+        -8.79999999999999,
+        6.7,
+        6.2
+      ],
+      "size": [
+        0.06,
+        0.1,
+        2.7
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion8",
+      "type": "box",
+      "pos": [
+        -7.199999999999989,
+        6.7,
+        6.2
+      ],
+      "size": [
+        0.06,
+        0.1,
+        2.7
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion9",
+      "type": "box",
+      "pos": [
+        -5.599999999999987,
+        6.7,
+        6.2
+      ],
+      "size": [
+        0.06,
+        0.1,
+        2.7
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion10",
+      "type": "box",
+      "pos": [
+        -3.999999999999986,
+        6.7,
+        6.2
+      ],
+      "size": [
+        0.06,
+        0.1,
+        2.7
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion11",
+      "type": "box",
+      "pos": [
+        -2.3999999999999844,
+        6.7,
+        6.2
+      ],
+      "size": [
+        0.06,
+        0.1,
+        2.7
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion12",
+      "type": "box",
+      "pos": [
+        -0.799999999999983,
+        6.7,
+        4.5
+      ],
+      "size": [
+        0.06,
+        0.1,
+        4.5
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeMullion13",
+      "type": "box",
+      "pos": [
+        0.8000000000000185,
+        6.7,
+        4.5
+      ],
+      "size": [
+        0.06,
+        0.1,
+        4.5
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeTransom0",
+      "type": "box",
+      "pos": [
+        -9.1,
+        6.7,
+        2.5
+      ],
+      "size": [
+        11.1,
+        0.1,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeTransom1",
+      "type": "box",
+      "pos": [
+        -9.1,
+        6.7,
+        4
+      ],
+      "size": [
+        11.1,
+        0.1,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeTransom2",
+      "type": "box",
+      "pos": [
+        -9.1,
+        6.7,
+        5.5
+      ],
+      "size": [
+        11.1,
+        0.1,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeTransom3",
+      "type": "box",
+      "pos": [
+        -9.1,
+        6.7,
+        7
+      ],
+      "size": [
+        11.1,
+        0.1,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeTransom4",
+      "type": "box",
+      "pos": [
+        -9.1,
+        6.7,
+        8.9
+      ],
+      "size": [
+        11.1,
+        0.1,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass0_0",
+      "type": "box",
+      "pos": [
+        -19.2,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass0_1",
+      "type": "box",
+      "pos": [
+        -19.2,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass0_2",
+      "type": "box",
+      "pos": [
+        -19.2,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass0_3",
+      "type": "box",
+      "pos": [
+        -19.2,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass1_0",
+      "type": "box",
+      "pos": [
+        -17.599999999999998,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass1_1",
+      "type": "box",
+      "pos": [
+        -17.599999999999998,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass1_2",
+      "type": "box",
+      "pos": [
+        -17.599999999999998,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass1_3",
+      "type": "box",
+      "pos": [
+        -17.599999999999998,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass2_0",
+      "type": "box",
+      "pos": [
+        -15.999999999999996,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass2_1",
+      "type": "box",
+      "pos": [
+        -15.999999999999996,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass2_2",
+      "type": "box",
+      "pos": [
+        -15.999999999999996,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass2_3",
+      "type": "box",
+      "pos": [
+        -15.999999999999996,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass3_0",
+      "type": "box",
+      "pos": [
+        -14.399999999999995,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass3_1",
+      "type": "box",
+      "pos": [
+        -14.399999999999995,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass3_2",
+      "type": "box",
+      "pos": [
+        -14.399999999999995,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass3_3",
+      "type": "box",
+      "pos": [
+        -14.399999999999995,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass4_0",
+      "type": "box",
+      "pos": [
+        -12.799999999999994,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass4_1",
+      "type": "box",
+      "pos": [
+        -12.799999999999994,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass4_2",
+      "type": "box",
+      "pos": [
+        -12.799999999999994,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass4_3",
+      "type": "box",
+      "pos": [
+        -12.799999999999994,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass5_0",
+      "type": "box",
+      "pos": [
+        -11.199999999999992,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass5_1",
+      "type": "box",
+      "pos": [
+        -11.199999999999992,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass5_2",
+      "type": "box",
+      "pos": [
+        -11.199999999999992,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass5_3",
+      "type": "box",
+      "pos": [
+        -11.199999999999992,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass6_0",
+      "type": "box",
+      "pos": [
+        -9.59999999999999,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass6_1",
+      "type": "box",
+      "pos": [
+        -9.59999999999999,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass6_2",
+      "type": "box",
+      "pos": [
+        -9.59999999999999,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass6_3",
+      "type": "box",
+      "pos": [
+        -9.59999999999999,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass7_0",
+      "type": "box",
+      "pos": [
+        -7.999999999999989,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass7_1",
+      "type": "box",
+      "pos": [
+        -7.999999999999989,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass7_2",
+      "type": "box",
+      "pos": [
+        -7.999999999999989,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass7_3",
+      "type": "box",
+      "pos": [
+        -7.999999999999989,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass8_0",
+      "type": "box",
+      "pos": [
+        -6.399999999999988,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass8_1",
+      "type": "box",
+      "pos": [
+        -6.399999999999988,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass8_2",
+      "type": "box",
+      "pos": [
+        -6.399999999999988,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass8_3",
+      "type": "box",
+      "pos": [
+        -6.399999999999988,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass9_0",
+      "type": "box",
+      "pos": [
+        -4.7999999999999865,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass9_1",
+      "type": "box",
+      "pos": [
+        -4.7999999999999865,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass9_2",
+      "type": "box",
+      "pos": [
+        -4.7999999999999865,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass9_3",
+      "type": "box",
+      "pos": [
+        -4.7999999999999865,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass10_0",
+      "type": "box",
+      "pos": [
+        -3.199999999999985,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass10_1",
+      "type": "box",
+      "pos": [
+        -3.199999999999985,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass10_2",
+      "type": "box",
+      "pos": [
+        -3.199999999999985,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass10_3",
+      "type": "box",
+      "pos": [
+        -3.199999999999985,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass11_0",
+      "type": "box",
+      "pos": [
+        -1.5999999999999837,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass11_1",
+      "type": "box",
+      "pos": [
+        -1.5999999999999837,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass11_2",
+      "type": "box",
+      "pos": [
+        -1.5999999999999837,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass11_3",
+      "type": "box",
+      "pos": [
+        -1.5999999999999837,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass12_0",
+      "type": "box",
+      "pos": [
+        1.7763568394002505e-14,
+        6.72,
+        3.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass12_1",
+      "type": "box",
+      "pos": [
+        1.7763568394002505e-14,
+        6.72,
+        4.75
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass12_2",
+      "type": "box",
+      "pos": [
+        1.7763568394002505e-14,
+        6.72,
+        6.25
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.7
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "FacadeGlass12_3",
+      "type": "box",
+      "pos": [
+        1.7763568394002505e-14,
+        6.72,
+        7.95
+      ],
+      "size": [
+        0.74,
+        0.015,
+        0.9
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "MainColumn-10.5",
+      "type": "cylinder",
+      "pos": [
+        -10.5,
+        6.05,
+        4.3
+      ],
+      "size": [
+        0.16,
+        4.3
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "MainColumn-4.3",
+      "type": "cylinder",
+      "pos": [
+        -4.3,
+        6.05,
+        4.3
+      ],
+      "size": [
+        0.16,
+        4.3
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "MainColumn1.7",
+      "type": "cylinder",
+      "pos": [
+        1.7,
+        6.05,
+        4.3
+      ],
+      "size": [
+        0.16,
+        4.3
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "MainColumn8.4",
+      "type": "cylinder",
+      "pos": [
+        8.4,
+        6.05,
+        4.3
+      ],
+      "size": [
+        0.16,
+        4.3
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorCanopy0",
+      "type": "box",
+      "pos": [
+        -8.8,
+        5.95,
+        2.9
+      ],
+      "size": [
+        2.15,
+        0.85,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorNumber0",
+      "type": "panel",
+      "pos": [
+        -10.08,
+        5.085,
+        2.94
+      ],
+      "size": [
+        0.4,
+        0.4
+      ],
+      "material": "door6",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "signage"
+    },
+    {
+      "name": "EntranceMat0",
+      "type": "box",
+      "pos": [
+        -8.8,
+        4.7,
+        0.012
+      ],
+      "size": [
+        2.15,
+        1.7,
+        0.012
+      ],
+      "material": "rubber",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorJamb0_-1",
+      "type": "box",
+      "pos": [
+        -10.850000000000001,
+        5.9,
+        1.22
+      ],
+      "size": [
+        0.06,
+        0.65,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeaf0_-1",
+      "type": "box",
+      "pos": [
+        -9.950000000000001,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.52,
+        0.025,
+        1.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeafFrame0_-1_-1",
+      "type": "box",
+      "pos": [
+        -10.47,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.022,
+        0.04,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeafFrame0_-1_1",
+      "type": "box",
+      "pos": [
+        -9.430000000000001,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.022,
+        0.04,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorFrostBand0_-1",
+      "type": "box",
+      "pos": [
+        -9.950000000000001,
+        5.815,
+        1.1
+      ],
+      "size": [
+        0.51,
+        0.008,
+        0.1
+      ],
+      "material": "white",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "DoorJamb0_1",
+      "type": "box",
+      "pos": [
+        -6.750000000000001,
+        5.9,
+        1.22
+      ],
+      "size": [
+        0.06,
+        0.65,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeaf0_1",
+      "type": "box",
+      "pos": [
+        -7.65,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.52,
+        0.025,
+        1.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeafFrame0_1_-1",
+      "type": "box",
+      "pos": [
+        -8.17,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.022,
+        0.04,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeafFrame0_1_1",
+      "type": "box",
+      "pos": [
+        -7.130000000000001,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.022,
+        0.04,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorFrostBand0_1",
+      "type": "box",
+      "pos": [
+        -7.65,
+        5.815,
+        1.1
+      ],
+      "size": [
+        0.51,
+        0.008,
+        0.1
+      ],
+      "material": "white",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "DoorCanopy1",
+      "type": "box",
+      "pos": [
+        -3.5,
+        5.95,
+        2.9
+      ],
+      "size": [
+        2.15,
+        0.85,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorNumber1",
+      "type": "panel",
+      "pos": [
+        -4.78,
+        5.085,
+        2.94
+      ],
+      "size": [
+        0.4,
+        0.4
+      ],
+      "material": "door6",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "signage"
+    },
+    {
+      "name": "EntranceMat1",
+      "type": "box",
+      "pos": [
+        -3.5,
+        4.7,
+        0.012
+      ],
+      "size": [
+        2.15,
+        1.7,
+        0.012
+      ],
+      "material": "rubber",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorJamb1_-1",
+      "type": "box",
+      "pos": [
+        -5.55,
+        5.9,
+        1.22
+      ],
+      "size": [
+        0.06,
+        0.65,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeaf1_-1",
+      "type": "box",
+      "pos": [
+        -4.65,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.52,
+        0.025,
+        1.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeafFrame1_-1_-1",
+      "type": "box",
+      "pos": [
+        -5.17,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.022,
+        0.04,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeafFrame1_-1_1",
+      "type": "box",
+      "pos": [
+        -4.130000000000001,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.022,
+        0.04,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorFrostBand1_-1",
+      "type": "box",
+      "pos": [
+        -4.65,
+        5.815,
+        1.1
+      ],
+      "size": [
+        0.51,
+        0.008,
+        0.1
+      ],
+      "material": "white",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "DoorJamb1_1",
+      "type": "box",
+      "pos": [
+        -1.4500000000000002,
+        5.9,
+        1.22
+      ],
+      "size": [
+        0.06,
+        0.65,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeaf1_1",
+      "type": "box",
+      "pos": [
+        -2.35,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.52,
+        0.025,
+        1.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeafFrame1_1_-1",
+      "type": "box",
+      "pos": [
+        -2.87,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.022,
+        0.04,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorLeafFrame1_1_1",
+      "type": "box",
+      "pos": [
+        -1.83,
+        5.86,
+        1.22
+      ],
+      "size": [
+        0.022,
+        0.04,
+        1.22
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "DoorFrostBand1_1",
+      "type": "box",
+      "pos": [
+        -2.35,
+        5.815,
+        1.1
+      ],
+      "size": [
+        0.51,
+        0.008,
+        0.1
+      ],
+      "material": "white",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "TowerUpright0.06.4",
+      "type": "box",
+      "pos": [
+        0.0,
+        6.4,
+        4.2
+      ],
+      "size": [
+        0.075,
+        0.075,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerUpright0.08.2",
+      "type": "box",
+      "pos": [
+        0.0,
+        8.2,
+        4.2
+      ],
+      "size": [
+        0.075,
+        0.075,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerUpright2.16.4",
+      "type": "box",
+      "pos": [
+        2.1,
+        6.4,
+        4.2
+      ],
+      "size": [
+        0.075,
+        0.075,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerUpright2.18.2",
+      "type": "box",
+      "pos": [
+        2.1,
+        8.2,
+        4.2
+      ],
+      "size": [
+        0.075,
+        0.075,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontBeam0.5",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.4,
+        0.5
+      ],
+      "size": [
+        1.1,
+        0.065,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideBeam0.5",
+      "type": "box",
+      "pos": [
+        2.1,
+        7.3,
+        0.5
+      ],
+      "size": [
+        0.065,
+        0.95,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontBeam1.5",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.4,
+        1.5
+      ],
+      "size": [
+        1.1,
+        0.065,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideBeam1.5",
+      "type": "box",
+      "pos": [
+        2.1,
+        7.3,
+        1.5
+      ],
+      "size": [
+        0.065,
+        0.95,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontBeam2.5",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.4,
+        2.5
+      ],
+      "size": [
+        1.1,
+        0.065,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideBeam2.5",
+      "type": "box",
+      "pos": [
+        2.1,
+        7.3,
+        2.5
+      ],
+      "size": [
+        0.065,
+        0.95,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontBeam3.5",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.4,
+        3.5
+      ],
+      "size": [
+        1.1,
+        0.065,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideBeam3.5",
+      "type": "box",
+      "pos": [
+        2.1,
+        7.3,
+        3.5
+      ],
+      "size": [
+        0.065,
+        0.95,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontBeam4.5",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.4,
+        4.5
+      ],
+      "size": [
+        1.1,
+        0.065,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideBeam4.5",
+      "type": "box",
+      "pos": [
+        2.1,
+        7.3,
+        4.5
+      ],
+      "size": [
+        0.065,
+        0.95,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontBeam5.5",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.4,
+        5.5
+      ],
+      "size": [
+        1.1,
+        0.065,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideBeam5.5",
+      "type": "box",
+      "pos": [
+        2.1,
+        7.3,
+        5.5
+      ],
+      "size": [
+        0.065,
+        0.95,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontBeam6.5",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.4,
+        6.5
+      ],
+      "size": [
+        1.1,
+        0.065,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideBeam6.5",
+      "type": "box",
+      "pos": [
+        2.1,
+        7.3,
+        6.5
+      ],
+      "size": [
+        0.065,
+        0.95,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontBeam7.5",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.4,
+        7.5
+      ],
+      "size": [
+        1.1,
+        0.065,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideBeam7.5",
+      "type": "box",
+      "pos": [
+        2.1,
+        7.3,
+        7.5
+      ],
+      "size": [
+        0.065,
+        0.95,
+        0.055
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerFrontGlass",
+      "type": "box",
+      "pos": [
+        1.05,
+        6.45,
+        4.2
+      ],
+      "size": [
+        1,
+        0.018,
+        4.15
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "TowerSideGlass",
+      "type": "box",
+      "pos": [
+        2.05,
+        7.3,
+        4.2
+      ],
+      "size": [
+        0.018,
+        0.85,
+        4.15
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearMullion0",
+      "type": "box",
+      "pos": [
+        2.5,
+        10.5,
+        4.2
+      ],
+      "size": [
+        0.06,
+        0.08,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearGlass0",
+      "type": "box",
+      "pos": [
+        3.35,
+        10.53,
+        4.2
+      ],
+      "size": [
+        0.8,
+        0.02,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearMullion1",
+      "type": "box",
+      "pos": [
+        4.3,
+        10.5,
+        4.2
+      ],
+      "size": [
+        0.06,
+        0.08,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearGlass1",
+      "type": "box",
+      "pos": [
+        5.1499999999999995,
+        10.53,
+        4.2
+      ],
+      "size": [
+        0.8,
+        0.02,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearMullion2",
+      "type": "box",
+      "pos": [
+        6.1,
+        10.5,
+        4.2
+      ],
+      "size": [
+        0.06,
+        0.08,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearGlass2",
+      "type": "box",
+      "pos": [
+        6.949999999999999,
+        10.53,
+        4.2
+      ],
+      "size": [
+        0.8,
+        0.02,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearMullion3",
+      "type": "box",
+      "pos": [
+        7.8999999999999995,
+        10.5,
+        4.2
+      ],
+      "size": [
+        0.06,
+        0.08,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearGlass3",
+      "type": "box",
+      "pos": [
+        8.75,
+        10.53,
+        4.2
+      ],
+      "size": [
+        0.8,
+        0.02,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearMullion4",
+      "type": "box",
+      "pos": [
+        9.7,
+        10.5,
+        4.2
+      ],
+      "size": [
+        0.06,
+        0.08,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearGlass4",
+      "type": "box",
+      "pos": [
+        10.549999999999999,
+        10.53,
+        4.2
+      ],
+      "size": [
+        0.8,
+        0.02,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearMullion5",
+      "type": "box",
+      "pos": [
+        11.5,
+        10.5,
+        4.2
+      ],
+      "size": [
+        0.06,
+        0.08,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearGlass5",
+      "type": "box",
+      "pos": [
+        12.35,
+        10.53,
+        4.2
+      ],
+      "size": [
+        0.8,
+        0.02,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearCrossbar1.0",
+      "type": "box",
+      "pos": [
+        7.3,
+        10.5,
+        1.0
+      ],
+      "size": [
+        5.4,
+        0.08,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearCrossbar2.5",
+      "type": "box",
+      "pos": [
+        7.3,
+        10.5,
+        2.5
+      ],
+      "size": [
+        5.4,
+        0.08,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearCrossbar4.0",
+      "type": "box",
+      "pos": [
+        7.3,
+        10.5,
+        4.0
+      ],
+      "size": [
+        5.4,
+        0.08,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearCrossbar5.5",
+      "type": "box",
+      "pos": [
+        7.3,
+        10.5,
+        5.5
+      ],
+      "size": [
+        5.4,
+        0.08,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearCrossbar7.0",
+      "type": "box",
+      "pos": [
+        7.3,
+        10.5,
+        7.0
+      ],
+      "size": [
+        5.4,
+        0.08,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearCrossbar8.5",
+      "type": "box",
+      "pos": [
+        7.3,
+        10.5,
+        8.5
+      ],
+      "size": [
+        5.4,
+        0.08,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightMullion0",
+      "type": "box",
+      "pos": [
+        12.4,
+        -2.0,
+        4.2
+      ],
+      "size": [
+        0.07,
+        0.06,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightGlass0",
+      "type": "box",
+      "pos": [
+        12.42,
+        -1.15,
+        4.2
+      ],
+      "size": [
+        0.02,
+        0.8,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightMullion1",
+      "type": "box",
+      "pos": [
+        12.4,
+        -0.19999999999999996,
+        4.2
+      ],
+      "size": [
+        0.07,
+        0.06,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightGlass1",
+      "type": "box",
+      "pos": [
+        12.42,
+        0.65,
+        4.2
+      ],
+      "size": [
+        0.02,
+        0.8,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightMullion2",
+      "type": "box",
+      "pos": [
+        12.4,
+        1.6,
+        4.2
+      ],
+      "size": [
+        0.07,
+        0.06,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightGlass2",
+      "type": "box",
+      "pos": [
+        12.42,
+        2.45,
+        4.2
+      ],
+      "size": [
+        0.02,
+        0.8,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightMullion3",
+      "type": "box",
+      "pos": [
+        12.4,
+        3.4000000000000004,
+        4.2
+      ],
+      "size": [
+        0.07,
+        0.06,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightGlass3",
+      "type": "box",
+      "pos": [
+        12.42,
+        4.25,
+        4.2
+      ],
+      "size": [
+        0.02,
+        0.8,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightMullion4",
+      "type": "box",
+      "pos": [
+        12.4,
+        5.2,
+        4.2
+      ],
+      "size": [
+        0.07,
+        0.06,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightGlass4",
+      "type": "box",
+      "pos": [
+        12.42,
+        6.05,
+        4.2
+      ],
+      "size": [
+        0.02,
+        0.8,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightMullion5",
+      "type": "box",
+      "pos": [
+        12.4,
+        7.0,
+        4.2
+      ],
+      "size": [
+        0.07,
+        0.06,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightGlass5",
+      "type": "box",
+      "pos": [
+        12.42,
+        7.85,
+        4.2
+      ],
+      "size": [
+        0.02,
+        0.8,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightMullion6",
+      "type": "box",
+      "pos": [
+        12.4,
+        8.8,
+        4.2
+      ],
+      "size": [
+        0.07,
+        0.06,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightGlass6",
+      "type": "box",
+      "pos": [
+        12.42,
+        9.65,
+        4.2
+      ],
+      "size": [
+        0.02,
+        0.8,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightMullion7",
+      "type": "box",
+      "pos": [
+        12.4,
+        10.6,
+        4.2
+      ],
+      "size": [
+        0.07,
+        0.06,
+        4.2
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightGlass7",
+      "type": "box",
+      "pos": [
+        12.42,
+        11.45,
+        4.2
+      ],
+      "size": [
+        0.02,
+        0.8,
+        4.2
+      ],
+      "material": "glass",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightCrossbar1.0",
+      "type": "box",
+      "pos": [
+        12.4,
+        4.5,
+        1.0
+      ],
+      "size": [
+        0.07,
+        6.5,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightCrossbar2.5",
+      "type": "box",
+      "pos": [
+        12.4,
+        4.5,
+        2.5
+      ],
+      "size": [
+        0.07,
+        6.5,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightCrossbar4.0",
+      "type": "box",
+      "pos": [
+        12.4,
+        4.5,
+        4.0
+      ],
+      "size": [
+        0.07,
+        6.5,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightCrossbar5.5",
+      "type": "box",
+      "pos": [
+        12.4,
+        4.5,
+        5.5
+      ],
+      "size": [
+        0.07,
+        6.5,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightCrossbar7.0",
+      "type": "box",
+      "pos": [
+        12.4,
+        4.5,
+        7.0
+      ],
+      "size": [
+        0.07,
+        6.5,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RightCrossbar8.5",
+      "type": "box",
+      "pos": [
+        12.4,
+        4.5,
+        8.5
+      ],
+      "size": [
+        0.07,
+        6.5,
+        0.045
+      ],
+      "material": "frame",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "ExteriorSkyContext",
+      "type": "box",
+      "pos": [
+        0,
+        15,
+        5
+      ],
+      "size": [
+        28,
+        0.05,
+        8
+      ],
+      "material": "skyblue",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "backdrop"
+    },
+    {
+      "name": "OutsideCanopy",
+      "type": "box",
+      "pos": [
+        -5.3,
+        9.5,
+        3.6
+      ],
+      "size": [
+        7.5,
+        2.3,
+        0.12
+      ],
+      "material": "outside",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "RearConcourseBackdrop",
+      "type": "box",
+      "pos": [
+        7.5,
+        12,
+        2.7
+      ],
+      "size": [
+        5,
+        0.12,
+        2.7
+      ],
+      "material": "outside",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "CeilingPanel0",
+      "type": "box",
+      "pos": [
+        3,
+        -12,
+        8.2
+      ],
+      "size": [
+        9.3,
+        1.43,
+        0.1
+      ],
+      "material": "ceiling",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingBeam0",
+      "type": "box",
+      "pos": [
+        2,
+        -10.5,
+        8.0
+      ],
+      "size": [
+        10.5,
+        0.09,
+        0.14
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight0_-2",
+      "type": "cylinder",
+      "pos": [
+        -2,
+        -10.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight0_2",
+      "type": "cylinder",
+      "pos": [
+        2,
+        -10.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight0_6",
+      "type": "cylinder",
+      "pos": [
+        6,
+        -10.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight0_10",
+      "type": "cylinder",
+      "pos": [
+        10,
+        -10.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingPanel1",
+      "type": "box",
+      "pos": [
+        3,
+        -9,
+        8.2
+      ],
+      "size": [
+        9.3,
+        1.43,
+        0.1
+      ],
+      "material": "ceiling",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingBeam1",
+      "type": "box",
+      "pos": [
+        2,
+        -7.5,
+        8.0
+      ],
+      "size": [
+        10.5,
+        0.09,
+        0.14
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight1_-2",
+      "type": "cylinder",
+      "pos": [
+        -2,
+        -7.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight1_2",
+      "type": "cylinder",
+      "pos": [
+        2,
+        -7.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight1_6",
+      "type": "cylinder",
+      "pos": [
+        6,
+        -7.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight1_10",
+      "type": "cylinder",
+      "pos": [
+        10,
+        -7.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingPanel2",
+      "type": "box",
+      "pos": [
+        3,
+        -6,
+        8.2
+      ],
+      "size": [
+        9.3,
+        1.43,
+        0.1
+      ],
+      "material": "ceiling",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingBeam2",
+      "type": "box",
+      "pos": [
+        2,
+        -4.5,
+        8.0
+      ],
+      "size": [
+        10.5,
+        0.09,
+        0.14
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight2_-2",
+      "type": "cylinder",
+      "pos": [
+        -2,
+        -4.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight2_2",
+      "type": "cylinder",
+      "pos": [
+        2,
+        -4.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight2_6",
+      "type": "cylinder",
+      "pos": [
+        6,
+        -4.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight2_10",
+      "type": "cylinder",
+      "pos": [
+        10,
+        -4.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingPanel3",
+      "type": "box",
+      "pos": [
+        3,
+        -3,
+        8.2
+      ],
+      "size": [
+        9.3,
+        1.43,
+        0.1
+      ],
+      "material": "ceiling",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingBeam3",
+      "type": "box",
+      "pos": [
+        2,
+        -1.5,
+        8.0
+      ],
+      "size": [
+        10.5,
+        0.09,
+        0.14
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight3_-2",
+      "type": "cylinder",
+      "pos": [
+        -2,
+        -1.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight3_2",
+      "type": "cylinder",
+      "pos": [
+        2,
+        -1.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight3_6",
+      "type": "cylinder",
+      "pos": [
+        6,
+        -1.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight3_10",
+      "type": "cylinder",
+      "pos": [
+        10,
+        -1.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingPanel4",
+      "type": "box",
+      "pos": [
+        3,
+        0,
+        8.2
+      ],
+      "size": [
+        9.3,
+        1.43,
+        0.1
+      ],
+      "material": "ceiling",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingBeam4",
+      "type": "box",
+      "pos": [
+        2,
+        1.5,
+        8.0
+      ],
+      "size": [
+        10.5,
+        0.09,
+        0.14
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight4_-2",
+      "type": "cylinder",
+      "pos": [
+        -2,
+        1.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight4_2",
+      "type": "cylinder",
+      "pos": [
+        2,
+        1.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight4_6",
+      "type": "cylinder",
+      "pos": [
+        6,
+        1.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight4_10",
+      "type": "cylinder",
+      "pos": [
+        10,
+        1.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingPanel5",
+      "type": "box",
+      "pos": [
+        3,
+        3,
+        8.2
+      ],
+      "size": [
+        9.3,
+        1.43,
+        0.1
+      ],
+      "material": "ceiling",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingBeam5",
+      "type": "box",
+      "pos": [
+        2,
+        4.5,
+        8.0
+      ],
+      "size": [
+        10.5,
+        0.09,
+        0.14
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight5_-2",
+      "type": "cylinder",
+      "pos": [
+        -2,
+        4.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight5_2",
+      "type": "cylinder",
+      "pos": [
+        2,
+        4.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight5_6",
+      "type": "cylinder",
+      "pos": [
+        6,
+        4.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight5_10",
+      "type": "cylinder",
+      "pos": [
+        10,
+        4.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingPanel6",
+      "type": "box",
+      "pos": [
+        3,
+        6,
+        8.2
+      ],
+      "size": [
+        9.3,
+        1.43,
+        0.1
+      ],
+      "material": "ceiling",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingBeam6",
+      "type": "box",
+      "pos": [
+        2,
+        7.5,
+        8.0
+      ],
+      "size": [
+        10.5,
+        0.09,
+        0.14
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight6_-2",
+      "type": "cylinder",
+      "pos": [
+        -2,
+        7.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight6_2",
+      "type": "cylinder",
+      "pos": [
+        2,
+        7.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight6_6",
+      "type": "cylinder",
+      "pos": [
+        6,
+        7.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight6_10",
+      "type": "cylinder",
+      "pos": [
+        10,
+        7.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingPanel7",
+      "type": "box",
+      "pos": [
+        3,
+        9,
+        8.2
+      ],
+      "size": [
+        9.3,
+        1.43,
+        0.1
+      ],
+      "material": "ceiling",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "CeilingBeam7",
+      "type": "box",
+      "pos": [
+        2,
+        10.5,
+        8.0
+      ],
+      "size": [
+        10.5,
+        0.09,
+        0.14
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight7_-2",
+      "type": "cylinder",
+      "pos": [
+        -2,
+        10.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight7_2",
+      "type": "cylinder",
+      "pos": [
+        2,
+        10.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight7_6",
+      "type": "cylinder",
+      "pos": [
+        6,
+        10.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "Downlight7_10",
+      "type": "cylinder",
+      "pos": [
+        10,
+        10.5,
+        7.84
+      ],
+      "size": [
+        0.045,
+        0.015
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "ceiling"
+    },
+    {
+      "name": "CounterBody",
+      "type": "box",
+      "pos": [
+        2.6,
+        4.5,
+        0.61
+      ],
+      "size": [
+        1.65,
+        0.45,
+        0.61
+      ],
+      "material": "white",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "CounterWorktop",
+      "type": "box",
+      "pos": [
+        2.6,
+        4.5,
+        1.24
+      ],
+      "size": [
+        1.72,
+        0.51,
+        0.035
+      ],
+      "material": "white",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "CounterPanelSeam1.15",
+      "type": "box",
+      "pos": [
+        1.15,
+        4.041,
+        0.63
+      ],
+      "size": [
+        0.005,
+        0.003,
+        0.54
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "CounterPanelSeam2.15",
+      "type": "box",
+      "pos": [
+        2.15,
+        4.041,
+        0.63
+      ],
+      "size": [
+        0.005,
+        0.003,
+        0.54
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "CounterPanelSeam3.15",
+      "type": "box",
+      "pos": [
+        3.15,
+        4.041,
+        0.63
+      ],
+      "size": [
+        0.005,
+        0.003,
+        0.54
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "CounterPanelSeam4.15",
+      "type": "box",
+      "pos": [
+        4.15,
+        4.041,
+        0.63
+      ],
+      "size": [
+        0.005,
+        0.003,
+        0.54
+      ],
+      "material": "seam",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "UnidentifiedEquipmentBase",
+      "type": "box",
+      "pos": [
+        3.5,
+        3.85,
+        0.45
+      ],
+      "size": [
+        0.82,
+        0.4,
+        0.45
+      ],
+      "material": "white",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "UnidentifiedEquipmentUpper",
+      "type": "box",
+      "pos": [
+        3.5,
+        4.02,
+        1.02
+      ],
+      "size": [
+        0.82,
+        0.23,
+        0.16
+      ],
+      "material": "white",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "EquipmentDarkInset0",
+      "type": "box",
+      "pos": [
+        2.98,
+        3.781,
+        1.04
+      ],
+      "size": [
+        0.11,
+        0.008,
+        0.095
+      ],
+      "material": "screen",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "EquipmentGreenMarker0",
+      "type": "box",
+      "pos": [
+        2.98,
+        3.443,
+        0.72
+      ],
+      "size": [
+        0.105,
+        0.008,
+        0.04
+      ],
+      "material": "green",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "EquipmentDarkInset1",
+      "type": "box",
+      "pos": [
+        3.5,
+        3.781,
+        1.04
+      ],
+      "size": [
+        0.11,
+        0.008,
+        0.095
+      ],
+      "material": "screen",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "EquipmentGreenMarker1",
+      "type": "box",
+      "pos": [
+        3.5,
+        3.443,
+        0.72
+      ],
+      "size": [
+        0.105,
+        0.008,
+        0.04
+      ],
+      "material": "green",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "EquipmentDarkInset2",
+      "type": "box",
+      "pos": [
+        4.02,
+        3.781,
+        1.04
+      ],
+      "size": [
+        0.11,
+        0.008,
+        0.095
+      ],
+      "material": "screen",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "EquipmentGreenMarker2",
+      "type": "box",
+      "pos": [
+        4.02,
+        3.443,
+        0.72
+      ],
+      "size": [
+        0.105,
+        0.008,
+        0.04
+      ],
+      "material": "green",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "CounterSideUnit",
+      "type": "box",
+      "pos": [
+        0.6,
+        4.65,
+        0.8
+      ],
+      "size": [
+        0.25,
+        0.35,
+        0.8
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionBase0",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        3.7,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole0",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        3.7,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead0",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        3.7,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionBase1",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        1,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole1",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        1,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead1",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        1,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt0",
+      "type": "box",
+      "pos": [
+        -9.0,
+        2.35,
+        0.96
+      ],
+      "size": [
+        1.35,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint0_0.25",
+      "type": "box",
+      "pos": [
+        -9.0,
+        3.0250000000000004,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint0_0.75",
+      "type": "box",
+      "pos": [
+        -9.0,
+        1.675,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase2",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        1,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole2",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        1,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead2",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        1,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt1",
+      "type": "box",
+      "pos": [
+        -7.7,
+        1.0,
+        0.96
+      ],
+      "size": [
+        1.2999999999999998,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint1_0.25",
+      "type": "box",
+      "pos": [
+        -8.35,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint1_0.75",
+      "type": "box",
+      "pos": [
+        -7.050000000000001,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase3",
+      "type": "cylinder",
+      "pos": [
+        -3.8,
+        1,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole3",
+      "type": "cylinder",
+      "pos": [
+        -3.8,
+        1,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead3",
+      "type": "cylinder",
+      "pos": [
+        -3.8,
+        1,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt2",
+      "type": "box",
+      "pos": [
+        -5.1,
+        1.0,
+        0.96
+      ],
+      "size": [
+        1.3000000000000003,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint2_0.25",
+      "type": "box",
+      "pos": [
+        -5.750000000000001,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint2_0.75",
+      "type": "box",
+      "pos": [
+        -4.449999999999999,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase4",
+      "type": "cylinder",
+      "pos": [
+        -1,
+        1,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole4",
+      "type": "cylinder",
+      "pos": [
+        -1,
+        1,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead4",
+      "type": "cylinder",
+      "pos": [
+        -1,
+        1,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt3",
+      "type": "box",
+      "pos": [
+        -2.4,
+        1.0,
+        0.96
+      ],
+      "size": [
+        1.4,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint3_0.25",
+      "type": "box",
+      "pos": [
+        -3.0999999999999996,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint3_0.75",
+      "type": "box",
+      "pos": [
+        -1.7,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase5",
+      "type": "cylinder",
+      "pos": [
+        1.7,
+        1,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole5",
+      "type": "cylinder",
+      "pos": [
+        1.7,
+        1,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead5",
+      "type": "cylinder",
+      "pos": [
+        1.7,
+        1,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt4",
+      "type": "box",
+      "pos": [
+        0.35,
+        1.0,
+        0.96
+      ],
+      "size": [
+        1.35,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint4_0.25",
+      "type": "box",
+      "pos": [
+        -0.325,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint4_0.75",
+      "type": "box",
+      "pos": [
+        1.025,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase6",
+      "type": "cylinder",
+      "pos": [
+        4.5,
+        1,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole6",
+      "type": "cylinder",
+      "pos": [
+        4.5,
+        1,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead6",
+      "type": "cylinder",
+      "pos": [
+        4.5,
+        1,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt5",
+      "type": "box",
+      "pos": [
+        3.1,
+        1.0,
+        0.96
+      ],
+      "size": [
+        1.4,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint5_0.25",
+      "type": "box",
+      "pos": [
+        2.4,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint5_0.75",
+      "type": "box",
+      "pos": [
+        3.8,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase7",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        1,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole7",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        1,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead7",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        1,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt6",
+      "type": "box",
+      "pos": [
+        5.85,
+        1.0,
+        0.96
+      ],
+      "size": [
+        1.35,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint6_0.25",
+      "type": "box",
+      "pos": [
+        5.175,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint6_0.75",
+      "type": "box",
+      "pos": [
+        6.525,
+        1.0,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase8",
+      "type": "cylinder",
+      "pos": [
+        -8,
+        -1.8,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole8",
+      "type": "cylinder",
+      "pos": [
+        -8,
+        -1.8,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead8",
+      "type": "cylinder",
+      "pos": [
+        -8,
+        -1.8,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionBase9",
+      "type": "cylinder",
+      "pos": [
+        -5.3,
+        -1.8,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole9",
+      "type": "cylinder",
+      "pos": [
+        -5.3,
+        -1.8,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead9",
+      "type": "cylinder",
+      "pos": [
+        -5.3,
+        -1.8,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt7",
+      "type": "box",
+      "pos": [
+        -6.65,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        1.35,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint7_0.25",
+      "type": "box",
+      "pos": [
+        -7.325,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint7_0.75",
+      "type": "box",
+      "pos": [
+        -5.975,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase10",
+      "type": "cylinder",
+      "pos": [
+        -2.5,
+        -1.8,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole10",
+      "type": "cylinder",
+      "pos": [
+        -2.5,
+        -1.8,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead10",
+      "type": "cylinder",
+      "pos": [
+        -2.5,
+        -1.8,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt8",
+      "type": "box",
+      "pos": [
+        -3.9,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        1.4,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint8_0.25",
+      "type": "box",
+      "pos": [
+        -4.6,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint8_0.75",
+      "type": "box",
+      "pos": [
+        -3.2,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase11",
+      "type": "cylinder",
+      "pos": [
+        0.4,
+        -1.8,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole11",
+      "type": "cylinder",
+      "pos": [
+        0.4,
+        -1.8,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead11",
+      "type": "cylinder",
+      "pos": [
+        0.4,
+        -1.8,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt9",
+      "type": "box",
+      "pos": [
+        -1.05,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        1.45,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint9_0.25",
+      "type": "box",
+      "pos": [
+        -1.775,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint9_0.75",
+      "type": "box",
+      "pos": [
+        -0.32499999999999996,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase12",
+      "type": "cylinder",
+      "pos": [
+        3.5,
+        -1.8,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole12",
+      "type": "cylinder",
+      "pos": [
+        3.5,
+        -1.8,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead12",
+      "type": "cylinder",
+      "pos": [
+        3.5,
+        -1.8,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt10",
+      "type": "box",
+      "pos": [
+        1.95,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        1.55,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint10_0.25",
+      "type": "box",
+      "pos": [
+        1.175,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint10_0.75",
+      "type": "box",
+      "pos": [
+        2.725,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase13",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        -1.8,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole13",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        -1.8,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead13",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        -1.8,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt11",
+      "type": "box",
+      "pos": [
+        5.35,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        1.85,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint11_0.25",
+      "type": "box",
+      "pos": [
+        4.425,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint11_0.75",
+      "type": "box",
+      "pos": [
+        6.275,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "QueueBelt12",
+      "type": "box",
+      "pos": [
+        7.2,
+        -0.4,
+        0.96
+      ],
+      "size": [
+        1.4,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        0.7071067811865475
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint12_0.25",
+      "type": "box",
+      "pos": [
+        7.2,
+        -1.1,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint12_0.75",
+      "type": "box",
+      "pos": [
+        7.2,
+        0.3,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase14",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        3.6,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole14",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        3.6,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead14",
+      "type": "cylinder",
+      "pos": [
+        7.2,
+        3.6,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt13",
+      "type": "box",
+      "pos": [
+        7.2,
+        2.3,
+        0.96
+      ],
+      "size": [
+        1.3,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        0.7071067811865475
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint13_0.25",
+      "type": "box",
+      "pos": [
+        7.2,
+        1.65,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint13_0.75",
+      "type": "box",
+      "pos": [
+        7.2,
+        2.95,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase15",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        4.4,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole15",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        4.4,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead15",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        4.4,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionBase16",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        2.4,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole16",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        2.4,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead16",
+      "type": "cylinder",
+      "pos": [
+        -6.4,
+        2.4,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt14",
+      "type": "box",
+      "pos": [
+        -6.4,
+        3.4000000000000004,
+        0.96
+      ],
+      "size": [
+        1.0000000000000002,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint14_0.25",
+      "type": "box",
+      "pos": [
+        -6.4,
+        3.9000000000000004,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint14_0.75",
+      "type": "box",
+      "pos": [
+        -6.4,
+        2.9,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase17",
+      "type": "cylinder",
+      "pos": [
+        -3.8,
+        2.4,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole17",
+      "type": "cylinder",
+      "pos": [
+        -3.8,
+        2.4,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead17",
+      "type": "cylinder",
+      "pos": [
+        -3.8,
+        2.4,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt15",
+      "type": "box",
+      "pos": [
+        -5.1,
+        2.4,
+        0.96
+      ],
+      "size": [
+        1.3000000000000003,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint15_0.25",
+      "type": "box",
+      "pos": [
+        -5.750000000000001,
+        2.4,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint15_0.75",
+      "type": "box",
+      "pos": [
+        -4.449999999999999,
+        2.4,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase18",
+      "type": "cylinder",
+      "pos": [
+        -1,
+        2.4,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole18",
+      "type": "cylinder",
+      "pos": [
+        -1,
+        2.4,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead18",
+      "type": "cylinder",
+      "pos": [
+        -1,
+        2.4,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt16",
+      "type": "box",
+      "pos": [
+        -2.4,
+        2.4,
+        0.96
+      ],
+      "size": [
+        1.4,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint16_0.25",
+      "type": "box",
+      "pos": [
+        -3.0999999999999996,
+        2.4,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint16_0.75",
+      "type": "box",
+      "pos": [
+        -1.7,
+        2.4,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase19",
+      "type": "cylinder",
+      "pos": [
+        4.5,
+        3.6,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole19",
+      "type": "cylinder",
+      "pos": [
+        4.5,
+        3.6,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead19",
+      "type": "cylinder",
+      "pos": [
+        4.5,
+        3.6,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt17",
+      "type": "box",
+      "pos": [
+        5.85,
+        3.6,
+        0.96
+      ],
+      "size": [
+        1.35,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint17_0.25",
+      "type": "box",
+      "pos": [
+        5.175,
+        3.6,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint17_0.75",
+      "type": "box",
+      "pos": [
+        6.525,
+        3.6,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "StanchionBase20",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        -1.8,
+        0.022
+      ],
+      "size": [
+        0.17,
+        0.022
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionPole20",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        -1.8,
+        0.49
+      ],
+      "size": [
+        0.022,
+        0.46
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "StanchionHead20",
+      "type": "cylinder",
+      "pos": [
+        -9,
+        -1.8,
+        0.98
+      ],
+      "size": [
+        0.045,
+        0.05
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "QueueBelt18",
+      "type": "box",
+      "pos": [
+        -9.0,
+        -0.4,
+        0.96
+      ],
+      "size": [
+        1.4,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint18_0.25",
+      "type": "box",
+      "pos": [
+        -9.0,
+        0.3,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint18_0.75",
+      "type": "box",
+      "pos": [
+        -9.0,
+        -1.1,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        0.7071067811865476,
+        0,
+        0,
+        -0.7071067811865475
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "QueueBelt19",
+      "type": "box",
+      "pos": [
+        -8.5,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.5,
+        0.003,
+        0.027
+      ],
+      "material": "band",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": true,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint19_0.25",
+      "type": "box",
+      "pos": [
+        -8.75,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "BeltPrint19_0.75",
+      "type": "box",
+      "pos": [
+        -8.25,
+        -1.8,
+        0.96
+      ],
+      "size": [
+        0.032,
+        0.0038,
+        0.006
+      ],
+      "material": "white",
+      "quat": [
+        1.0,
+        0,
+        0,
+        0.0
+      ],
+      "collision": false,
+      "group": "queue"
+    },
+    {
+      "name": "NoticeBacking0",
+      "type": "box",
+      "pos": [
+        -3.8,
+        2.375,
+        1.23
+      ],
+      "size": [
+        0.25,
+        0.025,
+        0.35
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "NoticeFace0",
+      "type": "panel",
+      "pos": [
+        -3.8,
+        2.348,
+        1.23
+      ],
+      "size": [
+        0.245,
+        0.34
+      ],
+      "material": "notice",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "signage"
+    },
+    {
+      "name": "NoticeBacking1",
+      "type": "box",
+      "pos": [
+        4.5,
+        0.975,
+        1.23
+      ],
+      "size": [
+        0.25,
+        0.025,
+        0.35
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "NoticeFace1",
+      "type": "panel",
+      "pos": [
+        4.5,
+        0.948,
+        1.23
+      ],
+      "size": [
+        0.245,
+        0.34
+      ],
+      "material": "notice",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "signage"
+    },
+    {
+      "name": "RearInformationDisplay",
+      "type": "box",
+      "pos": [
+        5.1,
+        8.9,
+        4.7
+      ],
+      "size": [
+        2.3,
+        0.15,
+        1.3
+      ],
+      "material": "screen",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "WayfindingBacking",
+      "type": "box",
+      "pos": [
+        5.1,
+        8.7,
+        3.1
+      ],
+      "size": [
+        2.5,
+        0.15,
+        0.3
+      ],
+      "material": "black",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "WayfindingText",
+      "type": "panel",
+      "pos": [
+        5.1,
+        8.53,
+        3.1
+      ],
+      "size": [
+        2.4,
+        0.24
+      ],
+      "material": "direction",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "signage"
+    },
+    {
+      "name": "LightboxFrame0",
+      "type": "box",
+      "pos": [
+        7.8,
+        9.7,
+        1.75
+      ],
+      "size": [
+        0.6,
+        0.15,
+        1.15
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "LightboxFace0",
+      "type": "box",
+      "pos": [
+        7.8,
+        9.535,
+        1.75
+      ],
+      "size": [
+        0.54,
+        0.008,
+        1.06
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "LightboxFrame1",
+      "type": "box",
+      "pos": [
+        9.7,
+        9.7,
+        1.75
+      ],
+      "size": [
+        0.6,
+        0.15,
+        1.15
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "LightboxFace1",
+      "type": "box",
+      "pos": [
+        9.7,
+        9.535,
+        1.75
+      ],
+      "size": [
+        0.54,
+        0.008,
+        1.06
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    },
+    {
+      "name": "LightboxFrame2",
+      "type": "box",
+      "pos": [
+        11.6,
+        9.7,
+        1.75
+      ],
+      "size": [
+        0.6,
+        0.15,
+        1.15
+      ],
+      "material": "column",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "group": "environment"
+    },
+    {
+      "name": "LightboxFace2",
+      "type": "box",
+      "pos": [
+        11.6,
+        9.535,
+        1.75
+      ],
+      "size": [
+        0.54,
+        0.008,
+        1.06
+      ],
+      "material": "lit",
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "collision": false,
+      "group": "environment"
+    }
+  ],
+  "camera": {
+    "position": [
+      8,
+      -8,
+      2.1
+    ],
+    "look_at": [
+      -0.6,
+      4.5,
+      3.1
+    ]
+  },
+  "scope": "Single-photo approximate static reconstruction; dimensions and hidden connections are inferred, not surveyed",
+  "source_image": "机场入口及检测区域.jpg",
+  "unknowns": [
+    "Exact scale and plan dimensions",
+    "Occluded belt connections and actual entry/exit control positions",
+    "Function and model of central white equipment",
+    "Detector and sampling consumable placement behind the counter"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "engine": "MuJoCo 3.3.6",
+  "geoms": 406,
+  "stanchion_count": 21,
+  "static_band_colliders": 20,
+  "door_center_clearance_checks": [
+    {
+      "x": -8.8,
+      "clear_distance_m": 9.85
+    },
+    {
+      "x": -3.5,
+      "clear_distance_m": 9.85
+    }
+  ],
+  "floor_and_counter_drop_probe_final_z_m": [
+    0.039632818157539836,
+    1.3146328181575393
+  ],
+  "warnings": 0,
+  "scope": "Static photo-guided concept reconstruction; no measured dimensions or operational belt controller in this layout",
+  "usd_missing_dependencies": [],
+  "isaac_sim_render": true,
+  "renderer": "Isaac Sim 4.5 PathTracing",
+  "render_views": [
+    "perspective",
+    "entrance",
+    "overview"
+  ]
+}

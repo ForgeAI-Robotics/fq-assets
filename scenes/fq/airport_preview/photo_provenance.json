@@ -1,0 +1,15 @@
+{
+  "source": "User-provided local image",
+  "filename": "机场入口及检测区域.jpg",
+  "sha256": "11d891c86ccaa7ea8a5ea0900c6bd2db510091fae9d708e22953252af89370fd",
+  "original_image_in_repository": false,
+  "geometry": "FQ authored procedural approximation from visual observation",
+  "textures": "FQ authored procedural stone and simplified signs; no copied advertising or photographed faces",
+  "dimensions_measured": false,
+  "uncertainties": [
+    "Exact scale and plan dimensions",
+    "Occluded belt connections and actual entry/exit control positions",
+    "Function and model of central white equipment",
+    "Detector and sampling consumable placement behind the counter"
+  ]
+}

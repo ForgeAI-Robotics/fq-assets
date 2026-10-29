@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "fq:scenes/airport_preview",
   "version": "0.3.0",
-  "name": "机场入口批次防爆检测场景",
-  "description": "围合批次检测区；入口和出口接入可脱扣、回收、拉出扣回的柔性伸缩带套件",
+  "name": "机场入口及检测区域 · 实景照片复刻",
+  "description": "依据用户提供的 6 号入口照片搭建；双门组、玻璃幕墙、黑色立柱、深蓝软带和中央柜台；尺寸与遮挡部分为推测",
   "kind": "scene",
   "units": "meter",
   "up_axis": "Z",
@@ -13,13 +13,15 @@
   "provenance": "scenes/fq/airport_preview/provenance.json",
   "license_status": "Project-authored environment; no robot, character, bag or third-party model payloads included. See NOTICE.md.",
   "representations": {
-    "mujoco": "scenes/fq/airport_preview/belt_preview.xml",
-    "usd": "scenes/fq/airport_preview/belt_preview.usda",
-    "operable_mujoco": "scenes/fq/airport_preview/belt_interaction.xml",
+    "mujoco": "scenes/fq/airport_preview/photo_scene.xml",
+    "usd": "scenes/fq/airport_preview/photo_scene.usda",
     "legacy_operable_mujoco": "scenes/fq/airport_preview/operable.xml",
-    "legacy_operable_usd": "scenes/fq/airport_preview/operable.usda"
+    "legacy_operable_usd": "scenes/fq/airport_preview/operable.usda",
+    "previous_layout_mujoco": "scenes/fq/airport_preview/belt_preview.xml",
+    "previous_layout_usd": "scenes/fq/airport_preview/belt_preview.usda",
+    "previous_layout_operable_mujoco": "scenes/fq/airport_preview/belt_interaction.xml"
   },
-  "release_status": "flexible_belt_interaction_prototype",
+  "release_status": "photo_guided_static_reconstruction",
   "baseline": false,
   "randomization_enabled": false,
   "robot_included": false,
@@ -41,57 +43,56 @@
     "enclosed_batch_layout": true,
     "baggage_removal_required": false,
     "workflow_simulation": false,
-    "gate_controller": true,
-    "rigid_swab_pick_and_insert": true,
-    "detector_insertion_slot": true,
-    "soft_body": true,
-    "optional_robot_kinematic_demo": true,
-    "flexible_belt": true,
-    "handle_unlatch_relatched": true
+    "gate_controller": false,
+    "rigid_swab_pick_and_insert": false,
+    "detector_insertion_slot": false,
+    "soft_body": false,
+    "optional_robot_kinematic_demo": false,
+    "flexible_belt": false,
+    "handle_unlatch_relatched": false,
+    "photo_guided_reconstruction": true
   },
   "limitations": [
-    "MuJoCo swab grasp requires bilateral pad contact, then an explicit weld; not friction-only grasp validation",
-    "Robot demo is kinematic IK with a concept tool extension and lateral base repositioning; motors, wheel traction and navigation not validated",
-    "Occupancy, alarm and release authorization are caller inputs; no Connection or chemical detector response",
-    "Prototype dimensions/mass/friction are uncalibrated; no personnel sampling/contact safety claim",
-    "Web catalog is a static preview; run Python controller for operations",
-    "MuJoCo 3.3.6 native 2D flex webbing only; USD and web 3D are static visual snapshots",
-    "Reel feed is a prescribed spiral boundary with rate limiting, not spring torque or motor dynamics",
-    "Grasp, docking and latch use checked explicit constraints; not friction-only manipulation or vendor latch replication",
-    "Internal webbing self-collision is disabled; reel-layer packing/friction is not validated",
-    "Dimensions, materials, masses and contact forces are assumed, not calibrated",
-    "Guide gripper fixture is included; no robot policy, perception or complete passenger workflow"
+    "Single-photo reconstruction; inferred dimensions and occluded belt connections, not a surveyed digital twin",
+    "Central white equipment is an unidentified visual approximation, not a verified explosives detector",
+    "This photo layout has static band colliders; the operational flexible belt remains a separate asset and previous-layout entry point",
+    "No people, robot operation, detector logic or complete checkpoint workflow in this layout",
+    "Advertisement panels are neutral placeholders; unreadable signs are simplified",
+    "Original photograph is not included in this repository; only its filename and checksum are recorded"
   ],
-  "layout": "scenes/fq/airport_preview/layout.json",
-  "interaction": "scenes/fq/airport_preview/belt_interaction.json",
+  "layout": "scenes/fq/airport_preview/photo_layout.json",
   "viewer_summary": {
-    "title": "机场入口 · 围合批次检测区",
+    "title": "机场入口及检测区域 · 照片复刻初版",
     "paragraphs": [
-      "旅客不摘包，分批进入，逐人擦拭人与包；批次结果满足条件后再打开出口。桌子和检测仪位于等待区域内。",
-      "入口和出口已接入柔性伸缩带套件：端头抬起脱扣、受控回收、拉出并下压扣回。本场景页仅展示静态三维布局，操作视频放在伸缩带套件页。",
-      "当前视频由概念夹具操作，不含人员、机器人自主控制或完整安检业务；卷筒为受控收放边界。新柔性采样布与料盒尚未接入安检流程。"
+      "按实景照片重建双 6 号入口、玻璃门厅、黑色立柱与深蓝软带组成的相邻通道，以及中央白色柜台。当前默认视角接近参考照片站位。",
+      "照片中被遮挡的软带连接、真实尺寸、中央设备功能仍未确定；这些部分属于近似建模。未加入人物和机器人。",
+      "本页保持静态三维展示。新的照片布局尚未接入开带与采样流程；已完成的柔性伸缩带套件和旧操作布局继续保留为单独入口。"
     ]
   },
   "viewer_status": [
     [
-      "入口／出口",
-      "两套柔性隔离带，原生 MuJoCo 操作入口"
+      "依据",
+      "用户提供的机场入口及检测区域照片"
     ],
     [
-      "端头操作",
-      "抓取、抬起脱扣、回收停靠、拉出扣回"
+      "可见结构",
+      "两个 6 号门组、玻璃幕墙、黑色立柱、深蓝软带"
     ],
     [
-      "网页展示",
-      "静态三维场景，不显示动态演示"
+      "中央设备",
+      "仅复刻外形，型号与功能未确认"
     ],
     [
-      "机构精度",
-      "卷簧、卷层摩擦与材料参数未实物标定"
+      "精度",
+      "单张照片估算，非测绘复刻"
     ],
     [
-      "人员与设备流程",
-      "尚未集成"
+      "碰撞",
+      "地面、柜台、立柱、挡带与建筑静态碰撞"
+    ],
+    [
+      "可操作套件",
+      "保留在独立资产与旧布局入口，尚未迁入本照片布局"
     ]
   ],
   "related_asset_slugs": [
@@ -99,5 +100,22 @@
     "flexible_sampling_sheet",
     "swab_supply_box"
   ],
-  "legacy_interaction": "scenes/fq/airport_preview/interaction.json"
+  "legacy_interaction": "scenes/fq/airport_preview/interaction.json",
+  "previous_layout_interaction": "scenes/fq/airport_preview/belt_interaction.json",
+  "previous_layout_description": "scenes/fq/airport_preview/layout.json",
+  "active_variant": "photo_reference_v1",
+  "viewer_camera": {
+    "position": [
+      8,
+      -8,
+      2.1
+    ],
+    "target": [
+      -0.6,
+      4.5,
+      3.1
+    ],
+    "vertical_fov_degrees": 50
+  },
+  "default_cutaway": false
 }

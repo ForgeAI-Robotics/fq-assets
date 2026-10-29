@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="airport_entrance_photo_reference">
+  <compiler angle="radian" />
+  <option timestep=".002" />
+  <visual>
+    <global offwidth="1920" offheight="1080" />
+    <quality shadowsize="4096" offsamples="4" />
+    <headlight ambient=".45 .45 .45" diffuse=".5 .5 .5" />
+    <map znear=".02" zfar="100" />
+  </visual>
+  <asset>
+    <texture name="sky" type="skybox" builtin="gradient" rgb1=".25 .48 .72" rgb2=".75 .85 .94" width="512" height="3072" />
+    <texture name="stone" type="2d" file="photo_textures/stone.png" />
+    <material name="stone" rgba="0.9 0.88 0.83 1" specular="0.2" shininess="0.73" texture="stone" texrepeat="12 12" />
+    <material name="frame" rgba="0.075 0.105 0.13 1" specular="0.525" shininess="0.7" />
+    <material name="column" rgba="0.39 0.44 0.44 1" specular="0.5" shininess="0.7" />
+    <material name="black" rgba="0.025 0.03 0.035 1" specular="0.375" shininess="0.7" />
+    <material name="band" rgba="0.018 0.04 0.12 1" specular="0.2" shininess="0.28" />
+    <material name="glass" rgba="0.3 0.53 0.67 0.3" specular="0.225" shininess="0.88" />
+    <material name="ceiling" rgba="0.77 0.76 0.7 1" specular="0.2" shininess="0.30000000000000004" />
+    <material name="white" rgba="0.82 0.84 0.82 1" specular="0.26" shininess="0.62" />
+    <material name="rubber" rgba="0.055 0.06 0.063 1" specular="0.2" shininess="0.050000000000000044" />
+    <material name="screen" rgba="0.035 0.055 0.065 1" specular="0.2" shininess="0.77" />
+    <material name="green" rgba="0.01 0.42 0.23 1" specular="0.2" shininess="0.5" />
+    <material name="lit" rgba="0.98 0.98 0.92 1" specular="0.2" shininess="0.4" />
+    <material name="skyblue" rgba="0.26 0.49 0.7 1" specular="0.2" shininess="0" />
+    <material name="outside" rgba="0.39 0.52 0.59 1" specular="0.2" shininess="0.35" />
+    <material name="seam" rgba="0.43 0.43 0.41 1" specular="0.2" shininess="0.30000000000000004" />
+    <texture name="door6" type="2d" file="photo_textures/mj_door6.png" />
+    <material name="door6" rgba="1 1 1 1" specular="0.2" shininess="0.30000000000000004" texture="door6" texrepeat="1 1" />
+    <texture name="direction" type="2d" file="photo_textures/mj_direction.png" />
+    <material name="direction" rgba="1 1 1 1" specular="0.2" shininess="0.30000000000000004" texture="direction" texrepeat="1 1" />
+    <texture name="notice" type="2d" file="photo_textures/mj_notice.png" />
+    <material name="notice" rgba="1 1 1 1" specular="0.2" shininess="0.30000000000000004" texture="notice" texrepeat="1 1" />
+    <mesh name="DoorNumber0" vertex="-0.4 0 -0.4 0.4 0 -0.4 0.4 0 0.4 -0.4 0 0.4" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <mesh name="DoorNumber1" vertex="-0.4 0 -0.4 0.4 0 -0.4 0.4 0 0.4 -0.4 0 0.4" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <mesh name="NoticeFace0" vertex="-0.245 0 -0.34 0.245 0 -0.34 0.245 0 0.34 -0.245 0 0.34" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <mesh name="NoticeFace1" vertex="-0.245 0 -0.34 0.245 0 -0.34 0.245 0 0.34 -0.245 0 0.34" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <mesh name="WayfindingText" vertex="-2.4 0 -0.24 2.4 0 -0.24 2.4 0 0.24 -2.4 0 0.24" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+  </asset>
+  <worldbody>
+    <geom name="StoneFloor" type="box" pos="0 -4 -0.08" size="20 18 0.08" quat="1 0 0 0" material="stone" contype="1" conaffinity="1" />
+    <geom name="FloorJointX-20" type="box" pos="-20 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-18" type="box" pos="-18 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-16" type="box" pos="-16 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-14" type="box" pos="-14 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-12" type="box" pos="-12 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-10" type="box" pos="-10 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-8" type="box" pos="-8 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-6" type="box" pos="-6 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-4" type="box" pos="-4 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-2" type="box" pos="-2 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX0" type="box" pos="0 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX2" type="box" pos="2 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX4" type="box" pos="4 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX6" type="box" pos="6 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX8" type="box" pos="8 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX10" type="box" pos="10 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX12" type="box" pos="12 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX14" type="box" pos="14 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX16" type="box" pos="16 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX18" type="box" pos="18 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX20" type="box" pos="20 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-22" type="box" pos="0 -22 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-20" type="box" pos="0 -20 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-18" type="box" pos="0 -18 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-16" type="box" pos="0 -16 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-14" type="box" pos="0 -14 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-12" type="box" pos="0 -12 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-10" type="box" pos="0 -10 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-8" type="box" pos="0 -8 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-6" type="box" pos="0 -6 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-4" type="box" pos="0 -4 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-2" type="box" pos="0 -2 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY0" type="box" pos="0 0 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY2" type="box" pos="0 2 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY4" type="box" pos="0 4 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY6" type="box" pos="0 6 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY8" type="box" pos="0 8 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY10" type="box" pos="0 10 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY12" type="box" pos="0 12 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY14" type="box" pos="0 14 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FacadeMullion0" type="box" pos="-20.0 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion1" type="box" pos="-18.4 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion2" type="box" pos="-16.799999999999997 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion3" type="box" pos="-15.199999999999996 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion4" type="box" pos="-13.599999999999994 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion5" type="box" pos="-11.999999999999993 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion6" type="box" pos="-10.399999999999991 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion7" type="box" pos="-8.79999999999999 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion8" type="box" pos="-7.199999999999989 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion9" type="box" pos="-5.599999999999987 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion10" type="box" pos="-3.999999999999986 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion11" type="box" pos="-2.3999999999999844 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion12" type="box" pos="-0.799999999999983 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion13" type="box" pos="0.8000000000000185 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom0" type="box" pos="-9.1 6.7 2.5" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom1" type="box" pos="-9.1 6.7 4" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom2" type="box" pos="-9.1 6.7 5.5" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom3" type="box" pos="-9.1 6.7 7" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom4" type="box" pos="-9.1 6.7 8.9" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass0_0" type="box" pos="-19.2 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass0_1" type="box" pos="-19.2 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass0_2" type="box" pos="-19.2 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass0_3" type="box" pos="-19.2 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass1_0" type="box" pos="-17.599999999999998 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass1_1" type="box" pos="-17.599999999999998 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass1_2" type="box" pos="-17.599999999999998 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass1_3" type="box" pos="-17.599999999999998 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass2_0" type="box" pos="-15.999999999999996 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass2_1" type="box" pos="-15.999999999999996 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass2_2" type="box" pos="-15.999999999999996 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass2_3" type="box" pos="-15.999999999999996 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass3_0" type="box" pos="-14.399999999999995 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass3_1" type="box" pos="-14.399999999999995 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass3_2" type="box" pos="-14.399999999999995 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass3_3" type="box" pos="-14.399999999999995 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass4_0" type="box" pos="-12.799999999999994 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass4_1" type="box" pos="-12.799999999999994 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass4_2" type="box" pos="-12.799999999999994 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass4_3" type="box" pos="-12.799999999999994 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass5_0" type="box" pos="-11.199999999999992 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass5_1" type="box" pos="-11.199999999999992 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass5_2" type="box" pos="-11.199999999999992 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass5_3" type="box" pos="-11.199999999999992 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass6_0" type="box" pos="-9.59999999999999 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass6_1" type="box" pos="-9.59999999999999 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass6_2" type="box" pos="-9.59999999999999 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass6_3" type="box" pos="-9.59999999999999 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass7_0" type="box" pos="-7.999999999999989 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass7_1" type="box" pos="-7.999999999999989 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass7_2" type="box" pos="-7.999999999999989 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass7_3" type="box" pos="-7.999999999999989 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass8_0" type="box" pos="-6.399999999999988 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass8_1" type="box" pos="-6.399999999999988 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass8_2" type="box" pos="-6.399999999999988 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass8_3" type="box" pos="-6.399999999999988 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass9_0" type="box" pos="-4.7999999999999865 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass9_1" type="box" pos="-4.7999999999999865 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass9_2" type="box" pos="-4.7999999999999865 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass9_3" type="box" pos="-4.7999999999999865 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass10_0" type="box" pos="-3.199999999999985 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass10_1" type="box" pos="-3.199999999999985 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass10_2" type="box" pos="-3.199999999999985 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass10_3" type="box" pos="-3.199999999999985 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass11_0" type="box" pos="-1.5999999999999837 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass11_1" type="box" pos="-1.5999999999999837 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass11_2" type="box" pos="-1.5999999999999837 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass11_3" type="box" pos="-1.5999999999999837 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass12_0" type="box" pos="1.7763568394002505e-14 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass12_1" type="box" pos="1.7763568394002505e-14 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass12_2" type="box" pos="1.7763568394002505e-14 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass12_3" type="box" pos="1.7763568394002505e-14 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="MainColumn-10.5" type="cylinder" pos="-10.5 6.05 4.3" size="0.16 4.3" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="MainColumn-4.3" type="cylinder" pos="-4.3 6.05 4.3" size="0.16 4.3" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="MainColumn1.7" type="cylinder" pos="1.7 6.05 4.3" size="0.16 4.3" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="MainColumn8.4" type="cylinder" pos="8.4 6.05 4.3" size="0.16 4.3" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="DoorCanopy0" type="box" pos="-8.8 5.95 2.9" size="2.15 0.85 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="DoorNumber0" type="mesh" mesh="DoorNumber0" pos="-10.08 5.085 2.94" material="door6" contype="0" conaffinity="0" />
+    <geom name="EntranceMat0" type="box" pos="-8.8 4.7 0.012" size="2.15 1.7 0.012" quat="1 0 0 0" material="rubber" contype="1" conaffinity="1" />
+    <geom name="DoorJamb0_-1" type="box" pos="-10.850000000000001 5.9 1.22" size="0.06 0.65 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeaf0_-1" type="box" pos="-9.950000000000001 5.86 1.22" size="0.52 0.025 1.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame0_-1_-1" type="box" pos="-10.47 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame0_-1_1" type="box" pos="-9.430000000000001 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorFrostBand0_-1" type="box" pos="-9.950000000000001 5.815 1.1" size="0.51 0.008 0.1" quat="1 0 0 0" material="white" contype="0" conaffinity="0" />
+    <geom name="DoorJamb0_1" type="box" pos="-6.750000000000001 5.9 1.22" size="0.06 0.65 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeaf0_1" type="box" pos="-7.65 5.86 1.22" size="0.52 0.025 1.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame0_1_-1" type="box" pos="-8.17 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame0_1_1" type="box" pos="-7.130000000000001 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorFrostBand0_1" type="box" pos="-7.65 5.815 1.1" size="0.51 0.008 0.1" quat="1 0 0 0" material="white" contype="0" conaffinity="0" />
+    <geom name="DoorCanopy1" type="box" pos="-3.5 5.95 2.9" size="2.15 0.85 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="DoorNumber1" type="mesh" mesh="DoorNumber1" pos="-4.78 5.085 2.94" material="door6" contype="0" conaffinity="0" />
+    <geom name="EntranceMat1" type="box" pos="-3.5 4.7 0.012" size="2.15 1.7 0.012" quat="1 0 0 0" material="rubber" contype="1" conaffinity="1" />
+    <geom name="DoorJamb1_-1" type="box" pos="-5.55 5.9 1.22" size="0.06 0.65 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeaf1_-1" type="box" pos="-4.65 5.86 1.22" size="0.52 0.025 1.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame1_-1_-1" type="box" pos="-5.17 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame1_-1_1" type="box" pos="-4.130000000000001 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorFrostBand1_-1" type="box" pos="-4.65 5.815 1.1" size="0.51 0.008 0.1" quat="1 0 0 0" material="white" contype="0" conaffinity="0" />
+    <geom name="DoorJamb1_1" type="box" pos="-1.4500000000000002 5.9 1.22" size="0.06 0.65 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeaf1_1" type="box" pos="-2.35 5.86 1.22" size="0.52 0.025 1.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame1_1_-1" type="box" pos="-2.87 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame1_1_1" type="box" pos="-1.83 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorFrostBand1_1" type="box" pos="-2.35 5.815 1.1" size="0.51 0.008 0.1" quat="1 0 0 0" material="white" contype="0" conaffinity="0" />
+    <geom name="TowerUpright0.06.4" type="box" pos="0.0 6.4 4.2" size="0.075 0.075 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerUpright0.08.2" type="box" pos="0.0 8.2 4.2" size="0.075 0.075 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerUpright2.16.4" type="box" pos="2.1 6.4 4.2" size="0.075 0.075 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerUpright2.18.2" type="box" pos="2.1 8.2 4.2" size="0.075 0.075 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam0.5" type="box" pos="1.05 6.4 0.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam0.5" type="box" pos="2.1 7.3 0.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam1.5" type="box" pos="1.05 6.4 1.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam1.5" type="box" pos="2.1 7.3 1.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam2.5" type="box" pos="1.05 6.4 2.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam2.5" type="box" pos="2.1 7.3 2.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam3.5" type="box" pos="1.05 6.4 3.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam3.5" type="box" pos="2.1 7.3 3.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam4.5" type="box" pos="1.05 6.4 4.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam4.5" type="box" pos="2.1 7.3 4.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam5.5" type="box" pos="1.05 6.4 5.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam5.5" type="box" pos="2.1 7.3 5.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam6.5" type="box" pos="1.05 6.4 6.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam6.5" type="box" pos="2.1 7.3 6.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam7.5" type="box" pos="1.05 6.4 7.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam7.5" type="box" pos="2.1 7.3 7.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontGlass" type="box" pos="1.05 6.45 4.2" size="1 0.018 4.15" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="TowerSideGlass" type="box" pos="2.05 7.3 4.2" size="0.018 0.85 4.15" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion0" type="box" pos="2.5 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass0" type="box" pos="3.35 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion1" type="box" pos="4.3 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass1" type="box" pos="5.1499999999999995 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion2" type="box" pos="6.1 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass2" type="box" pos="6.949999999999999 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion3" type="box" pos="7.8999999999999995 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass3" type="box" pos="8.75 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion4" type="box" pos="9.7 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass4" type="box" pos="10.549999999999999 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion5" type="box" pos="11.5 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass5" type="box" pos="12.35 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar1.0" type="box" pos="7.3 10.5 1.0" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar2.5" type="box" pos="7.3 10.5 2.5" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar4.0" type="box" pos="7.3 10.5 4.0" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar5.5" type="box" pos="7.3 10.5 5.5" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar7.0" type="box" pos="7.3 10.5 7.0" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar8.5" type="box" pos="7.3 10.5 8.5" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightMullion0" type="box" pos="12.4 -2.0 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass0" type="box" pos="12.42 -1.15 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion1" type="box" pos="12.4 -0.19999999999999996 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass1" type="box" pos="12.42 0.65 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion2" type="box" pos="12.4 1.6 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass2" type="box" pos="12.42 2.45 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion3" type="box" pos="12.4 3.4000000000000004 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass3" type="box" pos="12.42 4.25 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion4" type="box" pos="12.4 5.2 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass4" type="box" pos="12.42 6.05 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion5" type="box" pos="12.4 7.0 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass5" type="box" pos="12.42 7.85 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion6" type="box" pos="12.4 8.8 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass6" type="box" pos="12.42 9.65 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion7" type="box" pos="12.4 10.6 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass7" type="box" pos="12.42 11.45 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar1.0" type="box" pos="12.4 4.5 1.0" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar2.5" type="box" pos="12.4 4.5 2.5" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar4.0" type="box" pos="12.4 4.5 4.0" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar5.5" type="box" pos="12.4 4.5 5.5" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar7.0" type="box" pos="12.4 4.5 7.0" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar8.5" type="box" pos="12.4 4.5 8.5" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="ExteriorSkyContext" type="box" pos="0 15 5" size="28 0.05 8" quat="1 0 0 0" material="skyblue" contype="0" conaffinity="0" />
+    <geom name="OutsideCanopy" type="box" pos="-5.3 9.5 3.6" size="7.5 2.3 0.12" quat="1 0 0 0" material="outside" contype="1" conaffinity="1" />
+    <geom name="RearConcourseBackdrop" type="box" pos="7.5 12 2.7" size="5 0.12 2.7" quat="1 0 0 0" material="outside" contype="1" conaffinity="1" />
+    <geom name="CeilingPanel0" type="box" pos="3 -12 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam0" type="box" pos="2 -10.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight0_-2" type="cylinder" pos="-2 -10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight0_2" type="cylinder" pos="2 -10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight0_6" type="cylinder" pos="6 -10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight0_10" type="cylinder" pos="10 -10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel1" type="box" pos="3 -9 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam1" type="box" pos="2 -7.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight1_-2" type="cylinder" pos="-2 -7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight1_2" type="cylinder" pos="2 -7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight1_6" type="cylinder" pos="6 -7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight1_10" type="cylinder" pos="10 -7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel2" type="box" pos="3 -6 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam2" type="box" pos="2 -4.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight2_-2" type="cylinder" pos="-2 -4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight2_2" type="cylinder" pos="2 -4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight2_6" type="cylinder" pos="6 -4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight2_10" type="cylinder" pos="10 -4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel3" type="box" pos="3 -3 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam3" type="box" pos="2 -1.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight3_-2" type="cylinder" pos="-2 -1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight3_2" type="cylinder" pos="2 -1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight3_6" type="cylinder" pos="6 -1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight3_10" type="cylinder" pos="10 -1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel4" type="box" pos="3 0 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam4" type="box" pos="2 1.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight4_-2" type="cylinder" pos="-2 1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight4_2" type="cylinder" pos="2 1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight4_6" type="cylinder" pos="6 1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight4_10" type="cylinder" pos="10 1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel5" type="box" pos="3 3 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam5" type="box" pos="2 4.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight5_-2" type="cylinder" pos="-2 4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight5_2" type="cylinder" pos="2 4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight5_6" type="cylinder" pos="6 4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight5_10" type="cylinder" pos="10 4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel6" type="box" pos="3 6 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam6" type="box" pos="2 7.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight6_-2" type="cylinder" pos="-2 7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight6_2" type="cylinder" pos="2 7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight6_6" type="cylinder" pos="6 7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight6_10" type="cylinder" pos="10 7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel7" type="box" pos="3 9 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam7" type="box" pos="2 10.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight7_-2" type="cylinder" pos="-2 10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight7_2" type="cylinder" pos="2 10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight7_6" type="cylinder" pos="6 10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight7_10" type="cylinder" pos="10 10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CounterBody" type="box" pos="2.6 4.5 0.61" size="1.65 0.45 0.61" quat="1 0 0 0" material="white" contype="1" conaffinity="1" />
+    <geom name="CounterWorktop" type="box" pos="2.6 4.5 1.24" size="1.72 0.51 0.035" quat="1 0 0 0" material="white" contype="1" conaffinity="1" />
+    <geom name="CounterPanelSeam1.15" type="box" pos="1.15 4.041 0.63" size="0.005 0.003 0.54" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="CounterPanelSeam2.15" type="box" pos="2.15 4.041 0.63" size="0.005 0.003 0.54" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="CounterPanelSeam3.15" type="box" pos="3.15 4.041 0.63" size="0.005 0.003 0.54" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="CounterPanelSeam4.15" type="box" pos="4.15 4.041 0.63" size="0.005 0.003 0.54" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="UnidentifiedEquipmentBase" type="box" pos="3.5 3.85 0.45" size="0.82 0.4 0.45" quat="1 0 0 0" material="white" contype="1" conaffinity="1" />
+    <geom name="UnidentifiedEquipmentUpper" type="box" pos="3.5 4.02 1.02" size="0.82 0.23 0.16" quat="1 0 0 0" material="white" contype="1" conaffinity="1" />
+    <geom name="EquipmentDarkInset0" type="box" pos="2.98 3.781 1.04" size="0.11 0.008 0.095" quat="1 0 0 0" material="screen" contype="0" conaffinity="0" />
+    <geom name="EquipmentGreenMarker0" type="box" pos="2.98 3.443 0.72" size="0.105 0.008 0.04" quat="1 0 0 0" material="green" contype="0" conaffinity="0" />
+    <geom name="EquipmentDarkInset1" type="box" pos="3.5 3.781 1.04" size="0.11 0.008 0.095" quat="1 0 0 0" material="screen" contype="0" conaffinity="0" />
+    <geom name="EquipmentGreenMarker1" type="box" pos="3.5 3.443 0.72" size="0.105 0.008 0.04" quat="1 0 0 0" material="green" contype="0" conaffinity="0" />
+    <geom name="EquipmentDarkInset2" type="box" pos="4.02 3.781 1.04" size="0.11 0.008 0.095" quat="1 0 0 0" material="screen" contype="0" conaffinity="0" />
+    <geom name="EquipmentGreenMarker2" type="box" pos="4.02 3.443 0.72" size="0.105 0.008 0.04" quat="1 0 0 0" material="green" contype="0" conaffinity="0" />
+    <geom name="CounterSideUnit" type="box" pos="0.6 4.65 0.8" size="0.25 0.35 0.8" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionBase0" type="cylinder" pos="-9 3.7 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole0" type="cylinder" pos="-9 3.7 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead0" type="cylinder" pos="-9 3.7 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionBase1" type="cylinder" pos="-9 1 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole1" type="cylinder" pos="-9 1 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead1" type="cylinder" pos="-9 1 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt0" type="box" pos="-9.0 2.35 0.96" size="1.35 0.003 0.027" quat="0.7071067811865476 0 0 -0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint0_0.25" type="box" pos="-9.0 3.0250000000000004 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 -0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint0_0.75" type="box" pos="-9.0 1.675 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 -0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase2" type="cylinder" pos="-6.4 1 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole2" type="cylinder" pos="-6.4 1 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead2" type="cylinder" pos="-6.4 1 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt1" type="box" pos="-7.7 1.0 0.96" size="1.2999999999999998 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint1_0.25" type="box" pos="-8.35 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint1_0.75" type="box" pos="-7.050000000000001 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase3" type="cylinder" pos="-3.8 1 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole3" type="cylinder" pos="-3.8 1 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead3" type="cylinder" pos="-3.8 1 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt2" type="box" pos="-5.1 1.0 0.96" size="1.3000000000000003 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint2_0.25" type="box" pos="-5.750000000000001 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint2_0.75" type="box" pos="-4.449999999999999 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase4" type="cylinder" pos="-1 1 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole4" type="cylinder" pos="-1 1 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead4" type="cylinder" pos="-1 1 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt3" type="box" pos="-2.4 1.0 0.96" size="1.4 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint3_0.25" type="box" pos="-3.0999999999999996 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint3_0.75" type="box" pos="-1.7 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase5" type="cylinder" pos="1.7 1 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole5" type="cylinder" pos="1.7 1 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead5" type="cylinder" pos="1.7 1 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt4" type="box" pos="0.35 1.0 0.96" size="1.35 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint4_0.25" type="box" pos="-0.325 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint4_0.75" type="box" pos="1.025 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase6" type="cylinder" pos="4.5 1 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole6" type="cylinder" pos="4.5 1 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead6" type="cylinder" pos="4.5 1 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt5" type="box" pos="3.1 1.0 0.96" size="1.4 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint5_0.25" type="box" pos="2.4 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint5_0.75" type="box" pos="3.8 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase7" type="cylinder" pos="7.2 1 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole7" type="cylinder" pos="7.2 1 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead7" type="cylinder" pos="7.2 1 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt6" type="box" pos="5.85 1.0 0.96" size="1.35 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint6_0.25" type="box" pos="5.175 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint6_0.75" type="box" pos="6.525 1.0 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase8" type="cylinder" pos="-8 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole8" type="cylinder" pos="-8 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead8" type="cylinder" pos="-8 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionBase9" type="cylinder" pos="-5.3 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole9" type="cylinder" pos="-5.3 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead9" type="cylinder" pos="-5.3 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt7" type="box" pos="-6.65 -1.8 0.96" size="1.35 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint7_0.25" type="box" pos="-7.325 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint7_0.75" type="box" pos="-5.975 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase10" type="cylinder" pos="-2.5 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole10" type="cylinder" pos="-2.5 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead10" type="cylinder" pos="-2.5 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt8" type="box" pos="-3.9 -1.8 0.96" size="1.4 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint8_0.25" type="box" pos="-4.6 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint8_0.75" type="box" pos="-3.2 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase11" type="cylinder" pos="0.4 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole11" type="cylinder" pos="0.4 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead11" type="cylinder" pos="0.4 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt9" type="box" pos="-1.05 -1.8 0.96" size="1.45 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint9_0.25" type="box" pos="-1.775 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint9_0.75" type="box" pos="-0.32499999999999996 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase12" type="cylinder" pos="3.5 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole12" type="cylinder" pos="3.5 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead12" type="cylinder" pos="3.5 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt10" type="box" pos="1.95 -1.8 0.96" size="1.55 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint10_0.25" type="box" pos="1.175 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint10_0.75" type="box" pos="2.725 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase13" type="cylinder" pos="7.2 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole13" type="cylinder" pos="7.2 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead13" type="cylinder" pos="7.2 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt11" type="box" pos="5.35 -1.8 0.96" size="1.85 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint11_0.25" type="box" pos="4.425 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint11_0.75" type="box" pos="6.275 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="QueueBelt12" type="box" pos="7.2 -0.4 0.96" size="1.4 0.003 0.027" quat="0.7071067811865476 0 0 0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint12_0.25" type="box" pos="7.2 -1.1 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint12_0.75" type="box" pos="7.2 0.3 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase14" type="cylinder" pos="7.2 3.6 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole14" type="cylinder" pos="7.2 3.6 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead14" type="cylinder" pos="7.2 3.6 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt13" type="box" pos="7.2 2.3 0.96" size="1.3 0.003 0.027" quat="0.7071067811865476 0 0 0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint13_0.25" type="box" pos="7.2 1.65 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint13_0.75" type="box" pos="7.2 2.95 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase15" type="cylinder" pos="-6.4 4.4 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole15" type="cylinder" pos="-6.4 4.4 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead15" type="cylinder" pos="-6.4 4.4 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionBase16" type="cylinder" pos="-6.4 2.4 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole16" type="cylinder" pos="-6.4 2.4 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead16" type="cylinder" pos="-6.4 2.4 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt14" type="box" pos="-6.4 3.4000000000000004 0.96" size="1.0000000000000002 0.003 0.027" quat="0.7071067811865476 0 0 -0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint14_0.25" type="box" pos="-6.4 3.9000000000000004 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 -0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint14_0.75" type="box" pos="-6.4 2.9 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 -0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase17" type="cylinder" pos="-3.8 2.4 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole17" type="cylinder" pos="-3.8 2.4 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead17" type="cylinder" pos="-3.8 2.4 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt15" type="box" pos="-5.1 2.4 0.96" size="1.3000000000000003 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint15_0.25" type="box" pos="-5.750000000000001 2.4 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint15_0.75" type="box" pos="-4.449999999999999 2.4 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase18" type="cylinder" pos="-1 2.4 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole18" type="cylinder" pos="-1 2.4 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead18" type="cylinder" pos="-1 2.4 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt16" type="box" pos="-2.4 2.4 0.96" size="1.4 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint16_0.25" type="box" pos="-3.0999999999999996 2.4 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint16_0.75" type="box" pos="-1.7 2.4 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase19" type="cylinder" pos="4.5 3.6 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole19" type="cylinder" pos="4.5 3.6 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead19" type="cylinder" pos="4.5 3.6 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt17" type="box" pos="5.85 3.6 0.96" size="1.35 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint17_0.25" type="box" pos="5.175 3.6 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint17_0.75" type="box" pos="6.525 3.6 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="StanchionBase20" type="cylinder" pos="-9 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionPole20" type="cylinder" pos="-9 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="StanchionHead20" type="cylinder" pos="-9 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="QueueBelt18" type="box" pos="-9.0 -0.4 0.96" size="1.4 0.003 0.027" quat="0.7071067811865476 0 0 -0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint18_0.25" type="box" pos="-9.0 0.3 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 -0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint18_0.75" type="box" pos="-9.0 -1.1 0.96" size="0.032 0.0038 0.006" quat="0.7071067811865476 0 0 -0.7071067811865475" material="white" contype="0" conaffinity="0" />
+    <geom name="QueueBelt19" type="box" pos="-8.5 -1.8 0.96" size="0.5 0.003 0.027" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="BeltPrint19_0.25" type="box" pos="-8.75 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="BeltPrint19_0.75" type="box" pos="-8.25 -1.8 0.96" size="0.032 0.0038 0.006" quat="1.0 0 0 0.0" material="white" contype="0" conaffinity="0" />
+    <geom name="NoticeBacking0" type="box" pos="-3.8 2.375 1.23" size="0.25 0.025 0.35" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="NoticeFace0" type="mesh" mesh="NoticeFace0" pos="-3.8 2.348 1.23" material="notice" contype="0" conaffinity="0" />
+    <geom name="NoticeBacking1" type="box" pos="4.5 0.975 1.23" size="0.25 0.025 0.35" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="NoticeFace1" type="mesh" mesh="NoticeFace1" pos="4.5 0.948 1.23" material="notice" contype="0" conaffinity="0" />
+    <geom name="RearInformationDisplay" type="box" pos="5.1 8.9 4.7" size="2.3 0.15 1.3" quat="1 0 0 0" material="screen" contype="1" conaffinity="1" />
+    <geom name="WayfindingBacking" type="box" pos="5.1 8.7 3.1" size="2.5 0.15 0.3" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="WayfindingText" type="mesh" mesh="WayfindingText" pos="5.1 8.53 3.1" material="direction" contype="0" conaffinity="0" />
+    <geom name="LightboxFrame0" type="box" pos="7.8 9.7 1.75" size="0.6 0.15 1.15" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="LightboxFace0" type="box" pos="7.8 9.535 1.75" size="0.54 0.008 1.06" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="LightboxFrame1" type="box" pos="9.7 9.7 1.75" size="0.6 0.15 1.15" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="LightboxFace1" type="box" pos="9.7 9.535 1.75" size="0.54 0.008 1.06" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="LightboxFrame2" type="box" pos="11.6 9.7 1.75" size="0.6 0.15 1.15" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="LightboxFace2" type="box" pos="11.6 9.535 1.75" size="0.54 0.008 1.06" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <light name="HallLight0" pos="-6 3 7" dir="0 0 -1" diffuse=".8 .8 .75" ambient=".1 .1 .1" />
+    <light name="HallLight1" pos="3 2 7" dir="0 0 -1" diffuse=".8 .8 .75" ambient=".1 .1 .1" />
+    <light name="HallLight2" pos="8 7 7" dir="0 0 -1" diffuse=".8 .8 .75" ambient=".1 .1 .1" />
+  </worldbody>
+</mujoco>

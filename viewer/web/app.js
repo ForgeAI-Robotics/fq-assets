@@ -213,7 +213,10 @@ function frameModel(){
   if(!activeModel)return;
   modelRoot.userData.motionXYZ=[0,0,0];
   const [lo,hi]=activeModel.bounds,center=new THREE.Vector3(...lo).add(new THREE.Vector3(...hi)).multiplyScalar(.5),size=new THREE.Vector3(...hi).sub(new THREE.Vector3(...lo)),extent=Math.max(...size.toArray(),.05);
+  camera.fov=40;
   const dir=new THREE.Vector3(.9,-1.8,selected.kind==='scene'?2.1:.85).normalize();camera.position.copy(center).addScaledVector(dir,extent*1.85);controls.target.copy(center);camera.near=extent/1000;camera.far=extent*100;camera.updateProjectionMatrix();controls.minDistance=extent*.18;controls.maxDistance=extent*8;controls.update();
+  const preset=selected.viewer_camera;
+  if(preset&&[preset.position,preset.target].every(v=>Array.isArray(v)&&v.length===3&&v.every(Number.isFinite))){camera.position.fromArray(preset.position);controls.target.fromArray(preset.target);camera.fov=Math.max(20,Math.min(80,preset.vertical_fov_degrees||40));controls.minDistance=.3;camera.updateProjectionMatrix();controls.update();}
   keyLight.position.copy(center).add(new THREE.Vector3(extent,-extent,extent*2));keyLight.target.position.copy(center);fill.position.copy(center).add(new THREE.Vector3(-extent,extent,extent));fill.target.position.copy(center);
   Object.assign(keyLight.shadow.camera,{left:-extent,right:extent,top:extent,bottom:-extent,near:.001,far:extent*8});keyLight.shadow.camera.updateProjectionMatrix();keyLight.shadow.normalBias=extent*(selected?.slug === 'round_table' ? .003 : .001);
   keyLight.shadow.bias=selected?.slug === 'round_table' ? .00005 : -.00015; // Avoid self-shadow scalloping on the small beveled rim.
@@ -244,7 +247,7 @@ function setMotionReady(ready){
 }
 async function selectAsset(slug){
   if(slug==='sampling_swab')slug='flexible_sampling_sheet';
-  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;handAnimation=null;$('hand-presets').hidden=true;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';playing=false;motion=null;motionTime=0;setMotionReady(false);$('action-clock').textContent='等待模型与轨迹加载';$('action-time').value=0;$('action-panel').hidden=a.kind!=='action';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
+  const a=catalog.assets.find(x=>x.slug===slug);if(!a)return;selected=a;cutaway=a.default_cutaway??true;handAnimation=null;$('hand-presets').hidden=true;$('hand-closure').value=0;$('hand-closure-value').textContent='0%';playing=false;motion=null;motionTime=0;setMotionReady(false);$('action-clock').textContent='等待模型与轨迹加载';$('action-time').value=0;$('action-panel').hidden=a.kind!=='action';const token=++loadId;setCategory(['scene','action'].includes(a.kind)?a.kind:'object');
   const u=new URL(location.href);u.searchParams.set('asset',slug);history.replaceState(null,'',u);
   const supportsPBR=!!a.pbr_preview?.supported;$('pbr-badge').hidden=!supportsPBR;$('lighting-controls').hidden=!supportsPBR;setLighting('original');
   $('asset-name').textContent=a.name;$('asset-subtitle').textContent=isRobot(a)?`FQ 适配 / ${independentDof(a)} 独立自由度 · ${a.joints.length} 个模型转动关节${a.family==='o7'?' / O7 v1':''}`:a.subtitle;$('asset-version').textContent=`main · v${a.version}`;$('breadcrumb').textContent=`资产库 / ${a.kind==='scene'?'场景':a.kind==='action'?'动作':'物体'} / ${a.kind_label==='articulated'?'关节物体':a.kind_label}`;

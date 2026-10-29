@@ -135,7 +135,7 @@ def main():
                'pos':m.geom_pos[i].tolist(),'quat':m.geom_quat[i].tolist(),'size':m.geom_size[i].tolist(),
                'rgba':rgba,'material':mat,'collision':bool(m.geom_contype[i] or m.geom_conaffinity[i]),
                'group':int(m.geom_group[i]),'friction':m.geom_friction[i].tolist(),
-               'cutaway':gname.startswith(('ceiling_','downlight_fixture')) or gname=='meeting_panel'}
+               'cutaway':gname.startswith(('ceiling_','downlight_fixture','CeilingPanel','CeilingBeam','Downlight')) or gname=='meeting_panel'}
             geoms.append(g)
             if rgba[3]>.01 and g['type']!=mujoco.mjtGeom.mjGEOM_PLANE:
                 if g['type']==mujoco.mjtGeom.mjGEOM_MESH:
