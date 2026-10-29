@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="retractable_belt_kit">
+  <compiler angle="radian" />
+  <option timestep=".0002" integrator="implicitfast" solver="Newton" iterations="60" tolerance="1e-8" jacobian="sparse" />
+  <size memory="256M" />
+  <visual>
+    <global offwidth="1600" offheight="1000" />
+    <headlight diffuse=".7 .7 .7" ambient=".35 .35 .35" />
+  </visual>
+  <worldbody>
+    <light pos="0 -2 4" dir="0 .3 -1" diffuse=".8 .8 .8" />
+    <geom name="floor" type="plane" size="3 3 .1" rgba=".19 .23 .28 1" contype="1" conaffinity="7" />
+    <geom name="reel_base" type="cylinder" pos="-0.82 0.08 0.022" size=".17 .022" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="reel_post" type="cylinder" pos="-0.82 0.08 0.49" size=".022 .46" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="reel_collar" type="cylinder" pos="-0.82 0.08 0.885" size="0.04 0.03" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="receiver_base" type="cylinder" pos="0.84 0.0 0.022" size=".17 .022" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="receiver_post" type="cylinder" pos="0.84 0.0 0.49" size=".022 .46" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="receiver_collar" type="cylinder" pos="0.84 0 0.885" size="0.04 0.03" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="reel_lower_flange" type="cylinder" pos="-0.82 0.08 0.94" size="0.095 0.004" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="reel_upper_flange" type="cylinder" pos="-0.82 0.08 1.02" size="0.095 0.004" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="reel_core" type="cylinder" pos="-0.82 0.08 0.98" size="0.071 0.035" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="receiver_rail_-1" type="box" pos="0.818 -0.018 1.004" size="0.025 0.005 0.05" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <geom name="receiver_rail_1" type="box" pos="0.818 0.018 1.004" size="0.025 0.005 0.05" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <geom name="receiver_seat" type="box" pos="0.825 0 0.946" size="0.018 0.022 0.004" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <body name="latch_carriage" pos="0.78 0 0.98">
+      <joint name="latch_lift" type="slide" axis="0 0 1" range="0 .045" limited="true" damping="2" stiffness="8" />
+      <geom name="carriage_visual" type="box" pos="0.04 0 0" size="0.009 0.009 0.03" rgba=".025 .03 .035 1" mass=".02" contype="0" conaffinity="0" />
+    </body>
+    <body name="belt_handle" pos="0.78 0 0.98">
+      <freejoint name="handle_free" />
+      <geom name="handle_grip" type="box" pos="0 0 0" size="0.017 0.009 0.044" rgba=".025 .03 .035 1" mass=".045" contype="2" conaffinity="9" />
+      <geom name="handle_tongue" type="box" pos="0.025 0 0" size="0.012 0.008 0.03" rgba=".025 .03 .035 1" mass=".008" contype="2" conaffinity="1" />
+    </body>
+    <body name="belt_gripper" mocap="true" pos="0.78 0 0.98">
+      <geom name="gripper_mount" type="box" pos="0 0 0.08" size="0.035 0.035 0.015" rgba=".4 .45 .5 1" contype="0" conaffinity="0" />
+      <geom name="gripper_pad_-1" type="box" pos="0 -0.013 0" size="0.018 0.005 0.023" rgba=".22 .25 .3 1" contype="8" conaffinity="2" friction="1 .005 .0001" />
+      <geom name="gripper_pad_1" type="box" pos="0 0.013 0" size="0.018 0.005 0.023" rgba=".22 .25 .3 1" contype="8" conaffinity="2" friction="1 .005 .0001" />
+    </body>
+    <body name="reel_guide_0" mocap="true" pos="-0.8397983431 0.002439281532 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_1" mocap="true" pos="-0.82 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_2" mocap="true" pos="-0.8 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_3" mocap="true" pos="-0.78 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_4" mocap="true" pos="-0.76 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_5" mocap="true" pos="-0.74 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_6" mocap="true" pos="-0.72 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_7" mocap="true" pos="-0.7 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_8" mocap="true" pos="-0.68 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_9" mocap="true" pos="-0.66 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_10" mocap="true" pos="-0.64 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_11" mocap="true" pos="-0.62 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_12" mocap="true" pos="-0.6 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_13" mocap="true" pos="-0.58 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_14" mocap="true" pos="-0.56 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_15" mocap="true" pos="-0.54 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_16" mocap="true" pos="-0.52 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_17" mocap="true" pos="-0.5 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_18" mocap="true" pos="-0.48 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_19" mocap="true" pos="-0.46 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_20" mocap="true" pos="-0.44 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_21" mocap="true" pos="-0.42 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_22" mocap="true" pos="-0.4 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_23" mocap="true" pos="-0.38 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_24" mocap="true" pos="-0.36 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_25" mocap="true" pos="-0.34 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_26" mocap="true" pos="-0.32 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_27" mocap="true" pos="-0.3 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_28" mocap="true" pos="-0.28 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_29" mocap="true" pos="-0.26 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_30" mocap="true" pos="-0.24 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_31" mocap="true" pos="-0.22 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_32" mocap="true" pos="-0.2 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_33" mocap="true" pos="-0.18 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_34" mocap="true" pos="-0.16 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_35" mocap="true" pos="-0.14 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_36" mocap="true" pos="-0.12 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_37" mocap="true" pos="-0.1 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_38" mocap="true" pos="-0.08 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_39" mocap="true" pos="-0.06 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_40" mocap="true" pos="-0.04 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_41" mocap="true" pos="-0.02 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_42" mocap="true" pos="0 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_43" mocap="true" pos="0.02 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_44" mocap="true" pos="0.04 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_45" mocap="true" pos="0.06 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_46" mocap="true" pos="0.08 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_47" mocap="true" pos="0.1 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_48" mocap="true" pos="0.12 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_49" mocap="true" pos="0.14 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_50" mocap="true" pos="0.16 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_51" mocap="true" pos="0.18 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_52" mocap="true" pos="0.2 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_53" mocap="true" pos="0.22 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_54" mocap="true" pos="0.24 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_55" mocap="true" pos="0.26 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_56" mocap="true" pos="0.28 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_57" mocap="true" pos="0.3 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_58" mocap="true" pos="0.32 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_59" mocap="true" pos="0.34 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_60" mocap="true" pos="0.36 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_61" mocap="true" pos="0.38 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_62" mocap="true" pos="0.4 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_63" mocap="true" pos="0.42 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_64" mocap="true" pos="0.44 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_65" mocap="true" pos="0.46 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_66" mocap="true" pos="0.48 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_67" mocap="true" pos="0.5 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_68" mocap="true" pos="0.52 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_69" mocap="true" pos="0.54 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_70" mocap="true" pos="0.56 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_71" mocap="true" pos="0.58 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_72" mocap="true" pos="0.6 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_73" mocap="true" pos="0.62 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_74" mocap="true" pos="0.64 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_75" mocap="true" pos="0.66 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_76" mocap="true" pos="0.68 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_77" mocap="true" pos="0.7 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_78" mocap="true" pos="0.72 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_79" mocap="true" pos="0.74 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_80" mocap="true" pos="0.76 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="reel_guide_81" mocap="true" pos="0.78 0 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <flexcomp name="webbing" type="direct" dim="2" point="-0.8397983431 0.002439281532 0.9475 -0.8397983431 0.002439281532 0.98 -0.8397983431 0.002439281532 1.0125 -0.82 0 0.9475 -0.82 0 0.98 -0.82 0 1.0125 -0.8 0 0.9475 -0.8 0 0.98 -0.8 0 1.0125 -0.78 0 0.9475 -0.78 0 0.98 -0.78 0 1.0125 -0.76 0 0.9475 -0.76 0 0.98 -0.76 0 1.0125 -0.74 0 0.9475 -0.74 0 0.98 -0.74 0 1.0125 -0.72 0 0.9475 -0.72 0 0.98 -0.72 0 1.0125 -0.7 0 0.9475 -0.7 0 0.98 -0.7 0 1.0125 -0.68 0 0.9475 -0.68 0 0.98 -0.68 0 1.0125 -0.66 0 0.9475 -0.66 0 0.98 -0.66 0 1.0125 -0.64 0 0.9475 -0.64 0 0.98 -0.64 0 1.0125 -0.62 0 0.9475 -0.62 0 0.98 -0.62 0 1.0125 -0.6 0 0.9475 -0.6 0 0.98 -0.6 0 1.0125 -0.58 0 0.9475 -0.58 0 0.98 -0.58 0 1.0125 -0.56 0 0.9475 -0.56 0 0.98 -0.56 0 1.0125 -0.54 0 0.9475 -0.54 0 0.98 -0.54 0 1.0125 -0.52 0 0.9475 -0.52 0 0.98 -0.52 0 1.0125 -0.5 0 0.9475 -0.5 0 0.98 -0.5 0 1.0125 -0.48 0 0.9475 -0.48 0 0.98 -0.48 0 1.0125 -0.46 0 0.9475 -0.46 0 0.98 -0.46 0 1.0125 -0.44 0 0.9475 -0.44 0 0.98 -0.44 0 1.0125 -0.42 0 0.9475 -0.42 0 0.98 -0.42 0 1.0125 -0.4 0 0.9475 -0.4 0 0.98 -0.4 0 1.0125 -0.38 0 0.9475 -0.38 0 0.98 -0.38 0 1.0125 -0.36 0 0.9475 -0.36 0 0.98 -0.36 0 1.0125 -0.34 0 0.9475 -0.34 0 0.98 -0.34 0 1.0125 -0.32 0 0.9475 -0.32 0 0.98 -0.32 0 1.0125 -0.3 0 0.9475 -0.3 0 0.98 -0.3 0 1.0125 -0.28 0 0.9475 -0.28 0 0.98 -0.28 0 1.0125 -0.26 0 0.9475 -0.26 0 0.98 -0.26 0 1.0125 -0.24 0 0.9475 -0.24 0 0.98 -0.24 0 1.0125 -0.22 0 0.9475 -0.22 0 0.98 -0.22 0 1.0125 -0.2 0 0.9475 -0.2 0 0.98 -0.2 0 1.0125 -0.18 0 0.9475 -0.18 0 0.98 -0.18 0 1.0125 -0.16 0 0.9475 -0.16 0 0.98 -0.16 0 1.0125 -0.14 0 0.9475 -0.14 0 0.98 -0.14 0 1.0125 -0.12 0 0.9475 -0.12 0 0.98 -0.12 0 1.0125 -0.1 0 0.9475 -0.1 0 0.98 -0.1 0 1.0125 -0.08 0 0.9475 -0.08 0 0.98 -0.08 0 1.0125 -0.06 0 0.9475 -0.06 0 0.98 -0.06 0 1.0125 -0.04 0 0.9475 -0.04 0 0.98 -0.04 0 1.0125 -0.02 0 0.9475 -0.02 0 0.98 -0.02 0 1.0125 0 0 0.9475 0 0 0.98 0 0 1.0125 0.02 0 0.9475 0.02 0 0.98 0.02 0 1.0125 0.04 0 0.9475 0.04 0 0.98 0.04 0 1.0125 0.06 0 0.9475 0.06 0 0.98 0.06 0 1.0125 0.08 0 0.9475 0.08 0 0.98 0.08 0 1.0125 0.1 0 0.9475 0.1 0 0.98 0.1 0 1.0125 0.12 0 0.9475 0.12 0 0.98 0.12 0 1.0125 0.14 0 0.9475 0.14 0 0.98 0.14 0 1.0125 0.16 0 0.9475 0.16 0 0.98 0.16 0 1.0125 0.18 0 0.9475 0.18 0 0.98 0.18 0 1.0125 0.2 0 0.9475 0.2 0 0.98 0.2 0 1.0125 0.22 0 0.9475 0.22 0 0.98 0.22 0 1.0125 0.24 0 0.9475 0.24 0 0.98 0.24 0 1.0125 0.26 0 0.9475 0.26 0 0.98 0.26 0 1.0125 0.28 0 0.9475 0.28 0 0.98 0.28 0 1.0125 0.3 0 0.9475 0.3 0 0.98 0.3 0 1.0125 0.32 0 0.9475 0.32 0 0.98 0.32 0 1.0125 0.34 0 0.9475 0.34 0 0.98 0.34 0 1.0125 0.36 0 0.9475 0.36 0 0.98 0.36 0 1.0125 0.38 0 0.9475 0.38 0 0.98 0.38 0 1.0125 0.4 0 0.9475 0.4 0 0.98 0.4 0 1.0125 0.42 0 0.9475 0.42 0 0.98 0.42 0 1.0125 0.44 0 0.9475 0.44 0 0.98 0.44 0 1.0125 0.46 0 0.9475 0.46 0 0.98 0.46 0 1.0125 0.48 0 0.9475 0.48 0 0.98 0.48 0 1.0125 0.5 0 0.9475 0.5 0 0.98 0.5 0 1.0125 0.52 0 0.9475 0.52 0 0.98 0.52 0 1.0125 0.54 0 0.9475 0.54 0 0.98 0.54 0 1.0125 0.56 0 0.9475 0.56 0 0.98 0.56 0 1.0125 0.58 0 0.9475 0.58 0 0.98 0.58 0 1.0125 0.6 0 0.9475 0.6 0 0.98 0.6 0 1.0125 0.62 0 0.9475 0.62 0 0.98 0.62 0 1.0125 0.64 0 0.9475 0.64 0 0.98 0.64 0 1.0125 0.66 0 0.9475 0.66 0 0.98 0.66 0 1.0125 0.68 0 0.9475 0.68 0 0.98 0.68 0 1.0125 0.7 0 0.9475 0.7 0 0.98 0.7 0 1.0125 0.72 0 0.9475 0.72 0 0.98 0.72 0 1.0125 0.74 0 0.9475 0.74 0 0.98 0.74 0 1.0125 0.76 0 0.9475 0.76 0 0.98 0.76 0 1.0125 0.78 0 0.9475 0.78 0 0.98 0.78 0 1.0125" element="0 3 1 1 3 4 1 4 2 2 4 5 3 6 4 4 6 7 4 7 5 5 7 8 6 9 7 7 9 10 7 10 8 8 10 11 9 12 10 10 12 13 10 13 11 11 13 14 12 15 13 13 15 16 13 16 14 14 16 17 15 18 16 16 18 19 16 19 17 17 19 20 18 21 19 19 21 22 19 22 20 20 22 23 21 24 22 22 24 25 22 25 23 23 25 26 24 27 25 25 27 28 25 28 26 26 28 29 27 30 28 28 30 31 28 31 29 29 31 32 30 33 31 31 33 34 31 34 32 32 34 35 33 36 34 34 36 37 34 37 35 35 37 38 36 39 37 37 39 40 37 40 38 38 40 41 39 42 40 40 42 43 40 43 41 41 43 44 42 45 43 43 45 46 43 46 44 44 46 47 45 48 46 46 48 49 46 49 47 47 49 50 48 51 49 49 51 52 49 52 50 50 52 53 51 54 52 52 54 55 52 55 53 53 55 56 54 57 55 55 57 58 55 58 56 56 58 59 57 60 58 58 60 61 58 61 59 59 61 62 60 63 61 61 63 64 61 64 62 62 64 65 63 66 64 64 66 67 64 67 65 65 67 68 66 69 67 67 69 70 67 70 68 68 70 71 69 72 70 70 72 73 70 73 71 71 73 74 72 75 73 73 75 76 73 76 74 74 76 77 75 78 76 76 78 79 76 79 77 77 79 80 78 81 79 79 81 82 79 82 80 80 82 83 81 84 82 82 84 85 82 85 83 83 85 86 84 87 85 85 87 88 85 88 86 86 88 89 87 90 88 88 90 91 88 91 89 89 91 92 90 93 91 91 93 94 91 94 92 92 94 95 93 96 94 94 96 97 94 97 95 95 97 98 96 99 97 97 99 100 97 100 98 98 100 101 99 102 100 100 102 103 100 103 101 101 103 104 102 105 103 103 105 106 103 106 104 104 106 107 105 108 106 106 108 109 106 109 107 107 109 110 108 111 109 109 111 112 109 112 110 110 112 113 111 114 112 112 114 115 112 115 113 113 115 116 114 117 115 115 117 118 115 118 116 116 118 119 117 120 118 118 120 121 118 121 119 119 121 122 120 123 121 121 123 124 121 124 122 122 124 125 123 126 124 124 126 127 124 127 125 125 127 128 126 129 127 127 129 130 127 130 128 128 130 131 129 132 130 130 132 133 130 133 131 131 133 134 132 135 133 133 135 136 133 136 134 134 136 137 135 138 136 136 138 139 136 139 137 137 139 140 138 141 139 139 141 142 139 142 140 140 142 143 141 144 142 142 144 145 142 145 143 143 145 146 144 147 145 145 147 148 145 148 146 146 148 149 147 150 148 148 150 151 148 151 149 149 151 152 150 153 151 151 153 154 151 154 152 152 154 155 153 156 154 154 156 157 154 157 155 155 157 158 156 159 157 157 159 160 157 160 158 158 160 161 159 162 160 160 162 163 160 163 161 161 163 164 162 165 163 163 165 166 163 166 164 164 166 167 165 168 166 166 168 169 166 169 167 167 169 170 168 171 169 169 171 172 169 172 170 170 172 173 171 174 172 172 174 175 172 175 173 173 175 176 174 177 175 175 177 178 175 178 176 176 178 179 177 180 178 178 180 181 178 181 179 179 181 182 180 183 181 181 183 184 181 184 182 182 184 185 183 186 184 184 186 187 184 187 185 185 187 188 186 189 187 187 189 190 187 190 188 188 190 191 189 192 190 190 192 193 190 193 191 191 193 194 192 195 193 193 195 196 193 196 194 194 196 197 195 198 196 196 198 199 196 199 197 197 199 200 198 201 199 199 201 202 199 202 200 200 202 203 201 204 202 202 204 205 202 205 203 203 205 206 204 207 205 205 207 208 205 208 206 206 208 209 207 210 208 208 210 211 208 211 209 209 211 212 210 213 211 211 213 214 211 214 212 212 214 215 213 216 214 214 216 217 214 217 215 215 217 218 216 219 217 217 219 220 217 220 218 218 220 221 219 222 220 220 222 223 220 223 221 221 223 224 222 225 223 223 225 226 223 226 224 224 226 227 225 228 226 226 228 229 226 229 227 227 229 230 228 231 229 229 231 232 229 232 230 230 232 233 231 234 232 232 234 235 232 235 233 233 235 236 234 237 235 235 237 238 235 238 236 236 238 239 237 240 238 238 240 241 238 241 239 239 241 242 240 243 241 241 243 244 241 244 242 242 244 245" radius=".00035" mass=".07" rgba=".018 .04 .12 1">
+      <elasticity young="30000000" poisson=".3" thickness=".0006" elastic2d="bend" damping=".00002" />
+      <edge equality="true" solref=".0004 1" solimp=".99 .999 .0001" />
+      <contact contype="4" conaffinity="1" selfcollide="none" friction=".5 .005 .0001" solref=".001 1" />
+    </flexcomp>
+    <body name="reel_parking_fixture" pos="-.67 0 .98">
+      <geom name="parking_support" type="box" pos="0 0.024 0" size="0.025 0.005 0.045" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    </body>
+  </worldbody>
+  <equality>
+    <connect name="feed_0_0" body1="webbing_0" body2="reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_0_1" body1="webbing_1" body2="reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_0_2" body1="webbing_2" body2="reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_1_0" body1="webbing_3" body2="reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_1_1" body1="webbing_4" body2="reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_1_2" body1="webbing_5" body2="reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_2_0" body1="webbing_6" body2="reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_2_1" body1="webbing_7" body2="reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_2_2" body1="webbing_8" body2="reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_3_0" body1="webbing_9" body2="reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_3_1" body1="webbing_10" body2="reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_3_2" body1="webbing_11" body2="reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_4_0" body1="webbing_12" body2="reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_4_1" body1="webbing_13" body2="reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_4_2" body1="webbing_14" body2="reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_5_0" body1="webbing_15" body2="reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_5_1" body1="webbing_16" body2="reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_5_2" body1="webbing_17" body2="reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_6_0" body1="webbing_18" body2="reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_6_1" body1="webbing_19" body2="reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_6_2" body1="webbing_20" body2="reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_7_0" body1="webbing_21" body2="reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_7_1" body1="webbing_22" body2="reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_7_2" body1="webbing_23" body2="reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_8_0" body1="webbing_24" body2="reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_8_1" body1="webbing_25" body2="reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_8_2" body1="webbing_26" body2="reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_9_0" body1="webbing_27" body2="reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_9_1" body1="webbing_28" body2="reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_9_2" body1="webbing_29" body2="reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_10_0" body1="webbing_30" body2="reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_10_1" body1="webbing_31" body2="reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_10_2" body1="webbing_32" body2="reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_11_0" body1="webbing_33" body2="reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_11_1" body1="webbing_34" body2="reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_11_2" body1="webbing_35" body2="reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_12_0" body1="webbing_36" body2="reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_12_1" body1="webbing_37" body2="reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_12_2" body1="webbing_38" body2="reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_13_0" body1="webbing_39" body2="reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_13_1" body1="webbing_40" body2="reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_13_2" body1="webbing_41" body2="reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_14_0" body1="webbing_42" body2="reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_14_1" body1="webbing_43" body2="reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_14_2" body1="webbing_44" body2="reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_15_0" body1="webbing_45" body2="reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_15_1" body1="webbing_46" body2="reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_15_2" body1="webbing_47" body2="reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_16_0" body1="webbing_48" body2="reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_16_1" body1="webbing_49" body2="reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_16_2" body1="webbing_50" body2="reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_17_0" body1="webbing_51" body2="reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_17_1" body1="webbing_52" body2="reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_17_2" body1="webbing_53" body2="reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_18_0" body1="webbing_54" body2="reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_18_1" body1="webbing_55" body2="reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_18_2" body1="webbing_56" body2="reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_19_0" body1="webbing_57" body2="reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_19_1" body1="webbing_58" body2="reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_19_2" body1="webbing_59" body2="reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_20_0" body1="webbing_60" body2="reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_20_1" body1="webbing_61" body2="reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_20_2" body1="webbing_62" body2="reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_21_0" body1="webbing_63" body2="reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_21_1" body1="webbing_64" body2="reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_21_2" body1="webbing_65" body2="reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_22_0" body1="webbing_66" body2="reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_22_1" body1="webbing_67" body2="reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_22_2" body1="webbing_68" body2="reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_23_0" body1="webbing_69" body2="reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_23_1" body1="webbing_70" body2="reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_23_2" body1="webbing_71" body2="reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_24_0" body1="webbing_72" body2="reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_24_1" body1="webbing_73" body2="reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_24_2" body1="webbing_74" body2="reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_25_0" body1="webbing_75" body2="reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_25_1" body1="webbing_76" body2="reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_25_2" body1="webbing_77" body2="reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_26_0" body1="webbing_78" body2="reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_26_1" body1="webbing_79" body2="reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_26_2" body1="webbing_80" body2="reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_27_0" body1="webbing_81" body2="reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_27_1" body1="webbing_82" body2="reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_27_2" body1="webbing_83" body2="reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_28_0" body1="webbing_84" body2="reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_28_1" body1="webbing_85" body2="reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_28_2" body1="webbing_86" body2="reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_29_0" body1="webbing_87" body2="reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_29_1" body1="webbing_88" body2="reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_29_2" body1="webbing_89" body2="reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_30_0" body1="webbing_90" body2="reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_30_1" body1="webbing_91" body2="reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_30_2" body1="webbing_92" body2="reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_31_0" body1="webbing_93" body2="reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_31_1" body1="webbing_94" body2="reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_31_2" body1="webbing_95" body2="reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_32_0" body1="webbing_96" body2="reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_32_1" body1="webbing_97" body2="reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_32_2" body1="webbing_98" body2="reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_33_0" body1="webbing_99" body2="reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_33_1" body1="webbing_100" body2="reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_33_2" body1="webbing_101" body2="reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_34_0" body1="webbing_102" body2="reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_34_1" body1="webbing_103" body2="reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_34_2" body1="webbing_104" body2="reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_35_0" body1="webbing_105" body2="reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_35_1" body1="webbing_106" body2="reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_35_2" body1="webbing_107" body2="reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_36_0" body1="webbing_108" body2="reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_36_1" body1="webbing_109" body2="reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_36_2" body1="webbing_110" body2="reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_37_0" body1="webbing_111" body2="reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_37_1" body1="webbing_112" body2="reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_37_2" body1="webbing_113" body2="reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_38_0" body1="webbing_114" body2="reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_38_1" body1="webbing_115" body2="reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_38_2" body1="webbing_116" body2="reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_39_0" body1="webbing_117" body2="reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_39_1" body1="webbing_118" body2="reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_39_2" body1="webbing_119" body2="reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_40_0" body1="webbing_120" body2="reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_40_1" body1="webbing_121" body2="reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_40_2" body1="webbing_122" body2="reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_41_0" body1="webbing_123" body2="reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_41_1" body1="webbing_124" body2="reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_41_2" body1="webbing_125" body2="reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_42_0" body1="webbing_126" body2="reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_42_1" body1="webbing_127" body2="reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_42_2" body1="webbing_128" body2="reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_43_0" body1="webbing_129" body2="reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_43_1" body1="webbing_130" body2="reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_43_2" body1="webbing_131" body2="reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_44_0" body1="webbing_132" body2="reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_44_1" body1="webbing_133" body2="reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_44_2" body1="webbing_134" body2="reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_45_0" body1="webbing_135" body2="reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_45_1" body1="webbing_136" body2="reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_45_2" body1="webbing_137" body2="reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_46_0" body1="webbing_138" body2="reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_46_1" body1="webbing_139" body2="reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_46_2" body1="webbing_140" body2="reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_47_0" body1="webbing_141" body2="reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_47_1" body1="webbing_142" body2="reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_47_2" body1="webbing_143" body2="reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_48_0" body1="webbing_144" body2="reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_48_1" body1="webbing_145" body2="reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_48_2" body1="webbing_146" body2="reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_49_0" body1="webbing_147" body2="reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_49_1" body1="webbing_148" body2="reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_49_2" body1="webbing_149" body2="reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_50_0" body1="webbing_150" body2="reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_50_1" body1="webbing_151" body2="reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_50_2" body1="webbing_152" body2="reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_51_0" body1="webbing_153" body2="reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_51_1" body1="webbing_154" body2="reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_51_2" body1="webbing_155" body2="reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_52_0" body1="webbing_156" body2="reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_52_1" body1="webbing_157" body2="reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_52_2" body1="webbing_158" body2="reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_53_0" body1="webbing_159" body2="reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_53_1" body1="webbing_160" body2="reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_53_2" body1="webbing_161" body2="reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_54_0" body1="webbing_162" body2="reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_54_1" body1="webbing_163" body2="reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_54_2" body1="webbing_164" body2="reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_55_0" body1="webbing_165" body2="reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_55_1" body1="webbing_166" body2="reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_55_2" body1="webbing_167" body2="reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_56_0" body1="webbing_168" body2="reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_56_1" body1="webbing_169" body2="reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_56_2" body1="webbing_170" body2="reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_57_0" body1="webbing_171" body2="reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_57_1" body1="webbing_172" body2="reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_57_2" body1="webbing_173" body2="reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_58_0" body1="webbing_174" body2="reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_58_1" body1="webbing_175" body2="reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_58_2" body1="webbing_176" body2="reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_59_0" body1="webbing_177" body2="reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_59_1" body1="webbing_178" body2="reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_59_2" body1="webbing_179" body2="reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_60_0" body1="webbing_180" body2="reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_60_1" body1="webbing_181" body2="reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_60_2" body1="webbing_182" body2="reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_61_0" body1="webbing_183" body2="reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_61_1" body1="webbing_184" body2="reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_61_2" body1="webbing_185" body2="reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_62_0" body1="webbing_186" body2="reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_62_1" body1="webbing_187" body2="reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_62_2" body1="webbing_188" body2="reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_63_0" body1="webbing_189" body2="reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_63_1" body1="webbing_190" body2="reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_63_2" body1="webbing_191" body2="reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_64_0" body1="webbing_192" body2="reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_64_1" body1="webbing_193" body2="reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_64_2" body1="webbing_194" body2="reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_65_0" body1="webbing_195" body2="reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_65_1" body1="webbing_196" body2="reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_65_2" body1="webbing_197" body2="reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_66_0" body1="webbing_198" body2="reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_66_1" body1="webbing_199" body2="reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_66_2" body1="webbing_200" body2="reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_67_0" body1="webbing_201" body2="reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_67_1" body1="webbing_202" body2="reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_67_2" body1="webbing_203" body2="reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_68_0" body1="webbing_204" body2="reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_68_1" body1="webbing_205" body2="reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_68_2" body1="webbing_206" body2="reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_69_0" body1="webbing_207" body2="reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_69_1" body1="webbing_208" body2="reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_69_2" body1="webbing_209" body2="reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_70_0" body1="webbing_210" body2="reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_70_1" body1="webbing_211" body2="reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_70_2" body1="webbing_212" body2="reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_71_0" body1="webbing_213" body2="reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_71_1" body1="webbing_214" body2="reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_71_2" body1="webbing_215" body2="reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_72_0" body1="webbing_216" body2="reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_72_1" body1="webbing_217" body2="reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_72_2" body1="webbing_218" body2="reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_73_0" body1="webbing_219" body2="reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_73_1" body1="webbing_220" body2="reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_73_2" body1="webbing_221" body2="reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_74_0" body1="webbing_222" body2="reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_74_1" body1="webbing_223" body2="reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_74_2" body1="webbing_224" body2="reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_75_0" body1="webbing_225" body2="reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_75_1" body1="webbing_226" body2="reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_75_2" body1="webbing_227" body2="reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_76_0" body1="webbing_228" body2="reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_76_1" body1="webbing_229" body2="reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_76_2" body1="webbing_230" body2="reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_77_0" body1="webbing_231" body2="reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_77_1" body1="webbing_232" body2="reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_77_2" body1="webbing_233" body2="reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_78_0" body1="webbing_234" body2="reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_78_1" body1="webbing_235" body2="reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_78_2" body1="webbing_236" body2="reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_79_0" body1="webbing_237" body2="reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_79_1" body1="webbing_238" body2="reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_79_2" body1="webbing_239" body2="reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_80_0" body1="webbing_240" body2="reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_80_1" body1="webbing_241" body2="reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_80_2" body1="webbing_242" body2="reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_81_0" body1="webbing_243" body2="reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_81_1" body1="webbing_244" body2="reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="feed_81_2" body1="webbing_245" body2="reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="handle_webbing_0" body1="webbing_243" body2="belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <connect name="handle_webbing_1" body1="webbing_244" body2="belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <connect name="handle_webbing_2" body1="webbing_245" body2="belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <weld name="handle_latch" body1="belt_handle" body2="latch_carriage" active="true" solref=".002 1" />
+    <weld name="handle_grasp" body1="belt_handle" body2="belt_gripper" active="false" solref=".002 1" />
+    <weld name="handle_dock" body1="belt_handle" body2="reel_parking_fixture" active="false" relpose="0 0 0 1 0 0 0" solref=".002 1" />
+  </equality>
+</mujoco>

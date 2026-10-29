@@ -1,0 +1,1426 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="airport_entrance_photo_reference">
+  <compiler angle="radian" />
+  <visual>
+    <global offwidth="1920" offheight="1080" />
+    <quality shadowsize="4096" offsamples="4" />
+    <headlight ambient=".45 .45 .45" diffuse=".5 .5 .5" />
+    <map znear=".02" zfar="100" />
+  </visual>
+  <asset>
+    <texture name="sky" type="skybox" builtin="gradient" rgb1=".25 .48 .72" rgb2=".75 .85 .94" width="512" height="3072" />
+    <texture name="stone" type="2d" file="photo_textures/stone.png" />
+    <material name="stone" rgba="0.9 0.88 0.83 1" specular="0.2" shininess="0.73" texture="stone" texrepeat="12 12" />
+    <material name="frame" rgba="0.075 0.105 0.13 1" specular="0.525" shininess="0.7" />
+    <material name="column" rgba="0.39 0.44 0.44 1" specular="0.5" shininess="0.7" />
+    <material name="black" rgba="0.025 0.03 0.035 1" specular="0.375" shininess="0.7" />
+    <material name="band" rgba="0.018 0.04 0.12 1" specular="0.2" shininess="0.28" />
+    <material name="glass" rgba="0.3 0.53 0.67 0.3" specular="0.225" shininess="0.88" />
+    <material name="ceiling" rgba="0.77 0.76 0.7 1" specular="0.2" shininess="0.30000000000000004" />
+    <material name="white" rgba="0.82 0.84 0.82 1" specular="0.26" shininess="0.62" />
+    <material name="rubber" rgba="0.055 0.06 0.063 1" specular="0.2" shininess="0.050000000000000044" />
+    <material name="screen" rgba="0.035 0.055 0.065 1" specular="0.2" shininess="0.77" />
+    <material name="green" rgba="0.01 0.42 0.23 1" specular="0.2" shininess="0.5" />
+    <material name="lit" rgba="0.98 0.98 0.92 1" specular="0.2" shininess="0.4" />
+    <material name="skyblue" rgba="0.26 0.49 0.7 1" specular="0.2" shininess="0" />
+    <material name="outside" rgba="0.39 0.52 0.59 1" specular="0.2" shininess="0.35" />
+    <material name="seam" rgba="0.43 0.43 0.41 1" specular="0.2" shininess="0.30000000000000004" />
+    <texture name="door6" type="2d" file="photo_textures/mj_door6.png" />
+    <material name="door6" rgba="1 1 1 1" specular="0.2" shininess="0.30000000000000004" texture="door6" texrepeat="1 1" />
+    <texture name="direction" type="2d" file="photo_textures/mj_direction.png" />
+    <material name="direction" rgba="1 1 1 1" specular="0.2" shininess="0.30000000000000004" texture="direction" texrepeat="1 1" />
+    <texture name="notice" type="2d" file="photo_textures/mj_notice.png" />
+    <material name="notice" rgba="1 1 1 1" specular="0.2" shininess="0.30000000000000004" texture="notice" texrepeat="1 1" />
+    <mesh name="DoorNumber0" vertex="-0.4 0 -0.4 0.4 0 -0.4 0.4 0 0.4 -0.4 0 0.4" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <mesh name="DoorNumber1" vertex="-0.4 0 -0.4 0.4 0 -0.4 0.4 0 0.4 -0.4 0 0.4" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <mesh name="NoticeFace0" vertex="-0.245 0 -0.34 0.245 0 -0.34 0.245 0 0.34 -0.245 0 0.34" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <mesh name="NoticeFace1" vertex="-0.245 0 -0.34 0.245 0 -0.34 0.245 0 0.34 -0.245 0 0.34" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+    <mesh name="WayfindingText" vertex="-2.4 0 -0.24 2.4 0 -0.24 2.4 0 0.24 -2.4 0 0.24" face="0 1 2 0 2 3" texcoord="0 0 1 0 1 1 0 1" inertia="shell" />
+  </asset>
+  <worldbody>
+    <geom name="StoneFloor" type="box" pos="0 -4 -0.08" size="20 18 0.08" quat="1 0 0 0" material="stone" contype="1" conaffinity="1" />
+    <geom name="FloorJointX-20" type="box" pos="-20 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-18" type="box" pos="-18 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-16" type="box" pos="-16 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-14" type="box" pos="-14 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-12" type="box" pos="-12 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-10" type="box" pos="-10 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-8" type="box" pos="-8 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-6" type="box" pos="-6 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-4" type="box" pos="-4 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX-2" type="box" pos="-2 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX0" type="box" pos="0 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX2" type="box" pos="2 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX4" type="box" pos="4 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX6" type="box" pos="6 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX8" type="box" pos="8 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX10" type="box" pos="10 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX12" type="box" pos="12 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX14" type="box" pos="14 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX16" type="box" pos="16 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX18" type="box" pos="18 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointX20" type="box" pos="20 -4 0.001" size="0.0025 18 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-22" type="box" pos="0 -22 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-20" type="box" pos="0 -20 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-18" type="box" pos="0 -18 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-16" type="box" pos="0 -16 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-14" type="box" pos="0 -14 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-12" type="box" pos="0 -12 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-10" type="box" pos="0 -10 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-8" type="box" pos="0 -8 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-6" type="box" pos="0 -6 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-4" type="box" pos="0 -4 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY-2" type="box" pos="0 -2 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY0" type="box" pos="0 0 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY2" type="box" pos="0 2 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY4" type="box" pos="0 4 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY6" type="box" pos="0 6 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY8" type="box" pos="0 8 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY10" type="box" pos="0 10 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY12" type="box" pos="0 12 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FloorJointY14" type="box" pos="0 14 0.001" size="20 0.0025 0.001" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="FacadeMullion0" type="box" pos="-20.0 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion1" type="box" pos="-18.4 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion2" type="box" pos="-16.799999999999997 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion3" type="box" pos="-15.199999999999996 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion4" type="box" pos="-13.599999999999994 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion5" type="box" pos="-11.999999999999993 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion6" type="box" pos="-10.399999999999991 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion7" type="box" pos="-8.79999999999999 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion8" type="box" pos="-7.199999999999989 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion9" type="box" pos="-5.599999999999987 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion10" type="box" pos="-3.999999999999986 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion11" type="box" pos="-2.3999999999999844 6.7 6.2" size="0.06 0.1 2.7" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion12" type="box" pos="-0.799999999999983 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeMullion13" type="box" pos="0.8000000000000185 6.7 4.5" size="0.06 0.1 4.5" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom0" type="box" pos="-9.1 6.7 2.5" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom1" type="box" pos="-9.1 6.7 4" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom2" type="box" pos="-9.1 6.7 5.5" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom3" type="box" pos="-9.1 6.7 7" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeTransom4" type="box" pos="-9.1 6.7 8.9" size="11.1 0.1 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass0_0" type="box" pos="-19.2 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass0_1" type="box" pos="-19.2 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass0_2" type="box" pos="-19.2 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass0_3" type="box" pos="-19.2 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass1_0" type="box" pos="-17.599999999999998 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass1_1" type="box" pos="-17.599999999999998 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass1_2" type="box" pos="-17.599999999999998 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass1_3" type="box" pos="-17.599999999999998 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass2_0" type="box" pos="-15.999999999999996 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass2_1" type="box" pos="-15.999999999999996 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass2_2" type="box" pos="-15.999999999999996 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass2_3" type="box" pos="-15.999999999999996 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass3_0" type="box" pos="-14.399999999999995 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass3_1" type="box" pos="-14.399999999999995 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass3_2" type="box" pos="-14.399999999999995 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass3_3" type="box" pos="-14.399999999999995 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass4_0" type="box" pos="-12.799999999999994 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass4_1" type="box" pos="-12.799999999999994 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass4_2" type="box" pos="-12.799999999999994 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass4_3" type="box" pos="-12.799999999999994 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass5_0" type="box" pos="-11.199999999999992 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass5_1" type="box" pos="-11.199999999999992 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass5_2" type="box" pos="-11.199999999999992 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass5_3" type="box" pos="-11.199999999999992 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass6_0" type="box" pos="-9.59999999999999 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass6_1" type="box" pos="-9.59999999999999 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass6_2" type="box" pos="-9.59999999999999 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass6_3" type="box" pos="-9.59999999999999 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass7_0" type="box" pos="-7.999999999999989 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass7_1" type="box" pos="-7.999999999999989 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass7_2" type="box" pos="-7.999999999999989 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass7_3" type="box" pos="-7.999999999999989 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass8_0" type="box" pos="-6.399999999999988 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass8_1" type="box" pos="-6.399999999999988 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass8_2" type="box" pos="-6.399999999999988 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass8_3" type="box" pos="-6.399999999999988 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass9_0" type="box" pos="-4.7999999999999865 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass9_1" type="box" pos="-4.7999999999999865 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass9_2" type="box" pos="-4.7999999999999865 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass9_3" type="box" pos="-4.7999999999999865 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass10_0" type="box" pos="-3.199999999999985 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass10_1" type="box" pos="-3.199999999999985 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass10_2" type="box" pos="-3.199999999999985 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass10_3" type="box" pos="-3.199999999999985 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass11_0" type="box" pos="-1.5999999999999837 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass11_1" type="box" pos="-1.5999999999999837 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass11_2" type="box" pos="-1.5999999999999837 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass11_3" type="box" pos="-1.5999999999999837 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass12_0" type="box" pos="1.7763568394002505e-14 6.72 3.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass12_1" type="box" pos="1.7763568394002505e-14 6.72 4.75" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass12_2" type="box" pos="1.7763568394002505e-14 6.72 6.25" size="0.74 0.015 0.7" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="FacadeGlass12_3" type="box" pos="1.7763568394002505e-14 6.72 7.95" size="0.74 0.015 0.9" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="MainColumn-10.5" type="cylinder" pos="-10.5 6.05 4.3" size="0.16 4.3" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="MainColumn-4.3" type="cylinder" pos="-4.3 6.05 4.3" size="0.16 4.3" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="MainColumn1.7" type="cylinder" pos="1.7 6.05 4.3" size="0.16 4.3" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="MainColumn8.4" type="cylinder" pos="8.4 6.05 4.3" size="0.16 4.3" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="DoorCanopy0" type="box" pos="-8.8 5.95 2.9" size="2.15 0.85 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="DoorNumber0" type="mesh" mesh="DoorNumber0" pos="-10.08 5.085 2.94" material="door6" contype="0" conaffinity="0" />
+    <geom name="EntranceMat0" type="box" pos="-8.8 4.7 0.012" size="2.15 1.7 0.012" quat="1 0 0 0" material="rubber" contype="1" conaffinity="1" />
+    <geom name="DoorJamb0_-1" type="box" pos="-10.850000000000001 5.9 1.22" size="0.06 0.65 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeaf0_-1" type="box" pos="-9.950000000000001 5.86 1.22" size="0.52 0.025 1.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame0_-1_-1" type="box" pos="-10.47 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame0_-1_1" type="box" pos="-9.430000000000001 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorFrostBand0_-1" type="box" pos="-9.950000000000001 5.815 1.1" size="0.51 0.008 0.1" quat="1 0 0 0" material="white" contype="0" conaffinity="0" />
+    <geom name="DoorJamb0_1" type="box" pos="-6.750000000000001 5.9 1.22" size="0.06 0.65 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeaf0_1" type="box" pos="-7.65 5.86 1.22" size="0.52 0.025 1.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame0_1_-1" type="box" pos="-8.17 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame0_1_1" type="box" pos="-7.130000000000001 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorFrostBand0_1" type="box" pos="-7.65 5.815 1.1" size="0.51 0.008 0.1" quat="1 0 0 0" material="white" contype="0" conaffinity="0" />
+    <geom name="DoorCanopy1" type="box" pos="-3.5 5.95 2.9" size="2.15 0.85 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="DoorNumber1" type="mesh" mesh="DoorNumber1" pos="-4.78 5.085 2.94" material="door6" contype="0" conaffinity="0" />
+    <geom name="EntranceMat1" type="box" pos="-3.5 4.7 0.012" size="2.15 1.7 0.012" quat="1 0 0 0" material="rubber" contype="1" conaffinity="1" />
+    <geom name="DoorJamb1_-1" type="box" pos="-5.55 5.9 1.22" size="0.06 0.65 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeaf1_-1" type="box" pos="-4.65 5.86 1.22" size="0.52 0.025 1.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame1_-1_-1" type="box" pos="-5.17 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame1_-1_1" type="box" pos="-4.130000000000001 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorFrostBand1_-1" type="box" pos="-4.65 5.815 1.1" size="0.51 0.008 0.1" quat="1 0 0 0" material="white" contype="0" conaffinity="0" />
+    <geom name="DoorJamb1_1" type="box" pos="-1.4500000000000002 5.9 1.22" size="0.06 0.65 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeaf1_1" type="box" pos="-2.35 5.86 1.22" size="0.52 0.025 1.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame1_1_-1" type="box" pos="-2.87 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorLeafFrame1_1_1" type="box" pos="-1.83 5.86 1.22" size="0.022 0.04 1.22" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="DoorFrostBand1_1" type="box" pos="-2.35 5.815 1.1" size="0.51 0.008 0.1" quat="1 0 0 0" material="white" contype="0" conaffinity="0" />
+    <geom name="TowerUpright0.06.4" type="box" pos="0.0 6.4 4.2" size="0.075 0.075 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerUpright0.08.2" type="box" pos="0.0 8.2 4.2" size="0.075 0.075 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerUpright2.16.4" type="box" pos="2.1 6.4 4.2" size="0.075 0.075 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerUpright2.18.2" type="box" pos="2.1 8.2 4.2" size="0.075 0.075 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam0.5" type="box" pos="1.05 6.4 0.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam0.5" type="box" pos="2.1 7.3 0.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam1.5" type="box" pos="1.05 6.4 1.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam1.5" type="box" pos="2.1 7.3 1.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam2.5" type="box" pos="1.05 6.4 2.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam2.5" type="box" pos="2.1 7.3 2.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam3.5" type="box" pos="1.05 6.4 3.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam3.5" type="box" pos="2.1 7.3 3.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam4.5" type="box" pos="1.05 6.4 4.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam4.5" type="box" pos="2.1 7.3 4.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam5.5" type="box" pos="1.05 6.4 5.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam5.5" type="box" pos="2.1 7.3 5.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam6.5" type="box" pos="1.05 6.4 6.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam6.5" type="box" pos="2.1 7.3 6.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontBeam7.5" type="box" pos="1.05 6.4 7.5" size="1.1 0.065 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerSideBeam7.5" type="box" pos="2.1 7.3 7.5" size="0.065 0.95 0.055" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="TowerFrontGlass" type="box" pos="1.05 6.45 4.2" size="1 0.018 4.15" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="TowerSideGlass" type="box" pos="2.05 7.3 4.2" size="0.018 0.85 4.15" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion0" type="box" pos="2.5 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass0" type="box" pos="3.35 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion1" type="box" pos="4.3 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass1" type="box" pos="5.1499999999999995 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion2" type="box" pos="6.1 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass2" type="box" pos="6.949999999999999 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion3" type="box" pos="7.8999999999999995 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass3" type="box" pos="8.75 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion4" type="box" pos="9.7 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass4" type="box" pos="10.549999999999999 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearMullion5" type="box" pos="11.5 10.5 4.2" size="0.06 0.08 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearGlass5" type="box" pos="12.35 10.53 4.2" size="0.8 0.02 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar1.0" type="box" pos="7.3 10.5 1.0" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar2.5" type="box" pos="7.3 10.5 2.5" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar4.0" type="box" pos="7.3 10.5 4.0" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar5.5" type="box" pos="7.3 10.5 5.5" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar7.0" type="box" pos="7.3 10.5 7.0" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RearCrossbar8.5" type="box" pos="7.3 10.5 8.5" size="5.4 0.08 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightMullion0" type="box" pos="12.4 -2.0 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass0" type="box" pos="12.42 -1.15 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion1" type="box" pos="12.4 -0.19999999999999996 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass1" type="box" pos="12.42 0.65 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion2" type="box" pos="12.4 1.6 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass2" type="box" pos="12.42 2.45 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion3" type="box" pos="12.4 3.4000000000000004 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass3" type="box" pos="12.42 4.25 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion4" type="box" pos="12.4 5.2 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass4" type="box" pos="12.42 6.05 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion5" type="box" pos="12.4 7.0 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass5" type="box" pos="12.42 7.85 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion6" type="box" pos="12.4 8.8 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass6" type="box" pos="12.42 9.65 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightMullion7" type="box" pos="12.4 10.6 4.2" size="0.07 0.06 4.2" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightGlass7" type="box" pos="12.42 11.45 4.2" size="0.02 0.8 4.2" quat="1 0 0 0" material="glass" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar1.0" type="box" pos="12.4 4.5 1.0" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar2.5" type="box" pos="12.4 4.5 2.5" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar4.0" type="box" pos="12.4 4.5 4.0" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar5.5" type="box" pos="12.4 4.5 5.5" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar7.0" type="box" pos="12.4 4.5 7.0" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="RightCrossbar8.5" type="box" pos="12.4 4.5 8.5" size="0.07 6.5 0.045" quat="1 0 0 0" material="frame" contype="1" conaffinity="1" />
+    <geom name="ExteriorSkyContext" type="box" pos="0 15 5" size="28 0.05 8" quat="1 0 0 0" material="skyblue" contype="0" conaffinity="0" />
+    <geom name="OutsideCanopy" type="box" pos="-5.3 9.5 3.6" size="7.5 2.3 0.12" quat="1 0 0 0" material="outside" contype="1" conaffinity="1" />
+    <geom name="RearConcourseBackdrop" type="box" pos="7.5 12 2.7" size="5 0.12 2.7" quat="1 0 0 0" material="outside" contype="1" conaffinity="1" />
+    <geom name="CeilingPanel0" type="box" pos="3 -12 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam0" type="box" pos="2 -10.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight0_-2" type="cylinder" pos="-2 -10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight0_2" type="cylinder" pos="2 -10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight0_6" type="cylinder" pos="6 -10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight0_10" type="cylinder" pos="10 -10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel1" type="box" pos="3 -9 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam1" type="box" pos="2 -7.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight1_-2" type="cylinder" pos="-2 -7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight1_2" type="cylinder" pos="2 -7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight1_6" type="cylinder" pos="6 -7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight1_10" type="cylinder" pos="10 -7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel2" type="box" pos="3 -6 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam2" type="box" pos="2 -4.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight2_-2" type="cylinder" pos="-2 -4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight2_2" type="cylinder" pos="2 -4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight2_6" type="cylinder" pos="6 -4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight2_10" type="cylinder" pos="10 -4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel3" type="box" pos="3 -3 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam3" type="box" pos="2 -1.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight3_-2" type="cylinder" pos="-2 -1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight3_2" type="cylinder" pos="2 -1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight3_6" type="cylinder" pos="6 -1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight3_10" type="cylinder" pos="10 -1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel4" type="box" pos="3 0 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam4" type="box" pos="2 1.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight4_-2" type="cylinder" pos="-2 1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight4_2" type="cylinder" pos="2 1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight4_6" type="cylinder" pos="6 1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight4_10" type="cylinder" pos="10 1.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel5" type="box" pos="3 3 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam5" type="box" pos="2 4.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight5_-2" type="cylinder" pos="-2 4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight5_2" type="cylinder" pos="2 4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight5_6" type="cylinder" pos="6 4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight5_10" type="cylinder" pos="10 4.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel6" type="box" pos="3 6 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam6" type="box" pos="2 7.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight6_-2" type="cylinder" pos="-2 7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight6_2" type="cylinder" pos="2 7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight6_6" type="cylinder" pos="6 7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight6_10" type="cylinder" pos="10 7.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CeilingPanel7" type="box" pos="3 9 8.2" size="9.3 1.43 0.1" quat="1 0 0 0" material="ceiling" contype="1" conaffinity="1" />
+    <geom name="CeilingBeam7" type="box" pos="2 10.5 8.0" size="10.5 0.09 0.14" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="Downlight7_-2" type="cylinder" pos="-2 10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight7_2" type="cylinder" pos="2 10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight7_6" type="cylinder" pos="6 10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="Downlight7_10" type="cylinder" pos="10 10.5 7.84" size="0.045 0.015" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="CounterBody" type="box" pos="-5.9 1.7999999999999998 0.61" size="1.0725 0.36000000000000004 0.61" quat="1 0 0 0" material="white" contype="1" conaffinity="1" />
+    <geom name="CounterWorktop" type="box" pos="-5.9 1.7999999999999998 1.24" size="1.118 0.40800000000000003 0.035" quat="1 0 0 0" material="white" contype="1" conaffinity="1" />
+    <geom name="CounterPanelSeam1.15" type="box" pos="-6.8425 1.4327999999999999 0.63" size="0.0032500000000000003 0.0024000000000000002 0.54" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="CounterPanelSeam2.15" type="box" pos="-6.192500000000001 1.4327999999999999 0.63" size="0.0032500000000000003 0.0024000000000000002 0.54" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="CounterPanelSeam3.15" type="box" pos="-5.5425 1.4327999999999999 0.63" size="0.0032500000000000003 0.0024000000000000002 0.54" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="CounterPanelSeam4.15" type="box" pos="-4.8925 1.4327999999999999 0.63" size="0.0032500000000000003 0.0024000000000000002 0.54" quat="1 0 0 0" material="seam" contype="0" conaffinity="0" />
+    <geom name="UnidentifiedEquipmentBase" type="box" pos="-5.315 1.2799999999999998 0.45" size="0.533 0.32000000000000006 0.45" quat="1 0 0 0" material="white" contype="1" conaffinity="1" />
+    <geom name="UnidentifiedEquipmentUpper" type="box" pos="-5.315 1.4159999999999995 1.02" size="0.533 0.18400000000000002 0.16" quat="1 0 0 0" material="white" contype="1" conaffinity="1" />
+    <geom name="EquipmentDarkInset0" type="box" pos="-5.6530000000000005 1.2247999999999997 1.04" size="0.07150000000000001 0.0064 0.095" quat="1 0 0 0" material="screen" contype="0" conaffinity="0" />
+    <geom name="EquipmentGreenMarker0" type="box" pos="-5.6530000000000005 0.9543999999999997 0.72" size="0.06825 0.0064 0.04" quat="1 0 0 0" material="green" contype="0" conaffinity="0" />
+    <geom name="EquipmentDarkInset1" type="box" pos="-5.315 1.2247999999999997 1.04" size="0.07150000000000001 0.0064 0.095" quat="1 0 0 0" material="screen" contype="0" conaffinity="0" />
+    <geom name="EquipmentGreenMarker1" type="box" pos="-5.315 0.9543999999999997 0.72" size="0.06825 0.0064 0.04" quat="1 0 0 0" material="green" contype="0" conaffinity="0" />
+    <geom name="EquipmentDarkInset2" type="box" pos="-4.977 1.2247999999999997 1.04" size="0.07150000000000001 0.0064 0.095" quat="1 0 0 0" material="screen" contype="0" conaffinity="0" />
+    <geom name="EquipmentGreenMarker2" type="box" pos="-4.977 0.9543999999999997 0.72" size="0.06825 0.0064 0.04" quat="1 0 0 0" material="green" contype="0" conaffinity="0" />
+    <geom name="CounterSideUnit" type="box" pos="-7.2 1.92 0.8" size="0.1625 0.27999999999999997 0.8" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="RearInformationDisplay" type="box" pos="5.1 8.9 4.7" size="2.3 0.15 1.3" quat="1 0 0 0" material="screen" contype="1" conaffinity="1" />
+    <geom name="WayfindingBacking" type="box" pos="5.1 8.7 3.1" size="2.5 0.15 0.3" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="WayfindingText" type="mesh" mesh="WayfindingText" pos="5.1 8.53 3.1" material="direction" contype="0" conaffinity="0" />
+    <geom name="LightboxFrame0" type="box" pos="7.8 9.7 1.75" size="0.6 0.15 1.15" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="LightboxFace0" type="box" pos="7.8 9.535 1.75" size="0.54 0.008 1.06" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="LightboxFrame1" type="box" pos="9.7 9.7 1.75" size="0.6 0.15 1.15" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="LightboxFace1" type="box" pos="9.7 9.535 1.75" size="0.54 0.008 1.06" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <geom name="LightboxFrame2" type="box" pos="11.6 9.7 1.75" size="0.6 0.15 1.15" quat="1 0 0 0" material="column" contype="1" conaffinity="1" />
+    <geom name="LightboxFace2" type="box" pos="11.6 9.535 1.75" size="0.54 0.008 1.06" quat="1 0 0 0" material="lit" contype="0" conaffinity="0" />
+    <light name="HallLight0" pos="-6 3 7" dir="0 0 -1" diffuse=".8 .8 .75" ambient=".1 .1 .1" />
+    <light name="HallLight1" pos="3 2 7" dir="0 0 -1" diffuse=".8 .8 .75" ambient=".1 .1 .1" />
+    <light name="HallLight2" pos="8 7 7" dir="0 0 -1" diffuse=".8 .8 .75" ambient=".1 .1 .1" />
+    <geom name="CheckpointBase0" type="cylinder" pos="-10.8 2.7 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointPole0" type="cylinder" pos="-10.8 2.7 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointHead0" type="cylinder" pos="-10.8 2.7 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand0" type="box" pos="-10.21 2.74 0.98" size="0.5913543776789014 0.003 0.0325" quat="0.03384004936701151 0 0 -0.9994272615147328" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBase1" type="cylinder" pos="-10.8 0.45 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointPole1" type="cylinder" pos="-10.8 0.45 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointHead1" type="cylinder" pos="-10.8 0.45 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand1" type="box" pos="-10.8 1.5750000000000002 0.98" size="1.125 0.003 0.0325" quat="0.7071067811865476 0 0 -0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBase2" type="cylinder" pos="-10.8 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointPole2" type="cylinder" pos="-10.8 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointHead2" type="cylinder" pos="-10.8 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand2" type="box" pos="-10.8 -0.675 0.98" size="1.125 0.003 0.0325" quat="0.7071067811865476 0 0 -0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBase3" type="cylinder" pos="-9.2 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointPole3" type="cylinder" pos="-9.2 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointHead3" type="cylinder" pos="-9.2 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand3" type="box" pos="-10.0 -1.8 0.98" size="0.8000000000000007 0.003 0.0325" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand4" type="box" pos="-8.41 -1.76 0.98" size="0.7910120100226035 0.003 0.0325" quat="0.9996801022280478 0 0 0.025292157071311726" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBase4" type="cylinder" pos="-4.7 -1.8 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointPole4" type="cylinder" pos="-4.7 -1.8 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointHead4" type="cylinder" pos="-4.7 -1.8 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand5" type="box" pos="-5.33 -1.8 0.98" size="0.6299999999999999 0.003 0.0325" quat="1.0 0 0 0.0" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBase5" type="cylinder" pos="-4.7 0.45 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointPole5" type="cylinder" pos="-4.7 0.45 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointHead5" type="cylinder" pos="-4.7 0.45 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand6" type="box" pos="-4.7 -0.675 0.98" size="1.125 0.003 0.0325" quat="0.7071067811865476 0 0 0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBase6" type="cylinder" pos="-4.7 2.7 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointPole6" type="cylinder" pos="-4.7 2.7 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointHead6" type="cylinder" pos="-4.7 2.7 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand7" type="box" pos="-4.7 1.5750000000000002 0.98" size="1.125 0.003 0.0325" quat="0.7071067811865476 0 0 0.7071067811865475" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBase7" type="cylinder" pos="-6.4 2.7 0.022" size="0.17 0.022" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointPole7" type="cylinder" pos="-6.4 2.7 0.49" size="0.022 0.46" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointHead7" type="cylinder" pos="-6.4 2.7 0.98" size="0.045 0.05" quat="1 0 0 0" material="black" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand8" type="box" pos="-5.550000000000001 2.7 0.98" size="0.8500000000000001 0.003 0.0325" quat="6.123233995736766e-17 0 0 1.0" material="band" contype="1" conaffinity="1" />
+    <geom name="CheckpointBand9" type="box" pos="-7.18 2.7 0.98" size="0.7799999999999998 0.003 0.0325" quat="6.123233995736766e-17 0 0 1.0" material="band" contype="1" conaffinity="1" />
+    <geom name="entry_reel_base" type="cylinder" pos="-9.620000000000001 2.7800000000000002 0.022" size=".17 .022" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="entry_reel_post" type="cylinder" pos="-9.620000000000001 2.7800000000000002 0.49" size=".022 .46" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="entry_reel_collar" type="cylinder" pos="-9.620000000000001 2.7800000000000002 0.885" size="0.04 0.03" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="entry_receiver_base" type="cylinder" pos="-7.960000000000001 2.7 0.022" size=".17 .022" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="entry_receiver_post" type="cylinder" pos="-7.960000000000001 2.7 0.49" size=".022 .46" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="entry_receiver_collar" type="cylinder" pos="-7.960000000000001 2.7 0.885" size="0.04 0.03" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="entry_reel_lower_flange" type="cylinder" pos="-9.620000000000001 2.7800000000000002 0.94" size="0.095 0.004" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="entry_reel_upper_flange" type="cylinder" pos="-9.620000000000001 2.7800000000000002 1.02" size="0.095 0.004" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="entry_reel_core" type="cylinder" pos="-9.620000000000001 2.7800000000000002 0.98" size="0.071 0.035" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="entry_receiver_rail_-1" type="box" pos="-7.982000000000001 2.6820000000000004 1.004" size="0.025 0.005 0.05" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <geom name="entry_receiver_rail_1" type="box" pos="-7.982000000000001 2.718 1.004" size="0.025 0.005 0.05" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <geom name="entry_receiver_seat" type="box" pos="-7.9750000000000005 2.7 0.946" size="0.018 0.022 0.004" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <body name="entry_latch_carriage" pos="-8.020000000000001 2.7 0.98">
+      <joint name="entry_latch_lift" type="slide" axis="0 0 1" range="0 .045" limited="true" damping="2" stiffness="8" />
+      <geom name="entry_carriage_visual" type="box" pos="0.04 0 0" size="0.009 0.009 0.03" rgba=".025 .03 .035 1" mass=".02" contype="0" conaffinity="0" />
+    </body>
+    <body name="entry_belt_handle" pos="-8.020000000000001 2.7 0.98">
+      <freejoint name="entry_handle_free" />
+      <geom name="entry_handle_grip" type="box" pos="0 0 0" size="0.017 0.009 0.044" rgba=".025 .03 .035 1" mass=".045" contype="2" conaffinity="9" />
+      <geom name="entry_handle_tongue" type="box" pos="0.025 0 0" size="0.012 0.008 0.03" rgba=".025 .03 .035 1" mass=".008" contype="2" conaffinity="1" />
+    </body>
+    <body name="entry_belt_gripper" mocap="true" pos="-8.020000000000001 2.7 0.98">
+      <geom name="entry_gripper_mount" type="box" pos="0 0 0.08" size="0.035 0.035 0.015" rgba=".4 .45 .5 1" contype="0" conaffinity="0" />
+      <geom name="entry_gripper_pad_-1" type="box" pos="0 -0.013 0" size="0.018 0.005 0.023" rgba=".22 .25 .3 1" contype="8" conaffinity="2" friction="1 .005 .0001" />
+      <geom name="entry_gripper_pad_1" type="box" pos="0 0.013 0" size="0.018 0.005 0.023" rgba=".22 .25 .3 1" contype="8" conaffinity="2" friction="1 .005 .0001" />
+    </body>
+    <body name="entry_reel_guide_0" mocap="true" pos="-9.6397983431 2.702439281532 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_1" mocap="true" pos="-9.620000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_2" mocap="true" pos="-9.600000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_3" mocap="true" pos="-9.58 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_4" mocap="true" pos="-9.56 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_5" mocap="true" pos="-9.540000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_6" mocap="true" pos="-9.520000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_7" mocap="true" pos="-9.5 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_8" mocap="true" pos="-9.48 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_9" mocap="true" pos="-9.46 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_10" mocap="true" pos="-9.440000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_11" mocap="true" pos="-9.42 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_12" mocap="true" pos="-9.4 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_13" mocap="true" pos="-9.38 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_14" mocap="true" pos="-9.360000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_15" mocap="true" pos="-9.34 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_16" mocap="true" pos="-9.32 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_17" mocap="true" pos="-9.3 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_18" mocap="true" pos="-9.280000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_19" mocap="true" pos="-9.260000000000002 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_20" mocap="true" pos="-9.24 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_21" mocap="true" pos="-9.22 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_22" mocap="true" pos="-9.200000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_23" mocap="true" pos="-9.180000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_24" mocap="true" pos="-9.16 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_25" mocap="true" pos="-9.14 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_26" mocap="true" pos="-9.120000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_27" mocap="true" pos="-9.100000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_28" mocap="true" pos="-9.08 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_29" mocap="true" pos="-9.06 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_30" mocap="true" pos="-9.040000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_31" mocap="true" pos="-9.020000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_32" mocap="true" pos="-9.0 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_33" mocap="true" pos="-8.98 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_34" mocap="true" pos="-8.96 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_35" mocap="true" pos="-8.940000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_36" mocap="true" pos="-8.92 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_37" mocap="true" pos="-8.9 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_38" mocap="true" pos="-8.88 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_39" mocap="true" pos="-8.860000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_40" mocap="true" pos="-8.84 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_41" mocap="true" pos="-8.82 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_42" mocap="true" pos="-8.8 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_43" mocap="true" pos="-8.780000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_44" mocap="true" pos="-8.760000000000002 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_45" mocap="true" pos="-8.74 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_46" mocap="true" pos="-8.72 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_47" mocap="true" pos="-8.700000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_48" mocap="true" pos="-8.680000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_49" mocap="true" pos="-8.66 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_50" mocap="true" pos="-8.64 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_51" mocap="true" pos="-8.620000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_52" mocap="true" pos="-8.600000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_53" mocap="true" pos="-8.58 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_54" mocap="true" pos="-8.56 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_55" mocap="true" pos="-8.540000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_56" mocap="true" pos="-8.520000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_57" mocap="true" pos="-8.5 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_58" mocap="true" pos="-8.48 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_59" mocap="true" pos="-8.46 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_60" mocap="true" pos="-8.440000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_61" mocap="true" pos="-8.42 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_62" mocap="true" pos="-8.4 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_63" mocap="true" pos="-8.38 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_64" mocap="true" pos="-8.360000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_65" mocap="true" pos="-8.34 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_66" mocap="true" pos="-8.32 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_67" mocap="true" pos="-8.3 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_68" mocap="true" pos="-8.280000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_69" mocap="true" pos="-8.260000000000002 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_70" mocap="true" pos="-8.24 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_71" mocap="true" pos="-8.22 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_72" mocap="true" pos="-8.200000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_73" mocap="true" pos="-8.180000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_74" mocap="true" pos="-8.16 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_75" mocap="true" pos="-8.14 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_76" mocap="true" pos="-8.120000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_77" mocap="true" pos="-8.100000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_78" mocap="true" pos="-8.08 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_79" mocap="true" pos="-8.06 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_80" mocap="true" pos="-8.040000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="entry_reel_guide_81" mocap="true" pos="-8.020000000000001 2.7 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <flexcomp name="entry_webbing" type="direct" dim="2" point="-0.8397983431 0.002439281532 0.9475 -0.8397983431 0.002439281532 0.98 -0.8397983431 0.002439281532 1.0125 -0.82 0 0.9475 -0.82 0 0.98 -0.82 0 1.0125 -0.8 0 0.9475 -0.8 0 0.98 -0.8 0 1.0125 -0.78 0 0.9475 -0.78 0 0.98 -0.78 0 1.0125 -0.76 0 0.9475 -0.76 0 0.98 -0.76 0 1.0125 -0.74 0 0.9475 -0.74 0 0.98 -0.74 0 1.0125 -0.72 0 0.9475 -0.72 0 0.98 -0.72 0 1.0125 -0.7 0 0.9475 -0.7 0 0.98 -0.7 0 1.0125 -0.68 0 0.9475 -0.68 0 0.98 -0.68 0 1.0125 -0.66 0 0.9475 -0.66 0 0.98 -0.66 0 1.0125 -0.64 0 0.9475 -0.64 0 0.98 -0.64 0 1.0125 -0.62 0 0.9475 -0.62 0 0.98 -0.62 0 1.0125 -0.6 0 0.9475 -0.6 0 0.98 -0.6 0 1.0125 -0.58 0 0.9475 -0.58 0 0.98 -0.58 0 1.0125 -0.56 0 0.9475 -0.56 0 0.98 -0.56 0 1.0125 -0.54 0 0.9475 -0.54 0 0.98 -0.54 0 1.0125 -0.52 0 0.9475 -0.52 0 0.98 -0.52 0 1.0125 -0.5 0 0.9475 -0.5 0 0.98 -0.5 0 1.0125 -0.48 0 0.9475 -0.48 0 0.98 -0.48 0 1.0125 -0.46 0 0.9475 -0.46 0 0.98 -0.46 0 1.0125 -0.44 0 0.9475 -0.44 0 0.98 -0.44 0 1.0125 -0.42 0 0.9475 -0.42 0 0.98 -0.42 0 1.0125 -0.4 0 0.9475 -0.4 0 0.98 -0.4 0 1.0125 -0.38 0 0.9475 -0.38 0 0.98 -0.38 0 1.0125 -0.36 0 0.9475 -0.36 0 0.98 -0.36 0 1.0125 -0.34 0 0.9475 -0.34 0 0.98 -0.34 0 1.0125 -0.32 0 0.9475 -0.32 0 0.98 -0.32 0 1.0125 -0.3 0 0.9475 -0.3 0 0.98 -0.3 0 1.0125 -0.28 0 0.9475 -0.28 0 0.98 -0.28 0 1.0125 -0.26 0 0.9475 -0.26 0 0.98 -0.26 0 1.0125 -0.24 0 0.9475 -0.24 0 0.98 -0.24 0 1.0125 -0.22 0 0.9475 -0.22 0 0.98 -0.22 0 1.0125 -0.2 0 0.9475 -0.2 0 0.98 -0.2 0 1.0125 -0.18 0 0.9475 -0.18 0 0.98 -0.18 0 1.0125 -0.16 0 0.9475 -0.16 0 0.98 -0.16 0 1.0125 -0.14 0 0.9475 -0.14 0 0.98 -0.14 0 1.0125 -0.12 0 0.9475 -0.12 0 0.98 -0.12 0 1.0125 -0.1 0 0.9475 -0.1 0 0.98 -0.1 0 1.0125 -0.08 0 0.9475 -0.08 0 0.98 -0.08 0 1.0125 -0.06 0 0.9475 -0.06 0 0.98 -0.06 0 1.0125 -0.04 0 0.9475 -0.04 0 0.98 -0.04 0 1.0125 -0.02 0 0.9475 -0.02 0 0.98 -0.02 0 1.0125 0 0 0.9475 0 0 0.98 0 0 1.0125 0.02 0 0.9475 0.02 0 0.98 0.02 0 1.0125 0.04 0 0.9475 0.04 0 0.98 0.04 0 1.0125 0.06 0 0.9475 0.06 0 0.98 0.06 0 1.0125 0.08 0 0.9475 0.08 0 0.98 0.08 0 1.0125 0.1 0 0.9475 0.1 0 0.98 0.1 0 1.0125 0.12 0 0.9475 0.12 0 0.98 0.12 0 1.0125 0.14 0 0.9475 0.14 0 0.98 0.14 0 1.0125 0.16 0 0.9475 0.16 0 0.98 0.16 0 1.0125 0.18 0 0.9475 0.18 0 0.98 0.18 0 1.0125 0.2 0 0.9475 0.2 0 0.98 0.2 0 1.0125 0.22 0 0.9475 0.22 0 0.98 0.22 0 1.0125 0.24 0 0.9475 0.24 0 0.98 0.24 0 1.0125 0.26 0 0.9475 0.26 0 0.98 0.26 0 1.0125 0.28 0 0.9475 0.28 0 0.98 0.28 0 1.0125 0.3 0 0.9475 0.3 0 0.98 0.3 0 1.0125 0.32 0 0.9475 0.32 0 0.98 0.32 0 1.0125 0.34 0 0.9475 0.34 0 0.98 0.34 0 1.0125 0.36 0 0.9475 0.36 0 0.98 0.36 0 1.0125 0.38 0 0.9475 0.38 0 0.98 0.38 0 1.0125 0.4 0 0.9475 0.4 0 0.98 0.4 0 1.0125 0.42 0 0.9475 0.42 0 0.98 0.42 0 1.0125 0.44 0 0.9475 0.44 0 0.98 0.44 0 1.0125 0.46 0 0.9475 0.46 0 0.98 0.46 0 1.0125 0.48 0 0.9475 0.48 0 0.98 0.48 0 1.0125 0.5 0 0.9475 0.5 0 0.98 0.5 0 1.0125 0.52 0 0.9475 0.52 0 0.98 0.52 0 1.0125 0.54 0 0.9475 0.54 0 0.98 0.54 0 1.0125 0.56 0 0.9475 0.56 0 0.98 0.56 0 1.0125 0.58 0 0.9475 0.58 0 0.98 0.58 0 1.0125 0.6 0 0.9475 0.6 0 0.98 0.6 0 1.0125 0.62 0 0.9475 0.62 0 0.98 0.62 0 1.0125 0.64 0 0.9475 0.64 0 0.98 0.64 0 1.0125 0.66 0 0.9475 0.66 0 0.98 0.66 0 1.0125 0.68 0 0.9475 0.68 0 0.98 0.68 0 1.0125 0.7 0 0.9475 0.7 0 0.98 0.7 0 1.0125 0.72 0 0.9475 0.72 0 0.98 0.72 0 1.0125 0.74 0 0.9475 0.74 0 0.98 0.74 0 1.0125 0.76 0 0.9475 0.76 0 0.98 0.76 0 1.0125 0.78 0 0.9475 0.78 0 0.98 0.78 0 1.0125" element="0 3 1 1 3 4 1 4 2 2 4 5 3 6 4 4 6 7 4 7 5 5 7 8 6 9 7 7 9 10 7 10 8 8 10 11 9 12 10 10 12 13 10 13 11 11 13 14 12 15 13 13 15 16 13 16 14 14 16 17 15 18 16 16 18 19 16 19 17 17 19 20 18 21 19 19 21 22 19 22 20 20 22 23 21 24 22 22 24 25 22 25 23 23 25 26 24 27 25 25 27 28 25 28 26 26 28 29 27 30 28 28 30 31 28 31 29 29 31 32 30 33 31 31 33 34 31 34 32 32 34 35 33 36 34 34 36 37 34 37 35 35 37 38 36 39 37 37 39 40 37 40 38 38 40 41 39 42 40 40 42 43 40 43 41 41 43 44 42 45 43 43 45 46 43 46 44 44 46 47 45 48 46 46 48 49 46 49 47 47 49 50 48 51 49 49 51 52 49 52 50 50 52 53 51 54 52 52 54 55 52 55 53 53 55 56 54 57 55 55 57 58 55 58 56 56 58 59 57 60 58 58 60 61 58 61 59 59 61 62 60 63 61 61 63 64 61 64 62 62 64 65 63 66 64 64 66 67 64 67 65 65 67 68 66 69 67 67 69 70 67 70 68 68 70 71 69 72 70 70 72 73 70 73 71 71 73 74 72 75 73 73 75 76 73 76 74 74 76 77 75 78 76 76 78 79 76 79 77 77 79 80 78 81 79 79 81 82 79 82 80 80 82 83 81 84 82 82 84 85 82 85 83 83 85 86 84 87 85 85 87 88 85 88 86 86 88 89 87 90 88 88 90 91 88 91 89 89 91 92 90 93 91 91 93 94 91 94 92 92 94 95 93 96 94 94 96 97 94 97 95 95 97 98 96 99 97 97 99 100 97 100 98 98 100 101 99 102 100 100 102 103 100 103 101 101 103 104 102 105 103 103 105 106 103 106 104 104 106 107 105 108 106 106 108 109 106 109 107 107 109 110 108 111 109 109 111 112 109 112 110 110 112 113 111 114 112 112 114 115 112 115 113 113 115 116 114 117 115 115 117 118 115 118 116 116 118 119 117 120 118 118 120 121 118 121 119 119 121 122 120 123 121 121 123 124 121 124 122 122 124 125 123 126 124 124 126 127 124 127 125 125 127 128 126 129 127 127 129 130 127 130 128 128 130 131 129 132 130 130 132 133 130 133 131 131 133 134 132 135 133 133 135 136 133 136 134 134 136 137 135 138 136 136 138 139 136 139 137 137 139 140 138 141 139 139 141 142 139 142 140 140 142 143 141 144 142 142 144 145 142 145 143 143 145 146 144 147 145 145 147 148 145 148 146 146 148 149 147 150 148 148 150 151 148 151 149 149 151 152 150 153 151 151 153 154 151 154 152 152 154 155 153 156 154 154 156 157 154 157 155 155 157 158 156 159 157 157 159 160 157 160 158 158 160 161 159 162 160 160 162 163 160 163 161 161 163 164 162 165 163 163 165 166 163 166 164 164 166 167 165 168 166 166 168 169 166 169 167 167 169 170 168 171 169 169 171 172 169 172 170 170 172 173 171 174 172 172 174 175 172 175 173 173 175 176 174 177 175 175 177 178 175 178 176 176 178 179 177 180 178 178 180 181 178 181 179 179 181 182 180 183 181 181 183 184 181 184 182 182 184 185 183 186 184 184 186 187 184 187 185 185 187 188 186 189 187 187 189 190 187 190 188 188 190 191 189 192 190 190 192 193 190 193 191 191 193 194 192 195 193 193 195 196 193 196 194 194 196 197 195 198 196 196 198 199 196 199 197 197 199 200 198 201 199 199 201 202 199 202 200 200 202 203 201 204 202 202 204 205 202 205 203 203 205 206 204 207 205 205 207 208 205 208 206 206 208 209 207 210 208 208 210 211 208 211 209 209 211 212 210 213 211 211 213 214 211 214 212 212 214 215 213 216 214 214 216 217 214 217 215 215 217 218 216 219 217 217 219 220 217 220 218 218 220 221 219 222 220 220 222 223 220 223 221 221 223 224 222 225 223 223 225 226 223 226 224 224 226 227 225 228 226 226 228 229 226 229 227 227 229 230 228 231 229 229 231 232 229 232 230 230 232 233 231 234 232 232 234 235 232 235 233 233 235 236 234 237 235 235 237 238 235 238 236 236 238 239 237 240 238 238 240 241 238 241 239 239 241 242 240 243 241 241 243 244 241 244 242 242 244 245" radius=".00035" mass=".07" rgba=".018 .04 .12 1" pos="-8.8 2.7 0.0">
+      <elasticity young="30000000" poisson=".3" thickness=".0006" elastic2d="bend" damping=".00002" />
+      <edge equality="true" solref=".0004 1" solimp=".99 .999 .0001" />
+      <contact contype="4" conaffinity="1" selfcollide="none" friction=".5 .005 .0001" solref=".001 1" />
+    </flexcomp>
+    <body name="entry_reel_parking_fixture" pos="-9.47 2.7 0.98">
+      <geom name="entry_parking_support" type="box" pos="0 0.024 0" size="0.025 0.005 0.045" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    </body>
+    <geom name="exit_reel_base" type="cylinder" pos="-7.62 -1.72 0.022" size=".17 .022" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="exit_reel_post" type="cylinder" pos="-7.62 -1.72 0.49" size=".022 .46" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="exit_reel_collar" type="cylinder" pos="-7.62 -1.72 0.885" size="0.04 0.03" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="exit_receiver_base" type="cylinder" pos="-5.96 -1.8 0.022" size=".17 .022" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="exit_receiver_post" type="cylinder" pos="-5.96 -1.8 0.49" size=".022 .46" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="exit_receiver_collar" type="cylinder" pos="-5.96 -1.8 0.885" size="0.04 0.03" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="exit_reel_lower_flange" type="cylinder" pos="-7.62 -1.72 0.94" size="0.095 0.004" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="exit_reel_upper_flange" type="cylinder" pos="-7.62 -1.72 1.02" size="0.095 0.004" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="exit_reel_core" type="cylinder" pos="-7.62 -1.72 0.98" size="0.071 0.035" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="exit_receiver_rail_-1" type="box" pos="-5.982 -1.818 1.004" size="0.025 0.005 0.05" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <geom name="exit_receiver_rail_1" type="box" pos="-5.982 -1.782 1.004" size="0.025 0.005 0.05" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <geom name="exit_receiver_seat" type="box" pos="-5.975 -1.8 0.946" size="0.018 0.022 0.004" rgba=".025 .03 .035 1" contype="1" conaffinity="2" />
+    <body name="exit_latch_carriage" pos="-6.02 -1.8 0.98">
+      <joint name="exit_latch_lift" type="slide" axis="0 0 1" range="0 .045" limited="true" damping="2" stiffness="8" />
+      <geom name="exit_carriage_visual" type="box" pos="0.04 0 0" size="0.009 0.009 0.03" rgba=".025 .03 .035 1" mass=".02" contype="0" conaffinity="0" />
+    </body>
+    <body name="exit_belt_handle" pos="-6.02 -1.8 0.98">
+      <freejoint name="exit_handle_free" />
+      <geom name="exit_handle_grip" type="box" pos="0 0 0" size="0.017 0.009 0.044" rgba=".025 .03 .035 1" mass=".045" contype="2" conaffinity="9" />
+      <geom name="exit_handle_tongue" type="box" pos="0.025 0 0" size="0.012 0.008 0.03" rgba=".025 .03 .035 1" mass=".008" contype="2" conaffinity="1" />
+    </body>
+    <body name="exit_belt_gripper" mocap="true" pos="-6.02 -1.8 0.98">
+      <geom name="exit_gripper_mount" type="box" pos="0 0 0.08" size="0.035 0.035 0.015" rgba=".4 .45 .5 1" contype="0" conaffinity="0" />
+      <geom name="exit_gripper_pad_-1" type="box" pos="0 -0.013 0" size="0.018 0.005 0.023" rgba=".22 .25 .3 1" contype="8" conaffinity="2" friction="1 .005 .0001" />
+      <geom name="exit_gripper_pad_1" type="box" pos="0 0.013 0" size="0.018 0.005 0.023" rgba=".22 .25 .3 1" contype="8" conaffinity="2" friction="1 .005 .0001" />
+    </body>
+    <body name="exit_reel_guide_0" mocap="true" pos="-7.6397983431 -1.797560718468 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_1" mocap="true" pos="-7.62 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_2" mocap="true" pos="-7.6 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_3" mocap="true" pos="-7.58 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_4" mocap="true" pos="-7.56 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_5" mocap="true" pos="-7.54 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_6" mocap="true" pos="-7.52 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_7" mocap="true" pos="-7.5 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_8" mocap="true" pos="-7.4799999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_9" mocap="true" pos="-7.46 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_10" mocap="true" pos="-7.4399999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_11" mocap="true" pos="-7.42 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_12" mocap="true" pos="-7.3999999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_13" mocap="true" pos="-7.38 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_14" mocap="true" pos="-7.359999999999999 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_15" mocap="true" pos="-7.34 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_16" mocap="true" pos="-7.32 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_17" mocap="true" pos="-7.3 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_18" mocap="true" pos="-7.279999999999999 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_19" mocap="true" pos="-7.26 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_20" mocap="true" pos="-7.24 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_21" mocap="true" pos="-7.22 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_22" mocap="true" pos="-7.2 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_23" mocap="true" pos="-7.18 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_24" mocap="true" pos="-7.16 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_25" mocap="true" pos="-7.14 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_26" mocap="true" pos="-7.12 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_27" mocap="true" pos="-7.1 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_28" mocap="true" pos="-7.08 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_29" mocap="true" pos="-7.06 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_30" mocap="true" pos="-7.04 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_31" mocap="true" pos="-7.02 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_32" mocap="true" pos="-7.0 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_33" mocap="true" pos="-6.9799999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_34" mocap="true" pos="-6.96 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_35" mocap="true" pos="-6.9399999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_36" mocap="true" pos="-6.92 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_37" mocap="true" pos="-6.8999999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_38" mocap="true" pos="-6.88 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_39" mocap="true" pos="-6.859999999999999 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_40" mocap="true" pos="-6.84 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_41" mocap="true" pos="-6.819999999999999 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_42" mocap="true" pos="-6.8 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_43" mocap="true" pos="-6.78 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_44" mocap="true" pos="-6.76 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_45" mocap="true" pos="-6.74 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_46" mocap="true" pos="-6.72 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_47" mocap="true" pos="-6.7 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_48" mocap="true" pos="-6.68 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_49" mocap="true" pos="-6.66 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_50" mocap="true" pos="-6.64 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_51" mocap="true" pos="-6.62 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_52" mocap="true" pos="-6.6 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_53" mocap="true" pos="-6.58 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_54" mocap="true" pos="-6.56 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_55" mocap="true" pos="-6.54 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_56" mocap="true" pos="-6.52 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_57" mocap="true" pos="-6.5 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_58" mocap="true" pos="-6.4799999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_59" mocap="true" pos="-6.46 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_60" mocap="true" pos="-6.4399999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_61" mocap="true" pos="-6.42 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_62" mocap="true" pos="-6.3999999999999995 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_63" mocap="true" pos="-6.38 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_64" mocap="true" pos="-6.359999999999999 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_65" mocap="true" pos="-6.34 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_66" mocap="true" pos="-6.32 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_67" mocap="true" pos="-6.3 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_68" mocap="true" pos="-6.279999999999999 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_69" mocap="true" pos="-6.26 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_70" mocap="true" pos="-6.24 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_71" mocap="true" pos="-6.22 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_72" mocap="true" pos="-6.2 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_73" mocap="true" pos="-6.18 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_74" mocap="true" pos="-6.16 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_75" mocap="true" pos="-6.14 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_76" mocap="true" pos="-6.12 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_77" mocap="true" pos="-6.1 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_78" mocap="true" pos="-6.08 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_79" mocap="true" pos="-6.06 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_80" mocap="true" pos="-6.04 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <body name="exit_reel_guide_81" mocap="true" pos="-6.02 -1.8 0.98">
+      <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+    </body>
+    <flexcomp name="exit_webbing" type="direct" dim="2" point="-0.8397983431 0.002439281532 0.9475 -0.8397983431 0.002439281532 0.98 -0.8397983431 0.002439281532 1.0125 -0.82 0 0.9475 -0.82 0 0.98 -0.82 0 1.0125 -0.8 0 0.9475 -0.8 0 0.98 -0.8 0 1.0125 -0.78 0 0.9475 -0.78 0 0.98 -0.78 0 1.0125 -0.76 0 0.9475 -0.76 0 0.98 -0.76 0 1.0125 -0.74 0 0.9475 -0.74 0 0.98 -0.74 0 1.0125 -0.72 0 0.9475 -0.72 0 0.98 -0.72 0 1.0125 -0.7 0 0.9475 -0.7 0 0.98 -0.7 0 1.0125 -0.68 0 0.9475 -0.68 0 0.98 -0.68 0 1.0125 -0.66 0 0.9475 -0.66 0 0.98 -0.66 0 1.0125 -0.64 0 0.9475 -0.64 0 0.98 -0.64 0 1.0125 -0.62 0 0.9475 -0.62 0 0.98 -0.62 0 1.0125 -0.6 0 0.9475 -0.6 0 0.98 -0.6 0 1.0125 -0.58 0 0.9475 -0.58 0 0.98 -0.58 0 1.0125 -0.56 0 0.9475 -0.56 0 0.98 -0.56 0 1.0125 -0.54 0 0.9475 -0.54 0 0.98 -0.54 0 1.0125 -0.52 0 0.9475 -0.52 0 0.98 -0.52 0 1.0125 -0.5 0 0.9475 -0.5 0 0.98 -0.5 0 1.0125 -0.48 0 0.9475 -0.48 0 0.98 -0.48 0 1.0125 -0.46 0 0.9475 -0.46 0 0.98 -0.46 0 1.0125 -0.44 0 0.9475 -0.44 0 0.98 -0.44 0 1.0125 -0.42 0 0.9475 -0.42 0 0.98 -0.42 0 1.0125 -0.4 0 0.9475 -0.4 0 0.98 -0.4 0 1.0125 -0.38 0 0.9475 -0.38 0 0.98 -0.38 0 1.0125 -0.36 0 0.9475 -0.36 0 0.98 -0.36 0 1.0125 -0.34 0 0.9475 -0.34 0 0.98 -0.34 0 1.0125 -0.32 0 0.9475 -0.32 0 0.98 -0.32 0 1.0125 -0.3 0 0.9475 -0.3 0 0.98 -0.3 0 1.0125 -0.28 0 0.9475 -0.28 0 0.98 -0.28 0 1.0125 -0.26 0 0.9475 -0.26 0 0.98 -0.26 0 1.0125 -0.24 0 0.9475 -0.24 0 0.98 -0.24 0 1.0125 -0.22 0 0.9475 -0.22 0 0.98 -0.22 0 1.0125 -0.2 0 0.9475 -0.2 0 0.98 -0.2 0 1.0125 -0.18 0 0.9475 -0.18 0 0.98 -0.18 0 1.0125 -0.16 0 0.9475 -0.16 0 0.98 -0.16 0 1.0125 -0.14 0 0.9475 -0.14 0 0.98 -0.14 0 1.0125 -0.12 0 0.9475 -0.12 0 0.98 -0.12 0 1.0125 -0.1 0 0.9475 -0.1 0 0.98 -0.1 0 1.0125 -0.08 0 0.9475 -0.08 0 0.98 -0.08 0 1.0125 -0.06 0 0.9475 -0.06 0 0.98 -0.06 0 1.0125 -0.04 0 0.9475 -0.04 0 0.98 -0.04 0 1.0125 -0.02 0 0.9475 -0.02 0 0.98 -0.02 0 1.0125 0 0 0.9475 0 0 0.98 0 0 1.0125 0.02 0 0.9475 0.02 0 0.98 0.02 0 1.0125 0.04 0 0.9475 0.04 0 0.98 0.04 0 1.0125 0.06 0 0.9475 0.06 0 0.98 0.06 0 1.0125 0.08 0 0.9475 0.08 0 0.98 0.08 0 1.0125 0.1 0 0.9475 0.1 0 0.98 0.1 0 1.0125 0.12 0 0.9475 0.12 0 0.98 0.12 0 1.0125 0.14 0 0.9475 0.14 0 0.98 0.14 0 1.0125 0.16 0 0.9475 0.16 0 0.98 0.16 0 1.0125 0.18 0 0.9475 0.18 0 0.98 0.18 0 1.0125 0.2 0 0.9475 0.2 0 0.98 0.2 0 1.0125 0.22 0 0.9475 0.22 0 0.98 0.22 0 1.0125 0.24 0 0.9475 0.24 0 0.98 0.24 0 1.0125 0.26 0 0.9475 0.26 0 0.98 0.26 0 1.0125 0.28 0 0.9475 0.28 0 0.98 0.28 0 1.0125 0.3 0 0.9475 0.3 0 0.98 0.3 0 1.0125 0.32 0 0.9475 0.32 0 0.98 0.32 0 1.0125 0.34 0 0.9475 0.34 0 0.98 0.34 0 1.0125 0.36 0 0.9475 0.36 0 0.98 0.36 0 1.0125 0.38 0 0.9475 0.38 0 0.98 0.38 0 1.0125 0.4 0 0.9475 0.4 0 0.98 0.4 0 1.0125 0.42 0 0.9475 0.42 0 0.98 0.42 0 1.0125 0.44 0 0.9475 0.44 0 0.98 0.44 0 1.0125 0.46 0 0.9475 0.46 0 0.98 0.46 0 1.0125 0.48 0 0.9475 0.48 0 0.98 0.48 0 1.0125 0.5 0 0.9475 0.5 0 0.98 0.5 0 1.0125 0.52 0 0.9475 0.52 0 0.98 0.52 0 1.0125 0.54 0 0.9475 0.54 0 0.98 0.54 0 1.0125 0.56 0 0.9475 0.56 0 0.98 0.56 0 1.0125 0.58 0 0.9475 0.58 0 0.98 0.58 0 1.0125 0.6 0 0.9475 0.6 0 0.98 0.6 0 1.0125 0.62 0 0.9475 0.62 0 0.98 0.62 0 1.0125 0.64 0 0.9475 0.64 0 0.98 0.64 0 1.0125 0.66 0 0.9475 0.66 0 0.98 0.66 0 1.0125 0.68 0 0.9475 0.68 0 0.98 0.68 0 1.0125 0.7 0 0.9475 0.7 0 0.98 0.7 0 1.0125 0.72 0 0.9475 0.72 0 0.98 0.72 0 1.0125 0.74 0 0.9475 0.74 0 0.98 0.74 0 1.0125 0.76 0 0.9475 0.76 0 0.98 0.76 0 1.0125 0.78 0 0.9475 0.78 0 0.98 0.78 0 1.0125" element="0 3 1 1 3 4 1 4 2 2 4 5 3 6 4 4 6 7 4 7 5 5 7 8 6 9 7 7 9 10 7 10 8 8 10 11 9 12 10 10 12 13 10 13 11 11 13 14 12 15 13 13 15 16 13 16 14 14 16 17 15 18 16 16 18 19 16 19 17 17 19 20 18 21 19 19 21 22 19 22 20 20 22 23 21 24 22 22 24 25 22 25 23 23 25 26 24 27 25 25 27 28 25 28 26 26 28 29 27 30 28 28 30 31 28 31 29 29 31 32 30 33 31 31 33 34 31 34 32 32 34 35 33 36 34 34 36 37 34 37 35 35 37 38 36 39 37 37 39 40 37 40 38 38 40 41 39 42 40 40 42 43 40 43 41 41 43 44 42 45 43 43 45 46 43 46 44 44 46 47 45 48 46 46 48 49 46 49 47 47 49 50 48 51 49 49 51 52 49 52 50 50 52 53 51 54 52 52 54 55 52 55 53 53 55 56 54 57 55 55 57 58 55 58 56 56 58 59 57 60 58 58 60 61 58 61 59 59 61 62 60 63 61 61 63 64 61 64 62 62 64 65 63 66 64 64 66 67 64 67 65 65 67 68 66 69 67 67 69 70 67 70 68 68 70 71 69 72 70 70 72 73 70 73 71 71 73 74 72 75 73 73 75 76 73 76 74 74 76 77 75 78 76 76 78 79 76 79 77 77 79 80 78 81 79 79 81 82 79 82 80 80 82 83 81 84 82 82 84 85 82 85 83 83 85 86 84 87 85 85 87 88 85 88 86 86 88 89 87 90 88 88 90 91 88 91 89 89 91 92 90 93 91 91 93 94 91 94 92 92 94 95 93 96 94 94 96 97 94 97 95 95 97 98 96 99 97 97 99 100 97 100 98 98 100 101 99 102 100 100 102 103 100 103 101 101 103 104 102 105 103 103 105 106 103 106 104 104 106 107 105 108 106 106 108 109 106 109 107 107 109 110 108 111 109 109 111 112 109 112 110 110 112 113 111 114 112 112 114 115 112 115 113 113 115 116 114 117 115 115 117 118 115 118 116 116 118 119 117 120 118 118 120 121 118 121 119 119 121 122 120 123 121 121 123 124 121 124 122 122 124 125 123 126 124 124 126 127 124 127 125 125 127 128 126 129 127 127 129 130 127 130 128 128 130 131 129 132 130 130 132 133 130 133 131 131 133 134 132 135 133 133 135 136 133 136 134 134 136 137 135 138 136 136 138 139 136 139 137 137 139 140 138 141 139 139 141 142 139 142 140 140 142 143 141 144 142 142 144 145 142 145 143 143 145 146 144 147 145 145 147 148 145 148 146 146 148 149 147 150 148 148 150 151 148 151 149 149 151 152 150 153 151 151 153 154 151 154 152 152 154 155 153 156 154 154 156 157 154 157 155 155 157 158 156 159 157 157 159 160 157 160 158 158 160 161 159 162 160 160 162 163 160 163 161 161 163 164 162 165 163 163 165 166 163 166 164 164 166 167 165 168 166 166 168 169 166 169 167 167 169 170 168 171 169 169 171 172 169 172 170 170 172 173 171 174 172 172 174 175 172 175 173 173 175 176 174 177 175 175 177 178 175 178 176 176 178 179 177 180 178 178 180 181 178 181 179 179 181 182 180 183 181 181 183 184 181 184 182 182 184 185 183 186 184 184 186 187 184 187 185 185 187 188 186 189 187 187 189 190 187 190 188 188 190 191 189 192 190 190 192 193 190 193 191 191 193 194 192 195 193 193 195 196 193 196 194 194 196 197 195 198 196 196 198 199 196 199 197 197 199 200 198 201 199 199 201 202 199 202 200 200 202 203 201 204 202 202 204 205 202 205 203 203 205 206 204 207 205 205 207 208 205 208 206 206 208 209 207 210 208 208 210 211 208 211 209 209 211 212 210 213 211 211 213 214 211 214 212 212 214 215 213 216 214 214 216 217 214 217 215 215 217 218 216 219 217 217 219 220 217 220 218 218 220 221 219 222 220 220 222 223 220 223 221 221 223 224 222 225 223 223 225 226 223 226 224 224 226 227 225 228 226 226 228 229 226 229 227 227 229 230 228 231 229 229 231 232 229 232 230 230 232 233 231 234 232 232 234 235 232 235 233 233 235 236 234 237 235 235 237 238 235 238 236 236 238 239 237 240 238 238 240 241 238 241 239 239 241 242 240 243 241 241 243 244 241 244 242 242 244 245" radius=".00035" mass=".07" rgba=".018 .04 .12 1" pos="-6.8 -1.8 0.0">
+      <elasticity young="30000000" poisson=".3" thickness=".0006" elastic2d="bend" damping=".00002" />
+      <edge equality="true" solref=".0004 1" solimp=".99 .999 .0001" />
+      <contact contype="4" conaffinity="1" selfcollide="none" friction=".5 .005 .0001" solref=".001 1" />
+    </flexcomp>
+    <body name="exit_reel_parking_fixture" pos="-7.47 -1.8 0.98">
+      <geom name="exit_parking_support" type="box" pos="0 0.024 0" size="0.025 0.005 0.045" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    </body>
+  </worldbody>
+  <option timestep=".0002" integrator="implicitfast" solver="Newton" iterations="60" tolerance="1e-8" jacobian="sparse" />
+  <size memory="256M" />
+  <equality>
+    <connect name="entry_feed_0_0" body1="entry_webbing_0" body2="entry_reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_0_1" body1="entry_webbing_1" body2="entry_reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_0_2" body1="entry_webbing_2" body2="entry_reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_1_0" body1="entry_webbing_3" body2="entry_reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_1_1" body1="entry_webbing_4" body2="entry_reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_1_2" body1="entry_webbing_5" body2="entry_reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_2_0" body1="entry_webbing_6" body2="entry_reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_2_1" body1="entry_webbing_7" body2="entry_reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_2_2" body1="entry_webbing_8" body2="entry_reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_3_0" body1="entry_webbing_9" body2="entry_reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_3_1" body1="entry_webbing_10" body2="entry_reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_3_2" body1="entry_webbing_11" body2="entry_reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_4_0" body1="entry_webbing_12" body2="entry_reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_4_1" body1="entry_webbing_13" body2="entry_reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_4_2" body1="entry_webbing_14" body2="entry_reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_5_0" body1="entry_webbing_15" body2="entry_reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_5_1" body1="entry_webbing_16" body2="entry_reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_5_2" body1="entry_webbing_17" body2="entry_reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_6_0" body1="entry_webbing_18" body2="entry_reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_6_1" body1="entry_webbing_19" body2="entry_reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_6_2" body1="entry_webbing_20" body2="entry_reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_7_0" body1="entry_webbing_21" body2="entry_reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_7_1" body1="entry_webbing_22" body2="entry_reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_7_2" body1="entry_webbing_23" body2="entry_reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_8_0" body1="entry_webbing_24" body2="entry_reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_8_1" body1="entry_webbing_25" body2="entry_reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_8_2" body1="entry_webbing_26" body2="entry_reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_9_0" body1="entry_webbing_27" body2="entry_reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_9_1" body1="entry_webbing_28" body2="entry_reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_9_2" body1="entry_webbing_29" body2="entry_reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_10_0" body1="entry_webbing_30" body2="entry_reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_10_1" body1="entry_webbing_31" body2="entry_reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_10_2" body1="entry_webbing_32" body2="entry_reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_11_0" body1="entry_webbing_33" body2="entry_reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_11_1" body1="entry_webbing_34" body2="entry_reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_11_2" body1="entry_webbing_35" body2="entry_reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_12_0" body1="entry_webbing_36" body2="entry_reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_12_1" body1="entry_webbing_37" body2="entry_reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_12_2" body1="entry_webbing_38" body2="entry_reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_13_0" body1="entry_webbing_39" body2="entry_reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_13_1" body1="entry_webbing_40" body2="entry_reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_13_2" body1="entry_webbing_41" body2="entry_reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_14_0" body1="entry_webbing_42" body2="entry_reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_14_1" body1="entry_webbing_43" body2="entry_reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_14_2" body1="entry_webbing_44" body2="entry_reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_15_0" body1="entry_webbing_45" body2="entry_reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_15_1" body1="entry_webbing_46" body2="entry_reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_15_2" body1="entry_webbing_47" body2="entry_reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_16_0" body1="entry_webbing_48" body2="entry_reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_16_1" body1="entry_webbing_49" body2="entry_reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_16_2" body1="entry_webbing_50" body2="entry_reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_17_0" body1="entry_webbing_51" body2="entry_reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_17_1" body1="entry_webbing_52" body2="entry_reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_17_2" body1="entry_webbing_53" body2="entry_reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_18_0" body1="entry_webbing_54" body2="entry_reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_18_1" body1="entry_webbing_55" body2="entry_reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_18_2" body1="entry_webbing_56" body2="entry_reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_19_0" body1="entry_webbing_57" body2="entry_reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_19_1" body1="entry_webbing_58" body2="entry_reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_19_2" body1="entry_webbing_59" body2="entry_reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_20_0" body1="entry_webbing_60" body2="entry_reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_20_1" body1="entry_webbing_61" body2="entry_reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_20_2" body1="entry_webbing_62" body2="entry_reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_21_0" body1="entry_webbing_63" body2="entry_reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_21_1" body1="entry_webbing_64" body2="entry_reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_21_2" body1="entry_webbing_65" body2="entry_reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_22_0" body1="entry_webbing_66" body2="entry_reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_22_1" body1="entry_webbing_67" body2="entry_reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_22_2" body1="entry_webbing_68" body2="entry_reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_23_0" body1="entry_webbing_69" body2="entry_reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_23_1" body1="entry_webbing_70" body2="entry_reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_23_2" body1="entry_webbing_71" body2="entry_reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_24_0" body1="entry_webbing_72" body2="entry_reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_24_1" body1="entry_webbing_73" body2="entry_reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_24_2" body1="entry_webbing_74" body2="entry_reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_25_0" body1="entry_webbing_75" body2="entry_reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_25_1" body1="entry_webbing_76" body2="entry_reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_25_2" body1="entry_webbing_77" body2="entry_reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_26_0" body1="entry_webbing_78" body2="entry_reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_26_1" body1="entry_webbing_79" body2="entry_reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_26_2" body1="entry_webbing_80" body2="entry_reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_27_0" body1="entry_webbing_81" body2="entry_reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_27_1" body1="entry_webbing_82" body2="entry_reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_27_2" body1="entry_webbing_83" body2="entry_reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_28_0" body1="entry_webbing_84" body2="entry_reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_28_1" body1="entry_webbing_85" body2="entry_reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_28_2" body1="entry_webbing_86" body2="entry_reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_29_0" body1="entry_webbing_87" body2="entry_reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_29_1" body1="entry_webbing_88" body2="entry_reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_29_2" body1="entry_webbing_89" body2="entry_reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_30_0" body1="entry_webbing_90" body2="entry_reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_30_1" body1="entry_webbing_91" body2="entry_reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_30_2" body1="entry_webbing_92" body2="entry_reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_31_0" body1="entry_webbing_93" body2="entry_reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_31_1" body1="entry_webbing_94" body2="entry_reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_31_2" body1="entry_webbing_95" body2="entry_reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_32_0" body1="entry_webbing_96" body2="entry_reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_32_1" body1="entry_webbing_97" body2="entry_reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_32_2" body1="entry_webbing_98" body2="entry_reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_33_0" body1="entry_webbing_99" body2="entry_reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_33_1" body1="entry_webbing_100" body2="entry_reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_33_2" body1="entry_webbing_101" body2="entry_reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_34_0" body1="entry_webbing_102" body2="entry_reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_34_1" body1="entry_webbing_103" body2="entry_reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_34_2" body1="entry_webbing_104" body2="entry_reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_35_0" body1="entry_webbing_105" body2="entry_reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_35_1" body1="entry_webbing_106" body2="entry_reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_35_2" body1="entry_webbing_107" body2="entry_reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_36_0" body1="entry_webbing_108" body2="entry_reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_36_1" body1="entry_webbing_109" body2="entry_reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_36_2" body1="entry_webbing_110" body2="entry_reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_37_0" body1="entry_webbing_111" body2="entry_reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_37_1" body1="entry_webbing_112" body2="entry_reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_37_2" body1="entry_webbing_113" body2="entry_reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_38_0" body1="entry_webbing_114" body2="entry_reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_38_1" body1="entry_webbing_115" body2="entry_reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_38_2" body1="entry_webbing_116" body2="entry_reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_39_0" body1="entry_webbing_117" body2="entry_reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_39_1" body1="entry_webbing_118" body2="entry_reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_39_2" body1="entry_webbing_119" body2="entry_reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_40_0" body1="entry_webbing_120" body2="entry_reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_40_1" body1="entry_webbing_121" body2="entry_reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_40_2" body1="entry_webbing_122" body2="entry_reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_41_0" body1="entry_webbing_123" body2="entry_reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_41_1" body1="entry_webbing_124" body2="entry_reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_41_2" body1="entry_webbing_125" body2="entry_reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_42_0" body1="entry_webbing_126" body2="entry_reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_42_1" body1="entry_webbing_127" body2="entry_reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_42_2" body1="entry_webbing_128" body2="entry_reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_43_0" body1="entry_webbing_129" body2="entry_reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_43_1" body1="entry_webbing_130" body2="entry_reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_43_2" body1="entry_webbing_131" body2="entry_reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_44_0" body1="entry_webbing_132" body2="entry_reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_44_1" body1="entry_webbing_133" body2="entry_reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_44_2" body1="entry_webbing_134" body2="entry_reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_45_0" body1="entry_webbing_135" body2="entry_reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_45_1" body1="entry_webbing_136" body2="entry_reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_45_2" body1="entry_webbing_137" body2="entry_reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_46_0" body1="entry_webbing_138" body2="entry_reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_46_1" body1="entry_webbing_139" body2="entry_reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_46_2" body1="entry_webbing_140" body2="entry_reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_47_0" body1="entry_webbing_141" body2="entry_reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_47_1" body1="entry_webbing_142" body2="entry_reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_47_2" body1="entry_webbing_143" body2="entry_reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_48_0" body1="entry_webbing_144" body2="entry_reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_48_1" body1="entry_webbing_145" body2="entry_reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_48_2" body1="entry_webbing_146" body2="entry_reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_49_0" body1="entry_webbing_147" body2="entry_reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_49_1" body1="entry_webbing_148" body2="entry_reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_49_2" body1="entry_webbing_149" body2="entry_reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_50_0" body1="entry_webbing_150" body2="entry_reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_50_1" body1="entry_webbing_151" body2="entry_reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_50_2" body1="entry_webbing_152" body2="entry_reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_51_0" body1="entry_webbing_153" body2="entry_reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_51_1" body1="entry_webbing_154" body2="entry_reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_51_2" body1="entry_webbing_155" body2="entry_reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_52_0" body1="entry_webbing_156" body2="entry_reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_52_1" body1="entry_webbing_157" body2="entry_reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_52_2" body1="entry_webbing_158" body2="entry_reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_53_0" body1="entry_webbing_159" body2="entry_reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_53_1" body1="entry_webbing_160" body2="entry_reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_53_2" body1="entry_webbing_161" body2="entry_reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_54_0" body1="entry_webbing_162" body2="entry_reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_54_1" body1="entry_webbing_163" body2="entry_reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_54_2" body1="entry_webbing_164" body2="entry_reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_55_0" body1="entry_webbing_165" body2="entry_reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_55_1" body1="entry_webbing_166" body2="entry_reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_55_2" body1="entry_webbing_167" body2="entry_reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_56_0" body1="entry_webbing_168" body2="entry_reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_56_1" body1="entry_webbing_169" body2="entry_reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_56_2" body1="entry_webbing_170" body2="entry_reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_57_0" body1="entry_webbing_171" body2="entry_reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_57_1" body1="entry_webbing_172" body2="entry_reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_57_2" body1="entry_webbing_173" body2="entry_reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_58_0" body1="entry_webbing_174" body2="entry_reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_58_1" body1="entry_webbing_175" body2="entry_reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_58_2" body1="entry_webbing_176" body2="entry_reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_59_0" body1="entry_webbing_177" body2="entry_reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_59_1" body1="entry_webbing_178" body2="entry_reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_59_2" body1="entry_webbing_179" body2="entry_reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_60_0" body1="entry_webbing_180" body2="entry_reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_60_1" body1="entry_webbing_181" body2="entry_reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_60_2" body1="entry_webbing_182" body2="entry_reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_61_0" body1="entry_webbing_183" body2="entry_reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_61_1" body1="entry_webbing_184" body2="entry_reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_61_2" body1="entry_webbing_185" body2="entry_reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_62_0" body1="entry_webbing_186" body2="entry_reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_62_1" body1="entry_webbing_187" body2="entry_reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_62_2" body1="entry_webbing_188" body2="entry_reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_63_0" body1="entry_webbing_189" body2="entry_reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_63_1" body1="entry_webbing_190" body2="entry_reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_63_2" body1="entry_webbing_191" body2="entry_reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_64_0" body1="entry_webbing_192" body2="entry_reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_64_1" body1="entry_webbing_193" body2="entry_reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_64_2" body1="entry_webbing_194" body2="entry_reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_65_0" body1="entry_webbing_195" body2="entry_reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_65_1" body1="entry_webbing_196" body2="entry_reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_65_2" body1="entry_webbing_197" body2="entry_reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_66_0" body1="entry_webbing_198" body2="entry_reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_66_1" body1="entry_webbing_199" body2="entry_reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_66_2" body1="entry_webbing_200" body2="entry_reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_67_0" body1="entry_webbing_201" body2="entry_reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_67_1" body1="entry_webbing_202" body2="entry_reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_67_2" body1="entry_webbing_203" body2="entry_reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_68_0" body1="entry_webbing_204" body2="entry_reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_68_1" body1="entry_webbing_205" body2="entry_reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_68_2" body1="entry_webbing_206" body2="entry_reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_69_0" body1="entry_webbing_207" body2="entry_reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_69_1" body1="entry_webbing_208" body2="entry_reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_69_2" body1="entry_webbing_209" body2="entry_reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_70_0" body1="entry_webbing_210" body2="entry_reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_70_1" body1="entry_webbing_211" body2="entry_reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_70_2" body1="entry_webbing_212" body2="entry_reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_71_0" body1="entry_webbing_213" body2="entry_reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_71_1" body1="entry_webbing_214" body2="entry_reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_71_2" body1="entry_webbing_215" body2="entry_reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_72_0" body1="entry_webbing_216" body2="entry_reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_72_1" body1="entry_webbing_217" body2="entry_reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_72_2" body1="entry_webbing_218" body2="entry_reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_73_0" body1="entry_webbing_219" body2="entry_reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_73_1" body1="entry_webbing_220" body2="entry_reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_73_2" body1="entry_webbing_221" body2="entry_reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_74_0" body1="entry_webbing_222" body2="entry_reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_74_1" body1="entry_webbing_223" body2="entry_reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_74_2" body1="entry_webbing_224" body2="entry_reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_75_0" body1="entry_webbing_225" body2="entry_reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_75_1" body1="entry_webbing_226" body2="entry_reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_75_2" body1="entry_webbing_227" body2="entry_reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_76_0" body1="entry_webbing_228" body2="entry_reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_76_1" body1="entry_webbing_229" body2="entry_reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_76_2" body1="entry_webbing_230" body2="entry_reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_77_0" body1="entry_webbing_231" body2="entry_reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_77_1" body1="entry_webbing_232" body2="entry_reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_77_2" body1="entry_webbing_233" body2="entry_reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_78_0" body1="entry_webbing_234" body2="entry_reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_78_1" body1="entry_webbing_235" body2="entry_reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_78_2" body1="entry_webbing_236" body2="entry_reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_79_0" body1="entry_webbing_237" body2="entry_reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_79_1" body1="entry_webbing_238" body2="entry_reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_79_2" body1="entry_webbing_239" body2="entry_reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_80_0" body1="entry_webbing_240" body2="entry_reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_80_1" body1="entry_webbing_241" body2="entry_reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_80_2" body1="entry_webbing_242" body2="entry_reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_81_0" body1="entry_webbing_243" body2="entry_reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_81_1" body1="entry_webbing_244" body2="entry_reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_feed_81_2" body1="entry_webbing_245" body2="entry_reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="entry_handle_webbing_0" body1="entry_webbing_243" body2="entry_belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <connect name="entry_handle_webbing_1" body1="entry_webbing_244" body2="entry_belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <connect name="entry_handle_webbing_2" body1="entry_webbing_245" body2="entry_belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <weld name="entry_handle_latch" body1="entry_belt_handle" body2="entry_latch_carriage" active="true" solref=".002 1" />
+    <weld name="entry_handle_grasp" body1="entry_belt_handle" body2="entry_belt_gripper" active="false" solref=".002 1" />
+    <weld name="entry_handle_dock" body1="entry_belt_handle" body2="entry_reel_parking_fixture" active="false" relpose="0 0 0 1 0 0 0" solref=".002 1" />
+    <connect name="exit_feed_0_0" body1="exit_webbing_0" body2="exit_reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_0_1" body1="exit_webbing_1" body2="exit_reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_0_2" body1="exit_webbing_2" body2="exit_reel_guide_0" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_1_0" body1="exit_webbing_3" body2="exit_reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_1_1" body1="exit_webbing_4" body2="exit_reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_1_2" body1="exit_webbing_5" body2="exit_reel_guide_1" anchor="0 0 0" active="true" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_2_0" body1="exit_webbing_6" body2="exit_reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_2_1" body1="exit_webbing_7" body2="exit_reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_2_2" body1="exit_webbing_8" body2="exit_reel_guide_2" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_3_0" body1="exit_webbing_9" body2="exit_reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_3_1" body1="exit_webbing_10" body2="exit_reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_3_2" body1="exit_webbing_11" body2="exit_reel_guide_3" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_4_0" body1="exit_webbing_12" body2="exit_reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_4_1" body1="exit_webbing_13" body2="exit_reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_4_2" body1="exit_webbing_14" body2="exit_reel_guide_4" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_5_0" body1="exit_webbing_15" body2="exit_reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_5_1" body1="exit_webbing_16" body2="exit_reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_5_2" body1="exit_webbing_17" body2="exit_reel_guide_5" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_6_0" body1="exit_webbing_18" body2="exit_reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_6_1" body1="exit_webbing_19" body2="exit_reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_6_2" body1="exit_webbing_20" body2="exit_reel_guide_6" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_7_0" body1="exit_webbing_21" body2="exit_reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_7_1" body1="exit_webbing_22" body2="exit_reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_7_2" body1="exit_webbing_23" body2="exit_reel_guide_7" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_8_0" body1="exit_webbing_24" body2="exit_reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_8_1" body1="exit_webbing_25" body2="exit_reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_8_2" body1="exit_webbing_26" body2="exit_reel_guide_8" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_9_0" body1="exit_webbing_27" body2="exit_reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_9_1" body1="exit_webbing_28" body2="exit_reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_9_2" body1="exit_webbing_29" body2="exit_reel_guide_9" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_10_0" body1="exit_webbing_30" body2="exit_reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_10_1" body1="exit_webbing_31" body2="exit_reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_10_2" body1="exit_webbing_32" body2="exit_reel_guide_10" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_11_0" body1="exit_webbing_33" body2="exit_reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_11_1" body1="exit_webbing_34" body2="exit_reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_11_2" body1="exit_webbing_35" body2="exit_reel_guide_11" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_12_0" body1="exit_webbing_36" body2="exit_reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_12_1" body1="exit_webbing_37" body2="exit_reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_12_2" body1="exit_webbing_38" body2="exit_reel_guide_12" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_13_0" body1="exit_webbing_39" body2="exit_reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_13_1" body1="exit_webbing_40" body2="exit_reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_13_2" body1="exit_webbing_41" body2="exit_reel_guide_13" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_14_0" body1="exit_webbing_42" body2="exit_reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_14_1" body1="exit_webbing_43" body2="exit_reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_14_2" body1="exit_webbing_44" body2="exit_reel_guide_14" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_15_0" body1="exit_webbing_45" body2="exit_reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_15_1" body1="exit_webbing_46" body2="exit_reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_15_2" body1="exit_webbing_47" body2="exit_reel_guide_15" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_16_0" body1="exit_webbing_48" body2="exit_reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_16_1" body1="exit_webbing_49" body2="exit_reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_16_2" body1="exit_webbing_50" body2="exit_reel_guide_16" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_17_0" body1="exit_webbing_51" body2="exit_reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_17_1" body1="exit_webbing_52" body2="exit_reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_17_2" body1="exit_webbing_53" body2="exit_reel_guide_17" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_18_0" body1="exit_webbing_54" body2="exit_reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_18_1" body1="exit_webbing_55" body2="exit_reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_18_2" body1="exit_webbing_56" body2="exit_reel_guide_18" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_19_0" body1="exit_webbing_57" body2="exit_reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_19_1" body1="exit_webbing_58" body2="exit_reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_19_2" body1="exit_webbing_59" body2="exit_reel_guide_19" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_20_0" body1="exit_webbing_60" body2="exit_reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_20_1" body1="exit_webbing_61" body2="exit_reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_20_2" body1="exit_webbing_62" body2="exit_reel_guide_20" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_21_0" body1="exit_webbing_63" body2="exit_reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_21_1" body1="exit_webbing_64" body2="exit_reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_21_2" body1="exit_webbing_65" body2="exit_reel_guide_21" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_22_0" body1="exit_webbing_66" body2="exit_reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_22_1" body1="exit_webbing_67" body2="exit_reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_22_2" body1="exit_webbing_68" body2="exit_reel_guide_22" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_23_0" body1="exit_webbing_69" body2="exit_reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_23_1" body1="exit_webbing_70" body2="exit_reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_23_2" body1="exit_webbing_71" body2="exit_reel_guide_23" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_24_0" body1="exit_webbing_72" body2="exit_reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_24_1" body1="exit_webbing_73" body2="exit_reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_24_2" body1="exit_webbing_74" body2="exit_reel_guide_24" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_25_0" body1="exit_webbing_75" body2="exit_reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_25_1" body1="exit_webbing_76" body2="exit_reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_25_2" body1="exit_webbing_77" body2="exit_reel_guide_25" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_26_0" body1="exit_webbing_78" body2="exit_reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_26_1" body1="exit_webbing_79" body2="exit_reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_26_2" body1="exit_webbing_80" body2="exit_reel_guide_26" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_27_0" body1="exit_webbing_81" body2="exit_reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_27_1" body1="exit_webbing_82" body2="exit_reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_27_2" body1="exit_webbing_83" body2="exit_reel_guide_27" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_28_0" body1="exit_webbing_84" body2="exit_reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_28_1" body1="exit_webbing_85" body2="exit_reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_28_2" body1="exit_webbing_86" body2="exit_reel_guide_28" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_29_0" body1="exit_webbing_87" body2="exit_reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_29_1" body1="exit_webbing_88" body2="exit_reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_29_2" body1="exit_webbing_89" body2="exit_reel_guide_29" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_30_0" body1="exit_webbing_90" body2="exit_reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_30_1" body1="exit_webbing_91" body2="exit_reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_30_2" body1="exit_webbing_92" body2="exit_reel_guide_30" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_31_0" body1="exit_webbing_93" body2="exit_reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_31_1" body1="exit_webbing_94" body2="exit_reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_31_2" body1="exit_webbing_95" body2="exit_reel_guide_31" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_32_0" body1="exit_webbing_96" body2="exit_reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_32_1" body1="exit_webbing_97" body2="exit_reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_32_2" body1="exit_webbing_98" body2="exit_reel_guide_32" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_33_0" body1="exit_webbing_99" body2="exit_reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_33_1" body1="exit_webbing_100" body2="exit_reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_33_2" body1="exit_webbing_101" body2="exit_reel_guide_33" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_34_0" body1="exit_webbing_102" body2="exit_reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_34_1" body1="exit_webbing_103" body2="exit_reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_34_2" body1="exit_webbing_104" body2="exit_reel_guide_34" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_35_0" body1="exit_webbing_105" body2="exit_reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_35_1" body1="exit_webbing_106" body2="exit_reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_35_2" body1="exit_webbing_107" body2="exit_reel_guide_35" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_36_0" body1="exit_webbing_108" body2="exit_reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_36_1" body1="exit_webbing_109" body2="exit_reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_36_2" body1="exit_webbing_110" body2="exit_reel_guide_36" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_37_0" body1="exit_webbing_111" body2="exit_reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_37_1" body1="exit_webbing_112" body2="exit_reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_37_2" body1="exit_webbing_113" body2="exit_reel_guide_37" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_38_0" body1="exit_webbing_114" body2="exit_reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_38_1" body1="exit_webbing_115" body2="exit_reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_38_2" body1="exit_webbing_116" body2="exit_reel_guide_38" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_39_0" body1="exit_webbing_117" body2="exit_reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_39_1" body1="exit_webbing_118" body2="exit_reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_39_2" body1="exit_webbing_119" body2="exit_reel_guide_39" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_40_0" body1="exit_webbing_120" body2="exit_reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_40_1" body1="exit_webbing_121" body2="exit_reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_40_2" body1="exit_webbing_122" body2="exit_reel_guide_40" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_41_0" body1="exit_webbing_123" body2="exit_reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_41_1" body1="exit_webbing_124" body2="exit_reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_41_2" body1="exit_webbing_125" body2="exit_reel_guide_41" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_42_0" body1="exit_webbing_126" body2="exit_reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_42_1" body1="exit_webbing_127" body2="exit_reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_42_2" body1="exit_webbing_128" body2="exit_reel_guide_42" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_43_0" body1="exit_webbing_129" body2="exit_reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_43_1" body1="exit_webbing_130" body2="exit_reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_43_2" body1="exit_webbing_131" body2="exit_reel_guide_43" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_44_0" body1="exit_webbing_132" body2="exit_reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_44_1" body1="exit_webbing_133" body2="exit_reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_44_2" body1="exit_webbing_134" body2="exit_reel_guide_44" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_45_0" body1="exit_webbing_135" body2="exit_reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_45_1" body1="exit_webbing_136" body2="exit_reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_45_2" body1="exit_webbing_137" body2="exit_reel_guide_45" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_46_0" body1="exit_webbing_138" body2="exit_reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_46_1" body1="exit_webbing_139" body2="exit_reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_46_2" body1="exit_webbing_140" body2="exit_reel_guide_46" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_47_0" body1="exit_webbing_141" body2="exit_reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_47_1" body1="exit_webbing_142" body2="exit_reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_47_2" body1="exit_webbing_143" body2="exit_reel_guide_47" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_48_0" body1="exit_webbing_144" body2="exit_reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_48_1" body1="exit_webbing_145" body2="exit_reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_48_2" body1="exit_webbing_146" body2="exit_reel_guide_48" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_49_0" body1="exit_webbing_147" body2="exit_reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_49_1" body1="exit_webbing_148" body2="exit_reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_49_2" body1="exit_webbing_149" body2="exit_reel_guide_49" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_50_0" body1="exit_webbing_150" body2="exit_reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_50_1" body1="exit_webbing_151" body2="exit_reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_50_2" body1="exit_webbing_152" body2="exit_reel_guide_50" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_51_0" body1="exit_webbing_153" body2="exit_reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_51_1" body1="exit_webbing_154" body2="exit_reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_51_2" body1="exit_webbing_155" body2="exit_reel_guide_51" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_52_0" body1="exit_webbing_156" body2="exit_reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_52_1" body1="exit_webbing_157" body2="exit_reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_52_2" body1="exit_webbing_158" body2="exit_reel_guide_52" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_53_0" body1="exit_webbing_159" body2="exit_reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_53_1" body1="exit_webbing_160" body2="exit_reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_53_2" body1="exit_webbing_161" body2="exit_reel_guide_53" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_54_0" body1="exit_webbing_162" body2="exit_reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_54_1" body1="exit_webbing_163" body2="exit_reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_54_2" body1="exit_webbing_164" body2="exit_reel_guide_54" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_55_0" body1="exit_webbing_165" body2="exit_reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_55_1" body1="exit_webbing_166" body2="exit_reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_55_2" body1="exit_webbing_167" body2="exit_reel_guide_55" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_56_0" body1="exit_webbing_168" body2="exit_reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_56_1" body1="exit_webbing_169" body2="exit_reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_56_2" body1="exit_webbing_170" body2="exit_reel_guide_56" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_57_0" body1="exit_webbing_171" body2="exit_reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_57_1" body1="exit_webbing_172" body2="exit_reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_57_2" body1="exit_webbing_173" body2="exit_reel_guide_57" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_58_0" body1="exit_webbing_174" body2="exit_reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_58_1" body1="exit_webbing_175" body2="exit_reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_58_2" body1="exit_webbing_176" body2="exit_reel_guide_58" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_59_0" body1="exit_webbing_177" body2="exit_reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_59_1" body1="exit_webbing_178" body2="exit_reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_59_2" body1="exit_webbing_179" body2="exit_reel_guide_59" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_60_0" body1="exit_webbing_180" body2="exit_reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_60_1" body1="exit_webbing_181" body2="exit_reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_60_2" body1="exit_webbing_182" body2="exit_reel_guide_60" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_61_0" body1="exit_webbing_183" body2="exit_reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_61_1" body1="exit_webbing_184" body2="exit_reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_61_2" body1="exit_webbing_185" body2="exit_reel_guide_61" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_62_0" body1="exit_webbing_186" body2="exit_reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_62_1" body1="exit_webbing_187" body2="exit_reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_62_2" body1="exit_webbing_188" body2="exit_reel_guide_62" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_63_0" body1="exit_webbing_189" body2="exit_reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_63_1" body1="exit_webbing_190" body2="exit_reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_63_2" body1="exit_webbing_191" body2="exit_reel_guide_63" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_64_0" body1="exit_webbing_192" body2="exit_reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_64_1" body1="exit_webbing_193" body2="exit_reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_64_2" body1="exit_webbing_194" body2="exit_reel_guide_64" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_65_0" body1="exit_webbing_195" body2="exit_reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_65_1" body1="exit_webbing_196" body2="exit_reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_65_2" body1="exit_webbing_197" body2="exit_reel_guide_65" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_66_0" body1="exit_webbing_198" body2="exit_reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_66_1" body1="exit_webbing_199" body2="exit_reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_66_2" body1="exit_webbing_200" body2="exit_reel_guide_66" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_67_0" body1="exit_webbing_201" body2="exit_reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_67_1" body1="exit_webbing_202" body2="exit_reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_67_2" body1="exit_webbing_203" body2="exit_reel_guide_67" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_68_0" body1="exit_webbing_204" body2="exit_reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_68_1" body1="exit_webbing_205" body2="exit_reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_68_2" body1="exit_webbing_206" body2="exit_reel_guide_68" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_69_0" body1="exit_webbing_207" body2="exit_reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_69_1" body1="exit_webbing_208" body2="exit_reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_69_2" body1="exit_webbing_209" body2="exit_reel_guide_69" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_70_0" body1="exit_webbing_210" body2="exit_reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_70_1" body1="exit_webbing_211" body2="exit_reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_70_2" body1="exit_webbing_212" body2="exit_reel_guide_70" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_71_0" body1="exit_webbing_213" body2="exit_reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_71_1" body1="exit_webbing_214" body2="exit_reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_71_2" body1="exit_webbing_215" body2="exit_reel_guide_71" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_72_0" body1="exit_webbing_216" body2="exit_reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_72_1" body1="exit_webbing_217" body2="exit_reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_72_2" body1="exit_webbing_218" body2="exit_reel_guide_72" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_73_0" body1="exit_webbing_219" body2="exit_reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_73_1" body1="exit_webbing_220" body2="exit_reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_73_2" body1="exit_webbing_221" body2="exit_reel_guide_73" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_74_0" body1="exit_webbing_222" body2="exit_reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_74_1" body1="exit_webbing_223" body2="exit_reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_74_2" body1="exit_webbing_224" body2="exit_reel_guide_74" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_75_0" body1="exit_webbing_225" body2="exit_reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_75_1" body1="exit_webbing_226" body2="exit_reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_75_2" body1="exit_webbing_227" body2="exit_reel_guide_75" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_76_0" body1="exit_webbing_228" body2="exit_reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_76_1" body1="exit_webbing_229" body2="exit_reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_76_2" body1="exit_webbing_230" body2="exit_reel_guide_76" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_77_0" body1="exit_webbing_231" body2="exit_reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_77_1" body1="exit_webbing_232" body2="exit_reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_77_2" body1="exit_webbing_233" body2="exit_reel_guide_77" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_78_0" body1="exit_webbing_234" body2="exit_reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_78_1" body1="exit_webbing_235" body2="exit_reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_78_2" body1="exit_webbing_236" body2="exit_reel_guide_78" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_79_0" body1="exit_webbing_237" body2="exit_reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_79_1" body1="exit_webbing_238" body2="exit_reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_79_2" body1="exit_webbing_239" body2="exit_reel_guide_79" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_80_0" body1="exit_webbing_240" body2="exit_reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_80_1" body1="exit_webbing_241" body2="exit_reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_80_2" body1="exit_webbing_242" body2="exit_reel_guide_80" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_81_0" body1="exit_webbing_243" body2="exit_reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_81_1" body1="exit_webbing_244" body2="exit_reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_feed_81_2" body1="exit_webbing_245" body2="exit_reel_guide_81" anchor="0 0 0" active="false" solref=".004 1" solimp=".8 .99 .01" />
+    <connect name="exit_handle_webbing_0" body1="exit_webbing_243" body2="exit_belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <connect name="exit_handle_webbing_1" body1="exit_webbing_244" body2="exit_belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <connect name="exit_handle_webbing_2" body1="exit_webbing_245" body2="exit_belt_handle" anchor="0 0 0" solref=".001 1" solimp=".99 .999 .0001" />
+    <weld name="exit_handle_latch" body1="exit_belt_handle" body2="exit_latch_carriage" active="true" solref=".002 1" />
+    <weld name="exit_handle_grasp" body1="exit_belt_handle" body2="exit_belt_gripper" active="false" solref=".002 1" />
+    <weld name="exit_handle_dock" body1="exit_belt_handle" body2="exit_reel_parking_fixture" active="false" relpose="0 0 0 1 0 0 0" solref=".002 1" />
+  </equality>
+</mujoco>

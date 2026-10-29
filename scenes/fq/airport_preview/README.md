@@ -1,3 +1,15 @@
+# 机场 6 号门入口 · 防爆检测与候检放行区
+
+当前规划按用户指定：面对门的左侧门组入场，刚进门处擦拭采样，随后进入软带围合区等待，核验结果后从独立出口放行；旅客不摘包。白色柜台调整到候检区内靠近采样点。设备功能未确认，未增加扫码设备。
+
+`photo_scene.xml` / `photo_scene.usda` 是静态快照，`photo_interaction.xml` 是两套原生 MuJoCo 柔性伸缩带运行模型。位置和控制器配置见 `photo_interaction.json`；入口与出口可操作，其余围带固定。用 `tools/retractable_belt.py` 的 `RetractableBelt`，按配置传入 prefix 和 origin，不能沿用旧布局坐标。
+
+运行接触核验的完整循环：`python examples/retractable_belt/run_airport_photo_cycle.py --gate entry`，另运行 `--gate exit`。验证报告见 `photo_belt_validation.json`。授权/报警仍是调用者输入，并未接入批次检测结果、Connection 或真人班长界面。没有自动化完整业务流程的声明。
+
+照片提供建筑外观参考；尺寸、柜台位置、围带连接和门位用途均为暂定规划。默认网页不嵌入动态演示。原旧布局仍保留。场景版本仍为 0.3.0，以 active_variant 区分本次布局。
+
+以下为历史版本说明（以本文开头及当前 asset.json 为准）：
+
 # 机场入口及检测区域：照片复刻初版
 
 当前默认展示 `photo_scene.xml` / `photo_scene.usda`，依据用户提供的《机场入口及检测区域.jpg》重新搭建。包含两个 6 号入口门组、玻璃幕墙和高挑顶棚、黑色隔离柱与深蓝色软带、多条相邻通道、中央白色柜台及未确认设备外形。无人物、机器人或动态演示。

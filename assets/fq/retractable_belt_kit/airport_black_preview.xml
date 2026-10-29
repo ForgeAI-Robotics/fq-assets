@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="airport_black_retractable_belt_preview">
+  <worldbody>
+    <geom name="reel_base" type="cylinder" pos="-0.82 0.08 0.022" size="0.17 0.022" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="reel_post" type="cylinder" pos="-0.82 0.08 0.49" size="0.022 0.46" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="reel_collar" type="cylinder" pos="-0.82 0.08 0.885" size="0.04 0.03" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="receiver_base" type="cylinder" pos="0.84 0.0 0.022" size="0.17 0.022" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="receiver_post" type="cylinder" pos="0.84 0.0 0.49" size="0.022 0.46" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="receiver_collar" type="cylinder" pos="0.84 0.0 0.885" size="0.04 0.03" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="reel_lower_flange" type="cylinder" pos="-0.82 0.08 0.94" size="0.095 0.004" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="reel_upper_flange" type="cylinder" pos="-0.82 0.08 1.02" size="0.095 0.004" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="reel_core" type="cylinder" pos="-0.82 0.08 0.98" size="0.071 0.035" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="receiver_rail_-1" type="box" pos="0.818 -0.018 1.004" size="0.025 0.005 0.05" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="receiver_rail_1" type="box" pos="0.818 0.018 1.004" size="0.025 0.005 0.05" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="receiver_seat" type="box" pos="0.825 0.0 0.946" size="0.018 0.022 0.004" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="carriage_visual" type="box" pos="0.8200000000000001 0.0 0.98" size="0.009 0.009 0.03" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="handle_grip" type="box" pos="0.78 0.0 0.98" size="0.017 0.009 0.044" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="handle_tongue" type="box" pos="0.805 0.0 0.98" size="0.012 0.008 0.03" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="1" conaffinity="1" />
+    <geom name="parking_support" type="box" pos="-0.67 0.024 0.98" size="0.025 0.005 0.045" quat="1.0 0.0 0.0 0.0" rgba=".025 .03 .035 1" contype="0" conaffinity="0" />
+    <geom name="webbing_snapshot" type="box" pos="-0.02 0.0 0.98" size="0.8 0.0006 0.0325" quat="1 0 0 0" rgba=".018 .04 .12 1" contype="1" conaffinity="1" />
+  </worldbody>
+</mujoco>

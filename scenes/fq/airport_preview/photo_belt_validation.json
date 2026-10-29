@@ -1,0 +1,285 @@
+{
+  "gates": {
+    "entry": {
+      "engine": "MuJoCo 3.3.6",
+      "cycle_complete": true,
+      "duration_s": 15.199999999991253,
+      "flex_vertices": 492,
+      "max_edge_strain": 0.0015515728899631043,
+      "max_grasp_position_error_m": 0.002241580189217062,
+      "warnings": 0,
+      "negative_tests": [
+        {
+          "test": "alarm_blocks_open",
+          "reason": "Opening requires authorization and cleared alarm"
+        },
+        {
+          "test": "authorization_required",
+          "reason": "Opening requires authorization and cleared alarm"
+        },
+        {
+          "test": "occupied_blocks_close",
+          "reason": "Cannot extend belt through occupied passage"
+        },
+        {
+          "test": "other_gate_open_blocks_open",
+          "reason": "Other passage must remain latched"
+        },
+        {
+          "test": "unheld_handle_cannot_unlatch",
+          "reason": "Hold the handle before unlatching"
+        },
+        {
+          "test": "unaligned_gripper_cannot_grasp",
+          "reason": "Gripper is not aligned with handle"
+        },
+        {
+          "test": "latched_retraction_rejected",
+          "reason": "Unlatch before retracting the belt"
+        },
+        {
+          "test": "docked_feed_rejected",
+          "reason": "Undock before feeding the belt"
+        },
+        {
+          "test": "seated_handle_cannot_unlatch",
+          "reason": "Lift the handle at least 32 mm out of the receiver"
+        },
+        {
+          "test": "unsecured_handle_cannot_release",
+          "reason": "Cannot release an unsecured handle"
+        },
+        {
+          "test": "unseated_handle_cannot_latch",
+          "reason": "Handle is not seated in receiver"
+        }
+      ],
+      "events": [
+        {
+          "time_s": 0.4999999999999776,
+          "event": "grasped",
+          "handle_position_m": [
+            -8.020024987955322,
+            2.6999999911743484,
+            0.9796756976603276
+          ],
+          "stored_length_m": 0.02
+        },
+        {
+          "time_s": 1.4999999999998674,
+          "event": "unlatched",
+          "handle_position_m": [
+            -8.020003433620113,
+            2.699999980216552,
+            1.0299645972986424
+          ],
+          "stored_length_m": 0.0072189419802780545
+        },
+        {
+          "time_s": 6.70000000000529,
+          "event": "docked",
+          "handle_position_m": [
+            -9.46999998668248,
+            2.700000004836545,
+            0.9799950493975009
+          ],
+          "stored_length_m": 1.4579999999999997
+        },
+        {
+          "time_s": 6.70000000000529,
+          "event": "released_at_dock",
+          "handle_position_m": [
+            -9.46999998668248,
+            2.700000004836545,
+            0.9799950493975009
+          ],
+          "stored_length_m": 1.4579999999999997
+        },
+        {
+          "time_s": 8.200000000007567,
+          "event": "grasped",
+          "handle_position_m": [
+            -9.46999993964033,
+            2.7000000008407277,
+            0.9799950882514872
+          ],
+          "stored_length_m": 1.4579999999999997
+        },
+        {
+          "time_s": 8.200000000007567,
+          "event": "undocked",
+          "handle_position_m": [
+            -9.46999993964033,
+            2.7000000008407277,
+            0.9799950882514872
+          ],
+          "stored_length_m": 1.4579999999999997
+        },
+        {
+          "time_s": 14.399999999993117,
+          "event": "latched",
+          "handle_position_m": [
+            -8.02000872363421,
+            2.7000000341503405,
+            0.9799963650548791
+          ],
+          "stored_length_m": 0.020000000000000462
+        },
+        {
+          "time_s": 14.399999999993117,
+          "event": "released_at_latch",
+          "handle_position_m": [
+            -8.02000872363421,
+            2.7000000341503405,
+            0.9799963650548791
+          ],
+          "stored_length_m": 0.020000000000000462
+        }
+      ],
+      "final_latched": true,
+      "scope": "native deformable webbing; prescribed reel guide boundary; explicit checked grasp/latch constraints; not calibrated reel mechanics"
+    },
+    "exit": {
+      "engine": "MuJoCo 3.3.6",
+      "cycle_complete": true,
+      "duration_s": 15.199999999991253,
+      "flex_vertices": 492,
+      "max_edge_strain": 0.0015628747332572246,
+      "max_grasp_position_error_m": 0.0022347181371418163,
+      "warnings": 0,
+      "negative_tests": [
+        {
+          "test": "alarm_blocks_open",
+          "reason": "Opening requires authorization and cleared alarm"
+        },
+        {
+          "test": "authorization_required",
+          "reason": "Opening requires authorization and cleared alarm"
+        },
+        {
+          "test": "occupied_blocks_close",
+          "reason": "Cannot extend belt through occupied passage"
+        },
+        {
+          "test": "other_gate_open_blocks_open",
+          "reason": "Other passage must remain latched"
+        },
+        {
+          "test": "unheld_handle_cannot_unlatch",
+          "reason": "Hold the handle before unlatching"
+        },
+        {
+          "test": "unaligned_gripper_cannot_grasp",
+          "reason": "Gripper is not aligned with handle"
+        },
+        {
+          "test": "latched_retraction_rejected",
+          "reason": "Unlatch before retracting the belt"
+        },
+        {
+          "test": "docked_feed_rejected",
+          "reason": "Undock before feeding the belt"
+        },
+        {
+          "test": "seated_handle_cannot_unlatch",
+          "reason": "Lift the handle at least 32 mm out of the receiver"
+        },
+        {
+          "test": "unsecured_handle_cannot_release",
+          "reason": "Cannot release an unsecured handle"
+        },
+        {
+          "test": "unseated_handle_cannot_latch",
+          "reason": "Handle is not seated in receiver"
+        }
+      ],
+      "events": [
+        {
+          "time_s": 0.4999999999999776,
+          "event": "grasped",
+          "handle_position_m": [
+            -6.020025411731531,
+            -1.7999997838529118,
+            0.9796764286293369
+          ],
+          "stored_length_m": 0.02
+        },
+        {
+          "time_s": 1.4999999999998674,
+          "event": "unlatched",
+          "handle_position_m": [
+            -6.020003581572668,
+            -1.7999999787224013,
+            1.029965627116065
+          ],
+          "stored_length_m": 0.007218941980277166
+        },
+        {
+          "time_s": 6.70000000000529,
+          "event": "docked",
+          "handle_position_m": [
+            -7.469999877163401,
+            -1.8000000025861385,
+            0.9799953087474488
+          ],
+          "stored_length_m": 1.4579999999999997
+        },
+        {
+          "time_s": 6.70000000000529,
+          "event": "released_at_dock",
+          "handle_position_m": [
+            -7.469999877163401,
+            -1.8000000025861385,
+            0.9799953087474488
+          ],
+          "stored_length_m": 1.4579999999999997
+        },
+        {
+          "time_s": 8.200000000007567,
+          "event": "grasped",
+          "handle_position_m": [
+            -7.469999921149386,
+            -1.7999999751013847,
+            0.9799953225948247
+          ],
+          "stored_length_m": 1.4579999999999997
+        },
+        {
+          "time_s": 8.200000000007567,
+          "event": "undocked",
+          "handle_position_m": [
+            -7.469999921149386,
+            -1.7999999751013847,
+            0.9799953225948247
+          ],
+          "stored_length_m": 1.4579999999999997
+        },
+        {
+          "time_s": 14.399999999993117,
+          "event": "latched",
+          "handle_position_m": [
+            -6.020006692523678,
+            -1.7999999572004717,
+            0.9799965917627846
+          ],
+          "stored_length_m": 0.019999999999999574
+        },
+        {
+          "time_s": 14.399999999993117,
+          "event": "released_at_latch",
+          "handle_position_m": [
+            -6.020006692523678,
+            -1.7999999572004717,
+            0.9799965917627846
+          ],
+          "stored_length_m": 0.019999999999999574
+        }
+      ],
+      "final_latched": true,
+      "scope": "native deformable webbing; prescribed reel guide boundary; explicit checked grasp/latch constraints; not calibrated reel mechanics"
+    }
+  },
+  "usd_missing_dependencies": [],
+  "scene_model": "photo_interaction.xml",
+  "scope": "Native MuJoCo contact-checked cycles for both gates, each with other gate closed. Static USD snapshots; no PhysX cloth simulation or passenger workflow validation."
+}

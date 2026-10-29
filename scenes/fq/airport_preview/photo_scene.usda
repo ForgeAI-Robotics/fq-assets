@@ -4536,8 +4536,8 @@ def Xform "World"
             rel material:binding = </World/Materials/white>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.65, 0.45, 0.61)
-            double3 xformOp:translate = (2.6, 4.5, 0.61)
+            float3 xformOp:scale = (1.0725, 0.36, 0.61)
+            double3 xformOp:translate = (-5.9, 1.7999999999999998, 0.61)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4552,8 +4552,8 @@ def Xform "World"
             rel material:binding = </World/Materials/white>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.72, 0.51, 0.035)
-            double3 xformOp:translate = (2.6, 4.5, 1.24)
+            float3 xformOp:scale = (1.118, 0.408, 0.035)
+            double3 xformOp:translate = (-5.9, 1.7999999999999998, 1.24)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4568,8 +4568,8 @@ def Xform "World"
             rel material:binding = </World/Materials/seam>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.005, 0.003, 0.54)
-            double3 xformOp:translate = (1.15, 4.041, 0.63)
+            float3 xformOp:scale = (0.00325, 0.0024, 0.54)
+            double3 xformOp:translate = (-6.8425, 1.4327999999999999, 0.63)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4584,8 +4584,8 @@ def Xform "World"
             rel material:binding = </World/Materials/seam>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.005, 0.003, 0.54)
-            double3 xformOp:translate = (2.15, 4.041, 0.63)
+            float3 xformOp:scale = (0.00325, 0.0024, 0.54)
+            double3 xformOp:translate = (-6.192500000000001, 1.4327999999999999, 0.63)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4600,8 +4600,8 @@ def Xform "World"
             rel material:binding = </World/Materials/seam>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.005, 0.003, 0.54)
-            double3 xformOp:translate = (3.15, 4.041, 0.63)
+            float3 xformOp:scale = (0.00325, 0.0024, 0.54)
+            double3 xformOp:translate = (-5.5425, 1.4327999999999999, 0.63)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4616,8 +4616,8 @@ def Xform "World"
             rel material:binding = </World/Materials/seam>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.005, 0.003, 0.54)
-            double3 xformOp:translate = (4.15, 4.041, 0.63)
+            float3 xformOp:scale = (0.00325, 0.0024, 0.54)
+            double3 xformOp:translate = (-4.8925, 1.4327999999999999, 0.63)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4632,8 +4632,8 @@ def Xform "World"
             rel material:binding = </World/Materials/white>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.82, 0.4, 0.45)
-            double3 xformOp:translate = (3.5, 3.85, 0.45)
+            float3 xformOp:scale = (0.533, 0.32, 0.45)
+            double3 xformOp:translate = (-5.315, 1.2799999999999998, 0.45)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4648,8 +4648,8 @@ def Xform "World"
             rel material:binding = </World/Materials/white>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.82, 0.23, 0.16)
-            double3 xformOp:translate = (3.5, 4.02, 1.02)
+            float3 xformOp:scale = (0.533, 0.184, 0.16)
+            double3 xformOp:translate = (-5.315, 1.4159999999999995, 1.02)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4664,8 +4664,8 @@ def Xform "World"
             rel material:binding = </World/Materials/screen>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.11, 0.008, 0.095)
-            double3 xformOp:translate = (2.98, 3.781, 1.04)
+            float3 xformOp:scale = (0.0715, 0.0064, 0.095)
+            double3 xformOp:translate = (-5.6530000000000005, 1.2247999999999997, 1.04)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4680,8 +4680,8 @@ def Xform "World"
             rel material:binding = </World/Materials/green>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.105, 0.008, 0.04)
-            double3 xformOp:translate = (2.98, 3.443, 0.72)
+            float3 xformOp:scale = (0.06825, 0.0064, 0.04)
+            double3 xformOp:translate = (-5.6530000000000005, 0.9543999999999997, 0.72)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4696,8 +4696,8 @@ def Xform "World"
             rel material:binding = </World/Materials/screen>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.11, 0.008, 0.095)
-            double3 xformOp:translate = (3.5, 3.781, 1.04)
+            float3 xformOp:scale = (0.0715, 0.0064, 0.095)
+            double3 xformOp:translate = (-5.315, 1.2247999999999997, 1.04)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4712,8 +4712,8 @@ def Xform "World"
             rel material:binding = </World/Materials/green>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.105, 0.008, 0.04)
-            double3 xformOp:translate = (3.5, 3.443, 0.72)
+            float3 xformOp:scale = (0.06825, 0.0064, 0.04)
+            double3 xformOp:translate = (-5.315, 0.9543999999999997, 0.72)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4728,8 +4728,8 @@ def Xform "World"
             rel material:binding = </World/Materials/screen>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.11, 0.008, 0.095)
-            double3 xformOp:translate = (4.02, 3.781, 1.04)
+            float3 xformOp:scale = (0.0715, 0.0064, 0.095)
+            double3 xformOp:translate = (-4.977, 1.2247999999999997, 1.04)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4744,8 +4744,8 @@ def Xform "World"
             rel material:binding = </World/Materials/green>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.105, 0.008, 0.04)
-            double3 xformOp:translate = (4.02, 3.443, 0.72)
+            float3 xformOp:scale = (0.06825, 0.0064, 0.04)
+            double3 xformOp:translate = (-4.977, 0.9543999999999997, 0.72)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -4760,2180 +4760,8 @@ def Xform "World"
             rel material:binding = </World/Materials/black>
             double size = 2
             quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.25, 0.35, 0.8)
-            double3 xformOp:translate = (0.6, 4.65, 0.8)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase0" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase0"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, 3.7, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole0" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole0"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, 3.7, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead0" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead0"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, 3.7, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase1" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase1"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, 1, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole1" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole1"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, 1, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead1" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead1"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, 1, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt0" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt0"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (1.35, 0.003, 0.027)
-            double3 xformOp:translate = (-9, 2.35, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint0_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint0_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-9, 3.0250000000000004, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint0_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint0_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-9, 1.675, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase2" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase2"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 1, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole2" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole2"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 1, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead2" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead2"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 1, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt1" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt1"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.3, 0.003, 0.027)
-            double3 xformOp:translate = (-7.7, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint1_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint1_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-8.35, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint1_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint1_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-7.050000000000001, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase3" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase3"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-3.8, 1, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole3" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole3"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-3.8, 1, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead3" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead3"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-3.8, 1, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt2" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt2"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.3, 0.003, 0.027)
-            double3 xformOp:translate = (-5.1, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint2_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint2_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-5.750000000000001, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint2_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint2_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-4.449999999999999, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase4" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase4"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-1, 1, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole4" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole4"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-1, 1, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead4" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead4"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-1, 1, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt3" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt3"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.4, 0.003, 0.027)
-            double3 xformOp:translate = (-2.4, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint3_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint3_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-3.0999999999999996, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint3_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint3_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-1.7, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase5" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase5"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (1.7, 1, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole5" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole5"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (1.7, 1, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead5" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead5"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (1.7, 1, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt4" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt4"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.35, 0.003, 0.027)
-            double3 xformOp:translate = (0.35, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint4_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint4_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-0.325, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint4_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint4_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (1.025, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase6" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase6"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (4.5, 1, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole6" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole6"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (4.5, 1, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead6" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead6"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (4.5, 1, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt5" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt5"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.4, 0.003, 0.027)
-            double3 xformOp:translate = (3.1, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint5_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint5_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (2.4, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint5_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint5_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (3.8, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase7" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase7"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, 1, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole7" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole7"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, 1, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead7" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead7"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, 1, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt6" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt6"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.35, 0.003, 0.027)
-            double3 xformOp:translate = (5.85, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint6_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint6_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (5.175, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint6_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint6_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (6.525, 1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase8" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase8"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-8, -1.8, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole8" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole8"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-8, -1.8, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead8" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead8"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-8, -1.8, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase9" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase9"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-5.3, -1.8, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole9" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole9"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-5.3, -1.8, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead9" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead9"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-5.3, -1.8, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt7" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt7"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.35, 0.003, 0.027)
-            double3 xformOp:translate = (-6.65, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint7_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint7_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-7.325, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint7_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint7_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-5.975, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase10" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase10"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-2.5, -1.8, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole10" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole10"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-2.5, -1.8, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead10" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead10"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-2.5, -1.8, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt8" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt8"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.4, 0.003, 0.027)
-            double3 xformOp:translate = (-3.9, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint8_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint8_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-4.6, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint8_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint8_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-3.2, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase11" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase11"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (0.4, -1.8, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole11" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole11"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (0.4, -1.8, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead11" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead11"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (0.4, -1.8, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt9" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt9"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.45, 0.003, 0.027)
-            double3 xformOp:translate = (-1.05, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint9_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint9_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-1.775, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint9_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint9_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-0.32499999999999996, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase12" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase12"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (3.5, -1.8, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole12" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole12"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (3.5, -1.8, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead12" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead12"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (3.5, -1.8, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt10" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt10"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.55, 0.003, 0.027)
-            double3 xformOp:translate = (1.95, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint10_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint10_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (1.175, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint10_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint10_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (2.725, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase13" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase13"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, -1.8, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole13" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole13"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, -1.8, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead13" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead13"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, -1.8, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt11" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt11"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.85, 0.003, 0.027)
-            double3 xformOp:translate = (5.35, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint11_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint11_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (4.425, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint11_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint11_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (6.275, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt12" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt12"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
-            float3 xformOp:scale = (1.4, 0.003, 0.027)
-            double3 xformOp:translate = (7.2, -0.4, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint12_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint12_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (7.2, -1.1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint12_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint12_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (7.2, 0.3, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase14" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase14"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, 3.6, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole14" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole14"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, 3.6, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead14" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead14"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (7.2, 3.6, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt13" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt13"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
-            float3 xformOp:scale = (1.3, 0.003, 0.027)
-            double3 xformOp:translate = (7.2, 2.3, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint13_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint13_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (7.2, 1.65, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint13_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint13_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (7.2, 2.95, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase15" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase15"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 4.4, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole15" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole15"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 4.4, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead15" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead15"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 4.4, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase16" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase16"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 2.4, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole16" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole16"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 2.4, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead16" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead16"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-6.4, 2.4, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt14" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt14"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (1, 0.003, 0.027)
-            double3 xformOp:translate = (-6.4, 3.4000000000000004, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint14_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint14_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-6.4, 3.9000000000000004, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint14_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint14_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-6.4, 2.9, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase17" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase17"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-3.8, 2.4, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole17" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole17"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-3.8, 2.4, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead17" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead17"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-3.8, 2.4, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt15" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt15"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.3, 0.003, 0.027)
-            double3 xformOp:translate = (-5.1, 2.4, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint15_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint15_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-5.750000000000001, 2.4, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint15_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint15_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-4.449999999999999, 2.4, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase18" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase18"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-1, 2.4, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole18" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole18"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-1, 2.4, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead18" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead18"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-1, 2.4, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt16" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt16"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.4, 0.003, 0.027)
-            double3 xformOp:translate = (-2.4, 2.4, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint16_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint16_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-3.0999999999999996, 2.4, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint16_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint16_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-1.7, 2.4, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase19" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase19"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (4.5, 3.6, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole19" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole19"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (4.5, 3.6, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead19" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead19"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (4.5, 3.6, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt17" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt17"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1.35, 0.003, 0.027)
-            double3 xformOp:translate = (5.85, 3.6, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint17_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint17_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (5.175, 3.6, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint17_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint17_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (6.525, 3.6, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionBase20" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionBase20"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.044
-            rel material:binding = </World/Materials/black>
-            double radius = 0.17
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, -1.8, 0.022)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionPole20" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionPole20"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.92
-            rel material:binding = </World/Materials/black>
-            double radius = 0.022
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, -1.8, 0.49)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cylinder "StanchionHead20" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "StanchionHead20"
-            }
-        )
-        {
-            uniform token axis = "Z"
-            double height = 0.1
-            rel material:binding = </World/Materials/black>
-            double radius = 0.045
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-9, -1.8, 0.98)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt18" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt18"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (1.4, 0.003, 0.027)
-            double3 xformOp:translate = (-9, -0.4, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint18_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint18_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-9, 0.3, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint18_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint18_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-9, -1.1, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "QueueBelt19" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "QueueBelt19"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/band>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.5, 0.003, 0.027)
-            double3 xformOp:translate = (-8.5, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint19_0_25" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint19_0.25"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-8.75, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "BeltPrint19_0_75" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "queue"
-                string sourceGeomName = "BeltPrint19_0.75"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/white>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.032, 0.0038, 0.006)
-            double3 xformOp:translate = (-8.25, -1.8, 0.96)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "NoticeBacking0" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "NoticeBacking0"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/black>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.25, 0.025, 0.35)
-            double3 xformOp:translate = (-3.8, 2.375, 1.23)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Mesh "NoticeFace0" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "signage"
-                string sourceGeomName = "NoticeFace0"
-            }
-        )
-        {
-            uniform bool doubleSided = 1
-            int[] faceVertexCounts = [4]
-            int[] faceVertexIndices = [0, 1, 2, 3]
-            rel material:binding = </World/Materials/notice>
-            point3f[] points = [(-0.245, 0, -0.34), (0.245, 0, -0.34), (0.245, 0, 0.34), (-0.245, 0, 0.34)]
-            texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
-                interpolation = "vertex"
-            )
-            uniform token subdivisionScheme = "none"
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (-3.8, 2.348, 1.23)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Cube "NoticeBacking1" (
-            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
-            customData = {
-                string photoGroup = "environment"
-                string sourceGeomName = "NoticeBacking1"
-            }
-        )
-        {
-            rel material:binding = </World/Materials/black>
-            double size = 2
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (0.25, 0.025, 0.35)
-            double3 xformOp:translate = (4.5, 0.975, 1.23)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-        }
-
-        def Mesh "NoticeFace1" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-            customData = {
-                string photoGroup = "signage"
-                string sourceGeomName = "NoticeFace1"
-            }
-        )
-        {
-            uniform bool doubleSided = 1
-            int[] faceVertexCounts = [4]
-            int[] faceVertexIndices = [0, 1, 2, 3]
-            rel material:binding = </World/Materials/notice>
-            point3f[] points = [(-0.245, 0, -0.34), (0.245, 0, -0.34), (0.245, 0, 0.34), (-0.245, 0, 0.34)]
-            texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
-                interpolation = "vertex"
-            )
-            uniform token subdivisionScheme = "none"
-            quatf xformOp:orient = (1, 0, 0, 0)
-            float3 xformOp:scale = (1, 1, 1)
-            double3 xformOp:translate = (4.5, 0.948, 1.23)
+            float3 xformOp:scale = (0.1625, 0.28, 0.8)
+            double3 xformOp:translate = (-7.2, 1.92, 0.8)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
 
@@ -7085,6 +4913,1178 @@ def Xform "World"
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (0.54, 0.008, 1.06)
             double3 xformOp:translate = (11.6, 9.535, 1.75)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointBase0" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBase0"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, 2.7, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointPole0" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointPole0"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, 2.7, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointHead0" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointHead0"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.1
+            rel material:binding = </World/Materials/black>
+            double radius = 0.045
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand0" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand0"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (0.03384005, 0, 0, -0.99942726)
+            float3 xformOp:scale = (0.59135437, 0.003, 0.0325)
+            double3 xformOp:translate = (-10.21, 2.74, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointBase1" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBase1"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, 0.45, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointPole1" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointPole1"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, 0.45, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointHead1" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointHead1"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.1
+            rel material:binding = </World/Materials/black>
+            double radius = 0.045
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, 0.45, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand1" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand1"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
+            float3 xformOp:scale = (1.125, 0.003, 0.0325)
+            double3 xformOp:translate = (-10.8, 1.5750000000000002, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointBase2" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBase2"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, -1.8, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointPole2" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointPole2"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, -1.8, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointHead2" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointHead2"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.1
+            rel material:binding = </World/Materials/black>
+            double radius = 0.045
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-10.8, -1.8, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand2" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand2"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
+            float3 xformOp:scale = (1.125, 0.003, 0.0325)
+            double3 xformOp:translate = (-10.8, -0.675, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointBase3" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBase3"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.2, -1.8, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointPole3" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointPole3"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.2, -1.8, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointHead3" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointHead3"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.1
+            rel material:binding = </World/Materials/black>
+            double radius = 0.045
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.2, -1.8, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand3" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand3"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.8, 0.003, 0.0325)
+            double3 xformOp:translate = (-10, -1.8, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand4" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand4"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (0.9996801, 0, 0, 0.025292156)
+            float3 xformOp:scale = (0.791012, 0.003, 0.0325)
+            double3 xformOp:translate = (-8.41, -1.76, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointBase4" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBase4"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, -1.8, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointPole4" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointPole4"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, -1.8, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointHead4" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointHead4"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.1
+            rel material:binding = </World/Materials/black>
+            double radius = 0.045
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, -1.8, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand5" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand5"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.63, 0.003, 0.0325)
+            double3 xformOp:translate = (-5.33, -1.8, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointBase5" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBase5"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, 0.45, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointPole5" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointPole5"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, 0.45, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointHead5" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointHead5"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.1
+            rel material:binding = </World/Materials/black>
+            double radius = 0.045
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, 0.45, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand6" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand6"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
+            float3 xformOp:scale = (1.125, 0.003, 0.0325)
+            double3 xformOp:translate = (-4.7, -0.675, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointBase6" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBase6"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, 2.7, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointPole6" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointPole6"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, 2.7, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointHead6" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointHead6"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.1
+            rel material:binding = </World/Materials/black>
+            double radius = 0.045
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4.7, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand7" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand7"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
+            float3 xformOp:scale = (1.125, 0.003, 0.0325)
+            double3 xformOp:translate = (-4.7, 1.5750000000000002, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointBase7" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBase7"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-6.4, 2.7, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointPole7" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointPole7"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-6.4, 2.7, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "CheckpointHead7" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointHead7"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.1
+            rel material:binding = </World/Materials/black>
+            double radius = 0.045
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-6.4, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand8" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand8"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (6.123234e-17, 0, 0, 1)
+            float3 xformOp:scale = (0.85, 0.003, 0.0325)
+            double3 xformOp:translate = (-5.550000000000001, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "CheckpointBand9" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "CheckpointBand9"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (6.123234e-17, 0, 0, 1)
+            float3 xformOp:scale = (0.78, 0.003, 0.0325)
+            double3 xformOp:translate = (-7.18, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_reel_base" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_reel_base"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.620000000000001, 2.7800000000000002, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_reel_base" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_reel_base"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.62, -1.72, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_reel_post" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_reel_post"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.620000000000001, 2.7800000000000002, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_reel_post" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_reel_post"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.62, -1.72, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_reel_collar" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_reel_collar"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.06
+            rel material:binding = </World/Materials/black>
+            double radius = 0.04
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.620000000000001, 2.7800000000000002, 0.885)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_reel_collar" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_reel_collar"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.06
+            rel material:binding = </World/Materials/black>
+            double radius = 0.04
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.62, -1.72, 0.885)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_receiver_base" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_receiver_base"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.960000000000001, 2.7, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_receiver_base" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_receiver_base"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.044
+            rel material:binding = </World/Materials/black>
+            double radius = 0.17
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-5.96, -1.8, 0.022)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_receiver_post" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_receiver_post"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.960000000000001, 2.7, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_receiver_post" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_receiver_post"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.92
+            rel material:binding = </World/Materials/black>
+            double radius = 0.022
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-5.96, -1.8, 0.49)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_receiver_collar" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_receiver_collar"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.06
+            rel material:binding = </World/Materials/black>
+            double radius = 0.04
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.960000000000001, 2.7, 0.885)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_receiver_collar" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_receiver_collar"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.06
+            rel material:binding = </World/Materials/black>
+            double radius = 0.04
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-5.96, -1.8, 0.885)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_reel_lower_flange" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_reel_lower_flange"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.008
+            rel material:binding = </World/Materials/black>
+            double radius = 0.095
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.620000000000001, 2.7800000000000002, 0.94)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_reel_lower_flange" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_reel_lower_flange"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.008
+            rel material:binding = </World/Materials/black>
+            double radius = 0.095
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.62, -1.72, 0.94)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_reel_upper_flange" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_reel_upper_flange"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.008
+            rel material:binding = </World/Materials/black>
+            double radius = 0.095
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.620000000000001, 2.7800000000000002, 1.02)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_reel_upper_flange" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_reel_upper_flange"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.008
+            rel material:binding = </World/Materials/black>
+            double radius = 0.095
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.62, -1.72, 1.02)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "entry_reel_core" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_reel_core"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.07
+            rel material:binding = </World/Materials/black>
+            double radius = 0.071
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9.620000000000001, 2.7800000000000002, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "exit_reel_core" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_reel_core"
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.07
+            rel material:binding = </World/Materials/black>
+            double radius = 0.071
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-7.62, -1.72, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "entry_receiver_rail__1" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_receiver_rail_-1"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.025, 0.005, 0.05)
+            double3 xformOp:translate = (-7.982000000000001, 2.6820000000000004, 1.004)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "exit_receiver_rail__1" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_receiver_rail_-1"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.025, 0.005, 0.05)
+            double3 xformOp:translate = (-5.982, -1.818, 1.004)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "entry_receiver_rail_1" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_receiver_rail_1"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.025, 0.005, 0.05)
+            double3 xformOp:translate = (-7.982000000000001, 2.718, 1.004)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "exit_receiver_rail_1" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_receiver_rail_1"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.025, 0.005, 0.05)
+            double3 xformOp:translate = (-5.982, -1.782, 1.004)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "entry_receiver_seat" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_receiver_seat"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.018, 0.022, 0.004)
+            double3 xformOp:translate = (-7.9750000000000005, 2.7, 0.946)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "exit_receiver_seat" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_receiver_seat"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.018, 0.022, 0.004)
+            double3 xformOp:translate = (-5.975, -1.8, 0.946)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "entry_carriage_visual" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_carriage_visual"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.009, 0.009, 0.03)
+            double3 xformOp:translate = (-7.98, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "exit_carriage_visual" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_carriage_visual"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.009, 0.009, 0.03)
+            double3 xformOp:translate = (-5.9799999999999995, -1.8, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "entry_handle_grip" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_handle_grip"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.017, 0.009, 0.044)
+            double3 xformOp:translate = (-8.020000000000001, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "exit_handle_grip" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_handle_grip"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.017, 0.009, 0.044)
+            double3 xformOp:translate = (-6.02, -1.8, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "entry_handle_tongue" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_handle_tongue"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.012, 0.008, 0.03)
+            double3 xformOp:translate = (-7.995000000000001, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "exit_handle_tongue" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_handle_tongue"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.012, 0.008, 0.03)
+            double3 xformOp:translate = (-5.995, -1.8, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "entry_parking_support" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_parking_support"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.025, 0.005, 0.045)
+            double3 xformOp:translate = (-9.47, 2.724, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "exit_parking_support" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_parking_support"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/black>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.025, 0.005, 0.045)
+            double3 xformOp:translate = (-7.47, -1.776, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "entry_webbing_snapshot" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "entry_webbing_snapshot"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.8, 0.0006, 0.0325)
+            double3 xformOp:translate = (-8.82, 2.7, 0.98)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "exit_webbing_snapshot" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI"]
+            customData = {
+                string photoGroup = "queue"
+                string sourceGeomName = "exit_webbing_snapshot"
+            }
+        )
+        {
+            rel material:binding = </World/Materials/band>
+            double size = 2
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.8, 0.0006, 0.0325)
+            double3 xformOp:translate = (-6.819999999999999, -1.8, 0.98)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }

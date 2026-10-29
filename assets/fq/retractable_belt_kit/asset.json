@@ -3,8 +3,8 @@
   "id": "fq:deformables/retractable_belt_kit",
   "version": "0.1.1",
   "kind": "deformable",
-  "name": "可操作伸缩隔离带套件",
-  "description": "双立柱、柔性带身、可抓取端头与卡扣；支持抬起脱扣、受控回收、拉出扣回",
+  "name": "机场黑色立柱 · 柔性伸缩带套件",
+  "description": "照片风格黑色立柱、深蓝柔性带身；34 cm 底座、44 mm 杆径、约 1 m 高度，支持抓取脱扣、收回与扣回",
   "origin": "fq",
   "upstream_origin": "FQ authored research prototype; no vendor CAD or calibrated mechanism",
   "units": "meter",
@@ -14,9 +14,9 @@
   "physics_calibrated": false,
   "dependencies": [],
   "representations": {
-    "mujoco": "assets/fq/retractable_belt_kit/model.xml",
-    "viewer_mujoco": "assets/fq/retractable_belt_kit/preview.xml",
-    "usd": "assets/fq/retractable_belt_kit/preview.usda"
+    "mujoco": "assets/fq/retractable_belt_kit/airport_black_model.xml",
+    "viewer_mujoco": "assets/fq/retractable_belt_kit/airport_black_preview.xml",
+    "usd": "assets/fq/retractable_belt_kit/airport_black_preview.usda"
   },
   "controller": "tools/retractable_belt.py",
   "limitations": [
@@ -54,13 +54,28 @@
     ]
   ],
   "demonstration": {
-    "file": "validation/previews/retractable_belt_cycle.mp4",
-    "poster": "validation/previews/retractable_belt_kit.png",
-    "title": "伸缩带完整操作 · MuJoCo 原生柔性仿真",
-    "caption": "原生物理录制，包含端头局部放大。夹具采用接触检查后的约束夹持；卷筒采用受控收放边界。不是浏览器实时操作，也不是机器人自主操作。",
+    "file": "validation/previews/airport_checkpoint_belts.mp4",
+    "poster": "validation/previews/airport_checkpoint_entry_open.png",
+    "title": "黑色伸缩带 · 新机场布局内操作验证",
+    "caption": "两套带子分别执行完整循环，另一侧保持关闭；原生 MuJoCo 柔性仿真，概念夹具操作，无机器人自主策略。",
     "default_view": "video"
   },
   "related_asset_slugs": [
     "airport_preview"
-  ]
+  ],
+  "previous_representations": {
+    "mujoco": "assets/fq/retractable_belt_kit/model.xml",
+    "viewer_mujoco": "assets/fq/retractable_belt_kit/preview.xml",
+    "usd": "assets/fq/retractable_belt_kit/preview.usda"
+  },
+  "active_variant": "airport_black",
+  "appearance_dimensions": {
+    "base_diameter_m": 0.34,
+    "pole_diameter_m": 0.044,
+    "band_center_height_m": 0.98,
+    "band_width_m": 0.065,
+    "post_center_span_m": 1.66,
+    "calibrated": false,
+    "note": "Housing and latch remain a functional concept approximation; not vendor CAD"
+  }
 }

@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "entrypoint": "photo_interaction.xml",
+  "controller": "tools/retractable_belt.py",
+  "entry": {
+    "prefix": "entry_",
+    "origin": [
+      -8.8,
+      2.7,
+      0
+    ]
+  },
+  "exit": {
+    "prefix": "exit_",
+    "origin": [
+      -6.8,
+      -1.8,
+      0
+    ]
+  },
+  "physics_engine": "MuJoCo 3.3.6",
+  "webbing": "2 native 2D flex gates; perimeter bands static",
+  "reel": "prescribed spiral boundary",
+  "kit_variant": "airport_black_model.xml",
+  "workflow": {
+    "entry_door": "Facing the facade, left door group (x=-8.8)",
+    "direction": "outside +Y -> door -> sampling -> entry belt -> enclosed waiting -> exit belt -> terminal -Y",
+    "sampling_position": [
+      -8.8,
+      3.65,
+      0
+    ],
+    "waiting_bounds_xy": [
+      [
+        -10.8,
+        -1.8
+      ],
+      [
+        -4.7,
+        2.7
+      ]
+    ],
+    "entry_gate": [
+      -8.8,
+      2.7,
+      0
+    ],
+    "release_gate": [
+      -6.8,
+      -1.8,
+      0
+    ],
+    "counter_relocated": true,
+    "fixed_boundary_segments": [
+      [
+        [
+          -9.62,
+          2.78
+        ],
+        [
+          -10.8,
+          2.7
+        ]
+      ],
+      [
+        [
+          -10.8,
+          2.7
+        ],
+        [
+          -10.8,
+          0.45
+        ]
+      ],
+      [
+        [
+          -10.8,
+          0.45
+        ],
+        [
+          -10.8,
+          -1.8
+        ]
+      ],
+      [
+        [
+          -10.8,
+          -1.8
+        ],
+        [
+          -9.2,
+          -1.8
+        ]
+      ],
+      [
+        [
+          -9.2,
+          -1.8
+        ],
+        [
+          -7.62,
+          -1.72
+        ]
+      ],
+      [
+        [
+          -5.96,
+          -1.8
+        ],
+        [
+          -4.7,
+          -1.8
+        ]
+      ],
+      [
+        [
+          -4.7,
+          -1.8
+        ],
+        [
+          -4.7,
+          0.45
+        ]
+      ],
+      [
+        [
+          -4.7,
+          0.45
+        ],
+        [
+          -4.7,
+          2.7
+        ]
+      ],
+      [
+        [
+          -4.7,
+          2.7
+        ],
+        [
+          -6.4,
+          2.7
+        ]
+      ],
+      [
+        [
+          -6.4,
+          2.7
+        ],
+        [
+          -7.96,
+          2.7
+        ]
+      ]
+    ],
+    "release_rule": "Results complete and negative, alarm cleared, entry closed, supervisor authorization; simulated inputs only",
+    "counter_position": [
+      -5.9,
+      1.8,
+      0
+    ]
+  },
+  "full_workflow": false
+}

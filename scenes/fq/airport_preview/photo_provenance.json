@@ -11,5 +11,6 @@
     "Occluded belt connections and actual entry/exit control positions",
     "Function and model of central white equipment",
     "Detector and sampling consumable placement behind the counter"
-  ]
+  ],
+  "planning_revision": "User-directed left-door sampling -> enclosed waiting -> release; counter and belt topology relocated, not recovered from the photograph"
 }
