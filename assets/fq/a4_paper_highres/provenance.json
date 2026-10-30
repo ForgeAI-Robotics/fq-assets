@@ -1,0 +1,19 @@
+{
+  "upstream_url": "https://github.com/spsanps/kami",
+  "upstream_commit": "9e7754bd458395e46640385da511d7c94be8cffc",
+  "upstream_license": "MIT, San Kala 2026; tools/a4_paper/LICENSE-kami.txt",
+  "modifications": "FQ rectangular grid adaptation, A4 experiment, metrics, visual exports; diff in tools/a4_paper/rectangle.patch",
+  "physics": "FQ implicit shell / IPC; MuJoCo visualization only",
+  "no_ThinShellLab_code_included": true,
+  "legacy_kami": {
+    "upstream_url": "https://github.com/spsanps/kami",
+    "upstream_commit": "9e7754bd458395e46640385da511d7c94be8cffc",
+    "upstream_license": "MIT, San Kala 2026; tools/a4_paper/LICENSE-kami.txt",
+    "modifications": "FQ rectangular grid adaptation, A4 experiment, metrics, visual exports; diff in tools/a4_paper/rectangle.patch",
+    "physics": "Warp / kami; MuJoCo only used for rendering the recording",
+    "no_ThinShellLab_code_included": true
+  },
+  "active_solver": "FQ discrete elastic-plastic shell with IPC Toolkit 1.6.1",
+  "ipc_url": "https://github.com/ipc-sim/ipc-toolkit",
+  "ipc_license": "MIT; tools/a4_paper/LICENSE-ipc-toolkit.txt"
+}

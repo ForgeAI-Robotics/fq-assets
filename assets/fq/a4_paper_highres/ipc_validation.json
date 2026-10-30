@@ -1,0 +1,57 @@
+{
+  "engine": "FQ discrete shell + IPC Toolkit 1.6.1",
+  "width_m": 0.21,
+  "length_m": 0.297,
+  "mass_kg": 0.004989599999999999,
+  "vertices": 1189,
+  "triangles": 2240,
+  "dt_s": 0.0125,
+  "steps": 560,
+  "ccd_queries": 8237,
+  "min_ccd_step": 4.8828125e-05,
+  "max_edge_strain": 0.010203689581326225,
+  "all_accepted_states_intersection_free": true,
+  "final": {
+    "max_cage_penetration_m": 0,
+    "step": 559,
+    "time_s": 7.0,
+    "phase": "FIXTURE RELEASED",
+    "radius_m": null,
+    "edge_strain": 0.003835849378158951,
+    "extent": [
+      0.13344939414817258,
+      0.1342328815987186,
+      0.10745763681092001
+    ],
+    "plastic_hinges": 2050,
+    "newton_iterations": 3,
+    "min_step": 1.0,
+    "intersections": false,
+    "self_contact_count": 225,
+    "self_friction_dissipation_J": 1.313378310072134e-07,
+    "floor_normal_force_N": 0.04894385993027055,
+    "floor_friction_force_N": 0.000602568587216142
+  },
+  "elapsed_s": 915.2398393154144,
+  "limitations": [
+    "Uncalibrated elastic-plastic shell parameters",
+    "Uncalibrated friction; lagged once per step; no tearing or fiber anisotropy; no mesh-convergence claim",
+    "Spherical penalty fixture, not human fingers or robot grasp",
+    "Finite tolerance CCD with 0.1 mm clearance, not an exact arithmetic proof"
+  ],
+  "mu_self": 0.3,
+  "mu_floor": 0.4,
+  "friction_model": "IPC lagged regularized Coulomb self-contact; lagged smooth Coulomb floor contact",
+  "plastic_rate_per_s": 14.266997757549298,
+  "damping_rate_per_s": 14.266997757549298,
+  "total_self_friction_dissipation_J": 0.04109501072593511,
+  "max_self_contacts": 813,
+  "node_load_scaling": "lumped_area_reference_315",
+  "yield_angle_rad": 0.09,
+  "linear_solver": "float64 Cholesky cuda",
+  "grid": [
+    29,
+    41
+  ],
+  "resolution_variant": "highres_experimental"
+}
