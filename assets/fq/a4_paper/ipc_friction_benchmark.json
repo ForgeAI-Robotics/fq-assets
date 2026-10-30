@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "parallel_sheet_sliding": [
+    {
+      "mu": 0,
+      "normal_load_N": 0.08316144950248171,
+      "tangential_resistance_N": 0.0,
+      "expected_mu_N": 0.0,
+      "position_gradient_relative_error": 0.0
+    },
+    {
+      "mu": 0.3,
+      "normal_load_N": 0.08316144950248171,
+      "tangential_resistance_N": 0.024948434850744508,
+      "expected_mu_N": 0.02494843485074451,
+      "position_gradient_relative_error": 7.941364579822086e-12
+    },
+    {
+      "mu": 0.6,
+      "normal_load_N": 0.08316144950248171,
+      "tangential_resistance_N": 0.049896869701489016,
+      "expected_mu_N": 0.04989686970148902,
+      "position_gradient_relative_error": 1.588272915964417e-11
+    }
+  ],
+  "uniform_translation_zero_friction": true,
+  "force_balance_passed": true,
+  "nonpositive_friction_work": true,
+  "constant_state_time_rate_consistency": {
+    "coarse": 6.366805760909012e-07,
+    "fine": 6.366805760909035e-07
+  },
+  "scope": "Analytical contact benchmark and constant-state rate check; not material calibration or full trajectory convergence"
+}

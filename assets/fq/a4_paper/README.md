@@ -1,3 +1,13 @@
+# 摩擦接触版本 v0.1.2
+
+默认运行：`python tools/a4_paper/run_ipc_friction.py`，输出到 `outputs/a4_ipc_friction`。默认 dt=0.0125 s、360 压缩阶段步 + 200 后续步，总计 7 秒。此前 25 ms 配置在加入摩擦后超过 1% 边长变化门槛，保留于 ipc_coarse_timestep_experiment.json；不宣称完整轨迹的时间步或网格收敛。
+
+新增纸层间 IPC 滞后正则化库仑摩擦（mu=0.3）与桌面摩擦（mu=0.4），参数未经实测标定。塑性松弛和速度阻尼使用每秒速率换算；固定状态下不同步长的衰减一致，不等于复杂接触轨迹已收敛。独立平行纸片滑动基准见 ipc_friction_benchmark.json。
+
+`ipc_contact_forces.npz` 存储每个物理步末的逐顶点 self_normal_N、self_friction_N、floor_contact_N 和 time_s，顶点顺序对应 ipc_trajectory.npz。坐标为仿真世界坐标，不是居中后的预览快照坐标。法向力按当前步末计算；摩擦方向/法向载荷滞后一个物理步。属于模型预测，未标定为真实压力或传感器读数；不含球形挤压装置力与内部弹性力。
+
+运行 `python tools/a4_paper/validate_friction.py` 检查滑动基准；`python tools/a4_paper/export_contact_forces.py --mode a4_ipc_friction` 重建接触力，`python tools/a4_paper/audit_ipc.py --mode a4_ipc_friction` 复核轨迹。下方为旧版实验历史说明；旧版本结果不等于本版验证。
+
 # A4 可揉皱纸团原型：IPC 版本
 
 当前默认是松散纸团的静态快照，平纸保存在 preview.xml/usda。运行物理请使用 `tools/a4_paper/run_ipc.py`，不是 MuJoCo / Isaac Sim 原生纸张求解。

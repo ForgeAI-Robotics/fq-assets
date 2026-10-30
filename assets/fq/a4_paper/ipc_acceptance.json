@@ -1,39 +1,36 @@
 {
   "accepted_loose_paper_ball": true,
-  "max_edge_strain_independent": 0.007913632742503562,
+  "max_edge_strain_independent": 0.0031868114071338383,
   "discrete_intersections_frames": [],
   "linear_export_interpolation_crossing_intervals": [
-    87,
-    100,
-    101,
-    103,
-    104,
-    108,
-    111,
-    112,
-    115,
-    118,
-    119,
-    120,
-    126,
-    128,
-    129,
-    134
+    178,
+    183,
+    184,
+    187,
+    189,
+    192,
+    206,
+    216,
+    217,
+    224,
+    231,
+    240,
+    272
   ],
-  "last_half_second_max_vertex_motion_m": 0.0,
+  "last_half_second_max_vertex_motion_m": 0.00047625676030871804,
   "final_extent_m": [
-    0.13338010721647733,
-    0.13872106710962026,
-    0.09717148010079624
+    0.12655961022259868,
+    0.13791494126509443,
+    0.10410813220801396
   ],
-  "last_held_cage_penetration_m": 0.013807951392072429,
+  "last_held_cage_penetration_m": 0.010031397091785632,
   "release_observation_s": 3.625,
   "continuous_solver_scope": "CCD applied to each accepted Newton update; straight interpolation between exported time-step endpoints is separately audited",
   "limitations": [
     "No physical material calibration",
     "Spherical compression fixture, not hands",
-    "No self-friction"
+    "Uncalibrated lagged regularized friction; no mesh convergence claim"
   ],
-  "ccd_path_updates": 4825,
+  "ccd_path_updates": 5762,
   "ccd_path_interpolation_crossings": []
 }

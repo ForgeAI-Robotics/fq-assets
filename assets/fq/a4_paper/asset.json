@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "fq:deformables/a4_paper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "kind": "deformable",
-  "name": "A4 塑性纸张 · 可揉皱纸团原型",
-  "description": "球形软压缩形成松散纸团，释放后保形；离散薄壳塑性 + IPC 连续碰撞检测；未接入手指",
+  "name": "A4 塑性纸张 · 摩擦接触原型",
+  "description": "松散揉团、释放保形；纸层/桌面摩擦与逐顶点接触力记录；外部薄壳 + IPC，未标定",
   "origin": "fq",
   "units": "meter",
   "up_axis": "Z",
@@ -22,7 +22,7 @@
     "flat_usd": "assets/fq/a4_paper/preview.usda",
     "previous_fold_playback": "assets/fq/a4_paper/fold_playback.usdc"
   },
-  "simulation_entrypoint": "tools/a4_paper/run_ipc.py",
+  "simulation_entrypoint": "tools/a4_paper/run_ipc_friction.py",
   "dependencies": [],
   "dimensions_m": [
     0.21,
@@ -38,7 +38,10 @@
     "validated_tight_crumpling": false,
     "robot_grasp": false,
     "validated_loose_crumpling": true,
-    "continuous_self_collision_checks": true
+    "continuous_self_collision_checks": true,
+    "self_contact_friction": true,
+    "floor_contact_friction": true,
+    "per_vertex_contact_force_export": true
   },
   "viewer_status": [
     [
@@ -46,42 +49,42 @@
       "A4 210×297 mm；目标质量 4.99 g"
     ],
     [
-      "揉团验证",
-      "球形软压缩 → 释放 → 落桌后保持松散纸团"
+      "物理",
+      "塑性折痕、IPC 自碰撞、纸层及桌面摩擦"
     ],
     [
-      "碰撞",
-      "IPC 连续检测，保存并复核内部变形路径"
+      "最大边长变化",
+      "0.32%"
     ],
     [
-      "最大边长误差",
-      "0.79%"
+      "接触力",
+      "逐顶点记录自接触法向/摩擦力、桌面接触力（N）"
     ],
     [
-      "释放后观察",
-      "3.625 秒"
+      "步长",
+      "12.5 ms；更粗步长未通过本轮误差门槛"
     ],
     [
       "范围",
-      "参数未实测标定；无手指夹持、无纸层摩擦"
+      "低分辨率未标定原型；无手指、无原生 MuJoCo/PhysX 柔性"
     ]
   ],
   "limitations": [
-    "Validated for the supplied loose-ball spherical soft-compression test only; tighter compression exceeds the 1% edge-strain acceptance threshold",
-    "FQ discrete edge-spring / dihedral plastic shell, uncalibrated material and rate-dependent plastic update",
-    "Frictionless self contact; no tearing, paper fiber anisotropy or moisture model",
-    "Soft spherical penalty fixture, not rigid enclosing hardware, human fingers or robot manipulation",
-    "CCD uses numerical tolerances and 0.1 mm minimum clearance; not an exact arithmetic proof",
-    "USD playback follows recorded CCD-checked internal solver paths; it is not native PhysX dynamics",
-    "MuJoCo preview is a visual snapshot with no native deformable physics or collision proxy"
+    "Validated only for supplied loose-ball soft-spherical compression at dt=0.0125 s; dt=0.025 s exceeds 1% peak edge strain",
+    "Uncalibrated material and friction coefficients; no mesh or full trajectory timestep convergence claim",
+    "Lagged regularized Coulomb friction updated once per step, not an exact stick-slip solver",
+    "Time-based plastic relaxation and damping; still rate dependent and uncalibrated",
+    "No fingers, robot control, tearing, fiber anisotropy or moisture",
+    "Contact forces are model predictions, not calibrated sensor readings",
+    "MuJoCo/USD are static snapshots or baked playback, not native deformable dynamics"
   ],
   "demonstration": {
     "file": "validation/previews/a4_paper_ipc_crumple.mp4",
     "poster": "validation/previews/fq_deformables_a4_paper.png",
-    "title": "A4 纸压成松散纸团并释放 · IPC 实验",
-    "caption": "外部软球形压缩驱动；FQ 薄壳/塑性模型 + IPC，MuJoCo 渲染。无手指策略，参数未标定。",
+    "title": "A4 纸揉团 · 摩擦接触版本",
+    "caption": "FQ 薄壳/塑性 + IPC 摩擦接触；12.5 ms 步长。球形软挤压，无手指，参数未标定。",
     "default_view": "video"
   },
-  "previous_simulation_entrypoint": "tools/a4_paper/run_demo.py",
-  "active_variant": "ipc_loose_paper_ball"
+  "previous_simulation_entrypoint": "tools/a4_paper/run_ipc.py",
+  "active_variant": "ipc_friction_loose_ball"
 }

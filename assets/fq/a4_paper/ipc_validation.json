@@ -5,34 +5,45 @@
   "mass_kg": 0.004989599999999999,
   "vertices": 315,
   "triangles": 560,
-  "dt_s": 0.025,
-  "steps": 280,
-  "ccd_queries": 4758,
-  "min_ccd_step": 2.44140625e-05,
-  "max_edge_strain": 0.007913632742503562,
+  "dt_s": 0.0125,
+  "steps": 560,
+  "ccd_queries": 5744,
+  "min_ccd_step": 9.765625e-05,
+  "max_edge_strain": 0.0031868114071338383,
   "all_accepted_states_intersection_free": true,
   "final": {
     "max_cage_penetration_m": 0,
-    "step": 279,
+    "step": 559,
     "time_s": 7.0,
     "phase": "FIXTURE RELEASED",
     "radius_m": null,
-    "edge_strain": 0.002295958937693632,
+    "edge_strain": 0.00019771072045737803,
     "extent": [
-      0.13338010721647733,
-      0.13872106710962026,
-      0.09717148010079624
+      0.12655961022259868,
+      0.13791494126509443,
+      0.10410813220801396
     ],
-    "plastic_hinges": 520,
-    "newton_iterations": 1,
-    "min_step": 1,
-    "intersections": false
+    "plastic_hinges": 462,
+    "newton_iterations": 3,
+    "min_step": 1.0,
+    "intersections": false,
+    "self_contact_count": 40,
+    "self_friction_dissipation_J": 1.032055077471909e-10,
+    "floor_normal_force_N": 0.04894066741662482,
+    "floor_friction_force_N": 0.00510346102539782
   },
-  "elapsed_s": 156.4895577430725,
+  "elapsed_s": 128.89879417419434,
   "limitations": [
     "Uncalibrated elastic-plastic shell parameters",
-    "Frictionless self contact; no tearing or fiber anisotropy",
+    "Uncalibrated friction; lagged once per step; no tearing or fiber anisotropy; no mesh-convergence claim",
     "Spherical penalty fixture, not human fingers or robot grasp",
     "Finite tolerance CCD with 0.1 mm clearance, not an exact arithmetic proof"
-  ]
+  ],
+  "mu_self": 0.3,
+  "mu_floor": 0.4,
+  "friction_model": "IPC lagged regularized Coulomb self-contact; lagged smooth Coulomb floor contact",
+  "plastic_rate_per_s": 14.266997757549298,
+  "damping_rate_per_s": 14.266997757549298,
+  "total_self_friction_dissipation_J": 0.009257506996236831,
+  "max_self_contacts": 134
 }
