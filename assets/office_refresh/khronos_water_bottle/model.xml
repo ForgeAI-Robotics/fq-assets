@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="khronos_water_bottle">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="p0" file="part_0.obj" />
+    <texture name="p0" type="2d" file="part_0.png" />
+    <material name="p0" rgba="1 1 1 1" specular="0.3" shininess="0.5" texture="p0" />
+  </asset>
+  <worldbody>
+    <body name="khronos_water_bottle">
+      <freejoint name="root" />
+      <geom name="p0" type="mesh" mesh="p0" material="p0" mass="0" contype="0" conaffinity="0" />
+      <geom name="collision_0" type="cylinder" pos="0 0 0.09987499974668025" euler="0 0 0" mass="0.075" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" size="0.047165912389755246 0.09987499974668025" />
+      <geom name="collision_1" type="cylinder" pos="0 0 0.21737499944865704" euler="0 0 0" mass="0.075" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" size="0.0304613184183836 0.017624999955296514" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -4,5 +4,7 @@
   "contact_library": "IPC Toolkit 1.6.1",
   "contact_library_url": "https://github.com/ipc-sim/ipc-toolkit",
   "contact_library_license": "MIT",
-  "material_source": "Uncalibrated illustrative parameters; no manufacturer measurement"
+  "material_source": "Uncalibrated illustrative parameters; no manufacturer measurement",
+  "appearance": "FQ authored neutral-white fiber albedo and normal-map dot embossing; no physical fibers or separate plies",
+  "revision": "0.1.1: 25 x 31 shell, bending 8e-7 Nm, stretch 1.2e5 N/m, 27 mm compression fixture radius"
 }

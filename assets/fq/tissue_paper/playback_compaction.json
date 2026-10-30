@@ -1,0 +1,12 @@
+{
+  "original_solver_samples": 14808,
+  "published_samples": 660,
+  "preserved_physical_endpoints": 601,
+  "expanded_intervals": [
+    270
+  ],
+  "float32_crossing_intervals": [],
+  "physical_endpoint_change_max_m": 0.0,
+  "method": "Retain all 80 Hz physical endpoints; retain full internal updates only where endpoint interpolation fails CCD; revalidate every published segment after float32 conversion",
+  "passed": true
+}

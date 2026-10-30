@@ -239,7 +239,7 @@
     },
     {
       "id": "fq:deformables/tissue_paper",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "assets/fq/tissue_paper/asset.json"
     },
     {
@@ -286,6 +286,41 @@
       "id": "third_party:office/ph_sticky_notes",
       "version": "0.1.0",
       "manifest": "assets/third_party/office/ph_sticky_notes/asset.json"
+    },
+    {
+      "id": "third_party:office/gso_blue_mug",
+      "version": "0.1.0",
+      "manifest": "assets/office_refresh/gso_blue_mug/asset.json"
+    },
+    {
+      "id": "third_party:office/gso_white_mug",
+      "version": "0.1.0",
+      "manifest": "assets/office_refresh/gso_white_mug/asset.json"
+    },
+    {
+      "id": "fq:office/iced_coffee",
+      "version": "0.1.0",
+      "manifest": "assets/office_refresh/iced_coffee/asset.json"
+    },
+    {
+      "id": "third_party:office/khronos_water_bottle",
+      "version": "0.1.0",
+      "manifest": "assets/office_refresh/khronos_water_bottle/asset.json"
+    },
+    {
+      "id": "fq:office/pet_water_bottle",
+      "version": "0.1.0",
+      "manifest": "assets/office_refresh/pet_water_bottle/asset.json"
+    },
+    {
+      "id": "fq:office/pizza_box",
+      "version": "0.1.0",
+      "manifest": "assets/office_refresh/pizza_box/asset.json"
+    },
+    {
+      "id": "fq:office/takeaway_coffee",
+      "version": "0.1.0",
+      "manifest": "assets/office_refresh/takeaway_coffee/asset.json"
     }
   ]
 }

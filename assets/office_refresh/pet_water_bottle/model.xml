@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="pet_water_bottle">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="p0" file="part_0.obj" />
+    <material name="p0" rgba="0.47999998927116394 0.699999988079071 0.800000011920929 1" specular="0.3" shininess="0.7800000011920929" />
+    <mesh name="p1" file="part_1.obj" />
+    <material name="p1" rgba="0.8999999761581421 0.9399999976158142 0.9599999785423279 1" specular="0.1" shininess="0.3799999952316284" />
+    <mesh name="p2" file="part_2.obj" />
+    <material name="p2" rgba="0.02500000037252903 0.20000000298023224 0.550000011920929 1" specular="0.3" shininess="0.6500000059604645" />
+    <mesh name="p3" file="part_3.obj" />
+    <material name="p3" rgba="0.02500000037252903 0.20000000298023224 0.550000011920929 1" specular="0.3" shininess="0.6500000059604645" />
+  </asset>
+  <worldbody>
+    <body name="pet_water_bottle">
+      <freejoint name="root" />
+      <geom name="p0" type="mesh" mesh="p0" material="p0" mass="0" contype="0" conaffinity="0" />
+      <geom name="p1" type="mesh" mesh="p1" material="p1" mass="0" contype="0" conaffinity="0" />
+      <geom name="p2" type="mesh" mesh="p2" material="p2" mass="0" contype="0" conaffinity="0" />
+      <geom name="p3" type="mesh" mesh="p3" material="p3" mass="0" contype="0" conaffinity="0" />
+      <geom name="collision_0" type="cylinder" pos="0 0 0.07" euler="0 0 0" mass="0.17333333333333334" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" size="0.032 0.07" />
+      <geom name="collision_1" type="cylinder" pos="0 0 0.155" euler="0 0 0" mass="0.17333333333333334" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" size="0.025 0.015" />
+      <geom name="collision_2" type="cylinder" pos="0 0 0.186" euler="0 0 0" mass="0.17333333333333334" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" size="0.016 0.016" />
+    </body>
+  </worldbody>
+</mujoco>

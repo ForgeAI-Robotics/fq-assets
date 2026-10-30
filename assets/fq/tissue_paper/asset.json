@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "fq:deformables/tissue_paper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "deformable",
   "name": "卫生纸片 · 柔性揉团原型",
-  "description": "100×120 mm 单张等效薄片；松散揉团、释放保形、摩擦及接触力记录；材料未标定",
+  "description": "白色纤维与压纹；100×120 mm 等效薄片，松散揉团与接触力记录；非实物标定或多层蓬松结构",
   "origin": "fq",
   "units": "meter",
   "up_axis": "Z",
@@ -56,7 +56,7 @@
     ],
     [
       "最大边长变化",
-      "0.50%"
+      "0.82%"
     ],
     [
       "范围",
@@ -68,7 +68,8 @@
     "Validated supplied loose spherical compression only, no hand or robot grasp",
     "No tearing, perforation, absorption, wet strength, fiber anisotropy or ply separation",
     "Numerical clearance 0.1 mm is not a measured material thickness",
-    "USD/MuJoCo are snapshots or baked visualization; external solver required for deformation"
+    "USD/MuJoCo are snapshots or baked visualization; external solver required for deformation",
+    "Sparse trajectory.npz is not safe for straight geometry interpolation at release interval 270; use validated ccd_path.npz or crumple_playback.usdc"
   ],
   "demonstration": {
     "file": "validation/previews/tissue_paper_crumple.mp4",
@@ -76,5 +77,10 @@
     "title": "卫生纸片揉团与释放 · 1080p",
     "caption": "FQ 薄壳/塑性 + IPC；球形软挤压，无手指，材料未标定。",
     "default_view": "video"
+  },
+  "appearance": {
+    "authored_fiber_texture": true,
+    "embossing": "normal map only; no added physical geometry",
+    "physics_updated": true
   }
 }

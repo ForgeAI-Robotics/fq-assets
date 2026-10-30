@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "fq:office/iced_coffee",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "冷咖啡杯 · 吸管",
+  "description": "办公饮食物件；独立可移动刚体与近似碰撞",
+  "origin": "fq",
+  "upstream_origin": "FQ authored procedural asset",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "FQ authored",
+  "representations": {
+    "mujoco": "assets/office_refresh/iced_coffee/model.xml",
+    "usd": "assets/office_refresh/iced_coffee/model.usdc",
+    "glb": "assets/office_refresh/iced_coffee/model.glb"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.09200000017881393,
+    0.09200000017881393,
+    0.20499999821186066
+  ],
+  "mass_kg": 0.04,
+  "physics_calibrated": false,
+  "limitations": [
+    "Rigid prop; no liquid dynamics, lid removal, box opening or crushing",
+    "Mass, friction, collision proxies and custom-model dimensions are uncalibrated",
+    "Scan cup collisions use 12 mm spatial convex clusters; not a precision surface model",
+    "Closed cold-coffee cup is opaque; transparent plastic/liquid refraction is not modeled"
+  ],
+  "viewer_status": [
+    [
+      "来源",
+      "FQ authored procedural asset"
+    ],
+    [
+      "物理",
+      "可移动刚体；近似碰撞"
+    ],
+    [
+      "范围",
+      "固定闭合姿态；不含液体动力学、开盖和纸盒折叠"
+    ]
+  ]
+}

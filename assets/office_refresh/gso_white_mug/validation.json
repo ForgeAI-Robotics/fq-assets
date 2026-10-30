@@ -1,0 +1,26 @@
+{
+  "usd_missing_dependencies": [],
+  "collision_count": 401,
+  "triangles": 16644,
+  "drop_test": {
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      2.4960328471136112e-05,
+      -3.0929761301297076e-05,
+      -0.00014136857300261487
+    ],
+    "contact_count": 5,
+    "passed": true
+  },
+  "cup_cavity_test": {
+    "passed": true,
+    "probe_radius_m": 0.005,
+    "final_position_m": [
+      0.013870167826674544,
+      0.01138230583251968,
+      0.016201011590573168
+    ],
+    "duration_s": 2
+  }
+}

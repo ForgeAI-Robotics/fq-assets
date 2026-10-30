@@ -1,0 +1,5 @@
+CC-BY-4.0
+Source: https://fuel.gazebosim.org/1.0/GoogleResearch/models/Threshold_Porcelain_Coffee_Mug_All_Over_Bead_White
+Author: Google LLC
+Changes recorded in provenance.json
+https://creativecommons.org/licenses/by/4.0/

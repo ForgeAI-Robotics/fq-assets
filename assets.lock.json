@@ -49,7 +49,7 @@
     "third_party:bags/fuel_openrobotics_suitcase2h": "0.1.0",
     "fq:deformables/retractable_belt_kit": "0.1.1",
     "fq:deformables/a4_paper": "0.1.2",
-    "fq:deformables/tissue_paper": "0.1.0",
+    "fq:deformables/tissue_paper": "0.1.1",
     "third_party:office/ph_binder_notebook": "0.1.0",
     "third_party:office/ph_blue_pen": "0.1.0",
     "third_party:office/ph_clipboard": "0.1.0",
@@ -58,7 +58,14 @@
     "third_party:office/ph_pencil": "0.1.0",
     "third_party:office/ph_pencil_cup": "0.1.0",
     "third_party:office/ph_stapler": "0.1.0",
-    "third_party:office/ph_sticky_notes": "0.1.0"
+    "third_party:office/ph_sticky_notes": "0.1.0",
+    "third_party:office/gso_blue_mug": "0.1.0",
+    "third_party:office/gso_white_mug": "0.1.0",
+    "fq:office/iced_coffee": "0.1.0",
+    "third_party:office/khronos_water_bottle": "0.1.0",
+    "fq:office/pet_water_bottle": "0.1.0",
+    "fq:office/pizza_box": "0.1.0",
+    "fq:office/takeaway_coffee": "0.1.0"
   },
   "profiles": {
     "fq:poses/o6_left_task": "0.1.2",

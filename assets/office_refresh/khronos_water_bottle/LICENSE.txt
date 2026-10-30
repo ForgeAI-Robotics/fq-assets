@@ -1,0 +1,4 @@
+CC0-1.0
+Source: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/WaterBottle/
+Author: Microsoft
+Changes recorded in provenance.json

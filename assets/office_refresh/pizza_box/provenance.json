@@ -1,0 +1,12 @@
+{
+  "url": "FQ authored procedural asset",
+  "license": "FQ authored",
+  "author": "FQ",
+  "scale_applied": 1.0,
+  "changes": [
+    "XY centered and Z grounded",
+    "USD/MJCF conversion",
+    "Approximate compound collision; estimated mass/friction",
+    "Textures limited to 2048 pixels; GLB retains source materials"
+  ]
+}

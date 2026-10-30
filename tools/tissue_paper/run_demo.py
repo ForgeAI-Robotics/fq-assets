@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse,json,time
 import numpy as np,torch,scipy.sparse as sp,scipy.sparse.linalg as sla,ipctk
 torch.set_num_threads(4)
-p=argparse.ArgumentParser();p.add_argument('--nx',type=int,default=17);p.add_argument('--ny',type=int,default=21);p.add_argument('--steps',type=int,default=360);p.add_argument('--settle',type=int,default=200);p.add_argument('--radius',type=float,default=.027);p.add_argument('--out',default='outputs/tissue_ipc');p.add_argument('--elastic',action='store_true');p.add_argument('--dt',type=float,default=.0125);p.add_argument('--mu-self',type=float,default=.3);p.add_argument('--mu-floor',type=float,default=.4);p.add_argument('--resume-dir');a=p.parse_args();O=Path(a.out);O.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--nx',type=int,default=25);p.add_argument('--ny',type=int,default=31);p.add_argument('--steps',type=int,default=360);p.add_argument('--settle',type=int,default=240);p.add_argument('--radius',type=float,default=.027);p.add_argument('--out',default='outputs/tissue_ipc');p.add_argument('--elastic',action='store_true');p.add_argument('--dt',type=float,default=.0125);p.add_argument('--mu-self',type=float,default=.3);p.add_argument('--mu-floor',type=float,default=.4);p.add_argument('--resume-dir');a=p.parse_args();O=Path(a.out);O.mkdir(parents=True,exist_ok=True)
 assert a.dt>0 and a.mu_self>=0 and a.mu_floor>=0
 nx,ny=a.nx,a.ny;uv=np.array([(x,y) for y in np.linspace(-.060,.060,ny) for x in np.linspace(-.050,.050,nx)])
 rest=np.column_stack([uv,np.full(len(uv),.20)]);faces=[]
@@ -24,7 +24,7 @@ mass=np.zeros(n)
 for j in range(3):np.add.at(mass,faces[:,j],areas*.030/3)
 node_load_scale=mass/(mass.sum()/315)
 linear_device='cuda' if torch.cuda.is_available() else 'cpu'
-kb=np.full(nh,4e-6);ks=np.full(ne,3e4);weights=np.r_[ks,kb];plastic=np.zeros(nh)
+kb=np.full(nh,8e-7);ks=np.full(ne,1.2e5);weights=np.r_[ks,kb];plastic=np.zeros(nh)
 mesh=ipctk.CollisionMesh(rest,edges,faces);dhat=.001;dmin=.0001;barrier=ipctk.BarrierPotential(dhat,stiffness=1e6)
 friction=ipctk.FrictionPotential(1e-3);tangential=ipctk.TangentialCollisions()
 floor_load=np.zeros(n)

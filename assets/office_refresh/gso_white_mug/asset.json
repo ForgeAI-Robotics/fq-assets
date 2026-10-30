@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "third_party:office/gso_white_mug",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "白色浮点陶瓷杯",
+  "description": "办公饮食物件；独立可移动刚体与近似碰撞",
+  "origin": "third_party",
+  "upstream_origin": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Threshold_Porcelain_Coffee_Mug_All_Over_Bead_White",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "CC-BY-4.0",
+  "representations": {
+    "mujoco": "assets/office_refresh/gso_white_mug/model.xml",
+    "usd": "assets/office_refresh/gso_white_mug/model.usdc",
+    "glb": "assets/office_refresh/gso_white_mug/model.glb"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.1307400017976761,
+    0.0965220034122467,
+    0.11462400108575821
+  ],
+  "mass_kg": 0.3,
+  "physics_calibrated": false,
+  "limitations": [
+    "Rigid prop; no liquid dynamics, lid removal, box opening or crushing",
+    "Mass, friction, collision proxies and custom-model dimensions are uncalibrated",
+    "Scan cup collisions use 12 mm spatial convex clusters; not a precision surface model",
+    "Closed cold-coffee cup is opaque; transparent plastic/liquid refraction is not modeled"
+  ],
+  "viewer_status": [
+    [
+      "来源",
+      "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Threshold_Porcelain_Coffee_Mug_All_Over_Bead_White"
+    ],
+    [
+      "物理",
+      "可移动刚体；近似碰撞"
+    ],
+    [
+      "范围",
+      "固定闭合姿态；不含液体动力学、开盖和纸盒折叠"
+    ]
+  ]
+}

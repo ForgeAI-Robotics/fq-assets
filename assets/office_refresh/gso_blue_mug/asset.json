@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "third_party:office/gso_blue_mug",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "蓝色陶瓷马克杯",
+  "description": "办公饮食物件；独立可移动刚体与近似碰撞",
+  "origin": "third_party",
+  "upstream_origin": "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Cole_Hardware_Mug_Classic_Blue",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "CC-BY-4.0",
+  "representations": {
+    "mujoco": "assets/office_refresh/gso_blue_mug/model.xml",
+    "usd": "assets/office_refresh/gso_blue_mug/model.usdc",
+    "glb": "assets/office_refresh/gso_blue_mug/model.glb"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.1656619906425476,
+    0.12554000318050385,
+    0.09476900100708008
+  ],
+  "mass_kg": 0.3,
+  "physics_calibrated": false,
+  "limitations": [
+    "Rigid prop; no liquid dynamics, lid removal, box opening or crushing",
+    "Mass, friction, collision proxies and custom-model dimensions are uncalibrated",
+    "Scan cup collisions use 12 mm spatial convex clusters; not a precision surface model",
+    "Closed cold-coffee cup is opaque; transparent plastic/liquid refraction is not modeled"
+  ],
+  "viewer_status": [
+    [
+      "来源",
+      "https://fuel.gazebosim.org/1.0/GoogleResearch/models/Cole_Hardware_Mug_Classic_Blue"
+    ],
+    [
+      "物理",
+      "可移动刚体；近似碰撞"
+    ],
+    [
+      "范围",
+      "固定闭合姿态；不含液体动力学、开盖和纸盒折叠"
+    ]
+  ]
+}

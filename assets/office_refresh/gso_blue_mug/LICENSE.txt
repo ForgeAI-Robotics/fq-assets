@@ -1,0 +1,5 @@
+CC-BY-4.0
+Source: https://fuel.gazebosim.org/1.0/GoogleResearch/models/Cole_Hardware_Mug_Classic_Blue
+Author: Google LLC
+Changes recorded in provenance.json
+https://creativecommons.org/licenses/by/4.0/

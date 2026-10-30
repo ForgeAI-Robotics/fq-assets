@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="pizza_box">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="p0" file="part_0.obj" />
+    <material name="p0" rgba="0.46000000834465027 0.28999999165534973 0.14000000059604645 1" specular="0.1" shininess="0.06999999284744263" />
+    <mesh name="p1" file="part_1.obj" />
+    <material name="p1" rgba="0.9200000166893005 0.8999999761581421 0.8500000238418579 1" specular="0.1" shininess="0.13999998569488525" />
+    <mesh name="p2" file="part_2.obj" />
+    <material name="p2" rgba="0.02500000037252903 0.18000000715255737 0.10000000149011612 1" specular="0.1" shininess="0.30000001192092896" />
+    <mesh name="p3" file="part_3.obj" />
+    <material name="p3" rgba="0.02500000037252903 0.18000000715255737 0.10000000149011612 1" specular="0.1" shininess="0.30000001192092896" />
+    <mesh name="p4" file="part_4.obj" />
+    <material name="p4" rgba="0.02500000037252903 0.029999999329447746 0.02800000086426735 1" specular="0.3" shininess="0.6500000059604645" />
+    <mesh name="p5" file="part_5.obj" />
+    <material name="p5" rgba="0.02500000037252903 0.029999999329447746 0.02800000086426735 1" specular="0.3" shininess="0.6500000059604645" />
+  </asset>
+  <worldbody>
+    <body name="pizza_box">
+      <freejoint name="root" />
+      <geom name="p0" type="mesh" mesh="p0" material="p0" mass="0" contype="0" conaffinity="0" />
+      <geom name="p1" type="mesh" mesh="p1" material="p1" mass="0" contype="0" conaffinity="0" />
+      <geom name="p2" type="mesh" mesh="p2" material="p2" mass="0" contype="0" conaffinity="0" />
+      <geom name="p3" type="mesh" mesh="p3" material="p3" mass="0" contype="0" conaffinity="0" />
+      <geom name="p4" type="mesh" mesh="p4" material="p4" mass="0" contype="0" conaffinity="0" />
+      <geom name="p5" type="mesh" mesh="p5" material="p5" mass="0" contype="0" conaffinity="0" />
+      <geom name="collision_0" type="box" pos="0 0 0.02" euler="0 0 0" mass="0.16" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" size="0.163 0.163 0.02" />
+    </body>
+  </worldbody>
+</mujoco>

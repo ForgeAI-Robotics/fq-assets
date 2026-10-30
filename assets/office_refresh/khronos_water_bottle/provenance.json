@@ -1,0 +1,13 @@
+{
+  "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/WaterBottle/",
+  "license": "CC0-1.0",
+  "author": "Microsoft",
+  "sha256": "b337e526fd6a162013c2984aeec163f5fbb4f717252724dfc3f3458bd51df94b",
+  "scale_applied": 0.9023168052780778,
+  "changes": [
+    "XY centered and Z grounded",
+    "USD/MJCF conversion",
+    "Approximate compound collision; estimated mass/friction",
+    "Textures limited to 2048 pixels; GLB retains source materials"
+  ]
+}
