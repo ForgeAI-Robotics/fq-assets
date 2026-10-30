@@ -1,0 +1,29 @@
+{
+  "mode": "crumple",
+  "engine": "kami / NVIDIA Warp 1.16, FQ rectangular-grid prototype",
+  "width_m": 0.21,
+  "length_m": 0.297,
+  "grammage_g_m2": 80,
+  "mass_kg": 0.004989599999999999,
+  "physical_thickness_m": 0.0001,
+  "numerical_layer_spacing_m": 0.002,
+  "vertices": 625,
+  "triangles": 1152,
+  "frames": 840,
+  "max_edge_strain": 0.014368295669555664,
+  "contact_hash_overflow": 0,
+  "final": {
+    "t": 13.983333333333333,
+    "phase": "RELEASED: CRUMPLED SHEET",
+    "strain": 0.0003165006637573242,
+    "plastic_hinges": 2,
+    "extent": [
+      0.30887213349342346,
+      0.35524559020996094,
+      8.846493437886238e-05
+    ],
+    "overflow": 0
+  },
+  "elapsed_s": 181.15571355819702,
+  "scope": "Uncalibrated rectangular adaptation; kinematic clamps; discrete vertex-triangle contact, not CCD; no robot coupling"
+}

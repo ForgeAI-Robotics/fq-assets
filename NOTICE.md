@@ -35,3 +35,7 @@ User-supplied model; owner confirmed public publication on 2026-10-27. No upstre
 ## Airport supporting assets 2026-10-28
 
 OpenRobotics Fuel bags retain CC0 or CC-BY-4.0 as declared per asset. Passenger combinations retain Microsoft Rocketbox MIT and Google GSO CC-BY-4.0 licenses. FQ-authored box, sampling sheet and attachment additions do not relicense upstream components.
+
+## A4 纸张实验原型
+
+`tools/a4_paper/kami` 来源于 San Kala 的 kami（MIT），固定提交 9e7754bd458395e46640385da511d7c94be8cffc。许可全文保存在 tools/a4_paper/LICENSE-kami.txt；FQ 矩形适配差异、A4 实验及物理验证记录一并提供。当前只验证压折与塑性保留，不声明紧密揉团通过。

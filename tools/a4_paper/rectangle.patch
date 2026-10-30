@@ -1,0 +1,190 @@
+--- upstream/kami/config.py
++++ fq/kami/config.py
+@@ -80,6 +80,7 @@
+     contact_items_per_triangle  capacity of the self-contact hash (entries per triangle); overflow is counted in
+                    `Sheet.T['overflow']` (contacts are then missed, never invented).
+     """
++    aspect_x: float = 1.0  # FQ rectangle extension: width / length
+     N: int = 33
+     size: float = 0.15
+     substeps: int = 18
+--- upstream/kami/constraints.py
++++ fq/kami/constraints.py
+@@ -83,18 +83,18 @@
+             stretch_edge(pos, w, j * N + k - j + 1, (j + 1) * N + k - j, L * SQRT2, b)
+ 
+ 
+-def stretch_sweep(pos, w, N, L, sub, B, device):
++def stretch_sweep(pos, w, N, L, sub, B, device, aspect=1.0):
+     """One sweep over every stretch edge: rows, columns, both diagonal families (reversed on odd substeps)."""
+     if sub % 2 == 0:
+-        wp.launch(k_stretch_rows, (N, B), inputs=[pos, w, N, L, 1], device=device)
++        wp.launch(k_stretch_rows, (N, B), inputs=[pos, w, N, L * aspect, 1], device=device)
+         wp.launch(k_stretch_cols, (N, B), inputs=[pos, w, N, L, 1], device=device)
+-        wp.launch(k_stretch_diag, (N, B), inputs=[pos, w, N, L, 1, 0], device=device)
+-        wp.launch(k_stretch_diag, (N, B), inputs=[pos, w, N, L, 1, 1], device=device)
++        wp.launch(k_stretch_diag, (N, B), inputs=[pos, w, N, L * ((1+aspect*aspect)/2)**.5, 1, 0], device=device)
++        wp.launch(k_stretch_diag, (N, B), inputs=[pos, w, N, L * ((1+aspect*aspect)/2)**.5, 1, 1], device=device)
+     else:
+-        wp.launch(k_stretch_diag, (N, B), inputs=[pos, w, N, L, 0, 1], device=device)
+-        wp.launch(k_stretch_diag, (N, B), inputs=[pos, w, N, L, 0, 0], device=device)
++        wp.launch(k_stretch_diag, (N, B), inputs=[pos, w, N, L * ((1+aspect*aspect)/2)**.5, 0, 1], device=device)
++        wp.launch(k_stretch_diag, (N, B), inputs=[pos, w, N, L * ((1+aspect*aspect)/2)**.5, 0, 0], device=device)
+         wp.launch(k_stretch_cols, (N, B), inputs=[pos, w, N, L, 0], device=device)
+-        wp.launch(k_stretch_rows, (N, B), inputs=[pos, w, N, L, 0], device=device)
++        wp.launch(k_stretch_rows, (N, B), inputs=[pos, w, N, L * aspect, 0], device=device)
+ 
+ 
+ @wp.kernel
+@@ -176,7 +176,7 @@
+ 
+ 
+ @wp.kernel
+-def k_buckle_lines(pos: wp.array2d(dtype=wp.vec3), ws: wp.array2d(dtype=float), nrm: wp.array2d(dtype=wp.vec3), N: int, L: float,
++def k_buckle_lines(pos: wp.array2d(dtype=wp.vec3), ws: wp.array2d(dtype=float), nrm: wp.array2d(dtype=wp.vec3), N: int, L: float, aspect: float,
+                    eps: float, gain: float, family: int):
+     """Paper carries almost no in-plane compression: a strip buckles at a load far below what any tool applies. Distance
+     projections alone never resolve compression between two kinematic points (they only move it along the line), so each
+@@ -184,7 +184,7 @@
+     lengths on the longer path and the bending solve shapes the hump. A model of buckling along grid lines only."""
+     l, b = wp.tid()
+     if family == 0:
+-        buckle_line(b, pos, ws, nrm, N, L, eps, gain, 1, l * N)
++        buckle_line(b, pos, ws, nrm, N, L * aspect, eps, gain, 1, l * N)
+     elif family == 1:
+         buckle_line(b, pos, ws, nrm, N, L, eps, gain, N, l)
+     else:
+@@ -192,6 +192,6 @@
+         if j1 < j0:
+             return
+         if family == 2:
+-            buckle_line(b, pos, ws, nrm, j1 - j0 + 2, L * SQRT2, eps, gain, N + 1, j0 * N + j0 + k)
++            buckle_line(b, pos, ws, nrm, j1 - j0 + 2, L * wp.sqrt(1.0+aspect*aspect), eps, gain, N + 1, j0 * N + j0 + k)
+         else:
+-            buckle_line(b, pos, ws, nrm, j1 - j0 + 2, L * SQRT2, eps, gain, N - 1, j0 * N + k + 1 - j0)
++            buckle_line(b, pos, ws, nrm, j1 - j0 + 2, L * wp.sqrt(1.0+aspect*aspect), eps, gain, N - 1, j0 * N + k + 1 - j0)
+--- upstream/kami/sheet.py
++++ fq/kami/sheet.py
+@@ -71,13 +71,13 @@
+ 
+ @wp.kernel
+ def k_reset_pos(mask: wp.array(dtype=int), pose: wp.array2d(dtype=float), axis: wp.array(dtype=int), pos: wp.array2d(dtype=wp.vec3),
+-                prev: wp.array2d(dtype=wp.vec3), vel: wp.array2d(dtype=wp.vec3), N: int, L: float, S: float):
++                prev: wp.array2d(dtype=wp.vec3), vel: wp.array2d(dtype=wp.vec3), N: int, L: float, S: float, aspect: float):
+     """A flat sheet centred at (x, y, z) turned by `angle` about z, optionally rolled into a cylinder of curvature `curl`
+     (1/m) along u (axis 0) or v (axis 1): positive lifts the two edges, negative lifts the middle (it rests on its edges)."""
+     i, b = wp.tid()
+     if mask[b] == 0:
+         return
+-    u = float(i % N) * L - S * 0.5
++    u = (float(i % N) * L - S * 0.5) * aspect
+     v = float(i / N) * L - S * 0.5
+     uu = u
+     vv = v
+@@ -158,7 +158,7 @@
+             self.device = dev = 'cuda:0'
+         _init(dev)
+         self.B = B = int(batch)
+-        self.topo = tp = topo_mod.build(s.N, s.size)
++        self.topo = tp = topo_mod.build(s.N, s.size, s.aspect_x)
+         self.N, self.n, self.L = tp.N, tp.n, tp.L
+         self.t = float(s.layer_spacing)
+         self.z_floor = 0.5 * self.t if s.table else -1.0e9
+@@ -266,7 +266,7 @@
+         pose = torch.stack([full(center[0]), full(center[1]), full(z0), full(angle), full(curl)])
+         mask = wp.from_torch(mb.to(torch.int32).contiguous())
+         wp.launch(k_reset_pos, (self.n, B), inputs=[mask, wp.from_torch(pose.contiguous()), wp.from_torch(full(curl_axis).to(torch.int32).contiguous()),
+-                                                    self.pos, self.prev, self.vel, self.N, self.L, self.topo.size], device=dev)
++                                                    self.pos, self.prev, self.vel, self.N, self.L, self.topo.size, self.sim.aspect_x], device=dev)
+         T = self.T
+         T['w'][:, mb] = self.w_lump[:, None]
+         T['w_free'][:, mb] = self.w_lump[:, None]
+@@ -479,7 +479,7 @@
+             wp.launch(k_integrate, (n, B), inputs=[self.pos, self.prev, self.vel, self.w, self.nrm, self.par, self.pint, dt, kt, s.normal_drag, g], device=dev)
+             wp.launch(k_grab_drive, B, inputs=[self.pos, self.g_active, self.g_vert, self.g_point, self.g_off, self.g_ring, self.g_ring_d, self.g_ijk,
+                                                self.K, L, DRIVE_SPEED * dt], device=dev)
+-            stretch_sweep(self.pos, self.w, N, L, sub, B, dev)
++            stretch_sweep(self.pos, self.w, N, L, sub, B, dev, s.aspect_x)
+             # implicit bending
+             wp.launch(k_bend_elem_res, (nb, B), inputs=[self.pos, self.nrm, self.bend, self.bend_h, self.bend_diag, self.rest, self.sigma, self.damage,
+                                                         self.stiff, self.par, self.elem_res, dt, L, self.bend_wt], device=dev)
+@@ -503,17 +503,17 @@
+             for first, nl in self.coarse_groups:
+                 wp.launch(k_coarse_lines, (nl, B), inputs=[self.pos, self.w, self.coarse, self.coarse_d, self.line_elems, self.line_start,
+                                                            self.line_count, first], device=dev)
+-            stretch_sweep(self.pos, self.w, N, L, sub, B, dev)
++            stretch_sweep(self.pos, self.w, N, L, sub, B, dev, s.aspect_x)
+             wp.launch(k_local, B, inputs=[self.pos, self.w, self.edges, self.rest_len, self.local_list, self.local_cnt, LOCAL_SWEEPS], device=dev)
+             for family in range(4):
+-                wp.launch(k_buckle_lines, (N, B), inputs=[self.pos, self.w, self.nrm, N, L, BUCKLE_EPS, BUCKLE_GAIN, family], device=dev)
++                wp.launch(k_buckle_lines, (N, B), inputs=[self.pos, self.w, self.nrm, N, L, s.aspect_x, BUCKLE_EPS, BUCKLE_GAIN, family], device=dev)
+             # tools, then self contact, then one more stretch sweep
+             wp.launch(k_tools, (n, B), inputs=[self.pos, self.prev, self.w, self.par, self.tool_on, self.tool_a, self.tool_b, self.tool_pa, self.tool_pb,
+                                                self.tool_r, self.tool_hw, self.tool_mu, self.tool_load, self.pressed, self.touch, self.t_n, self.t_v,
+                                                self.press, self.C, fr, 1.0 / s.substeps, t, self.z_floor + SUPPORT_DEPTH], device=dev)
+             wp.launch(k_contacts_solve, B, inputs=[self.pos, self.prev, self.w, self.tris, self.c_cnt, self.c_tri, self.c_side, self.c_bary,
+                                                    self.par, t, n], device=dev)
+-            stretch_sweep(self.pos, self.w, N, L, sub, B, dev)
++            stretch_sweep(self.pos, self.w, N, L, sub, B, dev, s.aspect_x)
+             wp.copy(self.ref_pos, self.pos)
+             wp.launch(k_table, (n, B), inputs=[self.pos, self.prev, self.vel, self.par, self.pint, self.pressed, self.ref_pos,
+                                                self.vert_edges, self.vert_rest, self.touch, self.t_n, self.t_v, self.z_floor, int(s.table),
+--- upstream/kami/topology.py
++++ fq/kami/topology.py
+@@ -9,7 +9,7 @@
+ - coarse elements: pairs of vertices 2, 4, 8 and 16 cells apart along the four lattice directions, kept within their rest
+   distance (long-range inextensibility, resolved per substep without iterating to convergence).
+ """
+-from dataclasses import dataclass
++from dataclasses import dataclass, replace
+ import numpy as np
+ 
+ 
+@@ -29,6 +29,8 @@
+     coarse: np.ndarray      # [n_coarse, 2] vertex pairs
+     coarse_d: np.ndarray    # [n_coarse] half of the rest distance
+ 
++    aspect_x: float = 1.0
++
+     @property
+     def n(self): return self.N * self.N
+     @property
+@@ -47,14 +49,14 @@
+     def rest_uv(self):
+         """[n, 2] rest coordinates (m) with the sheet centre at the origin."""
+         g = np.arange(self.n)
+-        return np.stack([(g % self.N) * self.L, (g // self.N) * self.L], 1) - 0.5 * self.size
++        return (np.stack([(g % self.N) * self.L, (g // self.N) * self.L], 1) - 0.5 * self.size) * [self.aspect_x, 1.0]
+ 
+ 
+ COARSE_SCALES = (2, 4, 8, 16)
+ DIRECTIONS = ((1, 0), (0, 1), (1, 1), (1, -1))
+ 
+ 
+-def build(N=33, size=0.15):
++def build(N=33, size=0.15, aspect_x=1.0):
+     if N < 3:
+         raise ValueError('N must be at least 3')
+     L = size / (N - 1)
+@@ -101,9 +103,20 @@
+                     if min(ai, aj, bi, bj) < 0 or max(ai, aj, bi, bj) >= N:
+                         continue
+                     ca.append([vid(ai, aj), vid(bi, bj)]); cd.append(sc * L * np.hypot(di, dj))
+-    return Topology(N, size, L, np.array(tris, np.int32), np.array(cell, np.int32), np.array(ed, np.int32),
++    result = Topology(N, size, L, np.array(tris, np.int32), np.array(cell, np.int32), np.array(ed, np.int32),
+                     np.array(rl, np.float32), np.array(be, np.int32), np.array(bh, np.float32), np.array(bdiag, np.int32),
+                     np.array(bseg, np.float32), np.array(ca, np.int32).reshape(-1, 2), np.array(cd, np.float32))
++
++
++    result=replace(result,aspect_x=aspect_x)
++    uv=result.rest_uv()
++    rest=np.linalg.norm(uv[result.edges[:,1]]-uv[result.edges[:,0]],axis=1).astype(np.float32)
++    coarse_d=(np.linalg.norm(uv[result.coarse[:,1]]-uv[result.coarse[:,0]],axis=1)/2).astype(np.float32)
++    h=result.bend_h.copy()
++    for e,(a,b,c,d) in enumerate(result.bend):
++        if c==d: h[e]=np.linalg.norm(uv[a]-uv[c])
++        else: h[e]=L*aspect_x/(1+aspect_x**2)**.5
++    return replace(result,rest=rest,coarse_d=coarse_d,bend_h=h)
+ 
+ 
+ def coarse_lines(topo):

@@ -1,0 +1,20 @@
+{
+  "dimensions_m": [
+    0.21,
+    0.297
+  ],
+  "grammage_g_m2": 80,
+  "target_mass_kg": 0.0049896,
+  "physical_thickness_m": 0.0001,
+  "numerical_layer_spacing_m": 0.0006,
+  "grid": [
+    25,
+    25
+  ],
+  "triangles": 1152,
+  "bending_stiffness_Nm": 0.00025,
+  "plasticity": "kami classic curvature rest update",
+  "calibrated": false,
+  "rectangular_extension": "Rest geometry, stretch constraints, coarse lengths and hinge spacings updated; continuum/isotropy calibration not validated",
+  "clamping": "kinematic edge constraints; no contact-force-only grasp"
+}

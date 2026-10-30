@@ -1,0 +1,29 @@
+{
+  "mode": "fold",
+  "engine": "kami / NVIDIA Warp 1.16, FQ rectangular-grid prototype",
+  "width_m": 0.21,
+  "length_m": 0.297,
+  "grammage_g_m2": 80,
+  "mass_kg": 0.004989599999999999,
+  "physical_thickness_m": 0.0001,
+  "numerical_layer_spacing_m": 0.0006,
+  "vertices": 625,
+  "triangles": 1152,
+  "frames": 600,
+  "max_edge_strain": 0.004586160182952881,
+  "contact_hash_overflow": 0,
+  "final": {
+    "t": 9.983333333333333,
+    "phase": "RELEASED: RETAINED FOLD",
+    "strain": 0.0005462765693664551,
+    "plastic_hinges": 50,
+    "extent": [
+      0.21003082394599915,
+      0.1484874039888382,
+      0.002529875375330448
+    ],
+    "overflow": 0
+  },
+  "elapsed_s": 51.82425880432129,
+  "scope": "Uncalibrated rectangular adaptation; kinematic clamps; discrete vertex-triangle contact, not CCD; no robot coupling"
+}

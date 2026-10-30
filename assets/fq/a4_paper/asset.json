@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "fq:deformables/a4_paper",
+  "version": "0.1.0",
+  "kind": "deformable",
+  "name": "A4 塑性纸张 · 压折实验原型",
+  "description": "210×297 mm；折叠、压折、松手保留折痕；紧密揉团尚未通过验证",
+  "origin": "fq",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "upstream_origin": "kami MIT solver + FQ rectangular adaptation",
+  "license_status": "MIT upstream solver; see tools/a4_paper/LICENSE-kami.txt and provenance.json",
+  "physics_calibrated": false,
+  "preview_only": true,
+  "representations": {
+    "viewer_mujoco": "assets/fq/a4_paper/preview.xml",
+    "mujoco": "assets/fq/a4_paper/preview.xml",
+    "usd": "assets/fq/a4_paper/preview.usda",
+    "usd_baked_playback": "assets/fq/a4_paper/fold_playback.usdc"
+  },
+  "simulation_entrypoint": "tools/a4_paper/run_demo.py",
+  "dependencies": [],
+  "dimensions_m": [
+    0.21,
+    0.297,
+    0.0001
+  ],
+  "target_mass_kg": 0.0049896,
+  "capabilities": {
+    "plastic_creasing": true,
+    "external_solver": true,
+    "native_mujoco_deformable": false,
+    "native_physx_deformable": false,
+    "validated_tight_crumpling": false,
+    "robot_grasp": false
+  },
+  "viewer_status": [
+    [
+      "几何",
+      "A4，210×297 mm；625 顶点、1152 三角面"
+    ],
+    [
+      "已验证",
+      "边缘夹持折叠、压折、释放后的折痕保留"
+    ],
+    [
+      "揉团",
+      "实验中：紧密挤压出现过大局部变形与面片穿插，未通过"
+    ],
+    [
+      "求解器",
+      "NVIDIA Warp / kami；矩形适配，未实物标定"
+    ],
+    [
+      "预览",
+      "MuJoCo / USD 为静态网格；USD 动画为烘焙回放"
+    ]
+  ],
+  "limitations": [
+    "Tight crumpling is NOT validated; compression trials show excessive edge strain and triangle intersections",
+    "Uncalibrated rectangular adaptation of a square-grid solver; isotropy and force accuracy are not validated",
+    "Kinematic edge clamps and prescribed tools, not friction-only robot grasp",
+    "Numerical layer spacing 0.6 mm is larger than the assumed 0.1 mm physical thickness",
+    "Discrete vertex-triangle self contact, no continuous-collision guarantee; intersection check excludes coplanar contacts",
+    "No tearing, paper fiber anisotropy, moisture dependence, robotic or airport integration",
+    "MuJoCo preview contains no dynamic paper physics or collision proxy; USD playback is baked geometry"
+  ],
+  "demonstration": {
+    "file": "validation/previews/a4_paper_fold.mp4",
+    "poster": "validation/previews/fq_deformables_a4_paper.png",
+    "title": "A4 压折与松手保留折痕 · 实验记录",
+    "caption": "Warp / kami 物理轨迹，MuJoCo 可视化；运动学夹持，尚未通过紧密揉团验证。",
+    "default_view": "video"
+  }
+}

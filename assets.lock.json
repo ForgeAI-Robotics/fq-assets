@@ -47,7 +47,8 @@
     "third_party:bags/fuel_openrobotics_small_dry_bag_handle": "0.1.0",
     "third_party:bags/fuel_openrobotics_suitcase1h": "0.1.0",
     "third_party:bags/fuel_openrobotics_suitcase2h": "0.1.0",
-    "fq:deformables/retractable_belt_kit": "0.1.1"
+    "fq:deformables/retractable_belt_kit": "0.1.1",
+    "fq:deformables/a4_paper": "0.1.0"
   },
   "profiles": {
     "fq:poses/o6_left_task": "0.1.2",
