@@ -234,7 +234,7 @@
     },
     {
       "id": "fq:deformables/a4_paper",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "manifest": "assets/fq/a4_paper/asset.json"
     }
   ]

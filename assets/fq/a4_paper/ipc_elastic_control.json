@@ -1,0 +1,38 @@
+{
+  "engine": "FQ discrete shell + IPC Toolkit 1.6.1",
+  "width_m": 0.21,
+  "length_m": 0.297,
+  "mass_kg": 0.004989599999999999,
+  "vertices": 315,
+  "triangles": 560,
+  "dt_s": 0.025,
+  "steps": 280,
+  "ccd_queries": 4257,
+  "min_ccd_step": 9.765625e-05,
+  "max_edge_strain": 0.008349172598559385,
+  "all_accepted_states_intersection_free": true,
+  "final": {
+    "max_cage_penetration_m": 0,
+    "step": 279,
+    "time_s": 7.0,
+    "phase": "FIXTURE RELEASED",
+    "radius_m": null,
+    "edge_strain": 1.3592202779522111e-05,
+    "extent": [
+      0.22407721598094155,
+      0.306780909257927,
+      3.165387223264481e-07
+    ],
+    "plastic_hinges": 0,
+    "newton_iterations": 1,
+    "min_step": 1,
+    "intersections": false
+  },
+  "elapsed_s": 99.1726586818695,
+  "limitations": [
+    "Uncalibrated elastic-plastic shell parameters",
+    "Frictionless self contact; no tearing or fiber anisotropy",
+    "Spherical penalty fixture, not human fingers or robot grasp",
+    "Finite tolerance CCD with 0.1 mm clearance, not an exact arithmetic proof"
+  ]
+}

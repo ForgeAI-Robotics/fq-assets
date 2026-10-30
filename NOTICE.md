@@ -39,3 +39,7 @@ OpenRobotics Fuel bags retain CC0 or CC-BY-4.0 as declared per asset. Passenger 
 ## A4 纸张实验原型
 
 `tools/a4_paper/kami` 来源于 San Kala 的 kami（MIT），固定提交 9e7754bd458395e46640385da511d7c94be8cffc。许可全文保存在 tools/a4_paper/LICENSE-kami.txt；FQ 矩形适配差异、A4 实验及物理验证记录一并提供。当前只验证压折与塑性保留，不声明紧密揉团通过。
+
+## A4 纸张 IPC 版本
+
+当前可揉皱原型使用 FQ 编写的离散薄壳/塑性折痕模型和 IPC Toolkit 1.6.1（MIT）碰撞检测依赖；许可保存在 tools/a4_paper/LICENSE-ipc-toolkit.txt。旧 kami 压折版本继续保留，当前物理不使用其求解器。

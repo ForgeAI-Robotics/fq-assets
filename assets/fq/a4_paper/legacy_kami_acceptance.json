@@ -1,0 +1,13 @@
+{
+  "fold_acceptance": true,
+  "tight_crumple_acceptance": false,
+  "fold_max_edge_strain": 0.004586160182952881,
+  "plastic_final_length_extent_m": 0.1484874039888382,
+  "elastic_control_final_length_extent_m": 0.2970259189605713,
+  "sampled_fold_triangle_crossings": 0,
+  "preview_compiles": true,
+  "preview_has_no_native_flex": true,
+  "native_solver": "Warp / kami",
+  "material_calibrated": false,
+  "failure_reason": "Tight crumple trial has excessive edge strain and nonadjacent triangle crossings; gentle compression does not retain a paper ball"
+}

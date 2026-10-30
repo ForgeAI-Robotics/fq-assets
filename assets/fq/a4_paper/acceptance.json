@@ -1,13 +1,45 @@
 {
-  "fold_acceptance": true,
-  "tight_crumple_acceptance": false,
-  "fold_max_edge_strain": 0.004586160182952881,
-  "plastic_final_length_extent_m": 0.1484874039888382,
-  "elastic_control_final_length_extent_m": 0.2970259189605713,
-  "sampled_fold_triangle_crossings": 0,
-  "preview_compiles": true,
-  "preview_has_no_native_flex": true,
-  "native_solver": "Warp / kami",
-  "material_calibrated": false,
-  "failure_reason": "Tight crumple trial has excessive edge strain and nonadjacent triangle crossings; gentle compression does not retain a paper ball"
+  "accepted_loose_paper_ball": true,
+  "max_edge_strain_independent": 0.007913632742503562,
+  "discrete_intersections_frames": [],
+  "linear_export_interpolation_crossing_intervals": [
+    87,
+    100,
+    101,
+    103,
+    104,
+    108,
+    111,
+    112,
+    115,
+    118,
+    119,
+    120,
+    126,
+    128,
+    129,
+    134
+  ],
+  "last_half_second_max_vertex_motion_m": 0.0,
+  "final_extent_m": [
+    0.13338010721647733,
+    0.13872106710962026,
+    0.09717148010079624
+  ],
+  "last_held_cage_penetration_m": 0.013807951392072429,
+  "release_observation_s": 3.625,
+  "continuous_solver_scope": "CCD applied to each accepted Newton update; straight interpolation between exported time-step endpoints is separately audited",
+  "limitations": [
+    "No physical material calibration",
+    "Spherical compression fixture, not hands",
+    "No self-friction"
+  ],
+  "ccd_path_updates": 4825,
+  "ccd_path_interpolation_crossings": [],
+  "elastic_control_final_extent_m": [
+    0.22407721598094155,
+    0.306780909257927,
+    3.165387223264481e-07
+  ],
+  "source": "IPC loose-ball validation; old kami failures retained as historical experiments"
 }

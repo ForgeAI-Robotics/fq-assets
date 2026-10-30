@@ -1,3 +1,15 @@
+# A4 可揉皱纸团原型：IPC 版本
+
+当前默认是松散纸团的静态快照，平纸保存在 preview.xml/usda。运行物理请使用 `tools/a4_paper/run_ipc.py`，不是 MuJoCo / Isaac Sim 原生纸张求解。
+
+已验证 315 顶点、560 面的 A4 纸经过球形软压缩、释放、落桌后保持团状。每次接受的 Newton 变形更新经过 IPC 连续碰撞检测，导出的完整路径另行复核。验证与材料限制见 ipc_acceptance.json、ipc_validation.json、ipc_parameters.json。更紧的压缩超过本版 1% 边长误差门槛，保留为实验记录。
+
+安装 `pip install -r tools/a4_paper/requirements-ipc.txt`，运行 `python tools/a4_paper/run_ipc.py --nx 15 --ny 21 --steps 180 --settle 100 --radius .06 --out outputs/a4_ipc`。加 `--elastic` 关闭塑性作对照。CPU 即可运行，当前是离线原型，不声明实时机器人控制。
+
+`crumple_playback.usdc` 保存内部连续检测路径的非均匀时间采样。不要只保留每个物理时间步的端点再做直线插值，否则可能重新引入穿插；原始端点轨迹和完整路径分别存于 ipc_trajectory.npz 与 ipc_ccd_path.npz。USD/MuJoCo 快照没有原生柔性物理或碰撞代理。
+
+压缩装置是外部软势能场，允许有限压缩超界，不代表刚性球壳。纸层接触无摩擦、材料未标定；未实现手指揉纸、撕裂、纤维方向或湿度影响。以下为旧版压折实验的历史说明：
+
 # A4 塑性纸张：压折实验原型
 
 尺寸 210×297 mm，按 80 g/m² 办公纸设置目标质量 4.99 g。默认 625 顶点、1152 三角面。物理厚度假设 0.1 mm，压折仿真的数值层间距为 0.6 mm。参数没有用实纸标定。
