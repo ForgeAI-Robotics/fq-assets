@@ -236,11 +236,6 @@
       "id": "fq:deformables/a4_paper",
       "version": "0.1.2",
       "manifest": "assets/fq/a4_paper/asset.json"
-    },
-    {
-      "id": "fq:deformables/a4_paper_highres",
-      "version": "0.1.0",
-      "manifest": "assets/fq/a4_paper_highres/asset.json"
     }
   ]
 }
