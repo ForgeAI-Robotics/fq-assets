@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="ph_sticky_notes">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="visual" file="model.obj" />
+    <texture name="albedo" type="2d" file="../_textures/office_notepads/color.png" />
+    <material name="surface" texture="albedo" specular=".25" shininess=".15" />
+  </asset>
+  <worldbody>
+    <body name="ph_sticky_notes">
+      <freejoint name="root" />
+      <geom name="visual" type="mesh" mesh="visual" material="surface" mass="0" contype="0" conaffinity="0" />
+      <geom name="collision_0" type="box" pos="0 0 0.010999999940395355" euler="0 0 0" mass="0.08" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" size="0.03588533401489258 0.03588534891605377 0.010999999940395355" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" />
+    </body>
+  </worldbody>
+</mujoco>

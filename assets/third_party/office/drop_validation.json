@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "ph_binder_notebook",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      2.5403815859894967e-23,
+      -5.565965889507044e-23,
+      0.00019987992919319036
+    ],
+    "contact_count": 4,
+    "passed": true
+  },
+  {
+    "slug": "ph_blue_pen",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      -2.432356005644937e-20,
+      0.0,
+      0.00019975986029365875
+    ],
+    "contact_count": 2,
+    "passed": true
+  },
+  {
+    "slug": "ph_clipboard",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      -2.2458870474506992e-20,
+      -4.9738233871562415e-11,
+      0.00019987992933624888
+    ],
+    "contact_count": 4,
+    "passed": true
+  },
+  {
+    "slug": "ph_eraser",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      6.728277271112705e-22,
+      1.504674805149166e-21,
+      0.00019987992919318987
+    ],
+    "contact_count": 4,
+    "passed": true
+  },
+  {
+    "slug": "ph_notepad",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      1.0297045730904107e-21,
+      -1.541184206683027e-21,
+      0.00019987992919318987
+    ],
+    "contact_count": 4,
+    "passed": true
+  },
+  {
+    "slug": "ph_pencil",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      -2.949525471362339e-20,
+      0.0,
+      0.00019975986029365875
+    ],
+    "contact_count": 2,
+    "passed": true
+  },
+  {
+    "slug": "ph_pencil_cup",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      -9.740044841433035e-20,
+      1.7840637536567198e-21,
+      0.00019983990592057702
+    ],
+    "contact_count": 3,
+    "passed": true
+  },
+  {
+    "slug": "ph_stapler",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      -0.006627713006057601,
+      -4.3642313892316483e-05,
+      -9.164322414133427e-06
+    ],
+    "contact_count": 1,
+    "passed": true
+  },
+  {
+    "slug": "ph_sticky_notes",
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      1.7417758399466455e-21,
+      3.3430889700885414e-21,
+      0.00019987992919319036
+    ],
+    "contact_count": 4,
+    "passed": true
+  }
+]

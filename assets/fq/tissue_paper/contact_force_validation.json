@@ -1,0 +1,14 @@
+{
+  "units": "N",
+  "shape": [
+    560,
+    357,
+    3
+  ],
+  "vertex_index_matches": "trajectory.npz vertices",
+  "max_self_force_balance_error_N": 2.807582708421436e-16,
+  "max_floor_normal_force_N": 0.008930793685539893,
+  "final_floor_normal_force_N": 0.0035311581433331166,
+  "weight_N": 0.0035315999999999998,
+  "scope": "Computed model forces, not measured sensor readings; normal contact at endpoint, friction uses lagged previous-step normal loads; excludes cage and internal elastic forces"
+}

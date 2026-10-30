@@ -43,3 +43,11 @@ OpenRobotics Fuel bags retain CC0 or CC-BY-4.0 as declared per asset. Passenger 
 ## A4 纸张 IPC 版本
 
 当前可揉皱原型使用 FQ 编写的离散薄壳/塑性折痕模型和 IPC Toolkit 1.6.1（MIT）碰撞检测依赖；许可保存在 tools/a4_paper/LICENSE-ipc-toolkit.txt。旧 kami 压折版本继续保留，当前物理不使用其求解器。
+
+## Office props — Poly Haven (CC0)
+
+Nine individually adapted props originate from Poly Haven's clipboard, binder_notebook, office_notepads, vintage_stapler and stationery_supplies collections, all released under CC0. Source declarations: https://polyhaven.com/license . Per-source author metadata, download hashes, URLs and changes are preserved in each office prop's source.json/provenance.json and LICENSE.txt. Adaptations preserve metric dimensions and 2K materials; collisions, mass and friction are FQ approximations.
+
+## Tissue paper prototype
+
+Procedural geometry and uncalibrated shell/material integration by FQ; collision/friction uses IPC Toolkit 1.6.1 (MIT), license in tools/tissue_paper/LICENSE-ipc-toolkit.txt. No specific manufacturer's tissue product is reproduced.

@@ -1,0 +1,90 @@
+{
+  "id": "clipboard",
+  "source_url": "https://polyhaven.com/a/clipboard",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "metadata": {
+    "type": 2,
+    "name": "Clipboard",
+    "categories": [
+      "collection: project_lighthouse",
+      "office",
+      "props"
+    ],
+    "tags": [
+      "writing",
+      "desk",
+      "stationery",
+      "metal",
+      "scratched"
+    ],
+    "description": "Free 8K model of a worn masonite clipboard with a shiny chrome clip, engraved logo, rounded corners, scuffs and edge wear, showing a lived-in look.",
+    "authors": {
+      "ProgrammerOnCoffee": "All"
+    },
+    "donated": true,
+    "max_resolution": [
+      8192,
+      8192
+    ],
+    "polycount": 6176,
+    "files_hash": "d67455f77731d7d7927333d699907dd6451e581c",
+    "texel_density": 18635.64086577796,
+    "dimensions": [
+      228.6001443862915,
+      336.55010163784027,
+      41.990341851487756
+    ],
+    "date_published": 1782777600,
+    "category_id": "4196ad0b-7767-5281-9c1a-54fb3b4514a3",
+    "category": "Office & Stationery/Stationery & Supplies/Clipboards & Boards",
+    "collections": [
+      "project_lighthouse"
+    ],
+    "attributes": {
+      "condition": [
+        "worn"
+      ],
+      "material": [
+        "wood",
+        "metal"
+      ]
+    },
+    "img_version": "f6771d2a",
+    "download_count": 1187,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/clipboard.png?width=256&height=256&format=webp&v=f6771d2a"
+  },
+  "files": [
+    {
+      "path": "source.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/clipboard/clipboard_2k.gltf",
+      "size": 2738,
+      "sha256": "21299eb9fbfc3ec2f7793c3797b565232919fe4bd918d588556d63bf73043bb2"
+    },
+    {
+      "path": "textures/clipboard_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/clipboard/clipboard_nor_gl_2k.jpg",
+      "size": 1867548,
+      "sha256": "52ab3dcc119a9f97a618a29102c319da4b5c626425687ac5d8c42d9878f9b757"
+    },
+    {
+      "path": "textures/clipboard_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/clipboard/clipboard_diff_2k.jpg",
+      "size": 2287331,
+      "sha256": "a2f22cf95ea8358bb47fbd3a9882b22f167e83c57775f8af8140e17d65dabc86"
+    },
+    {
+      "path": "textures/clipboard_arm_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/clipboard/clipboard_arm_2k.jpg",
+      "size": 2426585,
+      "sha256": "76b254d4ba39895a0f8ccd1c988f759d463e5013c180b181dfc823dba0e0cec2"
+    },
+    {
+      "path": "clipboard.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/clipboard/clipboard.bin",
+      "size": 184512,
+      "sha256": "c108d9cc94bc513ff9f91077e02cbe9f49a96d4907abd06803e379508fd98bb2"
+    }
+  ],
+  "download_resolution": "2k"
+}

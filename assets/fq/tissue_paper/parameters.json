@@ -1,0 +1,24 @@
+{
+  "width_m": 0.1,
+  "length_m": 0.12,
+  "areal_density_kg_m2": 0.03,
+  "mass_kg": 0.00036,
+  "grid": [
+    17,
+    21
+  ],
+  "vertices": 357,
+  "triangles": 640,
+  "edge_spring_N_m": 30000.0,
+  "hinge_stiffness_Nm": 4e-06,
+  "yield_angle_rad": 0.065,
+  "plastic_rate_per_s": 14.266997757549298,
+  "dt_s": 0.0125,
+  "mu_self": 0.3,
+  "mu_floor": 0.4,
+  "floor_stiffness_reference_N_m": 500,
+  "cage_stiffness_reference_N_m": 10,
+  "target_fixture_radius_m": 0.027,
+  "node_load_scaling": "lumped_area_reference_315",
+  "calibrated": false
+}

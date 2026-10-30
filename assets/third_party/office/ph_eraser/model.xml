@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="ph_eraser">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="visual" file="model.obj" />
+    <texture name="albedo" type="2d" file="../_textures/stationery_supplies/color.png" />
+    <material name="surface" texture="albedo" specular=".25" shininess=".15" />
+  </asset>
+  <worldbody>
+    <body name="ph_eraser">
+      <freejoint name="root" />
+      <geom name="visual" type="mesh" mesh="visual" material="surface" mass="0" contype="0" conaffinity="0" />
+      <geom name="collision_0" type="box" pos="0 0 0.005248984321951866" euler="0 0 0" mass="0.015" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" size="0.022274956107139587 0.009304434061050415 0.005248984321951866" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" />
+    </body>
+  </worldbody>
+</mujoco>

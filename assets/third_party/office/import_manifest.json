@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "ph_clipboard",
+    "title": "办公夹板",
+    "dimensions_m": [
+      0.2286001443862915,
+      0.33655011653900146,
+      0.04199034348130226
+    ],
+    "source": "clipboard"
+  },
+  {
+    "slug": "ph_binder_notebook",
+    "title": "合拢活页本",
+    "dimensions_m": [
+      0.1706455647945404,
+      0.19995832443237305,
+      0.025289427489042282
+    ],
+    "source": "binder_notebook"
+  },
+  {
+    "slug": "ph_notepad",
+    "title": "黄色便笺本",
+    "dimensions_m": [
+      0.22333772480487823,
+      0.30733999609947205,
+      0.009999999776482582
+    ],
+    "source": "office_notepads"
+  },
+  {
+    "slug": "ph_sticky_notes",
+    "title": "便利贴纸垛",
+    "dimensions_m": [
+      0.07177066802978516,
+      0.07177069783210754,
+      0.02199999988079071
+    ],
+    "source": "office_notepads"
+  },
+  {
+    "slug": "ph_stapler",
+    "title": "金属订书机 · 固定姿态",
+    "dimensions_m": [
+      0.208464115858078,
+      0.04741005226969719,
+      0.06465394794940948
+    ],
+    "source": "vintage_stapler"
+  },
+  {
+    "slug": "ph_blue_pen",
+    "title": "蓝色圆珠笔",
+    "dimensions_m": [
+      0.16102662682533264,
+      0.009047732688486576,
+      0.010346660390496254
+    ],
+    "source": "stationery_supplies"
+  },
+  {
+    "slug": "ph_pencil",
+    "title": "木杆铅笔",
+    "dimensions_m": [
+      0.1938854455947876,
+      0.007919210940599442,
+      0.007919210940599442
+    ],
+    "source": "stationery_supplies"
+  },
+  {
+    "slug": "ph_eraser",
+    "title": "橡皮",
+    "dimensions_m": [
+      0.044549912214279175,
+      0.01860886812210083,
+      0.010497968643903732
+    ],
+    "source": "stationery_supplies"
+  },
+  {
+    "slug": "ph_pencil_cup",
+    "title": "金属笔筒 · 中空碰撞",
+    "dimensions_m": [
+      0.08366206288337708,
+      0.08366207033395767,
+      0.0838957279920578
+    ],
+    "source": "stationery_supplies"
+  }
+]

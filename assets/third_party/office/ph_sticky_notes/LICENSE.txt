@@ -1,0 +1,5 @@
+CC0-1.0
+Source: https://polyhaven.com/a/office_notepads
+License declaration: https://polyhaven.com/license
+Legal code: https://creativecommons.org/publicdomain/zero/1.0/
+Authors: {"Ulan Cabanilla": "All"}

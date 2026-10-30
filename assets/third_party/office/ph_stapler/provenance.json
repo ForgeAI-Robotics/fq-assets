@@ -1,0 +1,106 @@
+{
+  "id": "vintage_stapler",
+  "source_url": "https://polyhaven.com/a/vintage_stapler",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "metadata": {
+    "type": 2,
+    "name": "Vintage Stapler",
+    "categories": [
+      "collection: project_lighthouse",
+      "props",
+      "tools",
+      "office"
+    ],
+    "tags": [
+      "vintage",
+      "stationery",
+      "metal",
+      "retro"
+    ],
+    "description": "Free 4k model of a vintage teal metal stapler with worn paint, scratches, brass rivets and chrome striker; retro script label and realistic aged details.",
+    "authors": {
+      "Mateusz Sadek": "All"
+    },
+    "donated": true,
+    "max_resolution": [
+      4096,
+      4096
+    ],
+    "polycount": 4370,
+    "files_hash": "4702671d2522027c1c1c098099d04dbae6a68774",
+    "texel_density": 13176.119953062336,
+    "dimensions": [
+      208.4641233086586,
+      47.41005226969719,
+      95.26899177581072
+    ],
+    "date_published": 1774016094,
+    "social_post_pending": false,
+    "category_id": "11399333-1d97-5df3-902d-1982dbb05c17",
+    "category": "Office & Stationery/Stationery & Supplies/Office Tools",
+    "collections": [
+      "project_lighthouse"
+    ],
+    "attributes": {
+      "condition": [
+        "worn"
+      ],
+      "material": [
+        "metal",
+        "brass"
+      ]
+    },
+    "img_version": "0b5b7eba",
+    "download_count": 1274,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/vintage_stapler.png?width=256&height=256&format=webp&v=0b5b7eba"
+  },
+  "files": [
+    {
+      "path": "source.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/vintage_stapler/vintage_stapler_2k.gltf",
+      "size": 7127,
+      "sha256": "649176087418582accf9ef15b01f9f76b2d2c8eb0d8e48db6a3af652306773e8"
+    },
+    {
+      "path": "textures/vintage_stapler_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_stapler/vintage_stapler_nor_gl_2k.jpg",
+      "size": 1784505,
+      "sha256": "505f0002f02c0ed2b68ebf72b1cf1877bab2cf57f0174bc5e1ffd75bf0bd5c83"
+    },
+    {
+      "path": "textures/vintage_stapler_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_stapler/vintage_stapler_diff_2k.jpg",
+      "size": 3125320,
+      "sha256": "01547638bddc0daac21e51c48253100463152ebab8a4379fb92d975d978c5df4"
+    },
+    {
+      "path": "textures/vintage_stapler_arm_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_stapler/vintage_stapler_arm_2k.jpg",
+      "size": 3291715,
+      "sha256": "12182a7327bbba61e32b6fab68c5a34f75793a7be05dd46a6b021619004bd65c"
+    },
+    {
+      "path": "vintage_stapler.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_stapler/vintage_stapler.bin",
+      "size": 159080,
+      "sha256": "7ffa9b1cc3722dd4de8cd754851884c3897f4e281ebe55defc7fc7d3223b27bf"
+    }
+  ],
+  "download_resolution": "2k",
+  "changes": [
+    "Selected individual props from source pack",
+    "Preserved metric dimensions; centered XY and grounded Z",
+    "USD/MJCF/GLB exports; 2K PBR textures retained; roughness/metallic split from ARM",
+    "Added approximate compound collision and estimated mass/friction"
+  ],
+  "source_objects": [
+    "vintage_stapler_base",
+    "vintage_stapler_top"
+  ],
+  "source_offset_m": [
+    0.006110157817602158,
+    -4.842877388000488e-07,
+    -0.012819548137485981
+  ]
+}

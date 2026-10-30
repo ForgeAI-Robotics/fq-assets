@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "fq:deformables/tissue_paper",
+  "version": "0.1.0",
+  "kind": "deformable",
+  "name": "卫生纸片 · 柔性揉团原型",
+  "description": "100×120 mm 单张等效薄片；松散揉团、释放保形、摩擦及接触力记录；材料未标定",
+  "origin": "fq",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "upstream_origin": "FQ authored discrete shell with IPC Toolkit 1.6.1",
+  "license_status": "FQ model and solver integration; IPC Toolkit dependency MIT",
+  "physics_calibrated": false,
+  "preview_only": true,
+  "representations": {
+    "viewer_mujoco": "assets/fq/tissue_paper/preview.xml",
+    "mujoco": "assets/fq/tissue_paper/preview.xml",
+    "usd": "assets/fq/tissue_paper/preview.usda",
+    "flat_mujoco": "assets/fq/tissue_paper/flat.xml",
+    "flat_usd": "assets/fq/tissue_paper/flat.usda",
+    "usd_baked_playback": "assets/fq/tissue_paper/crumple_playback.usdc"
+  },
+  "simulation_entrypoint": "tools/tissue_paper/run_demo.py",
+  "dependencies": [],
+  "dimensions_m": [
+    0.1,
+    0.12,
+    0.0001
+  ],
+  "target_mass_kg": 0.00035999999999999997,
+  "capabilities": {
+    "external_solver": true,
+    "plastic_creasing": true,
+    "self_contact_friction": true,
+    "floor_contact_friction": true,
+    "per_vertex_contact_force_export": true,
+    "validated_loose_crumpling": true,
+    "validated_tight_crumpling": false,
+    "native_mujoco_deformable": false,
+    "native_physx_deformable": false,
+    "robot_grasp": false
+  },
+  "viewer_status": [
+    [
+      "薄片",
+      "100×120 mm；等效克重 30 g/m²，质量 0.36 g"
+    ],
+    [
+      "物理",
+      "较软薄壳、塑性折痕、摩擦、自碰撞"
+    ],
+    [
+      "揉团",
+      "球形软挤压后释放，保持松散纸团"
+    ],
+    [
+      "最大边长变化",
+      "0.50%"
+    ],
+    [
+      "范围",
+      "原型参数未标定；无撕裂、吸水、分层或手指抓捏"
+    ]
+  ],
+  "limitations": [
+    "Uncalibrated equivalent single sheet, not a replica of a specific toilet-paper product or separate plies",
+    "Validated supplied loose spherical compression only, no hand or robot grasp",
+    "No tearing, perforation, absorption, wet strength, fiber anisotropy or ply separation",
+    "Numerical clearance 0.1 mm is not a measured material thickness",
+    "USD/MuJoCo are snapshots or baked visualization; external solver required for deformation"
+  ],
+  "demonstration": {
+    "file": "validation/previews/tissue_paper_crumple.mp4",
+    "poster": "validation/previews/fq_deformables_tissue_paper.png",
+    "title": "卫生纸片揉团与释放 · 1080p",
+    "caption": "FQ 薄壳/塑性 + IPC；球形软挤压，无手指，材料未标定。",
+    "default_view": "video"
+  }
+}

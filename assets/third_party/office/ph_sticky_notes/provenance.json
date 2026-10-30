@@ -1,0 +1,109 @@
+{
+  "id": "office_notepads",
+  "source_url": "https://polyhaven.com/a/office_notepads",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "metadata": {
+    "type": 2,
+    "name": "Office Notepads",
+    "categories": [
+      "collection: project_lighthouse",
+      "props",
+      "office"
+    ],
+    "tags": [
+      "stationery",
+      "notepad",
+      "lined paper",
+      "blank paper",
+      "art supplies",
+      "office",
+      "admin",
+      "sticky notes",
+      "filing",
+      "writing",
+      "business"
+    ],
+    "description": "Free 4K model of assorted office notepads: blank sheets, lined legal pads with red glue, index cards, and sticky notes. Realistic paper grain and crisp edges.",
+    "authors": {
+      "Ulan Cabanilla": "All"
+    },
+    "donated": true,
+    "max_resolution": [
+      4096,
+      4096
+    ],
+    "polycount": 666,
+    "files_hash": "41a4f25b547807cd4c1dea9ec782319f8c996a8a",
+    "texel_density": 4724.804642007733,
+    "dimensions": [
+      1102.7901768684387,
+      659.8375737667084,
+      21.99999988079071
+    ],
+    "date_published": 1780963200,
+    "category_id": "38ef0f61-f29a-5fa7-acda-a2aef9bf6d66",
+    "category": "Office & Stationery/Stationery & Supplies/Notebooks & Pads",
+    "collections": [
+      "project_lighthouse"
+    ],
+    "attributes": {
+      "condition": [
+        "clean"
+      ],
+      "material": [
+        "paper"
+      ]
+    },
+    "img_version": "665f6900",
+    "download_count": 1475,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/office_notepads.png?width=256&height=256&format=webp&v=665f6900"
+  },
+  "files": [
+    {
+      "path": "source.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/office_notepads/office_notepads_2k.gltf",
+      "size": 15568,
+      "sha256": "f72897278116cfafa3ceb65a31cc7e2332797923805ec19eb8c1262523d06934"
+    },
+    {
+      "path": "textures/office_notepads_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/office_notepads/office_notepads_nor_gl_2k.jpg",
+      "size": 1985062,
+      "sha256": "9a23fa5d40dcf1a1b754aa5bcd3e32d3ce40bee5505aa40dc640dff3084b9ff9"
+    },
+    {
+      "path": "textures/office_notepads_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/office_notepads/office_notepads_diff_2k.jpg",
+      "size": 1800779,
+      "sha256": "9037c4c6ffe60a123e875d2618f71bf448a25c5e87c494289c8fb0c9c52ab469"
+    },
+    {
+      "path": "textures/office_notepads_arm_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/office_notepads/office_notepads_arm_2k.jpg",
+      "size": 1905085,
+      "sha256": "5149eb4fbfcb2335829de4e87e476abb6a7e2e10bda8679b6610a7eeb9f88d9d"
+    },
+    {
+      "path": "office_notepads.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/office_notepads/office_notepads.bin",
+      "size": 17740,
+      "sha256": "4095356347a19a2e64ee2f5cee46d50d9bdf7c52f617573bca94cfe6e494842c"
+    }
+  ],
+  "download_resolution": "2k",
+  "changes": [
+    "Selected individual props from source pack",
+    "Preserved metric dimensions; centered XY and grounded Z",
+    "USD/MJCF/GLB exports; 2K PBR textures retained; roughness/metallic split from ARM",
+    "Added approximate compound collision and estimated mass/friction"
+  ],
+  "source_objects": [
+    "office_notepads_sticky_stack"
+  ],
+  "source_offset_m": [
+    0.44999998807907104,
+    -0.08499999344348907,
+    0.0
+  ]
+}

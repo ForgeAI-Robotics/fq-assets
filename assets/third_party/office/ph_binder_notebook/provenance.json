@@ -1,0 +1,109 @@
+{
+  "id": "binder_notebook",
+  "source_url": "https://polyhaven.com/a/binder_notebook",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "metadata": {
+    "type": 2,
+    "name": "Binder Notebook",
+    "categories": [
+      "collection: project_lighthouse",
+      "books",
+      "props"
+    ],
+    "tags": [
+      "old",
+      "leather",
+      "vintage",
+      "worn",
+      "paper",
+      "pencil",
+      "pen",
+      "journal"
+    ],
+    "description": "Free 8K leather binder notebook with worn patina, brass rings, stitched pockets, snap strap and pen, embossed logo, realistic paper stack and metal details.",
+    "authors": {
+      "DaDrood": "All"
+    },
+    "donated": true,
+    "max_resolution": [
+      8192,
+      8192
+    ],
+    "polycount": 18077,
+    "files_hash": "19b74a17100b8c852b8ce520b3029609fc601fbb",
+    "texel_density": 15126.472513750494,
+    "dimensions": [
+      584.0288400650024,
+      199.95832443237305,
+      25.289426557719707
+    ],
+    "date_published": 1782777600,
+    "category_id": "38ef0f61-f29a-5fa7-acda-a2aef9bf6d66",
+    "category": "Office & Stationery/Stationery & Supplies/Notebooks & Pads",
+    "collections": [
+      "project_lighthouse"
+    ],
+    "attributes": {
+      "condition": [
+        "worn"
+      ],
+      "material": [
+        "leather",
+        "paper",
+        "brass",
+        "metal"
+      ]
+    },
+    "img_version": "cdb2824f",
+    "download_count": 3555,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/binder_notebook.png?width=256&height=256&format=webp&v=cdb2824f"
+  },
+  "files": [
+    {
+      "path": "source.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/binder_notebook/binder_notebook_2k.gltf",
+      "size": 4309,
+      "sha256": "a9f9123e51e18643f5097b02ebde320ba2b65bb4a2d2281aaf3d4bab1bc96de7"
+    },
+    {
+      "path": "textures/binder_notebook_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/binder_notebook/binder_notebook_nor_gl_2k.jpg",
+      "size": 1211985,
+      "sha256": "4b4631652683f5c60402969ceee4b1f161f2add82a781d2ddd280b47ca1a84c7"
+    },
+    {
+      "path": "textures/binder_notebook_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/binder_notebook/binder_notebook_diff_2k.jpg",
+      "size": 1707438,
+      "sha256": "58b9eb79a1320d8db6498e6dc3d8aa289979bca912568d29e7f20ea2c609737c"
+    },
+    {
+      "path": "textures/binder_notebook_arm_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/binder_notebook/binder_notebook_arm_2k.jpg",
+      "size": 1689226,
+      "sha256": "f66a1521fb48a8f28d96fae661cc1a3189311193ecff8c66945a560afbe42caa"
+    },
+    {
+      "path": "binder_notebook.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/binder_notebook/binder_notebook.bin",
+      "size": 525488,
+      "sha256": "68e28e6fac708a6e172230c42debd990e48819566fa07f222415467b1034b9c0"
+    }
+  ],
+  "download_resolution": "2k",
+  "changes": [
+    "Selected individual props from source pack",
+    "Preserved metric dimensions; centered XY and grounded Z",
+    "USD/MJCF/GLB exports; 2K PBR textures retained; roughness/metallic split from ARM",
+    "Added approximate compound collision and estimated mass/friction"
+  ],
+  "source_objects": [
+    "binder_notebook_closed"
+  ],
+  "source_offset_m": [
+    0.34189432859420776,
+    -0.00036513060331344604,
+    -0.0020946459844708443
+  ]
+}

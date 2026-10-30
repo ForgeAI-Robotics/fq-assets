@@ -236,6 +236,56 @@
       "id": "fq:deformables/a4_paper",
       "version": "0.1.2",
       "manifest": "assets/fq/a4_paper/asset.json"
+    },
+    {
+      "id": "fq:deformables/tissue_paper",
+      "version": "0.1.0",
+      "manifest": "assets/fq/tissue_paper/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_binder_notebook",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_binder_notebook/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_blue_pen",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_blue_pen/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_clipboard",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_clipboard/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_eraser",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_eraser/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_notepad",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_notepad/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_pencil",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_pencil/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_pencil_cup",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_pencil_cup/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_stapler",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_stapler/asset.json"
+    },
+    {
+      "id": "third_party:office/ph_sticky_notes",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/ph_sticky_notes/asset.json"
     }
   ]
 }

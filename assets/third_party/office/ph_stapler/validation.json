@@ -1,0 +1,22 @@
+{
+  "usd_missing_dependencies": [],
+  "triangles": 4314,
+  "dimensions_m": [
+    0.208464115858078,
+    0.04741005226969719,
+    0.06465394794940948
+  ],
+  "collision_count": 2,
+  "source_metric_scale_preserved": true,
+  "drop_test": {
+    "duration_s": 2.0,
+    "start_height_m": 0.1,
+    "final_position_m": [
+      -0.006627713006057601,
+      -4.3642313892316483e-05,
+      -9.164322414133427e-06
+    ],
+    "contact_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "stationery_supplies",
+  "source_url": "https://polyhaven.com/a/stationery_supplies",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "metadata": {
+    "type": 2,
+    "name": "Stationery Supplies",
+    "tags": [
+      "pen",
+      "pencil",
+      "eraser",
+      "stationery",
+      "art supplies",
+      "writing",
+      "office",
+      "desk"
+    ],
+    "description": "Free 4k model of assorted stationery: scuffed pens, colored and graphite pencils with worn paint, pink eraser and engraved metal cup, realistic and finely detailed props.",
+    "authors": {
+      "Mateusz Sadek": "All"
+    },
+    "donated": true,
+    "categories": [
+      "collection: project_lighthouse",
+      "props",
+      "office"
+    ],
+    "max_resolution": [
+      4096,
+      4096
+    ],
+    "polycount": 4412,
+    "files_hash": "4dbacd04f75f1ccd853db5f56a6a891359c5fa31",
+    "texel_density": 14429.804050898843,
+    "dimensions": [
+      301.8620014190674,
+      83.66207033395767,
+      164.34769332408905
+    ],
+    "social_post_pending": false,
+    "date_published": 1774345468,
+    "category_id": "4508b315-21ca-5819-a359-6ee09f5c33aa",
+    "category": "Office & Stationery/Stationery & Supplies/Writing Instruments",
+    "collections": [
+      "project_lighthouse"
+    ],
+    "attributes": {
+      "condition": [
+        "worn"
+      ],
+      "material": [
+        "plastic",
+        "metal",
+        "rubber"
+      ]
+    },
+    "img_version": "a04c82ba",
+    "download_count": 4346,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/stationery_supplies.png?width=256&height=256&format=webp&v=a04c82ba"
+  },
+  "files": [
+    {
+      "path": "source.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/stationery_supplies/stationery_supplies_2k.gltf",
+      "size": 15220,
+      "sha256": "9a68722a3ea303d8a8740bd967151e60c3905d76c465083a19205b6c3ba86b55"
+    },
+    {
+      "path": "textures/stationery_supplies_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/stationery_supplies/stationery_supplies_nor_gl_2k.jpg",
+      "size": 1827238,
+      "sha256": "d9aae83a96d10cee7dcb4ded7690117f09cb48bf1d3e3bcc8f91b6d131a81a34"
+    },
+    {
+      "path": "textures/stationery_supplies_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/stationery_supplies/stationery_supplies_diff_2k.jpg",
+      "size": 2509290,
+      "sha256": "4d40fcf5ca2538a7b3224a016129fb1b14cf4677e67b0f186f91335ae47f5979"
+    },
+    {
+      "path": "textures/stationery_supplies_arm_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/stationery_supplies/stationery_supplies_arm_2k.jpg",
+      "size": 2773535,
+      "sha256": "317172b1ba55f656bcf60c1ec90cd432dd1beb1f48a6b677b21a3df27fc32184"
+    },
+    {
+      "path": "stationery_supplies.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/stationery_supplies/stationery_supplies.bin",
+      "size": 128940,
+      "sha256": "475d839c3569551710607cfc71416aa50a3715cd02d56da8c86271982feacb6e"
+    }
+  ],
+  "download_resolution": "2k"
+}

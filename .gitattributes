@@ -15,3 +15,5 @@ assets/fq/photo_basket/geometry.json filter=lfs diff=lfs merge=lfs -text
 *.glb filter=lfs diff=lfs merge=lfs -text
 
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+
+assets/fq/tissue_paper/*.npz filter=lfs diff=lfs merge=lfs -text

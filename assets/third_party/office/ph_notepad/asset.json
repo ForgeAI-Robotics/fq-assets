@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "third_party:office/ph_notepad",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "黄色便笺本",
+  "description": "Poly Haven / CC0；独立桌面物品，2K PBR，近似碰撞和未标定质量",
+  "origin": "third_party",
+  "upstream_origin": "Poly Haven",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "CC0-1.0",
+  "representations": {
+    "mujoco": "assets/third_party/office/ph_notepad/model.xml",
+    "usd": "assets/third_party/office/ph_notepad/model.usdc",
+    "glb": "assets/third_party/office/ph_notepad/model.glb"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.22333772480487823,
+    0.30733999609947205,
+    0.009999999776482582
+  ],
+  "mass_kg": 0.2,
+  "physics_calibrated": false,
+  "provenance": "assets/third_party/office/ph_notepad/provenance.json",
+  "collision": "box",
+  "limitations": [
+    "Rigid prop only; no writing, stapling, page peeling, notebook opening or soft covers",
+    "Collision proxies and mass/friction are approximations, not calibrated hardware",
+    "Pen cup uses 24 wall segments and a bottom; wall thickness assumed 2 mm"
+  ],
+  "viewer_status": [
+    [
+      "来源",
+      "Poly Haven / CC0"
+    ],
+    [
+      "材质",
+      "2K PBR；USD/GLB 保留法线、粗糙度和金属度"
+    ],
+    [
+      "物理",
+      "可移动刚体；近似碰撞，质量/摩擦未标定"
+    ],
+    [
+      "机构",
+      "本轮不包含订书、翻页或书写功能"
+    ]
+  ],
+  "mujoco_contact_settings": {
+    "recommended_max_timestep_s": 0.002,
+    "solref": [
+      0.004,
+      1
+    ],
+    "solimp": [
+      0.99,
+      0.999,
+      0.0001
+    ],
+    "margin_m": 0.0002,
+    "priority": 1
+  }
+}

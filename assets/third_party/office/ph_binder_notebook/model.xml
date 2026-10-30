@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="ph_binder_notebook">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="visual" file="model.obj" />
+    <texture name="albedo" type="2d" file="../_textures/binder_notebook/color.png" />
+    <material name="surface" texture="albedo" specular=".25" shininess=".15" />
+  </asset>
+  <worldbody>
+    <body name="ph_binder_notebook">
+      <freejoint name="root" />
+      <geom name="visual" type="mesh" mesh="visual" material="surface" mass="0" contype="0" conaffinity="0" />
+      <geom name="collision_0" type="box" pos="0 0 0.012644713744521141" euler="0 0 0" mass="0.3" group="3" rgba="0 0 0 0" friction=".65 .005 .0001" size="0.0853227823972702 0.09997916221618652 0.012644713744521141" priority="1" solref=".004 1" solimp=".99 .999 .0001" margin=".0002" />
+    </body>
+  </worldbody>
+</mujoco>

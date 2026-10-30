@@ -1,0 +1,8 @@
+{
+  "geometry": "FQ procedural rectangular sheet",
+  "solver": "FQ discrete elastic-plastic shell",
+  "contact_library": "IPC Toolkit 1.6.1",
+  "contact_library_url": "https://github.com/ipc-sim/ipc-toolkit",
+  "contact_library_license": "MIT",
+  "material_source": "Uncalibrated illustrative parameters; no manufacturer measurement"
+}
