@@ -57,3 +57,7 @@ Procedural geometry and uncalibrated shell/material integration by FQ; collision
 Two real scanned ceramic mugs originate from Google Scanned Objects (Google LLC), CC-BY-4.0, downloaded from the GoogleResearch account on Gazebo Fuel. Per-model attribution, download hash and modifications are in assets/office_refresh/*/provenance.json and LICENSE.txt.
 WaterBottle is by Microsoft, CC0, distributed through KhronosGroup/glTF-Sample-Assets; original license declaration retained as LICENSE_source.md. Height adapted to 235 mm, not a manufacturer measurement.
 The takeaway coffee, iced coffee, PET bottle and pizza box are FQ authored procedural props; they are not scans and contain no Starbucks branding. All mass/friction and collision proxies are uncalibrated.
+
+## Grab3D Laptop
+
+Source: https://grab3d.com/models/electronics/laptop/ . Grab3D releases this procedural visual asset under CC0-1.0. Original LICENSE.txt and manifest are retained in assets/third_party/office/grab3d_laptop/. FQ added a passive laptop hinge, collision proxies, estimated mass/inertia, joint limits/damping, MJCF/USD/URDF conversions, and a driven demonstration. Physical parameters are not calibrated; USD Coulomb hinge friction is not authored.

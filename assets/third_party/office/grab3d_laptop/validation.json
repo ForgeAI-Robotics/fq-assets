@@ -1,0 +1,44 @@
+{
+  "usd_missing_dependencies": [],
+  "usd_joint_limits_degrees": [
+    0,
+    140
+  ],
+  "usd_dynamic_test": false,
+  "angle_sweep": {
+    "samples": 141,
+    "min_contact_distance_m": null,
+    "no_penetration": true
+  },
+  "urdf_mjcf_pose_equivalence": {
+    "angles_degrees": [
+      0,
+      55,
+      110,
+      140
+    ],
+    "passed": true
+  },
+  "forced_joint_limits": {
+    "applied_torque_Nm": 1.0,
+    "duration_s": 1.0,
+    "passed": true
+  },
+  "free_body_drop": {
+    "start_height_m": 0.03,
+    "duration_s": 2.0,
+    "final_z_m": 7.361819760910052e-05,
+    "contact_count": 4,
+    "passed": true
+  },
+  "screen_probe_contact": {
+    "passed": true,
+    "probe_radius_m": 0.012
+  },
+  "driven_open_close": {
+    "duration_s": 8.0,
+    "hold_error_degrees": 0.3443583558009351,
+    "passed": true,
+    "scope": "temporary position servo on fixed base; asset remains passive"
+  }
+}

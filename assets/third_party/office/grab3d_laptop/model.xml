@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="grab3d_laptop">
+  <compiler angle="radian" />
+  <option timestep=".001" integrator="implicitfast" />
+  <asset>
+    <mesh name="base" file="base.obj" />
+    <texture name="base" type="2d" file="base.png" />
+    <material name="base" texture="base" specular=".2" shininess=".2" />
+    <mesh name="lid" file="lid.obj" />
+    <texture name="lid" type="2d" file="lid.png" />
+    <material name="lid" texture="lid" specular=".2" shininess=".2" />
+  </asset>
+  <worldbody>
+    <body name="base">
+      <freejoint name="root" />
+      <body name="lid" pos="0.0 0.07112333178520203 0.019500000402331352" quat="0.5735764363510462 -0.8191520442889918 0.0 0.0">
+        <joint name="lid_hinge" type="hinge" axis="-1 0 0" range="0.0 2.443460952792061" ref="1.9198621771937625" damping=".035" frictionloss=".25" armature=".0002" solreflimit=".002 1" />
+        <inertial pos="0.0 -0.11299999803304672 -0.0003499947488307953" mass="0.35" diaginertia="0.0012029443953296345 0.0029876818309854274 0.0041885956306487344" />
+        <geom name="lid_visual" type="mesh" mesh="lid" material="lid" mass="0" contype="0" conaffinity="0" />
+        <geom name="lid_collision" type="box" size="0.1599999964237213 0.1014999970793724 0.0029500089585781097" pos="0.0 -0.11299999803304672 -0.0003499947488307953" mass="0" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" solref=".004 1" solimp=".99 .999 .0001" margin=".0001" />
+      </body>
+      <inertial pos="0.0 -0.03527666628360748 0.00800000037997961" mass="1.1" diaginertia="0.004541166785339515 0.009457123958583405 0.013951357406131161" />
+      <geom name="base_visual" type="mesh" mesh="base" material="base" mass="0" contype="0" conaffinity="0" />
+      <geom name="base_collision" type="box" size="0.16039998829364777 0.11100000143051147 0.00800000037997961" pos="0.0 -0.03527666628360748 0.00800000037997961" mass="0" group="3" rgba="0 0 0 0" friction=".7 .005 .0001" solref=".004 1" solimp=".99 .999 .0001" margin=".0001" />
+    </body>
+  </worldbody>
+  <contact>
+    <pair geom1="base_collision" geom2="lid_collision" condim="3" margin="0" solref=".004 1" solimp=".99 .999 .0001" />
+  </contact>
+  <keyframe>
+    <key name="open_110" qpos="0 0 0 1 0 0 0 1.9198621771937625" />
+  </keyframe>
+</mujoco>

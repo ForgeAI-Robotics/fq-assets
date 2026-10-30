@@ -321,6 +321,11 @@
       "id": "fq:office/takeaway_coffee",
       "version": "0.1.0",
       "manifest": "assets/office_refresh/takeaway_coffee/asset.json"
+    },
+    {
+      "id": "third_party:office/grab3d_laptop",
+      "version": "0.1.0",
+      "manifest": "assets/third_party/office/grab3d_laptop/asset.json"
     }
   ]
 }

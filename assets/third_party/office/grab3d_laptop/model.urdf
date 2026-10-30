@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="grab3d_laptop">
+  <link name="base">
+    <inertial>
+      <origin xyz="0.0 -0.03527666628360748 0.00800000037997961" />
+      <mass value="1.1" />
+      <inertia ixx="0.004541166785339515" iyy="0.009457123958583405" izz="0.013951357406131161" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="base.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.03527666628360748 0.00800000037997961" />
+      <geometry>
+        <box size="0.32079997658729553 0.22200000286102295 0.01600000075995922" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="lid">
+    <inertial>
+      <origin xyz="0.0 -0.11299999803304672 -0.0003499947488307953" />
+      <mass value="0.35" />
+      <inertia ixx="0.0012029443953296345" iyy="0.0029876818309854274" izz="0.0041885956306487344" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="lid.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.11299999803304672 -0.0003499947488307953" />
+      <geometry>
+        <box size="0.3199999928474426 0.2029999941587448 0.0059000179171562195" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="lid_hinge" type="revolute">
+    <parent link="base" />
+    <child link="lid" />
+    <origin xyz="0.0 0.07112333178520203 0.019500000402331352" />
+    <axis xyz="-1 0 0" />
+    <limit lower="0" upper="2.443460952792061" effort="2" velocity="2" />
+    <dynamics damping=".035" friction=".25" />
+  </joint>
+</robot>

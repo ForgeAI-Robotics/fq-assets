@@ -1,0 +1,47 @@
+{
+ "slug": "laptop",
+ "triangles": 8450,
+ "texture_px": 2048,
+ "triangles_light": null,
+ "texture_px_light": null,
+ "files": {
+  "glb": {
+   "name": "laptop.glb",
+   "bytes": 919776
+  },
+  "blend": {
+   "name": "laptop.blend",
+   "bytes": 643901
+  },
+  "fbx": {
+   "name": "laptop.fbx",
+   "bytes": 1424876
+  },
+  "obj": {
+   "name": "laptop-obj.zip",
+   "bytes": 631606
+  },
+  "usdz": {
+   "name": "laptop.usdz",
+   "bytes": 1386936
+  }
+ },
+ "extras": {
+  "license": "CC0-1.0",
+  "source": "grab3d.com",
+  "dimensions_m": "0.321 x 0.293 x 0.221",
+  "triangles": 8450,
+  "textures": "PBR 2048px: base color, roughness, metallic, normal (baked)",
+  "generator": "Created by grab3d",
+  "created": "2026-09-26",
+  "set": "Cozy Home Kit",
+  "real_size": "14-inch laptop, 0.320 x 0.222 m footprint, 16 mm closed height, screen 0.302 x 0.189 m (16:10)",
+  "notes": "display lid is a separate object 'laptop_lid' with its origin on the hinge axis: rotate about local X (opened 110 degrees as delivered; +110 degrees about local X closes it); screen shows a text-free pastel desktop; no logos"
+ },
+ "origin": {
+  "method": "procedural",
+  "detail": "Built procedurally with Blender scripts. The scripts were written with the help of an AI coding assistant. No generative AI model produced the geometry or textures directly.",
+  "ai_content": false,
+  "ai_assisted_code": true
+ }
+}

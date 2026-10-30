@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "third_party:office/grab3d_laptop",
+  "version": "0.1.0",
+  "kind": "articulated",
+  "name": "可开合笔记本电脑",
+  "description": "Grab3D CC0；独立底座与屏幕，0–140° 铰链及近似碰撞，默认打开 110°",
+  "origin": "third_party",
+  "upstream_origin": "Grab3D / Cozy Home Kit",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "CC0-1.0",
+  "representations": {
+    "mujoco": "assets/third_party/office/grab3d_laptop/model.xml",
+    "urdf": "assets/third_party/office/grab3d_laptop/model.urdf",
+    "usd": "assets/third_party/office/grab3d_laptop/model.usdc",
+    "glb": "assets/third_party/office/grab3d_laptop/model.glb"
+  },
+  "dependencies": [],
+  "mass_kg": 1.45,
+  "dimensions_m": [
+    0.3208,
+    0.2926,
+    0.2214
+  ],
+  "physics_calibrated": false,
+  "initial_joint_positions": {
+    "lid_hinge": 1.9198621771937625
+  },
+  "joint_semantics": {
+    "lid_hinge": {
+      "zero": "closed",
+      "positive": "opens",
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "limits_degrees": [
+        0,
+        140
+      ],
+      "default_degrees": 110
+    }
+  },
+  "viewer_status": [
+    [
+      "开合",
+      "单旋转关节；0° 闭合，最大 140°"
+    ],
+    [
+      "碰撞",
+      "底座 / 屏幕面板独立碰撞"
+    ],
+    [
+      "物理",
+      "被动铰链；质量、阻力与阻尼为估计值"
+    ],
+    [
+      "来源",
+      "Grab3D / CC0；风格化自建源模型"
+    ]
+  ],
+  "limitations": [
+    "Uncalibrated mass, hinge resistance, damping and 140-degree limit; not a measured laptop",
+    "Two box collision proxies omit hinge barrel and detailed key geometry",
+    "USD includes viscous damping only; MuJoCo/URDF also specify estimated Coulomb friction",
+    "GLB is upstream visual model with separate parts, not a physical articulation",
+    "No keyboard buttons, magnetic latch, screen electronics or cable simulation"
+  ],
+  "demonstration": {
+    "file": "validation/previews/grab3d_laptop_open_close.mp4",
+    "poster": "validation/previews/third_party_office_grab3d_laptop.png",
+    "title": "笔记本开合 · 物理关节演示",
+    "caption": "底座固定的演示台；临时位置伺服驱动被动铰链，非机器人抓取",
+    "default_view": "model"
+  }
+}

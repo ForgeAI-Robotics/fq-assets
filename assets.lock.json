@@ -65,7 +65,8 @@
     "third_party:office/khronos_water_bottle": "0.1.0",
     "fq:office/pet_water_bottle": "0.1.0",
     "fq:office/pizza_box": "0.1.0",
-    "fq:office/takeaway_coffee": "0.1.0"
+    "fq:office/takeaway_coffee": "0.1.0",
+    "third_party:office/grab3d_laptop": "0.1.0"
   },
   "profiles": {
     "fq:poses/o6_left_task": "0.1.2",
