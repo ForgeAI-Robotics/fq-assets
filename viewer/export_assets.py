@@ -187,6 +187,10 @@ def main():
             info['preview_physics_note']='静态外观预览；实际柔性物理请加载原生 MuJoCo 模型'
             info['mass_kg']=meta.get('mass_kg')
             info['physics_status']='原生 MuJoCo 柔性；网页仅外观'
+            if meta.get('capabilities',{}).get('external_solver'):
+                info['physics_status']='外部柔性求解器；网页为快照与回放'
+                info['preview_physics_note']='通过资产 simulation_entrypoint 运行物理；MuJoCo/USD 预览不提供原生柔性动力学'
+                info['mass_kg']=meta.get('target_mass_kg',meta.get('mass_kg'))
         if meta['kind']=='material':
             with Image.open(material_source) as im:
                 info['resolution']=list(im.size)

@@ -2160,7 +2160,7 @@
     "validation/windows_release.json": "ef59113ddb81313c00134d33a525cbf4c414ee9859bc51aed62317b29164b38f",
     "viewer/.gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
     "viewer/README.md": "7424b7d3ef8988cdeaeedf2d6880db64f7145ed85675cfa5c9e690bcbf1799e1",
-    "viewer/export_assets.py": "53e6fb921f6bb80a65782d842e216a93ae7384d8831e0313cf20b13b76a74bef",
+    "viewer/export_assets.py": "5d63b581f1d6f5bb88b170eb2bae6ab82e77c5cdbff831860d3e3698805c7c6e",
     "viewer/fq-assets-viewer.service": "bdc01ae5ef098df9bc31a7c2d4f090b23afa5e5fc348fc222b6ddb1dd20c0647",
     "viewer/server.py": "52a7521764d89c7169c46b443cc30d2afc691d1199f7acf5ff0eeb6cafe2fc54",
     "viewer/test_versions.py": "70f9a5be178aae01c7e1d4a57c0d46af52ea2359314c1043b681b8fdc8113ca3",
