@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="fq_generated_scene">
+  <compiler angle="radian" />
+  <option integrator="implicitfast" />
+  <visual>
+    <global offwidth="960" offheight="720" />
+    <headlight ambient="0.5 0.5 0.5" diffuse="0.7 0.7 0.7" />
+  </visual>
+  <default>
+    <default class="table_01__main" />
+    <default class="can_01__main" />
+  </default>
+  <asset>
+    <texture type="skybox" colorspace="auto" name="table_01__studio_background" builtin="gradient" rgb1="0.65 0.7 0.76" rgb2="0.9 0.91 0.93" width="512" height="3072" />
+    <texture type="2d" colorspace="linear" name="table_01__surface_table_tex" file="instances/table_01/assets/fq/tabletop/common/textures/surfaces_20260921/table_basecolor.png" />
+    <texture type="skybox" colorspace="auto" name="can_01__studio_background" builtin="gradient" rgb1="0.65 0.7 0.76" rgb2="0.9 0.91 0.93" width="512" height="3072" />
+    <texture type="2d" colorspace="linear" name="can_01__coke_tex" file="instances/can_01/assets/fq/tabletop/common/textures/coke.png" />
+    <texture type="2d" colorspace="linear" name="can_01__coke_cn_texture" file="instances/can_01/assets/fq/tabletop/common/textures/coke_cn.png" />
+    <material name="table_01__round_table_top_pbr" texture="table_01__surface_table_tex" specular="0.25" shininess="0.52" />
+    <material name="table_01__round_table_pillar_pbr" specular="0.25" shininess="0.68" rgba="0.76 0.75 0.71 1" />
+    <material name="table_01__round_table_base_pbr" specular="0.25" shininess="0.62" rgba="0.74 0.73 0.69 1" />
+    <material name="can_01__coke_mat" texture="can_01__coke_tex" specular="0.15" shininess="0.1" />
+    <material name="can_01__coke_cn_label" texture="can_01__coke_cn_texture" specular="0.2" shininess="0.25" />
+    <material name="can_01__coke_cn_aluminium" specular="0.8" shininess="0.6" rgba="0.55 0.57 0.6 1" />
+    <mesh name="table_01__round_table_collision_0" file="instances/table_01/assets/fq/tabletop/common/meshes/round_table_collision_base.obj" />
+    <mesh name="table_01__round_table_collision_1" file="instances/table_01/assets/fq/tabletop/common/meshes/round_table_collision_pillar.obj" />
+    <mesh name="table_01__round_table_collision_2" file="instances/table_01/assets/fq/tabletop/common/meshes/round_table_collision_top.obj" />
+    <mesh name="table_01__round_table_top_pbr" file="instances/table_01/assets/fq/tabletop/common/meshes/round_table_top_pbr.obj" />
+    <mesh name="table_01__round_table_pillar_pbr" file="instances/table_01/assets/fq/tabletop/common/meshes/round_table_pillar_pbr.obj" />
+    <mesh name="table_01__round_table_base_pbr" file="instances/table_01/assets/fq/tabletop/common/meshes/round_table_base_pbr.obj" />
+    <mesh name="can_01__coke_visual" file="instances/can_01/assets/fq/tabletop/common/meshes/coke_cn_side.obj" />
+    <mesh name="can_01__coke_collision_0" file="instances/can_01/assets/fq/tabletop/common/meshes/coke_collision.obj" />
+    <mesh name="can_01__coke_cn_ends" file="instances/can_01/assets/fq/tabletop/common/meshes/coke_cn_ends.obj" />
+  </asset>
+  <worldbody>
+    <geom name="architecture_floor" size="2.5 4 0.05" pos="0 0 -0.05" type="box" rgba="0.83 0.85 0.8 1" />
+    <geom name="architecture_back" size="2.5 0.05 1.5" pos="0 4.05 1.5" type="box" rgba="0.89 0.9 0.85 0.35" />
+    <geom name="architecture_left" size="0.05 4 1.5" pos="-2.55 0 1.5" type="box" rgba="0.89 0.9 0.85 0.35" />
+    <geom name="architecture_right" size="0.05 4 1.5" pos="2.55 0 1.5" type="box" rgba="0.89 0.9 0.85 0.35" />
+    <geom name="architecture_front_-1" size="1 0.05 1.5" pos="-1.5 -4.05 1.5" type="box" rgba="0.89 0.9 0.85 0.2" />
+    <geom name="architecture_front_1" size="1 0.05 1.5" pos="1.5 -4.05 1.5" type="box" rgba="0.89 0.9 0.85 0.2" />
+    <light pos="0 0 4" dir="0 0 -1" />
+    <frame name="table_01">
+      <body name="table_01__round_table" pos="1.2 0 0">
+        <geom name="table_01__round_table_collision_0" type="mesh" condim="4" group="3" friction="0.8 0.01 0.001" solref="0.008" mass="0" rgba="0 0 0 0" mesh="table_01__round_table_collision_0" />
+        <geom name="table_01__round_table_collision_1" type="mesh" condim="4" group="3" friction="0.8 0.01 0.001" solref="0.008" mass="0" rgba="0 0 0 0" mesh="table_01__round_table_collision_1" />
+        <geom name="table_01__round_table_collision_2" type="mesh" condim="4" group="3" friction="0.8 0.01 0.001" solref="0.008" mass="0" rgba="0 0 0 0" mesh="table_01__round_table_collision_2" />
+        <geom name="table_01__round_table_top_visual" type="mesh" contype="0" conaffinity="0" group="2" mass="0" material="table_01__round_table_top_pbr" mesh="table_01__round_table_top_pbr" />
+        <geom name="table_01__round_table_pillar_visual" type="mesh" contype="0" conaffinity="0" group="2" mass="0" material="table_01__round_table_pillar_pbr" mesh="table_01__round_table_pillar_pbr" />
+        <geom name="table_01__round_table_base_visual" type="mesh" contype="0" conaffinity="0" group="2" mass="0" material="table_01__round_table_base_pbr" mesh="table_01__round_table_base_pbr" />
+      </body>
+    </frame>
+    <frame name="can_01">
+      <body name="can_01__coke" pos="1.25 0 0.8227">
+        <joint name="can_01__coke_joint" type="free" />
+        <geom name="can_01__coke_visual" type="mesh" contype="0" conaffinity="0" group="2" mass="0" material="can_01__coke_cn_label" mesh="can_01__coke_visual" />
+        <geom name="can_01__coke_visual_cn_ends" type="mesh" contype="0" conaffinity="0" group="2" mass="0" material="can_01__coke_cn_aluminium" mesh="can_01__coke_cn_ends" />
+        <geom name="can_01__coke_collision_0" type="mesh" condim="4" group="3" priority="1" friction="0.6 0.003" solref="0.008" mass="0.35" rgba="0 0 0 0" mesh="can_01__coke_collision_0" />
+      </body>
+    </frame>
+  </worldbody>
+</mujoco>

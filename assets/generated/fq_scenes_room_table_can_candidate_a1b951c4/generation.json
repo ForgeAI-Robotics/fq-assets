@@ -1,0 +1,22 @@
+{
+  "plan": {
+    "action": "edit_scene",
+    "source_asset_id": "fq:scenes/room_table_can_candidate",
+    "new_asset_id": "fq:scenes/room_table_can_candidate",
+    "name": "fq:scenes/room_table_can_candidate",
+    "uniform_scale": 1,
+    "mass_kg": null,
+    "reason": "Independent read-only Search and Scene reports agree: reuse base revision 6bd426c9af4d4d2f938f097108f2c27c with no edits. Preserve every object, ID, version, pose, relation, override and constraint exactly. Request native Scene review, fresh MuJoCo and enabled Isaac validation, and independent visual critique including corrected USD paint color space. Do not publish.",
+    "limitations": [
+      "Validation is pending backend execution; no new validation success is claimed.",
+      "Physics remains uncalibrated; room dimensions are design values."
+    ],
+    "scene_json": "",
+    "operations_json": "[]",
+    "generation_prompt": "",
+    "generation_backend": "TRELLIS",
+    "generation_negative_prompt": ""
+  },
+  "job_id": "927aa466befb4f76961e8d6410b45167",
+  "round": 0
+}
