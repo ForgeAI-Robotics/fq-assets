@@ -326,6 +326,11 @@
       "id": "third_party:office/grab3d_laptop",
       "version": "0.1.0",
       "manifest": "assets/third_party/office/grab3d_laptop/asset.json"
+    },
+    {
+      "id": "fq:scenes/room_table_can_candidate",
+      "version": "0.1.0",
+      "manifest": "assets/generated/fq_scenes_room_table_can_candidate_a1b951c4/asset.json"
     }
   ]
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "instance_id": "table_01",
+    "asset_id": "fq:objects/round_table",
+    "version": "0.1.3",
+    "anchor": "bottom_center",
+    "source_anchor_m": [
+      0.0,
+      0.0,
+      -1.9081958235744878e-17
+    ],
+    "world_position": [
+      1.2,
+      0.0,
+      0.0
+    ],
+    "world_quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "collision_dimensions_m": [
+      0.6999999880790729,
+      0.6999999880790729,
+      0.7499999999999987
+    ]
+  },
+  {
+    "instance_id": "can_01",
+    "asset_id": "fq:objects/coke_cn",
+    "version": "0.1.1",
+    "anchor": "bottom_center",
+    "source_anchor_m": [
+      -9.313225746154785e-10,
+      0.0,
+      -0.07270000129938126
+    ],
+    "world_position": [
+      1.25,
+      0.0,
+      0.75
+    ],
+    "world_quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "collision_dimensions_m": [
+      0.058000000193715096,
+      0.058000002056360245,
+      0.1454000025987625
+    ]
+  }
+]

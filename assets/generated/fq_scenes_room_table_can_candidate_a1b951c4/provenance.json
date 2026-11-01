@@ -1,0 +1,8 @@
+{
+  "source_commit": "a55542ec7dfc9ad9673a061b098329fa2ef8f449",
+  "source_assets": {
+    "fq:objects/round_table": "0.1.3",
+    "fq:objects/coke_cn": "0.1.1"
+  },
+  "construction": "instance-stable MjSpec composition; source-local bottom-center anchors"
+}

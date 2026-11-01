@@ -1,0 +1,520 @@
+[
+  {
+    "name": "resource_closure",
+    "status": "passed",
+    "engine": null,
+    "engine_version": null,
+    "details": {
+      "resource_count": 13
+    },
+    "evidence": []
+  },
+  {
+    "name": "scene_identity",
+    "status": "passed",
+    "engine": null,
+    "engine_version": null,
+    "details": {
+      "instance_count": 2
+    },
+    "evidence": []
+  },
+  {
+    "name": "mujoco_load",
+    "status": "passed",
+    "engine": "mujoco",
+    "engine_version": "3.3.6",
+    "details": {},
+    "evidence": []
+  },
+  {
+    "name": "initial_penetration",
+    "status": "passed",
+    "engine": null,
+    "engine_version": null,
+    "details": {
+      "minimum_contact_distance_m": -1.2993799369809267e-09,
+      "limit_m": -0.005
+    },
+    "evidence": []
+  },
+  {
+    "name": "scene_settling",
+    "status": "passed",
+    "engine": "mujoco",
+    "engine_version": "3.3.6",
+    "details": {
+      "duration_s": 3,
+      "max_velocity_component": 0.027123563822134017,
+      "max_body_displacement_m": 7.10606821856802e-05,
+      "min_contact_distance_m": -7.46234499849896e-05,
+      "warning_count": 0
+    },
+    "evidence": []
+  },
+  {
+    "name": "scene_relations",
+    "status": "passed",
+    "engine": null,
+    "engine_version": null,
+    "details": {
+      "relations": [
+        {
+          "relation": {
+            "subject": "can_01",
+            "predicate": "supported_by",
+            "object": "table_01",
+            "parameters": {}
+          },
+          "status": "passed",
+          "contact_count": 1,
+          "upward_contact_force_N": 3.6875803591071294,
+          "subject_mass_kg": 0.35,
+          "minimum_upward_force_N": 1.71675
+        }
+      ]
+    },
+    "evidence": []
+  },
+  {
+    "name": "navigation",
+    "status": "passed",
+    "engine": null,
+    "engine_version": null,
+    "details": {
+      "targets": [
+        {
+          "target": [
+            0,
+            1.5
+          ],
+          "reachable": true
+        }
+      ],
+      "clearance_m": 0.8,
+      "grid_resolution_m": 0.05,
+      "scope": "conservative planar AABB clearance; no robot-specific dynamics or motion planning"
+    },
+    "evidence": []
+  },
+  {
+    "name": "preview",
+    "status": "passed",
+    "engine": null,
+    "engine_version": null,
+    "details": {
+      "geometry_count": 11,
+      "bytes": 6982916,
+      "scope": "interactive visual preview; use simulator renders and report for validation"
+    },
+    "evidence": [
+      "previews/view_overview.png",
+      "previews/view_entry.png",
+      "previews/view_reverse.png",
+      "previews/preview.glb"
+    ]
+  },
+  {
+    "name": "isaac_scene_settling",
+    "status": "passed",
+    "engine": "isaac",
+    "engine_version": "4.5.0",
+    "details": {
+      "checks": {
+        "geometry_bounds": true,
+        "finite": true,
+        "mass": true,
+        "settled": true,
+        "pose_preserved": true
+      },
+      "passed": true,
+      "bodies": [
+        {
+          "id": 2,
+          "initial_position": [
+            [
+              1.249997854232788,
+              -7.336395242418803e-07,
+              0.8226999044418335
+            ]
+          ],
+          "final_position": [
+            [
+              1.2499977350234985,
+              -4.1201275280400296e-07,
+              0.8227003216743469
+            ]
+          ],
+          "mass": [
+            0.3499999940395355
+          ],
+          "linear_velocity": [
+            [
+              0.0007064401870593429,
+              -0.0008517660317011178,
+              -0.0001238250988535583
+            ]
+          ],
+          "angular_velocity": [
+            [
+              0.008875000290572643,
+              0.006394014228135347,
+              -0.004565891809761524
+            ]
+          ],
+          "contact_force": [
+            [
+              0.0,
+              0.0,
+              3.426300048828125
+            ]
+          ],
+          "displacement_m": 5.401274165706127e-07
+        }
+      ],
+      "scope": "PhysX CPU, 360 steps at 120 Hz; scene settling, not robot navigation or manipulation success"
+    },
+    "evidence": []
+  },
+  {
+    "name": "isaac_scene_relations",
+    "status": "passed",
+    "engine": "isaac",
+    "engine_version": "4.5.0",
+    "details": {
+      "passed": true,
+      "supports": [
+        {
+          "subject": "can_01",
+          "object": "table_01",
+          "upward_contact_force": 3.426300048828125,
+          "passed": true
+        }
+      ],
+      "scope": "filtered contact forces for declared supported_by relations"
+    },
+    "evidence": []
+  },
+  {
+    "name": "usd_resources",
+    "status": "passed",
+    "engine": "isaac",
+    "engine_version": "4.5.0",
+    "details": {
+      "dependencies": [
+        "texture_1.png",
+        "texture_3.png",
+        "texture_4.png"
+      ],
+      "unresolved": [],
+      "bodies": {
+        "2": "/Candidate/Body_2"
+      },
+      "geometry": [
+        {
+          "path": "/Candidate/Static/Geom_0",
+          "instance_id": null,
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              -2.5,
+              -4.0,
+              -0.1
+            ],
+            [
+              2.5,
+              4.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_1",
+          "instance_id": null,
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              -2.5,
+              4.0,
+              0.0
+            ],
+            [
+              2.5,
+              4.1,
+              3.0
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_2",
+          "instance_id": null,
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              -2.5999999999999996,
+              -4.0,
+              0.0
+            ],
+            [
+              -2.5,
+              4.0,
+              3.0
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_3",
+          "instance_id": null,
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              2.5,
+              -4.0,
+              0.0
+            ],
+            [
+              2.5999999999999996,
+              4.0,
+              3.0
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_4",
+          "instance_id": null,
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              -2.5,
+              -4.1,
+              0.0
+            ],
+            [
+              -0.5,
+              -4.0,
+              3.0
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_5",
+          "instance_id": null,
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              0.5,
+              -4.1,
+              0.0
+            ],
+            [
+              2.5,
+              -4.0,
+              3.0
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_6",
+          "instance_id": "table_01",
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              0.9420891028505998,
+              -0.25838738086403545,
+              -1.9081958235744878e-17
+            ],
+            [
+              1.4670890790087432,
+              0.26800343987761943,
+              0.026298696175217677
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_7",
+          "instance_id": "table_01",
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              1.134589097362335,
+              -0.06537742952931984,
+              0.02629869896918502
+            ],
+            [
+              1.2745890905078008,
+              0.07499346096884148,
+              0.7275972934439775
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_8",
+          "instance_id": "table_01",
+          "owner": 0,
+          "collision": true,
+          "bounds": [
+            [
+              0.8500000059604635,
+              -0.34999999403953647,
+              0.7275972962379442
+            ],
+            [
+              1.5499999940395364,
+              0.34999999403953647,
+              0.7499999999999987
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_9",
+          "instance_id": "table_01",
+          "owner": 0,
+          "collision": false,
+          "bounds": [
+            [
+              0.8500000059604635,
+              -0.34999999403953647,
+              0.7275972962379533
+            ],
+            [
+              1.5499999940395364,
+              0.34999999403953647,
+              0.7500000000000078
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_10",
+          "instance_id": "table_01",
+          "owner": 0,
+          "collision": false,
+          "bounds": [
+            [
+              1.1345890898749962,
+              -0.06537742993086322,
+              0.026298699081768573
+            ],
+            [
+              1.2745890904710426,
+              0.0749934605672981,
+              0.7275972935565611
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Static/Geom_11",
+          "instance_id": "table_01",
+          "owner": 0,
+          "collision": false,
+          "bounds": [
+            [
+              0.9420891037506811,
+              -0.2583874107043887,
+              9.66064034324532e-13
+            ],
+            [
+              1.467089109711147,
+              0.2680034398395886,
+              0.026298696176183762
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Body_2/Geom_12",
+          "instance_id": "can_01",
+          "owner": 2,
+          "collision": false,
+          "bounds": [
+            [
+              1.2210000012790543,
+              -0.028999998925560634,
+              0.7500000016993374
+            ],
+            [
+              1.2789999997846029,
+              0.028999999300271192,
+              0.8954000008980998
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Body_2/Geom_13",
+          "instance_id": "can_01",
+          "owner": 2,
+          "collision": false,
+          "bounds": [
+            [
+              1.221000001542694,
+              -0.028999998660718545,
+              0.7500000017614177
+            ],
+            [
+              1.2789999987016205,
+              0.028999999819630976,
+              0.8953999994890651
+            ]
+          ]
+        },
+        {
+          "path": "/Candidate/Body_2/Geom_14",
+          "instance_id": "can_01",
+          "owner": 2,
+          "collision": true,
+          "bounds": [
+            [
+              1.2209999989718199,
+              -0.029000001028180122,
+              0.7499999987006187
+            ],
+            [
+              1.278999999165535,
+              0.029000001028180122,
+              0.8954000012993812
+            ]
+          ]
+        }
+      ],
+      "scope": "rigid/fixed scene transfer; convex collision meshes and estimated friction; no articulated robot validation"
+    },
+    "evidence": []
+  },
+  {
+    "name": "isaac_preview",
+    "status": "passed",
+    "engine": "isaac",
+    "engine_version": "4.5.0",
+    "details": {
+      "images": [
+        "view_isaac_overview.png",
+        "view_isaac_entry.png",
+        "view_isaac_target.png"
+      ],
+      "scope": "original scene poses; independent visual review required"
+    },
+    "evidence": [
+      "previews/view_isaac_overview.png",
+      "previews/view_isaac_entry.png",
+      "previews/view_isaac_target.png"
+    ]
+  },
+  {
+    "name": "visual_critique",
+    "status": "passed",
+    "engine": null,
+    "engine_version": null,
+    "details": {
+      "acceptable": true,
+      "summary": "Scene contracts match exactly: object IDs, asset versions, roles, poses, parenting, overrides, relations and constraints are preserved. Simulator views show the upright red can supported by the table, with no visible placement defects. Required MuJoCo and Isaac checks pass; physics remains uncalibrated and release status remains candidate.",
+      "issues": []
+    },
+    "evidence": []
+  }
+]

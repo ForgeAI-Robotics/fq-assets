@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "fq:scenes/room_table_can_candidate",
+  "units": "meter",
+  "up_axis": "Z",
+  "instances": [
+    {
+      "id": "table_01",
+      "asset_id": "fq:objects/round_table",
+      "asset_version": "0.1.3",
+      "role": "context",
+      "pose": {
+        "position": [
+          1.2,
+          0.0,
+          0.0
+        ],
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "parent_id": null,
+      "overrides": {
+        "anchor": "bottom_center",
+        "fixed": true
+      }
+    },
+    {
+      "id": "can_01",
+      "asset_id": "fq:objects/coke_cn",
+      "asset_version": "0.1.1",
+      "role": "target",
+      "pose": {
+        "position": [
+          0.05,
+          0.0,
+          0.75
+        ],
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "parent_id": "table_01",
+      "overrides": {
+        "anchor": "bottom_center",
+        "fixed": false
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "can_01",
+      "predicate": "supported_by",
+      "object": "table_01",
+      "parameters": {}
+    }
+  ],
+  "constraints": {
+    "room_dimensions_m": [
+      5,
+      8,
+      3
+    ],
+    "door_width_m": 1,
+    "minimum_clearance_m": 0.8,
+    "navigation_targets": [
+      [
+        0,
+        1.5
+      ]
+    ]
+  }
+}
