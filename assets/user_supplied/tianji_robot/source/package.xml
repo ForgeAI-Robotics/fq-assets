@@ -1,0 +1,1 @@
+<package format="3"><name>tianji_robot_description</name><version>6.0.0</version><description>Current calibrated Tianji whole robot model</description><maintainer email="robot@example.invalid">Tianji</maintainer><license>Proprietary</license><export><build_type>ament_cmake</build_type></export></package>

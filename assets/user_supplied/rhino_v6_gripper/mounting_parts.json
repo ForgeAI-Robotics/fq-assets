@@ -1,0 +1,89 @@
+[
+  {
+    "link": "base_link",
+    "meshes": [
+      "source/meshes/base_link.STL"
+    ],
+    "joint": null
+  },
+  {
+    "link": "driver_link_L",
+    "meshes": [
+      "source/meshes/driver_link_L.STL"
+    ],
+    "joint": {
+      "name": "driver_L",
+      "type": "revolute"
+    }
+  },
+  {
+    "link": "coupler_link_L",
+    "meshes": [
+      "source/meshes/coupler_link_L.STL"
+    ],
+    "joint": {
+      "name": "coupler_L",
+      "type": "revolute"
+    }
+  },
+  {
+    "link": "spring_link_L",
+    "meshes": [
+      "source/meshes/spring_link_L.STL"
+    ],
+    "joint": {
+      "name": "spring_L",
+      "type": "revolute"
+    }
+  },
+  {
+    "link": "follower_link_L",
+    "meshes": [
+      "source/meshes/follower_link_L.STL"
+    ],
+    "joint": {
+      "name": "follower_L",
+      "type": "revolute"
+    }
+  },
+  {
+    "link": "driver_link_R",
+    "meshes": [
+      "source/meshes/driver_link_R.STL"
+    ],
+    "joint": {
+      "name": "driver_R",
+      "type": "revolute"
+    }
+  },
+  {
+    "link": "coupler_link_R",
+    "meshes": [
+      "source/meshes/coupler_link_R.STL"
+    ],
+    "joint": {
+      "name": "coupler_R",
+      "type": "revolute"
+    }
+  },
+  {
+    "link": "spring_link_R",
+    "meshes": [
+      "source/meshes/spring_link_R.STL"
+    ],
+    "joint": {
+      "name": "spring_R",
+      "type": "revolute"
+    }
+  },
+  {
+    "link": "follower_link_R",
+    "meshes": [
+      "source/meshes/follower_link_R.STL"
+    ],
+    "joint": {
+      "name": "follower_R",
+      "type": "revolute"
+    }
+  }
+]

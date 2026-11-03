@@ -1,0 +1,28 @@
+{
+  "archive_name": "RhinoV6.zip",
+  "archive_sha256": "432b821a0d8084ea2df393905b7141baf3b14ff997d26b3d8a729e155fb1099e",
+  "source_files": {
+    "package.xml": "218efe6d70a77b34cf761b49044301c020e5c2f8eca7ddc5d26ff4ddf274ee3e",
+    "export.log": "0ced30f5cf922676538c25d16545df6063470d30026438057242c4367f82995f",
+    "CMakeLists.txt": "9792a612b8113f61561a17de0f6d6825f82506b06aa1b765348f40315cdd9349",
+    "urdf/RhinoV6.urdf": "6352eb25b7dd5b8919e413dabbf182a7a4633b678fba869b0c0434c8e9552237",
+    "urdf/RhinoV6.csv": "789476b7ed594a5d104b4527c8bcc68678ae9dea3976504aa7fac9b842523794",
+    "config/joint_names_RhinoV6.yaml": "e7f5103d04cdaf5664f408a37dfe482e3cba53fee25a11bc8be3394ee4c4ac40",
+    "launch/gazebo.launch": "fb49f53d33ed5b767019233a07226b799b3366db3519c97e198479f07145e08b",
+    "launch/display.launch": "81158b6ef32badc981e51941a0793cfbf2ba183f66541be441fccd0ed2ef85b2",
+    "meshes/driver_link_L.STL": "580beebb27aa21aeba3cb323c4b8d6afe516e291b09e346dcc6d38feec71fe34",
+    "meshes/driver_link_R.STL": "7a4955dad66e9a1700a8758192f91b3443e4b72b879786dc9a30fe267e72a71c",
+    "meshes/follower_link_L.STL": "4f137ecbc0197454f86aac244a03ce2a14ff4c369ff5d39a9801b3c687edf82d",
+    "meshes/spring_link_L.STL": "97c71759b15183b6c32e9bf8ceeb6ef14e0897e67366f9de1e217314b16233bb",
+    "meshes/follower_link_R.STL": "4c9293ee9fcf31b0a3103a5aecbdc547dc880ef6943ba84a517d5777606c803e",
+    "meshes/base_link.STL": "db66490975c90175b69a62c12586bc47874a0e9d612cedc6eddf2bf84ed14b27",
+    "meshes/coupler_link_R.STL": "89b852675369231fadf94efed3506063e4239ed8f610ef1aa1a4e6a8eb77623a",
+    "meshes/spring_link_R.STL": "3fe5a4a7f862ab1d138a3df69d8a8bb52ed93cb2e34a3d74acd8350b09ec0951",
+    "meshes/coupler_link_L.STL": "451d224a506012cd185715ea8e561d8922903107b5020224a33f8e69af7f2a23"
+  },
+  "changes": [
+    "Original package preserved byte-for-byte",
+    "Root model.urdf changes mesh references to repository-relative paths only",
+    "GLB visual conversion preserves link hierarchy at zero joint pose"
+  ]
+}

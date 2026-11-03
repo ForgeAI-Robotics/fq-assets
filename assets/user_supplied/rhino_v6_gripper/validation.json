@@ -1,0 +1,203 @@
+{
+  "name": "RhinoV6",
+  "links": 9,
+  "joints": 8,
+  "joint_types": {
+    "revolute": 8
+  },
+  "parts": [
+    {
+      "link": "base_link",
+      "file": "base_link.STL",
+      "triangles": 126656,
+      "local_dimensions_mm": [
+        65.0,
+        77.41990661621094,
+        103.5
+      ],
+      "mass_kg": 0.16243
+    },
+    {
+      "link": "driver_link_L",
+      "file": "driver_link_L.STL",
+      "triangles": 2992,
+      "local_dimensions_mm": [
+        20.941843032836914,
+        62.329444885253906,
+        30.0
+      ],
+      "mass_kg": 0.0066923
+    },
+    {
+      "link": "coupler_link_L",
+      "file": "coupler_link_L.STL",
+      "triangles": 6544,
+      "local_dimensions_mm": [
+        62.754310607910156,
+        22.660255432128906,
+        26.0
+      ],
+      "mass_kg": 0.012855
+    },
+    {
+      "link": "spring_link_L",
+      "file": "spring_link_L.STL",
+      "triangles": 8652,
+      "local_dimensions_mm": [
+        62.74521255493164,
+        43.99090576171875,
+        45.0
+      ],
+      "mass_kg": 0.01093
+    },
+    {
+      "link": "follower_link_L",
+      "file": "follower_link_L.STL",
+      "triangles": 4586,
+      "local_dimensions_mm": [
+        62.596492767333984,
+        32.48863220214844,
+        30.0
+      ],
+      "mass_kg": 0.014441
+    },
+    {
+      "link": "driver_link_R",
+      "file": "driver_link_R.STL",
+      "triangles": 2988,
+      "local_dimensions_mm": [
+        20.941843032836914,
+        62.329444885253906,
+        30.0
+      ],
+      "mass_kg": 0.0066923
+    },
+    {
+      "link": "coupler_link_R",
+      "file": "coupler_link_R.STL",
+      "triangles": 6544,
+      "local_dimensions_mm": [
+        62.754310607910156,
+        22.660255432128906,
+        26.0
+      ],
+      "mass_kg": 0.012855
+    },
+    {
+      "link": "spring_link_R",
+      "file": "spring_link_R.STL",
+      "triangles": 8652,
+      "local_dimensions_mm": [
+        62.74521255493164,
+        43.99090576171875,
+        45.0
+      ],
+      "mass_kg": 0.01093
+    },
+    {
+      "link": "follower_link_R",
+      "file": "follower_link_R.STL",
+      "triangles": 4584,
+      "local_dimensions_mm": [
+        62.596492767333984,
+        32.48863220214844,
+        30.0
+      ],
+      "mass_kg": 0.014441
+    }
+  ],
+  "total_mass_kg": 0.2522666,
+  "missing_meshes": [],
+  "mimic_count": 0,
+  "transmissions": 0,
+  "all_joint_limits": [
+    {
+      "name": "driver_L",
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      }
+    },
+    {
+      "name": "coupler_L",
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      }
+    },
+    {
+      "name": "spring_L",
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      }
+    },
+    {
+      "name": "follower_L",
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      }
+    },
+    {
+      "name": "driver_R",
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      }
+    },
+    {
+      "name": "coupler_R",
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      }
+    },
+    {
+      "name": "spring_R",
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      }
+    },
+    {
+      "name": "follower_R",
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      }
+    }
+  ],
+  "units_note": "STL has no declared units; mm dimensions here assume URDF mesh coordinates are meters. Confirm print units before fabrication.",
+  "mujoco_import": {
+    "passed": false,
+    "error": "Error: Error opening file '/project/rhino_inspection_20261103/base_link.STL': No such file or directory"
+  },
+  "errors": [],
+  "native_import_note": "Loaded: joints=8, equalities=0, actuators=0",
+  "native_import_scope": "Inspection copy only; DAE converted to OBJ for Tianji. No calibrated controller, contact or coupling validation.",
+  "publication_checks": {
+    "source_hashes_verified": 17,
+    "mesh_references_resolve": true,
+    "glb_embedded_meshes": 9,
+    "static_preview_geoms": 9,
+    "static_preview_joints": 0,
+    "physical_operation_validated": false
+  }
+}

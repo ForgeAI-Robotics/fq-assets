@@ -1,0 +1,61 @@
+[
+  {
+    "link": "Link_Stand",
+    "meshes": [
+      "source/meshes/cad_00.stl",
+      "source/meshes/upper_head_part_01.stl",
+      "source/meshes/upper_head_part_02.stl",
+      "source/meshes/upper_head_part_03.stl",
+      "source/meshes/upper_head_part_04.stl",
+      "source/meshes/upper_head_part_05.stl",
+      "source/meshes/upper_head_part_06.stl",
+      "source/meshes/upper_head_part_07.stl",
+      "source/meshes/upper_head_part_08.stl"
+    ],
+    "joint": {
+      "name": "Base_Link_to_Link_Stand",
+      "type": "fixed"
+    }
+  },
+  {
+    "link": "left_adapter_flange",
+    "meshes": [
+      "source/meshes/upper_adapter_flange.stl"
+    ],
+    "joint": {
+      "name": "left_tool_to_adapter",
+      "type": "fixed"
+    }
+  },
+  {
+    "link": "right_adapter_flange",
+    "meshes": [
+      "source/meshes/upper_adapter_flange.stl"
+    ],
+    "joint": {
+      "name": "right_tool_to_adapter",
+      "type": "fixed"
+    }
+  },
+  {
+    "link": "head_pitch_rotor",
+    "meshes": [
+      "source/meshes/upper_head_part_09.stl"
+    ],
+    "joint": {
+      "name": "head_pitch_joint",
+      "type": "continuous"
+    }
+  },
+  {
+    "link": "assembly_lower_mount",
+    "meshes": [
+      "source/meshes/cad_11.stl",
+      "source/meshes/cad_12.stl"
+    ],
+    "joint": {
+      "name": "YD_link_to_hole_aligned_lower_mount",
+      "type": "fixed"
+    }
+  }
+]

@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="RhinoV6">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="3.2249E-05 -1.5034E-05 0.040988" rpy="0 0 0" />
+      <mass value="0.16243" />
+      <inertia ixx="7.3762E-05" ixy="2.7149E-08" ixz="-1.1929E-08" iyy="5.2275E-05" iyz="-6.2215E-09" izz="6.797E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89412 0.89412 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="driver_link_L">
+    <inertial>
+      <origin xyz="0.00041794 -0.010747 -1.5748E-08" rpy="0 0 0" />
+      <mass value="0.0066923" />
+      <inertia ixx="1.6267E-06" ixy="1.705E-07" ixz="5.8987E-14" iyy="2.136E-07" iyz="-2.5857E-12" izz="1.6212E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/driver_link_L.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89412 0.89412 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/driver_link_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="driver_L" type="revolute">
+    <origin xyz="0 -0.0300000000003232 0.0719999999996347" rpy="3.14159265358979 -1.5707963267949 0" />
+    <parent link="base_link" />
+    <child link="driver_link_L" />
+    <axis xyz="0 0 -1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="coupler_link_L">
+    <inertial>
+      <origin xyz="0.020607 -0.0009815 1.4782E-10" rpy="0 0 0" />
+      <mass value="0.012855" />
+      <inertia ixx="4.9523E-07" ixy="3.289E-07" ixz="-1.4993E-14" iyy="3.5454E-06" iyz="-7.3626E-15" izz="3.7707E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/coupler_link_L.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89412 0.89412 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/coupler_link_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="coupler_L" type="revolute">
+    <origin xyz="0 -0.0320000000000005 0" rpy="0 0 0" />
+    <parent link="driver_link_L" />
+    <child link="coupler_link_L" />
+    <axis xyz="0 0 -1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="spring_link_L">
+    <inertial>
+      <origin xyz="0.023818 -0.014737 2.835E-07" rpy="0 0 0" />
+      <mass value="0.01093" />
+      <inertia ixx="2.794E-06" ixy="1.1017E-06" ixz="-2.953E-20" iyy="3.9206E-06" iyz="-2.6735E-20" izz="2.7138E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/spring_link_L.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.22353 0.22353 0.22353 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/spring_link_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="spring_L" type="revolute">
+    <origin xyz="0 -0.0130855328262528 0.0781563625797027" rpy="3.14159265358979 -1.5707963267949 0" />
+    <parent link="base_link" />
+    <child link="spring_link_L" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="follower_link_L">
+    <inertial>
+      <origin xyz="0.014761 -1.332E-05 -1.3015E-08" rpy="0 0 0" />
+      <mass value="0.014441" />
+      <inertia ixx="9.6002E-07" ixy="-3.0202E-07" ixz="-3.5656E-14" iyy="1.7747E-06" iyz="-7.271E-13" izz="1.7421E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/follower_link_L.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89412 0.89412 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/follower_link_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="follower_L" type="revolute">
+    <origin xyz="0.0507543101617981 -0.0319999999999991 0" rpy="0 0 0" />
+    <parent link="spring_link_L" />
+    <child link="follower_link_L" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="driver_link_R">
+    <inertial>
+      <origin xyz="0.00041793 0.010747 -5.0272E-08" rpy="0 0 0" />
+      <mass value="0.0066923" />
+      <inertia ixx="1.6267E-06" ixy="-1.705E-07" ixz="-5.8986E-14" iyy="2.136E-07" iyz="-2.5857E-12" izz="1.6211E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/driver_link_R.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89412 0.89412 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/driver_link_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="driver_R" type="revolute">
+    <origin xyz="0 0.0299999999996775 0.0720000000003652" rpy="3.14159265358979 -1.5707963267949 0" />
+    <parent link="base_link" />
+    <child link="driver_link_R" />
+    <axis xyz="0 0 -1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="coupler_link_R">
+    <inertial>
+      <origin xyz="0.020607 0.0009815 -1.4782E-10" rpy="0 0 0" />
+      <mass value="0.012855" />
+      <inertia ixx="4.9523E-07" ixy="-3.289E-07" ixz="1.4993E-14" iyy="3.5454E-06" iyz="-7.3626E-15" izz="3.7707E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/coupler_link_R.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89412 0.89412 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/coupler_link_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="coupler_R" type="revolute">
+    <origin xyz="0 0.0320000000000002 0" rpy="0 0 0" />
+    <parent link="driver_link_R" />
+    <child link="coupler_link_R" />
+    <axis xyz="0 0 -1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="spring_link_R">
+    <inertial>
+      <origin xyz="0.023818 0.014737 2.835E-07" rpy="0 0 0" />
+      <mass value="0.01093" />
+      <inertia ixx="2.794E-06" ixy="-1.1017E-06" ixz="2.9562E-20" iyy="3.9206E-06" iyz="-3.9442E-20" izz="2.7138E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/spring_link_R.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89412 0.89412 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/spring_link_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="spring_R" type="revolute">
+    <origin xyz="0 0.0130855328254547 0.0781563625800214" rpy="3.14159265358979 -1.5707963267949 0" />
+    <parent link="base_link" />
+    <child link="spring_link_R" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+  <link name="follower_link_R">
+    <inertial>
+      <origin xyz="0.014761 1.3318E-05 -2.1952E-08" rpy="0 0 0" />
+      <mass value="0.014441" />
+      <inertia ixx="9.6002E-07" ixy="3.0202E-07" ixz="2.7293E-13" iyy="1.7747E-06" iyz="1.65E-13" izz="1.7421E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/follower_link_R.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89412 0.89412 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="source/meshes/follower_link_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="follower_R" type="revolute">
+    <origin xyz="0.0507543101617981 0.032000000000002 0" rpy="0 0 0" />
+    <parent link="spring_link_R" />
+    <child link="follower_link_R" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+</robot>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="rhino_v6_gripper_static_preview">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="mesh_0" file="source/meshes/base_link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_1" file="source/meshes/driver_link_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_2" file="source/meshes/coupler_link_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_3" file="source/meshes/spring_link_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_4" file="source/meshes/follower_link_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_5" file="source/meshes/driver_link_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_6" file="source/meshes/coupler_link_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_7" file="source/meshes/spring_link_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_8" file="source/meshes/follower_link_R.STL" scale="1 1 1" inertia="shell" />
+  </asset>
+  <worldbody>
+    <body name="base_link" pos="0 0 0" quat="1 0 0 0">
+      <geom name="mesh_0" type="mesh" mesh="mesh_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.89412 0.89412 0.89412 1" contype="0" conaffinity="0" />
+      <body name="driver_link_L" pos="0.0 -0.0300000000003232 0.0719999999996347" quat="1.1423625238904151e-15 0.7071067811865462 -1.1423625238904192e-15 0.7071067811865488">
+        <geom name="mesh_1" type="mesh" mesh="mesh_1" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.89412 0.89412 0.89412 1" contype="0" conaffinity="0" />
+        <body name="coupler_link_L" pos="0.0 -0.0320000000000005 0.0" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_2" type="mesh" mesh="mesh_2" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.89412 0.89412 0.89412 1" contype="0" conaffinity="0" />
+        </body>
+      </body>
+      <body name="spring_link_L" pos="0.0 -0.0130855328262528 0.0781563625797027" quat="1.1423625238904151e-15 0.7071067811865462 -1.1423625238904192e-15 0.7071067811865488">
+        <geom name="mesh_3" type="mesh" mesh="mesh_3" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.22353 0.22353 0.22353 1" contype="0" conaffinity="0" />
+        <body name="follower_link_L" pos="0.0507543101617981 -0.0319999999999991 0.0" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_4" type="mesh" mesh="mesh_4" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.89412 0.89412 0.89412 1" contype="0" conaffinity="0" />
+        </body>
+      </body>
+      <body name="driver_link_R" pos="0.0 0.0299999999996775 0.0720000000003652" quat="1.1423625238904151e-15 0.7071067811865462 -1.1423625238904192e-15 0.7071067811865488">
+        <geom name="mesh_5" type="mesh" mesh="mesh_5" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.89412 0.89412 0.89412 1" contype="0" conaffinity="0" />
+        <body name="coupler_link_R" pos="0.0 0.0320000000000002 0.0" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_6" type="mesh" mesh="mesh_6" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.89412 0.89412 0.89412 1" contype="0" conaffinity="0" />
+        </body>
+      </body>
+      <body name="spring_link_R" pos="0.0 0.0130855328254547 0.0781563625800214" quat="1.1423625238904151e-15 0.7071067811865462 -1.1423625238904192e-15 0.7071067811865488">
+        <geom name="mesh_7" type="mesh" mesh="mesh_7" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.89412 0.89412 0.89412 1" contype="0" conaffinity="0" />
+        <body name="follower_link_R" pos="0.0507543101617981 0.032000000000002 0.0" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_8" type="mesh" mesh="mesh_8" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.89412 0.89412 0.89412 1" contype="0" conaffinity="0" />
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

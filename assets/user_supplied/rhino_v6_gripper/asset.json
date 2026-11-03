@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "user_supplied:grippers/rhino_v6_gripper",
+  "version": "0.1.0",
+  "kind": "articulated",
+  "name": "RhinoV6 实装打印夹爪",
+  "description": "用户原始装配与网格；静态预览，未配置驱动或完成实机标定",
+  "origin": "user_supplied",
+  "upstream_origin": "用户提供的 Tianji / RhinoV6 文件",
+  "license": "LicenseRef-User-Supplied",
+  "license_status": "Source package.xml retained; Rhino BSD field is unverified exporter metadata. Published to organization private repository at owner request.",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "urdf": "assets/user_supplied/rhino_v6_gripper/model.urdf",
+    "glb": "assets/user_supplied/rhino_v6_gripper/model.glb",
+    "mujoco": "assets/user_supplied/rhino_v6_gripper/preview.xml"
+  },
+  "dependencies": [],
+  "physics_calibrated": false,
+  "release_status": "source_and_static_preview",
+  "limitations": [
+    "Eight revolute joints have zero range, effort and velocity",
+    "No linkage closure, mimic constraints, spring forces or actuators supplied",
+    "Print tolerances and installation transform to Tianji are unverified",
+    "GLB is a static zero-pose visual preview, not a physics articulation",
+    "Source collision meshes retained; contact behavior has not been validated",
+    "No claim that all STL links are individual fabrication-ready parts",
+    "preview.xml is a fixed, non-colliding appearance model only; use source URDF for future physical adaptation"
+  ],
+  "viewer_status": [
+    [
+      "状态",
+      "源模型与静态装配预览"
+    ],
+    [
+      "驱动",
+      "未配置；不是可操作仿真版本"
+    ],
+    [
+      "实机",
+      "RhinoV6 是用户确认的实装夹爪；Tianji 原包尚未替换"
+    ]
+  ]
+}

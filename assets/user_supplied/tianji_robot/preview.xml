@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="tianji_robot_static_preview">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="mesh_0" file="source/meshes/s100_YD_link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_1" file="source/meshes/s100_ZQ_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_2" file="source/meshes/s100_ZQL_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_3" file="source/meshes/s100_YQ_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_4" file="source/meshes/s100_YQL_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_5" file="source/meshes/s100_ZH_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_6" file="source/meshes/s100_ZHL_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_7" file="source/meshes/s100_YH_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_8" file="source/meshes/s100_YHL_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_9" file="source/meshes/s100_ZLD_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_10" file="source/meshes/s100_YLD_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_11" file="source/meshes/s100_C1_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_12" file="source/meshes/s100_C2_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_13" file="source/meshes/s100_C3_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_14" file="source/meshes/s100_C4_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_15" file="source/meshes/s100_C5_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_16" file="source/meshes/s100_C6_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_17" file="source/meshes/s100_C7_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_18" file="source/meshes/s100_C8_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_19" file="source/meshes/s100_IMU_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_20" file="source/meshes/s100_XJ_Link.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_21" file="source/meshes/cad_00.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_22" file="source/meshes/upper_head_part_01.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_23" file="source/meshes/upper_head_part_02.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_24" file="source/meshes/upper_head_part_03.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_25" file="source/meshes/upper_head_part_04.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_26" file="source/meshes/upper_head_part_05.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_27" file="source/meshes/upper_head_part_06.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_28" file="source/meshes/upper_head_part_07.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_29" file="source/meshes/upper_head_part_08.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_30" file="source/meshes/upper_Base_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_31" file="source/meshes/upper_Link1_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_32" file="source/meshes/upper_Link2_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_33" file="source/meshes/upper_Link3_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_34" file="source/meshes/upper_Link4_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_35" file="source/meshes/upper_Link5_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_36" file="source/meshes/upper_Link6_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_37" file="source/meshes/upper_Link7_L.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_38" file="source/meshes/upper_adapter_flange.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_39" file="source/meshes/upper_robotiq_base.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_40" file="source/meshes/upper_left_knuckle.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_41" file="source/meshes/upper_left_finger.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_42" file="source/meshes/upper_left_finger_tip.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_43" file="source/meshes/upper_right_knuckle.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_44" file="source/meshes/upper_right_finger.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_45" file="source/meshes/upper_right_finger_tip.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_46" file="source/meshes/upper_left_inner_knuckle.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_47" file="source/meshes/upper_right_inner_knuckle.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_48" file="derived/upper_d435.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_49" file="source/meshes/upper_Base_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_50" file="source/meshes/upper_Link1_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_51" file="source/meshes/upper_Link2_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_52" file="source/meshes/upper_Link3_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_53" file="source/meshes/upper_Link4_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_54" file="source/meshes/upper_Link5_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_55" file="source/meshes/upper_Link6_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_56" file="source/meshes/upper_Link7_R.STL" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_57" file="source/meshes/upper_adapter_flange.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_58" file="source/meshes/upper_robotiq_base.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_59" file="source/meshes/upper_left_knuckle.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_60" file="source/meshes/upper_left_finger.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_61" file="source/meshes/upper_left_finger_tip.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_62" file="source/meshes/upper_right_knuckle.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_63" file="source/meshes/upper_right_finger.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_64" file="source/meshes/upper_right_finger_tip.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_65" file="source/meshes/upper_left_inner_knuckle.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_66" file="source/meshes/upper_right_inner_knuckle.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_67" file="derived/upper_d435.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_68" file="source/meshes/upper_head_part_09.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_69" file="derived/upper_d435.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_70" file="source/meshes/cad_10.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_71" file="source/meshes/cad_11.stl" scale="1 1 1" inertia="shell" />
+    <mesh name="mesh_72" file="source/meshes/cad_12.stl" scale="1 1 1" inertia="shell" />
+  </asset>
+  <worldbody>
+    <body name="chassis_base" pos="0 0 0" quat="1 0 0 0">
+      <body name="YD_link" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+        <geom name="mesh_0" type="mesh" mesh="mesh_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        <body name="ZQ_Link" pos="0.23072 0.21738 0.206" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_1" type="mesh" mesh="mesh_1" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+          <body name="ZQL_Link" pos="-0.00071653 0.00061603 -0.136" quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+            <geom name="mesh_2" type="mesh" mesh="mesh_2" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.25098 0.25098 0.25098 1" contype="0" conaffinity="0" />
+          </body>
+        </body>
+        <body name="YQ_Link" pos="0.22928 -0.21738 0.206" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_3" type="mesh" mesh="mesh_3" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+          <body name="YQL_Link" pos="0.00071653 -0.00061603 -0.136" quat="-2.5973434669646147e-06 -2.597353007557415e-06 0.7071080798547033 0.707105482506466">
+            <geom name="mesh_4" type="mesh" mesh="mesh_4" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.25098 0.25098 0.25098 1" contype="0" conaffinity="0" />
+          </body>
+        </body>
+        <body name="ZH_Link" pos="-0.22928 0.21738 0.206" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_5" type="mesh" mesh="mesh_5" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+          <body name="ZHL_Link" pos="-0.00071653 0.00061603 -0.136" quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+            <geom name="mesh_6" type="mesh" mesh="mesh_6" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.25098 0.25098 0.25098 1" contype="0" conaffinity="0" />
+          </body>
+        </body>
+        <body name="YH_Link" pos="-0.23072 -0.21738 0.206" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_7" type="mesh" mesh="mesh_7" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+          <body name="YHL_Link" pos="0.00071653 -0.00061603 -0.136" quat="-2.5973434669646147e-06 -2.597353007557415e-06 0.7071080798547033 0.707105482506466">
+            <geom name="mesh_8" type="mesh" mesh="mesh_8" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.25098 0.25098 0.25098 1" contype="0" conaffinity="0" />
+          </body>
+        </body>
+        <body name="ZLD_Link" pos="0.22097 0.2007 0.36602" quat="0.25596406394394594 0.10934278856117285 0.038256467135936334 0.9597202692874852">
+          <geom name="mesh_9" type="mesh" mesh="mesh_9" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="YLD_Link" pos="-0.22097 -0.2007 0.36602" quat="0.9597167693486268 0.03825497206598566 -0.10934331163947335 -0.25597718637210237">
+          <geom name="mesh_10" type="mesh" mesh="mesh_10" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="C1_Link" pos="-0.17391 -0.2725 0.22896" quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+          <geom name="mesh_11" type="mesh" mesh="mesh_11" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="C2_Link" pos="0.17397 -0.2725 0.22859" quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+          <geom name="mesh_12" type="mesh" mesh="mesh_12" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="C3_Link" pos="0.32715 -0.18131 0.22859" quat="0.5755184607418578 0.5755205747430875 0.4108258811831819 0.4108243721382301">
+          <geom name="mesh_13" type="mesh" mesh="mesh_13" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="C4_Link" pos="0.32715 0.18131 0.22859" quat="0.4108222581381116 0.4108237671752982 0.5755220837869282 0.5755199697801555">
+          <geom name="mesh_14" type="mesh" mesh="mesh_14" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="C5_Link" pos="0.17397 0.2725 0.22859" quat="-2.5973434669646147e-06 -2.597353007557415e-06 0.7071080798547033 0.707105482506466">
+          <geom name="mesh_15" type="mesh" mesh="mesh_15" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="C6_Link" pos="-0.17391 0.2725 0.22896" quat="-2.5973434669646147e-06 -2.597353007557415e-06 -0.7071080798547033 -0.707105482506466">
+          <geom name="mesh_16" type="mesh" mesh="mesh_16" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="C7_Link" pos="-0.32119 0.17219 0.22858" quat="0.45906048391881377 0.459062170145223 -0.5378324651265578 -0.5378304895612305">
+          <geom name="mesh_17" type="mesh" mesh="mesh_17" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="C8_Link" pos="-0.32119 -0.17219 0.22858" quat="0.5378517557849681 0.5378537314284109 -0.45903725359831804 -0.45903556746343227">
+          <geom name="mesh_18" type="mesh" mesh="mesh_18" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="IMU_Link" pos="0.0 0.0 0.1" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_19" type="mesh" mesh="mesh_19" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.86667 0.8902 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="XJ_Link" pos="0.34185 0.0175 0.199" quat="0.4999981633974483 0.49999999999662686 0.5000018366025516 0.49999999999662686">
+          <geom name="mesh_20" type="mesh" mesh="mesh_20" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.86667 0.9098 1 1" contype="0" conaffinity="0" />
+        </body>
+        <body name="Link_Stand" pos="-0.035 0.0 0.9290000152587892" quat="1.0 0.0 0.0 0.0">
+          <geom name="mesh_21" type="mesh" mesh="mesh_21" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <geom name="mesh_22" type="mesh" mesh="mesh_22" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <geom name="mesh_23" type="mesh" mesh="mesh_23" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <geom name="mesh_24" type="mesh" mesh="mesh_24" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <geom name="mesh_25" type="mesh" mesh="mesh_25" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <geom name="mesh_26" type="mesh" mesh="mesh_26" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <geom name="mesh_27" type="mesh" mesh="mesh_27" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <geom name="mesh_28" type="mesh" mesh="mesh_28" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <geom name="mesh_29" type="mesh" mesh="mesh_29" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+          <body name="calibration_base" pos="0.0 0.0 0.14" quat="1.0 0.0 0.0 0.0">
+            <body name="Base_L" pos="0.0 0.037 0.0" quat="0.7071067811882787 -0.7071067811848163 0.0 0.0">
+              <geom name="mesh_30" type="mesh" mesh="mesh_30" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+              <body name="Link1_L" pos="0.0 0.0 0.1745" quat="1.0 0.0 0.0 0.0">
+                <geom name="mesh_31" type="mesh" mesh="mesh_31" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                <body name="Link2_L" pos="0.0 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+                  <geom name="mesh_32" type="mesh" mesh="mesh_32" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                  <body name="Link3_L" pos="0.0 0.287 0.0" quat="0.7071054825112363 -0.7071080798594735 0.0 0.0">
+                    <geom name="mesh_33" type="mesh" mesh="mesh_33" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                    <body name="Link4_L" pos="0.018 0.0 0.0" quat="-2.5973434669646147e-06 2.597353007557415e-06 -0.7071080798547033 0.707105482506466">
+                      <geom name="mesh_34" type="mesh" mesh="mesh_34" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                      <body name="Link5_L" pos="0.018 -0.314 0.0" quat="-2.5973434669646147e-06 2.597353007557415e-06 -0.7071080798547033 0.707105482506466">
+                        <geom name="mesh_35" type="mesh" mesh="mesh_35" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                        <body name="Link6_L" pos="0.0 0.0 0.0" quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                          <geom name="mesh_36" type="mesh" mesh="mesh_36" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                          <body name="Link7_L" pos="0.0 0.0 0.0" quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                            <geom name="mesh_37" type="mesh" mesh="mesh_37" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                            <body name="left_tool0" pos="0.0 -0.095 0.0" quat="0.5000000000024483 0.5 -0.5 0.4999999999975517">
+                              <body name="left_adapter_flange" pos="0.0 0.0 0.0" quat="0.7071067811865476 0.0 0.0 0.7071067811865475">
+                                <geom name="mesh_38" type="mesh" mesh="mesh_38" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".55 .6 .68 1" contype="0" conaffinity="0" />
+                                <body name="left_robotiq_85_base_link" pos="0.0 0.0 0.011" quat="1.0 0.0 0.0 -2.4482544923630045e-12">
+                                  <geom name="mesh_39" type="mesh" mesh="mesh_39" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                  <body name="left_robotiq_85_left_knuckle_link" pos="0.03060114 0.0 0.05490452" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_40" type="mesh" mesh="mesh_40" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                    <body name="left_robotiq_85_left_finger_link" pos="0.03152616 0.0 -0.00376347" quat="1.0 0.0 0.0 0.0">
+                                      <geom name="mesh_41" type="mesh" mesh="mesh_41" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                      <body name="left_robotiq_85_left_finger_tip_link" pos="0.00563134 0.0 0.04718515" quat="1.0 0.0 0.0 0.0">
+                                        <geom name="mesh_42" type="mesh" mesh="mesh_42" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.08 0.08 0.09 1" contype="0" conaffinity="0" />
+                                      </body>
+                                    </body>
+                                  </body>
+                                  <body name="left_robotiq_85_right_knuckle_link" pos="-0.03060114 0.0 0.05490452" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_43" type="mesh" mesh="mesh_43" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                    <body name="left_robotiq_85_right_finger_link" pos="-0.03152616 0.0 -0.00376347" quat="1.0 0.0 0.0 0.0">
+                                      <geom name="mesh_44" type="mesh" mesh="mesh_44" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                      <body name="left_robotiq_85_right_finger_tip_link" pos="-0.00563134 0.0 0.04718515" quat="1.0 0.0 0.0 0.0">
+                                        <geom name="mesh_45" type="mesh" mesh="mesh_45" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.08 0.08 0.09 1" contype="0" conaffinity="0" />
+                                      </body>
+                                    </body>
+                                  </body>
+                                  <body name="left_robotiq_85_left_inner_knuckle_link" pos="0.0127 0.0 0.06142" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_46" type="mesh" mesh="mesh_46" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                  </body>
+                                  <body name="left_robotiq_85_right_inner_knuckle_link" pos="-0.0127 0.0 0.06142" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_47" type="mesh" mesh="mesh_47" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                  </body>
+                                </body>
+                                <body name="cam_left_wrist_bottom_screw_frame" pos="-0.000886027230553 0.11146613458 0.0740784857597" quat="0.6448905841044312 -0.267425196073731 -0.27258349609247284 -0.6620408874808088">
+                                  <body name="cam_left_wrist_link" pos="0.0106 0.0175 0.0125" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_48" type="mesh" mesh="mesh_48" pos="0.0043 -0.0175 0.0" quat="0.5000000000024483 0.5 0.4999999999975517 0.5" rgba="0.74902 0.74902 0.74902 1" contype="0" conaffinity="0" />
+                                    <body name="cam_left_wrist_depth_frame" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+                                      <body name="cam_left_wrist_depth_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000024483 -0.5 0.4999999999975517 -0.5" />
+                                    </body>
+                                    <body name="cam_left_wrist_infra1_frame" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+                                      <body name="cam_left_wrist_infra1_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000024483 -0.5 0.4999999999975517 -0.5" />
+                                    </body>
+                                    <body name="cam_left_wrist_infra2_frame" pos="0.0 -0.05 0.0" quat="1.0 0.0 0.0 0.0">
+                                      <body name="cam_left_wrist_infra2_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000024483 -0.5 0.4999999999975517 -0.5" />
+                                    </body>
+                                    <body name="cam_left_wrist_color_frame" pos="0.0 0.015 0.0" quat="1.0 0.0 0.0 0.0">
+                                      <body name="cam_left_wrist_color_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000024483 -0.5 0.4999999999975517 -0.5">
+                                        <body name="cam_left_wrist_optical_frame" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" />
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+            <body name="Base_R" pos="0.0 -0.037 0.0" quat="0.7071067811882787 0.7071067811848163 0.0 0.0">
+              <geom name="mesh_49" type="mesh" mesh="mesh_49" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+              <body name="Link1_R" pos="0.0 0.0 0.1745" quat="1.0 0.0 0.0 0.0">
+                <geom name="mesh_50" type="mesh" mesh="mesh_50" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                <body name="Link2_R" pos="0.0 0.0 0.0" quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+                  <geom name="mesh_51" type="mesh" mesh="mesh_51" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                  <body name="Link3_R" pos="0.0 0.287 0.0" quat="0.7071054825112363 -0.7071080798594735 0.0 0.0">
+                    <geom name="mesh_52" type="mesh" mesh="mesh_52" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                    <body name="Link4_R" pos="0.018 0.0 0.0" quat="-2.5973434669646147e-06 2.597353007557415e-06 -0.7071080798547033 0.707105482506466">
+                      <geom name="mesh_53" type="mesh" mesh="mesh_53" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                      <body name="Link5_R" pos="0.018 -0.314 0.0" quat="-2.5973434669646147e-06 2.597353007557415e-06 -0.7071080798547033 0.707105482506466">
+                        <geom name="mesh_54" type="mesh" mesh="mesh_54" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                        <body name="Link6_R" pos="0.0 0.0 0.0" quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                          <geom name="mesh_55" type="mesh" mesh="mesh_55" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                          <body name="Link7_R" pos="0.0 0.0 0.0" quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                            <geom name="mesh_56" type="mesh" mesh="mesh_56" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" rgba="0.82 0.84 0.90 1" contype="0" conaffinity="0" />
+                            <body name="right_tool0" pos="0.0 -0.095 0.0" quat="0.5000000000024483 0.5 -0.5 0.4999999999975517">
+                              <body name="right_adapter_flange" pos="0.0 0.0 0.0" quat="0.7071067811865476 0.0 0.0 0.7071067811865475">
+                                <geom name="mesh_57" type="mesh" mesh="mesh_57" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".55 .6 .68 1" contype="0" conaffinity="0" />
+                                <body name="right_robotiq_85_base_link" pos="0.0 0.0 0.011" quat="2.4483250462433527e-12 0.0 0.0 1.0">
+                                  <geom name="mesh_58" type="mesh" mesh="mesh_58" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                  <body name="right_robotiq_85_left_knuckle_link" pos="0.03060114 0.0 0.05490452" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_59" type="mesh" mesh="mesh_59" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                    <body name="right_robotiq_85_left_finger_link" pos="0.03152616 0.0 -0.00376347" quat="1.0 0.0 0.0 0.0">
+                                      <geom name="mesh_60" type="mesh" mesh="mesh_60" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                      <body name="right_robotiq_85_left_finger_tip_link" pos="0.00563134 0.0 0.04718515" quat="1.0 0.0 0.0 0.0">
+                                        <geom name="mesh_61" type="mesh" mesh="mesh_61" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.08 0.08 0.09 1" contype="0" conaffinity="0" />
+                                      </body>
+                                    </body>
+                                  </body>
+                                  <body name="right_robotiq_85_right_knuckle_link" pos="-0.03060114 0.0 0.05490452" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_62" type="mesh" mesh="mesh_62" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                    <body name="right_robotiq_85_right_finger_link" pos="-0.03152616 0.0 -0.00376347" quat="1.0 0.0 0.0 0.0">
+                                      <geom name="mesh_63" type="mesh" mesh="mesh_63" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                      <body name="right_robotiq_85_right_finger_tip_link" pos="-0.00563134 0.0 0.04718515" quat="1.0 0.0 0.0 0.0">
+                                        <geom name="mesh_64" type="mesh" mesh="mesh_64" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.08 0.08 0.09 1" contype="0" conaffinity="0" />
+                                      </body>
+                                    </body>
+                                  </body>
+                                  <body name="right_robotiq_85_left_inner_knuckle_link" pos="0.0127 0.0 0.06142" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_65" type="mesh" mesh="mesh_65" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                  </body>
+                                  <body name="right_robotiq_85_right_inner_knuckle_link" pos="-0.0127 0.0 0.06142" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_66" type="mesh" mesh="mesh_66" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba="0.70 0.72 0.76 1" contype="0" conaffinity="0" />
+                                  </body>
+                                </body>
+                                <body name="cam_right_wrist_bottom_screw_frame" pos="-0.0062640666082 0.100906969046 0.0788327133869" quat="0.6560506953387378 -0.26680225775635974 -0.2777164328446539 -0.6490667325704719">
+                                  <body name="cam_right_wrist_link" pos="0.0106 0.0175 0.0125" quat="1.0 0.0 0.0 0.0">
+                                    <geom name="mesh_67" type="mesh" mesh="mesh_67" pos="0.0043 -0.0175 0.0" quat="0.5000000000024483 0.5 0.4999999999975517 0.5" rgba="0.74902 0.74902 0.74902 1" contype="0" conaffinity="0" />
+                                    <body name="cam_right_wrist_depth_frame" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+                                      <body name="cam_right_wrist_depth_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000024483 -0.5 0.4999999999975517 -0.5" />
+                                    </body>
+                                    <body name="cam_right_wrist_infra1_frame" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+                                      <body name="cam_right_wrist_infra1_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000024483 -0.5 0.4999999999975517 -0.5" />
+                                    </body>
+                                    <body name="cam_right_wrist_infra2_frame" pos="0.0 -0.05 0.0" quat="1.0 0.0 0.0 0.0">
+                                      <body name="cam_right_wrist_infra2_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000024483 -0.5 0.4999999999975517 -0.5" />
+                                    </body>
+                                    <body name="cam_right_wrist_color_frame" pos="0.0 0.015 0.0" quat="1.0 0.0 0.0 0.0">
+                                      <body name="cam_right_wrist_color_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000024483 -0.5 0.4999999999975517 -0.5">
+                                        <body name="cam_right_wrist_optical_frame" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" />
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="head_pitch_rotor" pos="0.01483327425447627 0.0 0.4465949269679774" quat="1.0 0.0 0.0 0.0">
+            <geom name="mesh_68" type="mesh" mesh="mesh_68" pos="0.0066105967476774476 0.0 -0.4467922949529023" quat="0.9997120551651237 0.0 -0.023995973777378946 0.0" rgba=".65 .69 .74 1" contype="0" conaffinity="0" />
+            <body name="head_L_outer_mount" pos="0.01345976229571631 -0.00870000012218952 -0.01269191382629048" quat="0.28015637902962204 0.6492398657576496 0.6492398657576495 0.280156379029622" />
+            <body name="cam_high_link" pos="0.0298718958464 0.0282992909163 -0.018533840484" quat="0.9283750767980955 -0.015771278800600728 0.37130118560937675 0.002532411932356986">
+              <geom name="mesh_69" type="mesh" mesh="mesh_69" pos="0.0043 -0.0175 0.0" quat="0.5000000000024483 0.5 0.4999999999975517 0.5" rgba="0.74902 0.74902 0.74902 1" contype="0" conaffinity="0" />
+              <body name="cam_high_color_frame" pos="0.0 0.015 0.0" quat="1.0 0.0 0.0 0.0">
+                <body name="cam_high_color_optical_frame" pos="0.0 0.0 0.0" quat="0.5000000000000001 -0.5 0.4999999999999999 -0.5" />
+              </body>
+            </body>
+          </body>
+          <body name="assembly_upper_socket" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+            <geom name="mesh_70" type="mesh" mesh="mesh_70" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".42 .47 .53 1" contype="0" conaffinity="0" />
+          </body>
+        </body>
+        <body name="assembly_lower_mount" pos="-0.0390524402532161 0.000392385745922771 0.939671103191441" quat="0.9999999811749345 -6.991793309452832e-07 -0.00015466720136365442 -0.00011716526238819018">
+          <geom name="mesh_71" type="mesh" mesh="mesh_71" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".75 .64 .33 1" contype="0" conaffinity="0" />
+          <geom name="mesh_72" type="mesh" mesh="mesh_72" pos="0.0 0.0 0.0" quat="1 0 0 0" rgba=".35 .49 .55 1" contype="0" conaffinity="0" />
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

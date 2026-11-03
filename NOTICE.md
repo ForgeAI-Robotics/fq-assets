@@ -61,3 +61,7 @@ The takeaway coffee, iced coffee, PET bottle and pizza box are FQ authored proce
 ## Grab3D Laptop
 
 Source: https://grab3d.com/models/electronics/laptop/ . Grab3D releases this procedural visual asset under CC0-1.0. Original LICENSE.txt and manifest are retained in assets/third_party/office/grab3d_laptop/. FQ added a passive laptop hinge, collision proxies, estimated mass/inertia, joint limits/damping, MJCF/USD/URDF conversions, and a driven demonstration. Physical parameters are not calibrated; USD Coulomb hinge friction is not authored.
+
+## Tianji and RhinoV6 user-supplied source packages
+
+Published to the private organization repository on user request. Original package metadata is preserved. Tianji declares Proprietary; RhinoV6 BSD metadata is not independently verified. No new open-source licensing grant is made. Static GLB previews and portable mesh paths were added; no physical calibration or gripper replacement was performed.

@@ -1,0 +1,2590 @@
+{
+  "robot_name": "s100_tianji_camera_preserved_20261019",
+  "archive_sha256": "99f35fe42c997ce2d44af9f197bc4fd6e32a6c83f9d9f0f100ad4634fb4d1605",
+  "links": 91,
+  "joints": 90,
+  "joint_types": {
+    "revolute": 34,
+    "fixed": 55,
+    "continuous": 1
+  },
+  "roots": [
+    "chassis_base"
+  ],
+  "unreachable_links": [],
+  "duplicate_parents": {},
+  "moving_joints": 35,
+  "mimic_joints": 10,
+  "independent_moving_joints": 25,
+  "total_mass_kg": 103.55418690608013,
+  "missing_inertial_links": [
+    "Link_Stand",
+    "calibration_base",
+    "left_tool0",
+    "right_tool0",
+    "cam_left_wrist_bottom_screw_frame",
+    "cam_left_wrist_depth_frame",
+    "cam_left_wrist_depth_optical_frame",
+    "cam_left_wrist_infra1_frame",
+    "cam_left_wrist_infra1_optical_frame",
+    "cam_left_wrist_infra2_frame",
+    "cam_left_wrist_infra2_optical_frame",
+    "cam_left_wrist_color_frame",
+    "cam_left_wrist_color_optical_frame",
+    "cam_left_wrist_optical_frame",
+    "cam_right_wrist_bottom_screw_frame",
+    "cam_right_wrist_depth_frame",
+    "cam_right_wrist_depth_optical_frame",
+    "cam_right_wrist_infra1_frame",
+    "cam_right_wrist_infra1_optical_frame",
+    "cam_right_wrist_infra2_frame",
+    "cam_right_wrist_infra2_optical_frame",
+    "cam_right_wrist_color_frame",
+    "cam_right_wrist_color_optical_frame",
+    "cam_right_wrist_optical_frame",
+    "left_adapter_flange",
+    "right_adapter_flange",
+    "head_L_outer_mount",
+    "cam_high_color_frame",
+    "cam_high_color_optical_frame",
+    "head_pitch_rotor",
+    "assembly_lower_mount",
+    "assembly_upper_socket",
+    "chassis_base"
+  ],
+  "errors": [],
+  "missing_meshes": [],
+  "unique_meshes": 61,
+  "mesh_triangles": 898222,
+  "visuals": 73,
+  "collisions": 73,
+  "nonpositive_effort_or_velocity": [
+    "ZQ",
+    "ZQL",
+    "YQ",
+    "YQL",
+    "ZH",
+    "ZHL",
+    "YH",
+    "YHL"
+  ],
+  "transmissions": 0,
+  "ros2_control": 0,
+  "joint_details": [
+    {
+      "name": "ZQ",
+      "type": "revolute",
+      "parent": "YD_link",
+      "child": "ZQ_Link",
+      "origin": {
+        "xyz": "0.23072 0.21738 0.206",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "-2.967",
+        "upper": "2.967",
+        "effort": "0",
+        "velocity": "0"
+      },
+      "axis": "0 0 -1",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "ZQL",
+      "type": "revolute",
+      "parent": "ZQ_Link",
+      "child": "ZQL_Link",
+      "origin": {
+        "xyz": "-0.00071653 0.00061603 -0.136",
+        "rpy": "1.5708 0 0"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "YQ",
+      "type": "revolute",
+      "parent": "YD_link",
+      "child": "YQ_Link",
+      "origin": {
+        "xyz": "0.22928 -0.21738 0.206",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "-2.967",
+        "upper": "2.967",
+        "effort": "0",
+        "velocity": "0"
+      },
+      "axis": "0 0 -1",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "YQL",
+      "type": "revolute",
+      "parent": "YQ_Link",
+      "child": "YQL_Link",
+      "origin": {
+        "xyz": "0.00071653 -0.00061603 -0.136",
+        "rpy": "1.5708 0 3.1416"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "ZH",
+      "type": "revolute",
+      "parent": "YD_link",
+      "child": "ZH_Link",
+      "origin": {
+        "xyz": "-0.22928 0.21738 0.206",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "-2.967",
+        "upper": "2.967",
+        "effort": "0",
+        "velocity": "0"
+      },
+      "axis": "0 0 -1",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "ZHL",
+      "type": "revolute",
+      "parent": "ZH_Link",
+      "child": "ZHL_Link",
+      "origin": {
+        "xyz": "-0.00071653 0.00061603 -0.136",
+        "rpy": "1.5708 0 0"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "YH",
+      "type": "revolute",
+      "parent": "YD_link",
+      "child": "YH_Link",
+      "origin": {
+        "xyz": "-0.23072 -0.21738 0.206",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "-2.967",
+        "upper": "2.967",
+        "effort": "0",
+        "velocity": "0"
+      },
+      "axis": "0 0 -1",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "YHL",
+      "type": "revolute",
+      "parent": "YH_Link",
+      "child": "YHL_Link",
+      "origin": {
+        "xyz": "0.00071653 -0.00061603 -0.136",
+        "rpy": "1.5708 0 3.1416"
+      },
+      "limit": {
+        "lower": "0",
+        "upper": "0",
+        "effort": "0",
+        "velocity": "0"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "ZLD",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "ZLD_Link",
+      "origin": {
+        "xyz": "0.22097 0.2007 0.36602",
+        "rpy": "0.1322 -0.19146 2.6076"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "YLD",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "YLD_Link",
+      "origin": {
+        "xyz": "-0.22097 -0.2007 0.36602",
+        "rpy": "0.1322 -0.19146 -0.53402"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "C1",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "C1_Link",
+      "origin": {
+        "xyz": "-0.17391 -0.2725 0.22896",
+        "rpy": "1.5708 0 0"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "C2",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "C2_Link",
+      "origin": {
+        "xyz": "0.17397 -0.2725 0.22859",
+        "rpy": "1.5708 0 0"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "C3",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "C3_Link",
+      "origin": {
+        "xyz": "0.32715 -0.18131 0.22859",
+        "rpy": "1.5708 0 1.2399"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "C4",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "C4_Link",
+      "origin": {
+        "xyz": "0.32715 0.18131 0.22859",
+        "rpy": "1.5708 0 1.9017"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "C5",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "C5_Link",
+      "origin": {
+        "xyz": "0.17397 0.2725 0.22859",
+        "rpy": "1.5708 0 3.1416"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "C6",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "C6_Link",
+      "origin": {
+        "xyz": "-0.17391 0.2725 0.22896",
+        "rpy": "1.5708 0 -3.1416"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "C7",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "C7_Link",
+      "origin": {
+        "xyz": "-0.32119 0.17219 0.22858",
+        "rpy": "1.5708 0 -1.7285"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "C8",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "C8_Link",
+      "origin": {
+        "xyz": "-0.32119 -0.17219 0.22858",
+        "rpy": "1.5708 0 -1.413"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "IMU",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "IMU_Link",
+      "origin": {
+        "xyz": "0 0 0.1",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "XJ",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "XJ_Link",
+      "origin": {
+        "xyz": "0.34185 0.0175 0.199",
+        "rpy": "1.5708 0 1.5708"
+      },
+      "limit": {},
+      "axis": "0 0 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "Base_Link_to_Link_Stand",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "Link_Stand",
+      "origin": {
+        "xyz": "-0.035 0 0.9290000152587892",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "Link_Stand_to_calibration_base",
+      "type": "fixed",
+      "parent": "Link_Stand",
+      "child": "calibration_base",
+      "origin": {
+        "xyz": "0 0 0.14",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "Joint1_L",
+      "type": "revolute",
+      "parent": "Base_L",
+      "child": "Link1_L",
+      "origin": {
+        "xyz": "0 0 0.1745",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "-3.1067",
+        "upper": "3.1067",
+        "effort": "108",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint2_L",
+      "type": "revolute",
+      "parent": "Link1_L",
+      "child": "Link2_L",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "1.5708 0 0"
+      },
+      "limit": {
+        "lower": "-2.0944",
+        "upper": "2.0944",
+        "effort": "108",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint3_L",
+      "type": "revolute",
+      "parent": "Link2_L",
+      "child": "Link3_L",
+      "origin": {
+        "xyz": "0 0.287 0",
+        "rpy": "-1.5708 0 0"
+      },
+      "limit": {
+        "lower": "-3.1067",
+        "upper": "3.1067",
+        "effort": "66",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint4_L",
+      "type": "revolute",
+      "parent": "Link3_L",
+      "child": "Link4_L",
+      "origin": {
+        "xyz": "0.018 0 0",
+        "rpy": "-1.5708 0 3.1416"
+      },
+      "limit": {
+        "lower": "-2.5307",
+        "upper": "1.0472",
+        "effort": "66",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint5_L",
+      "type": "revolute",
+      "parent": "Link4_L",
+      "child": "Link5_L",
+      "origin": {
+        "xyz": "0.018 -0.314 0",
+        "rpy": "-1.5708 0 3.1416"
+      },
+      "limit": {
+        "lower": "-3.1067",
+        "upper": "3.1067",
+        "effort": "18",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint6_L",
+      "type": "revolute",
+      "parent": "Link5_L",
+      "child": "Link6_L",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "1.5708 -1.5708 0"
+      },
+      "limit": {
+        "lower": "-1.0472",
+        "upper": "1.0472",
+        "effort": "18",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint7_L",
+      "type": "revolute",
+      "parent": "Link6_L",
+      "child": "Link7_L",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "1.5708 -1.5708 0"
+      },
+      "limit": {
+        "lower": "-1.5708",
+        "upper": "1.5708",
+        "effort": "18",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint1_R",
+      "type": "revolute",
+      "parent": "Base_R",
+      "child": "Link1_R",
+      "origin": {
+        "xyz": "0 0 0.1745",
+        "rpy": "0 0 0"
+      },
+      "limit": {
+        "lower": "-3.1067",
+        "upper": "3.1067",
+        "effort": "108",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint2_R",
+      "type": "revolute",
+      "parent": "Link1_R",
+      "child": "Link2_R",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "1.5708 0 0"
+      },
+      "limit": {
+        "lower": "-2.0944",
+        "upper": "2.0944",
+        "effort": "108",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint3_R",
+      "type": "revolute",
+      "parent": "Link2_R",
+      "child": "Link3_R",
+      "origin": {
+        "xyz": "0 0.287 0",
+        "rpy": "-1.5708 0 0"
+      },
+      "limit": {
+        "lower": "-3.1067",
+        "upper": "3.1067",
+        "effort": "66",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint4_R",
+      "type": "revolute",
+      "parent": "Link3_R",
+      "child": "Link4_R",
+      "origin": {
+        "xyz": "0.018 0 0",
+        "rpy": "-1.5708 0 3.1416"
+      },
+      "limit": {
+        "lower": "-2.5307",
+        "upper": "1.0472",
+        "effort": "66",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint5_R",
+      "type": "revolute",
+      "parent": "Link4_R",
+      "child": "Link5_R",
+      "origin": {
+        "xyz": "0.018 -0.314 0",
+        "rpy": "-1.5708 0 3.1416"
+      },
+      "limit": {
+        "lower": "-3.1067",
+        "upper": "3.1067",
+        "effort": "18",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint6_R",
+      "type": "revolute",
+      "parent": "Link5_R",
+      "child": "Link6_R",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "1.5708 -1.5708 0"
+      },
+      "limit": {
+        "lower": "-1.0472",
+        "upper": "1.0472",
+        "effort": "18",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "Joint7_R",
+      "type": "revolute",
+      "parent": "Link6_R",
+      "child": "Link7_R",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "1.5708 -1.5708 0"
+      },
+      "limit": {
+        "lower": "-1.5708",
+        "upper": "1.5708",
+        "effort": "18",
+        "velocity": "3.1416"
+      },
+      "axis": "0 0 1",
+      "mimic": null,
+      "dynamics": {
+        "damping": "4.0",
+        "friction": "0.1"
+      }
+    },
+    {
+      "name": "calibration_base_to_Base_L",
+      "type": "fixed",
+      "parent": "calibration_base",
+      "child": "Base_L",
+      "origin": {
+        "xyz": "0 0.037 0",
+        "rpy": "-1.57079632679 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "calibration_base_to_Base_R",
+      "type": "fixed",
+      "parent": "calibration_base",
+      "child": "Base_R",
+      "origin": {
+        "xyz": "0 -0.037 0",
+        "rpy": "1.57079632679 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "Link7_L_to_left_tool0",
+      "type": "fixed",
+      "parent": "Link7_L",
+      "child": "left_tool0",
+      "origin": {
+        "xyz": "0 -0.095 0",
+        "rpy": "1.57079632679 -1.57079632679 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "left_robotiq_85_base_joint",
+      "type": "fixed",
+      "parent": "left_adapter_flange",
+      "child": "left_robotiq_85_base_link",
+      "origin": {
+        "rpy": "0.0 0.0 -4.896508984726009e-12",
+        "xyz": "0 0 0.011"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "left_robotiq_85_left_knuckle_joint",
+      "type": "revolute",
+      "parent": "left_robotiq_85_base_link",
+      "child": "left_robotiq_85_left_knuckle_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.03060114 0.0 0.05490452"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "0.0",
+        "upper": "0.8",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": null,
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "left_robotiq_85_right_knuckle_joint",
+      "type": "revolute",
+      "parent": "left_robotiq_85_base_link",
+      "child": "left_robotiq_85_right_knuckle_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.03060114 0.0 0.05490452"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "-0.8",
+        "upper": "0.0",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "left_robotiq_85_left_knuckle_joint",
+        "multiplier": "-1"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "left_robotiq_85_left_finger_joint",
+      "type": "fixed",
+      "parent": "left_robotiq_85_left_knuckle_link",
+      "child": "left_robotiq_85_left_finger_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.03152616 0.0 -0.00376347"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "left_robotiq_85_right_finger_joint",
+      "type": "fixed",
+      "parent": "left_robotiq_85_right_knuckle_link",
+      "child": "left_robotiq_85_right_finger_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.03152616 0.0 -0.00376347"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "left_robotiq_85_left_inner_knuckle_joint",
+      "type": "revolute",
+      "parent": "left_robotiq_85_base_link",
+      "child": "left_robotiq_85_left_inner_knuckle_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.0127 0.0 0.06142"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "0.0",
+        "upper": "0.8",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "left_robotiq_85_left_knuckle_joint"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "left_robotiq_85_right_inner_knuckle_joint",
+      "type": "revolute",
+      "parent": "left_robotiq_85_base_link",
+      "child": "left_robotiq_85_right_inner_knuckle_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.0127 0.0 0.06142"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "-0.8",
+        "upper": "0.0",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "left_robotiq_85_left_knuckle_joint",
+        "multiplier": "-1"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "left_robotiq_85_left_finger_tip_joint",
+      "type": "revolute",
+      "parent": "left_robotiq_85_left_finger_link",
+      "child": "left_robotiq_85_left_finger_tip_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.00563134 0.0 0.04718515"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "-0.8",
+        "upper": "0.0",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "left_robotiq_85_left_knuckle_joint",
+        "multiplier": "-1"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "left_robotiq_85_right_finger_tip_joint",
+      "type": "revolute",
+      "parent": "left_robotiq_85_right_finger_link",
+      "child": "left_robotiq_85_right_finger_tip_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.00563134 0.0 0.04718515"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "0.0",
+        "upper": "0.8",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "left_robotiq_85_left_knuckle_joint"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "Link7_R_to_right_tool0",
+      "type": "fixed",
+      "parent": "Link7_R",
+      "child": "right_tool0",
+      "origin": {
+        "xyz": "0 -0.095 0",
+        "rpy": "1.57079632679 -1.57079632679 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "right_robotiq_85_base_joint",
+      "type": "fixed",
+      "parent": "right_adapter_flange",
+      "child": "right_robotiq_85_base_link",
+      "origin": {
+        "rpy": "0.0 0.0 3.1415926535848966",
+        "xyz": "0 0 0.011"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "right_robotiq_85_left_knuckle_joint",
+      "type": "revolute",
+      "parent": "right_robotiq_85_base_link",
+      "child": "right_robotiq_85_left_knuckle_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.03060114 0.0 0.05490452"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "0.0",
+        "upper": "0.8",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": null,
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "right_robotiq_85_right_knuckle_joint",
+      "type": "revolute",
+      "parent": "right_robotiq_85_base_link",
+      "child": "right_robotiq_85_right_knuckle_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.03060114 0.0 0.05490452"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "-0.8",
+        "upper": "0.0",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "right_robotiq_85_left_knuckle_joint",
+        "multiplier": "-1"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "right_robotiq_85_left_finger_joint",
+      "type": "fixed",
+      "parent": "right_robotiq_85_left_knuckle_link",
+      "child": "right_robotiq_85_left_finger_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.03152616 0.0 -0.00376347"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "right_robotiq_85_right_finger_joint",
+      "type": "fixed",
+      "parent": "right_robotiq_85_right_knuckle_link",
+      "child": "right_robotiq_85_right_finger_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.03152616 0.0 -0.00376347"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "right_robotiq_85_left_inner_knuckle_joint",
+      "type": "revolute",
+      "parent": "right_robotiq_85_base_link",
+      "child": "right_robotiq_85_left_inner_knuckle_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.0127 0.0 0.06142"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "0.0",
+        "upper": "0.8",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "right_robotiq_85_left_knuckle_joint"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "right_robotiq_85_right_inner_knuckle_joint",
+      "type": "revolute",
+      "parent": "right_robotiq_85_base_link",
+      "child": "right_robotiq_85_right_inner_knuckle_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.0127 0.0 0.06142"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "-0.8",
+        "upper": "0.0",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "right_robotiq_85_left_knuckle_joint",
+        "multiplier": "-1"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "right_robotiq_85_left_finger_tip_joint",
+      "type": "revolute",
+      "parent": "right_robotiq_85_left_finger_link",
+      "child": "right_robotiq_85_left_finger_tip_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.00563134 0.0 0.04718515"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "-0.8",
+        "upper": "0.0",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "right_robotiq_85_left_knuckle_joint",
+        "multiplier": "-1"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "right_robotiq_85_right_finger_tip_joint",
+      "type": "revolute",
+      "parent": "right_robotiq_85_right_finger_link",
+      "child": "right_robotiq_85_right_finger_tip_link",
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.00563134 0.0 0.04718515"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "0.0",
+        "upper": "0.8",
+        "velocity": "0.5"
+      },
+      "axis": "0 -1 0",
+      "mimic": {
+        "joint": "right_robotiq_85_left_knuckle_joint"
+      },
+      "dynamics": {
+        "damping": "0.08",
+        "friction": "0.01"
+      }
+    },
+    {
+      "name": "cam_left_wrist_joint",
+      "type": "fixed",
+      "parent": "left_adapter_flange",
+      "child": "cam_left_wrist_bottom_screw_frame",
+      "origin": {
+        "xyz": "-0.000886027230553 0.11146613458 0.0740784857597",
+        "rpy": "0.0225874491449 -0.7833625037 -1.60636939949"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_link_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_bottom_screw_frame",
+      "child": "cam_left_wrist_link",
+      "origin": {
+        "xyz": "0.0106 0.0175 0.0125",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_depth_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_link",
+      "child": "cam_left_wrist_depth_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_depth_optical_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_depth_frame",
+      "child": "cam_left_wrist_depth_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.57079632679 0 -1.57079632679"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_infra1_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_link",
+      "child": "cam_left_wrist_infra1_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_infra1_optical_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_infra1_frame",
+      "child": "cam_left_wrist_infra1_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.57079632679 0 -1.57079632679"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_infra2_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_link",
+      "child": "cam_left_wrist_infra2_frame",
+      "origin": {
+        "xyz": "0 -0.05 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_infra2_optical_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_infra2_frame",
+      "child": "cam_left_wrist_infra2_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.57079632679 0 -1.57079632679"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_color_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_link",
+      "child": "cam_left_wrist_color_frame",
+      "origin": {
+        "xyz": "0 0.015 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_color_optical_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_color_frame",
+      "child": "cam_left_wrist_color_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.57079632679 0 -1.57079632679"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_left_wrist_optical_alias_joint",
+      "type": "fixed",
+      "parent": "cam_left_wrist_color_optical_frame",
+      "child": "cam_left_wrist_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_joint",
+      "type": "fixed",
+      "parent": "right_adapter_flange",
+      "child": "cam_right_wrist_bottom_screw_frame",
+      "origin": {
+        "xyz": "-0.0062640666082 0.100906969046 0.0788327133869",
+        "rpy": "0.0148434855939 -0.790545418673 -1.56628727156"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_link_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_bottom_screw_frame",
+      "child": "cam_right_wrist_link",
+      "origin": {
+        "xyz": "0.0106 0.0175 0.0125",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_depth_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_link",
+      "child": "cam_right_wrist_depth_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_depth_optical_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_depth_frame",
+      "child": "cam_right_wrist_depth_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.57079632679 0 -1.57079632679"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_infra1_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_link",
+      "child": "cam_right_wrist_infra1_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_infra1_optical_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_infra1_frame",
+      "child": "cam_right_wrist_infra1_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.57079632679 0 -1.57079632679"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_infra2_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_link",
+      "child": "cam_right_wrist_infra2_frame",
+      "origin": {
+        "xyz": "0 -0.05 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_infra2_optical_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_infra2_frame",
+      "child": "cam_right_wrist_infra2_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.57079632679 0 -1.57079632679"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_color_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_link",
+      "child": "cam_right_wrist_color_frame",
+      "origin": {
+        "xyz": "0 0.015 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_color_optical_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_color_frame",
+      "child": "cam_right_wrist_color_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.57079632679 0 -1.57079632679"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_right_wrist_optical_alias_joint",
+      "type": "fixed",
+      "parent": "cam_right_wrist_color_optical_frame",
+      "child": "cam_right_wrist_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "left_tool_to_adapter",
+      "type": "fixed",
+      "parent": "left_tool0",
+      "child": "left_adapter_flange",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0.0 0.0 1.5707963267948966"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "right_tool_to_adapter",
+      "type": "fixed",
+      "parent": "right_tool0",
+      "child": "right_adapter_flange",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0.0 0.0 1.5707963267948963"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "Link_Stand_to_head_L_outer_mount",
+      "type": "fixed",
+      "parent": "head_pitch_rotor",
+      "child": "head_L_outer_mount",
+      "origin": {
+        "xyz": "0.01345976229571631 -0.00870000012218952 -0.01269191382629048",
+        "rpy": "2.3268417048428276 0.0 1.5707963267948966"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "Link_Stand_to_cam_high_link",
+      "type": "fixed",
+      "parent": "head_pitch_rotor",
+      "child": "cam_high_link",
+      "origin": {
+        "xyz": "0.0298718958464 0.0282992909163 -0.018533840484",
+        "rpy": "-0.0378428763089 0.760789394772 -0.0096781997696"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_high_color_frame_joint",
+      "type": "fixed",
+      "parent": "cam_high_link",
+      "child": "cam_high_color_frame",
+      "origin": {
+        "xyz": "0 0.015 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "cam_high_color_optical_frame_joint",
+      "type": "fixed",
+      "parent": "cam_high_color_frame",
+      "child": "cam_high_color_optical_frame",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.5707963267948966 0 -1.5707963267948966"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "head_pitch_joint",
+      "type": "continuous",
+      "parent": "Link_Stand",
+      "child": "head_pitch_rotor",
+      "origin": {
+        "xyz": "0.01483327425447627 0.0 0.4465949269679774",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": "0 1 0",
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "YD_link_to_hole_aligned_lower_mount",
+      "type": "fixed",
+      "parent": "YD_link",
+      "child": "assembly_lower_mount",
+      "origin": {
+        "xyz": "-0.0390524402532161 0.000392385745922771 0.939671103191441",
+        "rpy": "-1.36211545427452e-06 -0.000309334565676389 -0.000234330317440697"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "Link_Stand_to_assembly_upper_socket",
+      "type": "fixed",
+      "parent": "Link_Stand",
+      "child": "assembly_upper_socket",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    },
+    {
+      "name": "chassis_base_to_factory_root",
+      "type": "fixed",
+      "parent": "chassis_base",
+      "child": "YD_link",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "limit": {},
+      "axis": null,
+      "mimic": null,
+      "dynamics": {}
+    }
+  ],
+  "mesh_details": {
+    "package://tianji_robot_description/meshes/s100_YD_link.STL": {
+      "file": "meshes/s100_YD_link.STL",
+      "bytes": 3342134,
+      "sha256": "b5ed163616e45df6d986252a266b5d3044f2a32bd9a2ec5d739e663b502142e6",
+      "triangles": 66841,
+      "bounds_min": [
+        -0.3250642716884613,
+        -0.2738211452960968,
+        0.03866427391767502
+      ],
+      "bounds_max": [
+        0.3444491922855377,
+        0.273843377828598,
+        0.3686140179634094
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_ZQ_Link.STL": {
+      "file": "meshes/s100_ZQ_Link.STL",
+      "bytes": 666484,
+      "sha256": "5183fe8fb167710d35468702890d61d0cf565ede45a96a0fcb68e49b3f2f3155",
+      "triangles": 13328,
+      "bounds_min": [
+        -0.030216533690690994,
+        -0.06688396632671356,
+        -0.15900000929832458
+      ],
+      "bounds_max": [
+        0.028783468529582024,
+        0.03011603280901909,
+        0.0015000002458691597
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_ZQL_Link.STL": {
+      "file": "meshes/s100_ZQL_Link.STL",
+      "bytes": 723984,
+      "sha256": "a913e79a4bfee9f5cf8424a6e12a06c51f4bd00e0c664801866147bbdf1feab5",
+      "triangles": 14478,
+      "bounds_min": [
+        -0.07000000029802322,
+        -0.07000000029802322,
+        -0.0364999994635582
+      ],
+      "bounds_max": [
+        0.07000000029802322,
+        0.07000000029802322,
+        0.0625
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_YQ_Link.STL": {
+      "file": "meshes/s100_YQ_Link.STL",
+      "bytes": 666484,
+      "sha256": "d595cd013bcdd4a2d5a82ab7634ce22368f1185363c05c39b1a0825abbfa600e",
+      "triangles": 13328,
+      "bounds_min": [
+        -0.028783468529582024,
+        -0.03011603280901909,
+        -0.15900000929832458
+      ],
+      "bounds_max": [
+        0.030216533690690994,
+        0.06688396632671356,
+        0.0015000002458691597
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_YQL_Link.STL": {
+      "file": "meshes/s100_YQL_Link.STL",
+      "bytes": 723984,
+      "sha256": "f2abde35be39a1502783f24155e04ac9e2048dbdcbb89c6a665c94e5f8ed2049",
+      "triangles": 14478,
+      "bounds_min": [
+        -0.07000000029802322,
+        -0.07000000029802322,
+        -0.0364999994635582
+      ],
+      "bounds_max": [
+        0.07000000029802322,
+        0.07000000029802322,
+        0.0625
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_ZH_Link.STL": {
+      "file": "meshes/s100_ZH_Link.STL",
+      "bytes": 666484,
+      "sha256": "5183fe8fb167710d35468702890d61d0cf565ede45a96a0fcb68e49b3f2f3155",
+      "triangles": 13328,
+      "bounds_min": [
+        -0.030216533690690994,
+        -0.06688396632671356,
+        -0.15900000929832458
+      ],
+      "bounds_max": [
+        0.028783468529582024,
+        0.03011603280901909,
+        0.0015000002458691597
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_ZHL_Link.STL": {
+      "file": "meshes/s100_ZHL_Link.STL",
+      "bytes": 723984,
+      "sha256": "31680aa1241598fa81e5fa15f0414bed48254d6b42c2f374c1b52ac6cb48b64b",
+      "triangles": 14478,
+      "bounds_min": [
+        -0.06999959796667099,
+        -0.06999959796667099,
+        -0.0364999994635582
+      ],
+      "bounds_max": [
+        0.06999959796667099,
+        0.06999959796667099,
+        0.0625
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_YH_Link.STL": {
+      "file": "meshes/s100_YH_Link.STL",
+      "bytes": 666484,
+      "sha256": "d595cd013bcdd4a2d5a82ab7634ce22368f1185363c05c39b1a0825abbfa600e",
+      "triangles": 13328,
+      "bounds_min": [
+        -0.028783468529582024,
+        -0.03011603280901909,
+        -0.15900000929832458
+      ],
+      "bounds_max": [
+        0.030216533690690994,
+        0.06688396632671356,
+        0.0015000002458691597
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_YHL_Link.STL": {
+      "file": "meshes/s100_YHL_Link.STL",
+      "bytes": 723984,
+      "sha256": "3097cf99d2d418323bae7ccb98d78077d53125ce2689eae625beb1cd291401f3",
+      "triangles": 14478,
+      "bounds_min": [
+        -0.07000000029802322,
+        -0.07000000029802322,
+        -0.0364999994635582
+      ],
+      "bounds_max": [
+        0.07000000029802322,
+        0.07000000029802322,
+        0.0625
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_ZLD_Link.STL": {
+      "file": "meshes/s100_ZLD_Link.STL",
+      "bytes": 1077984,
+      "sha256": "0e382fefeec2b59a31966cf9488e667388253f1387961dfbe86885f487f88310",
+      "triangles": 21558,
+      "bounds_min": [
+        -0.058487363159656525,
+        -0.03244320675730705,
+        -0.0480923056602478
+      ],
+      "bounds_max": [
+        0.033928658813238144,
+        0.03244320675730705,
+        0.013239547610282898
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_YLD_Link.STL": {
+      "file": "meshes/s100_YLD_Link.STL",
+      "bytes": 1077984,
+      "sha256": "49572969b193dfb488a0d62cc82eb6f4bf63a04b0123b71fe346fd4df9b875d2",
+      "triangles": 21558,
+      "bounds_min": [
+        -0.058487363159656525,
+        -0.03244320675730705,
+        -0.0480923056602478
+      ],
+      "bounds_max": [
+        0.033928658813238144,
+        0.03244320675730705,
+        0.013239547610282898
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_C1_Link.STL": {
+      "file": "meshes/s100_C1_Link.STL",
+      "bytes": 233684,
+      "sha256": "052e10cd98861a71715555bf814c5ede75c69e8b05ee98c882bf750eea475e11",
+      "triangles": 4672,
+      "bounds_min": [
+        -0.025738751515746117,
+        -0.013249999843537807,
+        -0.030400000512599945
+      ],
+      "bounds_max": [
+        0.025738751515746117,
+        0.013249999843537807,
+        2.4187873925995973e-12
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_C2_Link.STL": {
+      "file": "meshes/s100_C2_Link.STL",
+      "bytes": 233684,
+      "sha256": "1c023ddca5078ee68870275a4a899b3752adb361f234f09d0ca68c0b0dd92ac1",
+      "triangles": 4672,
+      "bounds_min": [
+        -0.025738751515746117,
+        -0.013249999843537807,
+        -0.030400000512599945
+      ],
+      "bounds_max": [
+        0.025738751515746117,
+        0.013249999843537807,
+        2.4187873925995973e-12
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_C3_Link.STL": {
+      "file": "meshes/s100_C3_Link.STL",
+      "bytes": 233684,
+      "sha256": "ce48f0cf8debce8f9d644fde89e0ff10e3547c6a7ffb9ac33a7579672e80083f",
+      "triangles": 4672,
+      "bounds_min": [
+        -0.025738751515746117,
+        -0.013249999843537807,
+        -0.030400000512599945
+      ],
+      "bounds_max": [
+        0.025738751515746117,
+        0.013249999843537807,
+        2.4187873925995973e-12
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_C4_Link.STL": {
+      "file": "meshes/s100_C4_Link.STL",
+      "bytes": 233684,
+      "sha256": "6d8d51b867a6d853c4fac66dafeb7fa5ad4b5031b194e2c8de4fb53c03d54ca9",
+      "triangles": 4672,
+      "bounds_min": [
+        -0.025738751515746117,
+        -0.013249999843537807,
+        -0.030400000512599945
+      ],
+      "bounds_max": [
+        0.025738751515746117,
+        0.013249999843537807,
+        2.4188429037508286e-12
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_C5_Link.STL": {
+      "file": "meshes/s100_C5_Link.STL",
+      "bytes": 233684,
+      "sha256": "d4f52d00c87517fe06c7ec49d18aba5b2dbf0286e40b47e33c90e94f3780b0bf",
+      "triangles": 4672,
+      "bounds_min": [
+        -0.025738751515746117,
+        -0.013249999843537807,
+        -0.030400000512599945
+      ],
+      "bounds_max": [
+        0.025738751515746117,
+        0.013249999843537807,
+        2.4187873925995973e-12
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_C6_Link.STL": {
+      "file": "meshes/s100_C6_Link.STL",
+      "bytes": 233684,
+      "sha256": "c2393f3db18f262e7da5894eb57ba64913909875788bf5c7999cecf788f61921",
+      "triangles": 4672,
+      "bounds_min": [
+        -0.025738751515746117,
+        -0.013249999843537807,
+        -0.030400000512599945
+      ],
+      "bounds_max": [
+        0.025738751515746117,
+        0.013249999843537807,
+        2.4188429037508286e-12
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_C7_Link.STL": {
+      "file": "meshes/s100_C7_Link.STL",
+      "bytes": 233684,
+      "sha256": "e810a876a92f6967dec2869372acd38b79e3af28292ebb1147f95a0ae701555e",
+      "triangles": 4672,
+      "bounds_min": [
+        -0.025738751515746117,
+        -0.013249999843537807,
+        -0.030400000512599945
+      ],
+      "bounds_max": [
+        0.025738751515746117,
+        0.013249999843537807,
+        2.4188429037508286e-12
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_C8_Link.STL": {
+      "file": "meshes/s100_C8_Link.STL",
+      "bytes": 233684,
+      "sha256": "3f6d07c99ff997421c3df5a08ba800ccc0e4a51b84110b0068e7e5f331e42788",
+      "triangles": 4672,
+      "bounds_min": [
+        -0.025738751515746117,
+        -0.013249999843537807,
+        -0.030400000512599945
+      ],
+      "bounds_max": [
+        0.025738751515746117,
+        0.013249999843537807,
+        2.4188429037508286e-12
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_IMU_Link.STL": {
+      "file": "meshes/s100_IMU_Link.STL",
+      "bytes": 927334,
+      "sha256": "6001f2f9d53286d79be73b296955109385c86e15047726f9ff819efbd0ff562b",
+      "triangles": 18545,
+      "bounds_min": [
+        -0.015508650802075863,
+        -0.021500471979379654,
+        -0.011200061067938805
+      ],
+      "bounds_max": [
+        0.00749135110527277,
+        0.021499527618288994,
+        3.1458213811674796e-08
+      ]
+    },
+    "package://tianji_robot_description/meshes/s100_XJ_Link.STL": {
+      "file": "meshes/s100_XJ_Link.STL",
+      "bytes": 348384,
+      "sha256": "458eaae82acd2fc5e235cf54cf8c9bbbe9ba346d7ccb3f1850ba1578634fa308",
+      "triangles": 6966,
+      "bounds_min": [
+        -0.061946675181388855,
+        -0.012500000186264515,
+        -0.018850000575184822
+      ],
+      "bounds_max": [
+        0.027000000700354576,
+        0.012500000186264515,
+        0.0017699996242299676
+      ]
+    },
+    "package://tianji_robot_description/meshes/cad_00.stl": {
+      "file": "meshes/cad_00.stl",
+      "bytes": 68884,
+      "sha256": "2b650fd991aedfa51a1f02bf6f4bf9770207f7924fe8378782b9e0cd44d82837",
+      "triangles": 1376,
+      "bounds_min": [
+        -0.08500000089406967,
+        -0.08500000089406967,
+        0.0
+      ],
+      "bounds_max": [
+        0.08500000089406967,
+        0.08500000089406967,
+        0.019999999552965164
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_01.stl": {
+      "file": "meshes/upper_head_part_01.stl",
+      "bytes": 281084,
+      "sha256": "74e9940a7305ab476dd57a62a7e146f79cd011bc4ec5d892dc0afcfeb1709030",
+      "triangles": 5620,
+      "bounds_min": [
+        -0.05999999865889549,
+        -0.03999999910593033,
+        0.019999999552965164
+      ],
+      "bounds_max": [
+        0.05999999865889549,
+        0.03999999910593033,
+        0.20000000298023224
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_02.stl": {
+      "file": "meshes/upper_head_part_02.stl",
+      "bytes": 1754484,
+      "sha256": "6d38ccc4a0146776beab49b84233206b13f073072ef72ffa66c793626989bb3d",
+      "triangles": 35088,
+      "bounds_min": [
+        -0.06499999761581421,
+        -0.03999999910593033,
+        0.1118645891547203
+      ],
+      "bounds_max": [
+        0.06499999761581421,
+        0.03999999910593033,
+        0.23279999196529388
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_03.stl": {
+      "file": "meshes/upper_head_part_03.stl",
+      "bytes": 1461084,
+      "sha256": "091b850ff0607f6bae0347cc6bb5252bd902deec922b1880dd6a7372d4aa6bc0",
+      "triangles": 29220,
+      "bounds_min": [
+        -0.003999999724328518,
+        -0.10600000619888306,
+        0.2078000009059906
+      ],
+      "bounds_max": [
+        0.036000002175569534,
+        -0.02250000089406967,
+        0.42879998683929443
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_04.stl": {
+      "file": "meshes/upper_head_part_04.stl",
+      "bytes": 1120884,
+      "sha256": "53c4faeaea688a1b91316af54eda668fb8b1ec1cb5eeeb6f924ee211014e5a95",
+      "triangles": 22416,
+      "bounds_min": [
+        0.0026125481817871332,
+        -0.10599999874830246,
+        0.42879998683929443
+      ],
+      "bounds_max": [
+        0.02941254712641239,
+        -0.09300000220537186,
+        0.45879998803138733
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_05.stl": {
+      "file": "meshes/upper_head_part_05.stl",
+      "bytes": 123984,
+      "sha256": "ba4aad72f12d6b5a3ae19834b744130d8a31a4a11321df3d0898b45a4ec59a3f",
+      "triangles": 2478,
+      "bounds_min": [
+        -0.0025667259469628334,
+        -0.08630000054836273,
+        0.42919492721557617
+      ],
+      "bounds_max": [
+        0.03223327547311783,
+        -0.05869999900460243,
+        0.46399492025375366
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_06.stl": {
+      "file": "meshes/upper_head_part_06.stl",
+      "bytes": 72284,
+      "sha256": "c621e906e89a6ca272cc7b87c406806fc3a4d9b83ca0501ece0c6fcbe164b671",
+      "triangles": 1444,
+      "bounds_min": [
+        0.009985197335481644,
+        -0.09030000120401382,
+        0.43136659264564514
+      ],
+      "bounds_max": [
+        0.019735196605324745,
+        -0.0868000015616417,
+        0.43661656975746155
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_07.stl": {
+      "file": "meshes/upper_head_part_07.stl",
+      "bytes": 92884,
+      "sha256": "462cf304a4cb5a0c799d4c03de591ecb6d4bf1e40040a85a6f0459df20ac0126",
+      "triangles": 1856,
+      "bounds_min": [
+        0.010068235918879509,
+        -0.09115000069141388,
+        0.45661410689353943
+      ],
+      "bounds_max": [
+        0.01956823654472828,
+        -0.0868000015616417,
+        0.46161410212516785
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_08.stl": {
+      "file": "meshes/upper_head_part_08.stl",
+      "bytes": 74684,
+      "sha256": "6a2ec3a844e08455e4c6d8dee260bfeaf560fafafc761f5f107f1bf77d7e8ca7",
+      "triangles": 1492,
+      "bounds_min": [
+        -0.0025667259469628334,
+        -0.09300000220537186,
+        0.42919492721557617
+      ],
+      "bounds_max": [
+        0.03223327547311783,
+        -0.08630000054836273,
+        0.46399492025375366
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Base_L.STL": {
+      "file": "meshes/upper_Base_L.STL",
+      "bytes": 204584,
+      "sha256": "f22c309ed8cacd2fc776e2f72a2fc5618d9da84315267377edd3205e91ebbcb5",
+      "triangles": 4090,
+      "bounds_min": [
+        -0.050999999046325684,
+        -0.05649999901652336,
+        -0.006000000052154064
+      ],
+      "bounds_max": [
+        0.05649999901652336,
+        0.05649999901652336,
+        0.08420000225305557
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link1_L.STL": {
+      "file": "meshes/upper_Link1_L.STL",
+      "bytes": 563584,
+      "sha256": "d00097eec49600a4111ee5a124d6636f50ea09a7a1dc8486d98f4370dde7a932",
+      "triangles": 11270,
+      "bounds_min": [
+        -0.05582326650619507,
+        -0.04871578514575958,
+        -0.09549999982118607
+      ],
+      "bounds_max": [
+        0.055821750313043594,
+        0.04870787635445595,
+        0.055821795016527176
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link2_L.STL": {
+      "file": "meshes/upper_Link2_L.STL",
+      "bytes": 1278784,
+      "sha256": "4776a6a2086ddc61b1643aff93386e545baccef2751db29d863fe027a76f325e",
+      "triangles": 25574,
+      "bounds_min": [
+        -0.057725824415683746,
+        -0.05734836310148239,
+        -0.06354539096355438
+      ],
+      "bounds_max": [
+        0.05773492157459259,
+        0.14800000190734863,
+        0.06354539096355438
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link3_L.STL": {
+      "file": "meshes/upper_Link3_L.STL",
+      "bytes": 635484,
+      "sha256": "d58f1039bd3eb2ccc1a1959b89d2de7ae714344ad8cb8b78ef97b92dcd317d26",
+      "triangles": 12708,
+      "bounds_min": [
+        -0.04624288156628609,
+        -0.04625484347343445,
+        -0.14350000023841858
+      ],
+      "bounds_max": [
+        0.06837350875139236,
+        0.04625484347343445,
+        0.05037674307823181
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link4_L.STL": {
+      "file": "meshes/upper_Link4_L.STL",
+      "bytes": 1263484,
+      "sha256": "77f18566339f38acac1785fae517b05ff1e5247b95404ce26536d215bbed9cd7",
+      "triangles": 25268,
+      "bounds_min": [
+        -0.05045541748404503,
+        -0.12099999934434891,
+        -0.057999998331069946
+      ],
+      "bounds_max": [
+        0.05900000035762787,
+        0.050422314554452896,
+        0.057999998331069946
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link5_L.STL": {
+      "file": "meshes/upper_Link5_L.STL",
+      "bytes": 1176084,
+      "sha256": "573f15ee62b0a9b2d62aceeb756800fd86969a685535e91416b73d51f1c57613",
+      "triangles": 23520,
+      "bounds_min": [
+        -0.04399995505809784,
+        -0.05849999934434891,
+        -0.1979999989271164
+      ],
+      "bounds_max": [
+        0.04399988800287247,
+        0.05849999934434891,
+        0.023495953530073166
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link6_L.STL": {
+      "file": "meshes/upper_Link6_L.STL",
+      "bytes": 310884,
+      "sha256": "b6b7570d8ebf1d2acb01baf8941b892f5a5f72aaa05503ab8340da8a2a7b2c13",
+      "triangles": 6216,
+      "bounds_min": [
+        -0.038492389023303986,
+        -0.030500000342726707,
+        -0.04500000178813934
+      ],
+      "bounds_max": [
+        0.038492389023303986,
+        0.03500000014901161,
+        0.04500000178813934
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link7_L.STL": {
+      "file": "meshes/upper_Link7_L.STL",
+      "bytes": 2557184,
+      "sha256": "126cc7d41c37049ce34d2636bfe2d460c21e3429ed080877d1c5e983109ef798",
+      "triangles": 51142,
+      "bounds_min": [
+        -0.04100004956126213,
+        -0.0949999988079071,
+        -0.05399968475103378
+      ],
+      "bounds_max": [
+        0.041000086814165115,
+        0.03835812956094742,
+        0.05249999836087227
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Base_R.STL": {
+      "file": "meshes/upper_Base_R.STL",
+      "bytes": 204584,
+      "sha256": "f22c309ed8cacd2fc776e2f72a2fc5618d9da84315267377edd3205e91ebbcb5",
+      "triangles": 4090,
+      "bounds_min": [
+        -0.050999999046325684,
+        -0.05649999901652336,
+        -0.006000000052154064
+      ],
+      "bounds_max": [
+        0.05649999901652336,
+        0.05649999901652336,
+        0.08420000225305557
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link1_R.STL": {
+      "file": "meshes/upper_Link1_R.STL",
+      "bytes": 563584,
+      "sha256": "fdb1075fe0b41e5c2cb7c2fe13c9d2e62ff4dd6eb540ea841b8603db28369dd0",
+      "triangles": 11270,
+      "bounds_min": [
+        -0.05582326650619507,
+        -0.04871578514575958,
+        -0.09549999982118607
+      ],
+      "bounds_max": [
+        0.055821750313043594,
+        0.04870787635445595,
+        0.055821795016527176
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link2_R.STL": {
+      "file": "meshes/upper_Link2_R.STL",
+      "bytes": 1278784,
+      "sha256": "53eb9fc69c939d2ebd4f32c1df341c1c42bc3d9d0911db0c9fcee70aa2701b34",
+      "triangles": 25574,
+      "bounds_min": [
+        -0.057725824415683746,
+        -0.05734836310148239,
+        -0.06354539096355438
+      ],
+      "bounds_max": [
+        0.05773492157459259,
+        0.14800000190734863,
+        0.06354539096355438
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link3_R.STL": {
+      "file": "meshes/upper_Link3_R.STL",
+      "bytes": 635484,
+      "sha256": "122456d8fc3e81694f352fc1f29d0bc19066f7f3d7572857a1be1e7c030dec9c",
+      "triangles": 12708,
+      "bounds_min": [
+        -0.04624288156628609,
+        -0.04625484347343445,
+        -0.14350000023841858
+      ],
+      "bounds_max": [
+        0.06837350875139236,
+        0.04625484347343445,
+        0.05037674307823181
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link4_R.STL": {
+      "file": "meshes/upper_Link4_R.STL",
+      "bytes": 1263484,
+      "sha256": "77f18566339f38acac1785fae517b05ff1e5247b95404ce26536d215bbed9cd7",
+      "triangles": 25268,
+      "bounds_min": [
+        -0.05045541748404503,
+        -0.12099999934434891,
+        -0.057999998331069946
+      ],
+      "bounds_max": [
+        0.05900000035762787,
+        0.050422314554452896,
+        0.057999998331069946
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link5_R.STL": {
+      "file": "meshes/upper_Link5_R.STL",
+      "bytes": 1196684,
+      "sha256": "2de51a340695c89b2fd58b1171dfacc4d85aa4e6cd50879e021a2d0bde8599a8",
+      "triangles": 23932,
+      "bounds_min": [
+        -0.04399995505809784,
+        -0.05849999934434891,
+        -0.1979999989271164
+      ],
+      "bounds_max": [
+        0.04399988800287247,
+        0.05849999934434891,
+        0.023495953530073166
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link6_R.STL": {
+      "file": "meshes/upper_Link6_R.STL",
+      "bytes": 310884,
+      "sha256": "49722d14b9ac34a84a41c95f49bd0b2a8859d4a05f66b247822bf36b0a703cd5",
+      "triangles": 6216,
+      "bounds_min": [
+        -0.038492389023303986,
+        -0.030500000342726707,
+        -0.04500000178813934
+      ],
+      "bounds_max": [
+        0.038492389023303986,
+        0.03500000014901161,
+        0.04500000178813934
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_Link7_R.STL": {
+      "file": "meshes/upper_Link7_R.STL",
+      "bytes": 2577384,
+      "sha256": "6eb75b059ff383e90a153be840bcce84b23d8f8afd074b1bc9dfec1b18c2351f",
+      "triangles": 51546,
+      "bounds_min": [
+        -0.04100004956126213,
+        -0.0949999988079071,
+        -0.05399968475103378
+      ],
+      "bounds_max": [
+        0.041000086814165115,
+        0.03835812956094742,
+        0.05249999836087227
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_robotiq_base.stl": {
+      "file": "meshes/upper_robotiq_base.stl",
+      "bytes": 20084,
+      "sha256": "ede5cd7d7846c051b88645f33d6bbb5ed9b36bbef404a19a46557639bfab7060",
+      "triangles": 400,
+      "bounds_min": [
+        -0.042438656091690063,
+        -0.037547022104263306,
+        -0.003351939609274268
+      ],
+      "bounds_max": [
+        0.04251115396618843,
+        0.037494730204343796,
+        0.09000000357627869
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_left_knuckle.stl": {
+      "file": "meshes/upper_left_knuckle.stl",
+      "bytes": 4384,
+      "sha256": "b7ec787f57a7db5b2b14e64ffbedaac28739e38f14aac8afa8b575bac941feb7",
+      "triangles": 86,
+      "bounds_min": [
+        -0.007470564916729927,
+        -0.008081402629613876,
+        -0.009845415130257607
+      ],
+      "bounds_max": [
+        0.03738509863615036,
+        0.008479618467390537,
+        0.010250990279018879
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_right_knuckle.stl": {
+      "file": "meshes/upper_right_knuckle.stl",
+      "bytes": 4384,
+      "sha256": "d151fb38f59748f1e6e627312e2ede96f2c98ba267bf722091665b20c78e7a8d",
+      "triangles": 86,
+      "bounds_min": [
+        -0.0374206006526947,
+        -0.00810985453426838,
+        -0.009716280736029148
+      ],
+      "bounds_max": [
+        0.007481224834918976,
+        0.008449999615550041,
+        0.010250990279018879
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_left_finger.stl": {
+      "file": "meshes/upper_left_finger.stl",
+      "bytes": 19684,
+      "sha256": "f39a50be121122fc1c53c588a762ad1da8a0f64d39bc6f299cbe9b0597e7257b",
+      "triangles": 392,
+      "bounds_min": [
+        -0.014497950673103333,
+        -0.014399999752640724,
+        -0.006262828130275011
+      ],
+      "bounds_max": [
+        0.014080293476581573,
+        0.012800000607967377,
+        0.05315171554684639
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_right_finger.stl": {
+      "file": "meshes/upper_right_finger.stl",
+      "bytes": 19684,
+      "sha256": "1d018fa2f0b50aca5941778d78810b211b1abfc8637c7953451d76d4833ba6f8",
+      "triangles": 392,
+      "bounds_min": [
+        -0.014080293476581573,
+        -0.01360000018030405,
+        -0.006262828130275011
+      ],
+      "bounds_max": [
+        0.014497950673103333,
+        0.01360000018030405,
+        0.05315171554684639
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_left_inner_knuckle.stl": {
+      "file": "meshes/upper_left_inner_knuckle.stl",
+      "bytes": 17984,
+      "sha256": "f250a3fea49be4d1bb2383d9980172c59fc44031193ef2293ca540f756f6c1e6",
+      "triangles": 358,
+      "bounds_min": [
+        -0.00599971879273653,
+        -0.017349999397993088,
+        -0.00596779165789485
+      ],
+      "bounds_max": [
+        0.043157219886779785,
+        0.017650000751018524,
+        0.049418091773986816
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_right_inner_knuckle.stl": {
+      "file": "meshes/upper_right_inner_knuckle.stl",
+      "bytes": 17784,
+      "sha256": "c936d951ede875b91c180bd41d45b22ae23f8a39d9c3e09e29066453a8e863ef",
+      "triangles": 354,
+      "bounds_min": [
+        -0.04315691441297531,
+        -0.01744999922811985,
+        -0.0059677911922335625
+      ],
+      "bounds_max": [
+        0.005999720189720392,
+        0.017550000920891762,
+        0.049418091773986816
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_left_finger_tip.stl": {
+      "file": "meshes/upper_left_finger_tip.stl",
+      "bytes": 11284,
+      "sha256": "9d90031cd99106a8be63609f8ff78580638d91cc4167bf66c09198329f2e65cf",
+      "triangles": 224,
+      "bounds_min": [
+        -0.02525864541530609,
+        -0.014300200156867504,
+        -0.005977167282253504
+      ],
+      "bounds_max": [
+        0.00595506839454174,
+        0.012700000777840614,
+        0.0510193407535553
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_right_finger_tip.stl": {
+      "file": "meshes/upper_right_finger_tip.stl",
+      "bytes": 11284,
+      "sha256": "126f1559f2f7dca62449a6ca926c609fbdaa93ca66df805ff7c069bb206e3d10",
+      "triangles": 224,
+      "bounds_min": [
+        -0.00595506839454174,
+        -0.013450000435113907,
+        -0.005977167282253504
+      ],
+      "bounds_max": [
+        0.02525864541530609,
+        0.013550200499594212,
+        0.0510193407535553
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_d435.dae": {
+      "file": "meshes/upper_d435.dae",
+      "bytes": 15782439,
+      "sha256": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78"
+    },
+    "package://tianji_robot_description/meshes/upper_adapter_flange.stl": {
+      "file": "meshes/upper_adapter_flange.stl",
+      "bytes": 663084,
+      "sha256": "ee4d43d017372cede83e08f092c11f0edbd595f67792be026974f8df8c001666",
+      "triangles": 13260,
+      "bounds_min": [
+        -0.030418572947382927,
+        -0.029000001028180122,
+        -4.8333438081938143e-14
+      ],
+      "bounds_max": [
+        0.030418572947382927,
+        0.11912110447883606,
+        0.07000356912612915
+      ]
+    },
+    "package://tianji_robot_description/meshes/upper_head_part_09.stl": {
+      "file": "meshes/upper_head_part_09.stl",
+      "bytes": 1924884,
+      "sha256": "7522b6222dcbb5d213d629599b8f5fc5ce24f679efcc3fccd64d473ed039b786",
+      "triangles": 38496,
+      "bounds_min": [
+        -0.006115570664405823,
+        -0.05869999900460243,
+        0.42560771107673645
+      ],
+      "bounds_max": [
+        0.03583327308297157,
+        0.031300000846385956,
+        0.4675821363925934
+      ]
+    },
+    "package://tianji_robot_description/meshes/cad_11.stl": {
+      "file": "meshes/cad_11.stl",
+      "bytes": 2600884,
+      "sha256": "e8598e5f1e6bb1add433bedcade6e4bd52f137e6fb07949ec832fa98c507931e",
+      "triangles": 52016,
+      "bounds_min": [
+        -0.18949000537395477,
+        -0.12003999948501587,
+        -0.8259999752044678
+      ],
+      "bounds_max": [
+        0.03954000025987625,
+        0.12003999948501587,
+        -0.8159999847412109
+      ]
+    },
+    "package://tianji_robot_description/meshes/cad_12.stl": {
+      "file": "meshes/cad_12.stl",
+      "bytes": 684,
+      "sha256": "b6882e752026248337d5ede8c5d54d647b87fabd392cc86cdb074995681d6227",
+      "triangles": 12,
+      "bounds_min": [
+        -0.030500000342726707,
+        -0.030500000342726707,
+        -0.8159999847412109
+      ],
+      "bounds_max": [
+        0.030500000342726707,
+        0.030500000342726707,
+        -0.01600000075995922
+      ]
+    },
+    "package://tianji_robot_description/meshes/cad_10.stl": {
+      "file": "meshes/cad_10.stl",
+      "bytes": 4323684,
+      "sha256": "1baa97a59f34c92aba5f794d1a4b9172ef7c523466bc001f1ba2278d05689a5c",
+      "triangles": 86472,
+      "bounds_min": [
+        -0.0849677249789238,
+        -0.08500000089406967,
+        -0.11600000411272049
+      ],
+      "bounds_max": [
+        0.0849677249789238,
+        0.08487092703580856,
+        0.0
+      ]
+    }
+  },
+  "mujoco_import": {
+    "passed": false,
+    "error": "Error: unknown or unsupported mesh file: '/project/tianji_inspection_20261103/source/meshes/upper_d435.dae'\nElement name 'upper_d435', id 55"
+  },
+  "native_import_note": "Loaded: joints=35, equalities=0, actuators=0",
+  "native_import_scope": "Inspection copy only; DAE converted to OBJ for Tianji. No calibrated controller, contact or coupling validation.",
+  "publication_checks": {
+    "source_hashes_verified": 63,
+    "mesh_references_resolve": true,
+    "glb_embedded_meshes": 124,
+    "static_preview_geoms": 73,
+    "static_preview_joints": 0,
+    "physical_operation_validated": false
+  }
+}

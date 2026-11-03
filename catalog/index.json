@@ -331,6 +331,16 @@
       "id": "fq:scenes/room_table_can_candidate",
       "version": "0.1.0",
       "manifest": "assets/generated/fq_scenes_room_table_can_candidate_a1b951c4/asset.json"
+    },
+    {
+      "id": "user_supplied:robots/tianji_robot",
+      "version": "0.1.0",
+      "manifest": "assets/user_supplied/tianji_robot/asset.json"
+    },
+    {
+      "id": "user_supplied:grippers/rhino_v6_gripper",
+      "version": "0.1.0",
+      "manifest": "assets/user_supplied/rhino_v6_gripper/asset.json"
     }
   ]
 }
