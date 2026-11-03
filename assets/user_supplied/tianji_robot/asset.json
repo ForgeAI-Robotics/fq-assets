@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "user_supplied:robots/tianji_robot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "kind": "robot",
-  "name": "Tianji 轮式双臂机器人（原始夹爪）",
-  "description": "用户原始装配与网格；静态预览，未配置驱动或完成实机标定",
+  "name": "Tianji 双臂机器人 · RhinoV6 + 三台 D435i",
+  "description": "两侧 RhinoV6 夹爪；左腕、右腕、头部三台 D435i。静态装配及参考相机，安装位姿待实机校准。",
   "origin": "user_supplied",
   "upstream_origin": "用户提供的 Tianji / RhinoV6 文件",
   "license": "Proprietary",
@@ -17,30 +17,36 @@
     "glb": "assets/user_supplied/tianji_robot/model.glb",
     "mujoco": "assets/user_supplied/tianji_robot/preview.xml"
   },
-  "dependencies": [],
+  "dependencies": [
+    "user_supplied:grippers/rhino_v6_gripper",
+    "fq:cameras/realsense_d435i"
+  ],
   "physics_calibrated": false,
   "release_status": "source_and_static_preview",
   "limitations": [
-    "Source model still carries Robotiq-named grippers; does not match the user-confirmed installed RhinoV6",
-    "Eight wheel joints declare zero effort/velocity",
-    "URDF mimic declarations require simulator-specific constraints; no actuators supplied",
-    "GLB is a static zero-pose visual preview, not a physics articulation",
-    "Source collision meshes retained; contact behavior has not been validated",
-    "No claim that all STL links are individual fabrication-ready parts",
-    "preview.xml is a fixed, non-colliding appearance model only; use source URDF for future physical adaptation"
+    "RhinoV6 original zero joint limits retained; no actuator or linkage closure implemented",
+    "Gripper mounting retains source 11 mm flange offset with opening-plane alignment; physical bolt fit unverified",
+    "Camera source mounting and optical frames retained; no per-device extrinsic calibration",
+    "Camera mass and box inertia are estimates; no simulated IMU or RealSense stereo pipeline",
+    "preview.xml fixes all joints and disables contact; source model.urdf retains collision definitions",
+    "Original source package still contains old Robotiq meshes for provenance; active model excludes them"
   ],
   "viewer_status": [
     [
+      "夹爪",
+      "左右 RhinoV6，零位装配"
+    ],
+    [
+      "相机",
+      "左腕 / 右腕 / 头部 D435i"
+    ],
+    [
       "状态",
-      "源模型与静态装配预览"
-    ],
-    [
-      "驱动",
-      "未配置；不是可操作仿真版本"
-    ],
-    [
-      "实机",
-      "RhinoV6 是用户确认的实装夹爪；Tianji 原包尚未替换"
+      "装配预览；无驱动，外参和安装孔位未实测"
     ]
-  ]
+  ],
+  "dependency_versions": {
+    "user_supplied:grippers/rhino_v6_gripper": "0.1.0",
+    "fq:cameras/realsense_d435i": "0.1.0"
+  }
 }

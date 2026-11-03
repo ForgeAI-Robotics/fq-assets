@@ -1,18 +1,9 @@
-# Tianji 轮式双臂机器人（原始夹爪）
+# Tianji · RhinoV6 + 三台 D435i（0.2.0）
 
-原包完整保留在 `source/`；`model.urdf` 仅改为可移植网格路径；`model.glb` 为零位静态装配预览。
+活动 model.urdf 已更换左右 RhinoV6 夹爪，并在原左腕、右腕、头部相机位使用库内 D435i。源 source/ 原样保存，里面旧夹爪仅用于溯源。
 
-- Source model still carries Robotiq-named grippers; does not match the user-confirmed installed RhinoV6
-- Eight wheel joints declare zero effort/velocity
-- URDF mimic declarations require simulator-specific constraints; no actuators supplied
-- GLB is a static zero-pose visual preview, not a physics articulation
-- Source collision meshes retained; contact behavior has not been validated
-- No claim that all STL links are individual fabrication-ready parts
+夹爪沿用法兰 11 mm 偏移，绕安装轴旋转使开合平面对应原夹爪；属于待标定安装变换，未验证孔位与实物紧固。V6 原始关节零限位保留，未提供开合驱动或闭环连杆约束。
 
-## 安装结构件
+三个相机沿用原装配外参和光学坐标系，补全头部深度坐标系；相机外壳与参考内参来自 fq:cameras/realsense_d435i。72 g 质量和箱体惯量为估计，不是实测。preview.xml 包含三路 RGB 与三路 depth 渲染视角，未模拟 IMU 或双目深度算法。
 
-见 `mounting_parts.json`，列出源 URDF 的 link、网格和连接关节。Tianji 的 `upper_adapter_flange.stl` 为左右共用法兰；`Link_Stand` 下含立柱/头部结构网格，`assembly_lower_mount` 下含 cad_11/12。空坐标系不作为实体支架。RhinoV6 的 base_link.STL 含基座，其他网格为夹爪连杆；不等于独立支架打印套件。CAD 编号件的具体制造名称未确认。
-
-Tianji 源夹爪与 RhinoV6 几何不同。用户确认实机安装 RhinoV6；本次分别入库，未替换机器人末端或虚构安装校准。
-
-网页使用 `preview.xml`：固定零位、关闭接触，只用于外观展示；它不是可执行动力学版本。源 URDF 保留原有碰撞定义。
+preview.xml 为全部关节固定、接触关闭的装配展示；model.urdf 保留碰撞描述，未完成动态抓取与全工作空间避碰验证。model.glb 为分层静态三维预览。安装变换详见 assembly_v6.json。

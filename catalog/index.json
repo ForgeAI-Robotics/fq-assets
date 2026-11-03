@@ -334,7 +334,7 @@
     },
     {
       "id": "user_supplied:robots/tianji_robot",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "manifest": "assets/user_supplied/tianji_robot/asset.json"
     },
     {

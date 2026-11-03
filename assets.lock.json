@@ -68,7 +68,7 @@
     "fq:office/takeaway_coffee": "0.1.0",
     "third_party:office/grab3d_laptop": "0.1.0",
     "fq:scenes/room_table_can_candidate": "0.1.0",
-    "user_supplied:robots/tianji_robot": "0.1.0",
+    "user_supplied:robots/tianji_robot": "0.2.0",
     "user_supplied:grippers/rhino_v6_gripper": "0.1.0"
   },
   "profiles": {

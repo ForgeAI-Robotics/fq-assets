@@ -67,8 +67,9 @@
     "meshes/upper_left_inner_knuckle.stl": "f250a3fea49be4d1bb2383d9980172c59fc44031193ef2293ca540f756f6c1e6"
   },
   "changes": [
-    "Original package preserved byte-for-byte",
-    "Root model.urdf changes mesh references to repository-relative paths only",
-    "GLB visual conversion preserves link hierarchy at zero joint pose"
+    "Original source package preserved byte-for-byte",
+    "Active model.urdf now replaces both grippers with referenced RhinoV6 and all three camera visuals with referenced D435i",
+    "Camera mounting and optical frames retained; camera inertia replaced with labelled box estimate",
+    "GLB and fixed non-contact MJCF rebuilt from active assembly"
   ]
 }
