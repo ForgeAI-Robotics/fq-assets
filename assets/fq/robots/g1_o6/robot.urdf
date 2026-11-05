@@ -1323,7 +1323,7 @@
     <mimic joint="left_o6_pinky_mcp_pitch" multiplier="0.89" offset="0" />
   </joint>
   <joint name="left_o6_mount_joint" type="fixed">
-    <origin xyz="0.080420000 0 0" rpy="-1.5707963267948966 0.0 -1.5707963267948966" />
+    <origin xyz="0.065 0 0" rpy="-1.5707963267948966 0.0 -1.5707963267948966" />
     <parent link="left_o6_hand_transfer_flange_link" />
     <child link="left_o6_hand_base_link" />
   </joint>
@@ -2067,7 +2067,7 @@
     <mimic joint="right_o6_pinky_mcp_pitch" multiplier="0.89" offset="0" />
   </joint>
   <joint name="right_o6_mount_joint" type="fixed">
-    <origin xyz="0.080420000 0 0" rpy="1.5707963267948966 0.0 1.5707963267948966" />
+    <origin xyz="0.065 0 0" rpy="1.5707963267948966 0.0 1.5707963267948966" />
     <parent link="right_o6_hand_transfer_flange_link" />
     <child link="right_o6_hand_base_link" />
   </joint>
@@ -2127,7 +2127,7 @@
     </visual>
   </link>
   <joint name="left_o6_camera_adapter_joint" type="fixed">
-    <origin xyz="0.05 -0.038771905 -0.0152109" rpy="-3.14159265359 -1.57079632679 0" />
+    <origin xyz="0.0415 -0.038771905 -0.0152109" rpy="-3.14159265359 -1.57079632679 0" />
     <parent link="left_o6_camera_bracket_link" />
     <child link="left_o6_camera_adapter_link" />
   </joint>
@@ -2149,7 +2149,7 @@
     </visual>
   </link>
   <joint name="right_o6_camera_adapter_joint" type="fixed">
-    <origin xyz="0.05 0.038771905 -0.0152109" rpy="3.14159265359 -1.57079632679 0" />
+    <origin xyz="0.0415 0.038771905 -0.0152109" rpy="3.14159265359 -1.57079632679 0" />
     <parent link="right_o6_camera_bracket_link" />
     <child link="right_o6_camera_adapter_link" />
   </joint>
@@ -2325,7 +2325,7 @@
   <joint name="d435i_left_housing_fixed" type="fixed">
     <parent link="left_wrist_yaw_link" />
     <child link="d435i_left_housing" />
-    <origin xyz="0.0785547 -0.0337719065 -0.0152109459" rpy="0.0 1.5707963057214724 0.0" />
+    <origin xyz="0.0700547 -0.0337719065 -0.0152109459" rpy="0.0 1.5707963057214724 0.0" />
   </joint>
   <link name="d435i_right_housing">
     <visual>
@@ -2492,7 +2492,7 @@
   <joint name="d435i_right_housing_fixed" type="fixed">
     <parent link="right_wrist_yaw_link" />
     <child link="d435i_right_housing" />
-    <origin xyz="0.0785547 0.0337719065 -0.0152109459" rpy="-2.9602136602154 1.5209958815735 -2.9474130440271" />
+    <origin xyz="0.0700547 0.0337719065 -0.0152109459" rpy="-2.9602136602154 1.5209958815735 -2.9474130440271" />
   </joint>
   <link name="d435i_head_housing">
     <visual>
@@ -2685,12 +2685,12 @@
   <joint name="d435i_right_rgb_optical_fixed" type="fixed">
     <parent link="right_wrist_yaw_link" />
     <child link="d435i_right_rgb_optical" />
-    <origin xyz="0.072672757119739 0.033405695062942 -0.047460110806036" rpy="2.9602136602154 -1.5209958815735 0.19417960956274" />
+    <origin xyz="0.0641727571197 0.0334056950629 -0.047460110806" rpy="2.9602136602154 -1.5209958815735 0.19417960956274" />
   </joint>
   <link name="d435i_right_depth_optical" />
   <joint name="d435i_right_depth_optical_fixed" type="fixed">
     <parent link="right_wrist_yaw_link" />
     <child link="d435i_right_depth_optical" />
-    <origin xyz="0.073405421848637 0.033549779113505 -0.032478707594674" rpy="2.9602136602154 -1.5209958815735 0.19417960956274" />
+    <origin xyz="0.0649054218486 0.0335497791135 -0.0324787075947" rpy="2.9602136602154 -1.5209958815735 0.19417960956274" />
   </joint>
 </robot>

@@ -8,7 +8,7 @@
       "version": "0.1.0",
       "parent_link": "left_wrist_yaw_link",
       "position": [
-        0.0785547,
+        0.0700547,
         -0.0337719065,
         -0.0152109459
       ],
@@ -26,7 +26,7 @@
       "version": "0.1.0",
       "parent_link": "right_wrist_yaw_link",
       "position": [
-        0.0785547,
+        0.0700547,
         0.0337719065,
         -0.0152109459
       ],
@@ -39,7 +39,7 @@
       "extrinsic_status": "visual_estimate_pending_independent_calibration",
       "physics": "visual_only",
       "optical_position": [
-        0.07267275711973918,
+        0.06417275711973919,
         0.03340569506294176,
         -0.0474601108060362
       ],
@@ -73,5 +73,6 @@
   },
   "production_ready": false,
   "default_simulation_enabled": true,
-  "wrist_visual_profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json"
+  "wrist_visual_profile": "assets/fq/robots/g1_o6/wrist_camera_visual_alignment_v1.json",
+  "mount_translation_update": "2026-11-05: wrist cameras follow bracket by -8.5 mm along wrist X; orientations retained; not a new optical calibration."
 }

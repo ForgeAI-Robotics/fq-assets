@@ -1,0 +1,25 @@
+{
+  "status": "user_approved_visual_assembly",
+  "date": "2026-11-05",
+  "old_hand_root_x_m": 0.08042,
+  "hand_root_x_m": 0.065,
+  "assumed_wrist_outer_ring_x_m": 0.0415,
+  "measured_exposed_length_mm": 23.5,
+  "measured_stack_mm": 32.5,
+  "cad_stack_mm": 32,
+  "cad_insertion_mm": 8.5,
+  "bracket_translation_x_m": -0.0085,
+  "hand_translation_x_m": -0.01542,
+  "flange_transform_from_previous": {
+    "x_m": "0.132 - old_x",
+    "y_m": "old_y",
+    "z_m": "-old_z"
+  },
+  "remaining_limits": [
+    "Native CAD solid overlap remains unresolved; mount geometries remain visual-only.",
+    "Internal stop not represented sufficiently by wrist mesh; ring datum visually approved, not independently calibrated.",
+    "Right-hand mount mirrors left; independent right-side metrology pending.",
+    "Historical render/physics snapshots must be rebuilt to use this revision.",
+    "Wrist optical orientation retained, not independently recalibrated."
+  ]
+}

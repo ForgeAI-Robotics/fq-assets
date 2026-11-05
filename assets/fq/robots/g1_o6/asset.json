@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "fq:robots/g1_o6",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "kind": "robot",
   "name": "G1 + O6 双手",
   "origin": "fq",
@@ -48,13 +48,13 @@
     "left": {
       "root_body": "left_o6_hand_base_link",
       "source_parent": "left_o6_hand_transfer_flange_link",
-      "position": "0.08042 0 0",
+      "position": "0.065 0 0",
       "quaternion_wxyz": "0.5 -0.5 0.5 -0.5"
     },
     "right": {
       "root_body": "right_o6_hand_base_link",
       "source_parent": "right_o6_hand_transfer_flange_link",
-      "position": "0.08042 0 0",
+      "position": "0.065 0 0",
       "quaternion_wxyz": "0.5 0.5 0.5 0.5"
     }
   },
@@ -64,7 +64,7 @@
       "version": "0.1.0",
       "parent_link": "left_wrist_yaw_link",
       "position": [
-        0.0785547,
+        0.0700547,
         -0.0337719065,
         -0.0152109459
       ],
@@ -82,7 +82,7 @@
       "version": "0.1.0",
       "parent_link": "right_wrist_yaw_link",
       "position": [
-        0.0785547,
+        0.0700547,
         0.0337719065,
         -0.0152109459
       ],
@@ -95,7 +95,7 @@
       "extrinsic_status": "visual_estimate_pending_independent_calibration",
       "physics": "visual_only",
       "optical_position": [
-        0.07267275711973918,
+        0.06417275711973919,
         0.03340569506294176,
         -0.0474601108060362
       ],
@@ -164,5 +164,6 @@
       "right_o6_camera_bracket_link",
       "right_o6_hand_transfer_flange_link"
     ]
-  }
+  },
+  "mount_revision": "assets/fq/robots/g1_o6/mount_interlock_20261105.json"
 }

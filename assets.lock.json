@@ -15,7 +15,7 @@
     "fq:materials/stone": "0.1.0",
     "fq:end_effectors/o6_left": "0.1.1",
     "fq:end_effectors/o6_right": "0.1.2",
-    "fq:robots/g1_o6": "0.1.7",
+    "fq:robots/g1_o6": "0.1.8",
     "fq:end_effectors/o7_left": "0.1.1",
     "fq:end_effectors/o7_right": "0.1.0",
     "fq:robots/g1_o7": "0.1.3",

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "mujoco_version": "3.3.6",
+  "poses_checked": 3,
+  "hand_translation_wrist_mm": [
+    -15.42,
+    0,
+    0
+  ],
+  "camera_translation_wrist_mm": [
+    -8.5,
+    0,
+    0
+  ],
+  "max_hand_translation_error_m": 8.69280107262551e-17,
+  "joint_actuator_mass_parameters_unchanged": true,
+  "urdf_mjcf_positions_agree": true,
+  "mount_collision_enabled": false,
+  "hardware_calibrated": false
+}

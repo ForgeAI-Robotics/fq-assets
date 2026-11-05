@@ -1,5 +1,5 @@
 {
-  "status": "provisional",
+  "status": "user_approved_visual_assembly_pending_physical_validation",
   "source": "2026-09 two-piece bracket and hand-side transfer flange STEP; approved visual assembly, pending measured wrist datum and fastener confirmation",
   "allowed_uses": [
     "model assembly",
@@ -10,5 +10,7 @@
     "final collision validation",
     "grasp validation",
     "hardware deployment"
-  ]
+  ],
+  "pose_basis": "2026-11-05 approved interlocking candidate: outer ring X=41.5 mm, O6 mount X=65 mm, exposed length 23.5 mm.",
+  "mount_revision": "assets/fq/robots/g1_o6/mount_interlock_20261105.json"
 }
