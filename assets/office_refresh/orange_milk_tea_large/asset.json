@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "fq:office/orange_milk_tea_large",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "橙色大杯奶茶杯",
+  "description": "视频参考建模；固定闭合杯盖",
+  "origin": "fq",
+  "upstream_origin": "User-provided cup footage and generated mesh",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "representations": {
+    "mujoco": "assets/office_refresh/orange_milk_tea_large/model.xml",
+    "glb": "assets/office_refresh/orange_milk_tea_large/model.glb"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.1,
+    0.1,
+    0.172
+  ],
+  "mass_kg": 0.03,
+  "physics_calibrated": false,
+  "limitations": [
+    "Height and diameters measured on the physical cup; maximum lid diameter modeled from the measured top diameter",
+    "Empty mass, inertia and friction estimated",
+    "Desktop settling only; grasp and disposal untested",
+    "GLB uses Y-up"
+  ],
+  "license": "Original model; rights in photographed packaging artwork remain with its owner"
+}
