@@ -1,0 +1,26 @@
+{
+  "mujoco": "3.3.7",
+  "steps": 1000,
+  "sim_time_s": 2.0000000000000013,
+  "contact_count": 2,
+  "final_qpos": [
+    -1.3061490884509975e-06,
+    6.44125576881323e-07,
+    -0.00020900490994194392,
+    0.9999999983640718,
+    4.3272279426574356e-05,
+    2.5704045692199173e-05,
+    -2.7178479274808486e-05
+  ],
+  "final_speed_norm": 0.004122148105943739,
+  "test": "gravity settling on horizontal plane; CPU OSMesa RGB",
+  "source_video_sha256": "4165381ba4e5df23ac09e7a32f75bc4ef1ae005f45c0f4f8c49b56ec3357e282",
+  "mass_kg": 0.03,
+  "dimensions_m": [
+    0.1,
+    0.1,
+    0.172
+  ],
+  "body_height_m": 0.16,
+  "base_diameter_m": 0.06
+}
