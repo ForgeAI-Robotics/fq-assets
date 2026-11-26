@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="iced_coconut_water_bottle">
+  <asset>
+    <texture name="print" type="2d" file="label_mujoco.png" />
+    <material name="print" texture="print" specular=".23" />
+    <material name="pet" rgba=".85 .93 .94 .30" specular=".75" />
+    <material name="green" rgba=".51 .68 .052 1" specular=".37" />
+    <mesh name="shell" file="shell.obj" />
+    <mesh name="sleeve" file="sleeve.obj" />
+    <mesh name="cap" file="cap.obj" />
+    <mesh name="bottle_collision" file="bottle_collision.obj" />
+    <mesh name="cap_collision" file="cap_collision.obj" />
+  </asset>
+  <worldbody>
+    <body name="iced_coconut_water_bottle">
+      <freejoint name="root" />
+      <inertial pos="0 0 0.139" mass="0.028" diaginertia="0.000178 0.000179 1.6e-05" />
+      <geom name="shell" type="mesh" mesh="shell" contype="0" conaffinity="0" group="2" material="pet" />
+      <geom name="sleeve" type="mesh" mesh="sleeve" contype="0" conaffinity="0" group="2" material="print" />
+      <geom name="cap" type="mesh" mesh="cap" contype="0" conaffinity="0" group="2" material="green" />
+      <geom name="bottle_collision" type="mesh" mesh="bottle_collision" group="3" rgba="0 0 0 0" friction=".50 .005 .0001" />
+      <geom name="cap_collision" type="mesh" mesh="cap_collision" group="3" rgba="0 0 0 0" friction=".50 .005 .0001" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "fq:office/iced_coconut_water_bottle",
+  "version": "0.1.0",
+  "kind": "rigid",
+  "name": "冰椰水瓶（抹茶冰椰）",
+  "description": "绿盖透明塑料瓶，带视频提取的正背面标签贴图。",
+  "origin": "fq",
+  "upstream_origin": "User-provided bottle video; procedural geometry and cropped labels",
+  "units": "meter",
+  "up_axis": "Z",
+  "quaternion_order": "wxyz",
+  "license": "Original geometry; rights in photographed packaging remain with their holders",
+  "representations": {
+    "mujoco": "assets/office_refresh/iced_coconut_water_bottle/model.xml",
+    "usd": "assets/office_refresh/iced_coconut_water_bottle/model.usda",
+    "glb": "assets/office_refresh/iced_coconut_water_bottle/model.glb"
+  },
+  "dependencies": [],
+  "dimensions_m": [
+    0.0583,
+    0.0553,
+    0.291
+  ],
+  "mass_kg": 0.028,
+  "physics_calibrated": false,
+  "measurements_m": {
+    "height_with_cap": 0.291,
+    "cap_diameter": 0.04,
+    "base_diameter": 0.052
+  },
+  "limitations": [
+    "Bottle width, shoulder, cap height and label wrap estimated from video.",
+    "Mass is an estimate for the empty, capped bottle; no fluid, crushing or cap articulation.",
+    "GLB uses Y-up. PET uses approximate alpha transparency."
+  ]
+}
