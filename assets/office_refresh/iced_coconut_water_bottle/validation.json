@@ -1,0 +1,60 @@
+{
+  "mesh_dimensions": {
+    "height_m": 0.291,
+    "cap_diameter_m": 0.04,
+    "base_diameter_m": 0.052
+  },
+  "glb": {
+    "glb_version": 2,
+    "visual_primitives": 3,
+    "up_axis": "Y"
+  },
+  "physics": {
+    "mujoco_version": "3.3.0",
+    "mass_kg": 0.028,
+    "drop_to_plane": {
+      "upright": {
+        "steps": 2000,
+        "final_xyz_m": [
+          5.4983316621375186e-06,
+          4.2915614070740874e-06,
+          -0.00020740613885870336
+        ],
+        "final_quaternion_wxyz": [
+          0.9999999998850478,
+          7.499328817487498e-06,
+          -7.974532190366715e-06,
+          -1.0491536664339895e-05
+        ],
+        "final_generalized_speed_norm": 0.0011811533223700427,
+        "final_contacts": 2
+      },
+      "side": {
+        "steps": 2000,
+        "final_xyz_m": [
+          -1.8491219060101183e-06,
+          -0.00039314503048585355,
+          0.02867497273567582
+        ],
+        "final_quaternion_wxyz": [
+          0.7071663156820842,
+          0.004422898014801892,
+          0.7070182602189333,
+          0.004628137289484749
+        ],
+        "final_generalized_speed_norm": 0.003430521804950822,
+        "final_contacts": 3
+      }
+    }
+  },
+  "usd": {
+    "stage_open": true,
+    "up_axis": "Z",
+    "default_prim": "/IcedCoconutWaterBottle",
+    "colliders": [
+      "bottle_collision",
+      "cap_collision"
+    ],
+    "resolved_texture": "label.png"
+  }
+}

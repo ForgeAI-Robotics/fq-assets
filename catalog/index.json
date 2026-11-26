@@ -341,6 +341,11 @@
       "id": "user_supplied:grippers/rhino_v6_gripper",
       "version": "0.1.0",
       "manifest": "assets/user_supplied/rhino_v6_gripper/asset.json"
+    },
+    {
+      "id": "fq:office/iced_coconut_water_bottle",
+      "version": "0.1.0",
+      "manifest": "assets/office_refresh/iced_coconut_water_bottle/asset.json"
     }
   ]
 }
